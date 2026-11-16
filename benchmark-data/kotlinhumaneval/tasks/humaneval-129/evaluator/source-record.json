@@ -1,0 +1,25 @@
+{
+  "task_id": "HumanEval_kotlin/129",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Create a function that takes a string as input which contains only square brackets.\n * The function should return True if and only if there is a valid subsequence of brackets \n * where at least one bracket in the subsequence is nested.\n\n * is_nested('[[]]') ➞ True\n * is_nested('[]]]]]]][[[[[]') ➞ False\n * is_nested('[][]') ➞ False\n * is_nested('[]') ➞ False\n * is_nested('[[][]]') ➞ True\n * is_nested('[[]][[') ➞ True\n *\n */\nfun isNested(string : String) : Boolean {\n",
+  "entry_point": "isNested",
+  "test": "fun main() {\n    var arg00 : String = \"[[]]\"\n    var x0 : Boolean = isNested(arg00);\n    var v0 : Boolean = true;\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10 : String = \"[]]]]]]][[[[[]\"\n    var x1 : Boolean = isNested(arg10);\n    var v1 : Boolean = false;\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20 : String = \"[][]\"\n    var x2 : Boolean = isNested(arg20);\n    var v2 : Boolean = false;\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30 : String = \"[]\"\n    var x3 : Boolean = isNested(arg30);\n    var v3 : Boolean = false;\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40 : String = \"[[[[]]]]\"\n    var x4 : Boolean = isNested(arg40);\n    var v4 : Boolean = true;\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50 : String = \"[]]]]]]]]]]\"\n    var x5 : Boolean = isNested(arg50);\n    var v5 : Boolean = false;\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n    var arg60 : String = \"[][][[]]\"\n    var x6 : Boolean = isNested(arg60);\n    var v6 : Boolean = true;\n    if (x6 != v6) {\n        throw Exception(\"Exception -- test case 6 did not pass. x6 = \" + x6)\n    }\n\n    var arg70 : String = \"[[]\"\n    var x7 : Boolean = isNested(arg70);\n    var v7 : Boolean = false;\n    if (x7 != v7) {\n        throw Exception(\"Exception -- test case 7 did not pass. x7 = \" + x7)\n    }\n\n    var arg80 : String = \"[]]\"\n    var x8 : Boolean = isNested(arg80);\n    var v8 : Boolean = false;\n    if (x8 != v8) {\n        throw Exception(\"Exception -- test case 8 did not pass. x8 = \" + x8)\n    }\n\n    var arg90 : String = \"[[]][[\"\n    var x9 : Boolean = isNested(arg90);\n    var v9 : Boolean = true;\n    if (x9 != v9) {\n        throw Exception(\"Exception -- test case 9 did not pass. x9 = \" + x9)\n    }\n\n    var arg100 : String = \"[[][]]\"\n    var x10 : Boolean = isNested(arg100);\n    var v10 : Boolean = true;\n    if (x10 != v10) {\n        throw Exception(\"Exception -- test case 10 did not pass. x10 = \" + x10)\n    }\n\n    var arg110 : String = \"\"\n    var x11 : Boolean = isNested(arg110);\n    var v11 : Boolean = false;\n    if (x11 != v11) {\n        throw Exception(\"Exception -- test case 11 did not pass. x11 = \" + x11)\n    }\n\n    var arg120 : String = \"[[[[[[[[\"\n    var x12 : Boolean = isNested(arg120);\n    var v12 : Boolean = false;\n    if (x12 != v12) {\n        throw Exception(\"Exception -- test case 12 did not pass. x12 = \" + x12)\n    }\n\n    var arg130 : String = \"]]]]]]]]\"\n    var x13 : Boolean = isNested(arg130);\n    var v13 : Boolean = false;\n    if (x13 != v13) {\n        throw Exception(\"Exception -- test case 13 did not pass. x13 = \" + x13)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Create a function that takes a string as input which contains only square brackets.\n * The function should return True if and only if there is a valid subsequence of brackets \n * where at least one bracket in the subsequence is nested.\n\n * is_nested('[[]]') ➞ True\n * is_nested('[]]]]]]][[[[[]') ➞ False\n * is_nested('[][]') ➞ False\n * is_nested('[]') ➞ False\n * is_nested('[[][]]') ➞ True\n * is_nested('[[]][[') ➞ True\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun isNested(string : String) : Boolean {",
+    "    var depth = 0",
+    "    var foundNest = false",
+    "    for (char in string) {",
+    "        when (char) {",
+    "            '[' -> depth++",
+    "            ']' -> depth--",
+    "        }",
+    "        if (depth > 1) foundNest = true",
+    "        if (depth == 0 && foundNest) return true",
+    "    }",
+    "    return false",
+    "}",
+    "",
+    ""
+  ]
+}

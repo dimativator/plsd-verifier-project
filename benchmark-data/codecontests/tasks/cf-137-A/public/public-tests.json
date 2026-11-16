@@ -1,0 +1,14 @@
+{
+  "input": [
+    "CPCPCPC\n",
+    "CCCCCCCCCC\n",
+    "CCCCCCPPCPPPPPPPPPP\n",
+    "CCCCCCPPPPPP\n"
+  ],
+  "output": [
+    "7\n",
+    "2\n",
+    "6\n",
+    "4\n"
+  ]
+}

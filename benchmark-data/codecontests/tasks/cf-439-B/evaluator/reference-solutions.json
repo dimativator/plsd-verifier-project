@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, x = map(int, input().split())\nm = list(map(int, input().split()))\nm.sort()\nans = 0\nfor i in range(n):\n    ans += m[i] * x\n    if x > 1:\n        x -= 1\nprint(ans)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long N, X;\n  cin >> N >> X;\n  vector<int> C;\n  C.resize(N);\n  for (int i = 0; i < N; ++i) {\n    cin >> C[i];\n  }\n  sort(C.begin(), C.end());\n  long long res = 0;\n  for (int i = 0; i < N; ++i) {\n    res += C[i] * X;\n    X = max(1LL, X - 1);\n  }\n  cout << res << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Collections;\nimport java.util.LinkedList;\nimport java.util.List;\nimport java.util.Scanner;\n\n\npublic class Bdevu {\n    public static void main(String[] args)  {\n        Scanner sc = new Scanner(System.in);\n\n        int n = sc.nextInt();\n        int x = sc.nextInt();\n        List<Integer> nums = new LinkedList<Integer>();\n        for (int i = 0; i < n; i++) {\n            nums.add(sc.nextInt());\n        }\n        Collections.sort(nums);\n        long result = 0;\n        for (Integer val : nums) {\n            result += (long) x * (long) val;\n            if (x != 1)\n                x--;\n        }\n        System.out.println(result);\n    }\n\n  \n    }"
+  }
+]

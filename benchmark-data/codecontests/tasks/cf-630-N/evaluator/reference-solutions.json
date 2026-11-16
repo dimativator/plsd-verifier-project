@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a,b,c=map(float,input().split())\nq=((b*b-4*a*c)**0.5)\nx=((-b+q)/(2*a))\ny=((-b-q)/(2*a))\nprint(max(x,y))\nprint(min(x,y))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int a, b, c, d;\n  cin >> a >> b >> c;\n  d = b * b - 4 * a * c;\n  if (a == 0) {\n    double h = (-c) / b;\n    cout << fixed << setprecision(20) << h;\n    return 0;\n  }\n  double n1 = (-b - sqrt(d)) / a;\n  double n2 = (-b + sqrt(d)) / a;\n  cout << fixed << setprecision(20) << max(n1, n2) / 2 << endl;\n  if (n1 != n2) cout << fixed << setprecision(20) << min(n1, n2) / 2;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.BufferedWriter;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.io.PrintWriter;\nimport java.lang.reflect.Array;\nimport java.util.ArrayDeque;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.BitSet;\nimport java.util.Collections;\nimport java.util.Comparator;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.PriorityQueue;\nimport java.util.TreeMap;\n\n\n\n\npublic class Main {\n    \n    \n    public static void main(String[] args) throws IOException {\n        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n        BufferedWriter bw = new BufferedWriter(new PrintWriter(System.out));\n        \n       String[] in = br.readLine().split(\" \");\n       \n       double a = Double.parseDouble(in[0]);\n       double b = Double.parseDouble(in[1]);\n       double c = Double.parseDouble(in[2]);\n       \n       double den = 2*a;\n       \n       double det = b*b - 4*a*c;\n       det = Math.pow(det, 0.5);\n       \n       double ans[] = new double[2];\n       \n       double ans1 = -b+det;\n       ans1/=den;\n       ans[0] = ans1;\n       \n       double ans2 = -b-det;\n       ans2/=den;\n       \n       ans[1] = ans2;\n       \n       Arrays.sort(ans);\n       \n       String val1 = String.format(\"%.12f\", ans[1]);\n       String val2 = String.format(\"%.12f\", ans[0]);\n       \n       bw.append(val1+\"\\n\");\n       bw.append(val2+\"\\n\");\n        bw.close();\n    }\n\n   //tmp = String.format(\"%.6f %.6f\", mm, 0.0);\n\n    \n    \n    \n}"
+  }
+]

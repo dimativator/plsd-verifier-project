@@ -1,0 +1,35 @@
+{
+  "name": "1337_A. Ichihime and Triangle",
+  "description": "Ichihime is the current priestess of the Mahjong Soul Temple. She claims to be human, despite her cat ears.\n\nThese days the temple is holding a math contest. Usually, Ichihime lacks interest in these things, but this time the prize for the winner is her favorite — cookies. Ichihime decides to attend the contest. Now she is solving the following problem.\n\n<image>\n\nYou are given four positive integers a, b, c, d, such that a ≤ b ≤ c ≤ d. \n\nYour task is to find three integers x, y, z, satisfying the following conditions:\n\n  * a ≤ x ≤ b.\n  * b ≤ y ≤ c.\n  * c ≤ z ≤ d.\n  * There exists a triangle with a positive non-zero area and the lengths of its three sides are x, y, and z.\n\n\n\nIchihime desires to get the cookie, but the problem seems too hard for her. Can you help her?\n\nInput\n\nThe first line contains a single integer t (1 ≤ t ≤ 1000) — the number of test cases.\n\nThe next t lines describe test cases. Each test case is given as four space-separated integers a, b, c, d (1 ≤ a ≤ b ≤ c ≤ d ≤ 10^9).\n\nOutput\n\nFor each test case, print three integers x, y, z — the integers you found satisfying the conditions given in the statement.\n\nIt is guaranteed that the answer always exists. If there are multiple answers, print any.\n\nExample\n\nInput\n\n\n4\n1 3 5 7\n1 5 5 7\n100000 200000 300000 400000\n1 1 977539810 977539810\n\n\nOutput\n\n\n3 4 5\n5 5 5\n182690 214748 300999\n1 977539810 977539810\n\nNote\n\nOne of the possible solutions to the first test case:\n\n<image>\n\nOne of the possible solutions to the second test case:\n\n<image>",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 800,
+  "cf_contest_id": 1337,
+  "cf_index": "A",
+  "cf_tags": [
+    "constructive algorithms",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00010-of-00039-6de28ba20654f69b.parquet",
+  "source_row": 40,
+  "task_id": "codecontests/cf-1337-A",
+  "rating_band": "800-1199",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/1337/A",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

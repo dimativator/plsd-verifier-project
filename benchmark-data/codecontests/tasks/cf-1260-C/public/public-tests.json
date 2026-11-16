@@ -1,0 +1,8 @@
+{
+  "input": [
+    "4\n1 1 2\n2 10 4\n5 2 3\n3 2 2\n"
+  ],
+  "output": [
+    "OBEY\nREBEL\nOBEY\nOBEY\n"
+  ]
+}

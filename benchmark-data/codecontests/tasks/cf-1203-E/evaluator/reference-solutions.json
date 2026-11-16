@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "N = int(input())\nA = sorted([int(a) for a in input().split()])\n\nk = 0\nans = 0\nfor i in range(N):\n    if k > A[i]:\n        pass\n    elif k >= A[i] - 1:\n        ans += 1\n        k += 1\n    else:\n        ans += 1\n        k = A[i] - 1\nprint(ans)\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint vis[1000000];\nint n[1000000];\nint main() {\n  int cnt = 0;\n  int l;\n  cin >> l;\n  for (int i = 0; i < l; i++) {\n    cin >> n[i];\n  }\n  sort(n, n + l);\n  for (int i = 0; i < l; i++) {\n    int x = n[i] - 1;\n    if (x < 1) x = 1;\n    int y = n[i];\n    int z = n[i] + 1;\n    if (!vis[x]) {\n      vis[x] = 1;\n      ++cnt;\n    } else if (!vis[y]) {\n      vis[y] = 1;\n      ++cnt;\n    } else if (!vis[z]) {\n      vis[z] = 1;\n      ++cnt;\n    }\n  }\n  cout << cnt << endl;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Arrays;\nimport java.util.Collections;\nimport java.util.Scanner;\n\npublic class Temp {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Integer[] arr = new Integer[n];\n        for (int i = 0; i < n; i++) {\n            arr[i] = sc.nextInt();\n        }\n        Arrays.sort(arr, Collections.reverseOrder());\n        int count = 1;\n        int last = arr[0]+1;\n        for (int i = 1; i < n; i++) {\n            if (arr[i]+1 < last) {last = arr[i]+1; count++;} else {\n                if (arr[i]  < last) {last = arr[i]; count++;} else {\n                    if (arr[i] == last && arr[i] != 1) {last = arr[i]-1; count++;}\n                }\n            }\n        }\n        System.out.println(count);\n\n    }\n}"
+  }
+]

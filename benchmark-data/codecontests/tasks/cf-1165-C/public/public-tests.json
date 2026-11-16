@@ -1,0 +1,12 @@
+{
+  "input": [
+    "3\naaa\n",
+    "4\ngood\n",
+    "4\naabc\n"
+  ],
+  "output": [
+    "3\n\n",
+    "0\ngood\n",
+    "2\nab\n"
+  ]
+}

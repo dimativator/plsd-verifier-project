@@ -1,0 +1,36 @@
+{
+  "name": "919_E. Congruence Equation",
+  "description": "Given an integer x. Your task is to find out how many positive integers n (1 ≤ n ≤ x) satisfy $$$n ⋅ a^n ≡ b   (mod\\;p), where a, b, p$$$ are all known constants.\n\nInput\n\nThe only line contains four integers a,b,p,x (2 ≤ p ≤ 10^6+3, 1 ≤ a,b < p, 1 ≤ x ≤ 10^{12}). It is guaranteed that p is a prime.\n\nOutput\n\nPrint a single integer: the number of possible answers n.\n\nExamples\n\nInput\n\n2 3 5 8\n\n\nOutput\n\n2\n\n\nInput\n\n4 6 7 13\n\n\nOutput\n\n1\n\n\nInput\n\n233 233 10007 1\n\n\nOutput\n\n1\n\nNote\n\nIn the first sample, we can see that n=2 and n=8 are possible answers.",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2100,
+  "cf_contest_id": 919,
+  "cf_index": "E",
+  "cf_tags": [
+    "chinese remainder theorem",
+    "math",
+    "number theory"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 3,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00013-of-00039-30b8c3829ee3b962.parquet",
+  "source_row": 306,
+  "task_id": "codecontests/cf-919-E",
+  "rating_band": "2000-2399",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/919/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

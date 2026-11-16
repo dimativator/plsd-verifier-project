@@ -1,0 +1,13 @@
+/**
+ * You are an expert Kotlin programmer, and here is your task.
+ * Input to this function is a string represented multiple groups for nested parentheses separated by spaces.
+ * For each of the group, output the deepest level of nesting of parentheses.
+ * E.g. (()()) has maximum two levels of nesting while ((())) has three.
+
+ * >>> parse_nested_parens('(()()) ((())) () ((())()())')
+ * [2, 3, 1, 3]
+ *
+ */
+fun parseNestedParens(parenString: String): List<Int> {
+    TODO("Implement the function")
+}

@@ -1,0 +1,14 @@
+{
+  "input": [
+    "20 492 11 4 8\n",
+    "3 5 1 2 2\n",
+    "5 25 2 4 1\n",
+    "3 6 1 2 2\n"
+  ],
+  "output": [
+    "RRRRRRRRRRRRRRRRUUUUURUUUUURRUUUUUUUUU",
+    "Impossible",
+    "RRUURURU",
+    "URUR"
+  ]
+}

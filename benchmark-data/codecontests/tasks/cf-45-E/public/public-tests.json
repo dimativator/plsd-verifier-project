@@ -1,0 +1,10 @@
+{
+  "input": [
+    "4\nAnn\nAnna\nSabrina\nJohn\nPetrov\nIvanova\nStoltz\nAbacaba\n",
+    "4\nAa\nAb\nAc\nBa\nAd\nAe\nBb\nBc\n"
+  ],
+  "output": [
+    "Ann Abacaba, Anna Ivanova, John Petrov, Sabrina Stoltz\n",
+    "Aa Ad, Ab Ae, Ac Bb, Ba Bc\n"
+  ]
+}

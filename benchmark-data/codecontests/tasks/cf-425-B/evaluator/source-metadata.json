@@ -1,0 +1,35 @@
+{
+  "name": "425_B. Sereja and Table ",
+  "description": "Sereja has an n × m rectangular table a, each cell of the table contains a zero or a number one. Sereja wants his table to meet the following requirement: each connected component of the same values forms a rectangle with sides parallel to the sides of the table. Rectangles should be filled with cells, that is, if a component form a rectangle of size h × w, then the component must contain exactly hw cells.\n\nA connected component of the same values is a set of cells of the table that meet the following conditions:\n\n  * every two cells of the set have the same value; \n  * the cells of the set form a connected region on the table (two cells are connected if they are adjacent in some row or some column of the table); \n  * it is impossible to add any cell to the set unless we violate the two previous conditions. \n\n\n\nCan Sereja change the values of at most k cells of the table so that the table met the described requirement? What minimum number of table cells should he change in this case?\n\nInput\n\nThe first line contains integers n, m and k (1 ≤ n, m ≤ 100; 1 ≤ k ≤ 10). Next n lines describe the table a: the i-th of them contains m integers ai1, ai2, ..., aim (0 ≤ ai, j ≤ 1) — the values in the cells of the i-th row.\n\nOutput\n\nPrint -1, if it is impossible to meet the requirement. Otherwise, print the minimum number of cells which should be changed.\n\nExamples\n\nInput\n\n5 5 2\n1 1 1 1 1\n1 1 1 1 1\n1 1 0 1 1\n1 1 1 1 1\n1 1 1 1 1\n\n\nOutput\n\n1\n\n\nInput\n\n3 4 1\n1 0 0 0\n0 1 1 1\n1 1 1 0\n\n\nOutput\n\n-1\n\n\nInput\n\n3 4 1\n1 0 0 1\n0 1 1 0\n1 0 0 1\n\n\nOutput\n\n0",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 2200,
+  "cf_contest_id": 425,
+  "cf_index": "B",
+  "cf_tags": [
+    "bitmasks",
+    "greedy"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00014-of-00039-dc3ebb07a3cba8e4.parquet",
+  "source_row": 47,
+  "task_id": "codecontests/cf-425-B",
+  "rating_band": "2000-2399",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/425/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

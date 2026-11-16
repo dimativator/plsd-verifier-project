@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "if __name__ == '__main__':\n    cin = input\n    t = int(cin())\n\n    while t > 0:\n        n = int(cin())\n        a, cnt = [0] * n, 0\n        for i in range(n):\n            l, r = map(int, cin().split())\n            if r >= cnt + max(l - cnt, 1):\n                cnt += max(l - cnt, 1)\n                a[i] += cnt\n        print(*a)\n        t -= 1"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, l[2005], r[2005], t, k;\n  cin >> t;\n  while (t) {\n    int q = 0, next = 0;\n    cin >> n;\n    for (int i = 0; i < n; i++) {\n      cin >> l[i] >> r[i];\n      if (i == 0) {\n        next = l[i] + 1;\n        cout << l[i] << \" \";\n        continue;\n      }\n      if (r[i] < next) {\n        cout << 0 << \" \";\n      } else if (l[i] <= next) {\n        cout << next << \" \";\n        next++;\n      } else {\n        cout << l[i] << \" \";\n        next = l[i] + 1;\n      }\n    }\n    cout << endl;\n    t--;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\n//http://codeforces.com/contest/920/problem/B\npublic class Tea_Queue {\n\n\tpublic static void main(String[] args) {\n\t\tScanner scan = new Scanner(System.in);\n\t\tint t = scan.nextInt();\n\t\tString result[] = new String[t];\n\t\tfor (int j = 0; j < t; j++) {\n\t\t\n\t\t\tint n = scan.nextInt();\n\t\t\tint l[] = new int[n];\n\t\t\tint r[] = new int[n];\n\t\t\tfor (int i = 0; i < n; i++) {\n\t\t\t\tl[i] = scan.nextInt();\n\t\t\t\tr[i] = scan.nextInt();\n\t\t\t}\n\n\t\t\tresult[j] = \"\";\n\n\t\t\tint time = 1;\n\t\t\tfor (int i = 0; i < n; i++) {\n\t\t\t\tif (time <= r[i] && time >= l[i]) {\n\t\t\t\t\tresult[j] += (time + \" \");\n\t\t\t\t\ttime++;\n\t\t\t\t} else if (time > r[i]) {\n\t\t\t\t\tresult[j] += (0 + \" \");\n\t\t\t\t} else if (time < l[i]) {\n\t\t\t\t\ttime++;\n\t\t\t\t\ti--;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\tscan.close();\n\t\tfor (int i = 0; i < t - 1; i++) {\n\t\t\tSystem.out.println(result[i]);\n\t\t}\n\t\tSystem.out.print(result[t - 1]);\n\t}\n}"
+  }
+]

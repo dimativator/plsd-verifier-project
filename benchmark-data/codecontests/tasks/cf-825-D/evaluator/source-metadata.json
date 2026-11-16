@@ -1,0 +1,36 @@
+{
+  "name": "825_D. Suitable Replacement",
+  "description": "You are given two strings s and t consisting of small Latin letters, string s can also contain '?' characters. \n\nSuitability of string s is calculated by following metric:\n\nAny two letters can be swapped positions, these operations can be performed arbitrary number of times over any pair of positions. Among all resulting strings s, you choose the one with the largest number of non-intersecting occurrences of string t. Suitability is this number of occurrences.\n\nYou should replace all '?' characters with small Latin letters in such a way that the suitability of string s is maximal.\n\nInput\n\nThe first line contains string s (1 ≤ |s| ≤ 106).\n\nThe second line contains string t (1 ≤ |t| ≤ 106).\n\nOutput\n\nPrint string s with '?' replaced with small Latin letters in such a way that suitability of that string is maximal.\n\nIf there are multiple strings with maximal suitability then print any of them.\n\nExamples\n\nInput\n\n?aa?\nab\n\n\nOutput\n\nbaab\n\n\nInput\n\n??b?\nza\n\n\nOutput\n\nazbz\n\n\nInput\n\nabcd\nabacaba\n\n\nOutput\n\nabcd\n\nNote\n\nIn the first example string \"baab\" can be transformed to \"abab\" with swaps, this one has suitability of 2. That means that string \"baab\" also has suitability of 2.\n\nIn the second example maximal suitability you can achieve is 1 and there are several dozens of such strings, \"azbz\" is just one of them.\n\nIn the third example there are no '?' characters and the suitability of the string is 0.",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 1500,
+  "cf_contest_id": 825,
+  "cf_index": "D",
+  "cf_tags": [
+    "binary search",
+    "greedy",
+    "implementation"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00012-of-00039-da9476a39a1bdbb7.parquet",
+  "source_row": 228,
+  "task_id": "codecontests/cf-825-D",
+  "rating_band": "1200-1599",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/825/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

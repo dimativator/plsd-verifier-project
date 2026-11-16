@@ -1,0 +1,22 @@
+{
+  "input": [
+    "e\n",
+    "wym\n",
+    "sclcclllls\n",
+    "dqjjproxafgcklrjhrukineigihzabzlnmqoimypthimfneedtgdopegdpevkjcegpdyvtuaanqyqnirmkinrmsgandploujwzew\n",
+    "ff\n",
+    "ruu\n",
+    "gp\n",
+    "iixkczcxckckkxzzxizzzxxxzzczccxikxickxzzzxckkzkzxc\n"
+  ],
+  "output": [
+    "3",
+    "15",
+    "232",
+    "176390",
+    "6",
+    "13",
+    "7",
+    "23032"
+  ]
+}

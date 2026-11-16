@@ -1,0 +1,324 @@
+{
+  "seed": 20261115,
+  "tasks": [
+    {
+      "dataset": "codecontests",
+      "id": "cf-675-D",
+      "rating_band": "1600-1999",
+      "difficulty": 1800,
+      "checker": "tokens",
+      "output_requirement": "Output n - 1 integers. For all i > 1 print the value written in the node that is the parent of the node with value a_i in it.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 1800,
+      "data_sha256": {
+        "public/prompt.txt": "a2e61ed5047ca9e588d0b9630dd3a7dd9c85684719428a412781c72489410d2d",
+        "public/public-tests.json": "f1618fa7238ef63fc7f9cd7e1d9a3dfec079995e6d2369ff5cd8a265d2bb4be6",
+        "evaluator/private-tests.json": "c7e7df7b41904887076c0f571b21310930b40ff971a73f3ce267df9a9550a9c6"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-888-G",
+      "rating_band": "2000-2399",
+      "difficulty": 2300,
+      "checker": "tokens",
+      "output_requirement": "Print one number \u2014 the weight of the minimum spanning tree in the graph.",
+      "checker_review": "Unique numeric optimum; whitespace tokens",
+      "rating": 2300,
+      "data_sha256": {
+        "public/prompt.txt": "cd0bee6cea3f29e5ac8fa3d2f94188c3f3b1577ef16a23d2aef12bddb01637d2",
+        "public/public-tests.json": "8c80f99bc6b105154d260565ae0f9c55c32639cd5b38a60e618e6e0d2c68aa37",
+        "evaluator/private-tests.json": "0540dde8d51eb0053be2df7dbe17295e1c4f624c2550e5ce24fb1c7a6e8a02ec"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-283-D",
+      "rating_band": "2400+",
+      "difficulty": 2400,
+      "checker": "tokens",
+      "output_requirement": "A single integer, the minimum number of ai that must be changed to make the sequence cool.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 2400,
+      "data_sha256": {
+        "public/prompt.txt": "9efc47716614130298a2d1f179aba3e6407f7cf9648958bf5f0487ed3105c46b",
+        "public/public-tests.json": "5c6af3b3329942c29ae0a8b902cbdb325164df17cf24fcad4b35450a66dea726",
+        "evaluator/private-tests.json": "fdc2cdbf42d277d1c5a0c1edbe3fd205d7062bfe5122bc22ad8f95d49ac1d7cd"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-687-C",
+      "rating_band": "1600-1999",
+      "difficulty": 1900,
+      "checker": "tokens",
+      "output_requirement": "First line of the output must contain a single integer q\u2014 the number of suitable values x. Then print q integers in ascending order \u2014 the values that Arya can make for some subset of coins of Pari that pays for the chocolate.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 1900,
+      "data_sha256": {
+        "public/prompt.txt": "7968e3c708e3c23fbd8c3b8f9686a002593b6a43ad3355a2c72f62e3f3b14a38",
+        "public/public-tests.json": "b2437cd9b8b99a9dd656b0951314522563442f0dba2b1e034cae4aaed873883c",
+        "evaluator/private-tests.json": "2515843b7be32809e8f4a23d1dae123f4327c00a74aec87c8216c8eaf6bd6dfc"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-114-D",
+      "rating_band": "2000-2399",
+      "difficulty": 2000,
+      "checker": "tokens",
+      "output_requirement": "Output the only number \u2014 the amount of different substrings of t that start with sbegin and end with send.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 2000,
+      "data_sha256": {
+        "public/prompt.txt": "55415de318ebab99bdf231c4d01636dd1632d6fdde02d597f6bc2bce2a4a84a5",
+        "public/public-tests.json": "3127eaab2c283296efade2e7355eeee283666cd29830fa874ef23073e806f737",
+        "evaluator/private-tests.json": "de5bc53d4a94bc5c4d9259f0c8e34f17b42919c08755d77b147c4f44d8597e95"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-838-C",
+      "rating_band": "2400+",
+      "difficulty": 2800,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer, the number of winning words for Alice, modulo p.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 2800,
+      "data_sha256": {
+        "public/prompt.txt": "f5b672f2f44bd39543f9e4d423e000f64d4b51a3517c6455487041a6c334cf86",
+        "public/public-tests.json": "8ffbca8306eb4d4c29e7a4ae89b4da996185199a3096ff91759b89ca7ebde62f",
+        "evaluator/private-tests.json": "de2bdadcb3bbf939150ab3908beb55e1fedc904bb6c2e39cc08cedb406160c8c"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1283-E",
+      "rating_band": "1600-1999",
+      "difficulty": 1800,
+      "checker": "tokens",
+      "output_requirement": "Print two integers \u2014 the minimum and the maximum possible number of occupied houses after all moves are performed.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 1800,
+      "data_sha256": {
+        "public/prompt.txt": "0336e970f7c290b1bcd14f589cda69ad8cbeaa613379a74924c3aa55f92a8f0e",
+        "public/public-tests.json": "07f1eff023dd6ce31eab758085021399e7297aa7ed293d3169895b3332d65706",
+        "evaluator/private-tests.json": "35be8b6dbe5fabf747fd4d832bd9a7b071ab55c1400e07b8f24d4164e205a629"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-842-C",
+      "rating_band": "2000-2399",
+      "difficulty": 2000,
+      "checker": "tokens",
+      "output_requirement": "Output n numbers separated by spaces, where i-th number equals to maximum possible beauty of vertex i.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 2000,
+      "data_sha256": {
+        "public/prompt.txt": "2231b5c91a7ec5eb002a88c0cec624c924032503c198ac3726c0604cfa05b6ac",
+        "public/public-tests.json": "e50b7007bd0864631c4a279d6d53077f1996ef523c7bf19e5e5e8e5a1a6c0cd4",
+        "evaluator/private-tests.json": "86de1a942fbfa2949c9010f29044a0a75da45da8f366e8db61f5354880e17c9e"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1119-H",
+      "rating_band": "2400+",
+      "difficulty": 3200,
+      "checker": "tokens",
+      "output_requirement": "Print a single line containing 2^{k} integers. The i-th of them should be the number of ways to choose exactly one integer from each array so that their XOR is equal to t = i-1 modulo 998244353.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 3200,
+      "data_sha256": {
+        "public/prompt.txt": "0b867b351c6a6e9da2839114b5cf864c18b406e8164035e55649a0da060fd25b",
+        "public/public-tests.json": "2d19c40a91557b72fa6dee159e98c5d08feb623ca8c72fced3a122ca416f23ed",
+        "evaluator/private-tests.json": "72bb3d5e458a7d92b9dc7760c31b6e3a51b5af0201447b8f876b36a957889adc"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-58-C",
+      "rating_band": "1600-1999",
+      "difficulty": 1800,
+      "checker": "tokens",
+      "output_requirement": "Print a single number which is the minimal number of trees whose heights will have to be changed for the sequence to become beautiful.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 1800,
+      "data_sha256": {
+        "public/prompt.txt": "351aa6460de60be670f9a1ff8c349bcec2789b969a9fc602af9b62f5d16fb903",
+        "public/public-tests.json": "8cb1521f24d75478c56835c6d41c666667887189d2288f0c13d82a6eaf7f2e04",
+        "evaluator/private-tests.json": "8570f004c986a70ce7e888f6e2130f5a7cf2be052d8ac647ff152c0cf52cd493"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1057-C",
+      "rating_band": "2000-2399",
+      "difficulty": 2000,
+      "checker": "tokens",
+      "output_requirement": "Print minimal number of seconds to eat at least k candies. If solution doesn't exist, print \"-1\".",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 2000,
+      "data_sha256": {
+        "public/prompt.txt": "1150c9a3a99987212baa7a234cb2c74ac077e73ff17e1ab6f93f062f33953fec",
+        "public/public-tests.json": "e80eca8866228d24ed3907e534e0f4679cbdb89587bcaa833648e09063fd0d86",
+        "evaluator/private-tests.json": "5300601cc3de5e1a731ed4a4535a7d3c05602bdbd8da4331bdcd11046f8bb688"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-879-E",
+      "rating_band": "2400+",
+      "difficulty": 2700,
+      "checker": "tokens",
+      "output_requirement": "For each of the n tournaments output the number of contenders who can win.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 2700,
+      "data_sha256": {
+        "public/prompt.txt": "6da413421c24458d5a14e8a2f8d72f0bc98de403a7832442b2f111903393e191",
+        "public/public-tests.json": "23547e9bb84b82ac9eb5babe1ce061f7e9bd2148f8af4b6655a5f7b29f5c392a",
+        "evaluator/private-tests.json": "5503c65b1f7141e6a21296a7953766da257eb94103495314eeb44a3941de35e4"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1120-C",
+      "rating_band": "2000-2399",
+      "difficulty": 2100,
+      "checker": "tokens",
+      "output_requirement": "Output a single integer \u2014 the smallest possible number of coins you need to spend to compress s.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 2100,
+      "data_sha256": {
+        "public/prompt.txt": "91132c9e61b13123a86b83bc99ccec3e9de6bb432dbd2291e3fea21e0435c9c7",
+        "public/public-tests.json": "a2d589dc0a89153b914e76e0625d8cb29e9cf6b29622fca4d0f3db6027328ced",
+        "evaluator/private-tests.json": "8d8e77029ff93b543bf61445f82ac4c3947c0380eff3a0339d2ed04c33b8d9af"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1038-F",
+      "rating_band": "2400+",
+      "difficulty": 2900,
+      "checker": "tokens",
+      "output_requirement": "Print the only integer \u2014 the number of distinct cyclical binary strings t, which contain s as a substring.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 2900,
+      "data_sha256": {
+        "public/prompt.txt": "7c8ee6ce8b3a17703e4a94bf43158a1de7c060b9a20748195b00bf7b115e3259",
+        "public/public-tests.json": "fc7aec2b2104047aa7f3dc2ea6c9b393508282e20945d049f0f0ec7196d2ceaa",
+        "evaluator/private-tests.json": "4c38f82a0a96c2138561b88a223f7831b68cd3e3e93f6a49d2cd3c59df7b6ae4"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-68-C",
+      "rating_band": "2000-2399",
+      "difficulty": 2200,
+      "checker": "tokens",
+      "output_requirement": "Output in the first line two space-separated numbers: the minimum possible amount of fuel that can flow into the synchrophasotron, and the maximum possible sum that needs to be paid in order for that amount of fuel to reach synchrophasotron. If there is no amount of fuel that can reach synchrophasotron, output \"-1 -1\".\n\nThe amount of fuel which will flow into synchrophasotron is not neccessary positive. It could be equal to zero if the minimum constraint of every pipe is equal to zero.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 2200,
+      "data_sha256": {
+        "public/prompt.txt": "f018f1d7a03f0e42f93eec8a6507366610fb75d4f5ee5a82f76a453e5177e08a",
+        "public/public-tests.json": "84a1f967cabb22dcacbae302a844581c70c8911cacce69c8735ac771bba0dd64",
+        "evaluator/private-tests.json": "4684fa0fcef3172f706fb91b10f350986bbd5e565e302333efb981fe0fe99c55"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1326-F2",
+      "rating_band": "2400+",
+      "difficulty": 3200,
+      "checker": "tokens",
+      "output_requirement": "Print 2^{n-1} space-separated integers. For each 0 \u2264 x < 2^{n-1}:\n\n  * Let's consider a string s of length n-1, such that s_i = \u230a \\frac{x}{2^{i-1}} \u230b mod 2 for all 1 \u2264 i \u2264 n - 1. \n  * The (x+1)-th number should be equal to the required answer for s.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 3200,
+      "data_sha256": {
+        "public/prompt.txt": "599dafa6c5d06864e7807ed136852f2df61593748eb8b6b8ef7635752b8f8596",
+        "public/public-tests.json": "1ceab09e9ea4261819a9178aa749924199b00bccfd9ee9c65b658106ed3ddbce",
+        "evaluator/private-tests.json": "a7258550f2e3bab52884db4a4feb46f458c35aaec38fe24eeef37061829bccf1"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-165-D",
+      "rating_band": "2000-2399",
+      "difficulty": 2100,
+      "checker": "tokens",
+      "output_requirement": "For each request to \"find the distance between vertices a and b\" print the result. If there is no path going only along the black edges between vertices a and b, then print \"-1\" (without the quotes). Print the results in the order of receiving the requests, separate the numbers with spaces or line breaks.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 2100,
+      "data_sha256": {
+        "public/prompt.txt": "99f0a01ac0fd7d6f4bc6abc2236f88ea68ff7391e2c5597b4068c6d388197935",
+        "public/public-tests.json": "60e0b6cfd015f3bed59a90330c982d6ebe3003877ac31647a96470e9f8dfc0b0",
+        "evaluator/private-tests.json": "962554a41edb9cb7cb2ae6a3d50f7362963a8b6fc44004f182a0977e5f82663d"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1442-C",
+      "rating_band": "2400+",
+      "difficulty": 2400,
+      "checker": "tokens",
+      "output_requirement": "Print one integer: the minimum required time modulo 998 244 353.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 2400,
+      "data_sha256": {
+        "public/prompt.txt": "63efa5799c58499c94082ab20eff41138dfca3ca2ea7b2de5b27a6913b5bc3c7",
+        "public/public-tests.json": "bb7816a2dc0085678634661c49363bb42ccdc3f7eb95cdd36d98d0cb236e32e0",
+        "evaluator/private-tests.json": "3451cbd48e8e4cb3d7196fb8c9d5fc2b54ccb1999dcb4fa85603b9219221eb0a"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1487-E",
+      "rating_band": "2000-2399",
+      "difficulty": 2000,
+      "checker": "tokens",
+      "output_requirement": "If it's impossible to choose a first course, a second course, a drink, and a dessert so that they go well with each other, print -1. Otherwise, print one integer \u2014 the minimum total cost of the dinner.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 2000,
+      "data_sha256": {
+        "public/prompt.txt": "32685bf9baf569d96935a64811d3d892f0f5768f6316b39d3c052e07063c4318",
+        "public/public-tests.json": "4cb10219db21d1f99c1580a6936f9f5d9dce66f103320590e5a48ccc5a444bb3",
+        "evaluator/private-tests.json": "6519c86659b90ed8a1d4e46d6b1bdbbcaa10fa5d48d9528320c957c8e65a8dad"
+      }
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1423-L",
+      "rating_band": "2400+",
+      "difficulty": 2600,
+      "checker": "tokens",
+      "output_requirement": "Print D lines, one for each day. In the i^{th} line, print the minimum number of switches that need to be flipped on day i, or -1 if it's impossible to turn all the lights off.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens",
+      "rating": 2600,
+      "data_sha256": {
+        "public/prompt.txt": "50399f824800264ae08fa7d6309df6fff1a700a9062155dc2939b704ebfc97ae",
+        "public/public-tests.json": "8552160cd808071c7038a88f5bb1ffecc7b6c21e5fa33d0c5ad37d814a99e704",
+        "evaluator/private-tests.json": "df9bf221b08b009ce7eef0f180f539acaee1759ef9dad49de6ed56248b1ffa9e"
+      }
+    }
+  ],
+  "conditions": [
+    "baseline",
+    "crosshair",
+    "nagini",
+    "esbmc"
+  ],
+  "repetitions": 1,
+  "selection": "Deterministic SHA256(20261115-strong:task_id) ordering within rating bands of the previous frozen50, take4/8/8 and interleave bands. No selection by observed outcomes. Some previous outcomes known.",
+  "rating_counts": {
+    "1800-1999": 4,
+    "2000-2399": 8,
+    "2400+": 8
+  },
+  "hidden_suite": "original_private_tests; generated tests excluded",
+  "checker": "exact case-sensitive whitespace tokens; prior output requirement review reused",
+  "language": "Python 3.13",
+  "agent_limits": "No imposed step, cost, or wall time budget",
+  "per_test_timeout_seconds": 10,
+  "protocol": "Instructed verifier use: read guide, attempt a relevant check, inspect feedback before submission. No hard submission gate. Baseline retains testing-only tools."
+}

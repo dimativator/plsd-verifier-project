@@ -1,0 +1,771 @@
+{
+  "dataset": "deepmind/code_contests",
+  "revision": "802411c3010cb00d1b05bad57ca77365a3c699d6",
+  "files": [
+    {
+      "type": "file",
+      "oid": "fbb67ad15da970d85750202702e3ab1e6bc500bb",
+      "size": 63077400,
+      "lfs": {
+        "oid": "aa426cbdb202bf8703b658bcb31fd1878ca7cfd33ca07d3b703dc94ca6a2b651",
+        "size": 63077400,
+        "pointerSize": 133
+      },
+      "xetHash": "826791425f7dc08231625310523d6898528f9f635b9f8ebcd622ecb0a4bb494f",
+      "path": "data/test-00000-of-00001-9c49eeff30aacaa8.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "c8143255d53a9294ca734ac2bb39404bba4a2d5d",
+      "size": 180227735,
+      "lfs": {
+        "oid": "950bfdefde1f274edf93963e7e23c93ab16034de344aa7b7c32d14145e8d5232",
+        "size": 180227735,
+        "pointerSize": 134
+      },
+      "xetHash": "125091eb5d18e0c638373922c4c93224d97c3d1042e26946a7d99d8e9ce2e850",
+      "path": "data/train-00000-of-00039-e991a271dbfa9925.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "b219e5aacaaf1a7a8ec2701f92e31fa99665568c",
+      "size": 208507780,
+      "lfs": {
+        "oid": "7bcc72d98a3d97f07be90ea70bf8db834c8f29ac2c7626d7cfc657bae6f5ddd9",
+        "size": 208507780,
+        "pointerSize": 134
+      },
+      "xetHash": "5851660daa0498b10ac70e499637be0e966a7de9274f4786b555b1d0ecf4d0bd",
+      "path": "data/train-00001-of-00039-e092fe56fda18715.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "eaea95d51e6bc7f8d1886f57ff8f227dd938a373",
+      "size": 226940997,
+      "lfs": {
+        "oid": "d67c9643019e632941b045f115c6bdf5925a4b32cd9f3fc991734970669b4a29",
+        "size": 226940997,
+        "pointerSize": 134
+      },
+      "xetHash": "6e34dbf5be41e007251e4aeb25394b5b9dcd7e524bb32af709f65f3058a0dd83",
+      "path": "data/train-00002-of-00039-9cea23812e920e41.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "3f9438bf2138a3d0e9d178a27d9ac61ce3b9890a",
+      "size": 180680623,
+      "lfs": {
+        "oid": "f4952386b2958bddb71ff6713b273b5425b1191084ef75923731b111bc20485f",
+        "size": 180680623,
+        "pointerSize": 134
+      },
+      "xetHash": "c2da9c975e02a8db86cf996a46838022197b781c1fca349aa89b7c5c405b6dcf",
+      "path": "data/train-00003-of-00039-e3822fccad6e083a.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "52462bf3b99132e914f52e3a5c43ddf469508204",
+      "size": 195299927,
+      "lfs": {
+        "oid": "f28993a19d927561b30873a0adf26d5e06bc649fa2b14fc8223de8fecb0b68a9",
+        "size": 195299927,
+        "pointerSize": 134
+      },
+      "xetHash": "1bcb28341c79489e3c0fd9c608336d83221ebf8241dc1d04f8236c999ae7fe8c",
+      "path": "data/train-00004-of-00039-cefe355b4667b27e.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "ba79985b3ed4eea689dae17132559f4769aabe9a",
+      "size": 174068638,
+      "lfs": {
+        "oid": "4904c25acd90c3e3882167efd2d70b371e6f8dfc996b65606435e44d58fad78c",
+        "size": 174068638,
+        "pointerSize": 134
+      },
+      "xetHash": "45616ed7e2dfd28ff44022c8f910f6e69bcf5b47922b1243e664d14ebf70a211",
+      "path": "data/train-00005-of-00039-b7580d2d846c2136.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "c644393316f22d844670c94d8319333dde22968c",
+      "size": 186169733,
+      "lfs": {
+        "oid": "8ab765a7f8595c3f24f2f12eaac0f2d03ac626f9218abce127aa9ab898d011ff",
+        "size": 186169733,
+        "pointerSize": 134
+      },
+      "xetHash": "320c4eb07ae080d63ced2eb3976fa1fd45cf1ff86c4d4ad20986166196ac7184",
+      "path": "data/train-00006-of-00039-65184bb9f7d61fde.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "8cdee43e5be04b27be69b47c1dfa33c1b14283b2",
+      "size": 172039390,
+      "lfs": {
+        "oid": "b9587e7767286768a039a316600232f49edbcdd6f645097db865f8e2ce262304",
+        "size": 172039390,
+        "pointerSize": 134
+      },
+      "xetHash": "88ee4947cb2b2c0ab2af0bd59ad75962b222d56ee3b26adf3111ad141392733a",
+      "path": "data/train-00007-of-00039-05785de21e8b8429.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "1f99779d87ea385189c72079226bd6cd361edd99",
+      "size": 199862972,
+      "lfs": {
+        "oid": "fe4e8a9c029563128882a101a06d427b8c7a8fbf7f273c76e09176fbb664fc88",
+        "size": 199862972,
+        "pointerSize": 134
+      },
+      "xetHash": "7c889b0f94c7dc0b5f32ad50a4b10eafc3fcf31c11153462d592cf3fa807af89",
+      "path": "data/train-00008-of-00039-7246e6b7423b404f.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "bbd42cdb3e56e8a505f74a21a5ce874348dba8f6",
+      "size": 204590259,
+      "lfs": {
+        "oid": "11844dd410f284f8e4db32970bd3968db82280e2c2971f33699f61baccfa656f",
+        "size": 204590259,
+        "pointerSize": 134
+      },
+      "xetHash": "3b30c8ba492e0cd86f68e580b624909a4e567d14ddb41dff0ef52a106c4841da",
+      "path": "data/train-00009-of-00039-b8c920f6629b57b2.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "d10a2550a6e0cab056e627d4b31bfef3feddc848",
+      "size": 178085060,
+      "lfs": {
+        "oid": "0b83e96a5a9717ea60c2e6fd44bde4ac2215834e78ba3b78f04b621a9b7b5cdc",
+        "size": 178085060,
+        "pointerSize": 134
+      },
+      "xetHash": "e62b9d36e8438b7777545bd2c483508af08d22909949f07cfdeeaa89e6e748e4",
+      "path": "data/train-00010-of-00039-6de28ba20654f69b.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "b7ef65d91c139e9c532f443895341f1cbc54d0f0",
+      "size": 164271996,
+      "lfs": {
+        "oid": "facf7036a71d74cd8415dd2180deabc0d943b67219eb07b239e80af2d490dcdf",
+        "size": 164271996,
+        "pointerSize": 134
+      },
+      "xetHash": "91313b1850d11ab27f382d3fe223db21a29c88ce59ce6e2d02665bd8cbebceae",
+      "path": "data/train-00011-of-00039-5de236be5188959d.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "0b64bd13aae7e60d5f347c86b43892c8c0ebb1f0",
+      "size": 199746101,
+      "lfs": {
+        "oid": "c4ec5429c2b920173f4662b5dc9ec0db40e9f3ddf5b139bad126d49ab598c635",
+        "size": 199746101,
+        "pointerSize": 134
+      },
+      "xetHash": "ba7b1ae9dfcd40dc094685d82d44e539b1aa8ae961e3557ffcbd9e05b7601e86",
+      "path": "data/train-00012-of-00039-da9476a39a1bdbb7.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "9aa2292cc033ef371eacf8bae07807d38eaea9f4",
+      "size": 197142293,
+      "lfs": {
+        "oid": "a03f874674808641cf4b2a8ac1b13a9cd6a28b4ffda329bc60dd1804ec315186",
+        "size": 197142293,
+        "pointerSize": 134
+      },
+      "xetHash": "3ac148ee579f39c52ed31c8f5bd3ad3f2393b52faabd054261ca66f267800702",
+      "path": "data/train-00013-of-00039-30b8c3829ee3b962.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "11fc0297d1fb4efa1475de24515c3e820865b1f7",
+      "size": 211187756,
+      "lfs": {
+        "oid": "429d22b44ed3134a1e345bb39e5d395900bb6f4fad1ffe32844e972914f2bc30",
+        "size": 211187756,
+        "pointerSize": 134
+      },
+      "xetHash": "7a801ce3d73ac4a919d06cd3867e660aa96541baa24bda97fb2f0f86ffbdeab8",
+      "path": "data/train-00014-of-00039-dc3ebb07a3cba8e4.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "d461fb9f691d51ed8427fa112e4340d11292e4e6",
+      "size": 178946180,
+      "lfs": {
+        "oid": "130ef71583565d5b2887a186cb0c64578486f1c7dfdff4bcb9c1107f807b0768",
+        "size": 178946180,
+        "pointerSize": 134
+      },
+      "xetHash": "b916d8d44cdb004d4f60b640e258fa04b7b4a151b282d8fc234f91a466d8c710",
+      "path": "data/train-00015-of-00039-19ccd7331d695677.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "bd01b7298edd4282f04cb52f88217c233b5b57f8",
+      "size": 202144829,
+      "lfs": {
+        "oid": "7528a2ee39b08a78c6f9ffe16d9a18fb3e4de24e34fe2e899c795fc31acf2c76",
+        "size": 202144829,
+        "pointerSize": 134
+      },
+      "xetHash": "3c5d41d136be9b29cd48e8c0a0614b4688c07cd1cda0c5336f66eadb44292e0a",
+      "path": "data/train-00016-of-00039-bf38b0908b322307.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "29e59831733343ea8c3e6e0af7b4f6a81caecbe1",
+      "size": 169304362,
+      "lfs": {
+        "oid": "895fe5a77c17f0ab4a364e01745a882b977e6da2e3580e8b171d59fcf816f971",
+        "size": 169304362,
+        "pointerSize": 134
+      },
+      "xetHash": "52d3e0c8699ce8e5b658f4facd4554b498fd27ebec3088916420756218dfdc50",
+      "path": "data/train-00017-of-00039-ae5533a2f822e6ef.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "83c09d4745c1febf3e5024ab3e8d11bd5a3b968b",
+      "size": 184831619,
+      "lfs": {
+        "oid": "8a214241c33628e6a01952088046b0561bd6e2941a39ce492bb59597bc93e8f6",
+        "size": 184831619,
+        "pointerSize": 134
+      },
+      "xetHash": "3118dc37aeb50af8d7e8dce10ff206017b4c29ea1573f2a7cb1a9fb80a948d79",
+      "path": "data/train-00018-of-00039-8c793837880f5507.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "51232e0b6a5cd4814133f61abfa8943916523e74",
+      "size": 190554330,
+      "lfs": {
+        "oid": "bd4b85d9ec0f7b16d38c9a296c6333f15720f0a019582d223480be5c90b2a864",
+        "size": 190554330,
+        "pointerSize": 134
+      },
+      "xetHash": "c9fefb17d44eddb025fe76acb5991e86707cf0f14164c48d37363e3b8a7a8ca5",
+      "path": "data/train-00019-of-00039-d688fad5ee604390.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "715fb85265611ef15b8555be959553bfa0555178",
+      "size": 211262604,
+      "lfs": {
+        "oid": "b2a03b3940b6de703c18a0b55111e7aa979e2399b29f3f96c4abca706d5830db",
+        "size": 211262604,
+        "pointerSize": 134
+      },
+      "xetHash": "7ef98680fa96af1e6465610941e7f223f2bf209f8b4fc1821b35cee0210db726",
+      "path": "data/train-00020-of-00039-5d59387098675b73.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "6ea97f21ffee644ae421125af5615214c6d69fd1",
+      "size": 181119876,
+      "lfs": {
+        "oid": "444b82044438c76d6e2cf79000615349b1dd7ba165da9118924ebcb427e6febc",
+        "size": 181119876,
+        "pointerSize": 134
+      },
+      "xetHash": "ac6567793142e6179e1bf01500a2a2738753b9e5930004b81f1b0d72f3aea772",
+      "path": "data/train-00021-of-00039-b257bf03d6876780.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "62f514ec0e9e8d9f56b89dff9beaef2da0a8b0cf",
+      "size": 193915223,
+      "lfs": {
+        "oid": "63ff8266ec628a64417d7dda7754ed0366522c4cef5217e990487f83af2b1e53",
+        "size": 193915223,
+        "pointerSize": 134
+      },
+      "xetHash": "e03fe73609dc43e61ce1b5838054b895585877e00eff138f81f15d16d9cd40cb",
+      "path": "data/train-00022-of-00039-1cfd39fa43c1917c.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "ff4f5b3f14c3c2dd64974f48205a9dc2029402d8",
+      "size": 176115120,
+      "lfs": {
+        "oid": "2aa78452a6a3306536b2f000a4431c048282426a47e7197210155bedbad82c49",
+        "size": 176115120,
+        "pointerSize": 134
+      },
+      "xetHash": "8df81504a76472e4e2ccf9fc69323af0bddd2b098bbcf1f076ea6f66e0a08311",
+      "path": "data/train-00023-of-00039-d078bcb55e45cbf0.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "b9ce45965f6c166d70ddcf51397f3a6dc0c57b47",
+      "size": 180979071,
+      "lfs": {
+        "oid": "c958b0997f636ea83fbf21c08adda22897dd35ca8cd1e5a97e5be16f832af28d",
+        "size": 180979071,
+        "pointerSize": 134
+      },
+      "xetHash": "476a4ccc14e1eb82ad021801cc382703732d855e22646a19151556aba976dc44",
+      "path": "data/train-00024-of-00039-f4e3da0e5661e6d1.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "ee6c033229ede9ba8bde286c4e02a457aeeb3c48",
+      "size": 205823196,
+      "lfs": {
+        "oid": "5ae9793f8d97c4448d8053475c10007215a9d819168e3f68a9af4cc2e335da84",
+        "size": 205823196,
+        "pointerSize": 134
+      },
+      "xetHash": "d3f700420bb94b054e31d34978d9ef3f5857389a9855bfcb185de31f7d366155",
+      "path": "data/train-00025-of-00039-3f6ebfbaba5f4c70.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "59b25e0c9d972fb2e5d29537f6363aa73726ff8b",
+      "size": 188681982,
+      "lfs": {
+        "oid": "cb60563bba14228dba3addd8a5be6a998654113bd734b3c54271dfe6e30e63c7",
+        "size": 188681982,
+        "pointerSize": 134
+      },
+      "xetHash": "9ef71e8eec704c7e531183bb699f24536db82de71506ebefcdc0771f7a53ea45",
+      "path": "data/train-00026-of-00039-7d4898300894cbbe.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "3261bea9eef77ac8ad2f48b4bf95580a82bb9483",
+      "size": 217005966,
+      "lfs": {
+        "oid": "8b1464860f954fff785255b6f744aeaaba224c0e6b9ac2c74c6b832eedbbccbb",
+        "size": 217005966,
+        "pointerSize": 134
+      },
+      "xetHash": "4161f7d94bf6e9eedaf97d87fc3ba2e13aa4c1c9aeb49f0e0bc07fdf1e4653fc",
+      "path": "data/train-00027-of-00039-f8196766547533a2.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "5ae89d5a9d6417ca7c0341980f5b5c725a3119dd",
+      "size": 178924886,
+      "lfs": {
+        "oid": "f32b70263520ba04d01efda103d8ddbbf2f158b60931caae83d67f5d49b6dc62",
+        "size": 178924886,
+        "pointerSize": 134
+      },
+      "xetHash": "ffd290fd548847c88a75aa7cdff8119a9c44fb2f410d7a1da7f13c43a980d880",
+      "path": "data/train-00028-of-00039-79a302af3c924863.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "00da1f7efb130d4b535379892ff0c275e9d36528",
+      "size": 197596694,
+      "lfs": {
+        "oid": "a2d76b2c01471ec07d4a724391f76123d54f66dc11fb24b531c3a056cbbfe7b0",
+        "size": 197596694,
+        "pointerSize": 134
+      },
+      "xetHash": "2cf81f003bc17db1dd4d208add07fad32bbcc3383c261c3c0babea81dfcc0048",
+      "path": "data/train-00029-of-00039-2b6615897d038115.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "28836fc5e9c6e6f5833efd99acd82d0a955be166",
+      "size": 223399896,
+      "lfs": {
+        "oid": "fe9d77f481b639e21867942ad1061f8a3b7bfb82b3357e6c7ec96da55c6373cd",
+        "size": 223399896,
+        "pointerSize": 134
+      },
+      "xetHash": "dd4c371bb53f5a16ee9992ac46e2f0742185f21f7b3a6b7437db0c3acd9ec279",
+      "path": "data/train-00030-of-00039-4135cc54050afc22.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "7c10d43375dbe7d6f861ae8c59bec90c97729cfe",
+      "size": 181140154,
+      "lfs": {
+        "oid": "2daeff73dc92b289ec9aeaa6f52af9e7665aae45ade8a172e5dad9a130a48fb2",
+        "size": 181140154,
+        "pointerSize": 134
+      },
+      "xetHash": "137338f6fd8c2ea4942f4d382018ddde1d4d170b6bc28f1abbe8d327b1005e6c",
+      "path": "data/train-00031-of-00039-40309dd907c042b7.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "d46b0b89df70cbfe0344fa8b837802c9949f0bdb",
+      "size": 186381035,
+      "lfs": {
+        "oid": "fe24e9818595a3fa467a8986f4d341cf1cbcdb6f1d2c0900b4e995b25597f9ad",
+        "size": 186381035,
+        "pointerSize": 134
+      },
+      "xetHash": "3ecfb3a574f03597582817ec08b037b390b9e2fbb790f873f18285436a391ba3",
+      "path": "data/train-00032-of-00039-7b7d2068a3d9c359.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "7e799171bd7234742894d3766c2fdbb01ba55368",
+      "size": 203741870,
+      "lfs": {
+        "oid": "65366660f211cfa6e18c81086348713805dd874b708b0bf2e3d0b6de2556cebf",
+        "size": 203741870,
+        "pointerSize": 134
+      },
+      "xetHash": "7d8cd0d1ab95b7aa94c14797ec3961faaf8451dcec782406d0ca32a0afeb78d5",
+      "path": "data/train-00033-of-00039-53b0f749aacff9c1.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "5061e5bffe2d6ba08db8f03c654a87253279653b",
+      "size": 187767858,
+      "lfs": {
+        "oid": "5ea8c872ec944013b661f23203f8d4b82e46dc8dec204c32af89ba7153035171",
+        "size": 187767858,
+        "pointerSize": 134
+      },
+      "xetHash": "3b37eb9dbded96fca24f7b9f9785935d1b9a36d7faded557c5390b7f316cb5ef",
+      "path": "data/train-00034-of-00039-a36ff0bff7d2a76f.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "3ba123d8b3b36993a2391feaa95a29aa2b473824",
+      "size": 151356957,
+      "lfs": {
+        "oid": "4a7ed07e1f67ca32ed03a874b96dfc9f4f43be0563734b33085bf0b653c65c47",
+        "size": 151356957,
+        "pointerSize": 134
+      },
+      "xetHash": "f0a7e2b7305f487d48126ce4d142f27a48e55489f8e63367d2c4602486fb3734",
+      "path": "data/train-00035-of-00039-d28f9be60314601f.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "ebd34402b97f32632cb9ffd9105a1886fa7a84a0",
+      "size": 204394454,
+      "lfs": {
+        "oid": "cb14ebff9529e89c5fd5659b7de0352858f6a514fc63e2111daed392511eafa8",
+        "size": 204394454,
+        "pointerSize": 134
+      },
+      "xetHash": "57b383a762ad4748a5b873a1eb4c809c822920de200be1d1f74755e92da9efb9",
+      "path": "data/train-00036-of-00039-146e1a11c054aeab.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "115fc75a47045803e037204de013d51cfcaa8200",
+      "size": 231402023,
+      "lfs": {
+        "oid": "bc6e40d8b2de70a52056f0d25d70cac57dd77b8671fa5d1e467e330156addca0",
+        "size": 231402023,
+        "pointerSize": 134
+      },
+      "xetHash": "8b8a0a30cc0f17b19b7b042431973e046eafe1139118f8c0efc10274b5754cbf",
+      "path": "data/train-00037-of-00039-995207c374a4e6f2.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "f60aa0d52f56af54ba0665d4adeb564b18092d09",
+      "size": 204141641,
+      "lfs": {
+        "oid": "62a3f1e1a56485b7b8514d969e803a844fae89e29b985995109f860f50d042ed",
+        "size": 204141641,
+        "pointerSize": 134
+      },
+      "xetHash": "00f7a81fcb84bf88a448b25cf06c62b94eb97cd71f70b2ab60d48b04e348271e",
+      "path": "data/train-00038-of-00039-96a59dd6a98cd075.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "9bfabf1a345b4feedff96bf11d43402cf7633fed",
+      "size": 51829044,
+      "lfs": {
+        "oid": "02e8c1ccedae716f1e43cc813fcb7823c3db666ea92638820aba80e8cef451ab",
+        "size": 51829044,
+        "pointerSize": 133
+      },
+      "xetHash": "812c48277043b978d52a80a3807936399a04ed2393ebdcfc7970f5471d0914f1",
+      "path": "data/valid-00000-of-00001-5e672c5751f060d3.parquet"
+    }
+  ],
+  "info": {
+    "deepmind--code_contests": {
+      "description": "CodeContests is a competitive programming dataset for machine-learning. This dataset was used when training AlphaCode.\n\nIt consists of programming problems, from a variety of sources.\n\nProblems include test cases in the form of paired inputs and outputs, as well as both correct and incorrect human solutions in a variety of languages.\n",
+      "citation": "@article{li2022competition,\n  title={Competition-Level Code Generation with AlphaCode},\n    author={Li, Yujia and Choi, David and Chung, Junyoung and Kushman, Nate and\n    Schrittwieser, Julian and Leblond, R{'e}mi and Eccles, Tom and\n    Keeling, James and Gimeno, Felix and Dal Lago, Agustin and\n    Hubert, Thomas and Choy, Peter and de Masson d'Autume, Cyprien and\n    Babuschkin, Igor and Chen, Xinyun and Huang, Po-Sen and Welbl, Johannes and\n    Gowal, Sven and Cherepanov, Alexey and Molloy, James and\n    Mankowitz, Daniel and Sutherland Robson, Esme and Kohli, Pushmeet and\n    de Freitas, Nando and Kavukcuoglu, Koray and Vinyals, Oriol},\n  journal={arXiv preprint arXiv:2203.07814},\n  year={2022}\n}\n",
+      "homepage": "https://github.com/deepmind/code_contests/",
+      "license": "CC BY 4.0",
+      "features": {
+        "name": {
+          "dtype": "string",
+          "id": null,
+          "_type": "Value"
+        },
+        "description": {
+          "dtype": "string",
+          "id": null,
+          "_type": "Value"
+        },
+        "public_tests": {
+          "feature": {
+            "input": {
+              "dtype": "string",
+              "id": null,
+              "_type": "Value"
+            },
+            "output": {
+              "dtype": "string",
+              "id": null,
+              "_type": "Value"
+            }
+          },
+          "length": -1,
+          "id": null,
+          "_type": "Sequence"
+        },
+        "private_tests": {
+          "feature": {
+            "input": {
+              "dtype": "string",
+              "id": null,
+              "_type": "Value"
+            },
+            "output": {
+              "dtype": "string",
+              "id": null,
+              "_type": "Value"
+            }
+          },
+          "length": -1,
+          "id": null,
+          "_type": "Sequence"
+        },
+        "generated_tests": {
+          "feature": {
+            "input": {
+              "dtype": "string",
+              "id": null,
+              "_type": "Value"
+            },
+            "output": {
+              "dtype": "string",
+              "id": null,
+              "_type": "Value"
+            }
+          },
+          "length": -1,
+          "id": null,
+          "_type": "Sequence"
+        },
+        "source": {
+          "num_classes": 7,
+          "names": [
+            "UNKNOWN_SOURCE",
+            "CODECHEF",
+            "CODEFORCES",
+            "HACKEREARTH",
+            "CODEJAM",
+            "ATCODER",
+            "AIZU"
+          ],
+          "id": null,
+          "_type": "ClassLabel"
+        },
+        "difficulty": {
+          "num_classes": 29,
+          "names": [
+            "UNKNOWN_DIFFICULTY",
+            "EASY",
+            "MEDIUM",
+            "HARD",
+            "HARDER",
+            "HARDEST",
+            "EXTERNAL",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V"
+          ],
+          "id": null,
+          "_type": "ClassLabel"
+        },
+        "solutions": {
+          "feature": {
+            "language": {
+              "num_classes": 5,
+              "names": [
+                "UNKNOWN_LANGUAGE",
+                "PYTHON",
+                "CPP",
+                "PYTHON3",
+                "JAVA"
+              ],
+              "id": null,
+              "_type": "ClassLabel"
+            },
+            "solution": {
+              "dtype": "string",
+              "id": null,
+              "_type": "Value"
+            }
+          },
+          "length": -1,
+          "id": null,
+          "_type": "Sequence"
+        },
+        "incorrect_solutions": {
+          "feature": {
+            "language": {
+              "num_classes": 5,
+              "names": [
+                "UNKNOWN_LANGUAGE",
+                "PYTHON",
+                "CPP",
+                "PYTHON3",
+                "JAVA"
+              ],
+              "id": null,
+              "_type": "ClassLabel"
+            },
+            "solution": {
+              "dtype": "string",
+              "id": null,
+              "_type": "Value"
+            }
+          },
+          "length": -1,
+          "id": null,
+          "_type": "Sequence"
+        },
+        "cf_contest_id": {
+          "dtype": "int64",
+          "id": null,
+          "_type": "Value"
+        },
+        "cf_index": {
+          "dtype": "string",
+          "id": null,
+          "_type": "Value"
+        },
+        "cf_points": {
+          "dtype": "float32",
+          "id": null,
+          "_type": "Value"
+        },
+        "cf_rating": {
+          "dtype": "int32",
+          "id": null,
+          "_type": "Value"
+        },
+        "cf_tags": {
+          "feature": {
+            "dtype": "string",
+            "id": null,
+            "_type": "Value"
+          },
+          "length": -1,
+          "id": null,
+          "_type": "Sequence"
+        },
+        "is_description_translated": {
+          "dtype": "bool",
+          "id": null,
+          "_type": "Value"
+        },
+        "untranslated_description": {
+          "dtype": "string",
+          "id": null,
+          "_type": "Value"
+        },
+        "time_limit": {
+          "seconds": {
+            "dtype": "int64",
+            "id": null,
+            "_type": "Value"
+          },
+          "nanos": {
+            "dtype": "int64",
+            "id": null,
+            "_type": "Value"
+          }
+        },
+        "memory_limit_bytes": {
+          "dtype": "int64",
+          "id": null,
+          "_type": "Value"
+        },
+        "input_file": {
+          "dtype": "string",
+          "id": null,
+          "_type": "Value"
+        },
+        "output_file": {
+          "dtype": "string",
+          "id": null,
+          "_type": "Value"
+        }
+      },
+      "post_processed": null,
+      "supervised_keys": null,
+      "task_templates": null,
+      "builder_name": "code_contests",
+      "config_name": "default",
+      "version": {
+        "version_str": "1.0.0",
+        "description": null,
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "splits": {
+        "train": {
+          "name": "train",
+          "num_bytes": 19047685054,
+          "num_examples": 13328,
+          "dataset_name": "code_contests"
+        },
+        "valid": {
+          "name": "valid",
+          "num_bytes": 167224528,
+          "num_examples": 117,
+          "dataset_name": "code_contests"
+        },
+        "test": {
+          "name": "test",
+          "num_bytes": 182256334,
+          "num_examples": 165,
+          "dataset_name": "code_contests"
+        }
+      },
+      "download_checksums": null,
+      "download_size": 7624659530,
+      "post_processing_size": null,
+      "dataset_size": 19397165916,
+      "size_in_bytes": 27021825446
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "task_id": "HumanEval_kotlin/90",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Write a function that takes a message, and encodes in such a\n * way that it swaps case of all letters, replaces all vowels in\n * the message with the letter that appears 2 places ahead of that\n * vowel in the english alphabet.\n * Assume only letters.\n *\n * Examples:\n * >>> encode('test')\n * 'TGST'\n * >>> encode('This is a message')\n * 'tHKS KS C MGSSCGG'\n *\n */\nfun encode(message: String): String {\n",
+  "entry_point": "encode",
+  "test": "fun main() {\n    var arg00: String = \"TEST\"\n    var x0: String = encode(arg00)\n    var v0: String = \"tgst\"\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: String = \"Mudasir\"\n    var x1: String = encode(arg10)\n    var v1: String = \"mWDCSKR\"\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: String = \"YES\"\n    var x2: String = encode(arg20)\n    var v2: String = \"ygs\"\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30: String = \"This is a message\"\n    var x3: String = encode(arg30)\n    var v3: String = \"tHKS KS C MGSSCGG\"\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40: String = \"I DoNt KnOw WhAt tO WrItE\"\n    var x4: String = encode(arg40)\n    var v4: String = \"k dQnT kNqW wHcT Tq wRkTg\"\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Write a function that takes a message, and encodes in such a\n * way that it swaps case of all letters, replaces all vowels in\n * the message with the letter that appears 2 places ahead of that\n * vowel in the english alphabet.\n * Assume only letters.\n *\n * Examples:\n * >>> encode('test')\n * 'TGST'\n * >>> encode('This is a message')\n * 'tHKS KS C MGSSCGG'\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun encode(message: String): String {",
+    "    val vowelMap = mapOf(",
+    "        'a' to 'c', 'A' to 'C',",
+    "        'e' to 'g', 'E' to 'G',",
+    "        'i' to 'k', 'I' to 'K',",
+    "        'o' to 'q', 'O' to 'Q',",
+    "        'u' to 'w', 'U' to 'W'",
+    "    )",
+    "    return message.map { char ->",
+    "        val swappedCaseChar = if (char.isUpperCase()) {",
+    "            char.lowercaseChar()",
+    "        } else {",
+    "            char.uppercaseChar()",
+    "        }",
+    "        vowelMap.getOrDefault(swappedCaseChar, swappedCaseChar)",
+    "    }.joinToString(\"\")",
+    "}",
+    "",
+    ""
+  ]
+}

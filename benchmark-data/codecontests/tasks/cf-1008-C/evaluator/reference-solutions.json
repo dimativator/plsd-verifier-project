@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input().strip())\na = list(map(int, input().strip().split()))\na.sort()\ncnt = 0\nque = []\nl = 0\nfor i in a:\n\tif l == 0:\n\t\tque.append(i)\n\t\tl += 1\n\telse:\n\t\tif i != que[0]:\n\t\t\tque.append(i)\n\t\t\tdel que[0]\n\t\t\tcnt += 1\n\t\telse:\n\t\t\tque.append(i)\n\t\t\tl += 1\nprint(cnt)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst long long MOD = 1000000007;\nint main() {\n  long long n, i, j, t;\n  vector<long long> a;\n  vector<long long> b;\n  cin >> n;\n  for (i = 0; i < n; i++) {\n    cin >> j;\n    a.push_back(j);\n    b.push_back(j);\n  }\n  sort(a.begin(), a.end());\n  sort(b.begin(), b.end());\n  i = 0;\n  j = 1;\n  long long counter = 0;\n  while (j < n) {\n    if (b[i] < a[j]) {\n      t = a[i];\n      a[i] = a[j];\n      a[j] = t;\n      i++;\n      counter++;\n    }\n    j++;\n  }\n  cout << counter << endl;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class Main {\n\tpublic static void main(String[] args) {\n\t\n\t\tScanner s = new Scanner(System.in);\n\t\tint n = s.nextInt();\n\n\t\tint[] a = new int[n];\n\t\tfor(int i = 0; i < n; i++)\n\t\t\ta[i] = s.nextInt();\n\n\t\tArrays.sort(a);\n\n\t\tint i = 0, j = 0;\n\n\t\twhile(j < n) {\n\t\t\tif(a[j] > a[i])\n\t\t\t\ti++;\n\t\t\tj++;\n\t\t}\n\n\t\tSystem.out.println(i);\n\t}\n}"
+  }
+]

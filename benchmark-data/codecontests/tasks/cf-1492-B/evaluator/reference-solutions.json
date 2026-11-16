@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "for t in range(int(input())):\n  n = int(input())\n  a = list(map(int, input().split()))\n  look = [0] * n\n\n  look[0] = a[0]\n  for i in range(1, n):\n    look[i] = max(look[i - 1], a[i])\n\n  j = n\n  ans = []\n  for i in range(n - 1, -1, -1):\n    if look[i] == a[i]:\n      ans.extend(a[i:j])\n      j = i\n  print(*ans)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include<bits/stdc++.h>\nusing namespace std;\ntypedef long long int lli;\n\nvoid solve()\n{\n    int n,l;\n    cin>>n;\n    int arr[n+1];\n    int pos[n+1];\n    arr[0]=0;\n    pos[0]=0;\n    for(int i=1;i<=n;i++)\n    {\n        cin>>arr[i];\n        pos[arr[i]]=i;\n    }\n    l=n;\n    for(int i=n;i>=1;i--)\n    {\n        if(pos[i]>l)\n        continue;\n        for(int k=pos[i];k<=l;k++)\n        cout<<arr[k]<<\" \";\n        l=pos[i]-1;\n    }\n    cout<<\"\\n\";\n}\n\nint main()\n{\n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n    int t;\n    cin>>t;\n    while(t--)\n    {\n        solve();\n    }    \n    return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.ArrayDeque;\nimport java.util.Scanner;\nimport java.util.Stack;\n\npublic class Main\n{\n    public static void main(String[] args)\n    {\n        Scanner sc = new Scanner(System.in);\n        int testCase = sc.nextInt();\n        for (int g=0;g<testCase;g++) {\n            StringBuilder sb = new StringBuilder();\n            Stack<Integer> stack = new Stack<Integer>();\n            int huuu = sc.nextInt();\n            int[] gyuet = new int[huuu];\n            for(int i=0;i<huuu;i++)\n                gyuet[i] = sc.nextInt();\n            int[] fuut = new int[huuu];\n            int indx=huuu-1;\n            for(int i=0;i<huuu;i++){\n                if(!stack.isEmpty()){\n                    if(stack.firstElement()<gyuet[i])\n                        while(!stack.isEmpty()) {\n                            fuut[indx] = stack.pop();\n                            indx--;\n                        }\n                }\n                stack.push(gyuet[i]);\n            }\n            while(!stack.isEmpty()){\n                fuut[indx] = stack.pop();\n                indx--;\n            }\n            for(int u=0;u<huuu;u++)\n                sb.append(fuut[u]).append(\" \");\n            System.out.println(sb);\n        }\n    }\n}"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import math\nfor i in range(int(input())):\n    n=int(input())\n    a=100-n\n    b=n\n    if n==100:\n        print(1)\n    else:\n        g=math.gcd(a,b)\n        print(a//g+b//g)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\ntypedef long long ll;\nint main()\n{\n    ll t,k,num,a1,b1,a2,b2;\n    cin>>t;\n    while(t--)\n    {\n        cin>>k;\n        num=a1=a2=100;\n        for(int i=1;i<=100;i++)\n        {\n            if(((k%i)==0)&&((100%i)==0))\n            {\n                a1 = 100/i;\n               \n            }\n        }\n        for(int i=1;i<=100;i++)\n        {\n            if((((100-k)%i)==0)&&((100%i)==0))\n            {\n                a2= 100/i;\n            }\n        }\n        cout<<min({(ll)100,a1,a2})<<'\\n';\n    }\n    return 0;\n}"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\nimport java.lang.*;\n\npublic class Solution {\n    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n    PrintWriter out = new PrintWriter(System.out);\n    StringTokenizer st = new StringTokenizer(\"\");\n\n    String next() {\n        if (!st.hasMoreTokens()) {\n            try {\n                st = new StringTokenizer(br.readLine());\n            } catch (Exception e) {\n\n            }\n        }\n        return st.nextToken();\n    }\n\n    int nextInt() {\n        return Integer.parseInt(next());\n    }\n\n    long nextLong() {\n        return Long.parseLong(next());\n    }\n\n    public static void main(String[] args) {\n        new Solution().solve();\n    }\n\n    int gcd(int a, int b) {\n        if (a == 0)\n            return b;\n        return gcd(b % a, a);\n    }\n\n    void solve() {\n        int t = 1;\n        t = nextInt();\n        for (int tt = 0; tt < t; tt++) {\n            int n = nextInt();\n            out.println(100 / gcd(n, 100));\n        }\n        out.close();\n    }\n}\n"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-041",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/41",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 9,
+  "public_test_count": 1,
+  "unexposed_test_count": 8,
+  "source_review_note": "Tests omit two zero occurrences and Int.MIN_VALUE. Negating Int.MIN_VALUE wraps in Kotlin and changes set-based reasoning.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-041",
+  "public_dir": "tasks/humaneval-041/public",
+  "evaluator_dir": "tasks/humaneval-041/evaluator",
+  "metadata_file": "tasks/humaneval-041/task.json",
+  "evaluation_harness": "tasks/humaneval-041/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-041/evaluation.json"
+}

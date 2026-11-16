@@ -1,0 +1,5 @@
+n = int(input())
+s = input()
+x = s.count('0')
+y = s.count('1')
+print(abs(x-y))

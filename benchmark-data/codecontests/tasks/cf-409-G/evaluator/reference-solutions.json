@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nab = 0\nfor i in range(n):\n    x, y = map(float, input().split())\n    ab += y\nprint(5 + ab / n)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  double x, y[1010], n, ans, all = 0;\n  cin >> n;\n  for (int i = 1; i <= n; i++) {\n    cin >> x >> y[i];\n    all += y[i];\n  }\n  ans = 5 + all * 1.0 / n;\n  printf(\"%.3lf\", ans);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.io.PrintWriter;\nimport java.util.StringTokenizer;\n\npublic class G {\n\n\tpublic static void main(String[] args) throws IOException {\n\t\tFastScanner scan = new FastScanner();\n\t\tPrintWriter out = new PrintWriter(System.out);\n\t\tint n = scan.nextInt();\n\t\tdouble a = 0;\n\t\tfor(int i = 0; i < n; i++){\n\t\t\tscan.next();\n\t\t\ta += scan.nextDouble();\n\t\t}\n\t\tout.println(5+(a/n));\n\t\tout.close();\n\t}\n\t\n\tstatic class FastScanner {\n\t\tBufferedReader br;\n\t\tStringTokenizer st;\n\n\t\tpublic FastScanner() {\n\t\t\ttry\t{\n\t\t\t\tbr = new BufferedReader(new InputStreamReader(System.in));\n\t\t\t\tst = new StringTokenizer(br.readLine());\n\t\t\t} catch (Exception e){e.printStackTrace();}\n\t\t}\n\n\t\tpublic String next() {\n\t\t\tif (st.hasMoreTokens())\treturn st.nextToken();\n\t\t\ttry {st = new StringTokenizer(br.readLine());}\n\t\t\tcatch (Exception e) {e.printStackTrace();}\n\t\t\treturn st.nextToken();\n\t\t}\n\n\t\tpublic int nextInt() {return Integer.parseInt(next());}\n\n\t\tpublic long nextLong() {return Long.parseLong(next());}\n\n\t\tpublic double nextDouble() {return Double.parseDouble(next());}\n\n\t\tpublic String nextLine() {\n\t\t\tString line = \"\";\n\t\t\ttry {line = br.readLine();} \n\t\t\tcatch (Exception e) {e.printStackTrace();}\n\t\t\treturn line;\n\t\t}\n\n\t\tpublic int[] nextIntArray(int n) {\n\t\t\tint[] a = new int[n];\n\t\t\tfor(int i = 0; i < n; i++) a[i] = nextInt();\n\t\t\treturn a;\n\t\t}\n\t\t\n\t\tpublic long[] nextLongArray(int n){\n\t\t\tlong[] a = new long[n];\n\t\t\tfor(int i = 0; i < n; i++) a[i] = nextLong();\n\t\t\treturn a;\n\t\t}\n\t\t\n\t\tpublic double[] nextDoubleArray(int n){\n\t\t\tdouble[] a = new double[n];\n\t\t\tfor(int i = 0; i < n; i++) a[i] = nextDouble();\n\t\t\treturn a;\n\t\t}\n\t\t\n\t\tpublic char[][] nextGrid(int n, int m){\n\t\t\tchar[][] grid = new char[n][m];\n\t\t\tfor(int i = 0; i < n; i++) grid[i] = next().toCharArray();\n\t\t\treturn grid;\n\t\t}\n\t}\n\n}\n"
+  }
+]

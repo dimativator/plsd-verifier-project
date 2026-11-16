@@ -1,0 +1,36 @@
+{
+  "name": "459_C. Pashmak and Buses",
+  "description": "Recently Pashmak has been employed in a transportation company. The company has k buses and has a contract with a school which has n students. The school planned to take the students to d different places for d days (each day in one place). Each day the company provides all the buses for the trip. Pashmak has to arrange the students in the buses. He wants to arrange the students in a way that no two students become close friends. In his ridiculous idea, two students will become close friends if and only if they are in the same buses for all d days.\n\nPlease help Pashmak with his weird idea. Assume that each bus has an unlimited capacity.\n\nInput\n\nThe first line of input contains three space-separated integers n, k, d (1 ≤ n, d ≤ 1000; 1 ≤ k ≤ 109).\n\nOutput\n\nIf there is no valid arrangement just print -1. Otherwise print d lines, in each of them print n integers. The j-th integer of the i-th line shows which bus the j-th student has to take on the i-th day. You can assume that the buses are numbered from 1 to k.\n\nExamples\n\nInput\n\n3 2 2\n\n\nOutput\n\n1 1 2 \n1 2 1 \n\n\nInput\n\n3 2 1\n\n\nOutput\n\n-1\n\nNote\n\nNote that two students become close friends only if they share a bus each day. But the bus they share can differ from day to day.",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 1900,
+  "cf_contest_id": 459,
+  "cf_index": "C",
+  "cf_tags": [
+    "combinatorics",
+    "constructive algorithms",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00002-of-00039-9cea23812e920e41.parquet",
+  "source_row": 298,
+  "task_id": "codecontests/cf-459-C",
+  "rating_band": "1600-1999",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/459/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

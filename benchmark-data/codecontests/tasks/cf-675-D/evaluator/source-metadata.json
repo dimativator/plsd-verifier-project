@@ -1,0 +1,35 @@
+{
+  "name": "675_D. Tree Construction",
+  "description": "During the programming classes Vasya was assigned a difficult problem. However, he doesn't know how to code and was unable to find the solution in the Internet, so he asks you to help.\n\nYou are given a sequence a, consisting of n distinct integers, that is used to construct the binary search tree. Below is the formal description of the construction process.\n\n  1. First element a_1 becomes the root of the tree. \n  2. Elements a_2, a_3, …, a_n are added one by one. To add element a_i one needs to traverse the tree starting from the root and using the following rules: \n    1. The pointer to the current node is set to the root. \n    2. If a_i is greater than the value in the current node, then its right child becomes the current node. Otherwise, the left child of the current node becomes the new current node. \n    3. If at some point there is no required child, the new node is created, it is assigned value a_i and becomes the corresponding child of the current node. \n\nInput\n\nThe first line of the input contains a single integer n (2 ≤ n ≤ 100 000) — the length of the sequence a.\n\nThe second line contains n distinct integers a_i (1 ≤ a_i ≤ 10^9) — the sequence a itself.\n\nOutput\n\nOutput n - 1 integers. For all i > 1 print the value written in the node that is the parent of the node with value a_i in it.\n\nExamples\n\nInput\n\n3\n1 2 3\n\n\nOutput\n\n1 2\n\n\nInput\n\n5\n4 2 3 1 6\n\n\nOutput\n\n4 2 2 4",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 1800,
+  "cf_contest_id": 675,
+  "cf_index": "D",
+  "cf_tags": [
+    "data structures",
+    "trees"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00004-of-00039-cefe355b4667b27e.parquet",
+  "source_row": 42,
+  "task_id": "codecontests/cf-675-D",
+  "rating_band": "1600-1999",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/675/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

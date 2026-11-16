@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, k = [int(x) for x in input().strip().split()]\nS = input().strip()\n\nif n == 1 and k == 1:\n    res = '0'\nelif k == 0:\n    res = S\nelse:\n    S = [c for c in S]\n\n    if S[0] != '1':\n        S[0] = '1'\n        k -= 1\n\n    i = 1\n    while k > 0:\n        if i >= n:\n            break\n        if S[i] == '0':\n            i += 1\n            continue\n\n        S[i] = '0'\n        k -= 1\n        i += 1\n\n    res = \"\".join(S)\n\nprint(res)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, k;\n  cin >> n >> k;\n  string s;\n  cin >> s;\n  if (n == 1 && k > 0) {\n    cout << 0 << endl;\n  } else if (k == 0) {\n    cout << s << endl;\n  } else {\n    int i = 0;\n    int j = 1;\n    if (s[0] != '1') {\n      s[0] = '1';\n      k--;\n    }\n    while (i < k && j < n) {\n      if (s[j] == '0') {\n        j++;\n        continue;\n      }\n      s[j] = '0';\n      i++;\n      j++;\n    }\n    cout << s << endl;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.Scanner;\n\npublic class AniaAndMinimizing {\n\tpublic static void main(String arg[])\n\t{\n\t\tScanner scr = new Scanner(System.in);\n\t\t\n\t\tint s = scr.nextInt();\n\t\tint k = scr.nextInt();\n\t\tString str = scr.next();\n\t\tchar n[] = str.toCharArray();\n\t\t\n\t\tfor(int i=0;i<s && k>0;i++)\n\t\t{\n\t\t\tif(i==0)\n\t\t\t{\n\t\t\t\tif(s==1)\n\t\t\t\t{\n\t\t\t\t\tn[0]='0';\n\t\t\t\t\tk--;\n\t\t\t\t}else\n\t\t\t\tif(n[0]!='1')\n\t\t\t\t{\n\t\t\t\t\tn[0]='1';\n\t\t\t\t\tk--;\n\t\t\t\t}\n\t\t\t}\n\t\t\telse\n\t\t\tif(n[i]!='0')\n\t\t\t{\n\t\t\t\tn[i]='0';\n\t\t\t\tk--;\n\t\t\t}\n\t\t}\n\t\t\n\t\tfor(int i=0;i<s;i++)\n\t\t\tSystem.out.print(n[i]);\n\t}\n}"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from math import ceil\na,b,c = map(int,input().split())\nt = (a*c - c*b)/b\nprint(ceil(t))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\n#pragma comment(linker, \"/STACK:64000000\")\nusing namespace std;\ninline int gcd(int a, int b) {\n  if (a < b) {\n    a ^= b;\n    b ^= a;\n    a ^= b;\n  };\n  return (a > b) ? gcd(a - b, b) : a;\n}\ninline int abs(int x) { return x > 0 ? x : -x; }\nvoid solve() {\n  int a, b, c, t, all;\n  bool fin = false;\n  cin >> a >> b >> c;\n  if (b >= a) {\n    cout << 0;\n    return;\n  }\n  t = 0;\n  all = (c * a + b - 1) / b;\n  while (++t)\n    if (all * b >= (all - t) * a) break;\n  cout << t;\n}\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(NULL);\n  solve();\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class P7 {\n    public static void main(String[] arg) {\n        Scanner sc = new Scanner(System.in);\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        int c = sc.nextInt();\n\n        int tot = a*c;\n        int cont = 0;\n\n        while(tot > 0){\n            tot = tot -b;\n            cont++;\n        }\n\n        tot = a*c;\n\n        int f = 0;\n        int cont2 = 0;\n\n        while(f + c*b < tot){\n            cont2++;\n            f=f+b;\n        }\n\n        System.out.println(cont2);\n\n    }\n}\n"
+  }
+]

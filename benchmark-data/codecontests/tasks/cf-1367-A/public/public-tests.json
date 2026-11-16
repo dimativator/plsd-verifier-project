@@ -1,0 +1,8 @@
+{
+  "input": [
+    "4\nabbaac\nac\nbccddaaf\nzzzzzzzzzz\n"
+  ],
+  "output": [
+    "abac\nac\nbcdaf\nzzzzzz\n"
+  ]
+}

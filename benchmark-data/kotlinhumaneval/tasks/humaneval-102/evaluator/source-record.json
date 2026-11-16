@@ -1,0 +1,24 @@
+{
+  "task_id": "HumanEval_kotlin/102",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n * reverse the resulting array, and then replace each digit by its corresponding name from\n * \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n * For example:\n *   arr = [2, 1, 1, 4, 5, 8, 2, 3]\n *         -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8]\n *         -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n *   return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n *\n *   If the array is empty, return an empty array:\n *   arr = []\n *   return []\n *\n *   If the array has any strange number ignore it:\n *   arr = [1, -1 , 55]\n *         -> sort arr -> [-1, 1, 55]\n *         -> reverse arr -> [55, 1, -1]\n *   return = ['One']\n *\n */\nfun byLength(arr: List<Int>): List<String> {\n",
+  "entry_point": "byLength",
+  "test": "fun main() {\n    var arg00: List<Int> = mutableListOf(2, 1, 1, 4, 5, 8, 2, 3)\n    var x0: List<String> = byLength(arg00)\n    var v0: List<String> = mutableListOf(\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\")\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: List<Int> = mutableListOf()\n    var x1: List<String> = byLength(arg10)\n    var v1: List<String> = mutableListOf()\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: List<Int> = mutableListOf(1, -1, 55)\n    var x2: List<String> = byLength(arg20)\n    var v2: List<String> = mutableListOf(\"One\")\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30: List<Int> = mutableListOf(1, -1, 3, 2)\n    var x3: List<String> = byLength(arg30)\n    var v3: List<String> = mutableListOf(\"Three\", \"Two\", \"One\")\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40: List<Int> = mutableListOf(9, 4, 8)\n    var x4: List<String> = byLength(arg40)\n    var v4: List<String> = mutableListOf(\"Nine\", \"Eight\", \"Four\")\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n * reverse the resulting array, and then replace each digit by its corresponding name from\n * \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n * For example:\n *   arr = [2, 1, 1, 4, 5, 8, 2, 3]\n *         -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8]\n *         -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n *   return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n *\n *   If the array is empty, return an empty array:\n *   arr = []\n *   return []\n *\n *   If the array has any strange number ignore it:\n *   arr = [1, -1 , 55]\n *         -> sort arr -> [-1, 1, 55]\n *         -> reverse arr -> [55, 1, -1]\n *   return = ['One']\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun byLength(arr: List<Int>): List<String> {",
+    "    val numberNames = mapOf(",
+    "        1 to \"One\", 2 to \"Two\", 3 to \"Three\", 4 to \"Four\",",
+    "        5 to \"Five\", 6 to \"Six\", 7 to \"Seven\", 8 to \"Eight\", 9 to \"Nine\"",
+    "    )",
+    "",
+    "    // Filter, sort, reverse, and then map integers to their corresponding names",
+    "    return arr.filter { it in 1..9 }",
+    "        .sorted()",
+    "        .reversed()",
+    "        .mapNotNull { numberNames[it] }",
+    "}",
+    "",
+    ""
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "input": [
+    "abcd\n",
+    "bbb\n",
+    "yzyz\n"
+  ],
+  "output": [
+    "4\n",
+    "1\n",
+    "2\n"
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "\"\"\"\n- math -\nfrom math import factorial\nfrom math import gcd\nfrom math import pi\nlarge_p = 10**9 + 7\nfrom itertools import accumulate # 累積和\nfrom operator import mul\n- other -\nfrom collections import Counter\nfrom itertools import combinations\nfrom itertools import combinations_with_replacement\nfrom itertools import permutations\nfrom operator import itemgetter\nfrom functools import reduce\n- list -\nfrom copy import deepcopy\nfrom collections import deque\nfrom heapq import heapify, heappop, heappush\n- output -\np2d = lambda x: print(*x, sep=\"\\n\")\np2line = lambda x: print(*x, sep=\" \")\nprint(*list1, sep=\"\\n\")\n- input -\nimport sys\nread = sys.stdin.read\nreadline = sys.stdin.readline\nreadlines = sys.stdin.readlines\n= map(int, input().split())\n= [tuple(map(int, input().split())) for _ in range(n)]\nm = map(int, read().split()) /ab = zip(m, m) /for a, b in ab:\nps = [line.split() for line in readlines()] # inputの最後まで読んでしまうので注意。\nn, k, *h = map(int, read().split())\n- run -\nsys.setrecursionlimit(10**6)\nfrom time import sleep\n\"\"\"\n#ATC06\n\nimport sys\nread = sys.stdin.read\n#readlines = sys.stdin.readlines\nfrom math import ceil\nfrom decimal import Decimal\ndef main():\n    _ = int(input())\n    m = map(int, read().split())\n    for x, y, k in zip(m, m, m):\n        print(ceil(Decimal(k + (k * y) - 1) / Decimal(x - 1)) + k)\n\nif __name__ == '__main__':\n    main()\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nvoid fast_io() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(NULL);\n}\nvoid sol() {\n  long long x, y, k;\n  cin >> x >> y >> k;\n  cout << (k + y * k + x - 3) / (x - 1) + k << '\\n';\n}\nint32_t main() {\n  fast_io();\n  long long t;\n  cin >> t;\n  while (t-- > 0) sol();\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class BuyingTorches\n{\n    static Scanner sc = new Scanner (System.in);\n    public static void main(String[] args)\n    {\n        int t = sc.nextInt();\n        while(t-->0)\n        {\n            solve();\n        }\n    }\n    protected  static void solve()\n    {\n        long x,y,k;\n        x = sc.nextLong();\n        y = sc.nextLong();\n        k = sc.nextLong();\n        long totalStick = x  + (k * (y+1)) - 3;\n\n//        this will count no of trade to get the desired total stick\n        long noOfTrade = (long)(totalStick/(x-1));\n\n        long totalNoofTrade = noOfTrade + k;\n        System.out.println(totalNoofTrade);\n\n\n    }\n}\n"
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "name": "576_D. Flights for Regular Customers",
+  "description": "In the country there are exactly n cities numbered with positive integers from 1 to n. In each city there is an airport is located.\n\nAlso, there is the only one airline, which makes m flights. Unfortunately, to use them, you need to be a regular customer of this company, namely, you have the opportunity to enjoy flight i from city ai to city bi only if you have already made at least di flights before that.\n\nPlease note that flight i flies exactly from city ai to city bi. It can not be used to fly from city bi to city ai. An interesting fact is that there may possibly be recreational flights with a beautiful view of the sky, which begin and end in the same city.\n\nYou need to get from city 1 to city n. Unfortunately, you've never traveled by plane before. What minimum number of flights you have to perform in order to get to city n?\n\nNote that the same flight can be used multiple times.\n\nInput\n\nThe first line contains two integers, n and m (2 ≤ n ≤ 150, 1 ≤ m ≤ 150) — the number of cities in the country and the number of flights the company provides.\n\nNext m lines contain numbers ai, bi, di (1 ≤ ai, bi ≤ n, 0 ≤ di ≤ 109), representing flight number i from city ai to city bi, accessible to only the clients who have made at least di flights. \n\nOutput\n\nPrint \"Impossible\" (without the quotes), if it is impossible to get from city 1 to city n using the airways.\n\nBut if there is at least one way, print a single integer — the minimum number of flights you need to make to get to the destination point.\n\nExamples\n\nInput\n\n3 2\n1 2 0\n2 3 1\n\n\nOutput\n\n2\n\n\nInput\n\n2 1\n1 2 100500\n\n\nOutput\n\nImpossible\n\n\nInput\n\n3 3\n2 1 0\n2 3 6\n1 2 0\n\n\nOutput\n\n8",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 2700,
+  "cf_contest_id": 576,
+  "cf_index": "D",
+  "cf_tags": [
+    "dp",
+    "matrices"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 4,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00019-of-00039-d688fad5ee604390.parquet",
+  "source_row": 112,
+  "task_id": "codecontests/cf-576-D",
+  "rating_band": "2400+",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/576/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-018",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/18",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 4,
+  "public_test_count": 1,
+  "unexposed_test_count": 3,
+  "source_review_note": "No empty substring case is tested. Canonical tests starts only in input.indices, so empty substring returns input.length rather than length+1.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-018",
+  "public_dir": "tasks/humaneval-018/public",
+  "evaluator_dir": "tasks/humaneval-018/evaluator",
+  "metadata_file": "tasks/humaneval-018/task.json",
+  "evaluation_harness": "tasks/humaneval-018/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-018/evaluation.json"
+}

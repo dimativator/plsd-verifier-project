@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import io,os\ninput = io.BytesIO(os.read(0,os.fstat(0).st_size)).readline\n\nimport math\nt=int(input())\nwhile(t>0):\n    t-=1\n    a,b=sorted(list(map(int,input().split())))\n    if(a==0):\n        print(str(b)+\" 0\")\n        continue\n    if(a==b):\n        print(\"0 0\")\n        continue\n    if((b-a)==1):\n        print(\"1 0\")\n        continue\n    else:\n        g=b-a\n        \n        print(str(g)+\" \"+str(min(b%g,g-b%g)))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include<bits/stdc++.h>\n\nusing namespace std;\n\n#define ll long long int\n#define M 1000000007\n#define read(arr) for(int i=0;i<n;i++) cin>>arr[i];\n#define print(arr) for(int i=0;i<n;i++) cout<<arr[i]<<\" \"; cout<<endl;\n#define vl vector<ll>\n\nbool sortcoll(vector<ll> &v1, vector<ll> &v2)\n{\n    return v1[1]>v2[1];\n}\n\nbool isPrime(ll n)\n{\n    if(n==1)\n        return true;\n    for(int i=2;i<=sqrt(n);i++)\n        if(n%i==0)\n            return false;\n    return true;\n}\n\nint main()\n{\n    ios::sync_with_stdio(0);\n    cin.tie(0);\n    cout.tie(0);\n    ll t;\n    cin>>t;\n    while(t--)\n    {\n        ll a,b;\n        cin>>a>>b;\n        if(a==b)\n            cout<<0<<\" \"<<0<<endl;\n        else\n        {\n            ll x=abs(a-b);\n            ll l=(min(a,b)/x)*x;\n            ll u=(max(a,b)/x+1)*x;\n            ll res=LLONG_MAX;\n            for(ll i=l;i<=u;i+=x)\n            {\n                if(min(abs(i-a),abs(i-b))<res)\n                    res=min(abs(i-a),abs(i-b));\n            }\n            cout<<x<<\" \"<<res<<endl;\n        }\n    }\n\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\n/**\n *\n * @author Acer\n */\npublic class ExcitingBets {\n    \n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int T = sc.nextInt();\n        while(T-- > 0){\n            long a = sc.nextLong();\n            long b = sc.nextLong();\n            if(a==b){\n                System.out.println(0+\" \"+0);\n            }\n            else{\n                long gcd = Math.abs(a-b);            \n                long rem = a%gcd;\n                long step = Math.min(rem, gcd-rem);\n                System.out.println(gcd+\" \"+step);\n            }\n        }\n    }\n    \n}"
+  }
+]

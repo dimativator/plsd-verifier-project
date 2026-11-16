@@ -1,0 +1,24 @@
+{
+  "task_id": "HumanEval_kotlin/41",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * pairs_sum_to_zero takes a list of integers as an input.\n * it returns True if there are two distinct elements in the list that\n * sum to zero, and False otherwise.\n * >>> pairs_sum_to_zero([1, 3, 5, 0])\n * False\n * >>> pairs_sum_to_zero([1, 3, -2, 1])\n * False\n * >>> pairs_sum_to_zero([1, 2, 3, 7])\n * False\n * >>> pairs_sum_to_zero([2, 4, -5, 3, 5, 7])\n * True\n * >>> pairs_sum_to_zero([1])\n * False\n *\n */\nfun pairsSumToZero(l: List<Int>): Boolean {\n",
+  "entry_point": "pairsSumToZero",
+  "test": "fun main() {\n    var arg00: List<Int> = mutableListOf(1, 3, 5, 0)\n    var x0: Boolean = pairsSumToZero(arg00)\n    var v0: Boolean = false\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: List<Int> = mutableListOf(1, 3, -2, 1)\n    var x1: Boolean = pairsSumToZero(arg10)\n    var v1: Boolean = false\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: List<Int> = mutableListOf(1, 2, 3, 7)\n    var x2: Boolean = pairsSumToZero(arg20)\n    var v2: Boolean = false\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30: List<Int> = mutableListOf(2, 4, -5, 3, 5, 7)\n    var x3: Boolean = pairsSumToZero(arg30)\n    var v3: Boolean = true\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40: List<Int> = mutableListOf(1)\n    var x4: Boolean = pairsSumToZero(arg40)\n    var v4: Boolean = false\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50: List<Int> = mutableListOf(-3, 9, -1, 3, 2, 30)\n    var x5: Boolean = pairsSumToZero(arg50)\n    var v5: Boolean = true\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n    var arg60: List<Int> = mutableListOf(-3, 9, -1, 3, 2, 31)\n    var x6: Boolean = pairsSumToZero(arg60)\n    var v6: Boolean = true\n    if (x6 != v6) {\n        throw Exception(\"Exception -- test case 6 did not pass. x6 = \" + x6)\n    }\n\n    var arg70: List<Int> = mutableListOf(-3, 9, -1, 4, 2, 30)\n    var x7: Boolean = pairsSumToZero(arg70)\n    var v7: Boolean = false\n    if (x7 != v7) {\n        throw Exception(\"Exception -- test case 7 did not pass. x7 = \" + x7)\n    }\n\n    var arg80: List<Int> = mutableListOf(-3, 9, -1, 4, 2, 31)\n    var x8: Boolean = pairsSumToZero(arg80)\n    var v8: Boolean = false\n    if (x8 != v8) {\n        throw Exception(\"Exception -- test case 8 did not pass. x8 = \" + x8)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * pairs_sum_to_zero takes a list of integers as an input.\n * it returns True if there are two distinct elements in the list that\n * sum to zero, and False otherwise.\n * >>> pairs_sum_to_zero([1, 3, 5, 0])\n * False\n * >>> pairs_sum_to_zero([1, 3, -2, 1])\n * False\n * >>> pairs_sum_to_zero([1, 2, 3, 7])\n * False\n * >>> pairs_sum_to_zero([2, 4, -5, 3, 5, 7])\n * True\n * >>> pairs_sum_to_zero([1])\n * False\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun pairsSumToZero(l: List<Int>): Boolean {",
+    "    if (l.count { it == 0 } >= 2) {",
+    "        return true",
+    "    }",
+    "    val valueSet = l.toSet()",
+    "    valueSet.forEach { value ->",
+    "        if (value != 0 && valueSet.contains(-value)) {",
+    "            return true",
+    "        }",
+    "    }",
+    "    return false",
+    "}",
+    "",
+    ""
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "x=input()\ncode=x.split()\nq=[]\nfor i in x:\n    q.append(i)\ncode=q\ni=0\ntotal=\"\"\nwhile i < len(code):\n    if(code[i] == '.'):\n        total = total + '0'\n    elif(code[i] == '-'):\n        if(code[i + 1] == '.'):\n            total =total + '1'\n        elif (code[i+1] == '-'):\n            total = total + '2'\n        i+=1\n    i=i+1\nprint(total)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint main(void) {\n  int i, l;\n  char a[200];\n  scanf(\"%s\", a);\n  for (i = 0; a[i] != '\\0'; i++)\n    ;\n  l = i;\n  for (i = 0; i < l; i++) {\n    if (a[i] == '.') {\n      printf(\"0\");\n    }\n    if (a[i] == '-') {\n      if (a[i + 1] == '.') {\n        printf(\"1\");\n        i = i + 1;\n      } else if (a[i + 1] == '-') {\n        printf(\"2\");\n        i = i + 1;\n      }\n    }\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "//package codeforce.a20j.under1300;\n\nimport java.util.Scanner;\n\n/**\n * @author pribic (Priyank Doshi)\n * @since 20/02/21\n */\npublic class practiceunder1300 {\n\n  public static void main(String[] args) {\n    try (Scanner sc = new Scanner(System.in)) {\n      int T = 1;\n      //sc.nextInt();\n      int ans = 0;\n      for (int tt = 1; tt <= T; tt++) {\n        String borze = sc.next();\n        StringBuilder num = new StringBuilder();\n        for (int i = 0; i < borze.length(); i++) {\n          switch (borze.charAt(i)) {\n            case '.':\n              num.append('0');\n              break;\n            case '-':\n              num.append(borze.charAt(i + 1) == '-' ? '2' : '1');\n              i++;\n              break;\n\n          }\n        }\n        System.out.println(num.toString());\n      }\n    }\n  }\n}\n\n// 0, 0 , new origin -5,3 -> 5+5, 3-3 means i have to do +5, -3 from each cordinate "
+  }
+]

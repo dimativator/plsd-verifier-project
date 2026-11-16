@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input(\"\"))\ncards=list(map(int,input().split()))\n\nsereja = 0\ndima = 0\ntemp = 0\nturn = 1\n\n\nwhile cards != []:\n    nMax=max(cards[0],cards[-1])\n    \n    if turn==1:\n        temp = sereja + nMax\n        sereja+=nMax\n        turn=2\n    else:\n        temp = dima + nMax\n        dima+=nMax\n        turn=1\n    cards.remove(nMax)\n\nprint(\"{} {}\".format(sereja, dima))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, s = 0, d = 0, beg = 0, end = 0;\n  cin >> n;\n  int a[n];\n  end = n - 1;\n  for (int i = 0; i < n; i++) cin >> a[i];\n  for (int i = 0; i < n; i++) {\n    if (i % 2 == 0) {\n      if (a[beg] < a[end]) {\n        s += a[end];\n        end--;\n      } else {\n        s += a[beg];\n        beg++;\n      }\n    } else {\n      if (a[beg] < a[end]) {\n        d += a[end];\n        end--;\n      } else {\n        d += a[beg];\n        beg++;\n      }\n    }\n  }\n  cout << s << \" \" << d;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.IOException;\nimport java.util.Scanner;\npublic class SerejaAndDima {\n\n\tpublic static void main(String[] args) throws IOException {\n\t\tScanner s = new Scanner(System.in);\n\t\t\n\t\tshort n = s.nextShort();\n\t\tshort card[] = new short[n];\n\t\tshort i, j;\n\t\tfor (i=0; i<n; i++) {\n\t\t\tcard[i] = s.nextShort();\n\t\t}\n\t\t\n\t\tint S=0, D=0;\n\t\ti = 0;\n\t\tj = (short) (n-1);\n\t\twhile(n>0) {\n\t\t\tif (card[i]>card[j]) {\n\t\t\t\tS+=card[i];\n\t\t\t\tcard[i] = 0;\n\t\t\t\ti++;\n\t\t\t}\n\t\t\telse {\n\t\t\t\tS+=card[j];\n\t\t\t\tcard[j] = 0;\n\t\t\t\tj--;\n\t\t\t}\n\t\t\tn--;\n\t\t\tif (n==0) break;\n\t\t\tif (card[i]>card[j]) {\n\t\t\t\tD+=card[i];\n\t\t\t\tcard[i] = 0;\n\t\t\t\ti++;\n\t\t\t}\n\t\t\telse {\n\t\t\t\tD+=card[j];\n\t\t\t\tcard[j] = 0;\n\t\t\t\tj--;\n\t\t\t}\n\t\t\tn--;\n\t\t}\n\t\tSystem.out.println(S+\" \"+D);\n\n\t}\n\n}\n"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\ns = input()\n\ni,p=0,1\nans = ''\nwhile i<(n-1):\n    if p%2 == 1:\n        if s[i] != s[i+1]:\n            ans = ans + s[i]\n            p += 1\n    else:\n        ans = ans + s[i]\n        p += 1\n\n    i += 1\n\nif len(ans)%2 == 1:\n    ans += s[-1]\nprint(len(s)-len(ans))\nprint(ans)\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  cin >> n;\n  string str;\n  cin >> str;\n  vector<char> v;\n  int i = 0, j = 1;\n  while (i < n && j < n) {\n    if (str[i] != str[j]) {\n      if (i > j)\n        v.push_back(str[j]), v.push_back(str[i]);\n      else\n        v.push_back(str[i]), v.push_back(str[j]);\n      i = j + 1, j += 2;\n    } else\n      j += 1;\n  }\n  cout << n - v.size() << endl;\n  for (long long i = 0; i < v.size(); i++) cout << v[i];\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\n\nimport java.util.ArrayList;\nimport java.util.Scanner;\nimport java.util.Stack;\n\npublic class ggg {\n\n\tpublic static void main(String args[])\n\t{\n\t\tScanner scan=new Scanner(System.in);\n\t\tint n=scan.nextInt();\n\t\tString eg=scan.next();\n\t\tint cost=0;\n\t\tString ans=\"\";\n\t\tStack<Character> stk=new Stack<Character>();\n\t\tArrayList<Character> anss=new ArrayList<Character>();\n\t\tfor(int i=0;i<n;i++)\n\t\t{\n//\t\t\tSystem.out.println(eg.charAt(i));\n\t\t\tint j=i+1;\n\t\t\tint x=0;\n\t\t\twhile(j<n &&eg.charAt(i)==eg.charAt(j))\n\t\t\t{\n\t\t\t\tj++;\n\t\t\t\tx++;\n\t\t\t\tcost++;\n\t\t\t}\n\t\t\tif(j>=n)\n\t\t\t{\n\t\t\t\tcost++;\n\t\t\t\tbreak;\n\t\t\t}\n//\t\t\tSystem.out.print(eg.charAt(i));\n//\t\t\tSystem.out.print(eg.charAt(j));\n\t\t\tanss.add(eg.charAt(i));\n\t\t\tanss.add(eg.charAt(j));\n\t\t\ti+=x+1;\n\t\t}\n\t\tSystem.out.println(cost);\n//\t\tSystem.out.println(ans);\n\t\tfor(char x:anss)\n\t\t{\n\t\t\tSystem.out.print(x);;\n\t\t}\n\t}\n}\n"
+  }
+]

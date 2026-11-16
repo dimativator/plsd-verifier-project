@@ -1,0 +1,35 @@
+{
+  "name": "78_B. Easter Eggs",
+  "description": "The Easter Rabbit laid n eggs in a circle and is about to paint them. \n\nEach egg should be painted one color out of 7: red, orange, yellow, green, blue, indigo or violet. Also, the following conditions should be satisfied:\n\n  * Each of the seven colors should be used to paint at least one egg. \n  * Any four eggs lying sequentially should be painted different colors. \n\n\n\nHelp the Easter Rabbit paint the eggs in the required manner. We know that it is always possible.\n\nInput\n\nThe only line contains an integer n — the amount of eggs (7 ≤ n ≤ 100).\n\nOutput\n\nPrint one line consisting of n characters. The i-th character should describe the color of the i-th egg in the order they lie in the circle. The colors should be represented as follows: \"R\" stands for red, \"O\" stands for orange, \"Y\" stands for yellow, \"G\" stands for green, \"B\" stands for blue, \"I\" stands for indigo, \"V\" stands for violet.\n\nIf there are several answers, print any of them.\n\nExamples\n\nInput\n\n8\n\n\nOutput\n\nROYGRBIV\n\n\nInput\n\n13\n\n\nOutput\n\nROYGBIVGBIVYG\n\nNote\n\nThe way the eggs will be painted in the first sample is shown on the picture: \n\n<image>",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 1200,
+  "cf_contest_id": 78,
+  "cf_index": "B",
+  "cf_tags": [
+    "constructive algorithms",
+    "implementation"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00007-of-00039-05785de21e8b8429.parquet",
+  "source_row": 270,
+  "task_id": "codecontests/cf-78-B",
+  "rating_band": "1200-1599",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/78/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "input": [
+    "????????????????????\nxwkxsxlrre\n",
+    "ng?\nvu\n",
+    "??a?\na\n",
+    "ccaaa?bc?baccbccccbca?cccab??aacccbaac?bccacc?accccaccbcbbcbc\ncbaaacccc\n",
+    "???\nb\n",
+    "mqwstphetbfrsyxuzdww\nrutseqtsbh\n",
+    "cc?cdb?????b?cc?b?\ncabdacd\n",
+    "fzjqgrgzzzghrwgwhfjq\nggwfrjzzqh\n",
+    "aacaacbabc?bcca?ccca\nbc\n",
+    "c?aa???a?cdcc??\nabcadbaccb\n"
+  ],
+  "output": [
+    "eekkllrrrrsswwxxxxxx\n",
+    "ngu\n",
+    "aaaa\n",
+    "ccaaaabcabaccbccccbcaacccabaaaacccbaacabccaccaaccccaccbcbbcbc\n",
+    "bbb\n",
+    "mqwstphetbfrsyxuzdww\n",
+    "ccacdbaaaddbdccaba\n",
+    "fzjqgrgzzzghrwgwhfjq\n",
+    "aacaacbabcbbccabccca\n",
+    "cbaabbaaacdccaa\n"
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "q = int(input())\nfor i in range(q):\n    k = 0\n    c, m, x = [int(s) for s in input().split()]\n\n    if min(c, m, x) != x:\n        print(min(c, m))\n\n    else:\n        k += x\n        z = (c + m - 2 * x) // 3\n        print(k + min(z, c - x, m - x))\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nlong long MOD = 998244353;\nint main() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  cout.tie(0);\n  long long i, j, k;\n  long long q;\n  cin >> q;\n  while (q) {\n    q--;\n    long long c, m, x;\n    cin >> c >> m >> x;\n    long long ans = min(min(c, m), x);\n    if (ans == x) {\n      c -= x;\n      m -= x;\n      ans += min(c, min(m, (m + c) / 3));\n    }\n    cout << ans << '\\n';\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "/* package codechef; // don't place package name! */\n\nimport java.util.*;\nimport java.lang.*;\nimport java.io.*;\n\n/* Name of the class has to be \"Main\" only if the class is public. */\npublic class Main\n{\n\tpublic static void main (String[] args) throws java.lang.Exception\n\t{\n\t\tBufferedReader bf=new BufferedReader(new InputStreamReader(System.in));\n\t\tint t=Integer.parseInt(bf.readLine());\n\t\twhile(t-->0)\n\t\t{\n\t\t    String s[]=bf.readLine().split(\" \");\n\t\t    int c=Integer.parseInt(s[0]);\n\t\t    int m=Integer.parseInt(s[1]);\n\t\t    int x=Integer.parseInt(s[2]);\n\t\t    \n\t\t    int z=Math.min(x,Math.min(c,m));\n\t\t    int count=z;\n\t\t     c=c-z;\n\t\t     m=m-z;\n\t\t     x=x-z;\n\t\t     if(c==0 || m==0)\n\t\t     {\n\t\t         System.out.println(count);\n\t\t     }\n\t\t     else\n\t\t     {\n\t\t         int min=Math.min(c,m);\n\t\t         int max=Math.max(c,m);\n\t\t    //     System.out.println(\"min \"+min+\" \"+max);\n\t\t         if(2*1L*min<=max)\n\t\t         {\n\t\t             System.out.println(count+0L+min);\n\t\t         }\n\t\t         else\n\t\t         {\n\t\t             long k=(min+0L+max)/3;\n\t\t             System.out.println(count+0L+k);\n\t\t         }\n\t\t     }\n\t\t    \n\t\t    \n\t\t    \n\t\t}\n\t}\n}\n"
+  }
+]

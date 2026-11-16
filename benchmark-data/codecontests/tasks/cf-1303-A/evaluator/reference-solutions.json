@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\nfor i in range(n):\n    x=input()\n    if '1' in x:\n        a=x.index('1')\n        c=0\n        for j in range(a+1,len(x)):\n            if x[j]=='1':\n                c+=x.count('0',a,j)\n                a=j\n        print(c)\n    else:\n        print(0)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint T;\nstring s;\nint main() {\n  cin >> T;\n  while (T--) {\n    cin >> s;\n    int n = s.length(), c = 0, i = 0;\n    while (s[i] != '1' && i < n) i++;\n    int st = i;\n    i = n - 1;\n    while (s[i] != '1' && i >= 0) i--;\n    int en = i;\n    for (int i = st; i <= en; i++) {\n      if (s[i] == '0') c++;\n    }\n    cout << c << \"\\n\";\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic  class Main{\n    public static void eraseZero(int n,String s){\n        int cnt = 0;\n        int ans = 0;\n        int f = 0;\n        for(int i = 0; i < s.length(); i++){\n            if(s.charAt(i) == '1'){\n                f = 1;\n                ans += cnt;\n                cnt = 0;\n            }\n            if(s.charAt(i) == '0' && f==1){\n                cnt++;\n            }\n \n        }\n        System.out.println(ans);\n    }\n    public static void main(String args[]){\n        Scanner sc=new Scanner(System.in);\n        int n=sc.nextInt();\n        String str[]=new String[n];\n        for(int i=0;i<n;i++){\n            str[i]=sc.next();\n        }\n        for(int i=0;i<n;i++){\n            eraseZero(n,str[i]);\n        }\n    }\n}\n   \t\t\t\t \t\t\t\t\t\t\t\t\t\t   \t\t \t\t \t\t"
+  }
+]

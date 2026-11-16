@@ -1,0 +1,38 @@
+{
+  "name": "68_D. Half-decay tree",
+  "description": "Recently Petya has become keen on physics. Anna V., his teacher noticed Petya's interest and gave him a fascinating physical puzzle — a half-decay tree. \n\nA half-decay tree is a complete binary tree with the height h. The height of a tree is the length of the path (in edges) from the root to a leaf in the tree. While studying the tree Petya can add electrons to vertices or induce random decay with synchrophasotron. Random decay is a process during which the edges of some path from the root to the random leaf of the tree are deleted. All the leaves are equiprobable. As the half-decay tree is the school property, Petya will return back the deleted edges into the tree after each decay.\n\nAfter being desintegrated, the tree decomposes into connected components. Charge of each component is the total quantity of electrons placed in vertices of the component. Potential of desintegerated tree is the maximum from the charges of its connected components. Each time before inducing random decay Petya is curious about the mathematical expectation of potential of the tree after being desintegrated. \n\nInput\n\nFirst line will contain two integers h and q (1 ≤ h ≤ 30, 1 ≤ q ≤ 105). Next q lines will contain a query of one of two types: \n\n  * add v e\n\nPetya adds e electrons to vertex number v (1 ≤ v ≤ 2h + 1 - 1, 0 ≤ e ≤ 104). v and e are integers.\n\nThe vertices of the tree are numbered in the following way: the root is numbered with 1, the children of the vertex with number x are numbered with 2x and 2x + 1.\n\n  * decay\n\nPetya induces tree decay. \n\nOutput\n\nFor each query decay solution you should output the mathematical expectation of potential of the tree after being desintegrated. The absolute or relative error in the answer should not exceed 10 - 4.\n\nExamples\n\nInput\n\n1 4\nadd 1 3\nadd 2 10\nadd 3 11\ndecay\n\n\nOutput\n\n13.50000000",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 2500,
+  "cf_contest_id": 68,
+  "cf_index": "D",
+  "cf_tags": [
+    "data structures",
+    "divide and conquer",
+    "dp",
+    "math",
+    "probabilities"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 3,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00003-of-00039-e3822fccad6e083a.parquet",
+  "source_row": 175,
+  "task_id": "codecontests/cf-68-D",
+  "rating_band": "2400+",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/68/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

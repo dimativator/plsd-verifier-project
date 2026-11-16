@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-111",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/111",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 12,
+  "public_test_count": 1,
+  "unexposed_test_count": 11,
+  "source_review_note": "One provided case has magnitude 9999999999999999. Preserve List<Long> and Long output, never convert this task to IntArray/Int.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-111",
+  "public_dir": "tasks/humaneval-111/public",
+  "evaluator_dir": "tasks/humaneval-111/evaluator",
+  "metadata_file": "tasks/humaneval-111/task.json",
+  "evaluation_harness": "tasks/humaneval-111/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-111/evaluation.json"
+}

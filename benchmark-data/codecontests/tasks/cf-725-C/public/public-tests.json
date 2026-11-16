@@ -1,0 +1,10 @@
+{
+  "input": [
+    "BUVTYZFQSNRIWOXXGJLKACPEMDH\n",
+    "ABCDEFGHIJKLMNOPQRSGTUVWXYZ\n"
+  ],
+  "output": [
+    "Impossible\n",
+    "ABCDEFGHIJKLM\nZYXWVUTSRQPON\n"
+  ]
+}

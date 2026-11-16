@@ -1,0 +1,12 @@
+/**
+ * You are an expert Kotlin programmer, and here is your task.
+ * Return True if all numbers in the list l are below threshold t.
+ * >>> below_threshold([1, 2, 4, 10], 100)
+ * True
+ * >>> below_threshold([1, 20, 4, 10], 5)
+ * False
+ *
+ */
+fun belowThreshold(l: List<Int>, t: Int): Boolean {
+    TODO("Implement the function")
+}

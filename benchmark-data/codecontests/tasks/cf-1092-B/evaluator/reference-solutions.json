@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n1=int(input())\ns1=list(map(int,input().split()))\ns1.sort()\nsa1=0\nse2=0\nfor i in range(0,n1,2):\n    sa1=sa1+s1[i]\nfor i in range(1,n1,2):\n    se2=se2+s1[i]\nprint(se2-sa1)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\ntemplate <typename T>\nvoid swap(T &l, T &r) {\n  T tmp = l;\n  l = r;\n  r = tmp;\n}\ntemplate <typename T>\nvoid bubble_sort(std::vector<T> &vct) {\n  for (int i = 0; i != vct.size(); ++i) {\n    for (int j = 0; j != vct.size() - 1; ++j) {\n      if (vct[j] > vct[j + 1]) {\n        swap(vct[j], vct[j + 1]);\n      }\n    }\n  }\n}\nint main() {\n  std::size_t amount;\n  std::cin >> amount;\n  std::vector<int> vct;\n  for (std::size_t i = 0; i != amount; ++i) {\n    int tmp;\n    std::cin >> tmp;\n    vct.push_back(tmp);\n  }\n  bubble_sort(vct);\n  int n{};\n  for (std::size_t i = 0; i != vct.size(); i += 2) {\n    n += vct[i + 1] - vct[i];\n  }\n  std::cout << n;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class B {\n\t\n\tstatic Scanner k = new Scanner(System.in);\n\tstatic int [] y;\n\t\n    public static void main(String[] args){\n    \twhile(k.hasNext()){\n    \t\ty = new int[k.nextInt()];\n    \t\tfor(int i = 0; i<y.length; i++){\n    \t\t\ty[i] = k.nextInt();\n    \t\t}\n    \t\t\n    \t\tArrays.sort(y);\n    \t\tlong sum = 0;\n    \t\tfor(int i = 0; i<y.length - 1; i+=2){\n    \t\t\tsum += (y[i+1] - y[i]);\n    \t\t}\n    \t\t\n    \t\tSystem.out.println(sum);\n    \t}\n    }\n\n}"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "t=eval(input())\nfor j in range(t):\n    n=eval(input())\n    if n==2 :\n        print(2)\n    else:\n        sum=2\n        for i in range(1,n//2):\n            sum=sum+2**(i+1)\n        print(sum)\n            \n\t\t\t\t        \t\t     \t    \t\t  \t \t"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int t, n, sum;\n  cin >> t;\n  while (t--) {\n    cin >> n;\n    sum = 0;\n    int p = n / 2 + 1;\n    for (int i = p; p <= n; p++) {\n      int x = n - i + 1;\n      int s = 1;\n      for (int k = 0; k < p - x; k++) s *= 2;\n      sum += s;\n    }\n    cout << sum << endl;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\n\npublic final class Test {\n\tstatic void rec(String s,int n){\n\t\tif(n==1){\n\t\t\tSystem.out.println(s);\n\t\t\treturn ;\n\t\t}\n\t\trec(s.substring(0,n-1)+\" \"+s.substring(n-1),n-1);\n\t\trec(s,n-1);\n\t\t \n\t}\n\t\n\t\n\tpublic static void main(String...args) throws Exception{\n\t\tScanner sc=new Scanner(System.in);\n\t\tint t=sc.nextInt();\n\t\twhile(t-->0){\n\t\t\tint n=sc.nextInt();\n\t\tint a=0,b=0,s1=0,s2=0,nSize=n;\n\t\twhile(n>0){\n\t\t\tint value=(int)Math.pow(2,n);\n\t\t\tn--;\n\t\t\tif(a<b){\n\t\t\t\tif(s1<nSize/2){\n\t\t\t\t\ta+=value;\n\t\t\t\t\ts1++;\n\t\t\t\t}\n\t\t\t\telse{\n\t\t\t\t\tb+=value;\n\t\t\t\t\ts2++;\n\t\t\t\t}\n\t\t\t}\n\t\t\telse{\n\t\t\t\tif(s2<nSize/2){\n\t\t\t\t\tb+=value;\n\t\t\t\t\ts2++;\n\t\t\t\t\t\n\t\t\t\t}\n\t\t\t\telse{\n\t\t\t\t\ta+=value;\n\t\t\t\t\ts1++;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tSystem.out.println(Math.abs(a-b));\n\t\t}\n\t\t\n\t}\n\t\n}"
+  }
+]

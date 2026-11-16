@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "napitki = int(input())\napelsina_v_soke = [int(x) for x in input().split()]\nkokteil = sum(apelsina_v_soke) / napitki \nkokteil = format(kokteil, '.12f')\nprint(kokteil)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint main() {\n  int n, a[100], i;\n  float sum;\n  scanf(\"%d\", &n);\n  for (i = 0; i < n; i++) {\n    scanf(\"%d\", &a[i]);\n    sum += a[i];\n  }\n  sum = sum / n;\n  printf(\"%f\", sum);\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "var useless = readline();\nvar drinks = readline().split(\" \");\nvar result = drinks.reduce((cur,acc) => Number(acc)+Number(cur) ,0);\nvar answer = result/drinks.length;\nprint(answer)"
+  }
+]

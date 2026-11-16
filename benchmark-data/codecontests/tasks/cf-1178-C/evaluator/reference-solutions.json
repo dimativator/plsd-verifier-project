@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "def powmod(x, k, m):\n    res = 1\n    s = 1\n    while s <= k:\n        if k & s:\n            res = res * x % m\n        x = x * x % m\n        s <<= 1\n    return res\nm = 998244353\nw, h = map(int, input().split())\nprint(powmod(2, w + h, m))\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint main() {\n  int h, w, n, i;\n  scanf(\"%d %d\", &h, &w);\n  long long s1;\n  s1 = 1;\n  n = h + w;\n  for (i = 1; i <= n; i++) s1 = (2 * s1) % 998244353;\n  printf(\"%I64d\\n\", s1);\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.math.BigInteger; \npublic class asd\n{\n         static Scanner s=new Scanner(System.in);\n         static String str=\" \";\n         static ArrayList<Integer>[] list=new ArrayList[26];\n         public static void main(String args[])\n         {\n             \n             int t=1;\n             \n                  while(t-->0)\n                  {\n                           solve();\n                          \n                  }\n                  \n         }\n         public static void solve( )\n         {\n             int m=s.nextInt();\n             int n=s.nextInt();\n             BigInteger f = new BigInteger(\"2\");\n             for (int i = 2; i <= m+n; i++) \n            f = f.multiply(BigInteger.valueOf(2)); \n            \n             System.out.println(f.mod(BigInteger.valueOf(998244353 )));\n                \n         }\n}"
+  }
+]

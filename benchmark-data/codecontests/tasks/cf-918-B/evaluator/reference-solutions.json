@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a , b = map(int , input().split())\n\nnames = dict()\n\nfor i in range(a):\n    x , y = input().split()\n    names[y] = x\n\nfor i in range(b):\n    com = input()\n\n    h = com.split()[-1][:-1]\n    print(f\"{com} #{names[h]}\")\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, m;\n  cin >> n >> m;\n  int count = 0;\n  map<string, string> mp;\n  vector<vector<string>> v;\n  for (int i = 0; i < (n + m); i++) {\n    string str1, str2;\n    vector<string> vin;\n    cin >> str1;\n    cin >> str2;\n    if (i < n) mp[str2 + ';'] = str1;\n    vin.push_back(str1);\n    vin.push_back(str2);\n    v.push_back(vin);\n  }\n  for (int i = n; i < (n + m); i++) {\n    string ans = \"\";\n    ans += v[i][0] + \" \" + v[i][1] + \" \" + '#' + mp[v[i][1]];\n    cout << ans << endl;\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.InputStreamReader;\nimport java.util.HashMap;\nimport java.util.StringTokenizer;\n\npublic class Radio_Station {\n\tpublic static void main(String[] args)throws Throwable {\n\t\tBufferedReader bf=new BufferedReader(new InputStreamReader(System.in));\n\t\tStringTokenizer st=new StringTokenizer(bf.readLine());\n\t\tint servers=Integer.parseInt(st.nextToken());\n\t\tint commands=Integer.parseInt(st.nextToken());\n\t\tHashMap<String, String> map=new HashMap<String,String>();\n\t\twhile(servers-->0)\n\t\t{\n\t\t\tst=new StringTokenizer(bf.readLine());\n\t\t\tString a=st.nextToken();\n\t\t\tString b=st.nextToken()+\";\";\n\t\t\tmap.put(b, a);\n\t\t}\n\t\twhile(commands-->0)\n\t\t{\n\t\t\tst=new StringTokenizer(bf.readLine());\n\t\t\tSystem.out.print(st.nextToken()+\" \");\n\t\t\tString a=st.nextToken();\n\t\t\tSystem.out.println(a+\" #\"+map.get(a));\n\t\t}\n\t}\n}\n"
+  }
+]

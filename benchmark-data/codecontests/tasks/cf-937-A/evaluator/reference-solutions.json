@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\na = [0] * 601\nfor x in input().split():\n    a[int(x)] = 1\na[0] = 0\nprint(sum(a))\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, i, j, sum = 0;\n  vector<int> a;\n  cin >> n;\n  for (i = 0; i < n; i++) {\n    int x;\n    cin >> x;\n    a.push_back(x);\n    if (x == 0) sum++;\n  }\n  sort(a.begin(), a.end());\n  for (i = 0; i < n - 1; i++) {\n    if (a[i] == a[i + 1] && a[i] != 0) sum++;\n  }\n  cout << (n - sum) << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\n\npublic class Main {\n\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        ArrayList<Integer> arrayList = new ArrayList<Integer>();\n        int n = scanner.nextInt();\n        int count=0;\n        for(int i = 0; i<n;i++){\n            int a = scanner.nextInt();\n            if(!arrayList.contains(a)&&a!=0){\n                arrayList.add(a);\n\n            }\n        }\n        System.out.println(arrayList.size());\n\n\n\n            }\n        }\n\n"
+  }
+]

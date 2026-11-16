@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "t = int(input())\n\nfor tt in range(t):\n\n    n = int(input())\n    arr = list(map(int,input().split()))\n\n    mx = arr[0]\n    sm = 0\n\n    for j in range(n):\n\n        if (arr[j] * mx  < 0 ):\n\n            sm += mx\n            mx = arr[j]\n\n        else:\n\n            mx = max(mx , arr[j])\n\n\n    print(sm + mx)\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main(void) {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  cout.tie(0);\n  int t;\n  cin >> t;\n  for (int j = 0; j < t; j++) {\n    int n;\n    cin >> n;\n    long long ans = 0;\n    int last;\n    int x;\n    cin >> x;\n    last = x;\n    if (n == 1) ans += last;\n    for (int i = 2; i <= n; i++) {\n      cin >> x;\n      if (last > 0 and x > 0) {\n        last = max(last, x);\n        if (i == n) {\n          ans += last;\n        }\n      } else if (last > 0 and x < 0) {\n        ans += last;\n        last = x;\n        if (i == n) ans += last;\n      } else if (last < 0 and x < 0) {\n        last = max(last, x);\n        if (i == n) {\n          ans += last;\n        }\n      } else if (last < 0 and x > 0) {\n        ans += last;\n        last = x;\n        if (i == n) ans += last;\n      }\n    }\n    cout << ans << \"\\n\";\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedOutputStream;\nimport java.io.BufferedReader;\nimport java.io.InputStreamReader;\nimport java.io.PrintWriter;\nimport java.util.StringTokenizer;\n\npublic class altseq {\n\n\tpublic static void main(String[] args) throws Exception {\n\t\tBufferedReader in = new BufferedReader(new InputStreamReader(System.in));\n\t\tPrintWriter out = new PrintWriter(new BufferedOutputStream(System.out));\n\n\t\tint t = Integer.parseInt(in.readLine());\n\t\t\n\t\tfor (int i = 0; i < t; i++) {\n\t\t\tint n = Integer.parseInt(in.readLine());\n\t\t\t\n\t\t\tStringTokenizer st = new StringTokenizer(in.readLine());\n\t\t\tint[] nums = new int[n];\n\t\t\tfor (int j = 0; j < n; j++) {\n\t\t\t\tnums[j] = Integer.parseInt(st.nextToken());\n\t\t\t}\n\t\t\t\n\t\t\tint curr = nums[0];\n\t\t\tlong sum = 0;\n\t\t\t\n\t\t\tfor (int j = 1; j < n; j++) {\n\t\t\t\tif((nums[j] > 0 && nums[j-1] > 0) || (nums[j] < 0 && nums[j-1] < 0)) {\n\t\t\t\t\tcurr = Math.max(curr, nums[j]);\n\t\t\t\t} else {\n\t\t\t\t\tsum += curr;\n\t\t\t\t\tcurr = nums[j];\n\t\t\t\t}\n\t\t\t}\n\t\t\t\n\t\t\tsum += curr;\n\t\t\t\n\t\t\tout.println(sum);\n\t\t}\n\t\t\n\t\tin.close();\n\t\tout.close();\n\t}\n\t\n}\n"
+  }
+]

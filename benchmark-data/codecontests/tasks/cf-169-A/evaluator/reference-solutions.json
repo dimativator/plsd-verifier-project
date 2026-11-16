@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, a, b=map(int, input().split())\nl=list(map(int, input().split()))\nl.sort()\nprint(l[-a]-l[-a-1])"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, x, y;\n  cin >> n >> x >> y;\n  long a[2000];\n  for (int i = 0; i < n; i++) cin >> a[i];\n  sort(a, a + n);\n  cout << a[y] - a[y - 1];\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.PrintStream;\nimport java.util.Arrays;\nimport java.util.Scanner;\n\npublic class Chores {\n  public static void main(String[] args) {\n    Scanner in = new Scanner(System.in);\n    PrintStream out = new PrintStream(System.out);\n\n    String inputs[] = in.nextLine().split(\" \");\n    int total = Integer.parseInt(inputs[0]);\n    int petsyaChoresNumber = Integer.parseInt(inputs[1]);\n    int vasyaChoresNumber = Integer.parseInt(inputs[2]);\n    int[] complexities = Arrays.stream(in.nextLine().split(\" \")).mapToInt(Integer::parseInt).toArray();\n    Arrays.sort(complexities);\n\n    out.print(complexities[vasyaChoresNumber] - complexities[vasyaChoresNumber - 1]);\n  }\n}"
+  }
+]

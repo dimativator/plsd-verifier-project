@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "c = 0\n\nfor _ in range(int(input())):\n    n = [int(x) for x in input().split()]\n    n,m = n[0],n[1]\n\n    if m - n >= 2:\n        c += 1\nprint(c)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  cin >> n;\n  long long counter = 0;\n  for (int i = 0; i < n; i++) {\n    int x, y;\n    cin >> x >> y;\n    if (y - x >= 2) counter++;\n  }\n  cout << counter;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class Solution\n{\n\tpublic static void main (String[] args) throws java.lang.Exception\n\t{\n\t    int solution=0;\n\t    Scanner scanner = new Scanner(System.in);\n\t    int num_rooms = scanner.nextInt();\n\t    for(int i=0; i<num_rooms; i++){\n\t        int living = scanner.nextInt();\n\t        int max_capacity = scanner.nextInt();\n\t        \n\t        if(max_capacity-living >=2){\n\t            solution +=1;\n\t        }\n\t    }\n\t    \n\t    System.out.println(solution);\n\t}\n}\n"
+  }
+]

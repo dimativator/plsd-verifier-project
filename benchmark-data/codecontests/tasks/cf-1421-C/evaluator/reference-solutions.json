@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "s=input()\nn= len(s)\nprint(4)\nprint(\"L\",2)\nprint(\"R\",n)\nprint(\"R\",2)\nprint(\"R\",2*n+1)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\n#pragma GCC optimize(\"Ofast\")\n#pragma GCC target(\"avx,avx2,fma\")\nusing namespace std;\nbool pal(string s, long long n) {\n  for (long long i = 0; i < n / 2; i++) {\n    if (s[i] != s[n - i - 1]) return false;\n  }\n  return true;\n}\nvoid solve() {\n  string s;\n  cin >> s;\n  long long n = s.length();\n  if (pal(s, n)) {\n    cout << 0 << \"\\n\";\n    return;\n  } else {\n    cout << 3 << \"\\n\";\n    cout << \"L \" << 2 << \"\\n\";\n    cout << \"R \" << 2 << \"\\n\";\n    cout << \"R \" << 2 * n - 1 << \"\\n\";\n  }\n}\nint32_t main() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  cout.tie(0);\n  solve();\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\n\npublic class Main {\n\tstatic final int M = 1000000007;\n\t\tstatic FastReader in = new FastReader();\n\t\tstatic PrintWriter out = new PrintWriter(System.out);\n//\t\tstatic Scanner in = new Scanner(System.in);\n//        File file = new File(\"input.txt\");\n//        Scanner in = new Scanner(file);\n//        PrintWriter out = new PrintWriter(new FileWriter(\"output.txt\"));\n    public static void main(String[] args) {\n    \t\n//    \tint t = in.nextInt();\n//    \twhile(t-- > 0){\n    \t String str = in.next();\n    \t out.println(3);\n    \t out.println(\"R \"+(str.length()-1));\n    \t out.println(\"L \"+str.length());\n    \t out.println(\"L 2\");\n    \t  \n//    \t}\n    \tout.close(); \n    }    \t\n    \n   \n    static int gcd(int a, int b) {\n    \tif(b==0) return a;\n    \treturn gcd(b, a%b);\n    }\n    \n\tstatic class FastReader {\n        BufferedReader br;\n        StringTokenizer st;\n\n        public FastReader() {\n            br = new BufferedReader(new\n                    InputStreamReader(System.in));\n        }\n\n        String next() {\n            while (st == null || !st.hasMoreElements()) {\n                try {\n                    st = new StringTokenizer(br.readLine());\n                } catch (IOException e) {\n                    e.printStackTrace();\n                }\n            }\n            return st.nextToken();\n        }\n\n        int nextInt() {\n            return Integer.parseInt(next());\n        }\n\n        long nextLong() {\n            return Long.parseLong(next());\n        }\n\n        double nextDouble() {\n            return Double.parseDouble(next());\n        }\n\n        String nextLine() {\n            String str = \"\";\n            try {\n                str = br.readLine();\n            } catch (IOException e) {\n                e.printStackTrace();\n            }\n            return str;\n        }\n    }\n}"
+  }
+]

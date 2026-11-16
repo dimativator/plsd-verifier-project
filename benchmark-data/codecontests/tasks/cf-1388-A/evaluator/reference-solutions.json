@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "# import sys\n\n# sys.stdin = open('input.txt', 'r')\n# sys.stdout = open('output.txt', 'w')\n\nt = 1\nt = int(input())\n\nwhile t:\n    t -= 1\n\n    n = int(input())\n    # s = input()\n    if n > 30:\n        if (n-30) in [6, 10, 14]:\n            if n > 31:\n                print('YES')\n                print(6,10,15,n-31)\n            else:\n                print('NO')\n        else:\n            print('YES')\n            print(6,10,14,n-30)\n    else:\n        print('NO')"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int t;\n  cin >> t;\n  while (t--) {\n    long long n;\n    cin >> n;\n    if (n <= 30)\n      cout << \"NO\" << endl;\n    else {\n      cout << \"YES\" << endl;\n      long long temp = n - 30;\n      if (temp == 6)\n        cout << 6 << \" \" << 10 << \" \" << 15 << \" \" << 5 << endl;\n      else if (temp == 14)\n        cout << 6 << \" \" << 10 << \" \" << 15 << \" \" << 13 << endl;\n      else if (temp == 10)\n        cout << 6 << \" \" << 14 << \" \" << 15 << \" \" << 5 << endl;\n      else\n        cout << 6 << \" \" << 10 << \" \" << 14 << \" \" << temp << endl;\n    }\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "//make sure to make new file!\nimport java.io.*;\nimport java.util.*;\n\npublic class A660{\n   \n   public static void main(String[] args)throws IOException{\n      BufferedReader f = new BufferedReader(new InputStreamReader(System.in));\n      PrintWriter out = new PrintWriter(System.out);\n      \n      int t = Integer.parseInt(f.readLine());\n      \n      for(int q = 1; q <= t; q++){\n\n         int n = Integer.parseInt(f.readLine());\n      \n         if(n <= 30){\n            out.println(\"NO\");\n         } else {\n            \n               \n            out.println(\"YES\");\n            if(n == 36 || n == 40 || n==44){\n               out.print(\"6 10 15 \");\n               out.println(n-31);\n            } else {\n               out.print(\"6 10 14 \");\n               out.println(n-30);\n            }\n         }\n      \n\n      }\n      \n      \n      \n      \n      out.close();\n   }\n   \n      \n}"
+  }
+]

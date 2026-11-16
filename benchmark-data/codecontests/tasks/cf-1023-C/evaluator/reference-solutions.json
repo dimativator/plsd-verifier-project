@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, k = [int(x) for x in input().split()]\ns = input()\npairs = k // 2\nsubs = ''\ncount = 0\nsum = 0\nfor i in range(len(s)):\n    if s[i] == '(':\n        sum += 1\n        count += 1\n        subs += '('\n        if count == pairs:\n            subs += ')' * sum\n            break\n    else:\n        if sum > 0:\n            sum -= 1\n            subs += ')'\nprint(subs)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int maxn = 2e5 + 7;\nchar stk[maxn];\nint dp[maxn], sid[maxn], fl[maxn];\nstring s;\nint main() {\n  std::ios::sync_with_stdio(false);\n  int n, k, top = 0;\n  cin >> n >> k;\n  cin >> s;\n  for (int i = 0; i < s.size(); ++i) {\n    stk[top] = s[i];\n    sid[top++] = i;\n    while (top > 1 && stk[top - 1] == ')' && stk[top - 2] == '(') {\n      dp[sid[top - 2]] = sid[top - 1];\n      top -= 2;\n    }\n  }\n  memset(fl, 0, sizeof(fl));\n  int l = 0;\n  for (int i = 0; i < n - k; i += 2) {\n    while (fl[l]) ++l;\n    fl[l] = 1;\n    fl[dp[l]] = 1;\n  }\n  for (int i = 0; i < s.size(); ++i)\n    if (!fl[i]) cout << s[i];\n  cout << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "var ip = readline().split(' ').map(Number);\nvar n = ip[0], open = ip[1]/2, close = ip[1]/2, res = '';\nreadline().split('').forEach(x=>{\n   if (x === '(' && open !== 0){\n       open--;\n       res += x;\n   }  else if (x === ')' && close !== 0){\n       close--;\n       res += x;\n   }\n});\nprint(res)"
+  }
+]

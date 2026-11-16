@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\na = list(map(int, input().split()))\nb = sorted(a)\nres = 0\nfor i in range(n):\n    if a[i] != b[i]:\n        res += 1\nprint('YES' if res <= 2 else 'NO')"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nvoid swap(int &x, int &y) {\n  int t = x;\n  x = y;\n  y = t;\n}\nint main() {\n  int n;\n  cin >> n;\n  int *p = new int[n];\n  vector<int> k;\n  for (int i = 0; i < n; i++) {\n    cin >> p[i];\n    k.push_back(p[i]);\n  }\n  sort(k.begin(), k.end());\n  int count = 0;\n  for (int i = 0; i < n; i++)\n    if (p[i] != k[i]) count++;\n  if (count < 3)\n    cout << \"YES\";\n  else\n    cout << \"NO\";\n  delete[] p;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.io.OutputStreamWriter;\nimport java.io.PrintWriter;\nimport java.util.Arrays;\nimport java.util.StringTokenizer;\n\npublic class Main {\n\tvoid solve() throws IOException {\n\t\tint n = nextInt();\n\t\tint[] a = new int[n];\n\t\tInteger[] b = new Integer[n];\n\t\tfor (int i = 0; i < n; ++i) {\n\t\t\ta[i] = nextInt();\n\t\t\tb[i] = a[i];\n\t\t}\n\t\tArrays.sort(b);\n\t\tint cnt = 0;\n\t\tfor (int i = 0; i < n; ++i)\n\t\t\tif (a[i] != b[i])\n\t\t\t\t++cnt;\n\t\tif (cnt <= 2)\n\t\t\twriter.println(\"YES\");\n\t\telse\n\t\t\twriter.println(\"NO\");\n\t}\n\n\tBufferedReader reader;\n\tPrintWriter writer;\n\tStringTokenizer tokenizer;\n\n\tString nextToken() throws IOException {\n\t\twhile (tokenizer == null || !tokenizer.hasMoreTokens())\n\t\t\ttokenizer = new StringTokenizer(reader.readLine());\n\t\treturn tokenizer.nextToken();\n\t}\n\n\tint nextInt() throws IOException {\n\t\treturn Integer.parseInt(nextToken());\n\t}\n\n\tpublic void run() {\n\t\ttry {\n\t\t\treader = new BufferedReader(new InputStreamReader(System.in));\n\t\t\ttokenizer = null;\n\t\t\twriter = new PrintWriter(new OutputStreamWriter(System.out));\n\t\t\tsolve();\n\t\t\treader.close();\n\t\t\twriter.close();\n\t\t} catch (Exception e) {\n\t\t\te.printStackTrace();\n\t\t\tSystem.exit(1);\n\t\t}\n\t}\n\n\tpublic static void main(String[] args) throws IOException {\n\t\tnew Main().run();\n\t}\n}"
+  }
+]

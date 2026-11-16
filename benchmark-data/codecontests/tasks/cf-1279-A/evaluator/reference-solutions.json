@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nfor i in range(n):\n    l = [int(k) for k in input().split()]\n    l.sort()\n    if l[2] <= l[1]+l[0]+1 :\n    \tprint(\"YES\")\n    else :\n    \tprint(\"NO\")"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  ios_base::sync_with_stdio(false);\n  long long t;\n  cin >> t;\n  for (long long i = 0; i < t; i++) {\n    long long r, g, b;\n    cin >> r >> g >> b;\n    long long mx = max(max(r, g), b);\n    long long sum = r + g + b;\n    if (mx > (sum + 1) / 2) {\n      cout << \"No\" << endl;\n    } else {\n      cout << \"Yes\" << endl;\n    }\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class Solution\n{\n    public static void main(String args[])\n    {\n        Scanner s= new Scanner(System.in);\n        int t=s.nextInt();\n        while(t>0)\n        {\n            int a=s.nextInt();\n            int b=s.nextInt();\n            int c=s.nextInt();\n            int flag=0;\n            if(a+b+1<c)\n                flag=1;\n            else if(b+c+1<a)\n                flag=1;\n            else if(a+c+1<b)\n                flag=1;\n            t--;\n            if(flag==1)\n                System.out.println(\"NO\");\n            else\n                System.out.println(\"YES\");\n        }\n    }\n}"
+  }
+]

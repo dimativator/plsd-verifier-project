@@ -1,0 +1,10 @@
+{
+  "input": [
+    "21 2\nababaababaababaababaa\n",
+    "7 2\nbcabcab\n"
+  ],
+  "output": [
+    "000110000111111000011",
+    "0000011"
+  ]
+}

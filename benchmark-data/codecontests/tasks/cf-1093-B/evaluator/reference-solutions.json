@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "def good_string(string):\n\tif string[::-1] != string:\n\t\treturn string\n\telse:\n\t\tstring = string[-1] + string[:-1]\n\t\ttry:\n\t\t\treturn good_string(string)\n\t\texcept:\n\t\t\treturn -1\n\nif __name__ == \"__main__\":\n\tqueries = int(input())\n\tfor _ in range(queries):\n\t\tstring = input()\n\t\tprint(good_string(string))\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  int flag = 1;\n  string str;\n  cin >> n;\n  while (n--) {\n    cin >> str;\n    int len = str.length();\n    for (int i = 0; i < len / 2; i++) {\n      if (str[i] != str[len - 1 - i]) {\n        flag = 0;\n      }\n    }\n    if (flag) {\n      sort(str.begin(), str.end());\n      if (str[0] == str[len - 1]) {\n        cout << -1 << endl;\n        continue;\n      }\n    }\n    cout << str << endl;\n    flag = 1;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\n//package javaapplication3;\n\n\n\n\n\nimport java.util.Scanner;\nimport java.util.Arrays;\n\n/**\n *\n * @author Mahmoud\n */\npublic class StringCodeforces {\n\n    /**\n     * @param args the command line arguments\n     */\n    public static void main(String[] args) {\n        \n             \n\n        Scanner sc=new Scanner(System.in);\n        \n        byte x=sc.nextByte();\n        \n        for(int i=0;i<x;i++)\n        {\n            char []a=sc.next().toCharArray();\n           \n            Arrays.sort(a);\n              \n           if(a[0] != a[a.length-1]){\n               for(char w :a)System.out.print(w);\n                System.out.println();\n           }\n           \n           else\n           {\n                System.out.println(-1);\n           }\n          \n        }\n            \n        \n        \n        \n         \n}\n\n\n}\n      \n      \n       \n   \n      \n       \n       \n      \n        \n        \n    \n    \n\n"
+  }
+]

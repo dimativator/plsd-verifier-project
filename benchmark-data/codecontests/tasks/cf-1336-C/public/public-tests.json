@@ -1,0 +1,14 @@
+{
+  "input": [
+    "defineintlonglong\nsignedmain\n",
+    "rotator\nrotator\n",
+    "cacdcdbbbb\nbdcaccdbbb\n",
+    "abab\nba\n"
+  ],
+  "output": [
+    "0",
+    "4",
+    "24",
+    "12"
+  ]
+}

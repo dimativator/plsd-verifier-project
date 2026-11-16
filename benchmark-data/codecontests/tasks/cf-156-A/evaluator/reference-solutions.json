@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from sys import stdin, stdout\n\nfirst, second = stdin.readline().strip(), stdin.readline().strip()\nn, m = len(first), len(second)\n\nfirst = '#' * m + first + '#' * m\nans = float('inf')\n\nfor i in range(n + m):\n    cnt = 0\n    \n    for j in range(m):\n        if first[i + j] != second[j]:\n            cnt += 1\n    \n    ans = min(cnt, ans)\n\nstdout.write(str(ans))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  string a, b;\n  cin >> a >> b;\n  int k = 0;\n  string star = \"*\";\n  for (int i = 0; i < 12; i++) star = star + star;\n  a = star + a + star;\n  int res = 3000;\n  for (int i = 0; i < a.size(); i++) {\n    int u = 0;\n    for (int j = 0; j < b.size(); j++)\n      if (a[i + j] != b[j]) u++;\n    res = min(res, u);\n  }\n  cout << res << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n// warm-up\n// Not exactly correct with previous observation. Using indexOf within an\n// O(n^2) block was a major slow down. Pattern mismatching is potentially\n// faster than pattern match since we have to search for every possible\n// pattern substring.\n// Solution ripped off from a red coder just for personal reference\npublic class Round110ProblemA {\n\n\tstatic void solve() {\n\t\tScanner sc = new Scanner(System.in);\n\t\tString s = sc.next(), t = sc.next();\n\t\tint min = 5000;\n\t\tfor(int i = 0; i<2001; i++) s = \".\"+s+\".\";\n\t\tfor(int i = 0; i<=s.length()-t.length(); i++) {\n\t\t\tint count = 0;\n\t\t\tfor(int j = 0; j<t.length(); j++) \n\t\t\t\tif(s.charAt(i+j)!= t.charAt(j)) count++;\n\t\t\tmin = Math.min(min, count);\n\t\t}\n\t\tSystem.out.println(min);\n\t\tsc.close();\t\t\t\n\t}\n\n\tpublic static void main(String args[]) {\n\t\tsolve();\n\t}\n\n}"
+  }
+]

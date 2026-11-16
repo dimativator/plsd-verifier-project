@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, s = int(input()), 0\na = [0] + list(map(int, input().split()))\nif n % 2 == 0 or n == 1:\n  print(-1)\nelse:\n  for i in range(n, 1, -2):\n    mx = max(a[i], a[i - 1])\n    s += mx\n    a[i // 2] = max(0, a[i // 2] - mx)\n  print(s + a[1])"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint vet[101];\nint N, res;\nint main(void) {\n  cin >> N;\n  for (int i = 0; i < N; i++) cin >> vet[i + 1];\n  for (int i = N; i >= 1; i--)\n    if (vet[i] != 0) {\n      if (i != 1 && (i / 2) * 2 + 1 <= N) {\n        int p = i / 2;\n        int h = vet[i];\n        vet[p] = max(0, vet[p] - h);\n        vet[p * 2] = max(0, vet[p * 2] - h);\n        vet[p * 2 + 1] = max(0, vet[p * 2 + 1] - h);\n        res += h;\n      } else if (i * 2 + 1 > N) {\n        cout << -1;\n        return 0;\n      } else\n        res += vet[i];\n    }\n  cout << res;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.BufferedWriter;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.io.OutputStreamWriter;\nimport java.io.PrintWriter;\nimport java.util.StringTokenizer;\n\npublic class C {\n\tprivate static BufferedReader in;\n\tprivate static StringTokenizer st;\n\tprivate static PrintWriter out;\n\t\n\tpublic static void main(String[] args) throws NumberFormatException, IOException {\n\t\tin = new BufferedReader(new InputStreamReader(System.in));\n\t\tst = new StringTokenizer(\"\");\n\t\tout = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));\n\t\tint n = nextInt();\n\t\tint a[] = new int [n+1];\n\t\tfor (int i = 1; i <=n; i++) {\n\t\t\ta[i] = nextInt();\n\t\t}\n\t\tint ans = 0;\n\t\tif(n % 2 == 0 || n==1){\n\t\t\tSystem.out.println(-1);\n\t\t\treturn;\n\t\t}\n\t\tfor (int i = 1; i <=n; i++) {\n\t\t\tfor (int j = (n-1)/2; j >=1; j--) {\n\t\t\t\tint max = Math.max(a[2*j], a[2*j + 1]);\n\t\t\t\tans += max;\n\t\t\t\ta[j]-= max;\n\t\t\t\tif(a[j]<0) a[j] = 0;\n\t\t\t\ta[2*j]-= max;\n\t\t\t\ta[2*j + 1] -= max;\n\t\t\t}\n\t\t}\n\t\tans+=a[1];\n\t\tSystem.out.println(ans);\n\t}\n\t\n\n\tstatic String next() throws IOException{\n\t\twhile(!st.hasMoreTokens()){\n\t\t\tst = new StringTokenizer(in.readLine());\n\t\t}\n\t\treturn st.nextToken();\n\t}\n\tstatic int nextInt() throws NumberFormatException, IOException{\n\t\treturn Integer.parseInt(next());\n\t}\n\tstatic long nextLong() throws NumberFormatException, IOException{\n\t\treturn Long.parseLong(next());\n\t}\n\t\n\tstatic double nextDouble() throws NumberFormatException, IOException{\n\t\treturn Double.parseDouble(next());\n\t}\n\n}\n"
+  }
+]

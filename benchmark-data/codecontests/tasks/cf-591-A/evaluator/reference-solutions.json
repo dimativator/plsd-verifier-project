@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "l=int(input())\np=int(input())\nq=int(input())\nv=p+q\nt=l/v\nd=p*t\nprint(d)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  double l, q, p, t1;\n  cin >> l >> p >> q;\n  t1 = l / (q + p);\n  cout << 3 * l / (q + p) * p - 2 * t1 * p << \"\\n\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Main {\n\n    public static void main(String[] args) {\n\tScanner input = new Scanner(System.in);\n\tint l = input.nextInt();\n\tint p = input.nextInt();\n\tint q = input.nextInt();\n\n\tdouble collisionT = ((double)l)/(p+q);\n\tdouble harryDistance = collisionT*p;\n\n\n\tdouble collisionT2 = ((double)(l*2))/(p+q);\n\tdouble harryDistance2 = collisionT2*p;\n\n\n\tdouble distance = harryDistance2-harryDistance;\n\n\tSystem.out.println(distance);\n    }\n}"
+  }
+]

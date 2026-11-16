@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "x,y,z=map(int,input().split())\nif y+z>=x:\n    print(x-y)\nelse:\n    print(z+1)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nvoid solve() {\n  int n, a, b;\n  cin >> n >> a >> b;\n  cout << min(n - a, b + 1) << '\\n';\n}\nint main() {\n  ios::sync_with_stdio(0);\n  cin.tie(0);\n  solve();\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class Example {\n\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n        int n = in.nextInt();\n        int a = in.nextInt();\n        int b = in.nextInt();\n        int ans = Math.min(n - a, b + 1);\n\n        System.out.println(ans);\n    }\n}"
+  }
+]

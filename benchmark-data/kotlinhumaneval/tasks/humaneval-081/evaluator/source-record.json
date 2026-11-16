@@ -1,0 +1,21 @@
+{
+  "task_id": "HumanEval_kotlin/81",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Given a positive integer N, return the total sum of its digits in binary.\n *\n * Example\n *     For N = 1000, the sum of digits will be 1 the output should be \"1\".\n *     For N = 150, the sum of digits will be 6 the output should be \"110\".\n *     For N = 147, the sum of digits will be 12 the output should be \"1100\".\n *\n * Variables:\n *     @N integer\n *          Constraints: 0 ≤ N ≤ 10000.\n * Output:\n *      a string of binary number\n *\n */\nfun solve(n: Int): String {\n",
+  "entry_point": "solve",
+  "test": "fun main() {\n    var arg00: Int = 1000\n    var x0: String = solve(arg00)\n    var v0: String = \"1\"\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: Int = 150\n    var x1: String = solve(arg10)\n    var v1: String = \"110\"\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: Int = 147\n    var x2: String = solve(arg20)\n    var v2: String = \"1100\"\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30: Int = 333\n    var x3: String = solve(arg30)\n    var v3: String = \"1001\"\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40: Int = 963\n    var x4: String = solve(arg40)\n    var v4: String = \"10010\"\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Given a positive integer N, return the total sum of its digits in binary.\n *\n * Example\n *     For N = 1000, the sum of digits will be 1 the output should be \"1\".\n *     For N = 150, the sum of digits will be 6 the output should be \"110\".\n *     For N = 147, the sum of digits will be 12 the output should be \"1100\".\n *\n * Variables:\n *     @N integer\n *          Constraints: 0 ≤ N ≤ 10000.\n * Output:\n *      a string of binary number\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun solve(n: Int): String {",
+    "    var cur = n",
+    "    var digitSum = 0",
+    "    while (cur > 0) {",
+    "        digitSum += cur % 10",
+    "        cur /= 10",
+    "    }",
+    "    return digitSum.toString(2)",
+    "}",
+    "",
+    ""
+  ]
+}

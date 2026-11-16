@@ -1,0 +1,12 @@
+{
+  "input": [
+    "aaaa\naaaA\n",
+    "abs\nAbz\n",
+    "abcdefg\nAbCdEfF\n"
+  ],
+  "output": [
+    "0\n",
+    "-1\n",
+    "1\n"
+  ]
+}

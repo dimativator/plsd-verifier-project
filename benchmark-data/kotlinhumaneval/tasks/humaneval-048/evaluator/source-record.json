@@ -1,0 +1,16 @@
+{
+  "task_id": "HumanEval_kotlin/48",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * remove_vowels is a function that takes string and returns string without vowels.\n * >>> remove_vowels('')\n * ''\n * >>> remove_vowels(\"abcdef\\nghijklm\")\n * 'bcdf\\nghjklm'\n * >>> remove_vowels('abcdef')\n * 'bcdf'\n * >>> remove_vowels('aaaaa')\n * ''\n * >>> remove_vowels('aaBAA')\n * 'B'\n * >>> remove_vowels('zbcd')\n * 'zbcd'\n *\n */\nfun removeVowels(text: String): String {\n",
+  "entry_point": "removeVowels",
+  "test": "fun main() {\n    var arg00: String = \"\"\n    var x0: String = removeVowels(arg00)\n    var v0: String = \"\"\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: String = \"abcdef\\nghijklm\"\n    var x1: String = removeVowels(arg10)\n    var v1: String = \"bcdf\\nghjklm\"\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: String = \"fedcba\"\n    var x2: String = removeVowels(arg20)\n    var v2: String = \"fdcb\"\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30: String = \"eeeee\"\n    var x3: String = removeVowels(arg30)\n    var v3: String = \"\"\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40: String = \"acBAA\"\n    var x4: String = removeVowels(arg40)\n    var v4: String = \"cB\"\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50: String = \"EcBOO\"\n    var x5: String = removeVowels(arg50)\n    var v5: String = \"cB\"\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n    var arg60: String = \"ybcd\"\n    var x6: String = removeVowels(arg60)\n    var v6: String = \"ybcd\"\n    if (x6 != v6) {\n        throw Exception(\"Exception -- test case 6 did not pass. x6 = \" + x6)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * remove_vowels is a function that takes string and returns string without vowels.\n * >>> remove_vowels('')\n * ''\n * >>> remove_vowels(\"abcdef\\nghijklm\")\n * 'bcdf\\nghjklm'\n * >>> remove_vowels('abcdef')\n * 'bcdf'\n * >>> remove_vowels('aaaaa')\n * ''\n * >>> remove_vowels('aaBAA')\n * 'B'\n * >>> remove_vowels('zbcd')\n * 'zbcd'\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun removeVowels(text: String): String {",
+    "    val vowels = setOf('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')",
+    "    return text.filter { it !in vowels }",
+    "}",
+    "",
+    ""
+  ]
+}

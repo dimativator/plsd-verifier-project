@@ -1,0 +1,10 @@
+{
+  "input": [
+    "5\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\nazazazazazazazazazazazazazazazazazazazazazazazazaz\nzazazazazazazazazazazazazazazazazazazazazazazazaza\nzzazzazzazzazzazzazzazzazzazzazzazzazzazzazza\n",
+    "1\na\n"
+  ],
+  "output": [
+    "bzbzbzbzbzbzbzbzbzbzbzbzbzbzbzbzbzbzbzbzbzbzbzbzbz\nayayayayayayayayayayayayayayayayayayayayayayayayay\nbybybybybybybybybybybybybybybybybybybybybybybybyby\nazazazazazazazazazazazazazazazazazazazazazazazazaz\naybyazaybyazaybyazaybyazaybyazaybyazaybyazayb\n",
+    "b\n"
+  ]
+}

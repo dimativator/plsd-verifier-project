@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=list(input())\nm=len(n)\ne=0\ns=1\nif n.count('1')==0:\n    s=0\nfor i in range(0,m):\n    if n[i]=='1':\n        e=i\n        break\nk=n[e:]\nif s==1:\n    if k.count('0')>=6:\n        print('yes')\n    else:\n        print('no')\nelse:\n    print('no')\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nusing ll = long long;\nusing ull = unsigned long long;\nusing ld = long double;\nusing pii = pair<int, int>;\nusing pll = pair<ll, ll>;\nusing vint = vector<int>;\nusing vll = vector<ll>;\nint main() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  string s;\n  cin >> s;\n  if (s.size() < 7) {\n    cout << \"no\";\n    return 0;\n  }\n  int zeros = 0;\n  bool was1 = false;\n  for (int i = 0; i < s.size(); i++) {\n    if (s[i] == '1') was1 = true;\n    if (s[i] == '0' && was1) zeros++;\n  }\n  if (zeros < 6)\n    cout << \"no\";\n  else\n    cout << \"yes\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\npublic class codeforces {\n    public static void main(String[] args) throws Exception {\n        Scanner in=new Scanner(System.in);\n        String s=in.next();\n        boolean found=false;\n        int i=0,count=0;\n        while(i<s.length()){\n            if(s.charAt(i)=='1'){\n                found=true;\n                break;\n            }\n         i++;\n        }\n        int j=i+1;\n        while(found==true && j<s.length()){\n              if(s.charAt(j)=='0'){\n                  count++;\n              }\n            j++;\n        }\n        if(count>=6){\n            System.out.println(\"YES\");\n        }\n        else{\n            System.out.println(\"NO\");\n        }\n        in.close();\n        return;\n    }\n}\n\n"
+  }
+]

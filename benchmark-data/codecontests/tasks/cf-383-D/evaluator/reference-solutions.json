@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import sys\ninput = lambda : sys.stdin.readline().rstrip()\n\nsys.setrecursionlimit(2*10**5+10)\nwrite = lambda x: sys.stdout.write(x+\"\\n\")\ndebug = lambda x: sys.stderr.write(x+\"\\n\")\nwritef = lambda x: print(\"{:.12f}\".format(x))\n\n\nn = int(input())\na = list(map(int, input().split()))\nm = sum(a)\nM = 10**9+7\ndp = [0]*(2*m+1)\nans = 0\ndp[m] = 1\nval = 0\nfor i in range(n):\n    v = a[i]\n    ndp = [0]*(2*m+1)\n    for j in range(2*m+1):\n        if j-v>=0:\n            ndp[j-v] += dp[j]\n            if ndp[j-v]>M:\n                ndp[j-v] -= M\n        if j+v<=2*m:\n            ndp[j+v] += dp[j]\n            if ndp[j+v]>M:\n                ndp[j+v] -= M\n    dp = ndp\n    ans += dp[m]\n    ans %= M\n    dp[m] += 1\n    val += v\nprint(ans%M)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int oo = 0x3f3f3f3f;\nconst long long OO = 1LL << 61;\nconst int MOD = 1000000007;\nlong long dp[1005][20005];\nint a[1005];\nint main() {\n  int n;\n  while (scanf(\"%d\", &n) != EOF) {\n    for (int i = 1; i <= n; i++) scanf(\"%d\", &a[i]);\n    memset(dp, 0, sizeof dp);\n    for (int i = 0; i <= n; i++) dp[i][10000] = 1;\n    for (int i = 1; i <= n; i++) {\n      for (int j = 0; j <= 20000; j++) {\n        if (j + a[i] <= 20000)\n          dp[i][j + a[i]] = (dp[i][j + a[i]] + dp[i - 1][j] + MOD) % MOD;\n        if (j - a[i] >= 0)\n          dp[i][j - a[i]] = (dp[i][j - a[i]] + dp[i - 1][j] + MOD) % MOD;\n      }\n    }\n    long long ans = 0;\n    for (int i = 1; i <= n; i++) ans = (ans + dp[i][10000] - 1 + MOD) % MOD;\n    cout << ans << endl;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\npublic class cf383d {\n\n\tpublic static void main(String[] args)throws IOException {\n\t\tBufferedReader bf=new BufferedReader(new InputStreamReader(System.in));\n\t\tPrintWriter out=new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));\n\t\tStringTokenizer st=new StringTokenizer(bf.readLine());\n\t\tint n=Integer.parseInt(st.nextToken());\n\t\tint mod=(int)1e9+7;\n\t\tint[][] dp=new int[n+1][(int)2e4+1];\n\t\tst=new StringTokenizer(bf.readLine());\n\t\tint[] a=new int[n];\n\t\tfor(int i=0;i<n;i++) {\n\t\t\ta[i]=Integer.parseInt(st.nextToken());\n\t\t}\n\t\tdp[0][10000]=0;\n\t\tfor(int i=1;i<=n;i++) {\n\t\t\tfor(int j=a[i-1];j<=20000-a[i-1];j++) {\n\t\t\t\tdp[i][j-a[i-1]]+=dp[i-1][j];\n\t\t\t\tdp[i][j-a[i-1]]%=mod;\n\t\t\t\tdp[i][j+a[i-1]]+=dp[i-1][j];\n\t\t\t\tdp[i][j+a[i-1]]%=mod;\n\t\t\t}\n\t\t\tdp[i][10000+a[i-1]]++;\n\t\t\tdp[i][10000-a[i-1]]++;\n\t\t}\n\t\tlong ans=0;\n\t\tfor(int i=1;i<=n;i++) {\n\t\t\tans+=dp[i][10000];\n\t\t\tans%=mod;\n\t\t}\n\t\tout.println(ans);\n\t\tout.close();\n\t}\n\n}\n"
+  }
+]

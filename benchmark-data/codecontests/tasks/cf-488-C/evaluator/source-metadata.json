@@ -1,0 +1,36 @@
+{
+  "name": "488_C. Fight the Monster",
+  "description": "A monster is attacking the Cyberland!\n\nMaster Yang, a braver, is going to beat the monster. Yang and the monster each have 3 attributes: hitpoints (HP), offensive power (ATK) and defensive power (DEF).\n\nDuring the battle, every second the monster's HP decrease by max(0, ATKY - DEFM), while Yang's HP decreases by max(0, ATKM - DEFY), where index Y denotes Master Yang and index M denotes monster. Both decreases happen simultaneously Once monster's HP ≤ 0 and the same time Master Yang's HP > 0, Master Yang wins.\n\nMaster Yang can buy attributes from the magic shop of Cyberland: h bitcoins per HP, a bitcoins per ATK, and d bitcoins per DEF.\n\nNow Master Yang wants to know the minimum number of bitcoins he can spend in order to win.\n\nInput\n\nThe first line contains three integers HPY, ATKY, DEFY, separated by a space, denoting the initial HP, ATK and DEF of Master Yang.\n\nThe second line contains three integers HPM, ATKM, DEFM, separated by a space, denoting the HP, ATK and DEF of the monster.\n\nThe third line contains three integers h, a, d, separated by a space, denoting the price of 1 HP, 1 ATK and 1 DEF.\n\nAll numbers in input are integer and lie between 1 and 100 inclusively.\n\nOutput\n\nThe only output line should contain an integer, denoting the minimum bitcoins Master Yang should spend in order to win.\n\nExamples\n\nInput\n\n1 2 1\n1 100 1\n1 100 100\n\n\nOutput\n\n99\n\n\nInput\n\n100 100 100\n1 1 1\n1 1 1\n\n\nOutput\n\n0\n\nNote\n\nFor the first sample, prices for ATK and DEF are extremely high. Master Yang can buy 99 HP, then he can beat the monster with 1 HP left.\n\nFor the second sample, Master Yang is strong enough to beat the monster, so he doesn't need to buy anything.",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 1800,
+  "cf_contest_id": 488,
+  "cf_index": "C",
+  "cf_tags": [
+    "binary search",
+    "brute force",
+    "implementation"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00001-of-00039-e092fe56fda18715.parquet",
+  "source_row": 15,
+  "task_id": "codecontests/cf-488-C",
+  "rating_band": "1600-1999",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/488/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

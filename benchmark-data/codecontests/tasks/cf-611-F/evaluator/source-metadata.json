@@ -1,0 +1,35 @@
+{
+  "name": "611_F. New Year and Cleaning",
+  "description": "Limak is a little polar bear. His parents told him to clean a house before the New Year's Eve. Their house is a rectangular grid with h rows and w columns. Each cell is an empty square.\n\nHe is a little bear and thus he can't clean a house by himself. Instead, he is going to use a cleaning robot.\n\nA cleaning robot has a built-in pattern of n moves, defined by a string of the length n. A single move (character) moves a robot to one of four adjacent cells. Each character is one of the following four: 'U' (up), 'D' (down), 'L' (left), 'R' (right). One move takes one minute.\n\nA cleaning robot must be placed and started in some cell. Then it repeats its pattern of moves till it hits a wall (one of four borders of a house). After hitting a wall it can be placed and used again.\n\nLimak isn't sure if placing a cleaning robot in one cell will be enough. Thus, he is going to start it w·h times, one time in each cell. Maybe some cells will be cleaned more than once but who cares?\n\nLimak asks you one question. How much time will it take to clean a house? Find and print the number of minutes modulo 109 + 7. It's also possible that a cleaning robot will never stop — then print \"-1\" (without the quotes) instead.\n\nPlacing and starting a robot takes no time, however, you must count a move when robot hits a wall. Take a look into samples for further clarification.\n\nInput\n\nThe first line contains three integers n, h and w (1 ≤ n, h, w ≤ 500 000) — the length of the pattern, the number of rows and the number of columns, respectively.\n\nThe second line contains a string of length n — the pattern of n moves. Each character is one of uppercase letters 'U', 'D', 'L' or 'R'.\n\nOutput\n\nPrint one line with the answer.\n\nIf a cleaning robot will never stop, print \"-1\" (without the quotes). Otherwise, print the number of minutes it will take to clean a house modulo 109 + 7.\n\nExamples\n\nInput\n\n1 10 2\nR\n\n\nOutput\n\n30\n\n\nInput\n\n3 4 6\nRUL\n\n\nOutput\n\n134\n\n\nInput\n\n4 1 500000\nRLRL\n\n\nOutput\n\n-1\n\nNote\n\nIn the first sample house is a grid with 10 rows and 2 columns. Starting a robot anywhere in the second column will result in only one move (thus, one minute of cleaning) in which robot will hit a wall — he tried to go right but there is no third column. Starting a robot anywhere in the first column will result in two moves. The total number of minutes is 10·1 + 10·2 = 30.\n\nIn the second sample a started robot will try to move \"RULRULRULR...\" For example, for the leftmost cell in the second row robot will make 5 moves before it stops because of hitting an upper wall.",
+  "source": 2,
+  "difficulty": 12,
+  "cf_rating": 2500,
+  "cf_contest_id": 611,
+  "cf_index": "F",
+  "cf_tags": [
+    "binary search",
+    "implementation"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00015-of-00039-19ccd7331d695677.parquet",
+  "source_row": 337,
+  "task_id": "codecontests/cf-611-F",
+  "rating_band": "2400+",
+  "source_difficulty": "F",
+  "url": "https://codeforces.com/problemset/problem/611/F",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

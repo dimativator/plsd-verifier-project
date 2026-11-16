@@ -1,0 +1,12 @@
+{
+  "input": [
+    "UDUR\n",
+    "RUUR\n",
+    "RRU\n"
+  ],
+  "output": [
+    "1\n",
+    "2\n",
+    "-1\n"
+  ]
+}

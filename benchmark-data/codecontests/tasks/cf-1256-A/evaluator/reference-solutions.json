@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from fractions import gcd\nfrom datetime import date, timedelta\nfrom heapq import*\nimport math\nfrom collections import defaultdict, Counter, deque\nimport sys\nfrom bisect import *\nimport itertools\nimport copy\nsys.setrecursionlimit(10 ** 7)\nMOD = 10 ** 9 + 7\n\n\ndef main():\n    q = int(input())\n    for i in range(q):\n        a, b, n, s = map(int, input().split())\n        \n        if s - n * a >= 0:\n            s -= n * a\n        else:\n            s = s - (s//n)*n\n            \n\n            \n        if s <= b:\n            print(\"YES\")\n        else:\n            print(\"NO\")\n\n        \n        \n        \n            \n\n    \n   \n\n\nif __name__ == '__main__':\n    main()\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int q;\n  cin >> q;\n  while (q--) {\n    long long a, b, N, s;\n    cin >> a >> b >> N >> s;\n    if (s > N * a + b || b < s % N)\n      cout << \"NO\" << endl;\n    else {\n      cout << \"YES\" << endl;\n    }\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\n\npublic class Solution {\n\t\n\tstatic String solve(long a, long b, long n, long S) {\n\t\tif (a * n + b < S) {\n\t\t\treturn \"NO\";\n\t\t} else {\n\t\t\tif (a * n > S) {\n\t\t\t\tif (S % n <= b) {\n\t\t\t\t\treturn \"YES\";\n\t\t\t\t} else {\n\t\t\t\t\treturn \"NO\";\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\treturn \"YES\";\n\t\t\t}\n\t\t}\n\t}\n\n    private static final Scanner scanner = new Scanner(System.in);\n\n    public static void main(String[] args) throws IOException {\n        int q = Integer.valueOf(scanner.nextLine());\n        for (int i = 0; i < q; i++) {\n        \tString[] strs = scanner.nextLine().split(\" \");\n        \tint a = Integer.valueOf(strs[0]);\n        \tint b = Integer.valueOf(strs[1]);\n        \tint n = Integer.valueOf(strs[2]);\n        \tint S = Integer.valueOf(strs[3]);\n        \tSystem.out.println(solve(a, b, n, S));\n        }\n        scanner.close();\n    }\n}\n"
+  }
+]

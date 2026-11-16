@@ -1,0 +1,7 @@
+{
+  "id": "cf-322-A",
+  "submission_format": "program",
+  "target_language": "Kotlin",
+  "solution_file": "Main.kt",
+  "visible_tests": "public-tests.json"
+}

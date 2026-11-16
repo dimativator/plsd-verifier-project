@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "def solve(n,d):\n    other = 0\n    for i in d:\n        other += i\n    \n    ways = 0\n    for i in range(1,6):\n        if (other + i) % (n + 1) != 1:\n            ways += 1\n\n    print(ways)\n\ndef main():\n    n = int(input())\n    d = input()\n    d = [int(i) for i in d.split()]\n    solve(n,d)\n\nmain()"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, f, sum = 0;\n  cin >> n;\n  for (int i = 0; i < n; i++) {\n    cin >> f;\n    sum += f;\n  }\n  int count = 0, demo = sum;\n  for (int j = 1; j <= 5; j++) {\n    demo++;\n    if (demo % (n + 1) != 1) count++;\n  }\n  cout << count;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class M {\n    public static void main(String[] Args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int t = 0;\n        for(int k =0;k<n;k++)\n            t+=sc.nextInt();\n        int ans = 0;\n        for(int k = 1;k<=5;k++){\n            if((k+t)%(n+1)!=1){\n                ans++;\n            }\n        }\n        System.out.println(ans);\n    }\n}\n"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-113",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/113",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 8,
+  "public_test_count": 1,
+  "unexposed_test_count": 7,
+  "source_review_note": "Prompt says nonnegative but includes a negative example and negative test case. Negative binary string one-count convention must be retained or resolved.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-113",
+  "public_dir": "tasks/humaneval-113/public",
+  "evaluator_dir": "tasks/humaneval-113/evaluator",
+  "metadata_file": "tasks/humaneval-113/task.json",
+  "evaluation_harness": "tasks/humaneval-113/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-113/evaluation.json"
+}

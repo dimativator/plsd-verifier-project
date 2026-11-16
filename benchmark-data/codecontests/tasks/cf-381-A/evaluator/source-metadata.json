@@ -1,0 +1,36 @@
+{
+  "name": "381_A. Sereja and Dima",
+  "description": "Sereja and Dima play a game. The rules of the game are very simple. The players have n cards in a row. Each card contains a number, all numbers on the cards are distinct. The players take turns, Sereja moves first. During his turn a player can take one card: either the leftmost card in a row, or the rightmost one. The game ends when there is no more cards. The player who has the maximum sum of numbers on his cards by the end of the game, wins.\n\nSereja and Dima are being greedy. Each of them chooses the card with the larger number during his move.\n\nInna is a friend of Sereja and Dima. She knows which strategy the guys are using, so she wants to determine the final score, given the initial state of the game. Help her.\n\nInput\n\nThe first line contains integer n (1 ≤ n ≤ 1000) — the number of cards on the table. The second line contains space-separated numbers on the cards from left to right. The numbers on the cards are distinct integers from 1 to 1000.\n\nOutput\n\nOn a single line, print two integers. The first number is the number of Sereja's points at the end of the game, the second number is the number of Dima's points at the end of the game.\n\nExamples\n\nInput\n\n4\n4 1 2 10\n\n\nOutput\n\n12 5\n\n\nInput\n\n7\n1 2 3 4 5 6 7\n\n\nOutput\n\n16 12\n\nNote\n\nIn the first sample Sereja will take cards with numbers 10 and 2, so Sereja's sum is 12. Dima will take cards with numbers 4 and 1, so Dima's sum is 5.",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 800,
+  "cf_contest_id": 381,
+  "cf_index": "A",
+  "cf_tags": [
+    "greedy",
+    "implementation",
+    "two pointers"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00001-of-00039-e092fe56fda18715.parquet",
+  "source_row": 323,
+  "task_id": "codecontests/cf-381-A",
+  "rating_band": "800-1199",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/381/A",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

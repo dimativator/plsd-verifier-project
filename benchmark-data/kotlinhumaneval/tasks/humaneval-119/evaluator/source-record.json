@@ -1,0 +1,15 @@
+{
+  "task_id": "HumanEval_kotlin/119",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Given a non-empty array of integers arr and an integer k, return\n * the sum of the elements with at most two digits from the first k elements of arr.\n\n * Example:\n\n *     Input: arr = [111,21,3,4000,5,6,7,8,9], k = 4\n *     Output: 24 # sum of 21 + 3\n\n * Constraints:\n *     1. 1 <= len(arr) <= 100\n *     2. 1 <= k <= len(arr)\n *\n */\nfun addElements(arr : List<Int>, k : Int) : Int {\n",
+  "entry_point": "addElements",
+  "test": "fun main() {\n    var arg00 : List<Int> = mutableListOf(1, -2, -3, 41, 57, 76, 87, 88, 99)\n    var arg01 : Int = 3\n    var x0 : Int = addElements(arg00, arg01);\n    var v0 : Int = -4;\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10 : List<Int> = mutableListOf(111, 121, 3, 4000, 5, 6)\n    var arg11 : Int = 2\n    var x1 : Int = addElements(arg10, arg11);\n    var v1 : Int = 0;\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20 : List<Int> = mutableListOf(11, 21, 3, 90, 5, 6, 7, 8, 9)\n    var arg21 : Int = 4\n    var x2 : Int = addElements(arg20, arg21);\n    var v2 : Int = 125;\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30 : List<Int> = mutableListOf(111, 21, 3, 4000, 5, 6, 7, 8, 9)\n    var arg31 : Int = 4\n    var x3 : Int = addElements(arg30, arg31);\n    var v3 : Int = 24;\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40 : List<Int> = mutableListOf(1)\n    var arg41 : Int = 1\n    var x4 : Int = addElements(arg40, arg41);\n    var v4 : Int = 1;\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Given a non-empty array of integers arr and an integer k, return\n * the sum of the elements with at most two digits from the first k elements of arr.\n\n * Example:\n\n *     Input: arr = [111,21,3,4000,5,6,7,8,9], k = 4\n *     Output: 24 # sum of 21 + 3\n\n * Constraints:\n *     1. 1 <= len(arr) <= 100\n *     2. 1 <= k <= len(arr)\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun addElements(arr : List<Int>, k : Int) : Int {",
+    "\treturn arr.take(k).filter { it < 100 }.sum()",
+    "}",
+    "",
+    ""
+  ]
+}

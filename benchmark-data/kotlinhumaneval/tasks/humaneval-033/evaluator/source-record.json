@@ -1,0 +1,15 @@
+{
+  "task_id": "HumanEval_kotlin/33",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Return sorted unique elements in a list\n * >>> unique([5, 3, 5, 2, 3, 3, 9, 0, 123])\n * [0, 2, 3, 5, 9, 123]\n *\n */\nfun unique(l: List<Int>): List<Int> {\n",
+  "entry_point": "unique",
+  "test": "fun main() {\n    var arg00: List<Int> = mutableListOf(5, 3, 5, 2, 3, 3, 9, 0, 123)\n    var x0: List<Int> = unique(arg00)\n    var v0: List<Int> = mutableListOf(0, 2, 3, 5, 9, 123)\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Return sorted unique elements in a list\n * >>> unique([5, 3, 5, 2, 3, 3, 9, 0, 123])\n * [0, 2, 3, 5, 9, 123]\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun unique(l: List<Int>): List<Int> {",
+    "    return l.toSortedSet().toList()",
+    "}",
+    "",
+    ""
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "cf-721-A",
+  "dataset": "deepmind/code_contests",
+  "source_id": "codecontests/cf-721-A",
+  "url": "https://codeforces.com/problemset/problem/721/A",
+  "source_split": "train",
+  "submission_format": "program",
+  "target_language": "Kotlin",
+  "difficulty": 800,
+  "rating_band": "800-1199",
+  "tags": [
+    "implementation"
+  ],
+  "public_test_count": 5,
+  "private_test_count": 47,
+  "generated_test_count": 79,
+  "held_out_public_input_overlap": 0,
+  "repeated_inputs_with_different_expected_outputs": 0,
+  "source_time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "source_memory_limit_bytes": 256000000,
+  "behavioral_validation": "not_run",
+  "kotlin_reference": "not_translated",
+  "verifier_validation": "not_run",
+  "output_checker": "requires_review",
+  "task_dir": "tasks/cf-721-A",
+  "public_dir": "tasks/cf-721-A/public",
+  "evaluator_dir": "tasks/cf-721-A/evaluator",
+  "metadata_file": "tasks/cf-721-A/task.json",
+  "evaluation_file": "tasks/cf-721-A/evaluation.json"
+}

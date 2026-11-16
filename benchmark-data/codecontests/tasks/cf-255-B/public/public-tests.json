@@ -1,0 +1,12 @@
+{
+  "input": [
+    "x\n",
+    "yxyxy\n",
+    "xxxxxy\n"
+  ],
+  "output": [
+    "x",
+    "y",
+    "xxxx"
+  ]
+}

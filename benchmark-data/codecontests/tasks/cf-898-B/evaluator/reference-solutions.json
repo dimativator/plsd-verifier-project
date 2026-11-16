@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\na = int(input())\nb = int(input())\nfor i in range(n//a+1):\n  if (n - i * a) % b == 0:\n    print(\"YES\")\n    print(i, (n - i * a) // b)\n    break\nelse: print(\"NO\")\n  \t  \t\t  \t            \t   \t  \t"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\ninline void timer(void) {\n  int t = clock();\n  cout << (float(t)) / CLOCKS_PER_SEC;\n}\nint main() {\n  int n, a, b, x, y, x_ = 0;\n  cin >> n >> x >> y;\n  if (!(y % x))\n    if (!(n % x))\n      return !(cout << \"YES\" << endl << n / x << ' ' << 0);\n    else\n      return !(cout << \"NO\");\n  else\n    while (n % y && n > 0) n -= x, x_++;\n  if (n >= 0) return !(cout << \"YES\" << endl << x_ << ' ' << n / y);\n  return !(cout << \"NO\");\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.io.InputStream;\nimport java.io.PrintStream;\nimport java.util.Scanner;\n\n/**\n */\npublic class MainB {\n\tpublic static void main(String[] args) {\n\t\trun(System.in, System.out);\n\t}\n\n\tpublic static void run(InputStream in, PrintStream out) {\n\n\t\ttry (Scanner sc = new Scanner(in)) {\n\t\t\tint n = sc.nextInt();\n\t\t\tint a = sc.nextInt();\n\t\t\tint b = sc.nextInt();\n\n\t\t\tint r = n;\n\t\t\twhile (r >= 0) {\n\t\t\t\tif (r % b == 0) {\n\t\t\t\t\tout.println(\"YES\");\n\t\t\t\t\tout.print((n - r) / a + \" \" + r / b);\n\t\t\t\t\treturn;\n\t\t\t\t}\n\t\t\t\tr -= a;\n\t\t\t}\n\n\t\t\tout.print(\"NO\");\n\t\t}\n\t}\n\n}"
+  }
+]

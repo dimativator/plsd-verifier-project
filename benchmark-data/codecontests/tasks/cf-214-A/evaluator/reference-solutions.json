@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,m = map(int,input().split())\na = 0\nfor i in range(0, 1000):\n    for j in range(0, 1000):\n        if i * i + j == n and j * j + i == m:\n            a = a + 1\nprint(a)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int N = 1e2 + 5;\nconst long long mod = 1e9 + 7;\nconst long long inf = 3e18 + 5;\nconst double eps = 1e-8;\nconst double pi = acos(-1);\nvoid test() {\n  long long n, m;\n  cin >> n >> m;\n  set<pair<int, int> > s;\n  for (int i = 0; i < (1001); i++) {\n    if (i * i > n) break;\n    for (int j = 0; j < (1001); j++) {\n      if (j * j > m || i * i + j > n) break;\n      if (i * i + j == n && (j * j) + i == m) s.insert({i, j});\n    }\n  }\n  cout << s.size() << endl;\n}\nint main() {\n  ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);\n  int cases = 1, c = 1;\n  while (cases--) {\n    test();\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\n/**\n *\n * @author ZEZOmaster\n */\npublic class SystemofEquations {\n\n    public static void main(String[] args) throws Exception {\n        Scanner scanner = new Scanner(System.in);\n\n        int n = scanner.nextInt();\n        int m = scanner.nextInt();\n        int counter = 0;\n        for (int i = 0; i < 1000; i++) {\n            for (int j = 0; j < 33; j++) {\n                if (Math.pow(i, 2) + j == n && Math.pow(j, 2) + i == m) {\n                    counter++;\n                }\n            }\n        }\n        System.out.println(counter);\n    }\n}"
+  }
+]

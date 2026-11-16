@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, m, k = list(map(int,input().split()))\ntooth = [[0,True]] * n\nfor i in range(n):\n  r, c = list(map(int,input().split()))\n  if tooth[r-1][0] > c or tooth[r-1][1] == True:\n    tooth[r-1] = [c,False]\nad = 0\nfor i in tooth:\n  ad += i[0]\nprint(min(ad,k))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint row, col;\nint total;\nint main() {\n  scanf(\"%d\", &col);\n  scanf(\"%d\", &row);\n  scanf(\"%d\", &total);\n  vector<int> vt(row + 10, -1);\n  for (int i = 0; i < col; ++i) {\n    int x, y;\n    scanf(\"%d\", &x);\n    scanf(\"%d\", &y);\n    vt[x] = (vt[x] == -1 ? y : min(vt[x], y));\n  }\n  int res = 0;\n  for (int i = 1; i <= row; ++i) {\n    res += (vt[i] == -1 ? 0 : vt[i]);\n  }\n  cout << min(total, res) << \"\\n\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class A {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int m = sc.nextInt();\n        int k = sc.nextInt();\n        int[] a = new int[m];\n        for (int i = 0; i < m; i++)\n            a[i] = 10000000;\n        for (int i = 0; i < n; i++) {\n            int t = sc.nextInt() - 1;\n            int p = sc.nextInt();\n            a[t] = Math.min(a[t], p);\n        }\n        long sum = 0;\n        for (int i = 0; i < m; i++)\n            sum += a[i];\n        System.out.println(Math.min(sum, k));\n    }\n}\n"
+  }
+]

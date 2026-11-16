@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import sys\nimport os\n\ndef solve(slimes):\n    if len(slimes) == 1:\n        return slimes[0]\n\n    havePos = False\n    haveNeg = False\n\n    for s in slimes:\n        if s > 0:\n            havePos = True\n        elif s < 0:\n            haveNeg = True\n\n    if havePos and haveNeg:\n        return sum(map(abs, slimes))\n    elif not havePos:\n        m = max(slimes)\n        return sum(list(map(abs, slimes))) + 2 * m\n    elif not haveNeg:\n        m = min(slimes)\n        return sum(list(map(abs, slimes))) - 2 * m\n    else:\n        return 0\n\ndef main():\n    n = int(input())\n    slimes = list(map(int, input().split()))\n    print(solve(slimes))\n\n\nif __name__ == '__main__':\n    main()"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nsigned main() {\n  long long n;\n  cin >> n;\n  vector<long long> val(n);\n  for (long long i = 0; i < n; i++) cin >> val[i];\n  sort(val.begin(), val.end());\n  if (n == 1) {\n    cout << val[0];\n    return 0;\n  }\n  long long ans = val[0];\n  for (long long i = 1; i < n - 1; i++)\n    if (val[i] >= 0) ans -= val[i];\n  ans = val.back() - ans;\n  for (long long i = 1; i < n - 1; i++)\n    if (val[i] < 0) ans -= val[i];\n  cout << ans << endl;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class Q4 {\n\n\tpublic static void main(String[] args) {\n\t\tScanner sc = new Scanner(System.in);\n\t\tint n = sc.nextInt();\n\t\tlong a[] = new long[n];\n\t\tint pos = 0 , neg = 0;\n\t\tStack<Long> stk = new Stack<Long>();\n\t\tlong sum = 0;\n\t\t\n\t\tfor(int i=0;i<n;i++) {\n\t\t\ta[i] = sc.nextLong();\n\t\t\tif(a[i] >= 0)\n\t\t\t\tpos++;\n\t\t\tif(a[i] < 0)\n\t\t\t\tneg++;\n\t\t\tsum += Math.abs(a[i]);\n\t\t}\n\t\tif(n == 1)\n\t\t\tSystem.out.println(a[0]);\n\t\telse if(pos !=0  &&  neg != 0)\n\t\t\tSystem.out.println(sum);\n\t\telse {\n\t\t\tlong min = Integer.MAX_VALUE;\n\t\t\tfor(int i=0;i<n;i++)\n\t\t\t\tmin = Math.min(min ,  Math.abs(a[i]));\n\t\t\t\n\t\t\tlong ans = sum - (long)(2*min);\n\t\t\tSystem.out.println(ans);\n\t\t}\n\t}\n}\n"
+  }
+]

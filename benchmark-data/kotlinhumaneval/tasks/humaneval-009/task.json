@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-009",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/9",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 4,
+  "public_test_count": 1,
+  "unexposed_test_count": 3,
+  "source_review_note": "Canonical starts rolling maximum at 0. Example [-5] should return [-5] by statement but returns [0]. Tests contain no negative-only prefix.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-009",
+  "public_dir": "tasks/humaneval-009/public",
+  "evaluator_dir": "tasks/humaneval-009/evaluator",
+  "metadata_file": "tasks/humaneval-009/task.json",
+  "evaluation_harness": "tasks/humaneval-009/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-009/evaluation.json"
+}

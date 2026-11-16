@@ -1,0 +1,12 @@
+{
+  "input": [
+    "5 4\nazaza\nzazaz\nazaz\n",
+    "6 5\naabbaa\nbaaaab\naaaaa\n",
+    "9 12\nabcabcabc\nxyzxyzxyz\nabcabcayzxyz\n"
+  ],
+  "output": [
+    "11",
+    "4",
+    "2"
+  ]
+}

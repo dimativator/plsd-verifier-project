@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-156",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/156",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 6,
+  "public_test_count": 1,
+  "unexposed_test_count": 5,
+  "source_review_note": "All three original bounds are 0..1000, so the total is <=2000 and subtraction is safe. Multi-element listOf is the remaining canonical API issue.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-156",
+  "public_dir": "tasks/humaneval-156/public",
+  "evaluator_dir": "tasks/humaneval-156/evaluator",
+  "metadata_file": "tasks/humaneval-156/task.json",
+  "evaluation_harness": "tasks/humaneval-156/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-156/evaluation.json"
+}

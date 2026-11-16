@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import sys\nfin = sys.stdin\n\na = list(map(int, fin.readline().split()))\n\nd = a[1] - a[0]\n\nif a[2] - a[1] == a[3] - a[2] == d:\n    print(a[3] + d)\nelse:\n    d = a[1] / a[0]\n    if a[2] / a[1] == a[3] / a[2] == d and d * a[3] == int(d * a[3]):\n        print(int(d * a[3]))\n    else:\n        print(42)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int a1[4];\n  for (int i = 0; i < 4; i++) cin >> a1[i];\n  bool a = 1, g = 1;\n  for (int i = 2; i < 4; i++) {\n    if (a1[i] - a1[i - 1] != a1[i - 1] - a1[i - 2]) a = 0;\n    if (a1[i] * 1.0 / a1[i - 1] != a1[i - 1] * 1.0 / a1[i - 2]) g = 0;\n  }\n  if (!a && !g)\n    cout << \"42\\n\";\n  else if (!a) {\n    if ((a1[3] * a1[2]) % a1[1])\n      cout << 42 << endl;\n    else\n      cout << a1[3] * a1[2] / a1[1] << endl;\n  } else\n    cout << a1[3] + a1[2] - a1[1] << endl;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class IQ {\n\n    public static void main(String[] args) {\n        int[] array = new int[4];\n        try {\n            Scanner in = new Scanner(System.in); // Import java.util.Scanner for\n                                                    // it\n            for (int j = 0; j < array.length; j++) {\n                int k = in.nextInt();\n                array[j] = k;\n            }\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n\n        int result = 42;\n        int a = array[3] - array[2];\n        float b = ((float) array[3]) / ((float) array[2]);\n        float bInt = (float) (array[3] / array[2]);\n        float b1 = ((float) array[1]) / ((float) array[0]);\n        float b2 = ((float) array[2]) / ((float) array[1]);\n        if ((array[2] - array[1]) == a && (array[1] - array[0]) == a) {\n            result = array[3] + a;\n        } else if (b == b1 && b == b2) {\n            float result1 = (int) ((float) array[3] * b);\n            float result2 = ((float) array[3] * b);\n            if ((result2 - result1) < 0.00001 && (result2 - result1) > -0.00001) {\n                result = (int) ((float) array[3] * b);\n            }\n        }\n        if (result == 0) {\n            result = 42;\n        }\n        System.out.println(result);\n\n    }\n\n}"
+  }
+]

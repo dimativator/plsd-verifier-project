@@ -1,0 +1,15 @@
+{
+  "task_id": "HumanEval_kotlin/34",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Return maximum element in the list.\n * >>> max_element([1, 2, 3])\n * 3\n * >>> max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n * 123\n *\n */\nfun maxElement(l: List<Int>): Int {\n",
+  "entry_point": "maxElement",
+  "test": "fun main() {\n    var arg00: List<Int> = mutableListOf(1, 2, 3)\n    var x0: Int = maxElement(arg00)\n    var v0: Int = 3\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: List<Int> = mutableListOf(5, 3, -5, 2, -3, 3, 9, 0, 124, 1, -10)\n    var x1: Int = maxElement(arg10)\n    var v1: Int = 124\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Return maximum element in the list.\n * >>> max_element([1, 2, 3])\n * 3\n * >>> max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n * 123\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun maxElement(l: List<Int>): Int {",
+    "    return l.max()",
+    "}",
+    "",
+    ""
+  ]
+}

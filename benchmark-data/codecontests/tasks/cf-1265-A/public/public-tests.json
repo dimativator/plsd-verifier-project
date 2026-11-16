@@ -1,0 +1,8 @@
+{
+  "input": [
+    "3\na???cb\na??bbc\na?b?c\n"
+  ],
+  "output": [
+    "ababcb\n-1\nacbac\n"
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a=input()\nb=input()\nA=[]\nal=len(a)\nbl=len(b)\nA.append(0)\ncount=0\nfor x in a:\n    if x=='1':\n        count+=1\n    A.append(count)\nevencount=0\nbcount=0\nfor x in b:\n    if x=='1':\n        bcount+=1\nfor i in range((al+1)-bl):\n    acount=A[i+bl]-A[i]\n    if (acount%2)==(bcount%2):\n        evencount+=1\nprint(evencount)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  string a, b;\n  cin >> a >> b;\n  int la = a.size(), lb = b.size();\n  int cnt = 0, s = 0, res = 0;\n  for (int i = 0; i < lb; ++i) {\n    if (a[i] != b[i]) cnt++;\n    if (i > 0 && a[i] != a[i - 1]) s++;\n  }\n  if (!(cnt & 1)) res++;\n  int l = 1;\n  for (int i = lb; i < la; ++i) {\n    if (a[i] != a[i - 1]) s++;\n    cnt += (s & 1);\n    if (!(cnt & 1)) res++;\n    if (a[l] != a[l - 1]) s--;\n    l++;\n  }\n  cout << res;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\nimport java.util.Vector;\nimport java.util.Arrays;\nimport java.util.LinkedList;\nimport java.util.ArrayList;\nimport java.util.Comparator;\n\n\npublic class C{\n\tpublic static void main(String[] args){\n\t\tScanner in = new Scanner(System.in);\n\t\tStringBuilder a = new StringBuilder().append(in.next());\n\t\tStringBuilder b = new StringBuilder().append(in.next());\n\t\tint sumb = 0;\n\t\tint bsize = b.length();\n\t\tint curSum = 0;\n\t\tfor(int i = 0;i<bsize;++i){\n\t\t\tif(b.charAt(i) == '1') sumb++;\n\t\t\tif(a.charAt(i) == '1') curSum++;\n\t\t}\n\t\tint res = ((sumb + curSum) % 2 == 0 ? 1: 0);\n\t\tfor(int i = bsize;i<a.length();++i){\n\t\t\tif(a.charAt(i-bsize) == '1') curSum--;\n\t\t\tif(a.charAt(i) == '1') curSum++;\n\t\t\tif((sumb + curSum) % 2 == 0) res++;\n\t\t}\n\t\tSystem.out.println(res);\n\t}\n} \n"
+  }
+]

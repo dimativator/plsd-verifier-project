@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "INF = 1000000\nerast = [1] * INF\nerast[1] = 0\n\nprimes = []\nfor i in range(2, INF):\n    if erast[i] == 1:\n        for j in range(i * 2, INF, i):\n            erast[j] = 0\n        primes.append(i)\n# print(primes)\nlastp = primes[-1]\nn, m = map(int, input().split())\nedges = set()\nprint(lastp, lastp)\nfor i in range(n - 2):\n    print(i + 1, i + 2, 1)\n    edges.add((i, i + 1))\n    edges.add((i + 1, i))\n\nprint(n - 1, n, lastp - n + 2)\nedges.add((n - 1, n))\nedges.add((n, n - 1))\n\nm -= n - 1\nfor i in range(0, n):\n    for j in range(0, n):\n        if i == j: continue\n        if m == 0: break\n        if not (i, j) in edges:\n            m -= 1\n            print(i + 1, j + 1, INF)\n            edges.add((i, j))\n            edges.add((j, i))\n\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint dx[8] = {0, 0, -1, 1, 1, 1, -1, -1};\nint dy[8] = {-1, 1, 0, 0, 1, -1, 1, -1};\nconst int SIZE = 450;\nint main() {\n  int N, M;\n  cin >> N >> M;\n  int E = 0;\n  if (N == 2)\n    cout << 103733951 << \" \" << 103733951 << endl;\n  else\n    cout << 2 << \" \" << 103733951 << endl;\n  for (int i = N; i >= 3; i--) {\n    cout << 1 << \" \" << i << \" \" << 2 << endl;\n    E++;\n  }\n  cout << 1 << \" \" << 2 << \" \" << 103733951 - E * 2 << endl;\n  E++;\n  for (int i = 2; i <= N; i++)\n    for (int j = i + 1; j <= N; j++) {\n      if (E == M) return 0;\n      cout << i << \" \" << j << \" \" << 999999999 << endl;\n      E++;\n    }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.PrintWriter;\nimport java.math.BigInteger;\nimport java.util.Scanner;\n\npublic class letsgooo {\n\n\tpublic static void main(String[] args) {\n\t\tScanner in = new Scanner(System.in);\n\t\tint n = in.nextInt();\n\t\tint m = in.nextInt();\n\t\tPrintWriter out = new PrintWriter(System.out);\n\t\tBigInteger next = BigInteger.valueOf(n - 1);\n\t\tlong newxt = next.nextProbablePrime().longValue();\n\t\tif (n == 2) {\n\t\t\tSystem.out.println(2 + \" \" + 2);\n\t\t\tSystem.out.println(\"1 2 2\");\n\t\t\treturn;\n\t\t}\n\n\t\tout.println(2 + \" \" + newxt);\n\t\tnewxt -= n - 1;\n\n\t\tout.println(1 + \" \" + 2 + \" \" + newxt);\n\t\tm--;\n\t\tfor (int i = 3; i <= n - 1; i++) {\n\t\t\tout.println(1 + \" \" + i + \" \" + 1);\n\t\t\tm--;\n\t\t}\n\t\tout.println(1 + \" \" + n + \" \" + 2);\n\t\tm--;\n\t\tfor (int i = 2; i <= n && m > 0; i++) {\n\t\t\tfor (int j = i + 1; j <= n && m > 0; j++) {\n\t\t\t\tout.println(i + \" \" + j + \" \" + 1000000000);\n\t\t\t\tm--;\n\t\t\t}\n\t\t}\n\t\tout.close();\n\t}\n\n}\n"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from collections import*\ninput()\narr = Counter(map(int,input().split()))\nbinpow = [2**i for i in range(31)]\ndeleted = 0\nfor item in list(arr.elements()):\n    flag = True\n    for bp in binpow:\n        if (arr.get(bp - item) != None):\n            if (bp - item == item):\n                if (arr.get(bp - item) > 1):\n                    flag = False\n                    break\n            else:\n                flag = False\n                break\n    if (flag):\n        deleted += 1\nprint(deleted)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nvector<long long> b;\nvoid solve() {\n  b.push_back(1);\n  b.push_back(2);\n  long long val = 4;\n  for (int i = 2; i < 33; i++) {\n    b.push_back(val);\n    val = val * 2;\n  }\n  return;\n}\nint main() {\n  int n;\n  cin >> n;\n  vector<int> a(n);\n  solve();\n  map<int, int> mp;\n  for (int i = 0; i < n; i++) {\n    cin >> a[i];\n    mp[a[i]]++;\n  }\n  int cnt = 0;\n  for (int i = 0; i < n; i++) {\n    int val = a[i];\n    int flag = 0;\n    for (int j = 1; j < 33; j++) {\n      if (val > b[j])\n        continue;\n      else {\n        int temp = b[j] - val;\n        if (val == temp && mp[temp] > 1) {\n          flag = 1;\n          break;\n        } else if (val != temp && mp[temp] > 0) {\n          flag = 1;\n          break;\n        }\n      }\n    }\n    if (flag)\n      continue;\n    else\n      cnt++;\n  }\n  cout << cnt << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.HashMap;\nimport java.util.Map;\nimport java.util.Scanner;\n\npublic class Main {\n\t\n\tprivate static int[] input = new int[130000];\n\t\n\tprivate static boolean check(int value , Map<Integer , Integer> map) {\n\t\t\n\t\tlong current = 1;\n\t\twhile (current <= (long) (1 << 30)) {\n\t\t\tif (current >= value) {\n\t\t\t\tint temp = (int) (current - value);\n\t\t\t\tif (map.containsKey(temp)) {\n\t\t\t\t\tif (temp == value) {\n\t\t\t\t\t\tif (map.get(value) >= 2) {\n\t\t\t\t\t\t\treturn true;\n\t\t\t\t\t\t}\n\t\t\t\t\t} else {\n\t\t\t\t\t\tif (map.containsKey(temp)) {\n\t\t\t\t\t\t\treturn true;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t\tcurrent *= 2;\n\t\t}\n\t\treturn false;\n\t\t\n\t}\n\t\n\tpublic static void main(String[] args) throws Exception {\n\t\t\n\t\tScanner scan = new Scanner(System.in);\n\n\t\tMap<Integer , Integer> map = new HashMap<>();\n\t\tint i , n = scan.nextInt() , ans = 0;\n\t\tfor (i = 0;i < n;i ++) {\n\t\t\tinput[i] = scan.nextInt();\n\t\t\tif (!map.containsKey(input[i])) {\n\t\t\t\tmap.put(input[i] , 1);\n\t\t\t} else {\n\t\t\t\tmap.put(input[i] , map.get(input[i]) + 1);\n\t\t\t}\t\t\t\n\t\t}\n\t\tfor (i = 0;i < n;i ++) {\n\t\t\tint current = input[i];\n\t\t\tif (!check(current , map)) {\n\t\t\t\tans ++;\n\t\t\t}\n\t\t}\n\t\tSystem.out.println(ans);\n\t\t\n\t}\n\t\n    \n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+  }
+]

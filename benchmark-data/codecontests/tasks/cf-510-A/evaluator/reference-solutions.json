@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,m=map(int,input().split())\ns=\".\"*(m-1)+\"#\"\n#print(s)\nfor i in range(n):\n    if i%2==0:print(\"#\"*m)\n    else:\n        print(s)\n        s=s[::-1]"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, m, i, j;\n  cin >> n >> m;\n  for (i = 0; i < n; i++) {\n    if (i % 2 == 0) {\n      for (j = 0; j < m; j++) {\n        cout << \"#\";\n      }\n      cout << endl;\n    } else {\n      if (i % 4 == 1) {\n        for (j = 0; j < m - 1; j++) {\n          cout << \".\";\n        }\n        cout << \"#\";\n        cout << endl;\n      } else {\n        cout << \"#\";\n        for (j = 1; j < m; j++) {\n          cout << \".\";\n        }\n        cout << endl;\n      }\n    }\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Test {\n    public static void main(String[] args) {\n        Scanner scan = new Scanner(System.in);\n        while (scan.hasNext()) {\n            int n = scan.nextInt();\n            int m = scan.nextInt();\n            char[][] res = new char[101][101];\n            for (int i = 0; i < n; ++i) {\n                if (i % 2 == 0) {\n                    for (int j = 0; j < m; ++j) {\n                        res[i][j] = '#';\n                    }\n                } else if (i % 4 == 1) {\n                    for (int j = 0; j < m; ++j) {\n                        res[i][j] = '.';\n                    }\n                    res[i][m - 1] = '#';\n                } else {\n                    for (int j = 0; j < m; ++j) {\n                        res[i][j] = '.';\n                    }\n                    res[i][0] = '#';\n                }\n            }\n            for (int i = 0; i < n; ++i) {\n                for (int j = 0; j < m; ++j) {\n                    System.out.print(res[i][j]);\n                }\n                System.out.println(\"\");\n            }\n        }\n    }\n}\n"
+  }
+]

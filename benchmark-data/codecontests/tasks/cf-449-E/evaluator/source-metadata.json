@@ -1,0 +1,36 @@
+{
+  "name": "449_E. Jzzhu and Squares",
+  "description": "Jzzhu has two integers, n and m. He calls an integer point (x, y) of a plane special if 0 ≤ x ≤ n and 0 ≤ y ≤ m. Jzzhu defines a unit square as a square with corners at points (x, y), (x + 1, y), (x + 1, y + 1), (x, y + 1), where x and y are some integers.\n\nLet's look at all the squares (their sides not necessarily parallel to the coordinate axes) with corners at the special points. For each such square Jzzhu paints a dot in every unit square that is fully inside it. After that some unit squares can contain several dots. Now Jzzhu wonders, how many dots he has painted on the plane. Find this number modulo 1000000007 (109 + 7).\n\nInput\n\nThe first line contains a single integer t (1 ≤ t ≤ 105) — the number of tests.\n\nEach of the next t lines contains the description of the test: two integers n and m (1 ≤ n, m ≤ 106) — the value of variables for the current test.\n\nOutput\n\nFor each test output the total number of dots modulo 1000000007 (109 + 7).\n\nExamples\n\nInput\n\n4\n1 3\n2 2\n2 5\n3 4\n\n\nOutput\n\n3\n8\n26\n58",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2900,
+  "cf_contest_id": 449,
+  "cf_index": "E",
+  "cf_tags": [
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 3,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00014-of-00039-dc3ebb07a3cba8e4.parquet",
+  "source_row": 48,
+  "task_id": "codecontests/cf-449-E",
+  "rating_band": "2400+",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/449/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

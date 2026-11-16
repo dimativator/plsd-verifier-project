@@ -1,0 +1,36 @@
+{
+  "name": "1176_F. Destroy it!",
+  "description": "You are playing a computer card game called Splay the Sire. Currently you are struggling to defeat the final boss of the game.\n\nThe boss battle consists of n turns. During each turn, you will get several cards. Each card has two parameters: its cost c_i and damage d_i. You may play some of your cards during each turn in some sequence (you choose the cards and the exact order they are played), as long as the total cost of the cards you play during the turn does not exceed 3. After playing some (possibly zero) cards, you end your turn, and all cards you didn't play are discarded. Note that you can use each card at most once.\n\nYour character has also found an artifact that boosts the damage of some of your actions: every 10-th card you play deals double damage.\n\nWhat is the maximum possible damage you can deal during n turns?\n\nInput\n\nThe first line contains one integer n (1 ≤ n ≤ 2 ⋅ 10^5) — the number of turns.\n\nThen n blocks of input follow, the i-th block representing the cards you get during the i-th turn.\n\nEach block begins with a line containing one integer k_i (1 ≤ k_i ≤ 2 ⋅ 10^5) — the number of cards you get during i-th turn. Then k_i lines follow, each containing two integers c_j and d_j (1 ≤ c_j ≤ 3, 1 ≤ d_j ≤ 10^9) — the parameters of the corresponding card.\n\nIt is guaranteed that ∑ _{i = 1}^{n} k_i ≤ 2 ⋅ 10^5.\n\nOutput\n\nPrint one integer — the maximum damage you may deal.\n\nExample\n\nInput\n\n\n5\n3\n1 6\n1 7\n1 5\n2\n1 4\n1 3\n3\n1 10\n3 5\n2 3\n3\n1 15\n2 4\n1 10\n1\n1 100\n\n\nOutput\n\n\n263\n\nNote\n\nIn the example test the best course of action is as follows:\n\nDuring the first turn, play all three cards in any order and deal 18 damage.\n\nDuring the second turn, play both cards and deal 7 damage.\n\nDuring the third turn, play the first and the third card and deal 13 damage.\n\nDuring the fourth turn, play the first and the third card and deal 25 damage.\n\nDuring the fifth turn, play the only card, which will deal double damage (200).",
+  "source": 2,
+  "difficulty": 12,
+  "cf_rating": 2100,
+  "cf_contest_id": 1176,
+  "cf_index": "F",
+  "cf_tags": [
+    "dp",
+    "implementation",
+    "sortings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00000-of-00039-e991a271dbfa9925.parquet",
+  "source_row": 117,
+  "task_id": "codecontests/cf-1176-F",
+  "rating_band": "2000-2399",
+  "source_difficulty": "F",
+  "url": "https://codeforces.com/problemset/problem/1176/F",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

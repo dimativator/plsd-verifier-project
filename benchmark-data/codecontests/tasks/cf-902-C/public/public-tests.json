@@ -1,0 +1,10 @@
+{
+  "input": [
+    "2\n1 1 1\n",
+    "2\n1 2 2\n"
+  ],
+  "output": [
+    "perfect",
+    "ambiguous\n0 1 1 3 3 \n0 1 1 2 3 "
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "input": [
+    "3\n2\n&lt;&gt;\n3\n&gt;&lt;&lt;\n1\n&gt;\n"
+  ],
+  "output": [
+    "0\n0\n0\n"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "task_id": "HumanEval_kotlin/49",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Return True if all numbers in the list l are below threshold t.\n * >>> below_threshold([1, 2, 4, 10], 100)\n * True\n * >>> below_threshold([1, 20, 4, 10], 5)\n * False\n *\n */\nfun belowThreshold(l: List<Int>, t: Int): Boolean {\n",
+  "entry_point": "belowThreshold",
+  "test": "fun main() {\n    var arg00: List<Int> = mutableListOf(1, 2, 4, 10)\n    var arg01: Int = 100\n    var x0: Boolean = belowThreshold(arg00, arg01)\n    var v0: Boolean = true\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: List<Int> = mutableListOf(1, 20, 4, 10)\n    var arg11: Int = 5\n    var x1: Boolean = belowThreshold(arg10, arg11)\n    var v1: Boolean = false\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: List<Int> = mutableListOf(1, 20, 4, 10)\n    var arg21: Int = 21\n    var x2: Boolean = belowThreshold(arg20, arg21)\n    var v2: Boolean = true\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30: List<Int> = mutableListOf(1, 20, 4, 10)\n    var arg31: Int = 22\n    var x3: Boolean = belowThreshold(arg30, arg31)\n    var v3: Boolean = true\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40: List<Int> = mutableListOf(1, 8, 4, 10)\n    var arg41: Int = 11\n    var x4: Boolean = belowThreshold(arg40, arg41)\n    var v4: Boolean = true\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50: List<Int> = mutableListOf(1, 8, 4, 10)\n    var arg51: Int = 10\n    var x5: Boolean = belowThreshold(arg50, arg51)\n    var v5: Boolean = false\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Return True if all numbers in the list l are below threshold t.\n * >>> below_threshold([1, 2, 4, 10], 100)\n * True\n * >>> below_threshold([1, 20, 4, 10], 5)\n * False\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun belowThreshold(l: List<Int>, t: Int): Boolean {",
+    "    return l.all { it < t }",
+    "}",
+    "",
+    ""
+  ]
+}

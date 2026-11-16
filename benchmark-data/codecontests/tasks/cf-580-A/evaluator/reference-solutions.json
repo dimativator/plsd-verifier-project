@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,a=int(input()),list(map(int,input().split()))\nmx=1\nc=1\nfor i in range(n-1):\n\tif(a[i+1]>=a[i]):\n\t\tc+=1\n\t\tif(c>mx):\n\t\t\tmx=c\n\telse:\n\t\tc=1\nprint(mx)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, i, f = 0;\n  cin >> n;\n  int a[n], b[n];\n  for (i = 0; i < n; i++) cin >> a[i];\n  int m = a[0], c = 1, k = 0;\n  for (i = 1; i < n; i++) {\n    f = 1;\n    if (m < a[i] || m == a[i]) {\n      c++;\n      m = a[i];\n    } else {\n      m = a[i];\n      c = 1;\n    }\n    b[k] = c;\n    k++;\n  }\n  if (f) {\n    int mx = b[0];\n    for (i = 1; i < k; i++) {\n      if (mx < b[i]) mx = b[i];\n    }\n    cout << mx << endl;\n  } else\n    cout << c << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": " import java.util.*;\n public class Main {\n    public static void main(String[] args)\n    {\n        Scanner s = new Scanner(System.in);\n        int n = s.nextInt();\n        if(n == 1)\n        {\n            System.out.println(\"1\");\n        }\n        else\n        {\n            int[] arr = new int[n];\n            for(int i = 0; i < n; i++)\n            {\n                arr[i] = s.nextInt();\n            }\n            ArrayList<Integer> seq = new ArrayList<Integer>();\n            int conseq = 1;\n            for(int i = 0; i < n - 1; i++)\n            {\n                if(arr[i] <= arr[i + 1])\n                {\n                    conseq++;\n                    if(i == n - 2)\n                        seq.add(conseq);\n                }\n                else if(arr[i] > arr[i + 1])\n                {\n\n                    seq.add(conseq);\n                    conseq = 1;\n                }\n            }\n            Collections.sort(seq);\n\n            System.out.println(seq.get(seq.size() - 1));\n        }\n    }\n}"
+  }
+]

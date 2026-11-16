@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "# 505A\n\n__author__ = 'artyom'\n\n# SOLUTION\n\ndef main():\n  s = list(read(0))\n  n = len(s)\n  m = n // 2\n  for i in range(n + 1):\n    p = s[:i] + [s[n - i - (i <= m)]] + s[i:n]\n    if p == p[::-1]:\n      return p\n  return 'NA'\n\n\n# HELPERS\n\n\ndef read(mode=2):\n  # 0: String\n  # 1: List of strings\n  # 2: List of integers\n  inputs = input().strip()\n  if mode == 0: return inputs\n  if mode == 1: return inputs.split()\n  if mode == 2: return int(inputs)\n  if mode == 3: return list(map(int, inputs.split()))\n\n\ndef write(s=\"\\n\"):\n  if s is None: s = ''\n  if isinstance(s, list): s = ''.join(map(str, s))\n  s = str(s)\n  print(s, end=\"\")\n\n\nwrite(main())"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  string s, a;\n  cin >> s;\n  for (int i = 0; i <= s.length(); i++) {\n    for (int b = 'a'; b <= 'z'; b++) {\n      a = s.substr(0, i) + ((char)b) + s.substr(i, s.size());\n      if (a == string(a.rbegin(), a.rend())) {\n        cout << a << endl;\n        return 0;\n      }\n    }\n  }\n  cout << \"NA\" << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\n\nimport java.util.Scanner;\n\npublic class hello64 {\n\t// String s;\n\tpublic static void main(String[] args) {\n\t\tScanner input = new Scanner(System.in);\n\t\tString s = input.next();\n\t\tboolean hasAn = false;\n\t\tfor (int j = 0; j <= s.length(); j++) {\n\t\t\tString newS = \"\";\n\t\t\tfor (int i = 0; i < 26; i++) {\n\t\t\t\t// System.out.println((char)(i+97));\n\t\t\t\tnewS = s.substring(0, j);\n\t\t\t\t// System.out.println(newS);\n\t\t\t\tnewS += (char) (i + 97);\n\t\t\t\tnewS += s.substring(j);\n\t\t\t\t// System.out.println(newS);\n\t\t\t\t// System.out.println(newS);\n\t\t\t\t// System.out.println(\"\");\n\t\t\t\t// System.out.println(isPalind(newS);\n\t\t\t\tif (isPalind(newS)) {\n\t\t\t\t\tSystem.out.println(newS);\n\t\t\t\t\thasAn = true;\n\t\t\t\t\tbreak;\n\t\t\t\t}\n\t\t\t}\n\t\t\tif(hasAn) break;\n\t\t}\n\t\tif (!hasAn) {\n\t\t\tSystem.out.println(\"NA\");\n\t\t}\n\n\t}\n\n\tpublic static boolean isPalind(String s) {\n\t\tint startIndex = 0;\n\t\tif (s.length() % 2 != 0) {\n\t\t\tstartIndex = s.length() / 2;\n\t\t\t// System.out.println(s);\n\t\t\t// int dis = 1;\n\t\t\tfor (int dis = 1; dis <= s.length() - s.length() / 2 - 1; dis++) {\n\t\t\t\tif (s.charAt(startIndex + dis) != s.charAt(startIndex - dis)) {\n\t\t\t\t\treturn false;\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn true;\n\t\t} else {\n\t\t\tfor (int dis = 0; dis <= s.length() / 2; dis++) {\n\t\t\t\tif (s.charAt(startIndex + dis) != s.charAt(s.length() - dis-1)) {\n\t\t\t\t\treturn false;\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn true;\n\t\t}\n\t\t// return false;\n\t}\n}\n"
+  }
+]

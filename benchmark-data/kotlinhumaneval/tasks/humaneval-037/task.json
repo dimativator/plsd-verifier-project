@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-037",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/37",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 10,
+  "public_test_count": 1,
+  "unexposed_test_count": 9,
+  "source_review_note": "Tests include n=10, result 433494437. Larger representable-domain policy is absent.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-037",
+  "public_dir": "tasks/humaneval-037/public",
+  "evaluator_dir": "tasks/humaneval-037/evaluator",
+  "metadata_file": "tasks/humaneval-037/task.json",
+  "evaluation_harness": "tasks/humaneval-037/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-037/evaluation.json"
+}

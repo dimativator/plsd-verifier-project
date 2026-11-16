@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-084",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/84",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 3,
+  "public_test_count": 1,
+  "unexposed_test_count": 2,
+  "source_review_note": "Statement orders columns descending within each row. Canonical forEachIndexed builds them ascending. Tests never contain two matches in one row.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-084",
+  "public_dir": "tasks/humaneval-084/public",
+  "evaluator_dir": "tasks/humaneval-084/evaluator",
+  "metadata_file": "tasks/humaneval-084/task.json",
+  "evaluation_harness": "tasks/humaneval-084/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-084/evaluation.json"
+}

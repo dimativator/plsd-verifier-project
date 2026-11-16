@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-123",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/123",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 13,
+  "public_test_count": 1,
+  "unexposed_test_count": 12,
+  "source_review_note": "Duplicate values are allowed twice. Reject a third occurrence. Do not use a strictly-increasing/no-duplicates specification.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-123",
+  "public_dir": "tasks/humaneval-123/public",
+  "evaluator_dir": "tasks/humaneval-123/evaluator",
+  "metadata_file": "tasks/humaneval-123/task.json",
+  "evaluation_harness": "tasks/humaneval-123/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-123/evaluation.json"
+}

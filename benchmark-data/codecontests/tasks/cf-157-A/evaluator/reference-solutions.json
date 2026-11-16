@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nr = lambda : list(map(int, input().split()))\narr = []\nfor i in range(n):\n    a = r()\n    arr.append(a)\n\n\nrow = [sum(i) for i in arr]\n\ncol = []\nfor i in range(n):\n    c = 0\n    for j in range(n): c+=arr[j][i]\n    col.append(c)\n\n\nans = 0\nfor i in range(n):\n    for j in range(n):\n        if row[i] < col[j]: ans+=1\n\nprint(ans)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint main() {\n  int A[31][31];\n  int n, i, j;\n  scanf(\"%d\", &n);\n  for (i = 0; i < n; i++)\n    for (j = 0; j < n; j++) scanf(\"%d\", &A[i][j]);\n  int result = 0;\n  for (i = 0; i < n; i++)\n    for (j = 0; j < n; j++) {\n      int column = 0;\n      int c = 0;\n      for (; c < n; c++) column += A[c][j];\n      int row = 0;\n      int r = 0;\n      for (; r < n; r++) row += A[i][r];\n      if (column > row) result++;\n    }\n  printf(\"%d\", result);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.Scanner;\n\n\npublic class cf1 {\n    \n    static boolean winning(int[][] mat, int i, int j){\n        int col = 0;\n        int row = 0;\n        \n        for(int k = 0; k < mat.length; k++){\n            row += mat[i][k];\n            col += mat[k][j];\n        }\n        \n        return col > row;\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        \n        int n = sc.nextInt();\n        \n        int[][] mat = new int[n][n];\n        \n        for(int i = 0; i < n; i++)\n            for (int j = 0; j < n; j++)\n                mat[i][j] = sc.nextInt();\n        \n        int res = 0;\n        \n        for(int i = 0; i < n; i++)\n            for (int j = 0; j < n; j++)\n                if(winning(mat, i, j)) res++;\n        \n        System.out.println(res);\n                \n        \n    }\n    \n}\n"
+  }
+]

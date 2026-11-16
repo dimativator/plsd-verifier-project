@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "q=int(input())\nw=int(input())\nk=0\nfor i in range(q):\n    e=list(map(int,input().split()))\n    if (w in e) or ((7-w) in e):\n        print('NO')\n        k=1\n        break\nif k==0:\n    print('YES')"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint n;\nint top;\nint side[105][2];\nvoid scan(void) {\n  cin >> n;\n  cin >> top;\n  for (int i = 0; i < n; i++) cin >> side[i][0] >> side[i][1];\n}\nbool possible(void) {\n  for (int i = 0; i < n; i++)\n    if ((top == side[i][0]) || (7 - top == side[i][0]) || (top == side[i][1]) ||\n        (7 - top == side[i][1]))\n      return false;\n  return true;\n}\nint main(void) {\n  scan();\n  cout << (possible() ? \"YES\" : \"NO\") << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\n\npublic class JavaApplication11 {\n    public static void main(String[] args) {\n Scanner in = new Scanner(System.in);\n    \n    int n = in.nextInt();\n    int x = in.nextInt();\n    int arr [] = {1,2,3,4,5,6};\n    int lastface1 = 0;\n    int lastface2 = 0;\n    int num1 =0 ;\n    int num2 =0 ;\n    int num3 = 0 ;\n    int num4 = 0 ;\n     String result =\"YES\";       \n    \n    for (int i = 0 ; i < n ; i++) //O( n )\n    {\n        lastface1 = 0;\n        lastface2 = 0;\n      num1 = in.nextInt();\n      num2 = in.nextInt();\n      num3 = 7 - num1 ;\n      num4 = 7 - num2 ;\n      \n      \n      for (int j = 0 ; j < arr.length;j++)\n      {\n          if(arr[j]!= num1 && arr[j]!= num2 && arr[j]!= num3 && arr[j]!= num4 )\n          {\n              if(lastface1 == 0)\n                  lastface1 = arr[j];\n              else\n                  lastface2 = arr[j];\n          }\n      }\n      \n      if( lastface1!= x && lastface2 != x)\n      {\n          result = \"NO\";\n      }\n      \n      \n    }\n    \n    \n      System.out.println(result);\n    \n       }\n    \n}\n"
+  }
+]

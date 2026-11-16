@@ -1,0 +1,36 @@
+{
+  "name": "808_F. Card Game",
+  "description": "Digital collectible card games have become very popular recently. So Vova decided to try one of these.\n\nVova has n cards in his collection. Each of these cards is characterised by its power pi, magic number ci and level li. Vova wants to build a deck with total power not less than k, but magic numbers may not allow him to do so — Vova can't place two cards in a deck if the sum of the magic numbers written on these cards is a prime number. Also Vova cannot use a card if its level is greater than the level of Vova's character.\n\nAt the moment Vova's character's level is 1. Help Vova to determine the minimum level he needs to reach in order to build a deck with the required total power.\n\nInput\n\nThe first line contains two integers n and k (1 ≤ n ≤ 100, 1 ≤ k ≤ 100000).\n\nThen n lines follow, each of these lines contains three numbers that represent the corresponding card: pi, ci and li (1 ≤ pi ≤ 1000, 1 ≤ ci ≤ 100000, 1 ≤ li ≤ n).\n\nOutput\n\nIf Vova won't be able to build a deck with required power, print  - 1. Otherwise print the minimum level Vova has to reach in order to build a deck.\n\nExamples\n\nInput\n\n5 8\n5 5 1\n1 5 4\n4 6 3\n1 12 4\n3 12 1\n\n\nOutput\n\n4\n\n\nInput\n\n3 7\n4 4 1\n5 8 2\n5 3 3\n\n\nOutput\n\n2",
+  "source": 2,
+  "difficulty": 12,
+  "cf_rating": 2400,
+  "cf_contest_id": 808,
+  "cf_index": "F",
+  "cf_tags": [
+    "binary search",
+    "flows",
+    "graphs"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00016-of-00039-bf38b0908b322307.parquet",
+  "source_row": 108,
+  "task_id": "codecontests/cf-808-F",
+  "rating_band": "2400+",
+  "source_difficulty": "F",
+  "url": "https://codeforces.com/problemset/problem/808/F",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "1512_A. Spy Detected!",
+  "description": "You are given an array a consisting of n (n ≥ 3) positive integers. It is known that in this array, all the numbers except one are the same (for example, in the array [4, 11, 4, 4] all numbers except one are equal to 4).\n\nPrint the index of the element that does not equal others. The numbers in the array are numbered from one.\n\nInput\n\nThe first line contains a single integer t (1 ≤ t ≤ 100). Then t test cases follow.\n\nThe first line of each test case contains a single integer n (3 ≤ n ≤ 100) — the length of the array a.\n\nThe second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 100).\n\nIt is guaranteed that all the numbers except one in the a array are the same.\n\nOutput\n\nFor each test case, output a single integer — the index of the element that is not equal to others.\n\nExample\n\nInput\n\n\n4\n4\n11 13 11 11\n5\n1 4 4 4 4\n10\n3 3 3 3 10 3 3 3 3 3\n3\n20 20 10\n\n\nOutput\n\n\n2\n1\n5\n3",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 800,
+  "cf_contest_id": 1512,
+  "cf_index": "A",
+  "cf_tags": [
+    "brute force",
+    "implementation"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00016-of-00039-bf38b0908b322307.parquet",
+  "source_row": 183,
+  "task_id": "codecontests/cf-1512-A",
+  "rating_band": "800-1199",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/1512/A",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

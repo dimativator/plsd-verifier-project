@@ -1,0 +1,35 @@
+{
+  "name": "1139_F. Dish Shopping",
+  "description": "There are m people living in a city. There are n dishes sold in the city. Each dish i has a price p_i, a standard s_i and a beauty b_i. Each person j has an income of inc_j and a preferred beauty pref_j. \n\nA person would never buy a dish whose standard is less than the person's income. Also, a person can't afford a dish with a price greater than the income of the person. In other words, a person j can buy a dish i only if p_i ≤ inc_j ≤ s_i.\n\nAlso, a person j can buy a dish i, only if |b_i-pref_j| ≤ (inc_j-p_i). In other words, if the price of the dish is less than the person's income by k, the person will only allow the absolute difference of at most k between the beauty of the dish and his/her preferred beauty. \n\nPrint the number of dishes that can be bought by each person in the city.\n\nInput\n\nThe first line contains two integers n and m (1 ≤ n ≤ 10^5, 1 ≤ m ≤ 10^5), the number of dishes available in the city and the number of people living in the city.\n\nThe second line contains n integers p_i (1 ≤ p_i ≤ 10^9), the price of each dish.\n\nThe third line contains n integers s_i (1 ≤ s_i ≤ 10^9), the standard of each dish.\n\nThe fourth line contains n integers b_i (1 ≤ b_i ≤ 10^9), the beauty of each dish.\n\nThe fifth line contains m integers inc_j (1 ≤ inc_j ≤ 10^9), the income of every person.\n\nThe sixth line contains m integers pref_j (1 ≤ pref_j ≤ 10^9), the preferred beauty of every person.\n\nIt is guaranteed that for all integers i from 1 to n, the following condition holds: p_i ≤ s_i.\n\nOutput\n\nPrint m integers, the number of dishes that can be bought by every person living in the city.\n\nExamples\n\nInput\n\n\n3 3\n2 1 3\n2 4 4\n2 1 1\n2 2 3\n1 2 4\n\n\nOutput\n\n\n1 2 0 \n\nInput\n\n\n4 3\n1 2 1 1\n3 3 1 3\n2 1 3 2\n1 1 3\n1 2 1\n\n\nOutput\n\n\n0 2 3 \n\nNote\n\nIn the first example, the first person can buy dish 2, the second person can buy dishes 1 and 2 and the third person can buy no dishes.\n\nIn the second example, the first person can buy no dishes, the second person can buy dishes 1 and 4, and the third person can buy dishes 1, 2 and 4.",
+  "source": 2,
+  "difficulty": 12,
+  "cf_rating": 2500,
+  "cf_contest_id": 1139,
+  "cf_index": "F",
+  "cf_tags": [
+    "data structures",
+    "divide and conquer"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00008-of-00039-7246e6b7423b404f.parquet",
+  "source_row": 90,
+  "task_id": "codecontests/cf-1139-F",
+  "rating_band": "2400+",
+  "source_difficulty": "F",
+  "url": "https://codeforces.com/problemset/problem/1139/F",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

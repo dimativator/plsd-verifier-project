@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "s=input()\n\ns=s.lower()\n\nss='hello'\ncnt=0\nfor i in range(len(s)):\n  if s[i]==ss[cnt]:\n    cnt+=1\n  if cnt==5:\n    break\n\nif cnt==5:\n  print(\"YES\")\nelse:\n  print(\"NO\")\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(0);\n  long long t, i, j, k, n, g, x, y, z, ans, y1, z1;\n  ans = 0;\n  string s;\n  cin >> s;\n  bool h = false, e = false, l = false, dl = false, o = false;\n  for (long long i = 0; i < s.length(); i++) {\n    if (s[i] == 'h') {\n      h = true;\n    } else if (s[i] == 'e' && h == true) {\n      e = true;\n    } else if (s[i] == 'l' && l == true) {\n      dl = true;\n    } else if (s[i] == 'l' && e == true) {\n      l = true;\n    } else if (s[i] == 'o' && dl == true) {\n      o = true;\n    }\n  }\n  if (h && e && l && dl && o) {\n    cout << \"YES\"\n         << \"\\n\";\n  } else {\n    cout << \"NO\"\n         << \"\\n\";\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class Main\n{\n\tpublic static void main(String[] args) {\n\t\tScanner scanner = new Scanner(System.in);\n\t\tString s = scanner.nextLine();\n\t\tString correct = \"hello\";\n\t\tint loc = 0;\n\t\tboolean isSuccess = false;\n\t\tCharacter c = new Character('a');\n\t\tCharacter cor = new Character('a');\n\t\t\n\t\tfor (int i = 0; i < s.length(); i++){\n\t\t    c = s.charAt(i);\n\t\t    cor = correct.charAt(loc);\n\t\t    if (c.equals(cor)){\n\t\t        ++loc;\n\t\t    }\n\t\t    \n\t\t    if (loc == 5){\n\t\t        isSuccess = true;\n\t\t        break;\n\t\t    }\n\t\t}\n\t\t\n\t\tif (isSuccess){\n\t\t    System.out.println(\"YES\");\n\t\t} else {\n\t\t    System.out.println(\"NO\");\n\t\t}\n    }\n}\n"
+  }
+]

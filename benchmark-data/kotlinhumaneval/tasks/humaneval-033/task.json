@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-033",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/33",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 1,
+  "public_test_count": 0,
+  "unexposed_test_count": 1,
+  "source_review_note": "Only one provided test case. Add empty, repeated, negative, already sorted and reverse-sorted cases independently.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-033",
+  "public_dir": "tasks/humaneval-033/public",
+  "evaluator_dir": "tasks/humaneval-033/evaluator",
+  "metadata_file": "tasks/humaneval-033/task.json",
+  "evaluation_harness": "tasks/humaneval-033/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-033/evaluation.json"
+}

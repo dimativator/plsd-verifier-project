@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "# -*- coding: utf-8 -*-\n\"\"\"\nCreated on Thu Feb 15 21:01:05 2018\n\n@author: DNARNAprotein\n\"\"\"\n\n\"\"\"\nCODEFORCES\nhttp://codeforces.com/contest/932/problem/A\n\"\"\"\n\ndef pikachu(a,c,n): #c is original string\n    prefixes=[a[0:i+1] for i in range(n+1)]\n    suffixes=[a[i:n+1] for i in range(n+1)]\n    maxi=0\n    for i in range(n//2):\n        for j in suffixes:\n            if prefixes[i]==j:\n                maxi=i+1\n    ans=c[maxi::][::-1]+c\n    l=len(ans)\n    return ((ans,l))\n    \na=input()\nc=a\nb=a[::-1]+'#'+a\na=a+'#'+a[::-1]\n\nn=len(c*2)\nx=pikachu(a,c,n)\nc=c[::-1]\ny=pikachu(b,c,n)\nif x[1]<y[1]:\n    print(x[0])\nelse:\n    print(y[0])"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  string s;\n  cin >> s;\n  cout << s;\n  reverse(s.begin(), s.end());\n  cout << s << '\\n';\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Palindromic_Supersequence {\n    public static void main(String[] args) {\n        Scanner input = new Scanner(System.in);\n        String s;\n        String s1;\n\n        boolean is;\n        int i,l,l1,j;\n        while (input.hasNext()){\n            is=false;\n            s1=\"\";\n            s = input.nextLine();\n            l=s.length();\n            l1=l;\n            l1--;\n            l/=2;\n            for(i=0;i<l;i++,l1--){\n                if(s.charAt(i)!=s.charAt(l1))\n                {\n                    is = true;\n                    break;\n                }\n            }\n            if(is==false)\n                System.out.println(s);\n            else {\n                l1=s.length();\n                l1--;\n                for(i=l1,j=0;i>=0;i--,j++){\n                    s1 += s.charAt(i);\n                }\n                System.out.println(s+s1);\n            }\n        }\n    }\n}\n"
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "name": "12_E. Start of the season",
+  "description": "Before the start of the football season in Berland a strange magic ritual is held. The most experienced magicians have to find a magic matrix of the size n × n (n is even number). Gods will never allow to start the championship without it. Matrix should contain integers from 0 to n - 1, main diagonal should contain only zeroes and matrix should be symmetric. Moreover, all numbers in each row should be different. Magicians are very tired of the thinking process, so they ask you to write a program to find such matrix.\n\nInput\n\nThe first line contains one integer n (2 ≤ n ≤ 1000), n is even.\n\nOutput\n\nOutput n lines with n numbers each — the required matrix. Separate numbers with spaces. If there are several solutions, output any.\n\nExamples\n\nInput\n\n2\n\n\nOutput\n\n0 1\n1 0\n\n\nInput\n\n4\n\n\nOutput\n\n0 1 3 2\n1 0 2 3\n3 2 0 1\n2 3 1 0",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2100,
+  "cf_contest_id": 12,
+  "cf_index": "E",
+  "cf_tags": [
+    "constructive algorithms"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00008-of-00039-7246e6b7423b404f.parquet",
+  "source_row": 98,
+  "task_id": "codecontests/cf-12-E",
+  "rating_band": "2000-2399",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/12/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

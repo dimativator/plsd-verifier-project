@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "t = int(input())\nfor i in range(t):\n    n = int(input())\n    a = input().split()\n    s_a = set(a)\n    print(f\"{len(s_a)}\\n\")\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\ntemplate <typename T>\ninline T abs(const T &a) {\n  return a < 0 ? -a : a;\n}\ntemplate <typename T>\ninline T min(const T &b, const T &a) {\n  return a < b ? a : b;\n}\ntemplate <typename T>\ninline T max(const T &a, const T &b) {\n  return a < b ? b : a;\n}\nint read() {\n  int x = 0;\n  bool f = 0;\n  char ch = getchar();\n  while (ch < '0' || ch > '9') {\n    f = (ch == '-');\n    ch = getchar();\n  }\n  while (ch <= '9' && ch >= '0') {\n    x = (x << 1) + (x << 3) + (ch - '0');\n    ch = getchar();\n  }\n  return f ? -x : x;\n}\nvoid write(int x) {\n  if (x < 0) {\n    x = abs(x);\n    putchar('-');\n  }\n  if (x < 10) {\n    putchar(x + 48);\n    return;\n  }\n  write(x / 10);\n  putchar(x % 10 + 48);\n}\nconst int Maxn = 1e5 + 11;\nint t, n, a[Maxn];\nint main() {\n  ios::sync_with_stdio(false);\n  cin >> t;\n  while (t--) {\n    int cnt = 1;\n    cin >> n;\n    for (int i = 0; i < n; i++) {\n      cin >> a[i];\n    }\n    sort(a, a + n);\n    for (int i = 1; i < n; ++i)\n      if (a[i] != a[i - 1]) cnt++;\n    cout << cnt << endl;\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.HashSet;\nimport java.util.Scanner;\n\npublic class Program {\n    public static void main(String[] args) {\n        Scanner input = new Scanner(System.in);\n        int t = input.nextInt();\n\n        for(int i=0; i<t; i++) {\n            HashSet<Integer> numbers = new HashSet<>();\n            int n = input.nextInt();\n            for(int j=0; j<n; j++)\n                numbers.add(input.nextInt());\n            System.out.println(numbers.size());\n        }\n    }\n}\n\n\n"
+  }
+]

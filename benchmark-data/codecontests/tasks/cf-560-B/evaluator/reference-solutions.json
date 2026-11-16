@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "check = lambda ax, ay, bx, by, cx, cy : bx + cx <= ax and max(by, cy) <= ay\ninp = lambda : map(int, input().split())\nx1, y1 = inp()\nx2, y2 = inp()\nx3, y3 = inp()\nif check(x1, y1, x2, y2, x3, y3) or check(y1, x1, x2, y2, x3, y3) or check(x1, y1, y2, x2, x3, y3) or check(y1, x1, y2, x2, x3, y3) or check(x1, y1, x2, y2, y3, x3) or check(y1, x1, x2, y2, y3, x3) or check(x1, y1, y2, x2, y3, x3) or check(y1, x1, y2, x2, y3, x3):\n    print(\"YES\")\nelse:\n    print(\"NO\")\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nbool fit(int a1, int b1, int a2, int b2, int a3, int b3) {\n  if ((a2 + a3 <= a1 && b2 <= b1 && b3 <= b1) ||\n      (a2 + b3 <= a1 && b2 <= b1 && a3 <= b1) ||\n      (b2 + a3 <= a1 && a2 <= b1 && b3 <= b1) ||\n      (b2 + b3 <= a1 && a2 <= b1 && a3 <= b1))\n    return true;\n  else\n    return false;\n}\nint main(int argc, char *argv[]) {\n  int a1, b1, a2, b2, a3, b3;\n  cin >> a1 >> b1 >> a2 >> b2 >> a3 >> b3;\n  if (fit(a1, b1, a2, b2, a3, b3) || fit(b1, a1, a2, b2, a3, b3))\n    cout << \"YES\" << endl;\n  else\n    cout << \"NO\" << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Code560B {\n\n\tpublic static void main(String[] args) {\n\t\tScanner scanner = new Scanner(System.in);\n\t\t\n\t\tint[] board = new int[2];\n\t\t\n\t\tboard[0] = scanner.nextInt();\n\t\tboard[1] = scanner.nextInt();\n\t\t\n\t\tint[][] painting = new int[2][2];\n\t\tint[] area = new int[2];\n\t\tint[] min = new int[2];\n\t\tint[] max = new int[2];\n\t\t\n\t\tfor(int i = 0; i < 2; i++) {\n\t\t\tpainting[i][0] = scanner.nextInt();\n\t\t\tpainting[i][1] = scanner.nextInt();\n\t\t\t\n\t\t\tarea[i] = painting[i][0] * painting[i][1];\n\t\t\tmin[i] = Math.min(painting[i][0], painting[i][1]);\n\t\t\tmax[i] = Math.max(painting[i][0], painting[i][1]);\n\t\t}\n\t\t\n\t\tint boardMax = Math.max(board[0], board[1]);\n\t\tint boardMin = Math.min(board[0], board[1]);\n\t\t\n\t\tboolean isPossible = true;\n\t\t\n\t\tif(max[0] > boardMin && max[0] + min[1] > boardMax && min[0] + min[1] > boardMin)\n\t\t\t\tisPossible = false;\n\t\telse if(max[1] > boardMin && max[1] + min[0] > boardMax && min[0] + min[1] > boardMin)\n\t\t\tisPossible = false;\n\t\t\n\t\tif(isPossible && board[0] * board[1] >= area[0] + area[1]) {\n\t\t\tif(min[0] + min[1] <= boardMax && Math.max(max[0], max[1]) <= boardMax) {\n\t\t\t\tSystem.out.println(\"YES\");\n\t\t\t} else\n\t\t\t\tSystem.out.println(\"NO\");\n\t\t} else\n\t\t\tSystem.out.println(\"NO\");\n\t\t\n\t\tscanner.close();\n\t}\n\n}\n"
+  }
+]

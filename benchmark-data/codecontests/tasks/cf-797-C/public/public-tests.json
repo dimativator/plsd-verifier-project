@@ -1,0 +1,10 @@
+{
+  "input": [
+    "cab\n",
+    "acdb\n"
+  ],
+  "output": [
+    "abc\n",
+    "abdc\n"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-105",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/105",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 8,
+  "public_test_count": 1,
+  "unexposed_test_count": 7,
+  "source_review_note": "Tests include negative signed-first-digit sums but omit Int.MIN_VALUE, where Math.abs returns negative.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-105",
+  "public_dir": "tasks/humaneval-105/public",
+  "evaluator_dir": "tasks/humaneval-105/evaluator",
+  "metadata_file": "tasks/humaneval-105/task.json",
+  "evaluation_harness": "tasks/humaneval-105/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-105/evaluation.json"
+}

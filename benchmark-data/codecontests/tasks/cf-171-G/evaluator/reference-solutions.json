@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "f = [0] * 22\nf[0], f[1], idx = [int(x) for x in input().split()]\nfor i in range (2, 22) : f[i] = f[i - 1] + f[i - 2]\nprint(f[idx])"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint a0, a1, n, ans, table[500];\nint getans(int);\nint main() {\n  scanf(\"%d%d%d\", &a0, &a1, &n);\n  printf(\"%d\\n\", getans(n));\n  return 0;\n}\nint getans(int an) {\n  if (an == 0) return a0;\n  if (an == 1) return a1;\n  return getans(an - 1) + getans(an - 2);\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\npublic class fibbing {\n\tpublic static void main(String[] args) {\n\t\tScanner sc = new Scanner(System.in);\n\t\tlong A = sc.nextLong();\n\t\tlong B = sc.nextLong();\n\t\tint place = sc.nextInt();\n\t\tlong[] array = new long[place+1];\n\t\tarray[0]=A;\n\t\tarray[1]=B;\n\t\tfor(int a=2;a<=place;a++){\n\t\t\tarray[a]=array[a-1]+array[a-2];\n\t\t}\n\t\tSystem.out.println(array[place]);\n\n\t}\n\n}\n"
+  }
+]

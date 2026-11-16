@@ -1,0 +1,35 @@
+{
+  "name": "241_C. Mirror Box",
+  "description": "Mirror Box is a name of a popular game in the Iranian National Amusement Park (INAP). There is a wooden box, 105 cm long and 100 cm high in this game. Some parts of the box's ceiling and floor are covered by mirrors. There are two negligibly small holes in the opposite sides of the box at heights hl and hr centimeters above the floor. The picture below shows what the box looks like.\n\n<image>\n\nIn the game, you will be given a laser gun to shoot once. The laser beam must enter from one hole and exit from the other one. Each mirror has a preset number vi, which shows the number of points players gain if their laser beam hits that mirror. Also — to make things even funnier — the beam must not hit any mirror more than once.\n\nGiven the information about the box, your task is to find the maximum score a player may gain. Please note that the reflection obeys the law \"the angle of incidence equals the angle of reflection\".\n\nInput\n\nThe first line of the input contains three space-separated integers hl, hr, n (0 < hl, hr < 100, 0 ≤ n ≤ 100) — the heights of the holes and the number of the mirrors.\n\nNext n lines contain the descriptions of the mirrors. The i-th line contains space-separated vi, ci, ai, bi; the integer vi (1 ≤ vi ≤ 1000) is the score for the i-th mirror; the character ci denotes i-th mirror's position — the mirror is on the ceiling if ci equals \"T\" and on the floor if ci equals \"F\"; integers ai and bi (0 ≤ ai < bi ≤ 105) represent the x-coordinates of the beginning and the end of the mirror.\n\nNo two mirrors will share a common point. Consider that the x coordinate increases in the direction from left to right, so the border with the hole at height hl has the x coordinate equal to 0 and the border with the hole at height hr has the x coordinate equal to 105.\n\nOutput\n\nThe only line of output should contain a single integer — the maximum possible score a player could gain.\n\nExamples\n\nInput\n\n50 50 7\n10 F 1 80000\n20 T 1 80000\n30 T 81000 82000\n40 T 83000 84000\n50 T 85000 86000\n60 T 87000 88000\n70 F 81000 89000\n\n\nOutput\n\n100\n\n\nInput\n\n80 72 9\n15 T 8210 15679\n10 F 11940 22399\n50 T 30600 44789\n50 F 32090 36579\n5 F 45520 48519\n120 F 49250 55229\n8 F 59700 80609\n35 T 61940 64939\n2 T 92540 97769\n\n\nOutput\n\n120\n\nNote\n\nThe second sample is depicted above. The red beam gets 10 + 50 + 5 + 35 + 8 + 2 = 110 points and the blue one gets 120.\n\nThe red beam on the picture given in the statement shows how the laser beam can go approximately, this is just illustration how the laser beam can gain score. So for the second sample there is no such beam that gain score 110.",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 2000,
+  "cf_contest_id": 241,
+  "cf_index": "C",
+  "cf_tags": [
+    "geometry",
+    "implementation"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00011-of-00039-5de236be5188959d.parquet",
+  "source_row": 24,
+  "task_id": "codecontests/cf-241-C",
+  "rating_band": "2000-2399",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/241/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

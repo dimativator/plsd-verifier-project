@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input());k=0\nif n==1:print(0);exit()\na=list(map(int,input().split()));b=[];c=[]\nfor i in range(n*n):b.append(0)\nfor i in range(n):\n    if b[a[i]]==0:b[a[i]]=a[i]\n    else:c.append(a[i])\nfor i in range(len(c)):\n    for j in range(c[i],len(b)):\n        if b[j]==0:k+=b[j-1]-c[i]+1;b[j]=j;break\nprint(k)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint main() {\n  int n, num, i, j, cost = 0, len, a[100000] = {0};\n  scanf(\"%d\", &n);\n  for (i = 0; i < n; ++i) {\n    scanf(\"%d\", &num);\n    a[num] += 1;\n  }\n  for (i = 1; i <= n; ++i) {\n    if (a[i] > 1) {\n      len = a[i] - 1;\n      for (j = i + 1; j < 100000 && len > 0; ++j)\n        if (a[j] == 0) {\n          cost += (j - i);\n          a[j] = 1;\n          --len;\n          --a[i];\n        }\n    }\n  }\n  printf(\"%d\", cost);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.*;\nimport java.lang.*;\nimport java.io.*;\n\n/* Name of the class has to be \"Main\" only if the class is public. */\npublic class Ideone\n{\nstatic\tclass pair{\n\t\tint ele;\n\t\tint index;\n\t\tpair(int ele,int index){\n\t\t\tthis.ele=ele;\n\t\t\tthis.index=index;\n\t\t}\n\t}\n\tpublic static void main (String[] args) throws java.lang.Exception\n\t{\n\t\t// your code goes here\n\t\t\n\t\tScanner in=new Scanner(System.in);\n\t\tint n=in.nextInt();\n\t\tint a[]=new int[n];\n\t\tfor(int i=0;i<n;i++){\n\t\t\ta[i]=in.nextInt();\n\t\t}\n\t\tArrays.sort(a);\n\t\tboolean visited[]=new boolean[n+1];\n\t\tvisited[a[0]]=true;\n\t\tpair b[]=new pair[n];\n\t\tfor(int i=0;i<n;i++){\n\t\t\tb[i]=new pair(0,0);\n\t\t}\n\t\tint k=0;\n\t\tfor(int i=1;i<n;i++){\n\t\t\tvisited[a[i]]=true;\n\t\t\tif(a[i]==a[i-1])\n\t\t\t{\n\t\t\t\t\n\t\t\t\t\n\t\t\t\tb[k].ele=a[i];\n\t\t\t\tb[k].index=i;\n\t\t\t\tk++;\n\t\t\t}\n\t\t\t\n\t\t\t\n\t\t}\n\t\tint c[]=new int[6001];\n\t\tint h=0;\n\t\tfor(int i=1;i<=n;i++){\n\t\t\t\n\t\t\tif(visited[i]==false){\n\t\t\t\tc[h]=i;\n\t\t\t\th++;\n\t\t\t}\n\t\t\t\n\t\t}\n\t\tfor(int i=n+1;i<=6000;i++){\n\t\t\tc[h]=i;\n\t\t\th++;\n\t\t}\n\t\tint j=0;\n\t\tint count=0;\n\t\tfor(int i=0;i<k;i++){\n\t\twhile(b[i].ele>=c[j]){\n              j+=1;\t\t\t\n\t\t\t}\n\t\t\t\tcount+=c[j]-b[i].ele;\n\t\t\tj+=1;\n\t\t\t\n\t\t\t\n\t\t}\n\t\tSystem.out.println(count);\n\t}\n}"
+  }
+]

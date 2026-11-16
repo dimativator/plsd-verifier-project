@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\ns = 'ROYGBIV'\ns1 = 'GBIV'\nprint(s, (n - 7) // 4 * s1, s1[:(n - 7) % 4], sep='')\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  ios::sync_with_stdio(0);\n  cin.tie(0);\n  int t;\n  cin >> t;\n  string s = \"ROYGBIV\";\n  int i = 0;\n  while (t--) {\n    cout << s[i++];\n    if (i == 7) i = 3;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class Main\n{\n    public static void main(String[] arqs)\n    {\n        Scanner scan = new Scanner(System.in);\n        String cols = \"ROYGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIV\";\n\n        int n = scan.nextInt();\n\n        System.out.println(cols.substring(0, n));\n    }\n}"
+  }
+]

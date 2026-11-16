@@ -1,0 +1,12 @@
+{
+  "input": [
+    "hi\nbob\n",
+    "abca\naccepted\n",
+    "abacaba\nabcdcba\n"
+  ],
+  "output": [
+    "-",
+    "ac",
+    "abcba"
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import math\n\nnm = input().split()\nn = int(nm[0])\nm = int(nm[1])\n\nlis = [ 0 for i in range(m+1)]\nfor _ in range(n) :\n    inp =  list(map(int, input().split()))\n\n    inp.pop(0)\n    for i in inp:\n        lis[i]=1\n        prev = i\nif sum(lis)==m:\n    print(\"YES\")\nelse:\n    print(\"NO\")"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nvoid solve() {\n  int n, k;\n  cin >> n >> k;\n  vector<int> mas(k, 0);\n  for (int i = 0; i < n; i++) {\n    int m;\n    cin >> m;\n    for (int i = 0; i < m; i++) {\n      int x;\n      cin >> x;\n      mas[x - 1]++;\n    }\n  }\n  for (int i = 0; i < k; i++) {\n    if (mas[i] == 0) {\n      cout << \"NO\";\n      return;\n    }\n  }\n  cout << \"YES\";\n}\nint main() {\n  ios::sync_with_stdio(false);\n  cin.tie(0);\n  cout.tie(0);\n  int tst = 1;\n  while (tst--) solve();\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class Za {\n\tpublic static void main(String[] args) {\n\t\tScanner sc = new Scanner(System.in);\n\t\tint n = sc.nextInt();\n\t\tint m = sc.nextInt();\n\t\tString x = \" \";\n\t\tfor (int i = 1; i <= m; i++)\n\t\t\tx += i + \" \";\n\t\tfor (int j = 1; j <= n; j++) {\n\t\t\tint k = sc.nextInt();\n\t\t\tfor (int l = 0; l < k; l++) {\n\t\t\t\tint p = sc.nextInt();\n\t\t\t\tif (x.contains(\" \" + p + \" \"))\n\t\t\t\t\tx = x.replaceAll(\" \" + p + \" \", \" \");\n\t\t\t}\n\t\t}\n\t\tboolean zaza = true;\n\t\tfor (int q = 0; q < x.length(); q++) {\n\t\t\tif (Character.isDigit(x.charAt(q))) {\n\t\t\t\tzaza = false;\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t\tif (zaza) System.out.print(\"YES\");\n\t\telse System.out.print(\"NO\");\n\t}\n}"
+  }
+]

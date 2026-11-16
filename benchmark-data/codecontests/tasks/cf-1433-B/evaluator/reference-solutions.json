@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import sys\ntry:\n    import os\n    f = open('input.txt', 'r')\n    sys.stdin = f\nexcept FileNotFoundError:\n    None\nfrom math import sqrt, ceil\ninput=lambda: sys.stdin.readline().strip()\n\no=int(input())\nfor _ in range(o):\n    n=int(input())\n    A=list(map(int,input().split()))\n    dou=-1 ;las=-1\n    for i in range(n):\n        if dou==-1 and A[i]==1:\n            dou=i\n        if A[i]==1:\n            las=i\n    l= A[dou:las+1]\n    print(l.count(0))\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nvoid f() {\n  int n;\n  cin >> n;\n  int a[n];\n  int l = -1, r = 0;\n  for (int i = 0; i < n; i++) {\n    cin >> a[i];\n    if (a[i] == 1 && l == -1) l = i;\n    if (a[i] == 1) r = i;\n  }\n  int count = 0;\n  int ans = 0;\n  for (int i = l; i <= r; i++) {\n    if (a[i] == 0)\n      count++;\n    else {\n      ans += count;\n      count = 0;\n    }\n  }\n  ans += count;\n  cout << ans << endl;\n}\nint main() {\n  int t;\n  cin >> t;\n  while (t--) {\n    f();\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\nimport java.math.*;\n\npublic class Main {\n\n\tprivate static int MAX = Integer.MAX_VALUE;\n\tprivate static int MIN = Integer.MIN_VALUE;\n\tprivate static int INF = Integer.MAX_VALUE;\n\n\tpublic static void main(String[] args) throws IOException {\n\n\t\tBufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n\n\t\tint T = Integer.parseInt(br.readLine());\n\n\t\twhile (T-- != 0) {\n\n\t\t\tint n = Integer.parseInt(br.readLine());\n\n\t\t\tString[] input = br.readLine().trim().split(\" \");\n\n\t\t\tint[] arr = new int[n];\n\t\t\tint index = 0;\n\n\t\t\tfor (String ele : input)\n\t\t\t\tarr[index++] = Integer.parseInt(ele);\n\n\t\t\tint res = findSum(arr, n);\n\n\t\t\tSystem.out.println(res);\n\n\t\t}\n\t}\n\tstatic int findSum(int[] arr, int n) {\n\n\t\tint count = 0;\n\n\t\tfor (int ele : arr) {\n\t\t\tif (ele == 1)\n\t\t\t\tcount++;\n\t\t}\n\n\t\tif (count == 0 || count == 1) return 0;\n\n\t\tint left, right;\n\n\t\tfor (left = 0; left < n; left++) {\n\t\t\tif (arr[left] == 1)\n\t\t\t\tbreak;\n\t\t}\n\n\t\tfor (right = n - 1; right >= 0; right--) {\n\t\t\tif (arr[right] == 1)\n\t\t\t\tbreak;\n\t\t}\n\n\t\tcount = 0;\n\n\t\tfor (int i = left + 1; i < right && i < n; i++)\n\t\t\tif (arr[i] == 0)\n\t\t\t\tcount++;\n\n\t\treturn count;\n\n\t}\n}"
+  }
+]

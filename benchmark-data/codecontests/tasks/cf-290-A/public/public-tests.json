@@ -1,0 +1,12 @@
+{
+  "input": [
+    "8\n",
+    "2\n",
+    "29\n"
+  ],
+  "output": [
+    "Van Buren\n",
+    "Adams\n",
+    "Harding\n"
+  ]
+}

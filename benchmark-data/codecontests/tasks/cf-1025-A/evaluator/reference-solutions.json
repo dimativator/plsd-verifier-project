@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from collections import Counter\nn = int(input())\nprint(\"Yes\" if n == 1 or max(Counter(input()).values()) >= 2 else \"No\")"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  cin >> n;\n  if (n == 1) {\n    cout << \"Yes\";\n    return 0;\n  }\n  string a;\n  cin >> a;\n  int b[125] = {0};\n  for (int i = 0; i < n; i++) {\n    b[a[i]]++;\n  }\n  for (int i = 97; i <= 122; i++) {\n    if (b[i] >= 2) {\n      cout << \"Yes\";\n      return 0;\n    }\n  }\n  cout << \"No\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "//problem: https://codeforces.com/problemset/problem/1025/A\n\nimport java.util.Scanner;\nimport java.util.Arrays;\n\npublic class Doggo{\n    public static void main(String[] args){\n        Scanner sObj = new Scanner(System.in);\n        int size = Integer.parseInt(sObj.nextLine());\n        if(size==1){\n            System.out.println(\"Yes\");\n            return;\n        }\n        int[] arr = new int[128];\n        for(char c: sObj.nextLine().toCharArray()){\n            arr[c]++;\n            if(arr[c] >= 2){\n                System.out.println(\"Yes\");\n                return;\n            }\n        }\n        System.out.println(\"No\");\n    }\n}"
+  }
+]

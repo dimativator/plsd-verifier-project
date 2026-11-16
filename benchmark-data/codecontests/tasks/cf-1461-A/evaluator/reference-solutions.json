@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "for u in range(int(input())):\n    n, k = map(int, input().split())\n    t = n-k\n    s = \"\"\n    for i in range(t):\n        if(i%3==0):\n            s += \"a\"\n            \n        if(i%3 == 1):\n            s += \"b\"\n        \n        if(i%3 == 2):\n            s += \"c\"\n            \n    if(t%3 == 0):\n        s += \"a\"*k\n        \n    if(t%3 == 1):\n        s += \"b\"*k\n        \n    if(t%3 == 2):\n        s += \"c\"*k\n        \n    print(s)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main()\n{\n     ios_base :: sync_with_stdio(false); cin.tie(NULL);\n     int t ; cin >> t ; while(t--)\n     {\n         int a , b ; cin >> a >> b ;\n   a-=b ;\n   while(b--) cout << 'a' ;\n   string d = \"cba\" ;\n   for(int i = 0 ; i < a ; i++)\n   {\n       cout << d[i % 3] ;\n   }\n   cout << endl ;\n     }\n\n}\n\n\n\n\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.Scanner;\n\npublic class StringGeneration {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int t = sc.nextInt();\n        for (int tc = 0; tc < t; tc++) {\n            int n = sc.nextInt();\n            int l = sc.nextInt();\n            int m = n / 3;\n            int r = n % 3;\n            String ans = \"\";\n            for (int i = 0; i < m; i++) {\n                ans += \"abc\";\n            }\n            if (r == 1)\n                ans += \"a\";\n            else if (r == 2)\n                ans += \"ab\";\n            System.out.println(ans);\n        }\n    }\n}"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "#import math\n\ndef gcd(a, b):\n   if b == 0:\n      return a\n   else:\n     return gcd(b, a % b)\n\np, q = map(int, input().split())\nn = int(input())\ndata = list(map(int, input().split()))\na = 1\nb = data[-1]\nfor i in range(2, n + 1):\n  a = b * data[n - i] + a\n  a, b = b, a\n\na, b = b, a\nnod = gcd(p, q)\np = p // nod\nq = q // nod\n\n\nif p == a and q == b:\n  print(\"YES\")\nelse:\n  print(\"NO\")"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int MM = 1200000;\nbool solve(long long int p, long long int q, vector<long long int> x) {\n  if (p <= 0 || q <= 0) {\n    return 0;\n  }\n  if (x.size() == 1) {\n    return (p / q == x.back() && p == x.back() * q);\n  }\n  long long int tp = x.back();\n  x.pop_back();\n  if (abs(p / q - tp) > 2) {\n    return 0;\n  }\n  return solve(q, p - q * tp, x);\n}\nint main() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  cout.tie(0);\n  long long int P, Q;\n  cin >> P >> Q;\n  int N;\n  cin >> N;\n  vector<long long int> A(N);\n  for (int i = 0; i < N; i++) {\n    cin >> A[N - i - 1];\n  }\n  if (solve(P, Q, A)) {\n    cout << \"YES\";\n  } else {\n    cout << \"NO\";\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedInputStream;\nimport java.math.BigInteger;\nimport java.util.Scanner;\n\npublic class Java {\n\tstatic BigInteger arr[];\n\n\n\tpublic static void main(String[] args) {\n\t\tScanner scanner = new Scanner(new BufferedInputStream(System.in));\n\t\tBigInteger a = scanner.nextBigInteger();\n\t\tBigInteger b = scanner.nextBigInteger();\n\t\tBigInteger gcd = a.gcd(b);\n\t\ta = a.divide(gcd);\n\t\tb = b.divide(gcd);\n\t\t\n\t\tint n = scanner.nextInt();\n\t\tarr = new BigInteger[n + 1];\n\t\tfor (int i = 0; i < n; i++) {\n\t\t\tarr[i] = scanner.nextBigInteger();\n\t\t}\n\t\tBigInteger x = arr[n - 1], y = BigInteger.ONE;\n\t\tfor (int i = n-2; i >= 0; i--) {\n\t\t\tBigInteger tmp = x.add(BigInteger.ZERO);\n\t\t\tx = y.add(BigInteger.ZERO);\n\t\t\ty = tmp.add(BigInteger.ZERO);\n\t\t\t\n\t\t\tBigInteger yy = y.add(BigInteger.valueOf(0));\n\t\t\tBigInteger xx = x.add(y.multiply(arr[i]));\n\t\t\tgcd = yy.gcd(xx);\n\t\t\txx = xx.divide(gcd);\n\t\t\tyy = yy.divide(gcd);\n\t\t\tx = xx.add(BigInteger.ZERO);\n\t\t\ty = yy.add(BigInteger.ZERO);\n\t\t}\n\t\tif(a.compareTo(x) == 0 && b.compareTo(y)==0)\n\t\t\tSystem.out.println(\"YES\");\n\t\telse\n\t\t\tSystem.out.println(\"NO\");\n\t\tscanner.close();\n\t}\n}\n"
+  }
+]

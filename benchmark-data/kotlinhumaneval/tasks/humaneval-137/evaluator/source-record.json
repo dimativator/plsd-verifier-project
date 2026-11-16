@@ -1,0 +1,15 @@
+{
+  "task_id": "HumanEval_kotlin/137",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Given a string text, replace all spaces in it with underscores, \n * and if a string has more than 2 consecutive spaces, \n * then replace all consecutive spaces with - \n * \n * fix_spaces(\"Example\") == \"Example\"\n * fix_spaces(\"Example 1\") == \"Example_1\"\n * fix_spaces(\" Example 2\") == \"_Example_2\"\n * fix_spaces(\" Example   3\") == \"_Example-3\"\n *\n */\nfun fixSpaces(text : String) : String {\n",
+  "entry_point": "fixSpaces",
+  "test": "fun main() {\n    var arg00 : String = \"Example\"\n    var x0 : String = fixSpaces(arg00);\n    var v0 : String = \"Example\";\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10 : String = \"Mudasir Hanif \"\n    var x1 : String = fixSpaces(arg10);\n    var v1 : String = \"Mudasir_Hanif_\";\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20 : String = \"Yellow Yellow  Dirty  Fellow\"\n    var x2 : String = fixSpaces(arg20);\n    var v2 : String = \"Yellow_Yellow__Dirty__Fellow\";\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30 : String = \"Exa   mple\"\n    var x3 : String = fixSpaces(arg30);\n    var v3 : String = \"Exa-mple\";\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40 : String = \"   Exa 1 2 2 mple\"\n    var x4 : String = fixSpaces(arg40);\n    var v4 : String = \"-Exa_1_2_2_mple\";\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Given a string text, replace all spaces in it with underscores, \n * and if a string has more than 2 consecutive spaces, \n * then replace all consecutive spaces with - \n * \n * fix_spaces(\"Example\") == \"Example\"\n * fix_spaces(\"Example 1\") == \"Example_1\"\n * fix_spaces(\" Example 2\") == \"_Example_2\"\n * fix_spaces(\" Example   3\") == \"_Example-3\"\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun fixSpaces(text : String) : String {",
+    "\treturn text.replace(Regex(\" {3,}\"), \"-\").replace(' ', '_')",
+    "}",
+    "",
+    ""
+  ]
+}

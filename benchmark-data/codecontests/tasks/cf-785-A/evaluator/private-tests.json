@@ -1,0 +1,20 @@
+{
+  "input": [
+    "28\nOctahedron\nDodecahedron\nOctahedron\nOctahedron\nDodecahedron\nIcosahedron\nIcosahedron\nDodecahedron\nDodecahedron\nDodecahedron\nCube\nDodecahedron\nCube\nTetrahedron\nCube\nCube\nTetrahedron\nDodecahedron\nDodecahedron\nDodecahedron\nIcosahedron\nIcosahedron\nDodecahedron\nIcosahedron\nDodecahedron\nDodecahedron\nIcosahedron\nIcosahedron\n",
+    "1\nDodecahedron\n",
+    "1\nIcosahedron\n",
+    "1\nTetrahedron\n",
+    "1\nOctahedron\n",
+    "1\nCube\n",
+    "25\nIcosahedron\nOctahedron\nTetrahedron\nDodecahedron\nCube\nIcosahedron\nOctahedron\nCube\nTetrahedron\nIcosahedron\nIcosahedron\nTetrahedron\nOctahedron\nDodecahedron\nIcosahedron\nOctahedron\nIcosahedron\nTetrahedron\nDodecahedron\nTetrahedron\nOctahedron\nCube\nCube\nDodecahedron\nTetrahedron\n"
+  ],
+  "output": [
+    "340\n",
+    "12\n",
+    "20\n",
+    "4\n",
+    "8\n",
+    "6\n",
+    "256\n"
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "Alphabet = \"abcdefghijklmnopqrstuvwxyz\"\nX = input()\nChecked = []\ni, Index = 0, 0\nwhile i < len(X):\n    if X[i] not in Checked and X[i] == Alphabet[Index]:\n        Checked.append(Alphabet[Index])\n        Index += 1\n    elif X[i] not in Checked and X[i] != Alphabet[Index]:\n        print(\"NO\")\n        exit()\n    i += 1\nprint(\"YES\")\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nbool letter[512] = {0};\nchar str[512];\nint main() {\n  gets(str);\n  char temp = 'a';\n  int i;\n  for (i = 0; str[i] != 0; i++) {\n    if (str[i] == temp)\n      temp++;\n    else if (str[i] > temp)\n      break;\n  }\n  if (str[i] == 0 && temp <= 'z' + 1)\n    puts(\"YES\");\n  else\n    puts(\"NO\");\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class CF\n{\n\tpublic static void main(String[] args)\n\t{\n        Scanner scan = new Scanner(System.in);\nchar[] r = scan.next().toCharArray();\nboolean good = true;\nchar curr = 'a';\nfor (int a = 0; a < r.length; a++)\n{\nif (curr == r[a])\ncurr++;\nelse if (curr < r[a])\ngood = false;\n}\n\t\tSystem.out.println(good ? \"YES\" : \"No\");\n\t}\n}"
+  }
+]

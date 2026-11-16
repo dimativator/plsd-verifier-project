@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "q = int(input())\nfor w in range(q):\n    n = int(input())\n    a = list(map(int, input().split()))\n    a.sort()\n    n *= 4\n    x = a[0] * a[n - 1]\n    ok = 1\n    for i in range(0, n // 2, 2):\n        if a[i] * a[n - i - 1] != x or a[i] != a[i + 1] or a[n - i - 1] != a[n - i - 2]:\n            ok = 0\n            break\n    if ok:\n        print('YES')\n    else:\n        print('NO')\n    "
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing LL = long long;\nusing ULL = unsigned long long;\nint main() {\n  using namespace std;\n  ULL queries = 0;\n  cin >> queries;\n  for (ULL loop = 0; loop < queries; ++loop) {\n    ULL rectangles = 0;\n    cin >> rectangles;\n    vector<ULL> sides;\n    for (ULL sideLoop = 0; sideLoop < 4 * rectangles; ++sideLoop) {\n      ULL side = 0;\n      cin >> side;\n      sides.push_back(side);\n    }\n    sort(sides.begin(), sides.end());\n    bool successful = true;\n    ULL equalArea = sides[0] * sides[sides.size() - 1];\n    for (ULL index = 0; index < sides.size() / 2; ++index) {\n      if (sides[index] * sides[sides.size() - index - 1] != equalArea) {\n        successful = false;\n        break;\n      }\n    }\n    for (ULL index = 0; index < sides.size() - 1; index += 2) {\n      if (sides[index] != sides[index + 1]) {\n        successful = false;\n        break;\n      }\n    }\n    cout << (successful ? \"YES\" : \"NO\") << endl;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class Main {\n\n    public static void main(String[] args) {\n        Scanner scan = new Scanner(System.in);\n\n        int q = scan.nextInt();\n        scan.nextLine();\n\n        for (int i = 0; i < q; i++) {\n            handleQ(scan);\n        }\n    }\n\n    private static void handleQ(Scanner scan) {\n        int n = scan.nextInt();\n        ArrayList<Integer> list = new ArrayList<>();\n\n        for (int i = 0; i < 4*n; i++) {\n            list.add(scan.nextInt());\n        }\n\n        list.sort(Integer::compareTo);\n\n        int iMin = 0;\n        int iMax = 4*n-1;\n        int area = -1;\n\n        while(iMin < iMax) {\n            if(list.get(iMin).equals(list.get(iMin+1)) && list.get(iMax).equals(list.get(iMax-1))) {\n                int areaI = list.get(iMin) * list.get(iMax);\n                if(area == -1 || area == areaI) {\n                    area = areaI;\n                } else {\n                    System.out.println(\"NO\");\n                    return;\n                }\n                iMin += 2;\n                iMax -= 2;\n            } else {\n                System.out.println(\"NO\");\n                return;\n            }\n        }\n\n        System.out.println(\"YES\");\n    }\n}"
+  }
+]

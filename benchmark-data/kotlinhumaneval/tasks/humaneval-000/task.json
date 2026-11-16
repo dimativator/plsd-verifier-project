@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-000",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/0",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 7,
+  "public_test_count": 1,
+  "unexposed_test_count": 6,
+  "source_review_note": "Description says closer than threshold but canonical uses <=; tests do not establish equality-boundary convention.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-000",
+  "public_dir": "tasks/humaneval-000/public",
+  "evaluator_dir": "tasks/humaneval-000/evaluator",
+  "metadata_file": "tasks/humaneval-000/task.json",
+  "evaluation_harness": "tasks/humaneval-000/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-000/evaluation.json"
+}

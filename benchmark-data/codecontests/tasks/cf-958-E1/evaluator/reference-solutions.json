@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "(R,B)=map(int,input().split())\nfor i in range(R+B):\n    x=input()\nif R==B:\n    print('Yes')\nelse:\n    print('No')"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, m;\n  while (~scanf(\"%d%d\", &n, &m)) {\n    for (int i = 1; i <= n; i++) {\n      int u, v;\n      cin >> u >> v;\n    }\n    for (int j = 1; j <= m; j++) {\n      int u, v;\n      cin >> u >> v;\n    }\n    if (n == m)\n      puts(\"Yes\");\n    else\n      puts(\"No\");\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.lang.*;\nimport java.io.*;\n\n// Created by @thesupremeone on 30/06/21\npublic class GuardDuty {\n\n    int r,b;\n\n    void solve() throws IOException {\n        r = getInt();\n        b = getInt();\n        if(r!=b){\n            println(\"No\");\n            return;\n        }\n        println(\"Yes\");\n    }\n\n    public static void main(String[] args) throws Exception {\n        if (isOnlineJudge()) {\n            in = new BufferedReader(new InputStreamReader(System.in));\n            out = new BufferedWriter(new OutputStreamWriter(System.out));\n            new GuardDuty().solve();\n            out.flush();\n        } else {\n            localJudge = new Thread();\n            in = new BufferedReader(new FileReader(\"input.txt\"));\n            out = new BufferedWriter(new FileWriter(\"output.txt\"));\n            localJudge.start();\n            new GuardDuty().solve();\n            out.flush();\n            localJudge.suspend();\n        }\n    }\n    static boolean isOnlineJudge(){\n        try {\n            return System.getProperty(\"ONLINE_JUDGE\")!=null\n                    || System.getProperty(\"LOCAL\")==null;\n        }catch (Exception e){\n            return true;\n        }\n    }\n    // Fast Input & Output\n    static Thread localJudge = null;\n    static BufferedReader in;\n    static StringTokenizer st;\n    static BufferedWriter out;\n    static String getLine() throws IOException{\n        return in.readLine();\n    }\n    static String getToken() throws IOException{\n        if(st==null || !st.hasMoreTokens())\n            st = new StringTokenizer(getLine());\n        return st.nextToken();\n    }\n    static int getInt() throws IOException {\n        return Integer.parseInt(getToken());\n    }\n    static long getLong() throws IOException {\n        return Long.parseLong(getToken());\n    }\n    static void print(Object s) throws IOException{\n        out.write(String.valueOf(s));\n    }\n    static void println(Object s) throws IOException{\n        out.write(String.valueOf(s));\n        out.newLine();\n    }\n}"
+  }
+]

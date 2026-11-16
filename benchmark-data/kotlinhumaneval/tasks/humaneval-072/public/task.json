@@ -1,0 +1,9 @@
+{
+  "id": "humaneval-072",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "entry_point": "isMultiplyPrime",
+  "solution_file": "Solution.kt",
+  "visible_tests": "PublicTests.kt",
+  "visible_examples": "prompt.txt"
+}

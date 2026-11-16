@@ -1,0 +1,10 @@
+{
+  "input": [
+    "5 1\na := 1\nbb := 0\ncx := ? OR a\nd := ? XOR ?\ne := d AND bb\n",
+    "3 3\na := 101\nb := 011\nc := ? XOR b\n"
+  ],
+  "output": [
+    "0\n0\n",
+    "011\n100\n"
+  ]
+}

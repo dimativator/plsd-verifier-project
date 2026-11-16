@@ -1,0 +1,34 @@
+{
+  "name": "934_C. A Twisty Movement",
+  "description": "A dragon symbolizes wisdom, power and wealth. On Lunar New Year's Day, people model a dragon with bamboo strips and clothes, raise them with rods, and hold the rods high and low to resemble a flying dragon.\n\nA performer holding the rod low is represented by a 1, while one holding it high is represented by a 2. Thus, the line of performers can be represented by a sequence a1, a2, ..., an.\n\nLittle Tommy is among them. He would like to choose an interval [l, r] (1 ≤ l ≤ r ≤ n), then reverse al, al + 1, ..., ar so that the length of the longest non-decreasing subsequence of the new sequence is maximum.\n\nA non-decreasing subsequence is a sequence of indices p1, p2, ..., pk, such that p1 < p2 < ... < pk and ap1 ≤ ap2 ≤ ... ≤ apk. The length of the subsequence is k.\n\nInput\n\nThe first line contains an integer n (1 ≤ n ≤ 2000), denoting the length of the original sequence.\n\nThe second line contains n space-separated integers, describing the original sequence a1, a2, ..., an (1 ≤ ai ≤ 2, i = 1, 2, ..., n).\n\nOutput\n\nPrint a single integer, which means the maximum possible length of the longest non-decreasing subsequence of the new sequence.\n\nExamples\n\nInput\n\n4\n1 2 1 2\n\n\nOutput\n\n4\n\n\nInput\n\n10\n1 1 2 2 2 1 1 2 2 1\n\n\nOutput\n\n9\n\nNote\n\nIn the first example, after reversing [2, 3], the array will become [1, 1, 2, 2], where the length of the longest non-decreasing subsequence is 4.\n\nIn the second example, after reversing [3, 7], the array will become [1, 1, 1, 1, 2, 2, 2, 2, 2, 1], where the length of the longest non-decreasing subsequence is 9.",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 1800,
+  "cf_contest_id": 934,
+  "cf_index": "C",
+  "cf_tags": [
+    "dp"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00016-of-00039-bf38b0908b322307.parquet",
+  "source_row": 9,
+  "task_id": "codecontests/cf-934-C",
+  "rating_band": "1600-1999",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/934/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

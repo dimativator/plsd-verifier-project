@@ -1,0 +1,34 @@
+{
+  "name": "656_D. Rosetta Problem",
+  "description": "      \n    ++++++++[>+>++>+++>++++>+++++>++++++>+++++++>++++++++>+++++++++>++++++++++>+\n    ++++++++++>++++++++++++>+++++++++++++>++++++++++++++>+++++++++++++++>+++++++\n    +++++++++<<<<<<<<<<<<<<<<-]>>>>>>>>>>.<<<<<<<<<<>>>>>>>>>>>>>>++.--<<<<<<<<<\n    <<<<<>>>>>>>>>>>>>+.-<<<<<<<<<<<<<>>>>>>>>>>>>>>--.++<<<<<<<<<<<<<<>>>>>>>>>\n    >>>>>>----.++++<<<<<<<<<<<<<<<>>>>.<<<<>>>>>>>>>>>>>>--.++<<<<<<<<<<<<<<>>>>\n    >>>>>>>>>>>---.+++<<<<<<<<<<<<<<<>>>>>>>>>>>>>>---.+++<<<<<<<<<<<<<<>>>>>>>>\n    >>>>++.--<<<<<<<<<<<<>>>>>>>>>>>>>---.+++<<<<<<<<<<<<<>>>>>>>>>>>>>>++.--<<<\n    <<<<<<<<<<<.\n    \n    DCBA:^!~}|{zyxwvutsrqponmlkjihgfedcba`_^]\\[ZYXWVUTSRQPONMLKJIHdcbD`Y^]\\UZYRv\n    9876543210/.-,+*)('&%$#\"!~}|{zyxwvutsrqponm+*)('&%$#cya`=^]\\[ZYXWVUTSRQPONML\n    KJfe^cba`_X]VzTYRv98TSRQ3ONMLEi,+*)('&%$#\"!~}|{zyxwvutsrqponmlkjihgfedcba`_^\n    ]\\[ZYXWVUTSonPlkjchg`ed]#DCBA@?>=<;:9876543OHGLKDIHGFE>b%$#\"!~}|{zyxwvutsrqp\n    onmlkjihgfedcba`_^]\\[ZYXWVUTSRQPONMibafedcba`_X|?>Z<XWVUTSRKo\\\n      \n    \n\n<image>\n    \n    \n      \n    v34*8+6+,78+9*3+,93+9*5+,28+9*1+,55+9*4+,23*6*2*,91,@,+7*9*25,*48,+3*9+38,+<\n    >62*9*2+,34*9*3+,66+9*8+,52*9*7+,75+9*8+,92+9*6+,48+9*3+,43*9*2+,84*,26*9*3^  \n    \n\nInput\n\nThe input contains a single integer a (0 ≤ a ≤ 1 000 000).\n\nOutput\n\nOutput a single integer.\n\nExample\n\nInput\n\n129\n\n\nOutput\n\n1",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 2100,
+  "cf_contest_id": 656,
+  "cf_index": "D",
+  "cf_tags": [
+    "*special"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 64000000,
+  "source_file": "data/train-00012-of-00039-da9476a39a1bdbb7.parquet",
+  "source_row": 117,
+  "task_id": "codecontests/cf-656-D",
+  "rating_band": "2000-2399",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/656/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

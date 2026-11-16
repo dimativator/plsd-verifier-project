@@ -1,0 +1,35 @@
+{
+  "name": "988_B. Substrings Sort",
+  "description": "You are given n strings. Each string consists of lowercase English letters. Rearrange (reorder) the given strings in such a way that for every string, all strings that are placed before it are its substrings.\n\nString a is a substring of string b if it is possible to choose several consecutive letters in b in such a way that they form a. For example, string \"for\" is contained as a substring in strings \"codeforces\", \"for\" and \"therefore\", but is not contained as a substring in strings \"four\", \"fofo\" and \"rof\".\n\nInput\n\nThe first line contains an integer n (1 ≤ n ≤ 100) — the number of strings.\n\nThe next n lines contain the given strings. The number of letters in each string is from 1 to 100, inclusive. Each string consists of lowercase English letters.\n\nSome strings might be equal.\n\nOutput\n\nIf it is impossible to reorder n given strings in required order, print \"NO\" (without quotes).\n\nOtherwise print \"YES\" (without quotes) and n given strings in required order.\n\nExamples\n\nInput\n\n5\na\naba\nabacaba\nba\naba\n\n\nOutput\n\nYES\na\nba\naba\naba\nabacaba\n\n\nInput\n\n5\na\nabacaba\nba\naba\nabab\n\n\nOutput\n\nNO\n\n\nInput\n\n3\nqwerty\nqwerty\nqwerty\n\n\nOutput\n\nYES\nqwerty\nqwerty\nqwerty\n\nNote\n\nIn the second example you cannot reorder the strings because the string \"abab\" is not a substring of the string \"abacaba\".",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 1100,
+  "cf_contest_id": 988,
+  "cf_index": "B",
+  "cf_tags": [
+    "sortings",
+    "strings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00016-of-00039-bf38b0908b322307.parquet",
+  "source_row": 11,
+  "task_id": "codecontests/cf-988-B",
+  "rating_band": "800-1199",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/988/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

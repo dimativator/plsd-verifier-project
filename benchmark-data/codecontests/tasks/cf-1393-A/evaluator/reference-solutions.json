@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "for i in range(int(input())):\n    n = int(input())\n    res = int(n/2)+1\n    print(res)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nlong long binpow(long long a, long long b) {\n  if (b == 0) return 1;\n  long long res = binpow(a, b / 2);\n  res *= res;\n  if (b % 2) return res * a;\n  return res;\n}\nlong long gcd(long long a, long long b) {\n  if (b == 0) return a;\n  return gcd(b, a % b);\n}\nstring to_upper(string a) {\n  for (int i = 0; i < (int)a.size(); ++i)\n    if (a[i] >= 'a' && a[i] <= 'z') a[i] -= 'a' - 'A';\n  return a;\n}\nstring to_lower(string a) {\n  for (int i = 0; i < (int)a.size(); ++i)\n    if (a[i] >= 'A' && a[i] <= 'Z') a[i] += 'a' - 'A';\n  return a;\n}\nvoid solve() {\n  int n;\n  cin >> n;\n  cout << n / 2 + 1 << \"\\n\";\n}\nint main() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  int n;\n  cin >> n;\n  while (n--) solve();\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\n\npublic class RainbowDashFlutterflyAndChessColoring {\n    static class InputReader {\n        BufferedReader reader;\n        StringTokenizer tokenizer;\n\n        public InputReader(InputStream stream) {\n            reader = new BufferedReader(new InputStreamReader(stream), 32768);\n            tokenizer = null;\n        }\n\n        String next() { // reads in the next string\n            while (tokenizer == null || !tokenizer.hasMoreTokens()) {\n                try {\n                    tokenizer = new StringTokenizer(reader.readLine());\n                } catch (IOException e) {\n                    throw new RuntimeException(e);\n                }\n            }\n            return tokenizer.nextToken();\n        }\n\n        public int nextInt() { // reads in the next int\n            return Integer.parseInt(next());\n        }\n\n        public long nextLong() { // reads in the next long\n            return Long.parseLong(next());\n        }\n\n        public double nextDouble() { // reads in the next double\n            return Double.parseDouble(next());\n        }\n    }\n\n    static InputReader r = new InputReader(System.in);\n    static PrintWriter pw = new PrintWriter(System.out);\n\n    public static void main(String[] args) {\n        int n = r.nextInt();\n        for (int i = 0; i < n; i++) {\n            int s = r.nextInt();\n            pw.println(s / 2 + 1);\n        }\n        pw.close(); // flushes the output once printing is done\n    }\n}\n"
+  }
+]

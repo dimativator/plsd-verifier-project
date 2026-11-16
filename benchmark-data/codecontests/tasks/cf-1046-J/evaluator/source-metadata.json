@@ -1,0 +1,34 @@
+{
+  "name": "1046_J. Self-exploration",
+  "description": "Being bored of exploring the Moon over and over again Wall-B decided to explore something he is made of — binary numbers. He took a binary number and decided to count how many times different substrings of length two appeared. He stored those values in c_{00}, c_{01}, c_{10} and c_{11}, representing how many times substrings 00, 01, 10 and 11 appear in the number respectively. For example:\n\n10111100 → c_{00} = 1, \\ c_{01} = 1,\\ c_{10} = 2,\\ c_{11} = 3\n\n10000 → c_{00} = 3,\\ c_{01} = 0,\\ c_{10} = 1,\\ c_{11} = 0\n\n10101001 → c_{00} = 1,\\ c_{01} = 3,\\ c_{10} = 3,\\ c_{11} = 0\n\n1 → c_{00} = 0,\\ c_{01} = 0,\\ c_{10} = 0,\\ c_{11} = 0\n\nWall-B noticed that there can be multiple binary numbers satisfying the same c_{00}, c_{01}, c_{10} and c_{11} constraints. Because of that he wanted to count how many binary numbers satisfy the constraints c_{xy} given the interval [A, B]. Unfortunately, his processing power wasn't strong enough to handle large intervals he was curious about. Can you help him? Since this number can be large print it modulo 10^9 + 7.\n\nInput\n\nFirst two lines contain two positive binary numbers A and B (1 ≤ A ≤ B < 2^{100 000}), representing the start and the end of the interval respectively. Binary numbers A and B have no leading zeroes.\n\nNext four lines contain decimal numbers c_{00}, c_{01}, c_{10} and c_{11} (0 ≤ c_{00}, c_{01}, c_{10}, c_{11} ≤ 100 000) representing the count of two-digit substrings 00, 01, 10 and 11 respectively. \n\nOutput\n\nOutput one integer number representing how many binary numbers in the interval [A, B] satisfy the constraints mod 10^9 + 7.\n\nExamples\n\nInput\n\n10\n1001\n0\n0\n1\n1\n\n\nOutput\n\n1\n\n\nInput\n\n10\n10001\n1\n2\n3\n4\n\n\nOutput\n\n0\n\nNote\n\nExample 1: The binary numbers in the interval [10,1001] are 10,11,100,101,110,111,1000,1001. Only number 110 satisfies the constraints: c_{00} = 0, c_{01} = 0, c_{10} = 1, c_{11} = 1.\n\nExample 2: No number in the interval satisfies the constraints",
+  "source": 2,
+  "difficulty": 16,
+  "cf_rating": 2400,
+  "cf_contest_id": 1046,
+  "cf_index": "J",
+  "cf_tags": [
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00007-of-00039-05785de21e8b8429.parquet",
+  "source_row": 220,
+  "task_id": "codecontests/cf-1046-J",
+  "rating_band": "2400+",
+  "source_difficulty": "J",
+  "url": "https://codeforces.com/problemset/problem/1046/J",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

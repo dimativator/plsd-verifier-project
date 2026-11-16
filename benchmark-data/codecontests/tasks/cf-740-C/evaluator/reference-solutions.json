@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,m=map(int,input().split())\nmin_val=9999999\nfor _ in range(m):\n    y,x=map(int,input().split())\n    if min_val>x-y:\n        x1=x\n        y1=y\n        min_val=x-y\nprint(min_val+1)\nL=[0]*n\ntp=0\nlistNum=[]\nfor i in range(n):\n    listNum.append(tp)\n    tp+=1\n    if tp>min_val:\n        tp=0\nfor i in listNum[:-1]:\n    print(i,end=' ')\nprint(listNum[-1])"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nclass TaskC {\n public:\n  vector<pair<long long, long long> > v;\n  vector<long long> ans;\n  long long n, m;\n  void rec(long long i, long long mx) {\n    long long tmx = mx;\n    long long ed = 0;\n    long long j = v[i].first;\n    while (j <= v[i].second && ans[j]) {\n      j++;\n      ed = max(ed, ans[j]);\n    }\n    j++;\n    for (j; tmx != ed && j <= v[i].second; j++) {\n      ans[j] = tmx--;\n    }\n    if (i != n - 1) rec(i + 1, mx);\n  }\n  void solve(std::istream& cin, std::ostream& cout) {\n    cin >> n >> m;\n    v.resize(m);\n    ans.resize(n, false);\n    long long mex = 1e18;\n    for (long long i = 0; i < m; i++) {\n      cin >> v[i].first >> v[i].second;\n      v[i].first--, v[i].second--;\n      mex = min(mex, v[i].second - v[i].first);\n    }\n    sort(v.begin(), v.end());\n    cout << mex + 1 << endl;\n    long long tmex = mex;\n    for (long long i = 0; i < n; i++) {\n      cout << tmex << ' ';\n      tmex--;\n      if (tmex < 0) tmex = mex;\n    }\n  }\n};\nint main() {\n  TaskC solver;\n  std::istream& in(std::cin);\n  std::ostream& out(std::cout);\n  solver.solve(in, out);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\npublic class Solution {\n\tstatic Scanner sc=new Scanner(System.in);\n\tstatic PrintWriter out=new PrintWriter(System.out);\n\t//Main\n\tpublic static void main(String args[]) {\n\t\tint test=1;\n\t\t//test=sc.nextInt();\n\t\twhile(test-->0) {\n\t\t\t//Focus\n\t\t\tint n=sc.nextInt(),m=sc.nextInt(),ans[]=new int[n],l=0,r=100000+5;\n\t\t\tArrays.fill(ans, -1);\n\t\t\tfor(int i=0;i<m;i++) {\n\t\t\t\tint x=sc.nextInt()-1,y=sc.nextInt()-1;\n\t\t\t\tif(y-x<r-l) {\n\t\t\t\t\tl=x;\n\t\t\t\t\tr=y;\n\t\t\t\t}\n\t\t\t}\n\t\t\tfor(int i=l;i<=r;i++) ans[i]=i-l;\n\t\t\tfor(int i=r+1;i<n;i++) ans[i]=ans[i-(r-l+1)];\n\t\t\tfor(int i=l-1;i>=0;i--) ans[i]=ans[i+(r-l+1)];\n\t\t\tout.println(r-l+1);\n\t\t\tfor(int x: ans) out.print(x+\" \");\n\t\t\t\n\t\t}\n\t\tout.flush();\n\t\tout.close();\n\t}\n}\n"
+  }
+]

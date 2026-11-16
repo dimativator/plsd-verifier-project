@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=eval(input())\ncnt=0\nwhile n:\n    a=n%8\n    n=n//8\n    if a==1:\n        cnt+=1\nprint(cnt)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint main() {\n  long long base = 1, suma = 0, num, res;\n  int one = 0;\n  scanf(\"%I64d\", &num);\n  do {\n    res = num % 8;\n    num = num / 8;\n    suma = suma + res * base;\n    base = base * 10;\n  } while (num > 0);\n  while (suma > 0) {\n    if (suma % 10 == 1) {\n      one++;\n    }\n    suma /= 10;\n  }\n  printf(\"%d\", one);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner cin=new Scanner(System.in);\n        int n=cin.nextInt();\n        int ans=0;\n        while(n!=0){\n            if(n%8==1) ans++;\n            n/=8;\n        }\n        System.out.printf(\"%d\",ans);\n        return;\n    }\n}"
+  }
+]

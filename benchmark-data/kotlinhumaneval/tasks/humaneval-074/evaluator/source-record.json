@@ -1,0 +1,24 @@
+{
+  "task_id": "HumanEval_kotlin/74",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Write a function that takes an integer a and returns True\n * if this integer is a cube of some integer number.\n * Note: you may assume the input is always valid.\n * Examples:\n * iscube(1) ==> True\n * iscube(2) ==> False\n * iscube(-1) ==> True\n * iscube(64) ==> True\n * iscube(0) ==> True\n * iscube(180) ==> False\n *\n */\nfun iscube(a: Int): Boolean {\n",
+  "entry_point": "iscube",
+  "test": "fun main() {\n    var arg00: Int = 1\n    var x0: Boolean = iscube(arg00)\n    var v0: Boolean = true\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: Int = 2\n    var x1: Boolean = iscube(arg10)\n    var v1: Boolean = false\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: Int = -1\n    var x2: Boolean = iscube(arg20)\n    var v2: Boolean = true\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30: Int = 64\n    var x3: Boolean = iscube(arg30)\n    var v3: Boolean = true\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40: Int = 180\n    var x4: Boolean = iscube(arg40)\n    var v4: Boolean = false\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50: Int = 1000\n    var x5: Boolean = iscube(arg50)\n    var v5: Boolean = true\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n    var arg60: Int = 0\n    var x6: Boolean = iscube(arg60)\n    var v6: Boolean = true\n    if (x6 != v6) {\n        throw Exception(\"Exception -- test case 6 did not pass. x6 = \" + x6)\n    }\n\n    var arg70: Int = 1729\n    var x7: Boolean = iscube(arg70)\n    var v7: Boolean = false\n    if (x7 != v7) {\n        throw Exception(\"Exception -- test case 7 did not pass. x7 = \" + x7)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Write a function that takes an integer a and returns True\n * if this integer is a cube of some integer number.\n * Note: you may assume the input is always valid.\n * Examples:\n * iscube(1) ==> True\n * iscube(2) ==> False\n * iscube(-1) ==> True\n * iscube(64) ==> True\n * iscube(0) ==> True\n * iscube(180) ==> False\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun iscube(a: Int): Boolean {",
+    "    for (i in 0..Math.abs(a)) {",
+    "        val cube = i * i * i",
+    "        if (cube == Math.abs(a)) {",
+    "            return true",
+    "        }",
+    "        if (cube > Math.abs(a)) {",
+    "            return false",
+    "        }",
+    "    }",
+    "    return false",
+    "}",
+    "",
+    ""
+  ]
+}

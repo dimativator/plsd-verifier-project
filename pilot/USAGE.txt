@@ -1,0 +1,130 @@
+PLSD MINI-SWE-AGENT PILOT
+
+Run from the project directory with:
+
+  .venv/bin/python -m pilot.run --workers 4
+
+The frozen selection is pilot/selection.json: 20 Kotlin HumanEval tasks and 20
+CodeContests tasks, four from each rating band. Each task gets one independent
+baseline run and one verifier-enabled run. This is an 80-run plumbing pilot.
+Task selection and checker review happened before model outcomes were observed.
+
+Both conditions use mini-swe-agent 2.4.6 DefaultAgent, GPT-5.6-Luna at medium
+reasoning effort, Kotlin 2.3.0, and local Temurin JDK 21. The baseline has compile
+and run_tests commands. The other condition also has verify and the verifier's
+specification guide. Agents choose their tools. Submission must be a separate action after implementation. No shared initial
+solution, automatic verification loop, mandatory proof, or model-first step is
+used. Agent steps, cost, and overall wall time are uncapped in this pilot.
+
+Codex is used only as a model transport. codex_model.py calls the installed CLI's
+stdio app-server with an isolated configuration, ephemeral requests, no environment
+access, no dynamic tools, and all tool features disabled. Native tool requests,
+tool-execution items, and model reroutes are rejected. Mini-SWE-agent runs the shell
+actions. The wrapper replays mini's conversation for each model query.
+
+Agent commands run in a macOS sandbox. They can read their own public workspace,
+the shared compiler tools, and system software. The verifier condition can also
+read the plugin and specification guide. Home data, other workspaces, hidden tests,
+source references, and Codex credentials are unreadable. Network access is denied.
+Writes are restricted to the agent's own workspace. The CLI authentication symlink
+under pilot/.runtime stays outside the accessible environment.
+
+The final evaluator runs after solving, outside the agent workspace. It compiles
+the submitted Solution.kt or Main.kt without the verification plugin. HumanEval
+uses unexposed source cases with a private completion marker after all assertions.
+CodeContests uses the original private input/output tests and the reviewed checker
+in selection.json. Generated tests were excluded before runs because their input
+constraints have not been reviewed. Source dataset files are unchanged.
+
+The score is the fraction of tasks whose final submission passes every hidden
+test. Verifier success is never part of the score. Test executions have a 10-second
+limit and Kotlin programs have a 1 GiB JVM heap limit in both conditions. Compiler
+and verifier time is not subject to an invented overall agent budget.
+
+Files
+
+  codex_model.py          Model-only CLI adapter and native-tool rejection
+  sandbox.py              Process isolation and sanitized execution environment
+  kotlin_tools.py          Compiler, public tests, verifier command implementation
+  evaluate.py              Trusted hidden-test evaluator and reference sanity checks
+  run.py                   Mini-SWE-agent launch, task workspaces, resume, summary
+  select_tasks.py          Reproducible HumanEval selection and fixed reviewed contest IDs
+  selection.json          Frozen sample and evaluation choices
+  requirements.txt        Pinned mini-SWE-agent dependency
+  requirements.lock.txt   Exact installed Python package versions
+  toolchain/provenance.json Compiler/plugin/Z3 hashes and paths
+  preflight/              All 40 source-reference check results
+  test_pilot.py           Regression tests for isolation and scoring
+
+Run artifacts are under runs/pilot-20261114/<dataset>/<task>/<condition>/:
+
+  trajectory.json          Full mini-SWE-agent trajectory
+  actions.jsonl            Shell commands, outputs, and execution times
+  model/                  CLI event streams, stderr, assistant responses
+  workspace/              Public files and the agent's working files
+  Solution.kt or Main.kt   Final collected submission
+  hidden-evaluation.json  Trusted hidden-test outcome, never given to the agent
+  result.json             Per-run outcome, model calls, explicit verify commands
+
+The run root has selection.json, run-config.json, runner.log, and summary.json.
+The runner skips completed result files on resume and refuses to overwrite an
+incomplete attempt. Inspect an incomplete attempt before choosing a retry path.
+
+Debugging attempts are retained separately under runs/debug-20261114-harness-v1/.
+That batch exposed a Bash test-builtin name collision and a completion-marker
+handling issue. It is excluded from scores. The scored pilot restarts all 80 runs
+with run_tests and the corrected completion handling on the same frozen sample.
+
+Checks
+
+  MSWEA_SILENT_STARTUP=1 .venv/bin/python -m unittest pilot.test_pilot -v
+  .venv/bin/python -m pilot.run --summary-only
+
+No GPU, remote machine, system Python modification, or global package install is
+needed. mini-SWE-agent and its dependencies are in the project-local .venv. Jormungandr
+was built from revision f30b44d6ebb238db28cb3b8a56b07a6c0adbaca9 of the existing local
+checkout. The compiler jars are copied from the Gradle cache. Z3 4.8.7 is pinned by
+archive and executable SHA-256. Rebuild the toolchain with setup_toolchain.py only
+when needed, passing the existing verifier checkout explicitly.
+
+ALGORITHMIC CALIBRATION (separate from the original pilot)
+
+  .venv/bin/python -m pilot.calibrate
+  .venv/bin/python -m pilot.run --selection pilot/calibration-selection.json --preflight pilot/calibration-preflight --output runs/calibration-20261114 --workers 4
+  .venv/bin/python -m pilot.report --output runs/calibration-20261114
+
+Eight previously unused Codeforces tasks, ratings 1600-2100, chosen for binary
+search, counting, prefix sums, and dynamic programming. These are calibration
+problems and must be excluded from a later confirmatory sample. Selection is
+frozen before outcomes. Source references are checked on public and original
+private tests. Platform-specific %I64d formatting is changed to %lld only in a
+temporary reference copy, with the adjustment recorded in preflight results.
+
+Both conditions now receive iterative inspect/implement/test/revise guidance.
+Submission is a standalone action so tool observations can reach the model first.
+Verifier use remains optional. No proof or mathematical-model stage is required.
+The original runs/pilot-20261114 artifacts remain unchanged. New results are not
+pooled with that pilot because both the workflow and task selection changed.
+
+Calibration outcome and correction:
+cf-958-C2 contains no original private tests. Its two attempts are invalid
+ evaluations, excluded from scores. The original records are preserved, with the
+ correction recorded in runs/calibration-20261114/EVALUATION-CORRECTION.txt.
+The current launcher and calibration preflight reject this sample because of the
+empty suite. The command above records the historical launch, not a valid new
+launch command. For a new run, freeze a new selection under a new filename and
+validate every selected hidden suite first. Do not overwrite this calibration.
+
+OPTIONAL VERIFIER GUIDANCE
+
+The verifier-enabled prompt suggests useful situations for verify (bounds,
+overflow, division, and loop invariants). pilot/verifier-quickstart.txt is copied
+to the verifier-only toolchain as QUICKSTART.txt. It explains a first call without
+annotations and gives a tested specification example. The baseline cannot read
+this guide. Its hash is recorded in new run configurations.
+
+verify prints a heuristic reading aid, every original diagnostic, and any trust
+report even on failure. An unproved obligation is not classified as a confirmed
+bug or automatically as a missing specification. Unsupported code and tool
+failures remain explicit. Exit codes are preserved. Hidden-test scoring is
+unchanged, and neither verification nor successful proofs are mandatory.

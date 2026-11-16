@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-147",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/147",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 10,
+  "public_test_count": 1,
+  "unexposed_test_count": 9,
+  "source_review_note": "Canonical primality helper returns true for 0/negative n. Tests cover n>=1 only.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-147",
+  "public_dir": "tasks/humaneval-147/public",
+  "evaluator_dir": "tasks/humaneval-147/evaluator",
+  "metadata_file": "tasks/humaneval-147/task.json",
+  "evaluation_harness": "tasks/humaneval-147/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-147/evaluation.json"
+}

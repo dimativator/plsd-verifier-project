@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\na=list(map(int,input().split()))\nfor i in range(n):\n     if a[a[a[i]-1]-1]==i+1:\n         print('YES')\n         exit(0)\nprint('NO')\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  cin >> n;\n  vector<int> v(n);\n  vector<bool> vis(n, false);\n  vector<int> level(n);\n  int p;\n  for (int i = 0; i < n; i++) {\n    cin >> p;\n    v[i] = (p - 1);\n  }\n  bool flag = false;\n  for (int i = 0; i < n; i++) {\n    if (v[v[v[i]]] == i) {\n      cout << \"YES\";\n      flag = true;\n      break;\n    }\n  }\n  if (flag == false) {\n    cout << \"NO\";\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "/*\n * Author: Minho Kim (ISKU)\n * Date: February 17, 2018\n * E-mail: minho.kim093@gmail.com\n *\n * https://github.com/ISKU/Algorithm\n * http://codeforces.com/problemset/problem/939/A\n */\n\nimport java.util.*;\n\npublic class A {\n\tpublic static void main(String... args) {\n\t\tScanner sc = new Scanner(System.in);\n\t\tint N = sc.nextInt();\n\n\t\tint[] graph = new int[N + 1];\n\t\tfor (int i = 1; i < N + 1; i++)\n\t\t\tgraph[i] = sc.nextInt();\n\n\t\tboolean cycle = false;\n\t\tfor (int i = 1; i < N + 1; i++)\n\t\t\tif (i == graph[graph[graph[i]]])\n\t\t\t\tcycle = true;\n\n\t\tSystem.out.print(cycle ? \"YES\" : \"NO\");\n\t}\n}"
+  }
+]

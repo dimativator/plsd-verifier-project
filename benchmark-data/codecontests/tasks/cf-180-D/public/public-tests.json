@@ -1,0 +1,14 @@
+{
+  "input": [
+    "abc\ndefg\n",
+    "czaaab\nabcdef\n",
+    "aad\naac\n",
+    "abad\nbob\n"
+  ],
+  "output": [
+    "-1\n",
+    "abczaa\n",
+    "aad\n",
+    "daab\n"
+  ]
+}

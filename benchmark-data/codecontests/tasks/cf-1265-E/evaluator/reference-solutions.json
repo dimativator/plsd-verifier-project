@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "N = int(input())\nP = list(map(int, input().split()))\nmod = 998244353\n\np = 0\nq = 1\nfor i in range(N):\n    p, q = (100 * (p+q)) % mod, (P[i] * q) % mod\n\nprint((p * pow(q, mod-2, mod))%mod)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int MOD = 998244353;\nint add(int x, int y) {\n  x += y;\n  while (x >= MOD) x -= MOD;\n  while (x < 0) x += MOD;\n  return x;\n}\nint mul(int x, int y) { return (x * 1ll * y) % MOD; }\nint power(int n, int m, int p) {\n  int res = 1;\n  while (m > 0) {\n    if (m & 1) res = (res * 1ll * n) % p;\n    n = (n * 1ll * n) % p;\n    m /= 2;\n  }\n  return res;\n}\nint solve() {\n  int n;\n  cin >> n;\n  int d = power(100, MOD - 2, MOD);\n  vector<int> arr(n), p(n), q(n);\n  for (int i = 0; i < n; i++) {\n    cin >> arr[i];\n    p[i] = mul(arr[i], d);\n    q[i] = mul(100 - arr[i], d);\n  }\n  int cur = 1, res = 0, x = 0;\n  for (int i = 0; i < n; i++) {\n    int tmp = mul(cur, p[i]), tmq = mul(cur, q[i]);\n    res = add(res, cur);\n    x = add(x, tmq);\n    cur = tmp;\n  }\n  res = mul(res, power(add(1, -x), MOD - 2, MOD));\n  return res;\n}\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(0);\n  cout.tie(0);\n  cout << solve() << \"\\n\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\n\npublic class P604E {\n    public static void main(String[] args) throws Exception {\n        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n        int n = Integer.parseInt(br.readLine());\n        String[] line = br.readLine().split(\" \");\n        int[] p = new int[n];\n        for(int i=0; i<n; i++) {\n            p[i] = Integer.parseInt(line[i]);\n        }\n\n        long pMult = 1;\n        long sum = 0;\n        long mod = 998244353;\n\n        for(int i=0; i<n; i++) {\n            sum = ((sum + pMult) * 100) % mod;\n            pMult = (pMult * p[i]) % mod;\n        }\n\n        long inv = modInv(pMult, mod);\n        long ans = (sum * inv) % mod;\n\n        System.out.println(ans);\n    }\n\n    public static long modInv(long a, long mod) {\n        long ret = 1;\n        long mult = a;\n        long k = mod - 2;\n\n        while(k > 0) {\n            if((k & 1) > 0)\n                ret = (ret * mult) % mod;\n            mult = (mult * mult) % mod;\n            k >>= 1;\n        }\n\n        return ret;\n    }\n}\n"
+  }
+]

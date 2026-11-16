@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import sys # TLE without\nn, m = map(int, input().split())\n\npos = [None] * (n + 1)\nfor i, a in enumerate(map(int, input().split())):\n    pos[a] = i\n\nz = [300005] * (n + 1)\nfor pr in sys.stdin.read().splitlines():\n    x, y = map(int, pr.split())\n    if pos[x] > pos[y]:\n        x, y = y, x\n    z[pos[x]] = min(z[pos[x]], pos[y])\n    '''\n    if z[pos[x]] is None:\n        z[pos[x]] = pos[y]\n    else:\n        z[pos[x]] = min(z[pos[x]], pos[y])\n    '''\n\nlf, rg = n - 1, n - 1\nans = 0\nwhile lf >= 0:\n    if z[lf] is not None:\n        rg = min(rg, z[lf] - 1)\n    ans += rg - lf + 1\n    lf -= 1\n\nprint(ans)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int MAX = 300009;\nint n, m;\nint P[MAX];\nvector<int> v[MAX];\nint main() {\n  scanf(\"%d%d\", &n, &m);\n  for (int i = 0; i < n; i++) {\n    int a;\n    scanf(\"%d\", &a);\n    P[a] = i;\n  }\n  for (int i = 0; i < m; i++) {\n    int a, b;\n    scanf(\"%d%d\", &a, &b);\n    a = P[a];\n    b = P[b];\n    if (a > b) swap(a, b);\n    v[b].push_back(a);\n  }\n  int mm = -1;\n  long long ans = 0;\n  for (int i = 0; i < n; i++) {\n    for (int j = 0; j < (int)v[i].size(); j++) mm = max(mm, v[i][j]);\n    ans += mm + 1;\n  }\n  cout << (long long)n * (n + 1) / 2 - ans << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.util.StringTokenizer;\n\npublic class Codef{\n    public static void main(String[] args) throws IOException{\n        BufferedReader vod=new BufferedReader(new InputStreamReader(System.in));\n        StringTokenizer s=new StringTokenizer(vod.readLine());\n        int n=Integer.parseInt(s.nextToken());\n        int m=Integer.parseInt(s.nextToken());\n        s=new StringTokenizer(vod.readLine());\n        int[] ar=new int[n];\n        int[] an=new int[n+1];\n        int[] ax=new int[n+1];\n        for (int i=0; i<ax.length; i++) ax[i]=1000000;\n        for (int i=0; i<n; i++){\n            ar[i]=Integer.parseInt(s.nextToken());\n        }\n        for (int i=0; i<n; i++)\n            an[ar[i]]=i+1;\n        int a=0,b=0,min=0,max=0;\n        for (int i=0; i<m; i++){\n            s=new StringTokenizer(vod.readLine());\n            a=Integer.parseInt(s.nextToken());\n            b=Integer.parseInt(s.nextToken());\n            min=Math.min(an[a], an[b]);\n            max=Math.max(an[a], an[b]);\n            ax[min]=Math.min(ax[min],max);\n        }\n        long ans=0;\n        int c=n;\n        for (int i=n; i>=1; i--){\n            if (ax[i]<1000000) c=Math.min(c,ax[i]-1);\n            ans+=(long)(c-i+1);\n        }\n        System.out.print(ans);\n    }\n}"
+  }
+]

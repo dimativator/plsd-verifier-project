@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import heapq\nn=int(input())\nfa=[i for i in range(n)]\nls=[]\nrs=[]\nfor i in range(n):\n    l,r=[int(x) for x in input().split()]\n    ls.append((l,i))\n    rs.append((r,i))\nls.sort()\nrs.sort()\nans=n\nfor i in range(n):\n    ans+=max(ls[i][0],rs[i][0])\n# heapq.heapify(ls)\n# heapq.heapify(rs)\n#\n# ans=n\n# if n==1:\n#     print(max(ls[0][0],rs[0][0])+1)\n#     quit()\n# for i in range(n):\n#     ll=heapq.heappop(ls)\n#     if fa[rs[0][1]]!=fa[ll[1]]:\n#         rr=heapq.heappop(rs)\n#         fa[ll[1]]=rr[1]\n#     else:\n#         tem=heapq.heappop(rs)\n#         rr=heapq.heappop(rs)\n#         fa[ll[1]]=rr[1]\n#         heapq.heappush(rs,tem)\n#     ans+=max(ll[0],rr[0])\nprint(ans)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint r[100005], l[100005];\nint n;\nint main() {\n  scanf(\"%d\", &n);\n  for (int i = 0; i < n; i++) scanf(\"%d%d\", &l[i], &r[i]);\n  sort(l, l + n);\n  sort(r, r + n);\n  long long ans = 0;\n  for (int i = n - 1; i >= 0; i--) {\n    ans += max(l[i], r[i]);\n  }\n  cout << ans + n << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\n\nimport java.io.*;\npublic class D {\n  public static void main(String[] args)throws Exception{\n    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));\n\n    int  n= Integer.parseInt(br.readLine());\n\n    long[] ls = new long[n];\n    long[] rs = new long[n];\n    for(int i=0;i<n;++i){\n      StringTokenizer st = new StringTokenizer(br.readLine());\n      ls[i] = Integer.parseInt(st.nextToken());\n      rs[i] = Integer.parseInt(st.nextToken());\n    }\n    Arrays.sort(ls);\n    Arrays.sort(rs);\n    long tot=0;\n    for(int i=0;i<n;++i){\n      tot+=1+Math.max(ls[i], rs[i]);\n    }\n    bw.write(tot+\"\");\n    bw.flush();\n  }\n}\n"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\nl=list(map(int,input().split()))\ns=sum(l)/2\n#print(s)\ni=0;\ncurr=0\nwhile(curr<s):\n    curr+=l[i]\n    i+=1\nprint(i)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nlong long int fastExpo(long long int a, long long int n, long long int mod) {\n  long long int result = 1;\n  while (n > 0) {\n    if (n & 1) result = (result * a) % mod;\n    a = (a * a) % mod;\n    n >>= 1;\n  }\n  return result;\n}\nlong long int modInverse(long long int n, long long int mod) {\n  return fastExpo(n, mod - 2, mod);\n}\nvector<long long int> factorial(long long int n) {\n  std::vector<long long int> fac(n + 2, 0);\n  fac[0] = 1;\n  for (long long int i = 1; i <= n; i++) fac[i] = (fac[i - 1] * i) % 1000000007;\n  return fac;\n}\nlong long int __nCr(long long int n, long long int r,\n                    vector<long long int>& Fact, long long int mod) {\n  long long int ans = (((Fact[n] * modInverse(Fact[r], mod)) % mod) *\n                       modInverse(Fact[n - r], mod)) %\n                      mod;\n  return ans;\n}\nvoid runcases(long long int T) {\n  long long int n;\n  cin >> n;\n  vector<long long int> v(n);\n  long long int sum = 0;\n  for (long long int i = 0; i < n; i++) {\n    cin >> v[i];\n    sum += v[i];\n  }\n  long long int l = 0;\n  for (long long int i = 0; i < n; i++) {\n    l += v[i];\n    if (2 * l >= sum) {\n      cout << (i + 1) << \"\\n\";\n      return;\n    }\n  }\n}\nint32_t main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(NULL);\n  long long int T = 1;\n  for (long long int t = 1; t <= T; t++) {\n    runcases(t);\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class Main {\n\n    public static void main(String[] args)\n    {\n        Scanner ab=new Scanner (System.in);\n        int x=ab.nextInt();\n        double k[]=new double[x];\n        double sum=0;\n        for(int g=0;g<x;g++)\n        {\n            k[g]=ab.nextDouble();\n            sum+=k[g];\n        }\n        \n        \n        \n        double sum1=0;\n        for(int y=0;y<x;y++)\n        {\n            sum1+=k[y];\n            if(sum1>=sum/2.0)\n            {\n                System.out.println(y+1);\n                            break;\n\n            }\n        }\n    }\n    \n}\n"
+  }
+]

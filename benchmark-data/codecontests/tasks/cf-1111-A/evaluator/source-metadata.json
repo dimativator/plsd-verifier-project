@@ -1,0 +1,35 @@
+{
+  "name": "1111_A. Superhero Transformation",
+  "description": "We all know that a superhero can transform to certain other superheroes. But not all Superheroes can transform to any other superhero. A superhero with name s can transform to another superhero with name t if s can be made equal to t by changing any vowel in s to any other vowel and any consonant in s to any other consonant. Multiple changes can be made.\n\nIn this problem, we consider the letters 'a', 'e', 'i', 'o' and 'u' to be vowels and all the other letters to be consonants.\n\nGiven the names of two superheroes, determine if the superhero with name s can be transformed to the Superhero with name t.\n\nInput\n\nThe first line contains the string s having length between 1 and 1000, inclusive.\n\nThe second line contains the string t having length between 1 and 1000, inclusive.\n\nBoth strings s and t are guaranteed to be different and consist of lowercase English letters only.\n\nOutput\n\nOutput \"Yes\" (without quotes) if the superhero with name s can be transformed to the superhero with name t and \"No\" (without quotes) otherwise.\n\nYou can print each letter in any case (upper or lower).\n\nExamples\n\nInput\n\n\na\nu\n\n\nOutput\n\n\nYes\n\n\nInput\n\n\nabc\nukm\n\n\nOutput\n\n\nYes\n\n\nInput\n\n\nakm\nua\n\n\nOutput\n\n\nNo\n\nNote\n\nIn the first sample, since both 'a' and 'u' are vowels, it is possible to convert string s to t.\n\nIn the third sample, 'k' is a consonant, whereas 'a' is a vowel, so it is not possible to convert string s to t.",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 1000,
+  "cf_contest_id": 1111,
+  "cf_index": "A",
+  "cf_tags": [
+    "implementation",
+    "strings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00011-of-00039-5de236be5188959d.parquet",
+  "source_row": 209,
+  "task_id": "codecontests/cf-1111-A",
+  "rating_band": "800-1199",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/1111/A",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

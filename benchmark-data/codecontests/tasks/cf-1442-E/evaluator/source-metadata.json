@@ -1,0 +1,39 @@
+{
+  "name": "1442_E. Black, White and Grey Tree",
+  "description": "You are given a tree with each vertex coloured white, black or grey. You can remove elements from the tree by selecting a subset of vertices in a single connected component and removing them and their adjacent edges from the graph. The only restriction is that you are not allowed to select a subset containing a white and a black vertex at once.\n\nWhat is the minimum number of removals necessary to remove all vertices from the tree?\n\nInput\n\nEach test contains multiple test cases. The first line contains an integer t (1 ≤ t ≤ 100 000), denoting the number of test cases, followed by a description of the test cases.\n\nThe first line of each test case contains an integer n (1 ≤ n ≤ 200 000): the number of vertices in the tree.\n\nThe second line of each test case contains n integers a_v (0 ≤ a_v ≤ 2): colours of vertices. Gray vertices have a_v=0, white have a_v=1, black have a_v=2.\n\nEach of the next n-1 lines contains two integers u, v (1 ≤ u, v ≤ n): tree edges.\n\nThe sum of all n throughout the test is guaranteed to not exceed 200 000.\n\nOutput\n\nFor each test case, print one integer: the minimum number of operations to solve the problem.\n\nExample\n\nInput\n\n\n4\n2\n1 1\n1 2\n4\n1 2 1 2\n1 2\n2 3\n3 4\n5\n1 1 0 1 2\n1 2\n2 3\n3 4\n3 5\n8\n1 2 1 2 2 2 1 2\n1 3\n2 3\n3 4\n4 5\n5 6\n5 7\n5 8\n\n\nOutput\n\n\n1\n3\n2\n3\n\nNote\n\n<image>\n\nIn the first test case, both vertices are white, so you can remove them at the same time.\n\n<image>\n\nIn the second test case, three operations are enough. First, we need to remove both black vertices (2 and 4), then separately remove vertices 1 and 3. We can't remove them together because they end up in different connectivity components after vertex 2 is removed.\n\n<image>\n\nIn the third test case, we can remove vertices 1, 2, 3, 4 at the same time, because three of them are white and one is grey. After that, we can remove vertex 5.\n\n<image>\n\nIn the fourth test case, three operations are enough. One of the ways to solve the problem is to remove all black vertices at once, then remove white vertex 7, and finally, remove connected white vertices 1 and 3.",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 3000,
+  "cf_contest_id": 1442,
+  "cf_index": "E",
+  "cf_tags": [
+    "binary search",
+    "constructive algorithms",
+    "dfs and similar",
+    "dp",
+    "greedy",
+    "trees"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 512000000,
+  "source_file": "data/train-00003-of-00039-e3822fccad6e083a.parquet",
+  "source_row": 148,
+  "task_id": "codecontests/cf-1442-E",
+  "rating_band": "2400+",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/1442/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

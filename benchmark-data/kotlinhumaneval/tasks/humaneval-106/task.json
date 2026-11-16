@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-106",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/106",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 5,
+  "public_test_count": 1,
+  "unexposed_test_count": 4,
+  "source_review_note": "Distinct values are an explicit input guarantee. Empty list is explicitly allowed and tested.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-106",
+  "public_dir": "tasks/humaneval-106/public",
+  "evaluator_dir": "tasks/humaneval-106/evaluator",
+  "metadata_file": "tasks/humaneval-106/task.json",
+  "evaluation_harness": "tasks/humaneval-106/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-106/evaluation.json"
+}

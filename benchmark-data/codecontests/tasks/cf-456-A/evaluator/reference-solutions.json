@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nfor _ in range(n):\n    a,b = map(int,input().split())\n    if a!=b:\n        print ('Happy Alex')\n        exit()\nprint ('Poor Alex')"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nstruct lap {\n  int a;\n  int b;\n};\nlap l[100005];\nbool cmp(lap l1, lap l2) { return l1.a > l2.a; }\nint main() {\n  int n;\n  cin >> n;\n  for (int i = 0; i < n; i++) {\n    cin >> l[i].a >> l[i].b;\n  }\n  sort(&l[0], &l[n], cmp);\n  for (int i = n - 2; i >= 0; i--) {\n    if (l[i].a > l[i + 1].a && l[i].b < l[i + 1].b) {\n      cout << \"Happy Alex\";\n      return 0;\n    }\n  }\n  cout << \"Poor Alex\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class P456ALaptops {\n\tpublic static void main(String[] args) {\n\t\tScanner s = new Scanner(System.in);\n\t\tlong laptopLength = s.nextLong();\n\t\tint index = 0;\n\t\tlong[] priceList = new long[(int)laptopLength];\n\t\tlong[] qualityList = new long[(int)laptopLength];\n\t\tboolean flag = false;\n\t\tString message = \"Poor Alex\";\n\t\t\n\t\tfor(index=0; index<laptopLength; index++)\t{\n\t\t\tpriceList[index] = s.nextLong();\n\t\t\tqualityList[index] = s.nextLong();\n\t\t\t\n\t\t\tif(priceList[index] < qualityList[index])\t{\n\t\t\t\tmessage = \"Happy Alex\";\n\t\t\t}\n\t\t}\n\t\t\n\t\tSystem.out.println(message);\n\t}\n}\n"
+  }
+]

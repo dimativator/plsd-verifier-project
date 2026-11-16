@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,k = map(int,input().strip().split())\na=list(range(1,n+1))\na[:k+1] = a[k::-1]\na=[str(i) for i in a]\nprint(' '.join(a))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint encode(const string &s, int dig) {\n  int x = 0, k = dig;\n  for (int i = 0; i < dig; i++) {\n    x = k * x;\n    for (int j = i + 1; j < dig; j++)\n      if (s[j] < s[i]) x++;\n    k--;\n  }\n  return x;\n}\nint main() {\n  int n, k;\n  scanf(\"%d\", &n);\n  ;\n  scanf(\"%d\", &k);\n  ;\n  for (int i = (1); i < (n - k); i++) cout << i << \" \";\n  for (int i = n; i >= n - k; i--) cout << i << \" \";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class p9 {\n\n\tpublic static void main(String[] args) {\n\t\tScanner in = new Scanner(System.in);\n\t\tint n = in.nextInt();\n\t\tint k = in.nextInt();\n\t\tfor(int i = k+1; i > 0; i--)\n\t\t\tSystem.out.printf(\"%d \", i);\n\t\tfor(int i = k+2; i <= n; i++)\n\t\t\tSystem.out.printf(\"%d \", i);\n\t}\n\n}\n"
+  }
+]

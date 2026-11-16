@@ -1,0 +1,12 @@
+{
+  "input": [
+    "{()}[]\n",
+    "[&lt;}){}\n",
+    "]]\n"
+  ],
+  "output": [
+    "0\n",
+    "Impossible\n",
+    "Impossible\n"
+  ]
+}

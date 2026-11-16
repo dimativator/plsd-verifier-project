@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-114",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/114",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 7,
+  "public_test_count": 1,
+  "unexposed_test_count": 6,
+  "source_review_note": "Empty input with n=4 is tested but n=0 is not. Canonical split/filter may retain empty tokens for n=0, contradicting empty-output statement.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-114",
+  "public_dir": "tasks/humaneval-114/public",
+  "evaluator_dir": "tasks/humaneval-114/evaluator",
+  "metadata_file": "tasks/humaneval-114/task.json",
+  "evaluation_harness": "tasks/humaneval-114/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-114/evaluation.json"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "150_E. Freezing with Style",
+  "description": "This winter is so... well, you've got the idea :-) The Nvodsk road system can be represented as n junctions connected with n - 1 bidirectional roads so that there is a path between any two junctions. The organizers of some event want to choose a place to accommodate the participants (junction v), and the place to set up the contests (junction u). Besides, at the one hand, they want the participants to walk about the city and see the neighbourhood (that's why the distance between v and u should be no less than l). On the other hand, they don't want the participants to freeze (so the distance between v and u should be no more than r). Besides, for every street we know its beauty — some integer from 0 to 109. Your task is to choose the path that fits in the length limits and has the largest average beauty. We shall define the average beauty as a median of sequence of the beauties of all roads along the path.\n\nWe can put it more formally like that: let there be a path with the length k. Let ai be a non-decreasing sequence that contains exactly k elements. Each number occurs there exactly the number of times a road with such beauty occurs along on path. We will represent the path median as number a⌊k / 2⌋, assuming that indexation starting from zero is used. ⌊x⌋ — is number х, rounded down to the nearest integer.\n\nFor example, if a = {0, 5, 12}, then the median equals to 5, and if a = {0, 5, 7, 12}, then the median is number 7.\n\nIt is guaranteed that there will be at least one path with the suitable quantity of roads.\n\nInput\n\nThe first line contains three integers n, l, r (1 ≤ l ≤ r < n ≤ 105).\n\nNext n - 1 lines contain descriptions of roads of the Nvodsk, each line contains three integers ai, bi, ci (1 ≤ ai, bi ≤ n, 0 ≤ ci ≤ 109, ai ≠ bi) — junctions ai and bi are connected with a street whose beauty equals ci.\n\nOutput\n\nPrint two integers — numbers of the junctions, where to accommodate the participants and set up the contests, correspondingly. If there are multiple optimal variants, print any of them.\n\nExamples\n\nInput\n\n6 3 4\n1 2 1\n2 3 1\n3 4 1\n4 5 1\n5 6 1\n\n\nOutput\n\n4 1\n\n\nInput\n\n6 3 4\n1 2 1\n2 3 1\n3 4 1\n4 5 2\n5 6 2\n\n\nOutput\n\n6 3\n\n\nInput\n\n5 1 4\n1 2 1\n1 3 4\n3 4 7\n3 5 2\n\n\nOutput\n\n4 3\n\n\nInput\n\n8 3 6\n1 2 9\n2 3 7\n3 4 7\n4 5 8\n5 8 2\n3 6 3\n2 7 4\n\n\nOutput\n\n5 1\n\nNote\n\nIn the first sample all roads have the same beauty. That means that all paths of the positive length have the same median. Thus, any path with length from 3 to 4, inclusive will be valid for us.\n\nIn the second sample the city looks like that: 1 - 2 - 3 - 4 - 5 - 6. Two last roads are more valuable and we should choose any path that contains both of them and has the suitable length. It is either the path between 2 and 6 or the path between 3 and 6.",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 3000,
+  "cf_contest_id": 150,
+  "cf_index": "E",
+  "cf_tags": [
+    "binary search",
+    "data structures",
+    "divide and conquer",
+    "trees"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 7,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00008-of-00039-7246e6b7423b404f.parquet",
+  "source_row": 212,
+  "task_id": "codecontests/cf-150-E",
+  "rating_band": "2400+",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/150/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

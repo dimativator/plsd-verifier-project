@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-118",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/118",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 6,
+  "public_test_count": 1,
+  "unexposed_test_count": 5,
+  "source_review_note": "Canonical i%2==1 misses negative odd elements because Kotlin remainder is negative. Tests contain only nonnegative values.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-118",
+  "public_dir": "tasks/humaneval-118/public",
+  "evaluator_dir": "tasks/humaneval-118/evaluator",
+  "metadata_file": "tasks/humaneval-118/task.json",
+  "evaluation_harness": "tasks/humaneval-118/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-118/evaluation.json"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "312_B. Archer",
+  "description": "SmallR is an archer. SmallR is taking a match of archer with Zanoes. They try to shoot in the target in turns, and SmallR shoots first. The probability of shooting the target each time is <image> for SmallR while <image> for Zanoes. The one who shoots in the target first should be the winner.\n\nOutput the probability that SmallR will win the match.\n\nInput\n\nA single line contains four integers <image>.\n\nOutput\n\nPrint a single real number, the probability that SmallR will win the match.\n\nThe answer will be considered correct if the absolute or relative error doesn't exceed 10 - 6.\n\nExamples\n\nInput\n\n1 2 1 2\n\n\nOutput\n\n0.666666666667",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 1300,
+  "cf_contest_id": 312,
+  "cf_index": "B",
+  "cf_tags": [
+    "math",
+    "probabilities"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00003-of-00039-e3822fccad6e083a.parquet",
+  "source_row": 159,
+  "task_id": "codecontests/cf-312-B",
+  "rating_band": "1200-1599",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/312/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, a, b = list(map(int, input().split()))\n\nif b == 0:\n\tprint(a)\n\texit()\n\ndx = b // abs(b)\nfor i in range(abs(b)):\n\ta += dx\n\tif a == 0:\n\t\ta = n\n\telif a == n + 1:\n\t\ta = 1\nprint(a)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  ios::sync_with_stdio(false);\n  cin.tie(NULL), cout.tie(NULL);\n  int n, a, b;\n  cin >> n >> a >> b;\n  cout << 1 + (((n * 500) + a + b - 1) % n);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.io.PrintWriter;\nimport java.util.StringTokenizer;\n\npublic class Main implements Runnable {\n  BufferedReader in;\n  PrintWriter out;\n  StringTokenizer tok = new StringTokenizer(\"\");\n\n  @Override\n  public void run() {\n    init();\n    solve();\n    out.close();\n  }\n\n  private void init() {\n    in = new BufferedReader(new InputStreamReader(System.in));\n    out = new PrintWriter(System.out);\n  }\n\n  private String readString() {\n    while (!tok.hasMoreTokens()) {\n      try {\n        tok = new StringTokenizer(in.readLine());\n      } catch (IOException e) {\n        e.printStackTrace();\n      }\n    }\n    return tok.nextToken();\n  }\n\n  private int readInt() {\n    return Integer.parseInt(readString());\n  }\n\n  public static void main(String[] args) {\n    new Thread(new Main()).run();\n  }\n\n  private long readLong() {\n    return Long.parseLong(readString());\n  }\n\n  private void solve() {\n    int n = readInt();\n    int start = readInt();\n    int finish = readInt();\n    int add = finish > 0 ? 1 : -1;\n    if (finish < 0)\n      finish = -finish;\n    while (finish > 0) {\n      start += add;\n      finish--;\n      if (start == n + 1)\n        start = 1;\n      if (start == 0)\n        start = n;\n    }\n    out.print(start);\n  }\n\n\n}\n"
+  }
+]

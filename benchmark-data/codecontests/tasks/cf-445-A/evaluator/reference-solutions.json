@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,m = map(int,input().split())\nfor i in range(n):\n    s = list(input())\n    for j in range(m):\n        if s[j]==\".\":\n            if (i+j)%2==0:\n                s[j]=\"W\"\n            else:s[j]=\"B\"\n    k=\"\".join(s)\n    print(k)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\ntypedef struct {\n  long int x;\n  long int y;\n} Struct;\nusing namespace std;\nint main() {\n  cin.tie(NULL);\n  ios::sync_with_stdio(false);\n  long int n, m, i, j;\n  cin >> n >> m;\n  Struct s;\n  vector<Struct> V;\n  char A[n][m];\n  for (i = 0; i < n; i++) {\n    for (j = 0; j < m; j++) {\n      cin >> A[i][j];\n      if (A[i][j] == '.') {\n        s.x = i;\n        s.y = j;\n        V.push_back(s);\n      }\n    }\n  }\n  for (i = 0; i < V.size(); i++) {\n    if ((V[i].x + V[i].y) % 2 == 0)\n      A[V[i].x][V[i].y] = 'B';\n    else\n      A[V[i].x][V[i].y] = 'W';\n  }\n  for (i = 0; i < n; i++) {\n    for (j = 0; j < m; j++) cout << A[i][j];\n    cout << endl;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class CP {\n\n\tpublic static void main(String[] args) {\n\t\tScanner scn = new Scanner(System.in);\n\t\tint n = scn.nextInt();\n\t\tint m = scn.nextInt();\n\t\tscn.nextLine();\n\t\tchar[][] arr = new char[n][m];\n\t\tfor(int i=0;i<n;i++) {\n\t\t\tfor(int j=0;j<m;j++) {\n\t\t\t\tif((j+i)%2==0)\n\t\t\t\t\tarr[i][j]='B';\n\t\t\t\telse\n\t\t\t\t\tarr[i][j]='W';\n\t\t\t}\n\t\t}\n\t\tfor(int i = 0;i<n;i++) {\n\t\t\tString s = scn.nextLine();\n\t\t\tfor(int j=0;j<m;j++) {\n\t\t\t\tchar c = s.charAt(j);\n\t\t\t\tif(c=='-')\n\t\t\t\t\tarr[i][j]='-';\n\t\t\t}\n\t\t}\n\t\tfor(int i = 0;i<n;i++) {\n\t\t\tfor(int j=0;j<m;j++) {\n\t\t\t\tSystem.out.print(arr[i][j]);\n\t\t\t}\n\t\t\tSystem.out.println();\n\t\t}\n\t}\n}"
+  }
+]

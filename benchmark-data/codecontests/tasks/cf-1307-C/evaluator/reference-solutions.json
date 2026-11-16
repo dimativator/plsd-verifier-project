@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import os\nimport sys\ndef main():\n\ts=input()\n\tdp=[[0]*(27) for i in range(27)]\n\td=[0]*27\n\tfor i in range(len(s)):\n\t\tk=ord(s[i])-97\n\t\tfor j in range(27):\n\t\t\tdp[k][j]+=d[j]\n\t\td[k]+=1\n\tans=0\n\tfor i in range(27):\n\t\tfor j in range(27):\n\t\t\tans=max(ans, dp[i][j])\n\tfor i in d:\n\t\tans=max(ans , i)\n\tprint(ans)\nif __name__ == \"__main__\":\n    main()"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconstexpr int N = 100000 + 3;\nchar s[N];\nlong long a[N][27];\nlong long ch[27 + 'a'];\nlong long m1, m2, ans, m3;\nint main() {\n  cin >> (s);\n  int len = strlen(s);\n  for (int i = 0; i < len; i++) {\n    ch[s[i]]++;\n    for (int j = 0; j < 26; j++) {\n      a[i][j] = ch[j + 'a'];\n    }\n    m1 = max(m1, ch[s[i]]);\n  }\n  m2 = m1 * (m1 - 1) / 2;\n  ans = max(m1, m2);\n  for (int i = 0; i < 26; i++) {\n    for (int j = 0; j < 26; j++) {\n      if (i == j) continue;\n      m3 = 0;\n      for (int l = 0; l < len; l++) {\n        if (s[l] == i + 'a') m3 += ch[j + 'a'] - a[l][j];\n      }\n      ans = max(ans, m3);\n    }\n  }\n  cout << ans << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Arrays;\nimport java.util.Map;\nimport java.util.Scanner;\nimport java.util.TreeMap;\n\npublic class Main {\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.nextLine();\n        int[] cnt = new int[150];\n        long ans = 0;\n        Map<String, Long> map = new TreeMap<>();\n        Long val;\n        String tmp;\n        char[] c = new char[2];  //长度为二字串的\n        for (int i = 0; i < s.length(); i++) {  //与之前出现过的字符组成长度为二的字符串进行比较\n            c[1] = s.charAt(i);\n            for (int j = 0; j < 26; j++) {\n                c[0] = (char) ('a' + j);\n                tmp = Arrays.toString(c);  //长度为2的子串\n                val = map.get(tmp);\n                if (val == null)\n                    val = 0L;\n                if (cnt[c[0]] > 0)\n                    val += cnt[c[0]];\n                map.put(tmp, val);\n                if (val > ans) {\n                    ans = val;\n                    //System.out.println(\"index:\" + i + \" tmp\" + tmp);\n                }\n            }\n            ++cnt[c[1]];\n            if (cnt[c[1]] > ans) {\n                ans = cnt[c[1]];\n                //System.out.println(\"index:\" + i + \" cnt[\" + c[1] + \"] = \" + ans);\n            }\n\n        }\n        System.out.println(ans);\n    }\n}\n\n"
+  }
+]

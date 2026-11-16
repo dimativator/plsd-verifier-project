@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-160",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/160",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 4,
+  "public_test_count": 1,
+  "unexposed_test_count": 3,
+  "source_review_note": "Inputs explicitly positive. Zero is not a candidate digit within any valid positive interval, even though canonical range begins at 0.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-160",
+  "public_dir": "tasks/humaneval-160/public",
+  "evaluator_dir": "tasks/humaneval-160/evaluator",
+  "metadata_file": "tasks/humaneval-160/task.json",
+  "evaluation_harness": "tasks/humaneval-160/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-160/evaluation.json"
+}

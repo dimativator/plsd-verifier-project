@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, h, k = map(int, input().split())\npots = map(int, input().split())\n\ncomb = [0]\nfor pot in pots:   \n    if (comb[-1] % k + pot <= h):\n        comb[-1] += pot\n    else:\n        comb.append(pot)\n\nsec = lambda x : x // k + int(x % k > 0)\nans = sum(map(sec, comb))\nprint(ans)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, h, k;\n  vector<int> p;\n  scanf(\"%d %d %d\", &n, &h, &k);\n  for (int i = 0; i < n; i++) {\n    int x;\n    scanf(\"%d\", &x);\n    p.push_back(x);\n  }\n  long long g = 0, c = 0;\n  long long resp = 0;\n  while (1) {\n    while (g + p[c] <= h && c < p.size()) {\n      g += p[c++];\n    }\n    if (c < p.size()) {\n      long long x = p[c] - (h - g);\n      long long y = x / k + (x % k > 0);\n      resp += y;\n      g = max(g - y * k, 0LL);\n    } else\n      break;\n  }\n  resp += g / k + (g % k > 0);\n  printf(\"%lld\\n\", resp);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "/* package whatever; // don't place package name! */\n\nimport java.util.*;\nimport java.lang.*;\nimport java.io.*;\n\n/* Name of the class has to be \"Main\" only if the class is public. */\npublic class Ideone\n{\n\tpublic static void main (String[] args) throws java.lang.Exception\n\t{\n\t\tint n;\n\t\tlong h,k;\n\t\tScanner in = new Scanner(System.in);\n\t\tn=in.nextInt();\n\t\th=in.nextLong();\n\t\tk=in.nextLong();\n\t\tint a[] = new int[n];\n\t\tfor(int i=0;i<n;i++){\n\t\t\ta[i]=in.nextInt();\n\t\t}\n\t\tlong count=0;\n\t\tlong sum=0;\n\t\tfor(int i=0;i<n;){\n\t\t\twhile(i<n&&sum+a[i]<=h)\n\t\t\t\tsum=sum+a[i++];\n\t\t\tcount = count+(sum/k);\n\t\t\tsum=sum%k;\n\t\t\tif(i<n&&sum+a[i]>h){\n\t\t\t\tsum=0;\n\t\t\t\tcount++;\n\t\t\t}\n\t\t}\n\t\tif(sum>0)count++;\n\t\tSystem.out.println(count);\n\t}\n}"
+  }
+]

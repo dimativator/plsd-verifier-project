@@ -1,0 +1,21 @@
+{
+  "task_id": "HumanEval_kotlin/60",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * The FibFib number sequence is a sequence similar to the Fibbonacci sequnece that's defined as follows:\n * fibfib(0) == 0\n * fibfib(1) == 0\n * fibfib(2) == 1\n * fibfib(n) == fibfib(n-1) + fibfib(n-2) + fibfib(n-3).\n * Please write a function to efficiently compute the n-th element of the fibfib number sequence.\n * >>> fibfib(1)\n * 0\n * >>> fibfib(5)\n * 4\n * >>> fibfib(8)\n * 24\n *\n */\nfun fibfib(n: Int): Int {\n",
+  "entry_point": "fibfib",
+  "test": "fun main() {\n    var arg00: Int = 2\n    var x0: Int = fibfib(arg00)\n    var v0: Int = 1\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: Int = 1\n    var x1: Int = fibfib(arg10)\n    var v1: Int = 0\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: Int = 5\n    var x2: Int = fibfib(arg20)\n    var v2: Int = 4\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30: Int = 8\n    var x3: Int = fibfib(arg30)\n    var v3: Int = 24\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40: Int = 10\n    var x4: Int = fibfib(arg40)\n    var v4: Int = 81\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50: Int = 12\n    var x5: Int = fibfib(arg50)\n    var v5: Int = 274\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n    var arg60: Int = 14\n    var x6: Int = fibfib(arg60)\n    var v6: Int = 927\n    if (x6 != v6) {\n        throw Exception(\"Exception -- test case 6 did not pass. x6 = \" + x6)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * The FibFib number sequence is a sequence similar to the Fibbonacci sequnece that's defined as follows:\n * fibfib(0) == 0\n * fibfib(1) == 0\n * fibfib(2) == 1\n * fibfib(n) == fibfib(n-1) + fibfib(n-2) + fibfib(n-3).\n * Please write a function to efficiently compute the n-th element of the fibfib number sequence.\n * >>> fibfib(1)\n * 0\n * >>> fibfib(5)\n * 4\n * >>> fibfib(8)\n * 24\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun fibfib(n: Int): Int {",
+    "    val fibs = mutableListOf(0, 0, 1)",
+    "    var index = 0",
+    "    while (fibs.size <= n) {",
+    "        fibs.add(fibs[index] + fibs[index + 1] + fibs[index + 2])",
+    "        index++",
+    "    }",
+    "    return fibs[n]",
+    "}",
+    "",
+    ""
+  ]
+}

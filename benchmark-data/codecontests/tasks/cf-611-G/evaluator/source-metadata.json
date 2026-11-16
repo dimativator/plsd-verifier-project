@@ -1,0 +1,35 @@
+{
+  "name": "611_G. New Year and Cake",
+  "description": "Limak is a little polar bear. According to some old traditions, his bear family prepared a New Year cake. And Limak likes cakes.\n\nAs you may know, a New Year cake is a strictly convex polygon with n vertices.\n\nParents won't allow Limak to eat more than half of a cake because he would get sick. After some thinking they decided to cut a cake along one of n·(n - 3) / 2 diagonals. Then Limak will get a non-greater piece.\n\nLimak understands rules but he won't be happy if the second piece happens to be much bigger. Limak's disappointment will be equal to the difference between pieces' areas, multiplied by two. It can be proved that it will be integer for the given constraints.\n\nThere are n·(n - 3) / 2 possible scenarios. Consider them all and find the sum of values of Limak's disappointment, modulo 109 + 7.\n\nInput\n\nThe first line of the input contains a single integer n (4 ≤ n ≤ 500 000) — the number of vertices in the polygon denoting the cake.\n\nEach of the next n lines contains two integers xi and yi (|xi|, |yi| ≤ 109) — coordinates of the i-th point.\n\nIt's guaranteed that all points are distinct, polygon is strictly convex and points are given in the clockwise order.\n\nOutput\n\nPrint the sum of values of Limak's disappointment over all possible scenarios modulo 109 + 7.\n\nExamples\n\nInput\n\n5\n2 4\n2 7\n5 7\n5 4\n3 -2\n\n\nOutput\n\n90\n\n\nInput\n\n4\n-1000000000 -5000000\n0 1234567\n1 1\n-5 -100000000\n\n\nOutput\n\n525185196\n\n\nInput\n\n8\n-10 0\n-6 6\n0 10\n6 6\n10 0\n6 -6\n0 -10\n-6 -6\n\n\nOutput\n\n5216\n\nNote\n\nIn the first sample possible values of Limak's disappointment are 0, 18, 18, 24, 30.",
+  "source": 2,
+  "difficulty": 13,
+  "cf_rating": 2900,
+  "cf_contest_id": 611,
+  "cf_index": "G",
+  "cf_tags": [
+    "geometry",
+    "two pointers"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00005-of-00039-b7580d2d846c2136.parquet",
+  "source_row": 114,
+  "task_id": "codecontests/cf-611-G",
+  "rating_band": "2400+",
+  "source_difficulty": "G",
+  "url": "https://codeforces.com/problemset/problem/611/G",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

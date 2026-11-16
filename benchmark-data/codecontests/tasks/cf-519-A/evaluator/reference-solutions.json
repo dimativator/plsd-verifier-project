@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "# -*- coding: utf-8 -*-\n\"\"\"\nCreated on Thu Nov  8 10:34:19 2018\n\n@author: Quaint Sun\n\"\"\"\n\nline=[]\nt=0\nwhile t<8:\n    line=line+list(input())\n    t=t+1\n    \nwhite=line.count('Q')*9+line.count('R')*5+line.count('B')*3+line.count('N')*3+line.count('P')\nblack=line.count('q')*9+line.count('r')*5+line.count('b')*3+line.count('n')*3+line.count('p')\n\nif white>black:\n    print('White')\nelif white<black:\n    print('Black')\nelse:\n    print('Draw')\n\n\n\n\n\n\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  string s[8];\n  int i, j, cnta = 0, cntb = 0;\n  for (i = 0; i < 8; i++) {\n    cin >> s[i];\n    for (j = 0; j < 8; j++) {\n      if (s[i][j] == 'Q') cnta += 9;\n      if (s[i][j] == 'R') cnta += 5;\n      if (s[i][j] == 'B') cnta += 3;\n      if (s[i][j] == 'N') cnta += 3;\n      if (s[i][j] == 'P') cnta += 1;\n      if (s[i][j] == 'q') cntb += 9;\n      if (s[i][j] == 'r') cntb += 5;\n      if (s[i][j] == 'b') cntb += 3;\n      if (s[i][j] == 'n') cntb += 3;\n      if (s[i][j] == 'p') cntb += 1;\n    }\n  }\n  if (cnta > cntb)\n    cout << \"White\"\n         << \"\\n\";\n  else if (cntb > cnta)\n    cout << \"Black\"\n         << \"\\n\";\n  else\n    cout << \"Draw\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.HashMap;\nimport java.util.Scanner;\n\npublic class ABChess {\n\n\tpublic static void main(String[] args) {\n\t\tScanner scanner = new Scanner(System.in);\n\n\t\tint white = 0;\n\t\tint black = 0;\n\n\t\tHashMap<Character, Integer> map = new HashMap<Character, Integer>();\n\t\tmap.put('Q', 9);\n\t\tmap.put('R', 5);\n\t\tmap.put('N', 3);\n\t\tmap.put('B', 3);\n\t\tmap.put('P', 1);\n\t\tmap.put('K', 0);\n\t\tmap.put('q', 9);\n\t\tmap.put('r', 5);\n\t\tmap.put('n', 3);\n\t\tmap.put('b', 3);\n\t\tmap.put('p', 1);\n\t\tmap.put('k', 0);\n\n\t\tfor (int j = 0; j < 8; j++) {\n\t\t\tString line = scanner.nextLine();\n\t\t\tfor (int i = 0; i < line.length(); i++) {\n\t\t\t\tchar c = line.charAt(i);\n\n\t\t\t\tif (c == '.' || c == 'k' || c == 'K')\n\t\t\t\t\tcontinue;\n\n\t\t\t\tif (c > 'a')\n\t\t\t\t\tblack += map.get(c);\n\t\t\t\telse\n\t\t\t\t\twhite += map.get(c);\n\t\t\t}\n\n\t\t}\n\n\t\tif (black > white)\n\t\t\tSystem.out.println(\"Black\");\n\t\tif (white > black)\n\t\t\tSystem.out.println(\"White\");\n\t\tif (white == black)\n\t\t\tSystem.out.println(\"Draw\");\n\t}\n}\n"
+  }
+]

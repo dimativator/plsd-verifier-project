@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-131",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/131",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 10,
+  "public_test_count": 1,
+  "unexposed_test_count": 9,
+  "source_review_note": "Statement defines words by spaces, but canonical permits any nonalphabetic preceding character. Tests omit punctuation-before-final-letter distinction.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-131",
+  "public_dir": "tasks/humaneval-131/public",
+  "evaluator_dir": "tasks/humaneval-131/evaluator",
+  "metadata_file": "tasks/humaneval-131/task.json",
+  "evaluation_harness": "tasks/humaneval-131/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-131/evaluation.json"
+}

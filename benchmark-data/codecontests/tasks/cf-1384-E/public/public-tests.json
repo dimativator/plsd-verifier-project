@@ -1,0 +1,8 @@
+{
+  "input": [
+    "5\n3\naab\nbcc\n4\ncabc\nabcb\n3\nabc\ntsr\n4\naabd\ncccd\n5\nabcbd\nbcdda\n"
+  ],
+  "output": [
+    "2\n3\n3\n2\n4\n"
+  ]
+}

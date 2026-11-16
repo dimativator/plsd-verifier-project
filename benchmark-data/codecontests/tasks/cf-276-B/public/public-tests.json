@@ -1,0 +1,10 @@
+{
+  "input": [
+    "aba\n",
+    "abca\n"
+  ],
+  "output": [
+    "First\n",
+    "Second\n"
+  ]
+}

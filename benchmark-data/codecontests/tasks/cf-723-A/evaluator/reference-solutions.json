@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a=list(map(int,input().split()))\na.sort()\nif len(a)%2!=0:\n    s=a[int(len(a)/2)]\n    count=0\n    for x in a:\n        count+=abs(x-s)\n    print(count)\n "
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int N[3];\n  cin >> N[0] >> N[1] >> N[2];\n  sort(N, N + 3);\n  int res = N[1] - N[0] + N[2] - N[1];\n  cout << res << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class MeetingFriends {\n    public static void main(String args[]){\n        Scanner scannerin=new Scanner(System.in);\n        int firstperson_position=scannerin.nextInt();\n        int secondperson_position=scannerin.nextInt();\n        int thirderson_position=scannerin.nextInt();\n        int[] arr_position={firstperson_position,secondperson_position,thirderson_position};\n        Arrays.sort(arr_position);\n        int answer=arr_position[2]-arr_position[0];\n        System.out.println(answer);\n    }\n}\n"
+  }
+]

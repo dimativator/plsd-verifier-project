@@ -1,0 +1,12 @@
+{
+  "input": [
+    "15 3\ncccaabababaccbc\n",
+    "1 1\nu\n",
+    "15 9\ncccaabababaccbc\n"
+  ],
+  "output": [
+    "cccbbabaccbc\n",
+    "\n",
+    "cccccc\n"
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint n;\ndouble p[110];\ndouble mval = -1.0;\ninline int iabs(int x) { return x < 0 ? -x : x; }\nint main() {\n  scanf(\"%d\", &n);\n  for (int i = 0; i <= n; i++) scanf(\"%lf\", &p[i]);\n  for (int i = 0; i <= n; i++) {\n    int a = n - 2 * i;\n    if (a <= 0) break;\n    for (int j = n; j >= 0; j--) {\n      int b = n - 2 * j;\n      if (b >= 0) break;\n      if (!a && !b) continue;\n      double val = (p[i] * double(iabs(b)) + p[j] * double(iabs(a))) /\n                   double(iabs(a) + iabs(b));\n      mval = max(mval, val);\n    }\n  }\n  if (n % 2 == 0) {\n    mval = max(mval, p[n / 2]);\n  }\n  printf(\"%.9lf\", mval);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import static java.lang.Math.*;\nimport static java.util.Arrays.*;\nimport java.util.*;\n\npublic class C {\n    Scanner sc = new Scanner(System.in);\n    \n    void run() {\n        int n = sc.nextInt();\n        double[] ps = new double[n + 1];\n        for (int i = 0; i <= n; i++) ps[i] = sc.nextDouble();\n        int N = n * 2 + 5;\n        double[][] g = new double[N][N];\n        for (int s = 0; s < N; s++) {\n            fill(g[s], INF);\n            for (int t = 0; t < N; t++) if ((t + n - s) % 2 == 0) {\n                int x = (t + n - s) / 2;\n                if (0 <= x && x <= n) {\n                    g[s][t] = -ps[x];\n                }\n            }\n        }\n        double res = mmc(g);\n        System.out.printf(\"%.10f%n\", -res + 1e-10);\n    }\n    \n    double INF = Double.POSITIVE_INFINITY;\n    \n    double mmc(double[][] g) {\n        int n = g.length;\n        double[][] dp = new double[n + 1][n];\n        for (int i = 0; i < n; i++) {\n            fill(dp[i + 1], INF);\n            for (int s = 0; s < n; s++) {\n                for (int t = 0; t < n; t++) {\n                    dp[i + 1][t] = min(dp[i + 1][t], dp[i][s] + g[s][t]);\n                }\n            }\n        }\n        double res = INF;\n        for (int i = 0; i < n; i++) if (dp[n][i] < INF) {\n            double max = -INF;\n            for (int j = 0; j < n; j++) {\n                max = max(max, (dp[n][i] - dp[j][i]) / (n - j));\n            }\n            res = min(res, max);\n        }\n        return res;\n    }\n    \n    void debug(Object...os) {\n        System.err.println(deepToString(os));\n    }\n    \n    public static void main(String[] args) {\n        new C().run();\n    }\n}\n"
+  },
+  {
+    "language": "PYTHON",
+    "code": "\n\ndef main():\n  n=input()\n  x=raw_input().split()\n  ps=[float(s) for s in x]\n  ret=0.0\n  for a in xrange(n):\n    for b in xrange(a+1,n+1):\n      if 2*a>n or 2*b<n:continue\n      ca=( (0.5*n)-b ) / (a-b)\n      cb=( (0.5*n)-a ) / (b-a)\n      ret=max(ret, ca*ps[a]+cb*ps[b])\n  print \"%.9f\"%ret\n\nmain()\n"
+  }
+]

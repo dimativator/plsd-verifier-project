@@ -1,0 +1,34 @@
+{
+  "name": "409_C. Magnum Opus",
+  "description": "Salve, mi amice.\n\nEt tu quidem de lapis philosophorum. Barba non facit philosophum. Labor omnia vincit. Non potest creatio ex nihilo. Necesse est partibus.\n\nRp:\n\nI Aqua Fortis\n\nI Aqua Regia\n\nII Amalgama\n\nVII Minium\n\nIV Vitriol\n\nMisce in vitro et æstus, et nil admirari. Festina lente, et nulla tenaci invia est via.\n\nFac et spera,\n\nVale,\n\nNicolas Flamel\n\nInput\n\nThe first line of input contains several space-separated integers ai (0 ≤ ai ≤ 100).\n\nOutput\n\nPrint a single integer.\n\nExamples\n\nInput\n\n2 4 6 8 10\n\n\nOutput\n\n1",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 1700,
+  "cf_contest_id": 409,
+  "cf_index": "C",
+  "cf_tags": [
+    "*special"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00002-of-00039-9cea23812e920e41.parquet",
+  "source_row": 191,
+  "task_id": "codecontests/cf-409-C",
+  "rating_band": "1600-1999",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/409/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

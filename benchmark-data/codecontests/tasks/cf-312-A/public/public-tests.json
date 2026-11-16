@@ -1,0 +1,8 @@
+{
+  "input": [
+    "5\nI will go to play with you lala.\nwow, welcome.\nmiao.lala.\nmiao.\nmiao .\n"
+  ],
+  "output": [
+    "Freda's\nOMG>.< I don't know!\nOMG>.< I don't know!\nRainbow's\nOMG>.< I don't know!\n"
+  ]
+}

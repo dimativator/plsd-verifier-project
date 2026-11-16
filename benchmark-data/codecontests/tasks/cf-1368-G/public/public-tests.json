@@ -1,0 +1,12 @@
+{
+  "input": [
+    "6 6\nULRUUU\nDUUDDD\nUDDLRU\nDLRLRD\nULRULR\nDLRDLR\n",
+    "2 4\nUUUU\nDDDD\n",
+    "2 3\nULR\nDLR\n"
+  ],
+  "output": [
+    "133\n",
+    "4\n",
+    "6\n"
+  ]
+}

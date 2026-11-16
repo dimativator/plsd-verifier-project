@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from collections import deque\nfrom math import ceil,floor,sqrt,gcd\ndef ii(): return int(input())\ndef mi(): return map(int,input().split())\ndef li(): return list(mi())\ndef si():return input()\nn=ii()\na=li()\nm={}\nfor i in a:\n    if i not in m:\n        m[i]=1\n    else:\n        m[i]+=1\nb=[]\nfor i in m.keys():\n    b.append(m[i])\nb.sort()\nif(len(b)==3):\n    print(b[0]+b[1])\nelif(len(b)==2):\n    print(b[0])\nelse:\n    print('0')"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint arr[4];\nint main() {\n  int n, a;\n  scanf(\"%d\", &n);\n  for (int i = 0; i < n; i++) {\n    scanf(\"%d\", &a);\n    arr[a]++;\n  }\n  return printf(\"%d\\n\", n - max(max(arr[1], arr[2]), arr[3])), 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.PrintWriter;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.util.*;\n\npublic class sequence {\n\n    /**\n     * @param args\n     * @throws IOException\n     * @throws NumberFormatException\n     */\n    public static void main(String[] args) throws NumberFormatException,\n            IOException {\n        BufferedReader str = new BufferedReader(\n                new InputStreamReader(System.in));\n        int n = Integer.parseInt(str.readLine());\n        PrintWriter out = new PrintWriter(System.out);\n\n        int[] arr = new int[3];\n        StringTokenizer input = new StringTokenizer(str.readLine());\n        for (int i = 0; i < n; i++) {\n\n            int x = Integer.parseInt(input.nextToken());\n            arr[(x - 1)]++;\n\n        }\n        int max = 0;\n        max = Math.max(arr[0], Math.max(arr[1], arr[2]));\n        out.println(n - max);\n        out.close();\n\n    }\n\n}\n"
+  }
+]

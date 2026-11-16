@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\na=list(map(int,input().split()))\nif len(set(a))==n:\n    a.append(n)\n    print(*a)\nelse:\n    a.insert(0,0)\n    b=[n]\n    x=n\n    while x!=1:\n        b.append(a[x-1])\n        x=a[x-1]\n    print(*b[::-1])"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\n#pragma GCC optimize(\"unroll-loops\", \"omit-frame-pointer\", \"inline\")\n#pragma GCC option(\"arch=native\", \"tune=native\", \"no-zero-upper\")\n#pragma GCC target(\"sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2\")\n#pragma GCC optimize(\"Ofast\")\nusing namespace std;\nconst long double pi = acos(-1);\nconst long long int M = 1e9 + 7, N = 1e7 + 5, INF = 1e18;\nlong long int n, t;\nvector<long long int> p, r;\nvoid solve() {\n  cin >> n;\n  p.resize(n + 1, 0);\n  for (long long int i = 2; i <= n; i++) {\n    cin >> p[i];\n  }\n  r.push_back(n);\n  while (r.back() != 1) {\n    r.push_back(p[r.back()]);\n  }\n  reverse(r.begin(), r.end());\n  for (auto it : r) cout << it << \" \";\n}\nint32_t main() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  cout.tie(0);\n  solve();\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.lang.*;\nimport java.io.*;\nimport java.math.*;\n\npublic class bmail{\n\t\n\tstatic void path(Stack<Integer> s)\n\t{\n\t\twhile(!s.isEmpty())\n\t\t{\n\t\t\tSystem.out.print(s.pop() + \" \");\n\t\t}\n\t}\n\n\t\n\tpublic static void main(String args[])\n\t{\n\t\tScanner sc=new Scanner(System.in);\n\t\tint n= sc.nextInt();\n\t\tint arr[]=new int[n+1];\n\t\tStack<Integer> stack=new Stack<Integer>();\n\t\tfor(int i=1; i<n; i++)\n\t\t{\t\n\t\t\tarr[i]= sc.nextInt();\n\t\t}\n\t\tint j=n;\n\t\twhile(j>1)\n\t\t{\n\t\t\tstack.add(j);\n\t\t\tj=arr[j-1];\n\t\t}\n\t\tstack.add(1);\n\t\tpath(stack);\n\t}\n}"
+  }
+]

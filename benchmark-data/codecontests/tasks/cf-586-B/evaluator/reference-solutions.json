@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\na1 = [int(s) for s in input().split()]\na2 = [int(s) for s in input().split()]\nb = [int(s) for s in input().split()]\n\nsum = 0\nfor i in range(n-1):\n    sum = sum + a2[i]\n\nsum1 = min(sum + b[0], sum - a2[0] + a1[0] + b[1])\nsum2 = max(sum + b[0], sum - a2[0] + a1[0] + b[1])\n\nsum = sum - a2[0] + a1[0] + b[1]\n\nfor i in range(2, n):\n    sum = sum + b[i] - b[i-1] + a1[i-1] - a2[i-1]\n    if sum < sum1:\n        sum2 = min(sum2,sum1)\n        sum1 = sum\n    else:\n        sum2 = min(sum2, sum)\n\nprint(sum1+sum2)\n        \n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int MAX_N = 50 + 10;\nint a1[MAX_N], a2[MAX_N], b[MAX_N];\nint dp1[MAX_N], dp2[MAX_N], sum[MAX_N];\nint main() {\n  int n;\n  cin >> n;\n  for (int i = 0; i < n - 1; i++) cin >> a1[i];\n  for (int i = 0; i < n - 1; i++) cin >> a2[i];\n  for (int i = 0; i < n; i++) cin >> b[i];\n  for (int i = 0; i < n; i++) {\n    for (int j = i - 1; j >= 0; j--) {\n      dp1[i] += a1[j];\n    }\n  }\n  for (int i = 0; i < n; i++) {\n    for (int j = i; j < n - 1; j++) {\n      dp2[i] += a2[j];\n    }\n  }\n  int ans = 0;\n  int mini = INT_MAX, minI = -1;\n  for (int i = 0; i < n; i++) {\n    sum[i] = b[i] + dp1[i] + dp2[i];\n    if (sum[i] < mini) {\n      mini = sum[i];\n      minI = i;\n    }\n  }\n  ans += sum[minI];\n  sum[minI] = INT_MAX;\n  mini = INT_MAX, minI = -1;\n  for (int i = 0; i < n; i++) {\n    if (sum[i] < mini) {\n      mini = sum[i];\n      minI = i;\n    }\n  }\n  ans += sum[minI];\n  cout << ans << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.Scanner;\n\npublic class Main {\n\n    public static void main(String[] args) {\n        Scanner scan = new Scanner(System.in);\n        int n = scan.nextInt();\n        int[] a1 = new int[n-1];\n        int[] a2 = new int[n-1];\n        int[] b = new int[n];\n        for (int i = 0; i < n-1; i++) {\n            a1[i] = scan.nextInt();\n        }\n        for (int i = 0; i < n-1; i++) {\n            a2[i] = scan.nextInt();\n        }\n        for (int i = 0; i < n; i++) {\n            b[i] = scan.nextInt();\n        }\n        ArrayList<Integer> sums = new ArrayList<>();\n        for (int i = 0; i < n; i++) {\n            int sum = 0;\n            for (int j = 0; j < i; j++) {\n                sum += a1[j];\n            }\n            sum += b[i];\n            for (int j = i; j < n-1; j++) {\n                sum += a2[j];\n            }\n            sums.add(sum);\n        }\n        Collections.sort(sums);\n        System.out.println(sums.get(0) + sums.get(1));\n    }\n    \n}"
+  }
+]

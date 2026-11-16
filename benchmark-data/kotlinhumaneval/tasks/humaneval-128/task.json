@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-128",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/128",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 7,
+  "public_test_count": 1,
+  "unexposed_test_count": 6,
+  "source_review_note": "Positive Int has at most nine freely variable decimal digits when leading digit is odd, so odd-digit product <=9^9. Overflow is not the blocker here.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-128",
+  "public_dir": "tasks/humaneval-128/public",
+  "evaluator_dir": "tasks/humaneval-128/evaluator",
+  "metadata_file": "tasks/humaneval-128/task.json",
+  "evaluation_harness": "tasks/humaneval-128/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-128/evaluation.json"
+}

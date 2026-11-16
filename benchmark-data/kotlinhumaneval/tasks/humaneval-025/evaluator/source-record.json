@@ -1,0 +1,29 @@
+{
+  "task_id": "HumanEval_kotlin/25",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Return list of prime factors of given integer in the order from smallest to largest.\n * Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n * Input number should be equal to the product of all factors\n * >>> factorize(8)\n * [2, 2, 2]\n * >>> factorize(25)\n * [5, 5]\n * >>> factorize(70)\n * [2, 5, 7]\n *\n */\nfun factorize(n: Int): List<Int> {\n",
+  "entry_point": "factorize",
+  "test": "fun main() {\n    var arg00: Int = 2\n    var x0: List<Int> = factorize(arg00)\n    var v0: List<Int> = mutableListOf(2)\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: Int = 4\n    var x1: List<Int> = factorize(arg10)\n    var v1: List<Int> = mutableListOf(2, 2)\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: Int = 8\n    var x2: List<Int> = factorize(arg20)\n    var v2: List<Int> = mutableListOf(2, 2, 2)\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30: Int = 57\n    var x3: List<Int> = factorize(arg30)\n    var v3: List<Int> = mutableListOf(3, 19)\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40: Int = 3249\n    var x4: List<Int> = factorize(arg40)\n    var v4: List<Int> = mutableListOf(3, 3, 19, 19)\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50: Int = 185193\n    var x5: List<Int> = factorize(arg50)\n    var v5: List<Int> = mutableListOf(3, 3, 3, 19, 19, 19)\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n    var arg60: Int = 20577\n    var x6: List<Int> = factorize(arg60)\n    var v6: List<Int> = mutableListOf(3, 19, 19, 19)\n    if (x6 != v6) {\n        throw Exception(\"Exception -- test case 6 did not pass. x6 = \" + x6)\n    }\n\n    var arg70: Int = 18\n    var x7: List<Int> = factorize(arg70)\n    var v7: List<Int> = mutableListOf(2, 3, 3)\n    if (x7 != v7) {\n        throw Exception(\"Exception -- test case 7 did not pass. x7 = \" + x7)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Return list of prime factors of given integer in the order from smallest to largest.\n * Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n * Input number should be equal to the product of all factors\n * >>> factorize(8)\n * [2, 2, 2]\n * >>> factorize(25)\n * [5, 5]\n * >>> factorize(70)\n * [2, 5, 7]\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun factorize(n: Int): List<Int> {",
+    "    var curN = n",
+    "    val factors = mutableListOf<Int>()",
+    "    for (i in 2..n) {",
+    "        if (i * i > n) {",
+    "            break",
+    "        }",
+    "        while (curN % i == 0) {",
+    "            curN /= i",
+    "            factors.add(i)",
+    "        }",
+    "    }",
+    "    if (curN != 1) {",
+    "        factors.add(curN)",
+    "    }",
+    "    return factors",
+    "}",
+    "",
+    ""
+  ]
+}

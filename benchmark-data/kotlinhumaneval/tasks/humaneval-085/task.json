@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-085",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/85",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 7,
+  "public_test_count": 1,
+  "unexposed_test_count": 6,
+  "source_review_note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-085",
+  "public_dir": "tasks/humaneval-085/public",
+  "evaluator_dir": "tasks/humaneval-085/evaluator",
+  "metadata_file": "tasks/humaneval-085/task.json",
+  "evaluation_harness": "tasks/humaneval-085/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-085/evaluation.json"
+}

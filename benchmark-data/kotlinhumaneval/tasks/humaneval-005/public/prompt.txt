@@ -1,0 +1,10 @@
+/**
+ * You are an expert Kotlin programmer, and here is your task.
+ * Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+ * >>> intersperse([], 4)
+ * []
+ * >>> intersperse([1, 2, 3], 4)
+ * [1, 4, 2, 4, 3]
+ *
+ */
+fun intersperse(numbers: List<Any>, delimeter: Int): List<Any> {

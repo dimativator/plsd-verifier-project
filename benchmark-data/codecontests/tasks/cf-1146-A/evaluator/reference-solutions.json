@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "lita=input()\n\na=lita.count('a')\nb=len(lita)\nif a>(b/2):\n    print(b)\nelse:\n    print(2*a-1)\n    "
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int N = 54;\nchar s[N];\nint main() {\n  int n;\n  scanf(\"%s\", s + 1);\n  int i, cnt = 0;\n  n = strlen(s + 1);\n  for (i = 1; i <= n; i++) {\n    if (s[i] == 'a') cnt++;\n  }\n  printf(\"%d\\n\", min(2 * cnt - 1, n));\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class T{\npublic static void main(String [] arg){\nScanner in =new Scanner(System.in);\nString f=in.next();\nint ca=0,cl=0;\nfor(int i=0;i<f.length();i++){\nif(f.charAt(i)=='a')\nca++;\nelse\ncl++;\n}\nif(ca>cl)\nSystem. out.print(f.length());\nelse{\nint g=0;\nwhile(ca<=cl){\ng++;\ncl--;\n}\nSystem.out.print(f.length()-g);\n }\n}}"
+  }
+]

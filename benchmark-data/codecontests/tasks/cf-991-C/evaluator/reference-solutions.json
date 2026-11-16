@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import sys\nimport math\n\nn = int(input())\n\nl = 1\nr = 2*n\n\nwhile(l < r):\n    candies = n\n    numeaten = 0\n    k = (l+r)//2\n#    print(k)\n    while(candies > 0):\n        if candies > k:\n            numeaten += k\n            candies -= k\n        else:\n            numeaten += candies\n            break\n        c = candies//10\n        candies -= c\n    if numeaten < (n+1)//2:\n#        print(n, end = ' ')\n#        print(n//2)\n        l = k+1\n    else:\n        r = k\n\nprint(l)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst long long inf = 2e18;\nconst long long mod = 1e9 + 7;\nconst long long mod2 = 998244353;\nconst long long delta = 12473;\nconst long long maxn = 1e6 + 10;\nlong long p = 0, v = 0;\nlong long n;\nlong long nn;\nlong long power(long long a, long long b) {\n  long long ans = 1;\n  while (b > 0) {\n    if ((long long)b % 2 == 1) ans = (a * ans);\n    b /= 2;\n    a = a * a;\n  }\n  return ans;\n}\nvoid dojob(long long k) {\n  if (n <= k) {\n    v += n;\n    return;\n  }\n  v += k;\n  n -= k;\n  p += (long long)floor(n / 10);\n  n -= (long long)floor(n / 10);\n  ;\n  dojob(k);\n}\nlong long dojob2(long long l, long long r) {\n  if (l == r) return l;\n  long long pp = (long long)floor((l + r) / 2);\n  p = 0;\n  v = 0;\n  n = nn;\n  dojob(pp);\n  if (v >= p)\n    return dojob2(l, pp);\n  else\n    return dojob2(pp + 1, r);\n}\nint main() {\n  cin >> nn;\n  cout << dojob2(1, nn);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\n\nimport static java.lang.System.in;\n\npublic class Main {\n    public static void main(String[] args)throws IOException{\n        Scanner sc = new Scanner(System.in);\n        long n = sc.nextLong();\n        long ans = solve(n);\n        System.out.println(ans);\n    }\n    static long solve(long n){\n        if(n==1) return 1;\n        long hi = (n+1)/2, lo = 0;\n        while(hi-lo>1){\n            long mid = (hi+lo)/2;\n            if(check(n,mid)) hi = mid;\n            else lo = mid;\n        }\n        return hi;\n    }\n    static boolean check(long n, long k){\n        long vas = 0,backup = n;\n        while(n>0){\n            vas +=  Math.min(k,n);\n            n -= Math.min(k,n);\n            n -= n/10;\n        }\n        return vas>=(backup+1)/2;\n    }\n}\n"
+  }
+]

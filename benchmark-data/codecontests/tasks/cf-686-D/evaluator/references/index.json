@@ -1,0 +1,14 @@
+[
+  {
+    "language": "CPP",
+    "file": "references/reference-01.cpp"
+  },
+  {
+    "language": "JAVA",
+    "file": "references/reference-02.java"
+  },
+  {
+    "language": "PYTHON",
+    "file": "references/reference-03.py"
+  }
+]

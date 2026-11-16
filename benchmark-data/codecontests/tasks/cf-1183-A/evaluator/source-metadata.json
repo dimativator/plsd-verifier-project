@@ -1,0 +1,34 @@
+{
+  "name": "1183_A. Nearest Interesting Number",
+  "description": "Polycarp knows that if the sum of the digits of a number is divisible by 3, then the number itself is divisible by 3. He assumes that the numbers, the sum of the digits of which is divisible by 4, are also somewhat interesting. Thus, he considers a positive integer n interesting if its sum of digits is divisible by 4.\n\nHelp Polycarp find the nearest larger or equal interesting number for the given number a. That is, find the interesting number n such that n ≥ a and n is minimal.\n\nInput\n\nThe only line in the input contains an integer a (1 ≤ a ≤ 1000).\n\nOutput\n\nPrint the nearest greater or equal interesting number for the given number a. In other words, print the interesting number n such that n ≥ a and n is minimal.\n\nExamples\n\nInput\n\n\n432\n\n\nOutput\n\n\n435\n\n\nInput\n\n\n99\n\n\nOutput\n\n\n103\n\n\nInput\n\n\n237\n\n\nOutput\n\n\n237\n\n\nInput\n\n\n42\n\n\nOutput\n\n\n44",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 800,
+  "cf_contest_id": 1183,
+  "cf_index": "A",
+  "cf_tags": [
+    "implementation"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00016-of-00039-bf38b0908b322307.parquet",
+  "source_row": 272,
+  "task_id": "codecontests/cf-1183-A",
+  "rating_band": "800-1199",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/1183/A",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

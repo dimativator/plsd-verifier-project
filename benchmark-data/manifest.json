@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "total_tasks": 1661,
+  "datasets": {
+    "kotlinhumaneval": {
+      "manifest": "kotlinhumaneval/manifest.json",
+      "task_count": 161
+    },
+    "codecontests": {
+      "manifest": "codecontests/manifest.json",
+      "task_count": 1500
+    }
+  },
+  "source_hashes": {
+    "humaneval_tasks_sha256": "6fc78be5c88ad2e2d1d24a3ca3958d03b96d9c4d0eba7c5d6f4841aded5cbcd1",
+    "codecontests_tasks_sha256": "bdf953ffdd22ea435454a431ae042132dc3afee5aa5eb00f4d19ce47a45e5b4d"
+  },
+  "source_pool_manifest_sha256": "b5470392223715c3a233f91c3e5d2c318f873b2125b443401121f4c72e45cb74",
+  "state": "packaged_not_behaviorally_validated",
+  "runtime_included": false,
+  "experiment": {
+    "primary_outcome": "final_submission_passes_hidden_tests",
+    "baseline_tools": [
+      "compiler",
+      "public_tests"
+    ],
+    "verifier_condition_tools": [
+      "compiler",
+      "public_tests",
+      "Jormungandr"
+    ],
+    "tool_use": "agent_controlled",
+    "verifier_success_required": false
+  },
+  "remaining_work": [
+    "Review and implement CodeContests output checkers",
+    "Review source quality notes and generated-test validity",
+    "Run reference sanity checks with the selected toolchain",
+    "Configure Kotlin/JVM runtime limits and isolated agent execution"
+  ]
+}

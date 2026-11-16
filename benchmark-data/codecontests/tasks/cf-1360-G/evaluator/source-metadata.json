@@ -1,0 +1,36 @@
+{
+  "name": "1360_G. A/B Matrix",
+  "description": "You are given four positive integers n, m, a, b (1 ≤ b ≤ n ≤ 50; 1 ≤ a ≤ m ≤ 50). Find any such rectangular matrix of size n × m that satisfies all of the following conditions:\n\n  * each row of the matrix contains exactly a ones; \n  * each column of the matrix contains exactly b ones; \n  * all other elements are zeros. \n\n\n\nIf the desired matrix does not exist, indicate this.\n\nFor example, for n=3, m=6, a=2, b=1, there exists a matrix satisfying the conditions above:\n\n$$$ \\begin{vmatrix} 0 & 1 & 0 & 0 & 0 & 1 \\\\\\ 1 & 0 & 0 & 1 & 0 & 0 \\\\\\ 0 & 0 & 1 & 0 & 1 & 0 \\end{vmatrix} $$$\n\nInput\n\nThe first line contains an integer t (1 ≤ t ≤ 1000) — the number of test cases. Then t test cases follow.\n\nEach test case is described by four positive integers n, m, a, b (1 ≤ b ≤ n ≤ 50; 1 ≤ a ≤ m ≤ 50), where n and m are the sizes of the matrix, and a and b are the number of ones for rows and columns, respectively.\n\nOutput\n\nFor each test case print:\n\n  * \"YES\" (without quotes) and the required matrix (if there are several answers, print any) if it exists, or \n  * \"NO\" (without quotes) if it does not exist. \n\n\n\nTo print the matrix n × m, print n rows, each of which consists of m numbers 0 or 1 describing a row of the matrix. Numbers must be printed without spaces.\n\nExample\n\nInput\n\n\n5\n3 6 2 1\n2 2 2 1\n2 2 2 2\n4 4 2 2\n2 1 1 2\n\n\nOutput\n\n\nYES\n010001\n100100\n001010\nNO\nYES\n11\n11\nYES\n1100\n1100\n0011\n0011\nYES\n1\n1",
+  "source": 2,
+  "difficulty": 13,
+  "cf_rating": 1900,
+  "cf_contest_id": 1360,
+  "cf_index": "G",
+  "cf_tags": [
+    "constructive algorithms",
+    "greedy",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00005-of-00039-b7580d2d846c2136.parquet",
+  "source_row": 294,
+  "task_id": "codecontests/cf-1360-G",
+  "rating_band": "1600-1999",
+  "source_difficulty": "G",
+  "url": "https://codeforces.com/problemset/problem/1360/G",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

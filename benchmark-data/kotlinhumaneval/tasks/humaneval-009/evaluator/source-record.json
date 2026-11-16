@@ -1,0 +1,15 @@
+{
+  "task_id": "HumanEval_kotlin/9",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * From a given list of integers, generate a list of rolling maximum element found until given moment\n * in the sequence.\n * >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n * [1, 2, 3, 3, 3, 4, 4]\n *\n */\nfun rollingMax(numbers: List<Int>): List<Int> {\n",
+  "entry_point": "rollingMax",
+  "test": "fun main() {\n    var arg00: List<Int> = mutableListOf()\n    var x0: List<Int> = rollingMax(arg00)\n    var v0: List<Int> = mutableListOf()\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: List<Int> = mutableListOf(1, 2, 3, 4)\n    var x1: List<Int> = rollingMax(arg10)\n    var v1: List<Int> = mutableListOf(1, 2, 3, 4)\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: List<Int> = mutableListOf(4, 3, 2, 1)\n    var x2: List<Int> = rollingMax(arg20)\n    var v2: List<Int> = mutableListOf(4, 4, 4, 4)\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30: List<Int> = mutableListOf(3, 2, 3, 100, 3)\n    var x3: List<Int> = rollingMax(arg30)\n    var v3: List<Int> = mutableListOf(3, 3, 3, 100, 100)\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * From a given list of integers, generate a list of rolling maximum element found until given moment\n * in the sequence.\n * >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n * [1, 2, 3, 3, 3, 4, 4]\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun rollingMax(numbers: List<Int>): List<Int> {",
+    "    return numbers.runningFold(0) { mx, value -> Math.max(mx, value) }.drop(1)",
+    "}",
+    "",
+    ""
+  ]
+}

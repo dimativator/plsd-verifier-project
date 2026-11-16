@@ -1,0 +1,12 @@
+{
+  "input": [
+    "cbacacacbcbababacbcb\n",
+    "abc\n",
+    "cacbac\n"
+  ],
+  "output": [
+    "cbaaacbcaaabc",
+    "a\n",
+    "cacac"
+  ]
+}

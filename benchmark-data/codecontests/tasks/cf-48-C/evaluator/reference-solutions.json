@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "eps=10**(-9)\nmn=10\nmx=100000000\nn=int(input())\narr=list(map(int,input().split()))\nfor i in range(n):\n    mn = max(mn,(arr[i]*10)/(i+1))\n    mx = min(mx,((arr[i]+1)*10)/(i+1))\nans1=((n+1)*mn)//10\nans2=((n+1)*(mx-eps))//10\nif ans2>ans1:\n    print('not unique')\nelse:\n    print('unique')\n    print(int(ans1))\n\n\n\n\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint n, a[1005];\nint main() {\n  scanf(\"%d\", &n);\n  for (int i = 0; i < n; i++) scanf(\"%d\", &a[i]);\n  double mx = (a[0] + 1) * 10.0, mi = a[0] * 10.0;\n  for (int i = 1; i < n; i++) {\n    mx = min(mx, (a[i] + 1) * 10.0 / (i + 1));\n    mi = max(mi, (a[i]) * 10.0 / (i + 1));\n  }\n  mi += 1e-9;\n  mx -= 1e-9;\n  if ((int)(mx * (n + 1) / 10.0) == (int)(mi * (n + 1) / 10.0))\n    printf(\"unique\\n%d\\n\", (int)(mi * (n + 1) / 10.0));\n  else\n    printf(\"not unique\\n\");\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedOutputStream;\nimport java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.io.OutputStream;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Collections;\nimport java.util.HashMap;\nimport java.util.HashSet;\nimport java.util.Iterator;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.Scanner;\nimport java.util.Set;\n\n\n\n\n\npublic class abc {\n    public static void main(String args[])throws IOException\n    {\n       BufferedReader br=new BufferedReader(new InputStreamReader(System.in));\n       int n=Integer.parseInt(br.readLine());\n\t\tString s[]=br.readLine().trim().split(\"\\\\ \");\n\t\tint a[]=new int[n];\n\t\tfor(int i=0;i<n;i++)\n\t\ta[i]= Integer.parseInt(s[i]);\n\t\tdouble min=((double)a[0])*(double)10.0;\n\t\tdouble max=min+(double)10;\n\t\tfor(int i=1;i<n;i++){\n\t\t\tdouble min1=(double)a[i]*(double)10.0;\n\t\t\tdouble max1=min1+(double)10.0;\n\t\t\tmax1/=(double)(i+1);\n\t\t\tmin1/=(double)(i+1);\n\t\t\tif(max1<max)\n\t\t\t\tmax=max1;\n\t\t\tif(min1>min)\n\t\t\t\tmin=min1;\n\t\t}\n//\t\tSystem.out.println(max-(double)0.0000001+\" \"+min);\n\t\tdouble totalTailMax=(max-(double)0.0000001)*(double)(n+1);\n\t\tdouble totalTailMin=min*(double)(n+1);\n//\t\tSystem.out.println(totalTailMax+\" \"+totalTailMin);\n\t\tlong ansMax=(long)totalTailMax/(long)10;\n\t\tlong ansMin=(long)totalTailMin/(long)10;\n//\t\tSystem.out.println(ansMax+\" \"+ansMin);\n\t\tif(ansMax==ansMin){\n\t\t\tSystem.out.println(\"unique\"+\"\\n\"+ansMax);\n\t\t}\n\t\telse\n\t\t\tSystem.out.println(\"not unique\");\n    }\n}"
+  }
+]

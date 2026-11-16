@@ -1,0 +1,35 @@
+{
+  "name": "1051_D. Bicolorings",
+  "description": "You are given a grid, consisting of 2 rows and n columns. Each cell of this grid should be colored either black or white.\n\nTwo cells are considered neighbours if they have a common border and share the same color. Two cells A and B belong to the same component if they are neighbours, or if there is a neighbour of A that belongs to the same component with B.\n\nLet's call some bicoloring beautiful if it has exactly k components.\n\nCount the number of beautiful bicolorings. The number can be big enough, so print the answer modulo 998244353.\n\nInput\n\nThe only line contains two integers n and k (1 ≤ n ≤ 1000, 1 ≤ k ≤ 2n) — the number of columns in a grid and the number of components required.\n\nOutput\n\nPrint a single integer — the number of beautiful bicolorings modulo 998244353.\n\nExamples\n\nInput\n\n3 4\n\n\nOutput\n\n12\n\n\nInput\n\n4 1\n\n\nOutput\n\n2\n\n\nInput\n\n1 2\n\n\nOutput\n\n2\n\nNote\n\nOne of possible bicolorings in sample 1:\n\n<image>",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 1700,
+  "cf_contest_id": 1051,
+  "cf_index": "D",
+  "cf_tags": [
+    "bitmasks",
+    "dp"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00011-of-00039-5de236be5188959d.parquet",
+  "source_row": 102,
+  "task_id": "codecontests/cf-1051-D",
+  "rating_band": "1600-1999",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/1051/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

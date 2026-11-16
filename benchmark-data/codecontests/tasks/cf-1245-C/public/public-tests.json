@@ -1,0 +1,14 @@
+{
+  "input": [
+    "amanda\n",
+    "nnn\n",
+    "banana\n",
+    "ouuokarinn\n"
+  ],
+  "output": [
+    "0\n",
+    "3\n",
+    "1\n",
+    "4\n"
+  ]
+}

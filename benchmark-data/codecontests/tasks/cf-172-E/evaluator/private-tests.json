@@ -1,0 +1,18 @@
+{
+  "input": [
+    "<a/>\n6\na\na a\nb\na a a\nb a\na b\n",
+    "<hnhi><ihjhi><ihjhi></ihjhi></ihjhi><hnhi/></hnhi><h><hnhi><hnhi><ihjhi></ihjhi></hnhi></hnhi><ihjhi></ihjhi></h>\n10\nhnhi ihjhi\nihjhi ihjhi\nh h h\nihjhi h ihjhi\nhnhi\nh\nihjhi hnhi\nh ihjhi h ihjhi h\nh ihjhi h\nhnhi\n",
+    "<u><u><u><u/><u/><u><u/></u></u><u/></u></u><u/>\n10\nu u u\nu\nu\nu u u u u u\nu\nu u u\nu\nu\nu u u\nu u u u u\n",
+    "<a><b><b></b></b></a><a><b></b><b><v/></b></a><b></b>\n4\na\na b b\na b\nb a\n",
+    "<a><a/></a>\n5\na\na a\na a a\nb a\na b\n",
+    "<b><aa/></b><aa><b/><b/></aa>\n5\naa b\nb\naa\nb aa\na\n"
+  ],
+  "output": [
+    "1\n0\n0\n0\n0\n0\n",
+    "3\n1\n0\n0\n4\n1\n0\n0\n0\n4\n",
+    "6\n9\n9\n0\n9\n6\n9\n9\n6\n1\n",
+    "2\n1\n4\n0\n",
+    "2\n1\n0\n0\n0\n",
+    "2\n3\n2\n1\n0\n"
+  ]
+}

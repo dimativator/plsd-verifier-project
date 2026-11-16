@@ -1,0 +1,14 @@
+{
+  "input": [
+    "1\n2 2\nAA\nAA\n",
+    "1\n4 4\nAAAA\nAAAA\nAAAA\nAAAA\n",
+    "1\n3 3\nAAA\nAAA\nAAA\n",
+    "1\n1 1\nA\n"
+  ],
+  "output": [
+    "0\n",
+    "0\n",
+    "0\n",
+    "0\n"
+  ]
+}

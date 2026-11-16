@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "num_cashiers = int(input())\nqueue_sizes = list(map(lambda x: int(x) * 15, input().split()))\n\nitems = []\n\nfor i in range(num_cashiers):\n    items_list = sum(map(lambda x: int(x) * 5, input().split()))\n    items.append(items_list)\n\nmin_time = min(change + groceries for change, groceries in zip(queue_sizes, items))\nprint(min_time)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int a, b, c, d, e, f, n, arr1[1000], arr[1000];\n  cin >> n;\n  for (int i = 0; i < n; i++) cin >> arr1[i];\n  for (int j = 0; j < n; j++) {\n    int sum = 0;\n    for (int i = 0; i < arr1[j]; i++) {\n      cin >> b;\n      sum = sum + (5 * b);\n    }\n    sum += 15 * arr1[j];\n    arr[j] = sum;\n  }\n  cout << *min_element(arr, arr + n) << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\npublic class problem {\n    public static void main(String[] args) {\n        Scanner input = new Scanner(System.in);\n        int[] number = new int[100000];\n        int[] array = new int[100000];\n        int[] time = new int[100000];\n        int i,j,n,min,sum,x=0;\n        n = input.nextInt();\n        for(i=0;i<n;i++){\n            number[i] = input.nextInt();\n        }\n        for(i=0;i<n;i++){\n            sum=0;\n            for(j=0;j<number[i];j++){\n                array[j] = input.nextInt();\n                sum+= array[j]*5;\n                if(j==number[i]-1)sum+=number[i]*15;\n            }\n            time[x] = sum;\n            x++;\n        }\n        min = time[0];\n        for(x=0;x<n;x++){\n            if(min>time[x])min = time[x];\n        }\n        System.out.println(min);\n   }\n}\n"
+  }
+]

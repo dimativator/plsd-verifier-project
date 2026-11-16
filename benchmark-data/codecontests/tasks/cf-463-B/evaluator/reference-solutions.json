@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\ns=list(map(int,input().split()))\nm,h,d=0,0,0\nfor i in range(n):\n    m+=h-s[i]\n    if(m<0):\n        d-=m\n        m=0\n    h=s[i]\nprint(d)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint a[100005];\nint main() {\n  int i, n;\n  int paid, e;\n  while (scanf(\"%d\", &n) == 1) {\n    e = 0;\n    paid = 0;\n    a[0] = 0;\n    for (i = 1; i <= n; i++) scanf(\"%d\", &a[i]);\n    for (int i = 0; i < n; i++) {\n      e += (a[i] - a[i + 1]);\n      if (e < 0) paid += -e, e = 0;\n    }\n    printf(\"%d\\n\", paid);\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.math.*;\nimport java.security.*;\nimport java.text.*;\nimport java.util.*;\nimport java.util.concurrent.*;\nimport java.util.regex.*;\n\npublic class cf {\n    public static void main(String[] args) throws Exception {\n        Scanner in=new Scanner(System.in);\n        int n=in.nextInt();\n        int max=in.nextInt();\n        int pre=max;\n        int pos,tem;\n        int energ=0;\n        for(int i=0;i<n-1;i++)\n        {\n        \tpos=in.nextInt();\n        \ttem=pre-pos;\n        \tif(energ+tem<0)\n        \t{\n        \t\tmax+=Math.abs(energ+tem);\n        \t\tenerg=0;\n        \t}\n        \telse\n        \t\tenerg+=tem;\n        \tpre=pos;\n        }\n        System.out.println(max);\n    }\n}"
+  }
+]

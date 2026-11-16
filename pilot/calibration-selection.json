@@ -1,0 +1,110 @@
+{
+  "seed": 20261114,
+  "task_count": 8,
+  "conditions": [
+    "baseline",
+    "verifier"
+  ],
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "medium",
+  "repetitions": 1,
+  "selection": "Eight previously unused Codeforces problems chosen by algorithm family and complete input/output statements, before any agent outcomes. Ratings 1600-2100. No filtering by verifier success or model outcomes.",
+  "checker_review": "All eight statements require one uniquely determined integer. Whitespace-token comparison is sufficient.",
+  "hidden_suites": {
+    "kotlinhumaneval": [
+      "HiddenTests.kt"
+    ],
+    "codecontests": [
+      "private-tests.json"
+    ]
+  },
+  "generated_tests": "Excluded from this plumbing pilot before agent runs because generated input-domain validity has not been reviewed. Source data remains unchanged.",
+  "runtime_limits": {
+    "test_timeout_seconds": 10,
+    "jvm_max_heap": "1g"
+  },
+  "agent_limits": {
+    "steps": 0,
+    "cost": 0,
+    "wall_time_seconds": 0,
+    "meaning": "No imposed agent budget for this plumbing pilot"
+  },
+  "primary_outcome": "All final hidden tests pass",
+  "tasks": [
+    {
+      "dataset": "codecontests",
+      "id": "cf-460-C",
+      "rating_band": "1600-1999",
+      "difficulty": 1700,
+      "checker": "tokens",
+      "family": "Binary search with a difference-array feasibility check"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-483-B",
+      "rating_band": "1600-1999",
+      "difficulty": 1800,
+      "checker": "tokens",
+      "family": "Binary search with integer division and inclusion-exclusion"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1060-C",
+      "rating_band": "1600-1999",
+      "difficulty": 1600,
+      "checker": "tokens",
+      "family": "Subarray sums, product overflow, and rectangle boundaries"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-895-B",
+      "rating_band": "1600-1999",
+      "difficulty": 1700,
+      "checker": "tokens",
+      "family": "Counting pairs with duplicates and inclusive division boundaries"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1355-C",
+      "rating_band": "1600-1999",
+      "difficulty": 1800,
+      "checker": "tokens",
+      "family": "Prefix sums and strict triangle-inequality boundaries"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-607-B",
+      "rating_band": "1600-1999",
+      "difficulty": 1900,
+      "checker": "tokens",
+      "family": "Interval dynamic programming and empty-interval base cases"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-988-F",
+      "rating_band": "2000-2399",
+      "difficulty": 2100,
+      "checker": "tokens",
+      "family": "Dynamic programming with unreachable states and rain boundaries"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-958-C2",
+      "rating_band": "2000-2399",
+      "difficulty": 2000,
+      "checker": "tokens",
+      "family": "Prefix remainders and dynamic programming over nonempty partitions"
+    }
+  ],
+  "purpose": "Calibration only, excluded from future confirmatory evaluation",
+  "screening_exclusions": {
+    "cf-922-E": "An input constraint is missing and represented as <image>."
+  },
+  "criteria": {
+    "workflow_ready": "Agents consume tool observations before submission, with no infrastructure errors.",
+    "verifier_engagement": "Record calls and consumed diagnostics separately from hidden-test outcomes. Unsupported or skipped checks do not establish verification.",
+    "difficulty_headroom": "Baseline hidden-test success below 100 percent indicates headroom in this sample.",
+    "descriptive_outcome": "Report both success rates and paired wins/losses/ties. No significance or efficacy claim from eight tasks.",
+    "inconclusive_for_feedback_effect": "No verifier calls, no supported diagnostics, baseline ceiling, or infrastructure errors prevent a useful feedback-effect interpretation."
+  }
+}

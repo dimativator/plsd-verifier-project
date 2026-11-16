@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nl = [int(x) for x in input().split()]\n\nwhile len(l) > 1:\n    \n    if len([i for i in range(len(l)-1) if abs(l[i] - l[i+1]) > 1 ])>0:\n        print ('NO')\n        exit(0)\n    \n    l.remove(max(l))\n\nprint('YES')\n        "
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint n, a[111];\nbool u[111];\nbool pr(int x) {\n  int y = -1, z = -1;\n  for (int i = x; i < n; ++i)\n    if (!u[i]) {\n      y = a[i];\n      break;\n    }\n  for (int i = x; i >= 0; --i)\n    if (!u[i]) {\n      z = a[i];\n      break;\n    }\n  if (y < 0 || z < 0)\n    return 0;\n  else\n    return abs(y - z) > 1;\n}\nint main() {\n  ios_base::sync_with_stdio(0);\n  cin >> n;\n  for (int i = 0; i < n; ++i) {\n    cin >> a[i];\n    if (i > 0)\n      if (abs(a[i] - a[i - 1]) > 1) return cout << \"NO\", 0;\n  }\n  for (int i = 0; i < n; ++i) {\n    int mx = 0, mi;\n    for (int j = 0; j < n; ++j)\n      if (a[j] > mx && !u[j]) {\n        mx = a[j];\n        mi = j;\n      }\n    u[mi] = 1;\n    if (pr(mi)) return cout << \"NO\", 0;\n  }\n  cout << \"YES\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class APRILFOOLB {\n    public static void main(String[] args) {\n        Scanner s = new Scanner(System.in);\n        int n = s.nextInt();\n        int[] arr = new int[n];\n        for(int i = 0;i<n;i++){\n            arr[i] = s.nextInt();\n        }\n        boolean bool =false;\n        for(int i = 0;i<n-1;i++){\n            if(Math.abs(arr[i] - arr[i+1]) >= 2){\n                bool = true;\n                break;\n            }\n        }\n        if(bool){\n            System.out.println(\"NO\");\n        }else{\n            System.out.println(\"YES\");\n        }\n    }\n}\n"
+  }
+]

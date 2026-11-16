@@ -1,0 +1,12 @@
+/**
+ * You are an expert Kotlin programmer, and here is your task.
+ * Return length of given string
+ * >>> strlen('')
+ * 0
+ * >>> strlen('abc')
+ * 3
+ *
+ */
+fun strlen(string: String): Int {
+    TODO("Implement the function")
+}

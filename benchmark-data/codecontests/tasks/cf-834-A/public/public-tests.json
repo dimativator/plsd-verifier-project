@@ -1,0 +1,12 @@
+{
+  "input": [
+    "^ v\n6\n",
+    "^ &gt;\n1\n",
+    "&lt; ^\n3\n"
+  ],
+  "output": [
+    "undefined\n",
+    "undefined\n",
+    "undefined\n"
+  ]
+}

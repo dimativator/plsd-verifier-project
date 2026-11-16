@@ -1,0 +1,10 @@
+{
+  "input": [
+    "5 3\n4 2 1 10 5\napple\norange\nmango\n",
+    "6 5\n3 5 1 6 8 1\npeach\ngrapefruit\nbanana\norange\norange\n"
+  ],
+  "output": [
+    "7 19\n",
+    "11 30\n"
+  ]
+}

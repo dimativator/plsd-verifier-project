@@ -1,0 +1,38 @@
+{
+  "name": "842_C. Ilya And The Tree",
+  "description": "Ilya is very fond of graphs, especially trees. During his last trip to the forest Ilya found a very interesting tree rooted at vertex 1. There is an integer number written on each vertex of the tree; the number written on vertex i is equal to ai.\n\nIlya believes that the beauty of the vertex x is the greatest common divisor of all numbers written on the vertices on the path from the root to x, including this vertex itself. In addition, Ilya can change the number in one arbitrary vertex to 0 or leave all vertices unchanged. Now for each vertex Ilya wants to know the maximum possible beauty it can have.\n\nFor each vertex the answer must be considered independently.\n\nThe beauty of the root equals to number written on it.\n\nInput\n\nFirst line contains one integer number n — the number of vertices in tree (1 ≤ n ≤ 2·105).\n\nNext line contains n integer numbers ai (1 ≤ i ≤ n, 1 ≤ ai ≤ 2·105).\n\nEach of next n - 1 lines contains two integer numbers x and y (1 ≤ x, y ≤ n, x ≠ y), which means that there is an edge (x, y) in the tree.\n\nOutput\n\nOutput n numbers separated by spaces, where i-th number equals to maximum possible beauty of vertex i.\n\nExamples\n\nInput\n\n2\n6 2\n1 2\n\n\nOutput\n\n6 6 \n\n\nInput\n\n3\n6 2 3\n1 2\n1 3\n\n\nOutput\n\n6 6 6 \n\n\nInput\n\n1\n10\n\n\nOutput\n\n10 ",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 2000,
+  "cf_contest_id": 842,
+  "cf_index": "C",
+  "cf_tags": [
+    "dfs and similar",
+    "graphs",
+    "math",
+    "number theory",
+    "trees"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00008-of-00039-7246e6b7423b404f.parquet",
+  "source_row": 243,
+  "task_id": "codecontests/cf-842-C",
+  "rating_band": "2000-2399",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/842/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

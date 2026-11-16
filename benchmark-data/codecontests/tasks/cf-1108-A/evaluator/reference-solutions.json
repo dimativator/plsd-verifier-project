@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "qry=int(input())\nfor _ in range(qry):\n\tlrs=list(map(int,input().split()))\n\tif lrs[0]==lrs[2]:\n\t\tprint(lrs[0],lrs[3])\n\telse:\n\t\tprint(lrs[0],lrs[2])"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nvoid quicken() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  cout.tie(0);\n}\nint main() {\n  quicken();\n  int q;\n  cin >> q;\n  long long l1, r1, l2, r2;\n  while (q--) {\n    cin >> l1 >> r1 >> l2 >> r2;\n    if (l1 != l2)\n      cout << l1 << \" \" << l2 << '\\n';\n    else if (r1 != r2)\n      cout << r1 << \" \" << r2 << '\\n';\n    else\n      cout << l1 << \" \" << l1 + 1 << '\\n';\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.Scanner;\n\npublic class Main{\n\n    public static void main(String[] args) {\n        Scanner ss = new Scanner(System.in);\n        int q = ss.nextInt();\n\n        for (int i = 0; i < q; i++) {\n            int l1 = ss.nextInt();\n            int r1 = ss.nextInt();\n            int l2 = ss.nextInt();\n            int r2 = ss.nextInt();\n            \n            System.out.print(l1+\" \");\n            if(l2!=l1)\n            {\n                System.out.print(l2);\n            }\n            else{\n                l2++;\n                System.out.print(l2);\n            }\n            System.out.println(\"\");\n\n        }\n\n    }\n}\n"
+  }
+]

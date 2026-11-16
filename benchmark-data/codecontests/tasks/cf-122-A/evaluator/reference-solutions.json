@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "lucky_numbers = [4, 7, 44, 77, 47, 74, 444, 447, 474, 744, 777, 774, 747, 477]\nn = input()\nlucky = True\nfor i in range(0, len(n)):\n    if n[i] != '4' and n[i] != '7' :\n        lucky = False\n        break\n\nif lucky:\n    print(\"YES\")\nelse:\n    lucky = False\n    for i in lucky_numbers:\n        if int(n) % i == 0:\n            lucky = True\n            break\n    if lucky:\n        print(\"YES\")\n    else:\n        print(\"NO\")\n        "
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint main() {\n  int x, y;\n  scanf(\"%d\", &x);\n  if ((x % 4 == 0) || (x % 7 == 0) || (x % 47 == 0) || (x % 74 == 0) ||\n      (x % 447 == 0) || (x % 474 == 0) || (x % 477 == 0) || (x % 744 == 0) ||\n      (x % 774 == 0) || (x % 747 == 0)) {\n    printf(\"YES\");\n  } else {\n    printf(\"NO\");\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.BufferedWriter;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.io.OutputStreamWriter;\nimport java.io.PrintWriter;\nimport java.util.ArrayList;\nimport java.util.StringTokenizer;\n\npublic class A122_LuckyDivision {\n\n\tstatic BufferedReader in;\n\tstatic StringTokenizer st;\n\tstatic PrintWriter out;\n\n\tstatic String next() throws IOException {\n\t\twhile (st == null || !st.hasMoreTokens()) {\n\t\t\tst = new StringTokenizer(in.readLine());\n\t\t}\n\t\treturn st.nextToken();\n\t}\n\n\tstatic int nextInt() throws IOException {\n\t\treturn Integer.parseInt(next());\n\t}\n\n\tpublic static void main(String[] args) throws IOException {\n\t\tin = new BufferedReader(new InputStreamReader(System.in));\n\t\tout = new PrintWriter(new BufferedWriter(new OutputStreamWriter(\n\t\t\t\tSystem.out)));\n\t\tint[] luckyNumbers = { 4, 7, 44, 47, 74, 77, 444, 447, 474, 477, 744,\n\t\t\t\t747, 774, 777 };\n\t\tint n = nextInt();\n\t\tboolean isLucky = false;\n\t\tfor (int i = 0; i < luckyNumbers.length; i++) {\n\t\t\tif (n % luckyNumbers[i] == 0) {\n\t\t\t\tisLucky = true;\n\t\t\t}\n\t\t}\n\t\tif (isLucky) {\n\t\t\tout.print(\"YES\");\n\t\t} else {\n\t\t\tout.print(\"NO\");\n\t\t}\n\t\tout.close();\n\t}\n}\n"
+  }
+]

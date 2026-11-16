@@ -1,0 +1,14 @@
+{
+  "input": [
+    "testsetses\nteeptes\n",
+    "bidhan\nroy\n",
+    "lover\ndriver\n",
+    "apple\npepperoni\n"
+  ],
+  "output": [
+    "3",
+    "-1",
+    "1",
+    "2"
+  ]
+}

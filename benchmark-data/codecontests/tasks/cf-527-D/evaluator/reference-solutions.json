@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "def main():\n    from bisect import bisect_right as br\n    n = int(input())\n    ab = [list(map(int, input().split())) for _ in [0]*n]\n    ab.sort()\n\n    ans = [-10**20]\n    l = 1\n\n    for a, b in ab:\n        c = br(ans, a-b)\n        d = a+b\n        if c == br(ans, d):\n            if c == l:\n                ans.append(d)\n                l += 1\n            else:\n                ans[c] = d\n    print(len(ans)-1)\n\n\nmain()"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  cin >> n;\n  pair<int, int> arr[n];\n  for (int i = 0; i < n; i++) {\n    cin >> arr[i].first;\n    cin >> arr[i].second;\n  }\n  sort(arr, arr + n);\n  int size = 1;\n  int co = arr[0].first;\n  int we = arr[0].second;\n  long long val = co + we;\n  priority_queue<long long> pq;\n  pq.push(val);\n  for (int i = 1; i < n; i++) {\n    long long a = arr[i].first - arr[i].second,\n              b = arr[i].first + arr[i].second;\n    if (a >= pq.top()) {\n      pq.push(b);\n    } else {\n      long long c = pq.top();\n      pq.pop();\n      if (pq.empty()) {\n        if (c < b)\n          pq.push(c);\n        else\n          pq.push(b);\n      } else {\n        if (b < c && a >= pq.top()) {\n          pq.push(b);\n        } else\n          pq.push(c);\n      }\n    }\n  }\n  cout << pq.size() << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.util.Arrays;\nimport java.util.StringTokenizer;\n\npublic class CliqueProblem {\n    public static void main(String[] args) throws IOException {\n        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n        StringTokenizer st;\n\n        int n = Integer.parseInt(br.readLine());\n        Interval[] intervals = new Interval[n];\n        for (int i = 0; i < n; i++) {\n            st = new StringTokenizer(br.readLine());\n            intervals[i] = new Interval(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()));\n        }\n\n        Arrays.sort(intervals);\n        Interval max = intervals[0];\n        int size = 1;\n        for (int i = 1; i < n; i++) {\n            if (intervals[i].x - intervals[i].w >= max.x + max.w) {\n                max = intervals[i];\n                size++;\n            }\n        }\n\n        System.out.println(size);\n    }\n\n    private static class Interval implements Comparable<Interval> {\n        public int x;\n        public int w;\n\n        public Interval(int x, int w) {\n            this.x = x;\n            this.w = w;\n        }\n\n        @Override\n        public int compareTo(Interval o) {\n            return (this.x + this.w) - (o.x + o.w);\n        }\n    }\n}\n"
+  }
+]

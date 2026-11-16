@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import sys\nfrom collections import Counter\nfrom math import factorial\n\ninput = sys.stdin\noutput = sys.stdout\n\n# input = open('input.txt')\n\n\ndef read_int():\n    return [int(x) for x in input.readline().rstrip().split()]\n\nline = input.readline().rstrip()\nx = ord(line[0]) - ord('a')\ny = ord(line[1]) - ord('1')\nanswer = 0\nfor _x in range(x - 1, x + 2):\n    for _y in range(y - 1, y + 2):\n        if _x != x or _y != y:\n            if 0 <= _x < 8 and 0 <= _y < 8:\n                answer += 1\n\noutput.write('%d\\n' % answer)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nchar c[2];\nint main() {\n  cin >> c;\n  int res = 8;\n  if (c[0] == 'a' || c[0] == 'h') res -= 3;\n  if (c[1] == '1' || c[1] == '8') {\n    res -= 3;\n    if (c[0] == 'a' || c[0] == 'h') res++;\n  }\n  cout << res;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "/* package codechef; // don't place package name! */\n\nimport java.util.*;\nimport java.lang.*;\nimport java.io.*;\n\n/* Name of the class has to be \"Main\" only if the class is public. */\npublic class Main\n{\n\tpublic static void main (String[] args) throws java.lang.Exception\n\t{\n\t\tScanner in = new Scanner(System.in);\n\t\tString s = in.next();\n\t\tchar c = s.charAt(0);\n\t\tint d = Integer.parseInt(s.charAt(1)+\"\");\n\t\t\n\t\t\n\t\tif(c == 'a' || c == 'h') {\n\t\t    if(d == 1 || d == 8) System.out.println(3);\n\t\t    else System.out.println(5);\n\t\t}else {\n\t\t    if(d == 1 || d == 8) System.out.println(5);\n\t\t    else System.out.println(8);\n\t\t}\n\t\t\n\t\t\n\t}\n}\n"
+  }
+]

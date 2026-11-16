@@ -1,0 +1,12 @@
+{
+  "input": [
+    "5\n",
+    "7\n",
+    "3\n"
+  ],
+  "output": [
+    "**D**\n*DDD*\nDDDDD\n*DDD*\n**D**\n",
+    "***D***\n**DDD**\n*DDDDD*\nDDDDDDD\n*DDDDD*\n**DDD**\n***D***\n",
+    "*D*\nDDD\n*D*\n"
+  ]
+}

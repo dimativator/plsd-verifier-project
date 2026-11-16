@@ -1,0 +1,37 @@
+{
+  "name": "685_E. Travelling Through the Snow Queen's Kingdom",
+  "description": "Gerda is travelling to the palace of the Snow Queen.\n\nThe road network consists of n intersections and m bidirectional roads. Roads are numbered from 1 to m. Snow Queen put a powerful spell on the roads to change the weather conditions there. Now, if Gerda steps on the road i at the moment of time less or equal to i, she will leave the road exactly at the moment i. In case she steps on the road i at the moment of time greater than i, she stays there forever.\n\nGerda starts at the moment of time l at the intersection number s and goes to the palace of the Snow Queen, located at the intersection number t. Moreover, she has to be there at the moment r (or earlier), before the arrival of the Queen.\n\nGiven the description of the road network, determine for q queries li, ri, si and ti if it's possible for Gerda to get to the palace on time.\n\nInput\n\nThe first line of the input contains integers n, m and q (2 ≤ n ≤ 1000, 1 ≤ m, q ≤ 200 000) — the number of intersections in the road network of Snow Queen's Kingdom, the number of roads and the number of queries you have to answer.\n\nThe i-th of the following m lines contains the description of the road number i. The description consists of two integers vi and ui (1 ≤ vi, ui ≤ n, vi ≠ ui) — the indices of the intersections connected by the i-th road. It's possible to get both from vi to ui and from ui to vi using only this road. Each pair of intersection may appear several times, meaning there are several roads connecting this pair.\n\nLast q lines contain the queries descriptions. Each of them consists of four integers li, ri, si and ti (1 ≤ li ≤ ri ≤ m, 1 ≤ si, ti ≤ n, si ≠ ti) — the moment of time Gerda starts her journey, the last moment of time she is allowed to arrive to the palace, the index of the starting intersection and the index of the intersection where palace is located.\n\nOutput\n\nFor each query print \"Yes\" (without quotes) if Gerda can be at the Snow Queen palace on time (not later than ri) or \"No\" (without quotes) otherwise.\n\nExample\n\nInput\n\n5 4 6\n1 2\n2 3\n3 4\n3 5\n1 3 1 4\n1 3 2 4\n1 4 4 5\n1 4 4 1\n2 3 1 4\n2 2 2 3\n\n\nOutput\n\nYes\nYes\nYes\nNo\nNo\nYes",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2800,
+  "cf_contest_id": 685,
+  "cf_index": "E",
+  "cf_tags": [
+    "bitmasks",
+    "brute force",
+    "divide and conquer",
+    "graphs"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 500000000
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00016-of-00039-bf38b0908b322307.parquet",
+  "source_row": 207,
+  "task_id": "codecontests/cf-685-E",
+  "rating_band": "2400+",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/685/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

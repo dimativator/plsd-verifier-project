@@ -1,0 +1,12 @@
+{
+  "input": [
+    "11\naaaaBaabAbA\n",
+    "3\nABC\n",
+    "12\nzACaAbbaazzC\n"
+  ],
+  "output": [
+    "2\n",
+    "0\n",
+    "3\n"
+  ]
+}

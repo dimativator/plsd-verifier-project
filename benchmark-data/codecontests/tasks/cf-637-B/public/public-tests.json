@@ -1,0 +1,10 @@
+{
+  "input": [
+    "4\nalex\nivan\nroman\nivan\n",
+    "8\nalina\nmaria\nekaterina\ndarya\ndarya\nekaterina\nmaria\nalina\n"
+  ],
+  "output": [
+    "ivan\nroman\nalex\n",
+    "alina\nmaria\nekaterina\ndarya\n"
+  ]
+}

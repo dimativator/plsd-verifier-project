@@ -1,0 +1,40 @@
+{
+  "input": [
+    "a\n",
+    "qfggoxltgxqqirqazusxblbhhuajrjrsuojnwvdnzwymhjx\n",
+    "abababababababababababababababababababababababavv\n",
+    "ap\n",
+    "kvujzkexnkqygxalmlpupghpqqsvqsabpbgrhmwixfroghpm\n",
+    "ass\n",
+    "dya\n",
+    "abababababababababababababababababababababababava\n",
+    "ckhklxvduyregcmxabkrbcnxxjlgoaiikpbvuamdvrksefigx\n",
+    "yqahbyyoxltryqdmvenemaqnbakglgqolxnaifnqtoclnnqiab\n",
+    "qyax\n",
+    "wqufdkunalpjjmeolduzppvzabhytailycojjhnsykfhim\n",
+    "ahaos\n",
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+    "ababababababababababababababababababababababababav\n",
+    "xaxax\n",
+    "caidsucitzpblhucxnzcdupstfoourafborgyqwvaymdk\n"
+  ],
+  "output": [
+    "1\n",
+    "3\n",
+    "47\n",
+    "1\n",
+    "3\n",
+    "1\n",
+    "1\n",
+    "49\n",
+    "5\n",
+    "9\n",
+    "1\n",
+    "5\n",
+    "3\n",
+    "50\n",
+    "49\n",
+    "3\n",
+    "5\n"
+  ]
+}

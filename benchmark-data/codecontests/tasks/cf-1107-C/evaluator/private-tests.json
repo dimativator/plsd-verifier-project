@@ -1,0 +1,20 @@
+{
+  "input": [
+    "1 1\n1\na\n",
+    "38 1\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 53 53 1 1 1 1 1 1 1 1 1 1 1 1\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+    "38 1\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 53 1 1 1 1 1 1 1 1 1 1 1 1 1\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+    "1 1\n10\nz\n",
+    "1 1\n1000000000\nz\n",
+    "38 1\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 53 53 53 1 1 1 1 1 1 1 1 1 1 1\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+    "38 1\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 53 1 1 1 1 1 1 1 1 1 1 1 1 1 1\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"
+  ],
+  "output": [
+    "1\n",
+    "53\n",
+    "53\n",
+    "10\n",
+    "1000000000\n",
+    "53\n",
+    "53\n"
+  ]
+}

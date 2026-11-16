@@ -1,0 +1,38 @@
+{
+  "name": "1062_E. Company",
+  "description": "The company X has n employees numbered from 1 through n. Each employee u has a direct boss p_u (1 ≤ p_u ≤ n), except for the employee 1 who has no boss. It is guaranteed, that values p_i form a tree. Employee u is said to be in charge of employee v if u is the direct boss of v or there is an employee w such that w is in charge of v and u is the direct boss of w. Also, any employee is considered to be in charge of himself.\n\nIn addition, for each employee u we define it's level lv(u) as follow: \n\n  * lv(1)=0 \n  * lv(u)=lv(p_u)+1 for u ≠ 1 \n\n\n\nIn the near future, there are q possible plans for the company to operate. The i-th plan consists of two integers l_i and r_i, meaning that all the employees in the range [l_i, r_i], and only they, are involved in this plan. To operate the plan smoothly, there must be a project manager who is an employee in charge of all the involved employees. To be precise, if an employee u is chosen as the project manager for the i-th plan then for every employee v ∈ [l_i, r_i], u must be in charge of v. Note, that u is not necessary in the range [l_i, r_i]. Also, u is always chosen in such a way that lv(u) is as large as possible (the higher the level is, the lower the salary that the company has to pay the employee).\n\nBefore any plan is operated, the company has JATC take a look at their plans. After a glance, he tells the company that for every plan, it's possible to reduce the number of the involved employees exactly by one without affecting the plan. Being greedy, the company asks JATC which employee they should kick out of the plan so that the level of the project manager required is as large as possible. JATC has already figured out the answer and challenges you to do the same.\n\nInput\n\nThe first line contains two integers n and q (2 ≤ n ≤ 100 000, 1 ≤ q ≤ 100 000) — the number of employees and the number of plans, respectively.\n\nThe second line contains n-1 integers p_2, p_3, ..., p_n (1 ≤ p_i ≤ n) meaning p_i is the direct boss of employee i.\n\nIt is guaranteed, that values p_i form a directed tree with the root of 1.\n\nEach of the following q lines contains two integers l_i and r_i (1 ≤ l_i<r_i ≤ n) — the range of the employees, involved in the corresponding plan.\n\nOutput\n\nPrint q lines, each containing two integers — the number of the employee which should be kicked from the corresponding plan and the maximum possible level of the project manager in that case.\n\nIf there are more than one way to choose that employee, print any of them.\n\nExample\n\nInput\n\n11 5\n1 1 3 3 3 4 2 7 7 6\n4 6\n4 8\n1 11\n9 11\n8 11\n\n\nOutput\n\n4 1\n8 1\n1 0\n11 3\n8 1\n\nNote\n\nIn the example: \n\n<image> In the first query, we can choose whether 4 or 5 or 6 and the project manager will be 3.\n\nIn the second query, if we choose any employee other than the employee 8, the project manager will be 1. If we choose 8, the project manager will be 3. Since lv(3)=1 > lv(1)=0, choosing 8 is the best strategy.\n\nIn the third query, no matter how we choose the employee, the project manager will always be 1.\n\nIn the fourth query, if we choose 9 or 10 then the project manager will be 3. If we choose 11 then the project manager will be 7. Since lv(7)=3>lv(3)=1, we choose 11 as the answer.",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2300,
+  "cf_contest_id": 1062,
+  "cf_index": "E",
+  "cf_tags": [
+    "binary search",
+    "data structures",
+    "dfs and similar",
+    "greedy",
+    "trees"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00010-of-00039-6de28ba20654f69b.parquet",
+  "source_row": 27,
+  "task_id": "codecontests/cf-1062-E",
+  "rating_band": "2000-2399",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/1062/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

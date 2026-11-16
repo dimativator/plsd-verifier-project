@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "s = input()\narr_ans = [0] * len(s)\nfor i in range(1, len(s)):\n    if s[i] == 'a':\n        arr_ans[i - 1] = (arr_ans[i - 1] + 1) % 2\n        arr_ans[i] += 1\nprint(*arr_ans)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nconst long long LINF = 1e18;\nconst int INF = 1e9;\nconst int M = 1e9 + 7;\nconst double EPS = 1.0e-9;\nconst double PI = acos(-1.0);\nusing namespace std;\nstring s;\nchar ch[10010];\nint ans[10100];\nint main() {\n  std::ios_base::sync_with_stdio(0);\n  cin >> s;\n  int len = s.length();\n  int pos = 0;\n  while (pos < len - 1) {\n    if (s[pos] != s[pos + 1]) {\n      ans[pos] = 1;\n    }\n    pos++;\n  }\n  if (s[len - 1] == 'a') ans[len - 1] = 1;\n  for (int i = 0; i < len; i++) cout << ans[i] << \" \";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.math.*;\nimport java.security.*;\nimport java.text.*;\nimport java.util.*;\nimport java.util.concurrent.*;\nimport java.util.regex.*;\n\n\n public   class ex{\n   \n       \n    public static void main(String[] args) throws IOException {\n        Scanner sc=new Scanner(System.in);\n     String s=new String();\n        s=sc.next();\n        char c[]=s.toCharArray();\n        int n=c.length;\n        int A[]=new int[n];\n        for(int i=0;i<n-1;i++){\n            if(c[i]=='b' && c[i+1]=='a'){\n                A[i]=1;\n            }\n            else if(c[i]=='a' && c[i+1]=='b'){\n                A[i]=1;\n            }\n        }\n        if(c[n-1]=='a'){\n            A[n-1]=1;\n        }\n       for(int i=0;i<n;i++){\n           System.out.print(A[i] + \" \");\n       }\n    }\n}\n"
+  }
+]

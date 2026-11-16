@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\nmat=[]\nfor i in range(n):\n    mat.append(list(map(int, input().rstrip().split())))\nb=0\nfor i in range (n):\n    for j in range (n):\n        if mat[i][0]==mat[j][1]:\n            b=b+1\nprint(b)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int home[30];\n  int away[30];\n  int n;\n  cin >> n;\n  for (int i = 0; i < n; i++) {\n    cin >> home[i];\n    cin >> away[i];\n  }\n  int cnt = 0;\n  for (int i = 0; i < n; i++) {\n    for (int j = 0; j < n; j++) {\n      if (i == j) continue;\n      if (home[i] == away[j]) cnt++;\n    }\n  }\n  cout << cnt << '\\n';\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.HashMap;\nimport java.util.Scanner;\n\npublic class A {\n    public static void main(String[] args) {\n        HashMap<Integer, Integer> setH = new HashMap<Integer, Integer>();\n        HashMap<Integer, Integer> setA = new HashMap<Integer, Integer>();\n        Scanner s = new Scanner(System.in);\n        int n = s.nextInt();\n        for (int i = 0; i < n; i++) {\n            int h = s.nextInt();\n            int a = s.nextInt();\n            if (!setH.containsKey(h)) {\n                setH.put(h, 1);\n            } else {\n                setH.put(h, setH.get(h) + 1);\n            }\n            if (!setA.containsKey(a)) {\n                setA.put(a, 1);\n            } else {\n                setA.put(a, setA.get(a) + 1);\n            }\n        }\n        int ans = 0;\n        for (Integer i : setH.keySet()) {\n            if (setA.containsKey(i)) {\n                ans += setH.get(i) * setA.get(i);\n            }\n        }\n        System.out.println(ans);\n    }\n}\n"
+  }
+]

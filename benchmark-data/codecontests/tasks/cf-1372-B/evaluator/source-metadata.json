@@ -1,0 +1,36 @@
+{
+  "name": "1372_B. Omkar and Last Class of Math",
+  "description": "In Omkar's last class of math, he learned about the least common multiple, or LCM. LCM(a, b) is the smallest positive integer x which is divisible by both a and b.\n\nOmkar, having a laudably curious mind, immediately thought of a problem involving the LCM operation: given an integer n, find positive integers a and b such that a + b = n and LCM(a, b) is the minimum value possible.\n\nCan you help Omkar solve his ludicrously challenging math problem?\n\nInput\n\nEach test contains multiple test cases. The first line contains the number of test cases t (1 ≤ t ≤ 10). Description of the test cases follows.\n\nEach test case consists of a single integer n (2 ≤ n ≤ 10^{9}).\n\nOutput\n\nFor each test case, output two positive integers a and b, such that a + b = n and LCM(a, b) is the minimum possible.\n\nExample\n\nInput\n\n\n3\n4\n6\n9\n\n\nOutput\n\n\n2 2\n3 3\n3 6\n\nNote\n\nFor the first test case, the numbers we can choose are 1, 3 or 2, 2. LCM(1, 3) = 3 and LCM(2, 2) = 2, so we output 2 \\ 2.\n\nFor the second test case, the numbers we can choose are 1, 5, 2, 4, or 3, 3. LCM(1, 5) = 5, LCM(2, 4) = 4, and LCM(3, 3) = 3, so we output 3 \\ 3.\n\nFor the third test case, LCM(3, 6) = 6. It can be shown that there are no other pairs of numbers which sum to 9 that have a lower LCM.",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 1300,
+  "cf_contest_id": 1372,
+  "cf_index": "B",
+  "cf_tags": [
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00015-of-00039-19ccd7331d695677.parquet",
+  "source_row": 206,
+  "task_id": "codecontests/cf-1372-B",
+  "rating_band": "1200-1599",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/1372/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

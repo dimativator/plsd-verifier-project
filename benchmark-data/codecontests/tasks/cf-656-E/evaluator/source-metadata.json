@@ -1,0 +1,34 @@
+{
+  "name": "656_E. Out of Controls",
+  "description": "You are given a complete undirected graph. For each pair of vertices you are given the length of the edge that connects them. Find the shortest paths between each pair of vertices in the graph and return the length of the longest of them.\n\nInput\n\nThe first line of the input contains a single integer N (3 ≤ N ≤ 10).\n\nThe following N lines each contain N space-separated integers. jth integer in ith line aij is the length of the edge that connects vertices i and j. aij = aji, aii = 0, 1 ≤ aij ≤ 100 for i ≠ j.\n\nOutput\n\nOutput the maximum length of the shortest path between any pair of vertices in the graph.\n\nExamples\n\nInput\n\n3\n0 1 1\n1 0 4\n1 4 0\n\n\nOutput\n\n2\n\n\nInput\n\n4\n0 1 2 3\n1 0 4 5\n2 4 0 6\n3 5 6 0\n\n\nOutput\n\n5\n\nNote\n\nYou're running short of keywords, so you can't use some of them:\n    \n    \n    define  \n    do  \n    for  \n    foreach  \n    while  \n    repeat  \n    until  \n    if  \n    then  \n    else  \n    elif  \n    elsif  \n    elseif  \n    case  \n    switch  \n    ",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2000,
+  "cf_contest_id": 656,
+  "cf_index": "E",
+  "cf_tags": [
+    "*special"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 64000000,
+  "source_file": "data/train-00001-of-00039-e092fe56fda18715.parquet",
+  "source_row": 22,
+  "task_id": "codecontests/cf-656-E",
+  "rating_band": "2000-2399",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/656/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

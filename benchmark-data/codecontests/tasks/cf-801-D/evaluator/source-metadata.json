@@ -1,0 +1,34 @@
+{
+  "name": "801_D. Volatile Kite",
+  "description": "You are given a convex polygon P with n distinct vertices p1, p2, ..., pn. Vertex pi has coordinates (xi, yi) in the 2D plane. These vertices are listed in clockwise order.\n\nYou can choose a real number D and move each vertex of the polygon a distance of at most D from their original positions.\n\nFind the maximum value of D such that no matter how you move the vertices, the polygon does not intersect itself and stays convex.\n\nInput\n\nThe first line has one integer n (4 ≤ n ≤ 1 000) — the number of vertices.\n\nThe next n lines contain the coordinates of the vertices. Line i contains two integers xi and yi ( - 109 ≤ xi, yi ≤ 109) — the coordinates of the i-th vertex. These points are guaranteed to be given in clockwise order, and will form a strictly convex polygon (in particular, no three consecutive points lie on the same straight line).\n\nOutput\n\nPrint one real number D, which is the maximum real number such that no matter how you move the vertices, the polygon stays convex.\n\nYour answer will be considered correct if its absolute or relative error does not exceed 10 - 6.\n\nNamely, let's assume that your answer is a and the answer of the jury is b. The checker program will consider your answer correct if <image>.\n\nExamples\n\nInput\n\n4\n0 0\n0 1\n1 1\n1 0\n\n\nOutput\n\n0.3535533906\n\n\nInput\n\n6\n5 0\n10 0\n12 -4\n10 -8\n5 -8\n3 -4\n\n\nOutput\n\n1.0000000000\n\nNote\n\nHere is a picture of the first sample\n\n<image>\n\nHere is an example of making the polygon non-convex.\n\n<image>\n\nThis is not an optimal solution, since the maximum distance we moved one point is  ≈ 0.4242640687, whereas we can make it non-convex by only moving each point a distance of at most  ≈ 0.3535533906.",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 1800,
+  "cf_contest_id": 801,
+  "cf_index": "D",
+  "cf_tags": [
+    "geometry"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00008-of-00039-7246e6b7423b404f.parquet",
+  "source_row": 32,
+  "task_id": "codecontests/cf-801-D",
+  "rating_band": "1600-1999",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/801/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-100",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/100",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 12,
+  "public_test_count": 1,
+  "unexposed_test_count": 11,
+  "source_review_note": "Prompt requests nearest rounding, while canonical truncates positive average. Tests also expect truncation for half cases, e.g. n=560,m=851 gives binary 705.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-100",
+  "public_dir": "tasks/humaneval-100/public",
+  "evaluator_dir": "tasks/humaneval-100/evaluator",
+  "metadata_file": "tasks/humaneval-100/task.json",
+  "evaluation_harness": "tasks/humaneval-100/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-100/evaluation.json"
+}

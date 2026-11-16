@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\na=list(map(int,input().split(\" \")))\nlim=a[0]\na[1:]=sorted(a[1:])\n# print(a,a[-1])\nt=0\nwhile(a[0] <= a[-1]):\n    a[0]=a[0]+1\n    a[-1]=a[-1]-1\n    t+=1\n    a[1:]=sorted(a[1:])\nprint(t)\n            \n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint n, has;\nint a[113];\nint main() {\n  scanf(\"%d%d\", &n, &has);\n  n -= 1;\n  for (int i = 0; i < n; i++) scanf(\"%d\", &a[i]);\n  int ans = 0;\n  while (true) {\n    sort(a, a + n, greater<int>());\n    if (has > a[0]) return printf(\"%d\\n\", ans), 0;\n    a[0] -= 1;\n    has += 1;\n    ans += 1;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Main {\n\n\tpublic static void main(String []args){\n\t\t\n\t\tScanner in = new Scanner(System.in);\n\t\t\n\t\tint n = in.nextInt();\n\t\t\n\t\tint[] votes = new int[n];\n\t\tfor(int i = 0; i < n; i++){\n\t\t\tvotes[i] = (int)(Math.random()*1000 + 1);\n\t\t\tvotes[i] = in.nextInt();\n\t\t}\n\t\t\n\t\tint mvotes = votes[0];\n\t\t\n\t\tint maxvotes = 0;\n\t\tfor(int i = 1; i < n; i++)\n\t\t\tif(votes[i] > maxvotes)\n\t\t\t\tmaxvotes = votes[i];\n\t\t\n\t\tif(mvotes > maxvotes){\n\t\t\tSystem.out.println(0);\n\t\t\treturn;\n\t\t}\n\t\t\n\t\tint needtobuy = 0;\n\t\t\n\t\twhile(mvotes <= findMax(votes)[1]){\n\t\t\tmvotes++;\n\t\t\tvotes[findMax(votes)[0]]--;\n\t\t\tneedtobuy++;\n\t\t}\n\t\t\n\t\tSystem.out.println(needtobuy);\n\t}\n\t\n\tprivate static int[] findMax(int[] a){\n\t\tint []maxj = new int[2];\n\t\tmaxj[1] = 0;\n\t\tmaxj[0] = 0;\n\t\tfor(int i = 1; i < a.length; i++){\n\t\t\tif(a[i] > maxj[1]){\n\t\t\t\tmaxj[1] = a[i];\n\t\t\t\tmaxj[0] = i;\n\t\t\t}\n\t\t}\n\t\treturn maxj;\n\t}\n}\n"
+  }
+]

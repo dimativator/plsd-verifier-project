@@ -1,0 +1,32 @@
+{
+  "name": "690_A2. Collective Mindsets (medium)",
+  "description": "Way to go! Heidi now knows how many brains there must be for her to get one. But throwing herself in the midst of a clutch of hungry zombies is quite a risky endeavor. Hence Heidi wonders: what is the smallest number of brains that must be in the chest for her to get out at all (possibly empty-handed, but alive)?\n\nThe brain dinner night will evolve just as in the previous subtask: the same crowd is present, the N - 1 zombies have the exact same mindset as before and Heidi is to make the first proposal, which must be accepted by at least half of the attendees for her to survive.\n\nInput\n\nThe only line of input contains one integer: N, the number of attendees (1 ≤ N ≤ 109).\n\nOutput\n\nOutput one integer: the smallest number of brains in the chest which allows Heidi to merely survive.\n\nExamples\n\nInput\n\n1\n\n\nOutput\n\n0\n\n\nInput\n\n3\n\n\nOutput\n\n1\n\n\nInput\n\n99\n\n\nOutput\n\n49",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 2300,
+  "cf_contest_id": 690,
+  "cf_index": "A2",
+  "cf_tags": [],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00010-of-00039-6de28ba20654f69b.parquet",
+  "source_row": 72,
+  "task_id": "codecontests/cf-690-A2",
+  "rating_band": "2000-2399",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/690/A2",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

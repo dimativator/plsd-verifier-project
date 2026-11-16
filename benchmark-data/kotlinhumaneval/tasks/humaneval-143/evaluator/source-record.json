@@ -1,0 +1,16 @@
+{
+  "task_id": "HumanEval_kotlin/143",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Write a function that takes an array of numbers as input and returns \n * the number of elements in the array that are greater than 10 and both \n * first and last digits of a number are odd (1, 3, 5, 7, 9).\n * For example:\n * specialFilter([15, -73, 14, -15]) => 1 \n * specialFilter([33, -2, -3, 45, 21, 109]) => 2\n *\n */\nfun specialfilter(nums : List<Int>) : Int {\n",
+  "entry_point": "specialfilter",
+  "test": "fun main() {\n    var arg00 : List<Int> = mutableListOf(5, -2, 1, -5)\n    var x0 : Int = specialfilter(arg00);\n    var v0 : Int = 0;\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10 : List<Int> = mutableListOf(15, -73, 14, -15)\n    var x1 : Int = specialfilter(arg10);\n    var v1 : Int = 1;\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20 : List<Int> = mutableListOf(33, -2, -3, 45, 21, 109)\n    var x2 : Int = specialfilter(arg20);\n    var v2 : Int = 2;\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30 : List<Int> = mutableListOf(43, -12, 93, 125, 121, 109)\n    var x3 : Int = specialfilter(arg30);\n    var v3 : Int = 4;\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40 : List<Int> = mutableListOf(71, -2, -33, 75, 21, 19)\n    var x4 : Int = specialfilter(arg40);\n    var v4 : Int = 3;\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50 : List<Int> = mutableListOf(1)\n    var x5 : Int = specialfilter(arg50);\n    var v5 : Int = 0;\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n    var arg60 : List<Int> = mutableListOf()\n    var x6 : Int = specialfilter(arg60);\n    var v6 : Int = 0;\n    if (x6 != v6) {\n        throw Exception(\"Exception -- test case 6 did not pass. x6 = \" + x6)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Write a function that takes an array of numbers as input and returns \n * the number of elements in the array that are greater than 10 and both \n * first and last digits of a number are odd (1, 3, 5, 7, 9).\n * For example:\n * specialFilter([15, -73, 14, -15]) => 1 \n * specialFilter([33, -2, -3, 45, 21, 109]) => 2\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun specialfilter(nums : List<Int>) : Int {",
+    "    val oddDigits = setOf('1', '3', '5', '7', '9')",
+    "\treturn nums.count { it > 10 && it.toString().first() in oddDigits && it.toString().last() in oddDigits }",
+    "}",
+    "",
+    ""
+  ]
+}

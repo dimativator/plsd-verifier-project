@@ -1,0 +1,10 @@
+{
+  "input": [
+    "1 0\nc\nb\n",
+    "3 2\nabc\nxyc\n"
+  ],
+  "output": [
+    "-1",
+    "bac\n"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "task_id": "HumanEval_kotlin/120",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Given a positive integer n, return a sorted list that has the odd numbers in collatz sequence.\n\n * The Collatz conjecture is a conjecture in mathematics that concerns a sequence defined\n * as follows: start with any positive integer n. Then each term is obtained from the \n * previous term as follows: if the previous term is even, the next term is one half of \n * the previous term. If the previous term is odd, the next term is 3 times the previous\n * term plus 1. The conjecture is that no matter what value of n, the sequence will always reach 1.\n\n * Note: \n *     1. Collatz(1) is [1].\n *     2. returned list sorted in increasing order.\n\n * For example:\n * get_odd_collatz(5) returns [1, 5] # The collatz sequence for 5 is [5, 16, 8, 4, 2, 1], so the odd numbers are only 1, and 5.\n *\n */\nfun getOddCollatz(n : Int) : List<Int> {\n",
+  "entry_point": "getOddCollatz",
+  "test": "fun main() {\n    var arg00 : Int = 14\n    var x0 : List<Int> = getOddCollatz(arg00);\n    var v0 : List<Int> = mutableListOf(1, 5, 7, 11, 13, 17);\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10 : Int = 5\n    var x1 : List<Int> = getOddCollatz(arg10);\n    var v1 : List<Int> = mutableListOf(1, 5);\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20 : Int = 12\n    var x2 : List<Int> = getOddCollatz(arg20);\n    var v2 : List<Int> = mutableListOf(1, 3, 5);\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30 : Int = 1\n    var x3 : List<Int> = getOddCollatz(arg30);\n    var v3 : List<Int> = mutableListOf(1);\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Given a positive integer n, return a sorted list that has the odd numbers in collatz sequence.\n\n * The Collatz conjecture is a conjecture in mathematics that concerns a sequence defined\n * as follows: start with any positive integer n. Then each term is obtained from the \n * previous term as follows: if the previous term is even, the next term is one half of \n * the previous term. If the previous term is odd, the next term is 3 times the previous\n * term plus 1. The conjecture is that no matter what value of n, the sequence will always reach 1.\n\n * Note: \n *     1. Collatz(1) is [1].\n *     2. returned list sorted in increasing order.\n\n * For example:\n * get_odd_collatz(5) returns [1, 5] # The collatz sequence for 5 is [5, 16, 8, 4, 2, 1], so the odd numbers are only 1, and 5.\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun getOddCollatz(n : Int) : List<Int> {",
+    "    var current = n",
+    "    val oddNumbers = mutableSetOf<Int>()",
+    "",
+    "    while (current != 1) {",
+    "        if (current % 2 != 0) oddNumbers.add(current)",
+    "        current = if (current % 2 == 0) {",
+    "            current / 2",
+    "        } else {",
+    "            3 * current + 1",
+    "        }",
+    "    }",
+    "    oddNumbers.add(1)",
+    "    return oddNumbers.sorted()",
+    "}",
+    "",
+    ""
+  ]
+}

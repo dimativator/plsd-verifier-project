@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import math\n\n# n=int(input())\ns=input()\nt=input()\nc = ['a','e','i','o','u']\nif len(s)!=len(t):\n\tprint(\"No\")\n\texit(0)\nfor i in range(len(s)):\n\tif(s[i] in c and not(t[i] in c)):\n\t\tprint(\"No\")\n\t\texit(0)\n\telif(t[i] in c and not (s[i] in c)):\n\t\tprint(\"No\")\n\t\texit(0)\nprint(\"Yes\")"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst long long mod = 1e9 + 7;\nconst long long maxn = 1000 + 3;\nint main() {\n  string aa, bb;\n  cin >> aa >> bb;\n  long long la = aa.length(), lb = bb.length();\n  map<char, int> m;\n  char lo = 'a';\n  m[lo] = 1;\n  lo = 'e';\n  m[lo] = 1;\n  lo = 'i';\n  m[lo] = 1;\n  lo = 'o';\n  m[lo] = 1;\n  lo = 'u';\n  m[lo] = 1;\n  long long flag = 0;\n  if (la != lb) {\n    cout << \"No\";\n    return 0;\n  }\n  for (int i = 0; i < la; i++) {\n    if (m[aa[i]] != m[bb[i]]) flag = 1;\n  }\n  if (flag)\n    cout << \"No\";\n  else\n    cout << \"Yes\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class SuperHeroTransformation {\n\tstatic boolean isVow(char c) {\n\t\tif(c=='a'||c=='e'||c=='i'||c=='o'||c=='u')return true;\n\t\telse return false;\n\t}\n\n\tpublic static void main(String[] args) {\n\t\tScanner sc= new Scanner(System.in);\n\t\tString s=sc.nextLine();\n\t\tString t=sc.nextLine();\n\t\tif(s.length()!=t.length())System.out.println(\"No\");\n\t\telse {\n\t\tboolean match=true;\n\t\tfor(int i=0;i<s.length();i++) {\n\t\t\t if((isVow(s.charAt(i)) && isVow(t.charAt(i))) || (isVow(s.charAt(i)) == false && isVow(t.charAt(i)) == false)) continue;\n\t\t        match = false;\n\t\t        break;\n\t\t}\n\t\tif(match)System.out.println(\"Yes\");\n\t\telse System.out.println(\"No\");\n\t\t}\n\n\t}\n\n}\n"
+  }
+]

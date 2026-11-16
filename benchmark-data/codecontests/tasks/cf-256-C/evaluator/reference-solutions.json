@@ -1,0 +1,14 @@
+[
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nlong long x, a[] = {3, 15, 81, 6723, 50625, 2562991875LL};\nint sg[] = {0, 1, 2, 0, 3, 1, 2}, n, ans = 0;\nint main() {\n  cin >> n;\n  while (n--) {\n    cin >> x;\n    ans ^= sg[lower_bound(a, a + 6, x) - a];\n  }\n  cout << (ans ? \"Furlo\" : \"Rublo\") << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\nimport java.math.BigInteger;\n\npublic class Solution {\n\n\tBufferedReader in;\n\tPrintWriter out;\n\tStringTokenizer st;\n\t\n\tString nextToken() throws Exception {\n\t\twhile (st == null || !st.hasMoreTokens()) st = new StringTokenizer(in.readLine());\n\t\treturn st.nextToken();\n\t}\n\t\n\tint nextInt() throws Exception {\n\t\treturn Integer.parseInt(nextToken());\n\t}\n\t\n\tlong nextLong() throws Exception {\n\t\treturn Long.parseLong(nextToken());\n\t}\n\t\n\tint[] gl = {0, 4, 16, 82, 6724, 50626};\n\tint[] gr = {0, 1, 2, 0, 3, 1};\n\t\n\tvoid solve() throws Exception {\n\t\tint n = nextInt();\n\t\tint ans = 0;\n\t\tfor (int i = 0; i < n; i++) {\n\t\t\tlong a = nextLong();\n\t\t\tif (a == 1) continue;\n\t\t\tlong b = Math.max(0, Math.round(Math.pow(a, 1 / 4)) - 5);\n\t\t\twhile (b * b * b * b < a) b++;\n\t\t\tlong e = Math.max(0, Math.round(Math.sqrt(a)) - 5);\n\t\t\twhile (e * e <= a) e++;\n\t\t\te--;\n\t\t\tif (e < b) continue;\n\t\t\tint bb = 0;\n\t\t\twhile (bb < 5 && gl[bb + 1] <= b) bb++;\n\t\t\tint ee = 0;\n\t\t\twhile (ee < 5 && gl[ee + 1] <= e) ee++;\n\t\t\tboolean[] q = new boolean[10];\n\t\t\tfor (int qq = bb; qq <= ee; qq++) q[gr[qq]] = true;\n\t\t\tint tm = 0;\n\t\t\twhile (q[tm]) tm++;\n\t\t\tans ^= tm;\n\t\t}\n\t\tif (ans == 0) out.println(\"Rublo\"); else out.println(\"Furlo\");\n\t}\n\t\n\tvoid run() {\n\t\ttry {\n\t\t\tLocale.setDefault(Locale.US);\n//\t\t\tin = new BufferedReader(new FileReader(\"input.txt\"));\n//\t\t\tout = new PrintWriter(\"output.txt\");\n\t\t\tin = new BufferedReader(new InputStreamReader(System.in));\n\t\t\tout = new PrintWriter(System.out);\n\t\t\tsolve();\n\t\t} catch (Exception e) {\n\t\t\te.printStackTrace();\n\t\t\tSystem.exit(1);\n\t\t} finally {\n\t\t\tout.close();\n\t\t}\n\t}\n\t\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\t\tnew Solution().run();\n\t}\n\n}\n"
+  },
+  {
+    "language": "PYTHON",
+    "code": "#!/usr/bin/python\nimport bisect\na = [0,4,16,82,6724,15**4+1,15**8+1]\nb = [0,1,2,0,3,1,2]\ndef sg(x) :\n\ti = bisect.bisect_right(a,x)\n\treturn b[i-1]\nn = input()\nnum = map(int,raw_input().split())\nans = 0\nfor x in num:\n\tans ^= sg(x)\nif ans :\n\tprint \"Furlo\"\nelse :\n\tprint \"Rublo\"\n"
+  }
+]

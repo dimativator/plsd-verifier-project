@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "kl=int(input())\nfor l in range(kl):\n    p=[int(i) for i in input().split()]\n    a=min(p[0], p[1])\n    b=max(p[0], p[1])\n    tn=p[2]-p[3]\n    tk=p[2]+p[3]\n    if tn>=b or tk<=a:\n        print(b-a)\n    else:\n        if tn>=a:\n            print((b-a) - (min(b, tk)-tn))\n        else:\n            print((b-a) -(min(b, tk)-a))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int MOD = 1e9 + 7;\nconst int N = 2e5 + 100;\nconst int INF = 0x3f3f3f3f;\ninline long long dpow(long long a, long long b) {\n  long long r = 1, t = a;\n  while (b) {\n    if (b & 1) r = (r * t) % MOD;\n    b >>= 1;\n    t = (t * t) % MOD;\n  }\n  return r;\n}\ninline long long fpow(long long a, long long b) {\n  long long r = 1, t = a;\n  while (b) {\n    if (b & 1) r = (r * t);\n    b >>= 1;\n    t = (t * t);\n  }\n  return r;\n}\nint main() {\n  int T;\n  cin >> T;\n  while (T--) {\n    long long a, b, c, d;\n    cin >> a >> b >> c >> d;\n    if (a > b) swap(a, b);\n    long long L = c - d, R = c + d;\n    if (R < a)\n      cout << b - a << endl;\n    else if (L > b)\n      cout << b - a << endl;\n    else {\n      long long ans = 0;\n      if (L > a) ans += L - a;\n      if (R < b) ans += b - R;\n      cout << ans << endl;\n    }\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Main\n{\n    public static void main(String[] args)\n    {\n        Scanner in = new Scanner(System.in);\n\n        int t = in.nextInt();\n        for(int i = 0; i < t; i++)\n        {\n\n        int a = in.nextInt();\n        int b = in.nextInt();\n        int c = in.nextInt();\n        int r = in.nextInt();\n\n        int u1 = 0, u2 = 0;\n        if(a<b)\n        {\n            if(c>=a && c<=b)\n            {\n                if(c-r > a) u1 = c-r-a; \n                if(c+r < b) u2 = b-c-r;\n            }\n            else if(c<a)\n            {\n                if(c+r>=a && c+r<b) u2 = b-c-r;\n                else if(c+r <= a) u1 = b-a;\n            }\n            else if(c>b)\n            {\n                if(c-r<=b && c-r>a) u1 = c-r-a;\n                else if(c-r >= b) u1 = b-a;\n            }\n            else u1 = b-a;\n        }\n        else if(a>b)\n        {\n            if(c>=b && c<=a)\n            {\n                if(c-r > b) u1 = c-r-b; \n                if(c+r < a) u2 = a-c-r;\n            }\n            else if(c<b)\n            {\n                if(c+r>=b && c+r<a) u2 = a-c-r;  \n                else if(c+r <= b) u1 = a-b;\n            }\n            else if(c>a)\n            {\n                if(c-r<=a && c-r>b) u1 = c-r-b;\n                else if(c-r >= a) u1 = a-b;\n            }\n            else u1 = a-b;\n        }\n\n        System.out.println(u1+u2);\n\n        }\n    }\n}"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from math import factorial\n\ndef c(n, k):\n    cur = factorial(n) // factorial(k)\n    return cur // factorial(n - k)\n\nn = int(input())\nans = c(n, 5) + c(n, 6) + c(n, 7)\n\nprint(ans)\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  cin >> n;\n  vector<vector<long long> > C(n + 1, vector<long long>(n + 1));\n  for (int i = 0; i < n + 1; i++) {\n    C[i][0] = 1;\n    C[i][i] = 1;\n    for (int j = 1; j < i; j++) {\n      C[i][j] = C[i - 1][j] + C[i - 1][j - 1];\n    }\n  }\n  cout << C[n][5] + C[n][6] + C[n][7];\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.InputStreamReader;\nimport java.io.IOException;\nimport java.util.InputMismatchException;\nimport java.io.BufferedReader;\nimport java.io.OutputStream;\nimport java.io.PrintWriter;\nimport java.util.StringTokenizer;\nimport java.io.InputStream;\n\n/**\n * Built using CHelper plug-in\n * Actual solution is at the top\n */\npublic class Main {\n\tpublic static void main(String[] args) {\n\t\tInputStream inputStream = System.in;\n\t\tOutputStream outputStream = System.out;\n\t\tQuickScanner in = new QuickScanner(inputStream);\n\t\tPrintWriter out = new PrintWriter(outputStream);\n\t\tTaskF solver = new TaskF();\n\t\tsolver.solve(1, in, out);\n\t\tout.close();\n\t}\n}\n\nclass TaskF {\n    public void solve(int testNumber, QuickScanner in, PrintWriter out) {\n        int n=in.nextInt();\n        out.println(cnk(n,5)+cnk(n,6)+cnk(n,7));\n    }\n    long cnk(long a, long b)\n    {\n        long res=1;\n        for(int i=0;i<b;i++)\n        {\n            res *= (a - i);\n            res/=i+1;\n        }\n        return res;\n    }\n}\n\nclass QuickScanner {\n    BufferedReader in;\n    StringTokenizer token;\n    String delim;\n    public QuickScanner(InputStream inputStream)\n    {\n        this.in=new BufferedReader(new InputStreamReader(inputStream));\n        this.delim=\" \\n\\t\";\n        this.token=new StringTokenizer(\"\",delim);\n    }\n\n    public boolean hasNext()\n    {\n        while(!token.hasMoreTokens())\n        {\n            try {\n                String s=in.readLine();\n                if(s==null) return false;\n                token=new StringTokenizer(s,delim);\n            } catch (IOException e) {\n                throw new InputMismatchException();\n            }\n        }\n        return true;\n    }\n\n    public String next()\n    {\n        hasNext();\n        return token.nextToken();\n    }\n\n    public int nextInt()\n    {\n        return Integer.parseInt(next());\n    }\n\n}\n\n"
+  }
+]

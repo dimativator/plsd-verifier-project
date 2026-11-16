@@ -1,0 +1,16 @@
+{
+  "input": [
+    "3 3 4\n",
+    "3 3 8\n",
+    "3 4 16\n",
+    "4 4 9\n",
+    "3 3 1000000000\n"
+  ],
+  "output": [
+    "YES\n2\n2 R\n2 L\n",
+    "YES\n4\n2 R\n2 L\n1 D\n1 RUD\n",
+    "YES\n4\n3 R\n3 L\n1 D\n3 RUD\n",
+    "YES\n4\n3 R\n3 L\n1 D\n2 R\n",
+    "NO\n"
+  ]
+}

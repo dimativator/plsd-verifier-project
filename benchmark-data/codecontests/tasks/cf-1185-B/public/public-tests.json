@@ -1,0 +1,10 @@
+{
+  "input": [
+    "4\nhello\nhello\nhello\nhelloo\nhello\nhlllloo\nhello\nhelo\n",
+    "5\naa\nbb\ncodeforces\ncodeforce\npolycarp\npoolycarpp\naaaa\naaaab\nabcdefghijklmnopqrstuvwxyz\nzabcdefghijklmnopqrstuvwxyz\n"
+  ],
+  "output": [
+    "YES\nYES\nNO\nNO\n",
+    "NO\nNO\nYES\nNO\nNO\n"
+  ]
+}

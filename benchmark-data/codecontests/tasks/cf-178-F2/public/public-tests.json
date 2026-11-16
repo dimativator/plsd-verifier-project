@@ -1,0 +1,12 @@
+{
+  "input": [
+    "3 2\naba\nbzd\nabq\n",
+    "4 3\naaa\nabba\nabbc\nabbd\n",
+    "4 3\neee\nrrr\nttt\nqqq\n"
+  ],
+  "output": [
+    "2\n",
+    "9\n",
+    "0\n"
+  ]
+}

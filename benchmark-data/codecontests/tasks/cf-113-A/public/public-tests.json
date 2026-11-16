@@ -1,0 +1,12 @@
+{
+  "input": [
+    "petr\n",
+    "nataliala kataliala vetra feinites\n",
+    "etis atis animatis etis atis amatis\n"
+  ],
+  "output": [
+    "YES\n",
+    "YES\n",
+    "NO\n"
+  ]
+}

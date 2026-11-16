@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nchat_list = []\nnames = set()\nfor i in range(n):\n    name = input()\n    if name not in names:\n        names.add(name)\n    chat_list.append(name)\nx = len(names)\nfor i in chat_list[::-1]:\n    if i in names:\n        print(i)\n        names.remove(i)\n        x -= 1\n        if x == 0:\n            break\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long n;\n  cin >> n;\n  string a[n];\n  for (int i = 0; i < n; i++) {\n    cin >> a[i];\n  }\n  map<string, long long> D;\n  vector<string> ans;\n  for (long long i = n - 1; i >= 0; i--) {\n    D[a[i]]++;\n    if (D[a[i]] == 1) {\n      ans.push_back(a[i]);\n    }\n  }\n  long long b = ans.size();\n  for (long long i = 0; i < b; i++) {\n    cout << ans[i];\n    if (i != b - 1) {\n      cout << endl;\n    }\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader; \nimport java.io.IOException; \nimport java.io.InputStreamReader; \nimport java.util.*; \nimport java.util.StringTokenizer; \n  \npublic class cf1200A\n{ \n    static class FastReader \n    { \n        BufferedReader br; \n        StringTokenizer st; \n  \n        public FastReader() \n        { \n            br = new BufferedReader(new\n                     InputStreamReader(System.in)); \n        } \n  \n        String next() \n        { \n            while (st == null || !st.hasMoreElements()) \n            { \n                try\n                { \n                    st = new StringTokenizer(br.readLine()); \n                } \n                catch (IOException  e) \n                { \n                    e.printStackTrace(); \n                } \n            } \n            return st.nextToken(); \n        } \n  \n        int nextInt() \n        { \n            return Integer.parseInt(next()); \n        } \n  \n        long nextLong() \n        { \n            return Long.parseLong(next()); \n        } \n  \n        double nextDouble()     \n        { \n            return Double.parseDouble(next()); \n        } \n  \n        String nextLine() \n        { \n            String str = \"\"; \n            try\n            { \n                str = br.readLine(); \n            } \n            catch (IOException e) \n            { \n                e.printStackTrace(); \n            } \n            return str; \n        } \n    }\n  public static void main(String[] args){\n    FastReader f=new FastReader();\n    int n =f.nextInt();\n    String[]arr=new String[n];\n    for (int i=n-1;i>-1;i--){\n        arr[i]=f.next();\n    }\n    HashSet<String>h=new HashSet<String>();\n    for (int i=0;i<n;i++){\n        String s =arr[i];\n        if (h.contains(s)){\n            continue;\n        }\n        else{\n            h.add(s);\n            System.out.println(s);\n        }\n    }\n}\n}\n"
+  }
+]

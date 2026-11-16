@@ -1,0 +1,35 @@
+{
+  "name": "39_E. What Has Dirichlet Got to Do with That?",
+  "description": "You all know the Dirichlet principle, the point of which is that if n boxes have no less than n + 1 items, that leads to the existence of a box in which there are at least two items.\n\nHaving heard of that principle, but having not mastered the technique of logical thinking, 8 year olds Stas and Masha invented a game. There are a different boxes and b different items, and each turn a player can either add a new box or a new item. The player, after whose turn the number of ways of putting b items into a boxes becomes no less then a certain given number n, loses. All the boxes and items are considered to be different. Boxes may remain empty.\n\nWho loses if both players play optimally and Stas's turn is first?\n\nInput\n\nThe only input line has three integers a, b, n (1 ≤ a ≤ 10000, 1 ≤ b ≤ 30, 2 ≤ n ≤ 109) — the initial number of the boxes, the number of the items and the number which constrains the number of ways, respectively. Guaranteed that the initial number of ways is strictly less than n.\n\nOutput\n\nOutput \"Stas\" if Masha wins. Output \"Masha\" if Stas wins. In case of a draw, output \"Missing\".\n\nExamples\n\nInput\n\n2 2 10\n\n\nOutput\n\nMasha\n\n\nInput\n\n5 5 16808\n\n\nOutput\n\nMasha\n\n\nInput\n\n3 1 4\n\n\nOutput\n\nStas\n\n\nInput\n\n1 4 10\n\n\nOutput\n\nMissing\n\nNote\n\nIn the second example the initial number of ways is equal to 3125. \n\n  * If Stas increases the number of boxes, he will lose, as Masha may increase the number of boxes once more during her turn. After that any Stas's move will lead to defeat. \n  * But if Stas increases the number of items, then any Masha's move will be losing. ",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2000,
+  "cf_contest_id": 39,
+  "cf_index": "E",
+  "cf_tags": [
+    "dp",
+    "games"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 64000000,
+  "source_file": "data/train-00000-of-00039-e991a271dbfa9925.parquet",
+  "source_row": 249,
+  "task_id": "codecontests/cf-39-E",
+  "rating_band": "2000-2399",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/39/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

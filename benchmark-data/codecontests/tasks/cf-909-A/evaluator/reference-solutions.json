@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "s=input().split(\" \")\nm=s[0]\nj=s[1]\nlist=[]\nfor x in range(len(m)):\n    p=m[0:x+1]\n    p=p+j[0]\n    list.append(p)\nlist.sort()    \nprint(list[0])"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nstruct debugger {\n  static void call(string::iterator it, string::iterator ed) {}\n  template <typename T, typename... aT>\n  static void call(string::iterator it, string::iterator ed, T a, aT... rest) {\n    string b;\n    for (; *it != ','; ++it)\n      if (*it != ' ') b += *it;\n    cout << b << \"=\" << a << \" \";\n    call(++it, ed, rest...);\n  }\n};\nint main() {\n  {\n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n  };\n  string f, l, login = \"zzzzzzzzzzzzzzzzzzzzz\";\n  cin >> f >> l;\n  for (int i = (int)(0); i < (int)(f.size()); ++i) {\n    for (int j = (int)(0); j < (int)(l.size()); ++j) {\n      login = min(login, f.substr(0, i + 1) + l.substr(0, j + 1));\n    }\n  }\n  cout << login << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class TaskA {\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n        char[] firstName = in.next().toCharArray();\n        char[] lastName = in.next().toCharArray();\n\n        String res = \"\" + firstName[0];\n        for (int i = 1; i < firstName.length; i++) {\n            if (firstName[i] < lastName[0]) {\n                res += firstName[i];\n            } else {\n                res += lastName[0];\n                System.out.println(res);\n                return;\n            }\n        }\n\n        res += lastName[0];\n        System.out.println(res);\n    }\n}\n"
+  }
+]

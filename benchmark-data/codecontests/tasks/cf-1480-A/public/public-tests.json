@@ -1,0 +1,8 @@
+{
+  "input": [
+    "3\na\nbbbb\naz\n"
+  ],
+  "output": [
+    "\nb\nazaz\nby\n"
+  ]
+}

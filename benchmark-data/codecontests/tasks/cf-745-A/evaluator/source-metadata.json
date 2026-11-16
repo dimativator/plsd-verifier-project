@@ -1,0 +1,35 @@
+{
+  "name": "745_A. Hongcow Learns the Cyclic Shift",
+  "description": "Hongcow is learning to spell! One day, his teacher gives him a word that he needs to learn to spell. Being a dutiful student, he immediately learns how to spell the word.\n\nHongcow has decided to try to make new words from this one. He starts by taking the word he just learned how to spell, and moves the last character of the word to the beginning of the word. He calls this a cyclic shift. He can apply cyclic shift many times. For example, consecutively applying cyclic shift operation to the word \"abracadabra\" Hongcow will get words \"aabracadabr\", \"raabracadab\" and so on.\n\nHongcow is now wondering how many distinct words he can generate by doing the cyclic shift arbitrarily many times. The initial string is also counted.\n\nInput\n\nThe first line of input will be a single string s (1 ≤ |s| ≤ 50), the word Hongcow initially learns how to spell. The string s consists only of lowercase English letters ('a'–'z').\n\nOutput\n\nOutput a single integer equal to the number of distinct strings that Hongcow can obtain by applying the cyclic shift arbitrarily many times to the given string.\n\nExamples\n\nInput\n\nabcd\n\n\nOutput\n\n4\n\n\nInput\n\nbbb\n\n\nOutput\n\n1\n\n\nInput\n\nyzyz\n\n\nOutput\n\n2\n\nNote\n\nFor the first sample, the strings Hongcow can generate are \"abcd\", \"dabc\", \"cdab\", and \"bcda\".\n\nFor the second sample, no matter how many times Hongcow does the cyclic shift, Hongcow can only generate \"bbb\".\n\nFor the third sample, the two strings Hongcow can generate are \"yzyz\" and \"zyzy\".",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 900,
+  "cf_contest_id": 745,
+  "cf_index": "A",
+  "cf_tags": [
+    "implementation",
+    "strings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00017-of-00039-ae5533a2f822e6ef.parquet",
+  "source_row": 180,
+  "task_id": "codecontests/cf-745-A",
+  "rating_band": "800-1199",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/745/A",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "I=lambda:map(int,input().split())\nn,s=I()\nprint(max(max(sum(I()),s)for _ in '0'*n))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nlong long a[1000000];\nint main() {\n  long long n, s;\n  cin >> n >> s;\n  for (long long i = 0; i < n; i++) {\n    long long k, m;\n    cin >> k >> m;\n    a[k] = max(a[k], m);\n  }\n  long long ans = 0, last = s;\n  for (long long i = s; i > 0; i--) {\n    if (a[i]) {\n      ans = max(ans + last - i, a[i]);\n      last = i;\n    }\n  }\n  cout << ans + last;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\n\npublic class A {\n\tpublic static void main(String[] args) {\n\n\t\tScanner sc = new Scanner(System.in);\n\n\t\tint N = sc.nextInt();\n\t\tint s = sc.nextInt();\n\n\t\tPerson[] p = new Person[N];\n\n\t\tfor(int i = 0; i < N; ++i) {\n\t\t\tp[i] = new Person(sc.nextInt(), sc.nextInt());\n\t\t}\n\n\t\tArrays.sort(p);\n\n\t\t//for(Person pp: p)\n\t\t//\tSystem.out.println(pp.floor + \" \" + pp.time);\n\t\n\t\tint currF = s;\n\t\tint currT = 0;\n\n\t\tfor(int i = 0; i < N; ++i) {\n\t\t\tcurrT += currF - p[i].floor;\n\t\t\tcurrF = p[i].floor;\n\t\t\tif(currT < p[i].time)\n\t\t\t\tcurrT = p[i].time;\n\t\t}\n\n\t\tSystem.out.println(currT + currF);\n\t}\n}\n\nclass Person implements Comparable<Person> {\n\tint floor;\n\tint time;\n\n\tpublic Person(int f, int t) {\n\t\tfloor = f;\n\t\ttime = t;\n\t}\n\n\tpublic int compareTo(Person p) {\n\t\treturn p.floor - floor;\n\t}\n}"
+  }
+]

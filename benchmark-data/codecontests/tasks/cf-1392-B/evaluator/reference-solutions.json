@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "t=int(input())\nfor i in range(t):\n    n,k=map(int,input().split())\n    ar=list(map(int,input().split()))\n    m=max(ar)\n    new=[]\n    for i in range(n):\n        new.append(m-ar[i])\n    if k%2==0:\n        mx=max(new)\n        for j in range(n):\n            new[j]=mx-new[j]\n\n    print(*new)\n    \n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(NULL);\n  cout.tie(NULL);\n  long long t, i, n, k;\n  cin >> t;\n  while (t--) {\n    cin >> n >> k;\n    long long a[n], maxa;\n    for (i = 0; i < n; i++) {\n      cin >> a[i];\n    }\n    if (k % 2 != 0) {\n      maxa = a[0];\n      for (i = 0; i < n; i++) {\n        maxa = max(maxa, a[i]);\n      }\n      for (i = 0; i < n; i++) {\n        a[i] = maxa - a[i];\n      }\n    } else {\n      maxa = a[0];\n      for (i = 0; i < n; i++) {\n        maxa = max(maxa, a[i]);\n      }\n      for (i = 0; i < n; i++) {\n        a[i] = maxa - a[i];\n      }\n      maxa = a[0];\n      for (i = 0; i < n; i++) {\n        maxa = max(maxa, a[i]);\n      }\n      for (i = 0; i < n; i++) {\n        a[i] = maxa - a[i];\n      }\n    }\n    for (i = 0; i < n; i++) {\n      cout << a[i] << \" \";\n    }\n    cout << endl;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class Main {\n    static void find(long a[]){\n        long max=a[0];\n        for (long i:a)max=Math.max(i,max);\n        for (long i=0;i<a.length;i++)a[(int)i]=max-a[(int)i];\n    }\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        long T = sc.nextLong();\n        outer:while (T-- >= 1) {\n            long n = sc.nextLong();\n            long k=sc.nextLong();\n            long a[] = new long[(int) n];\n            for (long i = 0; i < n; i++) {\n                a[(int) i] = sc.nextLong();\n            }\n            if (k%2!=0){\n                find(a);\n                for (long i:a) System.out.print(i+\" \");\n            }\n            System.out.println();\n             if (k%2==0){\n                find(a);\n                find(a);\n                 for (long i:a) System.out.print(i+\" \");\n\n            }\n            System.out.println();\n\n\n\n\n        }\n    }\n}"
+  }
+]

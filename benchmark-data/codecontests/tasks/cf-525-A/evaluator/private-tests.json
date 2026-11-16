@@ -1,0 +1,32 @@
+{
+  "input": [
+    "10\nhNcMeXsSlHsUwYeMcA\n",
+    "5\naArRaRaR\n",
+    "26\nzAyBxCwDvEuFtGsHrIqJpKoLnMmNlOkPjQiRhSgTfUeVdWcXbY\n",
+    "2\ndE\n",
+    "2\ndD\n",
+    "2\ndA\n",
+    "3\ndDdD\n",
+    "3\ndEeF\n",
+    "100\nqDpInBmCrFwXpDbFgOzVvOcEmJrUcToAdEwEgTvBvBfWwRpGyEaXgDdRwVlQnYgWmWhMrHaIzPyXvGaFlRsVzHhZrOuVpXrKxFzAmWwPlFtNfPtJxVmLuHjKfYyArHrEnSwSzOvDpQhCgCqLlAcNpGhXrEeFuCmAqIkXyYtSsQwIxJzNiIuTgEbVuWrMwPrAlLyKaZ\n",
+    "3\ndEeD\n",
+    "26\naAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyY\n",
+    "2\ncB\n",
+    "3\ndEdD\n"
+  ],
+  "output": [
+    "7\n",
+    "2\n",
+    "13\n",
+    "1\n",
+    "0\n",
+    "1\n",
+    "0\n",
+    "2\n",
+    "42\n",
+    "1\n",
+    "0\n",
+    "1\n",
+    "1\n"
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a=input();b=input()\nA=a.lower();B=b.lower()\nif A==B:\n    print(0)\nelif A>B:\n    print(1)\nelif A<B:\n    print(-1)\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nstring a, b;\nint main() {\n  string a, b;\n  cin >> a >> b;\n  for (int i = 0; i < a.size(); i++) {\n    if (char(tolower(a[i])) == char(tolower(b[i]))) {\n      continue;\n    } else if (char(tolower(a[i])) > char(tolower(b[i]))) {\n      cout << 1 << endl;\n      return 0;\n    } else if (char(tolower(a[i])) < char(tolower(b[i]))) {\n      cout << -1 << endl;\n      return 0;\n    }\n  }\n  cout << 0 << endl;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        \n      \n        Scanner in = new Scanner(System.in);\n        int result;\n        String str1 = in.nextLine();\n        String str2 = in.nextLine();\n        //str1 = str1.toLowerCase();\n       // str2 = str2.toLowerCase();\n        result = str1.compareToIgnoreCase(str2);\n        if(result == 0)\n            System.out.println(\"0\");\n        else if(result!=0 && result <0)\n            System.out.println(\"-1\");\n        else if(result!=0 && result > 0)\n            System.out.println(\"1\");\n        \n        \n         \n        \n        \n        }\n        \n            \n        }"
+  }
+]

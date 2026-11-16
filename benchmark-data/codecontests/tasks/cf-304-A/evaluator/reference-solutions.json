@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "def gcd(a, b):\n    c = a % b\n    return gcd(b, c) if c else b\nfrom math import sqrt\nn = int(input())     \nprint(sum(n // (x * x + y * y) for x in range(1, int(sqrt(n // 2)) + 1) for y in range(x + 1, int(sqrt(n - x * x)) + 1, 2) if gcd(x, y) == 1))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long int n, i, j, k, l, a, b, ans = 0, c;\n  cin >> n;\n  for (i = 1; i <= n; i++) {\n    for (j = i; j <= n; j++) {\n      a = i * i;\n      b = j * j;\n      c = (long long int)sqrt(a + b);\n      if (c <= n) {\n        if ((a + b) == c * c) {\n          ans++;\n        }\n      } else {\n        break;\n      }\n    }\n  }\n  cout << ans << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Placar4{\n    public final static int MAX_N=10000;\n\n    public static void main(String[] args){\n        Scanner scanner = new Scanner(System.in);\n\n        long [] quadrados = new long[MAX_N+1];\n        for (int i=0;i<=MAX_N;i++){\n            quadrados[i]=i*i;\n        }\n        int num_triangulos=0;\n\n        int n = scanner.nextInt();\n\n        int a=1;\n        while (a<=n){\n            int b=a+1;\n            while (b<=n){\n                int soma_catetos_quadrados=a*a + b*b;\n                if (soma_catetos_quadrados<=n*n){\n                    int raiz = (int) Math.sqrt(soma_catetos_quadrados);\n                    if (quadrados[raiz]==soma_catetos_quadrados){\n                        num_triangulos++;\n                    }\n                }\n                b++;\n            }\n            a++;\n        }\n\n        System.out.println(num_triangulos);\n    }\n}\n\t  \t\t\t \t \t\t \t \t\t\t   \t    \t\t \t\t\t"
+  }
+]

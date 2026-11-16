@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a = input()\nb = input()\nres = []\nfor i in range(len(a)):\n    if(a[i] != b[i]):\n        res.append('1')\n    else:\n        res.append('0')\nprint(''.join(res))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  string n1, n2;\n  cin >> n1 >> n2;\n  for (int i = 0; i < n1.length(); i++) {\n    if (n1[i] == n2[i])\n      cout << 0;\n    else\n      cout << 1;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class UltraFastMathematician {\n\n    \n    public static void main(String[] args) {\n    Scanner sc=new Scanner(System.in);\n    String s1=sc.next();\n    String s2=sc.next();\n    String s=\"\";\n    for (int i = 0; i < s1.length(); i++) {\n        char c1=s1.charAt(i);\n        char c2=s2.charAt(i);\n        if((c1=='0' && c2=='1') ||(c2=='0' && c1=='1'))\n            s+=\"1\";\n        else\n            s+=\"0\";\n    }\n    System.out.println(s);\n    \n    }\n\n}\n"
+  }
+]

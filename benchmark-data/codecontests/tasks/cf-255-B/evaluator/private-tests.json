@@ -1,0 +1,26 @@
+{
+  "input": [
+    "xxxyx\n",
+    "xxxxxxxxxxxyxyyxxxxyxxxxxyxxxxxyxxxxxxxxyx\n",
+    "yxyyxyyx\n",
+    "yxxyxyx\n",
+    "xxx\n",
+    "xyyxyyyyyxxxxxxxyxyxyyxyyxyyxxyxyxyxxxyxxy\n",
+    "yxxxx\n",
+    "xxyxx\n",
+    "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\n",
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
+  ],
+  "output": [
+    "xxx",
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "yy",
+    "x",
+    "xxx",
+    "xx",
+    "xxx",
+    "xxx",
+    "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  ]
+}

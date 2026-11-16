@@ -1,0 +1,8 @@
+{
+  "input": [
+    "3 5\n3 0\n0 1\n2 2\n0 0\n1 1\n2 2\n3 3\n5 4\n"
+  ],
+  "output": [
+    "\nLOSE\nWIN\nLOSE\nWIN\nLOSE\n"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-122",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/122",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 8,
+  "public_test_count": 1,
+  "unexposed_test_count": 7,
+  "source_review_note": "Canonical detects only literal space before applying whitespace regex, so tabs-only strings do not take the whitespace branch. Tests omit tabs/newlines.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-122",
+  "public_dir": "tasks/humaneval-122/public",
+  "evaluator_dir": "tasks/humaneval-122/evaluator",
+  "metadata_file": "tasks/humaneval-122/task.json",
+  "evaluation_harness": "tasks/humaneval-122/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-122/evaluation.json"
+}

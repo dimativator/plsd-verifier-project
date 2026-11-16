@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from functools import reduce\nimport os\nimport sys\nfrom collections import *\n#from fractions import *\nfrom math import *\nfrom bisect import *\nfrom heapq import *\nfrom io import BytesIO, IOBase\ninput = lambda: sys.stdin.readline().rstrip(\"\\r\\n\")\ndef value(): return tuple(map(int, input().split())) # multiple values\ndef arr(): return [int(i) for i in input().split()] # array input\ndef sarr(): return [int(i) for i in input()] #array from string\ndef starr(): return [str(x) for x in input().split()] #string array\ndef inn(): return int(input()) # integer input\ndef svalue(): return tuple(map(str, input().split())) #multiple string values\ndef parr(): return [(value()) for i in range(n)] # array of pairs\nmo = 1000000007\ninf=1e18\ndiv=998244353\n#print(\"Case #{}:\".format(_+1),end=\" \")\n# ----------------------------CODE------------------------------#\nfor _ in range(inn()):\n    n,k=value()\n    if(n<=2):\n        print(1)\n    else:\n        n-=2\n        res=ceil(n/k)\n        print(res+1)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\ndouble PI = acos(-1);\nint dx[] = {0, 1, 0, -1, 1, 1, -1, -1};\nint dy[] = {1, 0, -1, 0, 1, -1, 1, -1};\nvoid file() {\n  std::ios_base::sync_with_stdio(false);\n  cin.tie(nullptr);\n  cout.tie(nullptr);\n}\nint main() {\n  file();\n  int t;\n  cin >> t;\n  while (t--) {\n    long long n, x;\n    cin >> n >> x;\n    if (n == 1) {\n      cout << 1 << '\\n';\n      continue;\n    }\n    n -= 2;\n    cout << ceil(n * 1.0 / x) + 1 << '\\n';\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": " \nimport java.util.Scanner;\npublic class FloorNumber {\n\n\tpublic static void main(String[] args) {\n\t\t\n\t\tScanner scn = new Scanner(System.in);\n\t\tint t = scn.nextInt(); \n\t\tint n,x;\n\t\tfor(int j = 1; j <= t; j++)\n\t\t{\n\t\t\tn = scn.nextInt(); \n\t\t\tx = scn.nextInt(); \n\t\t\tint appartment_no = 2, i = 0, floor = 2;  \n\t\t\tif(n == 1 || n == 2)\n\t\t\t{\n\t\t\t\tSystem.out.println(1);\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\twhile(true)\n\t\t\t\t{\n\t\t\t\t\t++i;\n\t\t\t\t\t++appartment_no;\n\t\t\t\t\t \n\t\t\t\t\tif(n == appartment_no)\n\t\t\t\t\t{\n\t\t\t\t\t\tSystem.out.println(floor);\n\t\t\t\t\t\tbreak;\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\tif(i == x)\n\t\t\t\t\t{\n\t\t\t\t\t\tfloor++;\n\t\t\t\t\t\ti = 0;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t} \n\t\t}\n\t} \n}\n"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,m = map(int, input().split())\nif n < m:\n    print(-1)\nelse:\n    if n % 2 == 0:\n        b = n//2\n    else:\n        b = (n//2)+1\n    while b % m != 0:\n        b = b + 1\n    print(b)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int m, n, i, x;\n  cin >> n >> m;\n  if (n < m) {\n    cout << -1;\n    return 0;\n  }\n  if (n == m) {\n    cout << n;\n    return 0;\n  }\n  if (n % 2 == 0) {\n    x = n / 2;\n    if (x % m == 0) {\n      cout << x;\n      return 0;\n    }\n    for (i = x + 1; i <= n; i++) {\n      if (i % m == 0) {\n        cout << i;\n        return 0;\n      }\n    }\n  } else {\n    x = (n - 1) / 2;\n    x = x + 1;\n    if (x % m == 0) {\n      cout << x;\n      return 0;\n    }\n    for (i = x + 1; i <= n; i++) {\n      if (i % m == 0) {\n        cout << i;\n        return 0;\n      }\n    }\n  }\n  cout << -1;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        \n        int numStep = sc.nextInt();\n        int multiple = sc.nextInt();\n        int answer = 0;\n        if(numStep<multiple){\n            System.out.println(-1);\n        }\n        else{\n            if(numStep%2==0){\n                answer = numStep/2;\n            }\n            else{\n                answer = (numStep+1)/2;\n            }\n            if(answer%multiple ==0){\n                System.out.println(answer);\n            }\n            else{\n                while(answer%multiple!=0){\n                    answer = answer+1;\n                }\n                System.out.println(answer);\n            }\n        }\n        \n    }\n}\n            \n  "
+  }
+]

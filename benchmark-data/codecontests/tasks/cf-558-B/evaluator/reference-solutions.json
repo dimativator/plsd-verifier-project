@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from collections import defaultdict\n_ =  input()\n\nnums  = list(map(int, input().split()))\n\nfreqs = defaultdict(list)\n\n_max =  -1\nfor i, k in enumerate(nums):\n    freqs[k].append(i + 1)\n    _max = max(_max, len(freqs[k]))\n\n\nstart = 1\nend = len(nums)\nlength = end - start\nfor k, v in freqs.items():\n    if len(v) == _max:\n        if v[-1] - v[0] < length:\n            start = v[0]\n            end = v[-1]\n            length  = end - start\n\nprint(start, end)\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint arr[100000];\nint main() {\n  int n;\n  cin >> n;\n  vector<int> vc;\n  map<int, int> mp;\n  map<int, int> fs;\n  map<int, int> ls;\n  int cnt = 0;\n  for (int i = 0; i < n; i++) {\n    cin >> arr[i];\n    if (mp[arr[i]] == 0) {\n      fs[arr[i]] = i;\n      vc.push_back(arr[i]);\n      cnt++;\n    }\n    mp[arr[i]]++;\n    ls[arr[i]] = i;\n  }\n  if (cnt == n)\n    cout << \"1 1\" << endl;\n  else {\n    int mx = 0;\n    for (int i = 0; i < cnt; i++) {\n      mx = max(mx, mp[vc[i]]);\n    }\n    vector<int> p;\n    for (int i = 0; i < cnt; i++) {\n      if (mp[vc[i]] == mx) p.push_back(vc[i]);\n    }\n    int l = 0;\n    int r = n - 1;\n    for (int i = 0; i < p.size(); i++) {\n      int xx = p[i];\n      int ll, rr;\n      ll = fs[xx];\n      rr = ls[xx];\n      int d1, d2;\n      d1 = rr - ll;\n      d2 = r - l;\n      if (d1 < d2) {\n        l = ll;\n        r = rr;\n      }\n    }\n    l++;\n    r++;\n    cout << l << \" \" << r << endl;\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class B {\n    public static void main(String args[]){\n        Scanner in = new Scanner(System.in);\n        int n = in.nextInt();\n        int b[][] = new int[1000001][3];\n        int max = 0 , l = 0 , r = 0;\n        for(int i = 0 ; i < n ; i++){\n            int t = in.nextInt();\n            if(b[t][0]==0){\n                b[t][0]++;\n                b[t][1] = i+1;\n                if(b[t][0]>max){\n                    l=r=i+1;\n                    max=b[t][0];\n                }\n            }else{\n                b[t][0]++;\n                b[t][2]=i+1;\n                if(b[t][0]>max||(b[t][0]==max&&r-l>b[t][2]-b[t][1])){\n                    l= b[t][1];\n                    r = b[t][2];\n                    max=b[t][0];\n                }\n            }\n        }\n        System.out.println(l+\" \"+r);\n    }\n}\n"
+  }
+]

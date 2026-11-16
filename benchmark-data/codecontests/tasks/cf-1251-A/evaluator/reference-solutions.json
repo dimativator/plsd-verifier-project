@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "'''\n\t@judge CodeForces\n\t@id 1251A\n\t@name Broken Keyboard\n\n\t@tag Simulation\n'''\nfrom sys import stdin\nfrom itertools import groupby\n\ndef solve(s):\n\treturn ''.join(sorted(set(map(lambda p: str(p[0]), filter(lambda p: len(list(p[1])) & 1, groupby(s))))))\n\ninput()\nfor line in stdin:\n\tprint(solve(line.strip()))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nusing ll = long long;\nusing ld = long double;\ntemplate <typename T>\ninline void print(T val) {\n  cout << val << '\\n';\n}\ntemplate <typename Iterator>\ninline void print(Iterator begin, Iterator end) {\n  for (auto it = begin; it != end; it = next(it)) {\n    cout << *it << ' ';\n  }\n  cout << '\\n';\n}\nvoid solve() {\n  string s;\n  cin >> s;\n  int n = s.size();\n  bool last = false;\n  string ans;\n  for (auto i = 0; i < n; ++i) {\n    if (i > 0 && s[i] == s[i - 1]) {\n      continue;\n    }\n    int cnt = 0;\n    for (auto j = i; j < n; ++j) {\n      if (s[j] == s[i]) {\n        ++cnt;\n      }\n    }\n    if (cnt & 1) {\n      ans += s[i];\n    }\n  }\n  sort(ans.begin(), ans.end());\n  set<char> x(ans.begin(), ans.end());\n  string k(x.begin(), x.end());\n  print(k);\n}\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(nullptr);\n  int t;\n  cin >> t;\n  while (t--) {\n    solve();\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport org.omg.CORBA.INTERNAL;\nimport sun.awt.image.ImageWatched;\nimport sun.reflect.generics.tree.Tree;\n\nimport java.nio.channels.ScatteringByteChannel;\nimport java.text.SimpleDateFormat;\nimport java.util.*;\n\npublic final class Main {\n\n    public static void main(String[] args) {\n\n        Scanner s = new Scanner(System.in);\n\n\n        int TC = s.nextInt();\n\n\n        for (int tc = 0; tc < TC; tc++) {\n\n            boolean[] array = new boolean[26];\n\n            String str = s.next();\n\n\n            for (int i = 0; i < str.length(); i++) {\n\n                if (i == str.length()-1) array[str.charAt(i)-'a'] = true;\n                else {\n\n                    char now = str.charAt(i);\n\n                    char next = str.charAt(i+1);\n\n                    if (next == now) i+=1 ;\n\n                    else array[now - 'a'] = true;\n                }\n\n            }\n\n            for (int i = 0 ; i < array.length; i++) {\n\n                if (array[i]) {\n\n                    char print = (char) (i + 'a');\n                    System.out.print(print);\n                }\n            }\n\n            System.out.print(\"\\n\");\n\n        }\n    }\n\n}"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "name": "621_D. Rat Kwesh and Cheese",
+  "description": "Wet Shark asked Rat Kwesh to generate three positive real numbers x, y and z, from 0.1 to 200.0, inclusive. Wet Krash wants to impress Wet Shark, so all generated numbers will have exactly one digit after the decimal point.\n\nWet Shark knows Rat Kwesh will want a lot of cheese. So he will give the Rat an opportunity to earn a lot of cheese. He will hand the three numbers x, y and z to Rat Kwesh, and Rat Kwesh will pick one of the these twelve options:\n\n  1. a1 = xyz; \n  2. a2 = xzy; \n  3. a3 = (xy)z; \n  4. a4 = (xz)y; \n  5. a5 = yxz; \n  6. a6 = yzx; \n  7. a7 = (yx)z; \n  8. a8 = (yz)x; \n  9. a9 = zxy; \n  10. a10 = zyx; \n  11. a11 = (zx)y; \n  12. a12 = (zy)x. \n\n\n\nLet m be the maximum of all the ai, and c be the smallest index (from 1 to 12) such that ac = m. Rat's goal is to find that c, and he asks you to help him. Rat Kwesh wants to see how much cheese he gets, so he you will have to print the expression corresponding to that ac.\n\nInput\n\nThe only line of the input contains three space-separated real numbers x, y and z (0.1 ≤ x, y, z ≤ 200.0). Each of x, y and z is given with exactly one digit after the decimal point.\n\nOutput\n\nFind the maximum value of expression among xyz, xzy, (xy)z, (xz)y, yxz, yzx, (yx)z, (yz)x, zxy, zyx, (zx)y, (zy)x and print the corresponding expression. If there are many maximums, print the one that comes first in the list. \n\nxyz should be outputted as x^y^z (without brackets), and (xy)z should be outputted as (x^y)^z (quotes for clarity). \n\nExamples\n\nInput\n\n1.1 3.4 2.5\n\n\nOutput\n\nz^y^x\n\n\nInput\n\n2.0 2.0 2.0\n\n\nOutput\n\nx^y^z\n\n\nInput\n\n1.9 1.8 1.7\n\n\nOutput\n\n(x^y)^z",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 2400,
+  "cf_contest_id": 621,
+  "cf_index": "D",
+  "cf_tags": [
+    "brute force",
+    "constructive algorithms",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00000-of-00039-e991a271dbfa9925.parquet",
+  "source_row": 154,
+  "task_id": "codecontests/cf-621-D",
+  "rating_band": "2400+",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/621/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

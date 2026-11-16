@@ -1,0 +1,14 @@
+/**
+ * You are an expert Kotlin programmer, and here is your task.
+ * Given a positive floating point number, it can be decomposed into
+ * an integer part (largest integer smaller than the given number) and decimals
+ * (leftover part always smaller than 1).
+
+ * Return the decimal part of the number.
+ * >>> truncate_number(3.5)
+ * 0.5
+ *
+ */
+fun truncateNumber(number: Double): Double {
+    TODO("Implement the function")
+}

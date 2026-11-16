@@ -1,0 +1,34 @@
+{
+  "name": "289_D. Polo the Penguin and Houses ",
+  "description": "Little penguin Polo loves his home village. The village has n houses, indexed by integers from 1 to n. Each house has a plaque containing an integer, the i-th house has a plaque containing integer pi (1 ≤ pi ≤ n).\n\nLittle penguin Polo loves walking around this village. The walk looks like that. First he stands by a house number x. Then he goes to the house whose number is written on the plaque of house x (that is, to house px), then he goes to the house whose number is written on the plaque of house px (that is, to house ppx), and so on.\n\nWe know that:\n\n  1. When the penguin starts walking from any house indexed from 1 to k, inclusive, he can walk to house number 1. \n  2. When the penguin starts walking from any house indexed from k + 1 to n, inclusive, he definitely cannot walk to house number 1. \n  3. When the penguin starts walking from house number 1, he can get back to house number 1 after some non-zero number of walks from a house to a house. \n\n\n\nYou need to find the number of ways you may write the numbers on the houses' plaques so as to fulfill the three above described conditions. Print the remainder after dividing this number by 1000000007 (109 + 7).\n\nInput\n\nThe single line contains two space-separated integers n and k (1 ≤ n ≤ 1000, 1 ≤ k ≤ min(8, n)) — the number of the houses and the number k from the statement.\n\nOutput\n\nIn a single line print a single integer — the answer to the problem modulo 1000000007 (109 + 7).\n\nExamples\n\nInput\n\n5 2\n\n\nOutput\n\n54\n\n\nInput\n\n7 4\n\n\nOutput\n\n1728",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 1500,
+  "cf_contest_id": 289,
+  "cf_index": "D",
+  "cf_tags": [
+    "combinatorics"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00006-of-00039-65184bb9f7d61fde.parquet",
+  "source_row": 174,
+  "task_id": "codecontests/cf-289-D",
+  "rating_band": "1200-1599",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/289/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

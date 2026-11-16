@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "s, v1, v2, t1, t2 = list(map(int, input().split()))\na = 2*t1 + s*v1 \nb = 2*t2 + s*v2\nif a > b:\n    print(\"Second\")\nelif a < b:\n    print(\"First\")\nelse:\n    print(\"Friendship\")\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int s, v1, v2, t1, t2;\n  cin >> s >> v1 >> v2 >> t1 >> t2;\n  int st = s * v1 + t1 * 2, nd = s * v2 + t2 * 2;\n  if (st < nd) {\n    cout << \"First\";\n  } else if (st > nd) {\n    cout << \"Second\";\n  } else {\n    cout << \"Friendship\";\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class Main{\n    public static void main(String[]args){\n        \n        Scanner sc=new Scanner(System.in);\n\t\t//System.out.println(\"s\");\n\t\tint s=sc.nextInt();\n\t\tint v1=sc.nextInt();\n\t\tint v2=sc.nextInt();\n\t\tint t1=sc.nextInt();\n\t\tint t2=sc.nextInt();\n\t\tint val1=(s*v1)+2*t1;\n\t\tint val2=(s*v2)+2*t2;\n\t\tString result=\"Friendship\";\n\t\tif(val1<val2){\n\t\t\tresult=\"First\";\n\t\t}else if(val2<val1){\n\t\t\tresult=\"Second\";\n\t\t}\n       System.out.println(result);\n        \n        \n        \n    }}"
+  }
+]

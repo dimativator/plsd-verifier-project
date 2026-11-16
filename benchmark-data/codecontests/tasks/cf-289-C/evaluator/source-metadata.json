@@ -1,0 +1,34 @@
+{
+  "name": "289_C. Polo the Penguin and Strings",
+  "description": "Little penguin Polo adores strings. But most of all he adores strings of length n.\n\nOne day he wanted to find a string that meets the following conditions:\n\n  1. The string consists of n lowercase English letters (that is, the string's length equals n), exactly k of these letters are distinct. \n  2. No two neighbouring letters of a string coincide; that is, if we represent a string as s = s1s2... sn, then the following inequality holds, si ≠ si + 1(1 ≤ i < n). \n  3. Among all strings that meet points 1 and 2, the required string is lexicographically smallest. \n\n\n\nHelp him find such string or state that such string doesn't exist.\n\nString x = x1x2... xp is lexicographically less than string y = y1y2... yq, if either p < q and x1 = y1, x2 = y2, ... , xp = yp, or there is such number r (r < p, r < q), that x1 = y1, x2 = y2, ... , xr = yr and xr + 1 < yr + 1. The characters of the strings are compared by their ASCII codes.\n\nInput\n\nA single line contains two positive integers n and k (1 ≤ n ≤ 106, 1 ≤ k ≤ 26) — the string's length and the number of distinct letters.\n\nOutput\n\nIn a single line print the required string. If there isn't such string, print \"-1\" (without the quotes).\n\nExamples\n\nInput\n\n7 4\n\n\nOutput\n\nababacd\n\n\nInput\n\n4 7\n\n\nOutput\n\n-1",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 1300,
+  "cf_contest_id": 289,
+  "cf_index": "C",
+  "cf_tags": [
+    "greedy"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00013-of-00039-30b8c3829ee3b962.parquet",
+  "source_row": 279,
+  "task_id": "codecontests/cf-289-C",
+  "rating_band": "1200-1599",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/289/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

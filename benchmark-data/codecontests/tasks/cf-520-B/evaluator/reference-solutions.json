@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, m = [int(x) for x in input().split()]\ns = 0\n\nwhile(n < m):\n    s += 1 + (m % 2)\n    m = (m + m % 2) // 2\n\nprint(s + n - m)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main(int argc, char const *argv[]) {\n  int n, m;\n  cin >> n >> m;\n  int c = 0;\n  while (n != m) {\n    if (m % 2 == 0 && m > n) {\n      c++;\n      m /= 2;\n      continue;\n    }\n    m++;\n    c++;\n  }\n  cout << c << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.io.BufferedInputStream;\nimport java.util.Scanner;\n\n/*\n * To change this license header, choose License Headers in Project Properties.\n * To change this template file, choose Tools | Templates\n * and open the template in the editor.\n */\n\n/**\n *\n * @author AL_DEEB\n */\npublic class two_button {\n     public static void main(String[] args) {\n\t\tStringBuilder sb = new StringBuilder();\n\t\t        BufferedInputStream bs = new BufferedInputStream(System.in);\n\t\tScanner sc = new Scanner(bs);\n                \n                int n=sc.nextInt();\n                int m=sc.nextInt();\n                \n                int num=0;\n            \n             \n                    \n                    while(true)\n                    {\n                        if(n>=m)\n                        {\n                        num+=n-m;\n                        break;\n                        }\n                        else\n                        {\n                            if(m%2==0)\n                                m=m/2;\n                            else\n                                m++;\n                         num++;\n                            \n                            \n                        }\n                        \n                        \n                    }\n                    System.out.println(num);\n              \n                \n                \n                \n     }\n}\n"
+  }
+]

@@ -1,0 +1,31 @@
+CROSSHAIR QUICKSTART
+
+Use `verify main.py` to search for counterexamples in typed functions with contracts.
+Consider calling it for boundary cases, arithmetic, indexing, or properties your
+public tests do not cover. Inspect the feedback, then decide whether to revise.
+Use `if __name__ == '__main__':` for stdin/stdout execution so importing the module
+for analysis does not read input. Target the real submitted implementation.
+
+CrossHair needs a contract entry point. This PEP316 example is accepted:
+
+def increment(x: int) -> int:
+    """
+    pre: x >= 0
+    post: _ == x + 1
+    """
+    return x + 1
+
+`_` is the return value. Replacing the return with x - 1 should produce a concrete
+counterexample. A trivial `post: True` enables exploration for runtime errors,
+but does not specify the intended answer. Types and meaningful properties improve
+analysis. Do not narrow valid task inputs just to make a check pass.
+
+The wrapper runs `crosshair check --analysis_kind=PEP316,asserts --report_all`.
+Extra CLI options are permitted, for example `verify main.py --per_condition_timeout 30`.
+Tool defaults apply unless you choose options. No counterexample found is not a
+proof for all inputs. Unsupported operations and incomplete exploration limit
+coverage. You may also write a local verification harness that imports main.py,
+but a proof about a separate reimplementation is not a check of your submission.
+
+Run a relevant verifier check, inspect its feedback, and address the result before submitting.
+Use public and focused custom tests alongside verification.

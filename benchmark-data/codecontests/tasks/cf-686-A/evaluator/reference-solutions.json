@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "x, y = input().split(\" \")\na = x,y\na = list(a)\nfor i in range(len(a)):\n    a[i]=int(a[i])\ncount=0\nnum =a[1]\nfor i in range(a[0]):\n    z,f = input().split(\" \")\n    char=z\n    inp=int(f)\n    if char == '+':\n        num = num + inp\n    elif char == '-':\n        num = num - inp\n        if num < 0:\n            count+=1\n            num = num+inp\n\nprint(num,count)\n\n\n   \t \t   \t \t   \t  \t\t \t\t\t     \t\t"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n = 0;\n  long long x = 0;\n  char signo = ' ';\n  long helados = 0;\n  int chamacos_tristes = 0;\n  cin >> n;\n  cin >> x;\n  for (int i = 0; i < n; i++) {\n    cin >> signo;\n    cin >> helados;\n    if (signo == '+')\n      x += helados;\n    else if (x < helados)\n      chamacos_tristes++;\n    else\n      x -= helados;\n  }\n  cout << x << \" \" << chamacos_tristes;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.HashSet;\nimport java.util.Scanner;\nimport java.util.Arrays;\nimport java.util.Set;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner input = new Scanner(System.in);\n        int n = input.nextInt();\n        long ice = input.nextLong();\n        char c ;\n        long l = 0;\n        long distressed = 0;\n        for (int i = 0; i < n; i++) {\n            c = input.next().charAt(0);\n            l = input.nextLong();\n            if (c == '+') {\n                ice += l;\n            } else {\n                if (l <= ice) {\n                    ice -= l;\n                } else {\n                    distressed++;\n                }\n            }\n\n        }\n        System.out.print(ice + \" \" + distressed);\n\n    }\n}\n"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\n\nknowledge = input()\n\ncount = 0\n\nkeyHash = {}\n\nfor i in range((2*n) -2):\n    if i%2 == 0:\n        key = knowledge[i]\n\n        if key in keyHash: keyHash[key]+=1\n\n        else: keyHash[key] = 1\n    \n    else:\n        door = knowledge[i]\n\n        reqKey = chr(ord(door)+ 32)\n\n        if reqKey in keyHash and keyHash[reqKey] > 0: keyHash[reqKey]-=1\n\n        else: count+=1\n\n\nprint(count)\n\n\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint main() {\n  long int a[100] = {0}, b = 0, i, m, n;\n  char c;\n  scanf(\"%ld\", &m);\n  n = (2 * m) - 2;\n  scanf(\"%c\", &c);\n  for (i = 0; i < n; i++) {\n    scanf(\"%c\", &c);\n    if (i % 2 == 0)\n      a[c - 32]++;\n    else if (a[c] > 0)\n      a[c]--;\n    else\n      b++;\n  }\n  printf(\"%ld\\n\", b);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\nimport java.io.OutputStream;\nimport java.io.IOException;\nimport java.io.PrintWriter;\nimport java.io.InputStream;\n\n/**\n * Built using CHelper plug-in\n * Actual solution is at the top\n * @author Evgeniy Kiselev\n */\npublic class Main {\n\tpublic static void main(String[] args) {\n\t\tInputStream inputStream = System.in;\n\t\tOutputStream outputStream = System.out;\n\t\tScanner in = new Scanner(inputStream);\n\t\tPrintWriter out = new PrintWriter(outputStream);\n\t\tTaskA solver = new TaskA();\n\t\tsolver.solve(1, in, out);\n\t\tout.close();\n\t}\n}\n\nclass TaskA {\n    public void solve(int testNumber, Scanner in, PrintWriter out) {\n        int N = in.nextInt();\n\n//        char[] rooms = new char[N];\n        int[] keys = new int[29];\n        String data = in.next();\n        int res = 0;\n        for (int i = 0; i < data.length(); i++) {\n            boolean isKey = i % 2 == 0;\n            char c = data.charAt(i);\n            if (isKey) {\n                keys[c - 'a']++;\n            } else {\n                int index = c - 'A';\n                if (keys[index] > 0) {\n                    keys[index]--;\n                } else {\n                    res++;\n                }\n            }\n\n        }\n        out.println(res);\n    }\n}\n"
+  }
+]

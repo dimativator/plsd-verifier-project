@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\n\nsumo = n\nwhile n>=10:\n    sumo = 0\n    while n!=0:\n        sumo+=n%10\n        n//=10\n    n = sumo\nprint(sumo)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <algorithm>\n#include <iostream>\n#include <cstring>\n#include <ctime>\n\n#define end cout<<endl\n#define lo long long \nint size;\n#define forx for(int i=0;i<size;i++)\n#define fast ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0);\nusing namespace std;\nint main () \n{\n\tfast\n\tcin>>size;\n\tsize=size%9;\n\tif(size==0)\n\tsize=9;\n\tcout<<size;\n\t\n}"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.io.PrintWriter;\nimport java.lang.reflect.Array;\nimport java.util.*;\npublic class Main{\n    static class FastScanner {\n        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n        StringTokenizer st = new StringTokenizer(\"\");\n\n        String next() {\n            while (!st.hasMoreTokens())\n                try {\n                    st = new StringTokenizer(br.readLine());\n                } catch (IOException e) {\n                    e.printStackTrace();\n                }\n            return st.nextToken();\n        }\n\n        int nextInt() {\n            return Integer.parseInt(next());\n        }\n\n        int[] nextArray(int n) {\n            int[] a = new int[n];\n            for (int i = 0; i < n; i++) a[i] = nextInt();\n            return a;\n        }\n        long[] nextArray(long n) {\n            long[] a = new long[(int) n];\n            for (int i = 0; i < n; i++) a[i] = nextLong();\n            return a;\n        }\n\n        long nextLong() {\n            return Long.parseLong(next());\n        }\n    }\n    static class FastWriter extends PrintWriter {\n            FastWriter(){\n                super(System.out);\n            }\n            void println(int[] array) {\n                for(int i=0; i<array.length; i++) {\n                    print(array[i]+\" \");\n                }\n                println();\n            }\n            void println(long [] array) {\n                for(int i=0; i<array.length; i++) {\n                    print(array[i]+\" \");\n                }\n                println();\n            }\n        }\n        static ArrayList<Integer> list=new ArrayList<>();\n    public static void main(String[] args){\n        FastScanner in = new FastScanner();\n        FastWriter out = new FastWriter();\n        int n=in.nextInt();\n        while(n>=10){\n            int sum=0;\n            while(n!=0){\n                sum+=n%10;\n                n/=10;\n            }\n            n=sum;\n        }\n        out.println(n);\n        out.close();\n    }\n}"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "rever = \"AHIMOTUVWXYovwx\"\nrev = [\"bd\", \"pq\",\"db\",\"qp\"]\nline = input().rstrip()\nif len(line) & 1 and line[len(line) // 2] not in rever:\n    print(\"NIE\")\n    exit()\n\nl = len(line) // 2 - 1\nr = len(line) // 2 if len(line) & 1 == 0 else\\\n    len(line) // 2 + 1\n\nfor i in range(len(line) // 2):\n    if line[l] + line[r] not in rev and (line[l] not in rever or line[l] != line[r]):\n        break\n    l-=1\n    r+=1\nif l != -1 or r != len(line):\n    print(\"NIE\")\nelse:\n    print(\"TAK\")"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, i, j, k, f;\n  string s;\n  char cap[15] = {'A', 'H', 'I', 'M', 'O', 'T', 'U', 'V',\n                  'W', 'X', 'Y', 'o', 'v', 'w', 'x'};\n  cin >> s;\n  i = 0;\n  j = s.length() - 1;\n  while (i <= j) {\n    if (s[i] == s[j]) {\n      for (k = 0; k < 15; k++) {\n        if (s[i] == cap[k]) break;\n      }\n      if (k >= 15) {\n        break;\n      }\n    } else {\n      if ((s[i] == 'b' && s[j] == 'd') || (s[i] == 'd' && s[j] == 'b'))\n        ;\n      else if ((s[i] == 'p' && s[j] == 'q') || (s[i] == 'q' && s[j] == 'p'))\n        ;\n      else\n        break;\n    }\n    i++;\n    j--;\n  }\n  if (i <= j)\n    cout << \"NIE\\n\";\n  else\n    cout << \"TAK\\n\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class spalin\n{\n\n\tpublic static void main(String[] ar)\n\t{\n\t\tScanner sc = new Scanner(System.in);\n\t\tString str = sc.nextLine();\n\t\t\n\t\tint half;\n\t\t\n\t\tif(str.length()%2 == 0 )\n\t\t\thalf = str.length()/2;\n\t\telse\n\t\t\thalf = str.length()/2+1;\n\t\t\t\n\t\t//System.out.println(half);\n\t\tfor(int i=0;i<half; i++ )\n\t\t{\tchar x = str.charAt(i);\n\t\t\tchar y = str.charAt(str.length() - i -1);\n\t\t\tif( x == y || (x=='b' && y =='d')||(x=='d' && y =='b')||(x=='q' && y =='p') ||(x=='p' && y =='q') )\n\t\t\t{\n\t\t\t\tif( (x=='b' && y =='d')||(x=='d' && y =='b')||(x=='q' && y =='p') ||(x=='p' && y =='q') )\n\t\t\t\t{\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\tswitch(x)\n\t\t\t\t\t{\n\t\t\t\t\t\tcase 'A' :\n\t\t\t\t\t\tcase 'H' :\t\n\t\t\t\t\t\tcase 'I' :\t\n\t\t\t\t\t\tcase 'M' :\t\n\t\t\t\t\t\tcase 'O' :\n\t\t\t\t\t\tcase 'o' :\t\n\t\t\t\t\t\tcase 'T' :\t\n\t\t\t\t\t\tcase 'U' :\n\t\t\t\t\t\tcase 'V' :\n\t\t\t\t\t\tcase 'v' :\t\n\t\t\t\t\t\tcase 'W' :\n\t\t\t\t\t\tcase 'w' :\n\t\t\t\t\t\tcase 'X' :\t\n\t\t\t\t\t\tcase 'x' :\n\t\t\t\t\t\tcase 'Y' :\tbreak;\n\t\t\t\t\t\tdefault:   System.out.println(\"NIE\");\n\t\t\t\t\t\t\t\t\treturn;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\tSystem.out.println(\"NIE\");\n\t\t\t\treturn;\n\t\t\t}\n\t\t}\t\n\t\t\n\t\tSystem.out.println(\"TAK\");\n\t\n\t}\n\n}"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "task_id": "HumanEval_kotlin/28",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Concatenate list of strings into a single string\n * >>> concatenate([])\n * ''\n * >>> concatenate(['a', 'b', 'c'])\n * 'abc'\n *\n */\nfun concatenate(strings: List<String>): String {\n",
+  "entry_point": "concatenate",
+  "test": "fun main() {\n    var arg00: List<String> = mutableListOf()\n    var x0: String = concatenate(arg00)\n    var v0: String = \"\"\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: List<String> = mutableListOf(\"x\", \"y\", \"z\")\n    var x1: String = concatenate(arg10)\n    var v1: String = \"xyz\"\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: List<String> = mutableListOf(\"x\", \"y\", \"z\", \"w\", \"k\")\n    var x2: String = concatenate(arg20)\n    var v2: String = \"xyzwk\"\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Concatenate list of strings into a single string\n * >>> concatenate([])\n * ''\n * >>> concatenate(['a', 'b', 'c'])\n * 'abc'\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun concatenate(strings: List<String>): String {",
+    "    return strings.joinToString(\"\")",
+    "}",
+    "",
+    ""
+  ]
+}

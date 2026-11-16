@@ -1,0 +1,35 @@
+{
+  "id": "cf-723-B",
+  "dataset": "deepmind/code_contests",
+  "source_id": "codecontests/cf-723-B",
+  "url": "https://codeforces.com/problemset/problem/723/B",
+  "source_split": "train",
+  "submission_format": "program",
+  "target_language": "Kotlin",
+  "difficulty": 1100,
+  "rating_band": "800-1199",
+  "tags": [
+    "expression parsing",
+    "implementation",
+    "strings"
+  ],
+  "public_test_count": 4,
+  "private_test_count": 37,
+  "generated_test_count": 90,
+  "held_out_public_input_overlap": 0,
+  "repeated_inputs_with_different_expected_outputs": 0,
+  "source_time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "source_memory_limit_bytes": 256000000,
+  "behavioral_validation": "not_run",
+  "kotlin_reference": "not_translated",
+  "verifier_validation": "not_run",
+  "output_checker": "requires_review",
+  "task_dir": "tasks/cf-723-B",
+  "public_dir": "tasks/cf-723-B/public",
+  "evaluator_dir": "tasks/cf-723-B/evaluator",
+  "metadata_file": "tasks/cf-723-B/task.json",
+  "evaluation_file": "tasks/cf-723-B/evaluation.json"
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "#from math import pow\ndef pow(num, n):\n    ans = 1\n    while n>0:\n        ans*=num\n        n-=1\n    return ans\nl,r,k = map(int, input().split())\ni = 0;\nwhile (pow(k,i)<l):\n    i+=1\n    \ncount = 0\na = []\nwhile (l<=pow(k,i)<=r):\n    a.append(int(pow(k,i)))\n    count += 1\n    i+=1\n\nif count == 0:\n    print(-1)\nelse:\n    for i in range(count):\n        print(a[i], end=\" \")\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long a, b, c;\n  cin >> a >> b >> c;\n  long long ans = 1;\n  bool check = 0;\n  while (1) {\n    if (ans >= a && ans <= b) {\n      cout << (long long)ans << \" \";\n      check = 1;\n    }\n    if (b / ans < c) break;\n    ans = ans * c;\n  }\n  if (!check) puts(\"-1\");\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\nimport java.lang.*;\nimport java.math.*;\n\npublic class A {\n\tpublic void run() throws Exception {\n\t\tFastScanner sc = new FastScanner();\n\t\tlong l = sc.nextLong();\n\t\tlong r = sc.nextLong();\n\t\tlong k = sc.nextLong();\n\t\tArrayList<Long> powers = new ArrayList<Long>();\n\t\tBigInteger cur = BigInteger.ONE;\n\t\twhile(cur.compareTo(new BigInteger(\"1000000000000000000\")) <= 0) {\n\t\t\tpowers.add(cur.longValue());\n\t\t\tcur = cur.multiply(new BigInteger(\"\" + k));\n\t\t}\n\t\t//System.out.println(powers);\n\t\tint idx = Collections.binarySearch(powers, l);\n\t\tif(idx < 0) idx = ~idx;\n\t\tint end = Collections.binarySearch(powers, r);\n\t\tif(end < 0) {\n\t\t\tend = ~end;\n\t\t\tend--;\n\t\t}\n\t\tboolean exists = false;\n\t\tfor(int i = idx; i <= end; i++) {\n\t\t\texists = true;\n\t\t\tSystem.out.print(powers.get(i) + \" \");\n\t\t}\n\t\tif(!exists) {\n\t\t\tSystem.out.println(-1);\n\t\t}\n\t}\n\tstatic class FastScanner {\n\t\tpublic BufferedReader reader;\n\t\tpublic StringTokenizer tokenizer;\n\n\t\tpublic FastScanner() {\n\t\t\treader = new BufferedReader(new InputStreamReader(System.in), 32768);\n\t\t\ttokenizer = null;\n\t\t}\n\n\t\tpublic String next() {\n\t\t\twhile (tokenizer == null || !tokenizer.hasMoreTokens()) {\n\t\t\t\ttry {\n\t\t\t\t\ttokenizer = new StringTokenizer(reader.readLine());\n\t\t\t\t} catch (IOException e) {\n\t\t\t\t\tthrow new RuntimeException(e);\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn tokenizer.nextToken();\n\t\t}\n\n\t\tpublic int nextInt() {\n\t\t\treturn Integer.parseInt(next());\n\t\t}\n\n\t\tpublic long nextLong() {\n\t\t\treturn Long.parseLong(next());\n\t\t}\n\n\t\tpublic double nextDouble() {\n\t\t\treturn Double.parseDouble(next());\n\t\t}\n\n\t\tpublic String nextLine() {\n\t\t\ttry {\n\t\t\t\treturn reader.readLine();\n\t\t\t} catch (IOException e) {\n\t\t\t\tthrow new RuntimeException(e);\n\t\t\t}\n\t\t}\n\n\t}\n\tpublic static void main(String[] args) throws Exception {\n\t\tnew A().run();\n\t}\n}"
+  }
+]

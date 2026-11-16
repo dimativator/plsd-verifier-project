@@ -1,0 +1,37 @@
+ESBMC-PYTHON QUICKSTART
+
+Use `verify main.py` for bounded model checking, or `verify harness.py` for an
+agent-written verification harness that imports and calls the actual functions
+from main.py. Do not replace the submitted algorithm with a simplified copy.
+Consider properties around boundaries, indexing, arithmetic, and algorithmic
+invariants. Do not assume the tool infers the intended answer from the statement.
+
+Example harness (adapt the import to your real function):
+
+from main import increment
+
+x: int = __VERIFIER_nondet_int()
+__ESBMC_assume(x >= 0 and x <= 100)
+assert increment(x) == x + 1
+
+The nondeterministic functions are ESBMC primitives, not executable Python code.
+Keep them in a verification-only harness so main.py remains runnable normally.
+The finite input range above is an example exploration domain, not a restriction
+you may impose on valid benchmark inputs. Broader reasoning requires broader
+coverage. Report the bounds and assumptions you used.
+
+The wrapper uses `--unwind 10`. You may override this with e.g.
+`verify harness.py --unwind 30`. This is the loop-unrolling bound, not the allowed
+input size. An unwinding assertion failure indicates insufficient exploration,
+not necessarily a functional bug. Do not disable unwinding assertions and call
+the resulting bounded search a full proof. The modeled integer domain and library
+support also limit conclusions. Replay concrete counterexamples with normal
+Python when practical; a model mismatch is not a confirmed submission defect.
+
+For a function-only check, `verify main.py --function helper` is available if the
+frontend supports that function. Prefer explicit harness inputs for clarity.
+Unanalyzed stdin paths, unsupported features, and timeouts are not successful
+verification. Successful bounded analysis is not general task correctness.
+
+Run a relevant verifier check, inspect its feedback, and address the result before submitting.
+Use public and focused custom tests alongside verification.

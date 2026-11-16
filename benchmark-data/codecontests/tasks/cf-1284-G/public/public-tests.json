@@ -1,0 +1,8 @@
+{
+  "input": [
+    "4\n2 2\nOO\nOO\n3 3\nOOO\nXOO\nOOO\n4 4\nOOOX\nXOOX\nOOXO\nOOOO\n5 6\nOOOOOO\nOOOOOO\nOOOOOO\nOOOOOO\nOOOOOO\n"
+  ],
+  "output": [
+    "YES\nOOO\n  O\nOOO\nNO\nYES\nOOOOO X\n  O O  \nX O O X\n  O    \nOOO X O\nO O   O\nO OOOOO\nYES\nOOOOOOOOOOO\n  O   O   O\nOOO OOO OOO\nO   O   O  \nOOO OOO OOO\n  O   O   O\nOOO OOO OOO\nO   O   O  \nOOO OOO OOO\n"
+  ]
+}

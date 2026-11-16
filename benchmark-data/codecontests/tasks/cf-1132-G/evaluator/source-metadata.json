@@ -1,0 +1,36 @@
+{
+  "name": "1132_G. Greedy Subsequences",
+  "description": "For some array c, let's denote a greedy subsequence as a sequence of indices p_1, p_2, ..., p_l such that 1 ≤ p_1 < p_2 < ... < p_l ≤ |c|, and for each i ∈ [1, l - 1], p_{i + 1} is the minimum number such that p_{i + 1} > p_i and c[p_{i + 1}] > c[p_i].\n\nYou are given an array a_1, a_2, ..., a_n. For each its subsegment of length k, calculate the length of its longest greedy subsequence.\n\nInput\n\nThe first line contains two integers n and k (1 ≤ k ≤ n ≤ 10^6) — the length of array a and the length of subsegments.\n\nThe second line contains n integers a_1, a_2, ..., a_n (1 ≤ a_i ≤ n) — array a.\n\nOutput\n\nPrint n - k + 1 integers — the maximum lengths of greedy subsequences of each subsegment having length k. The first number should correspond to subsegment a[1..k], the second — to subsegment a[2..k + 1], and so on.\n\nExamples\n\nInput\n\n\n6 4\n1 5 2 5 3 6\n\n\nOutput\n\n\n2 2 3 \n\n\nInput\n\n\n7 6\n4 5 2 5 3 6 6\n\n\nOutput\n\n\n3 3 \n\nNote\n\nIn the first example: \n\n  * [1, 5, 2, 5] — the longest greedy subsequences are 1, 2 ([c_1, c_2] = [1, 5]) or 3, 4 ([c_3, c_4] = [2, 5]). \n  * [5, 2, 5, 3] — the sequence is 2, 3 ([c_2, c_3] = [2, 5]). \n  * [2, 5, 3, 6] — the sequence is 1, 2, 4 ([c_1, c_2, c_4] = [2, 5, 6]). \n\n\n\nIn the second example: \n\n  * [4, 5, 2, 5, 3, 6] — the longest greedy subsequences are 1, 2, 6 ([c_1, c_2, c_6] = [4, 5, 6]) or 3, 4, 6 ([c_3, c_4, c_6] = [2, 5, 6]). \n  * [5, 2, 5, 3, 6, 6] — the subsequence is 2, 3, 5 ([c_2, c_3, c_5] = [2, 5, 6]). ",
+  "source": 2,
+  "difficulty": 13,
+  "cf_rating": 2400,
+  "cf_contest_id": 1132,
+  "cf_index": "G",
+  "cf_tags": [
+    "data structures",
+    "dp",
+    "trees"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00013-of-00039-30b8c3829ee3b962.parquet",
+  "source_row": 254,
+  "task_id": "codecontests/cf-1132-G",
+  "rating_band": "2400+",
+  "source_difficulty": "G",
+  "url": "https://codeforces.com/problemset/problem/1132/G",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

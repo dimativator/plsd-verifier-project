@@ -1,0 +1,35 @@
+{
+  "name": "1339_B. Sorted Adjacent Differences",
+  "description": "You have array of n numbers a_{1}, a_{2}, …, a_{n}. \n\nRearrange these numbers to satisfy |a_{1} - a_{2}| ≤ |a_{2} - a_{3}| ≤ … ≤ |a_{n-1} - a_{n}|, where |x| denotes absolute value of x. It's always possible to find such rearrangement.\n\nNote that all numbers in a are not necessarily different. In other words, some numbers of a may be same.\n\nYou have to answer independent t test cases.\n\nInput\n\nThe first line contains a single integer t (1 ≤ t ≤ 10^{4}) — the number of test cases.\n\nThe first line of each test case contains single integer n (3 ≤ n ≤ 10^{5}) — the length of array a. It is guaranteed that the sum of values of n over all test cases in the input does not exceed 10^{5}.\n\nThe second line of each test case contains n integers a_{1}, a_{2}, …, a_{n} (-10^{9} ≤ a_{i} ≤ 10^{9}).\n\nOutput\n\nFor each test case, print the rearranged version of array a which satisfies given condition. If there are multiple valid rearrangements, print any of them.\n\nExample\n\nInput\n\n\n2\n6\n5 -2 4 8 6 5\n4\n8 1 4 2\n\n\nOutput\n\n\n5 5 4 6 8 -2\n1 2 4 8\n\nNote\n\nIn the first test case, after given rearrangement, |a_{1} - a_{2}| = 0 ≤ |a_{2} - a_{3}| = 1 ≤ |a_{3} - a_{4}| = 2 ≤ |a_{4} - a_{5}| = 2 ≤ |a_{5} - a_{6}| = 10. There are other possible answers like \"5 4 5 6 -2 8\".\n\nIn the second test case, after given rearrangement, |a_{1} - a_{2}| = 1 ≤ |a_{2} - a_{3}| = 2 ≤ |a_{3} - a_{4}| = 4. There are other possible answers like \"2 4 8 1\".",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 1200,
+  "cf_contest_id": 1339,
+  "cf_index": "B",
+  "cf_tags": [
+    "constructive algorithms",
+    "sortings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00011-of-00039-5de236be5188959d.parquet",
+  "source_row": 11,
+  "task_id": "codecontests/cf-1339-B",
+  "rating_band": "1200-1599",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/1339/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, k = [int(x) for x in input().split(' ')]\nans = 0\ny = n*(k-1)+1\nx = 1\nbarr = []\nfor i in range(n):\n    arr = []\n    for j in range(k-1):\n        arr.append(x)\n        x += 1\n    for j in range(k-1, n):\n        arr.append(y)\n        y += 1\n    ans += arr[k-1]\n    barr.append(' '.join(map(str, arr)))\nprint(ans)\nprint('\\n'.join(barr))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, k, i, j, sum = 0, c, t = 0;\n  cin >> n >> k;\n  int a[505][505] = {0};\n  c = n * (k - 1);\n  for (i = 1; i <= n; i++) {\n    for (j = 1; j < k; j++) {\n      t++, a[i][j] = t;\n    }\n    for (j = k; j <= n; j++) {\n      c++, a[i][j] = c;\n      if (j == k) sum += a[i][j];\n    }\n  }\n  cout << sum << endl;\n  for (i = 1; i <= n; i++) {\n    for (j = 1; j <= n; j++) cout << a[i][j] << \" \";\n    cout << endl;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.Scanner;\n\npublic class KspecialTables {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int k = sc.nextInt();\n\n        int[][] a = new int[n][n];\n\n        for (int i = 0; i < (k - 1) * n; i++) {\n            int c = i / n;\n            int r = i % n;\n            a[r][c] = i + 1;\n        }\n\n        for (int i = (k - 1) * n; i < n * n; i++) {\n            int num = (i - (k - 1) * n);\n            int r = num / (n - k + 1);\n            int c = num % (n - k + 1) + k - 1;\n            a[r][c] = i + 1;\n        }\n        int sum = 0;\n        for (int i = 0; i < n; i++) {\n            sum += a[i][k - 1];\n        }\n        System.out.println(sum);\n        print(n, a);\n    }\n\n    private static void print(int n, int[][] a) {\n        for (int i = 0; i < n; i++) {\n            StringBuilder sb = new StringBuilder();\n            for (int j = 0; j < n; j++) {\n                sb.append(a[i][j] + \" \");\n            }\n            System.out.println(sb.toString().trim());\n        }\n    }\n}\n"
+  }
+]

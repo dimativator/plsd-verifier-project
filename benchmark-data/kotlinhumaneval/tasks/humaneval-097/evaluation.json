@@ -1,0 +1,13 @@
+{
+  "kind": "kotlin_harness",
+  "submission_file": "Solution.kt",
+  "visible_harness": "public/PublicTests.kt",
+  "hidden_harness": "evaluator/HiddenTests.kt",
+  "original_harness": "evaluator/OriginalTests.kt",
+  "success_rule": "Compile submission with HiddenTests.kt, then require normal exit within the configured limits",
+  "reference": "evaluator/Reference.kt",
+  "reference_execution": "not_run",
+  "runtime_limits": null,
+  "runtime_status": "not_configured",
+  "verifier_success_required": false
+}

@@ -1,0 +1,32 @@
+{
+  "name": "952_E. Cheese Board",
+  "description": "Not to be confused with [chessboard](https://en.wikipedia.org/wiki/Chessboard).\n\n<image>\n\nInput\n\nThe first line of input contains a single integer N (1 ≤ N ≤ 100) — the number of cheeses you have.\n\nThe next N lines describe the cheeses you have. Each line contains two space-separated strings: the name of the cheese and its type. The name is a string of lowercase English letters between 1 and 10 characters long. The type is either \"soft\" or \"hard. All cheese names are distinct.\n\nOutput\n\nOutput a single number.\n\nExamples\n\nInput\n\n9\nbrie soft\ncamembert soft\nfeta soft\ngoat soft\nmuenster soft\nasiago hard\ncheddar hard\ngouda hard\nswiss hard\n\n\nOutput\n\n3\n\n\nInput\n\n6\nparmesan hard\nemmental hard\nedam hard\ncolby hard\ngruyere hard\nasiago hard\n\n\nOutput\n\n4",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2000,
+  "cf_contest_id": 952,
+  "cf_index": "E",
+  "cf_tags": [],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00002-of-00039-9cea23812e920e41.parquet",
+  "source_row": 214,
+  "task_id": "codecontests/cf-952-E",
+  "rating_band": "2000-2399",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/952/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "t=int(input())\nfor i in range(t):\n    x, y, n=map(int,input().split())\n    print(n-(n-y)%x)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, x, y, k, t, i, r;\n  cin >> t;\n  for (i = 0; i < t; i++) {\n    cin >> x >> y >> n;\n    r = ((n / x) * x) + y;\n    if (r > n) {\n      r -= x;\n    }\n    cout << r << endl;\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.*;\nimport java.lang.*;\nimport java.io.*;\n\npublic class rr\n{\n\tpublic static void main (String[] args) throws java.lang.Exception\n\t{\n\t\tScanner sc=new Scanner(System.in);\n\t\tint tt=sc.nextInt();\n\t\twhile(tt-->0){\n\t\t    int x=sc.nextInt();\n\t\t    int y=sc.nextInt();\n\t\t    int n=sc.nextInt();\n\t\t    int t=n%x;\n\t\t    if(t==y){\n\t\t        System.out.println(n);\n\t\t        \n\t\t    }\n\t\t    else if(y<t){\n\t\t        n-=t-y;\n\t\t        \t\t        System.out.println(n);\n\t\t    }\n\t\t    else{\n\t\t        n=n-t-x+(y);\n\t\t        System.out.println(n);\n\t\t    }\n\t\t}\n\t}\n}\n"
+  }
+]

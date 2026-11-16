@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\nq=list(map(int,input().split()))\n\neve,eve_indx,neg,neg_indx=0,0,0,0\n\nfor i in range(n):\n    x=q[i]%2\n    if x==0:\n        eve +=1\n        eve_indx=i\n    else:\n        neg +=1\n        neg_indx=i\n\nif eve==1:\n    print(eve_indx+1)\nelse:\n    print(neg_indx+1)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint a[105], jq;\nint main() {\n  int n;\n  cin >> n;\n  for (int i = 1; i <= 3; i++) {\n    cin >> a[i];\n  }\n  jq = (a[1] % 2 + a[2] % 2 + a[3] % 2) / 2;\n  for (int i = 1; i <= n; i++) {\n    if (i > 3) cin >> a[i];\n    if (a[i] % 2 != jq) {\n      cout << i << endl;\n      return 0;\n    }\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.*;\nimport java.lang.*;\npublic class Main\n{\n\tpublic static void main (String[] args) throws java.lang.Exception\n\t{\n\t    Scanner sc = new Scanner(System.in);\n\t    int n = sc.nextInt();\n\t    int a[]=new int[n];\n\t    int e=0,ec=0,o=0,oc=0;\n\t    for(int i=0;i<n;i++)\n\t    {\n\t    a[i]=sc.nextInt();\n\t    if(a[i]%2==0)\n\t    {\n\t        e=i;\n\t        ec++;\n\t    }\n\t    else{\n\t    o=i;\n\t    oc++;\n\t    }\n\t    }\n\t    if(ec==1)\n\t    System.out.println(e+1);\n\t    else\n\t    System.out.println(o+1);\n\t    \n\t   \n\t\t\n\t}\n}\n"
+  }
+]

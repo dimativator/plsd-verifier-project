@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nfix = list()\nfactors = set(range(1, n + 1))\nfor i in map(int, input().split()):\n    if i in factors:\n        factors.remove(i)\n        fix.append(i)\n    else:\n        fix.append(None)\nprint(' '.join(str(factors.pop()) if i is None else str(i) for i in fix))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint a[100000];\nint c[100001];\nint main() {\n  std::ios::sync_with_stdio(false);\n  std::cin.tie(nullptr);\n  int n;\n  std::cin >> n;\n  std::set<int> unused;\n  for (int i = 0; i < n; ++i) {\n    unused.insert(i + 1);\n  }\n  for (int i = 0; i < n; ++i) {\n    std::cin >> a[i];\n    if (a[i] <= n) {\n      c[a[i]]++;\n      if (c[a[i]] == 1) {\n        unused.erase(unused.find(a[i]));\n      } else {\n        a[i] = 0;\n      }\n    } else {\n      a[i] = 0;\n    }\n  }\n  for (int i = 0; i < n; ++i) {\n    if (a[i] == 0) {\n      a[i] = *unused.begin();\n      unused.erase(unused.begin());\n    }\n  }\n  for (int i = 0; i < n; ++i) {\n    std::cout << a[i] << ' ';\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.util.ArrayList;\nimport java.util.StringTokenizer;\n\n\npublic class B {\n\n    public static void main(String[] args) throws IOException {\n        \n        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n        StringBuilder sb = new StringBuilder();\n        \n        int n = Integer.parseInt(br.readLine());\n        \n        StringTokenizer st = new StringTokenizer(br.readLine());\n        \n        boolean[] used = new boolean[n+1];\n        ArrayList<Integer> change = new ArrayList<Integer>(n);\n        int[] a = new int[n];\n        for(int i = 0; i < n; i++)\n        {\n            int x = Integer.parseInt(st.nextToken());\n            if(x > n || used[x])\n                change.add(i);\n            else\n                used[x] = true;\n            a[i] = x;\n            \n        }\n        for(int i = 0, j = 1; i < change.size(); i++)\n        {\n            while(used[j]) j++;\n            a[change.get(i)] = j++;\n        }\n        \n        for(int i = 0; i < n - 1; i++)\n            sb.append(a[i]+\" \");\n        sb.append(a[n-1]+\"\\n\");\n        \n        System.out.print(sb);\n    }\n}\n"
+  }
+]

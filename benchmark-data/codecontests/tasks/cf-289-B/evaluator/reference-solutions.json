@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,m,d=map(int,input().split())\nx=[]\ny=[]\nfor i in range(n):\n    a=list(map(int,input().split()))\n    y+=a\n    x.append(a)\ny.sort()\ne=y[(0+n*m-1)//2]\na=x[0][0]%d\ncount=0\nans=0\nfor i in x:\n    for j in range(len(i)):\n        if(i[j]%d!=a):\n            pass\n        else:\n            count+=1\n            ans+=(max(i[j],e)-min(i[j],e))//d         \nif(count==n*m):\n    print(ans)\nelse:\n    print(-1)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int flag = 0;\n  long long int n, m, d, temp;\n  cin >> n >> m >> d;\n  vector<long long int> a;\n  cin >> temp;\n  a.push_back(temp);\n  for (long long int i = 1; i < m * n; i++) {\n    long long int check;\n    cin >> check;\n    if (abs(temp - check) % d != 0) {\n      flag = 1;\n      break;\n    }\n    a.push_back(check);\n  }\n  if (flag == 1)\n    cout << -1;\n  else {\n    sort(a.begin(), a.end());\n    long long int mid = a.size() / 2;\n    long long int x = a[mid], ans = 0;\n    for (int i = 0; i < a.size(); i++) ans += abs(a[i] - x) / d;\n    cout << ans;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\npublic class PoloPenguinAndMatrix {\n    public static void main(String[] args) throws Exception {\n        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n        StringTokenizer st = new StringTokenizer(br.readLine());\n        int n = Integer.parseInt(st.nextToken());\n        int m = Integer.parseInt(st.nextToken());\n        int d = Integer.parseInt(st.nextToken());\n        List<Integer> arr = new ArrayList<>();\n        for(int i=0; i<n; i++){\n            st = new StringTokenizer(br.readLine());\n            for(int j=0; j<m; j++){\n                arr.add(Integer.parseInt(st.nextToken()));\n            }\n        }\n        Object[] myarr = arr.toArray();\n        Arrays.sort(myarr);\n        int count = 0;\n        for(int i=0; i<myarr.length; i++){\n            if(((int)myarr[i] - (int)myarr[myarr.length/2])%d != 0){\n                count = -1;\n                break;\n            }\n            else{\n                count += Math.abs(((int)myarr[i] - (int)myarr[myarr.length/2])/d);\n                // System.out.println(myarr[i] + \" - \" + myarr[myarr.length/2] + \" \\\\/ \" + d);\n            }\n        }\n        System.out.println(count);\n    }\n}\n"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "y,b=input().split(' ')\nay,ag,ab=input().split(' ')\ny=int(y)\nb=int(b)\nay=int(ay)\nag=int(ag)\nab=int(ab)\nb=b-(ab*3)\ny=y-(ay*2)\nb=b-ag\ny=y-ag\nbr=0\nif(y<0):\n\tbr=br-y\nif(b<0):\n\tbr=br-b\nprint(br)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nlong long n, m, ans = 0;\nlong long a, b, x, y, z;\nint main() {\n  cin >> a >> b;\n  cin >> x >> y >> z;\n  n = x * 2 + y;\n  m = y + z * 3;\n  if (n - a > 0) ans += n - a;\n  if (m - b > 0) ans += m - b;\n  cout << ans;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.Scanner;\n\npublic class test {\n    public static void main(String args[]) {\n        Scanner in = new Scanner(System.in);\n        long a, ab, y, g, b, res  = 0;\n        a = in.nextLong();\n        ab = in.nextLong();\n        y = in.nextLong();\n        g = in.nextLong();\n        b = in.nextLong();\n        \n        y *= 2;\n        b *= 3;\n        \n        if (y > a) {\n            y -= a;\n            res += y;\n            a = 0;\n        } else {\n            a -= y;\n        }\n        \n        if (b > ab) {\n            b -= ab;\n            res += b;\n            ab = 0;\n        } else {\n            ab -= b;\n        }\n        \n        if (g > a) {\n            res += g - a;\n            a = 0;\n        } else {\n            a -= g;\n        }\n        \n        if (g > ab) {\n            res += g - ab;\n            ab = 0;\n        } else {\n            ab -= g;\n        }\n        System.out.println(res);\n    }\n}"
+  }
+]

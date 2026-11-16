@@ -1,0 +1,17 @@
+/**
+ * You are an expert Kotlin programmer, and here is your task.
+ * * Write a function that takes an integer a and returns True
+ * if this integer is a cube of some integer number.
+ * Note: you may assume the input is always valid.
+ * Examples:
+ * iscube(1) ==> True
+ * iscube(2) ==> False
+ * iscube(-1) ==> True
+ * iscube(64) ==> True
+ * iscube(0) ==> True
+ * iscube(180) ==> False
+ *
+ */
+fun iscube(a: Int): Boolean {
+    TODO("Implement the function")
+}

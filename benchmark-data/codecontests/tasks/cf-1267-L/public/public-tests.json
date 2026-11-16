@@ -1,0 +1,10 @@
+{
+  "input": [
+    "2 3 1\nabcabc\n",
+    "3 2 2\nabcdef\n"
+  ],
+  "output": [
+    "aab\nbcc\n",
+    "ad\nbc\nef\n"
+  ]
+}

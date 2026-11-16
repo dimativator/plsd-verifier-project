@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import sys\nS = sys.stdin.read()\nS = list(map(lambda x: list(map(int, x)), list(map(lambda x: x.split(), [x for x in S.split('\\n') if len(x) > 1]))))\nn, k, x, B = S[0][0], S[0][1], S[0][2], S[1]\n\nX = [[-1 for i in range(x+1)] for i in range(n+1)]\nX[0][0] = 0\nfor i in range(1, n+1): \n    for j in range(1, x+1): \n        X[i][j] = max([X[i][j], max([-1] + [X[i-l][j-1]+B[i-1] for l in range(1, min([i, k])+1) if X[i-l][j-1] != -1])])\nprint(max(list(map(max, X[n-k+1:n+1]))))\n \t\t \t  \t\t\t \t\t  \t\t\t \t\t      \t"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nlong long dp[5050][5005];\nint q[2102100];\nlong long a[2100210];\nint main() {\n  int n, k, s;\n  cin >> n >> k >> s;\n  for (int i = 1; i <= n; i++) cin >> a[i];\n  for (int i = 0; i <= n; i++) {\n    for (int j = 0; j <= s; j++) dp[i][j] = -1111111111111111;\n  }\n  dp[0][0] = 0;\n  for (int j = 1; j <= s; j++) {\n    int l = 0, r = 1;\n    q[0] = 0;\n    for (int i = 1; i <= n; i++) {\n      while (l < r && q[l] < i - k) l++;\n      dp[i][j] = dp[q[l]][j - 1] + a[i];\n      while (l < r && dp[q[r - 1]][j - 1] <= dp[i][j - 1]) r--;\n      q[r++] = i;\n    }\n  }\n  long long maxx = -1111111111111111;\n  for (int i = n - k + 1; i <= n; i++) {\n    maxx = max(maxx, dp[i][s]);\n  }\n  if (maxx < 0) {\n    cout << \"-1\" << endl;\n    return 0;\n  }\n  cout << maxx << endl;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Main {\n\n\tprivate static long[][] dp;\n\tprivate static long[] input = new long[1000];\n\t\n\tpublic static void main(String[] args) {\t\t\t\t\t\t\t\n\t\n\t\tScanner scan = new Scanner(System.in);\n\t\t\n\t\tint i , j , n , k , x;\n\t\tlong ans = - 1;\n\t\t\n\t\tn = scan.nextInt();\n\t\tk = scan.nextInt();\n\t\tx = scan.nextInt();\n\t\t\n\t\tfor (i = 0;i < n;i ++) {\n\t\t\tinput[i] = scan.nextLong();\n\t\t}\n\t\t\n\t\tdp = new long[n][x + 1];\n\t\tfor (i = 0;i < n;i ++) {\n\t\t\tfor (j = 0;j < x + 1;j ++) {\n\t\t\t\tdp[i][j] = - 1;\n\t\t\t}\n\t\t}\n\t\t\n\t\tfor (i = 0;i < n;i ++) {\n\t\t\tdp[i][0] = 0;\n\t\t\tif (i <= k - 1) {\n\t\t\t\tdp[i][1] = input[i];\n\t\t\t}\n\t\t\tfor (j = 0;j < i;j ++) {\n\t\t\t\tfor (int time = 1;time < x;time ++) {\t\t\t\n\t\t\t\t\tif (dp[j][time] >= 0 && (i - j) <= k) {\n\t\t\t\t\t\tlong temp = dp[j][time] + input[i];\n\t\t\t\t\t\tif (temp > dp[i][time + 1]) {\n\t\t\t\t\t\t\tdp[i][time + 1] = temp;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\t\t\t\t\t\n\t\t\t\t}\n\t\t\t}\t\t\t\t\n\t\t}\n\t\t\n\t\tfor (i = 0;i < n;i ++) {\n\t\t\tif (dp[i][x] >= 0) {\n\t\t\t\tint remain = n - 1 - i;\n\t\t\t\tif (remain <= k - 1) {\n\t\t\t\t\tif (dp[i][x] > ans) {\n\t\t\t\t\t\tans = dp[i][x];\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t\n\t\tSystem.out.println(ans);\n\t\t\n\t}\n\t\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+  }
+]

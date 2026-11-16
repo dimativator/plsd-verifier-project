@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-119",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/119",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 5,
+  "public_test_count": 1,
+  "unexposed_test_count": 4,
+  "source_review_note": "Canonical it<100 accepts -1000, although at-most-two-digit magnitude excludes it. Tests use -2/-3 but no large negative value.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-119",
+  "public_dir": "tasks/humaneval-119/public",
+  "evaluator_dir": "tasks/humaneval-119/evaluator",
+  "metadata_file": "tasks/humaneval-119/task.json",
+  "evaluation_harness": "tasks/humaneval-119/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-119/evaluation.json"
+}

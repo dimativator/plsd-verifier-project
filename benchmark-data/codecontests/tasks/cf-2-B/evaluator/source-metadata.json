@@ -1,0 +1,35 @@
+{
+  "name": "2_B. The least round way",
+  "description": "There is a square matrix n × n, consisting of non-negative integer numbers. You should find such a way on it that \n\n  * starts in the upper left cell of the matrix; \n  * each following cell is to the right or down from the current cell; \n  * the way ends in the bottom right cell. \n\n\n\nMoreover, if we multiply together all the numbers along the way, the result should be the least \"round\". In other words, it should end in the least possible number of zeros.\n\nInput\n\nThe first line contains an integer number n (2 ≤ n ≤ 1000), n is the size of the matrix. Then follow n lines containing the matrix elements (non-negative integer numbers not exceeding 109).\n\nOutput\n\nIn the first line print the least number of trailing zeros. In the second line print the correspondent way itself.\n\nExamples\n\nInput\n\n3\n1 2 3\n4 5 6\n7 8 9\n\n\nOutput\n\n0\nDDRR",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 2000,
+  "cf_contest_id": 2,
+  "cf_index": "B",
+  "cf_tags": [
+    "dp",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 64000000,
+  "source_file": "data/train-00019-of-00039-d688fad5ee604390.parquet",
+  "source_row": 205,
+  "task_id": "codecontests/cf-2-B",
+  "rating_band": "2000-2399",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/2/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

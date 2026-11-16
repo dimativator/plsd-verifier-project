@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nif 1 <= n <= 100:\n    for i in range(n):\n        word = input()\n        if len(word) > 10:\n            numWord = str(len(word[1:-1]))\n            print(word[0] + numWord + word[-1])\n        else:\n            print(word)\n        \n        \n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  string s;\n  cin >> s;\n  while (cin >> s) {\n    if (s.length() < 11)\n      cout << s << endl;\n    else\n      cout << s[0] << s.length() - 2 << s[s.length() - 1] << endl;\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "/*\n * To change this template, choose Tools | Templates\n * and open the template in the editor.\n */\n\n/**\n *\n * @author YaSeR\n */\nimport java.io.File;\nimport java.io.IOException;\nimport java.util.Scanner;\n\npublic class WayTooLongWords {\n    public static void main(String[] args) throws IOException{\n        //Scanner cs = new Scanner(new File(\"C:\\\\Users\\\\YaSeR\\\\Documents\\\\NetBeansProjects\\\\ACM\\\\src\\\\WayTooLongWords.txt\"));\n        Scanner cs = new Scanner(System.in);\n        int no = cs.nextInt();\n        String [] array = new String[no];\n        String firstchar = \"\";\n        String lastchar = \"\";\n        int midchar = 0;\n\n        for(int i=0 ; i<no ; i++)\n        {\n            array[i] = cs.next();\n        }\n\n        for(int j =0 ; j<array.length;j++)\n        {\n            if(array[j].length() <= 10)\n            {\n                System.out.println(array[j]);\n            }\n            else\n            {\n                firstchar = String.valueOf(array[j].charAt(0));\n                lastchar = String.valueOf(array[j].charAt(array[j].length()-1));\n                for(int h=1 ;h<=array[j].length()-2;h++ )\n                {\n                    midchar ++;\n                }\n                System.out.println(firstchar+\"\"+midchar+\"\"+lastchar);\n                midchar = 0;\n            }\n            \n        }\n        \n        \n    }\n}\n"
+  }
+]

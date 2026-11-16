@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\na=[[0 for j in range(n)] for i in range(n)]\nfor i in range(n-1):\n    for j in range(n-1):\n        if i!=j:\n            a[i][j]=(i+j)%n+int(i+j>=n)\n    a[i][n-1]=((n-1+2*i)%n+int(n-1+2*i>=n))%n+int(n-1+2*i>2*(n-1))\nfor i in range(n-1):\n    a[n-1][i]=((n-1+2*i)%n+int(n-1+2*i>=n))%n+int(n-1+2*i>2*(n-1))\nfor i in a:\n    print(*i)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nshort lastrow[1002];\nint main() {\n  int n, r, c, p, remember;\n  cin >> n;\n  lastrow[0] = n - 1;\n  lastrow[n - 1] = 0;\n  for (r = 0; r < n - 1; r++) {\n    for (p = 0, c = r; c < r + n; c++, p++) {\n      if (p == r) {\n        cout << \"0 \";\n        if (c < n)\n          remember = c;\n        else\n          remember = c - n + 1;\n      } else if (p == n - 1 && r > 0) {\n        cout << remember;\n        lastrow[r] = remember;\n      } else {\n        if (c < n)\n          cout << c << ' ';\n        else\n          cout << c - n + 1 << ' ';\n      }\n    }\n    cout << '\\n';\n  }\n  for (c = 0; c < n; c++) cout << lastrow[c] << ' ';\n  cout << '\\n';\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "//package Implementations;\nimport java.io.*;\n\n/**\n * @author Tran Anh Tai\n */\npublic class LatinSquare implements Runnable\n{\n    public static void main(String[] args){\n        new LatinSquare().run();\n    }\n\n    @Override\n    public void run(){\n        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));\n        PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out));\n        try{\n            int n = Integer.parseInt(in.readLine());\n            int result[][] = LatinSquareConstruct(n);\n            for (int i = 0; i < n; i++){\n                for (int j = 0; j < n; j++){\n                    out.print(result[i][j] + \" \");\n                }\n                out.println();\n            }\n        }\n        catch (IOException e){\n            out.println(\"IO Exception!\");\n        }\n        out.close();\n    }\n\n    private int[][] LatinSquareConstruct(int n) {\n        int result[][] = new int[n][n];\n        for (int i = 0; i < n - 1; i++){\n            int cur = i;\n            for (int j = 0; j < n - 1; j++){\n                cur = cur % (n - 1);\n                result[i][j] = cur++;\n                if (result[i][j] == 0 && i > 0){\n                    result[i][j] = n - 1;\n                }\n            }\n        }\n        result[0][n - 1] = result[n - 1][0] = n - 1;\n        for (int i = 1; i < n - 1; i++){\n            result[i][n - 1] = result[n - 1][i] = result[i][i];\n            result[i][i] = 0;\n        }\n        return result;\n    }\n}\n"
+  }
+]

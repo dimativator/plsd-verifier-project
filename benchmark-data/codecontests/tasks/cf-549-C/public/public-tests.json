@@ -1,0 +1,12 @@
+{
+  "input": [
+    "3 1\n1 2 1\n",
+    "6 3\n5 20 12 7 14 101\n",
+    "3 1\n2 2 1\n"
+  ],
+  "output": [
+    "Stannis\n",
+    "Stannis\n",
+    "Daenerys\n"
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a,b = map(int,input().split())\nif(b == a+1):\n    print(str(a)+\"9 \"+str(b)+\"0\")\nelif(b == a):\n    print(str(a)+\"0 \"+str(a)+\"1\")\nelif(b == 1 and a == 9):\n    print(\"99 100\")\nelse:\n    print(-1)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int a, b;\n  cin >> a >> b;\n  if (a == 9 && b == 1) {\n    cout << a << \" \" << 10 * b;\n    return 0;\n  }\n  if (abs(a - b) > 1) {\n    cout << \"-1\";\n  } else {\n    if (a == b)\n      cout << 10 * a << \" \" << 10 * b + 1;\n    else if (a > b)\n      cout << \"-1\";\n    else\n      cout << a << \" \" << b;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import org.w3c.dom.ls.LSOutput;\n\nimport java.util.*;\nimport java.lang.*;\n\npublic class Main {\n    static final int INF = 1000 * 1000 * 1000;\n\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n\n        int a = in.nextInt();\n        int b = in.nextInt();\n\n        if (a == b) {\n            System.out.println(a + \"0 \" + a + \"1\\n\");\n        }\n        else if (a == b - 1){\n            System.out.println(a + \"9 \" + b + \"0\\n\");\n        }\n        else if (b == 1 && a == 9) {\n            System.out.println(\"9 10\\n\");\n        }\n        else {\n            System.out.println(-1);\n        }\n    }\n}\n\n\n\n\n"
+  }
+]

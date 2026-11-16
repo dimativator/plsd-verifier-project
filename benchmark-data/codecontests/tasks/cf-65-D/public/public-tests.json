@@ -1,0 +1,10 @@
+{
+  "input": [
+    "2\nH?\n",
+    "11\nG????SS???H\n"
+  ],
+  "output": [
+    "Gryffindor\nRavenclaw\nSlytherin\n",
+    "Gryffindor\nRavenclaw\n"
+  ]
+}

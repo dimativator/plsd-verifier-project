@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, m = map(int, input().split())\na = list( map(int, input().split()) )\nb = list( map(int, input().split()) )\ni, j, counter = 0, 0, 0\nwhile( i < int(n) and j < int(m) ):\n    if( a[i] <= b[j] ):\n        i += 1\n        j += 1\n        counter += 1\n    else:\n        i += 1\nprint(counter)            "
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long int shell_length;\n  long long int wallet_length;\n  cin >> shell_length >> wallet_length;\n  std::vector<long long int> vct(shell_length);\n  for (long long int &i : vct) cin >> i;\n  std::deque<long long int> wallet;\n  while (wallet_length--) {\n    long long int tmp;\n    cin >> tmp;\n    wallet.push_back(tmp);\n  };\n  long long int out = 0;\n  for (long long int i : vct) {\n    if (wallet.front() >= i) {\n      out++;\n      wallet.pop_front();\n    }\n    if (!wallet.size()) break;\n  };\n  std::cout << out;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class p1009A {\n\tpublic static void main(String[] args) {\n\t\tScanner sc = new Scanner(System.in);\n\t\tint n = sc.nextInt();\n\t\tint m = sc.nextInt();\n\t\tint ctr = 0;\n\t\tint[] games = new int[n];\n\t\tfor(int i = 0; i < n; i++) {\n\t\t\tgames[i] = sc.nextInt();\n\t\t}\n\t\t\n\t\tint j = 0;\n\t\tfor(int i = 0; i < m && j < n; i++) {\n\t\t\tint k = sc.nextInt();\n\t\t\twhile(j < n && games[j] > k) {\n\t\t\t\tj++;\n\t\t\t}\n\t\t\tif(j < n)\n\t\t\t\tctr++;\n\t\t\tj++;\n\t\t}\n\t\t\n\t\tSystem.out.println(ctr);\n\t}\n}\n"
+  }
+]

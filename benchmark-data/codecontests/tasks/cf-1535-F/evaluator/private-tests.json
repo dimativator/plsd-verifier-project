@@ -1,0 +1,16 @@
+{
+  "input": [
+    "1\na\n",
+    "6\nacb\nabc\ncba\nbac\ncab\nbca\n",
+    "24\nbcda\nacdb\nbcad\ncbad\nabcd\nbacd\nadcb\nbdac\ncbda\ndbca\ncdab\ncabd\ndabc\ncdba\nadbc\ndcba\ndcab\ndacb\nbdca\ndbac\ncadb\nbadc\nacbd\nabdc\n",
+    "2\nba\nab\n",
+    "2\ncbb\nbcb\n"
+  ],
+  "output": [
+    "0\n",
+    "21\n",
+    "478\n",
+    "1\n",
+    "1\n"
+  ]
+}

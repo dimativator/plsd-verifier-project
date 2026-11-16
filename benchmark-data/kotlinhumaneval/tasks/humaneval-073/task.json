@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-073",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/73",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 10,
+  "public_test_count": 1,
+  "unexposed_test_count": 9,
+  "source_review_note": "Positive x and base are not explicit in prompt. For x=4,n=-2 canonical false conflicts with integral-power interpretation. Zero and exponent conventions need resolution.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-073",
+  "public_dir": "tasks/humaneval-073/public",
+  "evaluator_dir": "tasks/humaneval-073/evaluator",
+  "metadata_file": "tasks/humaneval-073/task.json",
+  "evaluation_harness": "tasks/humaneval-073/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-073/evaluation.json"
+}

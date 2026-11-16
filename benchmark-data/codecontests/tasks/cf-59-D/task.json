@@ -1,0 +1,35 @@
+{
+  "id": "cf-59-D",
+  "dataset": "deepmind/code_contests",
+  "source_id": "codecontests/cf-59-D",
+  "url": "https://codeforces.com/problemset/problem/59/D",
+  "source_split": "train",
+  "submission_format": "program",
+  "target_language": "Kotlin",
+  "difficulty": 2000,
+  "rating_band": "2000-2399",
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "implementation"
+  ],
+  "public_test_count": 3,
+  "private_test_count": 11,
+  "generated_test_count": 14,
+  "held_out_public_input_overlap": 0,
+  "repeated_inputs_with_different_expected_outputs": 0,
+  "source_time_limit": {
+    "seconds": 3,
+    "nanos": 0
+  },
+  "source_memory_limit_bytes": 256000000,
+  "behavioral_validation": "not_run",
+  "kotlin_reference": "not_translated",
+  "verifier_validation": "not_run",
+  "output_checker": "requires_review",
+  "task_dir": "tasks/cf-59-D",
+  "public_dir": "tasks/cf-59-D/public",
+  "evaluator_dir": "tasks/cf-59-D/evaluator",
+  "metadata_file": "tasks/cf-59-D/task.json",
+  "evaluation_file": "tasks/cf-59-D/evaluation.json"
+}

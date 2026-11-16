@@ -1,0 +1,36 @@
+{
+  "name": "1476_C. Longest Simple Cycle",
+  "description": "You have n chains, the i-th chain consists of c_i vertices. Vertices in each chain are numbered independently from 1 to c_i along the chain. In other words, the i-th chain is the undirected graph with c_i vertices and (c_i - 1) edges connecting the j-th and the (j + 1)-th vertices for each 1 ≤ j < c_i.\n\nNow you decided to unite chains in one graph in the following way: \n\n  1. the first chain is skipped; \n  2. the 1-st vertex of the i-th chain is connected by an edge with the a_i-th vertex of the (i - 1)-th chain; \n  3. the last (c_i-th) vertex of the i-th chain is connected by an edge with the b_i-th vertex of the (i - 1)-th chain. \n\n<image> Picture of the first test case. Dotted lines are the edges added during uniting process\n\nCalculate the length of the longest simple cycle in the resulting graph.\n\nA simple cycle is a chain where the first and last vertices are connected as well. If you travel along the simple cycle, each vertex of this cycle will be visited exactly once.\n\nInput\n\nThe first line contains a single integer t (1 ≤ t ≤ 1000) — the number of test cases.\n\nThe first line of each test case contains the single integer n (2 ≤ n ≤ 10^5) — the number of chains you have.\n\nThe second line of each test case contains n integers c_1, c_2, ..., c_n (2 ≤ c_i ≤ 10^9) — the number of vertices in the corresponding chains.\n\nThe third line of each test case contains n integers a_1, a_2, ..., a_n (a_1 = -1; 1 ≤ a_i ≤ c_{i - 1}).\n\nThe fourth line of each test case contains n integers b_1, b_2, ..., b_n (b_1 = -1; 1 ≤ b_i ≤ c_{i - 1}).\n\nBoth a_1 and b_1 are equal to -1, they aren't used in graph building and given just for index consistency. It's guaranteed that the sum of n over all test cases doesn't exceed 10^5.\n\nOutput\n\nFor each test case, print the length of the longest simple cycle.\n\nExample\n\nInput\n\n\n3\n4\n3 4 3 3\n-1 1 2 2\n-1 2 2 3\n2\n5 6\n-1 5\n-1 1\n3\n3 5 2\n-1 1 1\n-1 3 5\n\n\nOutput\n\n\n7\n11\n8\n\nNote\n\nIn the first test case, the longest simple cycle is shown below: \n\n<image>\n\nWe can't increase it with the first chain, since in such case it won't be simple — the vertex 2 on the second chain will break simplicity.",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 1600,
+  "cf_contest_id": 1476,
+  "cf_index": "C",
+  "cf_tags": [
+    "dp",
+    "graphs",
+    "greedy"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00007-of-00039-05785de21e8b8429.parquet",
+  "source_row": 240,
+  "task_id": "codecontests/cf-1476-C",
+  "rating_band": "1600-1999",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/1476/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

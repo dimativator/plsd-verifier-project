@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "t = int(input())\nfor _ in range(t):\n\tn,m = map(int,input().split())\n\tl = []\n\ts = 0\n\tt1,t2 = 0,0\n\tfor i in range(n):\n\t\tl1 = list(map(int,input().split()))\n\t\tl.append(l1)\n\tfor i in range(n):\n\t\tf = 1\n\t\tfor j in range(m):\n\t\t\tif l[i][j] == 1:\n\t\t\t\tf = 0 \n\t\tif f:\n\t\t\tt1 += 1\n\tfor i in range(m):\n\t\tf = 1\n\t\tfor j in range(n):\n\t\t\tif l[j][i] == 1:\n\t\t\t\tf = 0\n\t\tif f:\n\t\t\tt2 += 1\n\tif min(t1,t2)%2 == 0:\n\t\tprint(\"Vivek\")\n\telse:\n\t\tprint(\"Ashish\")"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(NULL);\n  cout.tie(NULL);\n  int t;\n  cin >> t;\n  while (t--) {\n    int n, m;\n    cin >> n >> m;\n    int arr[n][m];\n    for (int i = 0; i < n; i++) {\n      for (int j = 0; j < m; j++) {\n        cin >> arr[i][j];\n      }\n    }\n    int row = 0, col = 0;\n    for (int i = 0; i < n; i++) {\n      bool flag = true;\n      for (int j = 0; j < m; j++) {\n        if (arr[i][j] == 1) flag = false;\n      }\n      if (flag) row++;\n    }\n    for (int j = 0; j < m; j++) {\n      bool flag = true;\n      for (int i = 0; i < n; i++) {\n        if (arr[i][j] == 1) flag = false;\n      }\n      if (flag) col++;\n    }\n    int ans = min(row, col);\n    if (ans % 2 == 0) {\n      cout << \"Vivek\" << endl;\n    } else\n      cout << \"Ashish\" << endl;\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class Solution {\n\tpublic static void main(String[] args) {\n\t\tScanner sc = new Scanner(System.in);\n\t\tint T = sc.nextInt();\n\t\twhile (T-- > 0) {\n            int n = sc.nextInt();\n            int m = sc.nextInt();\n            \n            int[][] arr = new int[n][m];\n            \n            int[] row = new int[n];\n            int[] col = new int[m];\n            \n            for (int i=0; i<n; i++) {\n                for (int j=0; j<m; j++) {\n                    int temp = sc.nextInt();\n                    arr[i][j] = temp;\n                    if (temp == 1) {\n                        row[i] = 1;\n                        col[j] = 1;\n                    }\n                }\n            }\n\n            int countRow = 0;\n            for (int val : row) {\n                if (val == 0) {\n                    countRow += 1;\n                }\n            }\n            \n\n            int countCol = 0;\n            for (int val : col) {\n                if (val == 0) {\n                    countCol += 1;\n                }\n            }\n\n            System.out.println((Math.min(countRow, countCol) % 2 != 0) ? \"Ashish\" : \"Vivek\");\n        }\n\t}\n}\n"
+  }
+]

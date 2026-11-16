@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-121",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/121",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 16,
+  "public_test_count": 1,
+  "unexposed_test_count": 15,
+  "source_review_note": "Task explicitly permits February 29 without leap-year reasoning. Do not import real calendar semantics into its contract.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-121",
+  "public_dir": "tasks/humaneval-121/public",
+  "evaluator_dir": "tasks/humaneval-121/evaluator",
+  "metadata_file": "tasks/humaneval-121/task.json",
+  "evaluation_harness": "tasks/humaneval-121/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-121/evaluation.json"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-065",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/65",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 8,
+  "public_test_count": 1,
+  "unexposed_test_count": 7,
+  "source_review_note": "Prompt gives length>=1 but also explicitly describes empty input and includes an empty test. Preserve the tested empty behavior.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-065",
+  "public_dir": "tasks/humaneval-065/public",
+  "evaluator_dir": "tasks/humaneval-065/evaluator",
+  "metadata_file": "tasks/humaneval-065/task.json",
+  "evaluation_harness": "tasks/humaneval-065/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-065/evaluation.json"
+}

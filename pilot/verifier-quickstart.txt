@@ -1,0 +1,50 @@
+TRYING THE VERIFIER
+
+After writing a compilable solution, run this shell command:
+
+  verify
+
+Read its output before your next edit. No annotation is required to attempt
+supported bounds, overflow, division, and other safety checks. A proof may still
+need assumptions or invariants. The tool does not infer the algorithm's intended
+answer from the problem statement. Public tests remain useful.
+
+Consider a call when checking boundary indices, arithmetic limits, or a loop
+whose intermediate states are hard to exercise with examples. You choose whether
+and when to use the tool. Successful verification is not a scoring requirement.
+
+SMALL SPECIFICATION EXAMPLE
+
+import org.jetbrains.kotlin.formver.plugin.*
+
+fun increment(x: Int): Int {
+    preconditions { x >= 0; x < Int.MAX_VALUE }
+    postconditions<Int> { result -> result == x + 1 }
+    return x + 1
+}
+
+The precondition describes this example function's valid inputs. It prevents
+Int overflow, and the postcondition states the intended result. Replacing the
+return with x - 1 should produce a postcondition diagnostic. This is a syntax
+example, not a specification to copy into unrelated tasks.
+
+Add only preconditions justified by the task and every caller. Do not restrict
+valid benchmark inputs to make a proof pass. For loops, use loopInvariants with
+facts that hold on entry and after every iteration, as described in
+SPECIFICATIONS.md. Bounds invariants alone do not establish algorithm correctness.
+
+READING FEEDBACK
+
+- Obligation not established: inspect the source location and failing clause.
+  There may be a defect, or the verifier may lack a valid precondition, invariant,
+  or supported model. Check the code and assumptions before changing either.
+- Unsupported or skipped code: verification coverage is incomplete. This is not
+  a proof of that code. Inspect the original warning and trust report.
+- Compiler error: fix Kotlin syntax or specification API usage, then retry.
+- Tool/backend failure: inspect the raw error. It is not evidence of a wrong answer.
+- No reported failure: check the trust report for what was actually verified and
+  its assumptions. This does not prove the solution meets the problem statement.
+
+The wrapper prints a heuristic reading aid followed by all original diagnostics.
+The original diagnostics and trust report are authoritative. It cannot determine
+whether an unproved obligation is a real defect or a missing specification.

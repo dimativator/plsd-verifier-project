@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nv = list(map(int, input().split()))\n\na = []\nb = []\nfor x in v:\n  a.append(x) if x & 1 else b.append(x)\n\nprint(min(len(a), len(b)))\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint ODD;\nint EVEN;\nint main() {\n  int n;\n  scanf(\"%d\", &n);\n  for (int i = 0; i < n; i++) {\n    int x;\n    scanf(\"%d\", &x);\n    if (x & 1)\n      ODD++;\n    else\n      EVEN++;\n  }\n  printf(\"%d\", (ODD < EVEN) ? ODD : EVEN);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\nimport java.lang.Math.*;\npublic class jamesrodriguez\n{\n public static void main(String[]args)\n { \n  Scanner sc=new Scanner(System.in);\n  int t=sc.nextInt();\n  int odd=0;\n  int even=0;\n  while(t-->0){\n   if(sc.nextInt()%2==0){\n    even++;\n   }\n   else{\n    odd++;\n   }\n  }\n  System.out.println(Math.min(odd,even));\n }\n}\n"
+  }
+]

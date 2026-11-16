@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\nx='a'+'bcda'*25002\nprint(x[:n])\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  while (cin >> n) {\n    for (int i = 0; i < n; i++) cout << (char)('a' + i % 4);\n    cout << endl;\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.Scanner;\n\npublic class LuckyString {\n    public static void main(String asd[])throws Exception\n    {\n        Scanner in=new Scanner(System.in);\n        int n=in.nextInt();\n        char ch[]=new char[n];\n            for(int i=0;i<n;i+=4)\n                ch[i]='a';\n            char c='b';\n            int m=n%4-1,k=n/4;\n           //System.out.println(m+\"\"+k);\n            for(int i=0;i<4*k;i+=4)\n            {\n                c='b';\n                for(int j=1;j<=3;j++)\n                {\n                    ch[i+j]=c;\n                    c++;\n                }\n            }\n           c='b';\n           for(int i=1;i<=m;i++)\n           {\n               ch[4*k+i]=c;\n               c++;\n           }\n           for(int i=0;i<n;i++)\n               System.out.print(ch[i]);\n        \n    }\n}\n"
+  }
+]

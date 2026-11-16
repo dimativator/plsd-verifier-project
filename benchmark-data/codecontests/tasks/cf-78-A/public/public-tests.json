@@ -1,0 +1,10 @@
+{
+  "input": [
+    "on  codeforces \nbeta round is running\n   a rustling of keys \n",
+    "how many gallons\nof edo s rain did you drink\n                                cuckoo\n"
+  ],
+  "output": [
+    "YES\n",
+    "NO\n"
+  ]
+}

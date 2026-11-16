@@ -1,0 +1,12 @@
+{
+  "input": [
+    "VC\n2 1\n1 V 2 C\naa\n",
+    "VCC\n4 3\n1 C 2 V\n2 C 3 V\n3 V 4 V\nabac\n",
+    "VC\n2 1\n1 C 2 V\nbb\n"
+  ],
+  "output": [
+    "ab",
+    "acaa",
+    "-1\n"
+  ]
+}

@@ -1,0 +1,55 @@
+Write a Kotlin program that solves the problem below. Read from standard input and write to standard output. Submit your solution in Main.kt.
+
+Suppose you are given two strings a and b. You can apply the following operation any number of times: choose any contiguous substring of a or b, and sort the characters in it in non-descending order. Let f(a, b) the minimum number of operations you have to apply in order to make them equal (or f(a, b) = 1337 if it is impossible to make a and b equal using these operations).
+
+For example: 
+
+  * f(ab, ab) = 0; 
+  * f(ba, ab) = 1 (in one operation, we can sort the whole first string); 
+  * f(ebcda, ecdba) = 1 (in one operation, we can sort the substring of the second string starting from the 2-nd character and ending with the 4-th character); 
+  * f(a, b) = 1337. 
+
+
+
+You are given n strings s_1, s_2, ..., s_k having equal length. Calculate ∑ _{i = 1}^{n} ∑_{j = i + 1}^{n} f(s_i, s_j).
+
+Input
+
+The first line contains one integer n (1 ≤ n ≤ 2 ⋅ 10^5) — the number of strings.
+
+Then n lines follow, each line contains one of the strings s_i, consisting of lowercase Latin letters. |s_1| = |s_2| = … = |s_n|, and n ⋅ |s_1| ≤ 2 ⋅ 10^5. All these strings are pairwise distinct.
+
+Output
+
+Print one integer: ∑ _{i = 1}^{n} ∑_{j = i + 1}^{n} f(s_i, s_j).
+
+Examples
+
+Input
+
+
+4
+zzz
+bac
+abc
+acb
+
+
+Output
+
+
+4015
+
+
+Input
+
+
+2
+a
+b
+
+
+Output
+
+
+1337

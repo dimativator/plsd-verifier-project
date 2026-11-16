@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "def findDepth(a, i):\n    depth = 1\n    nextLevel = a[i][:]\n\n    while len(nextLevel) > 0:\n        depth += 1\n\n        children = nextLevel[:]\n\n        nextLevel = []\n\n        for child in children:\n            nextLevel += a[child]\n\n    return depth\n\n\n\n\nn = int(input())\n\n\na = []\nfor i in range(n):\n    a.append([])\n\n\nroots = []\n\nfor i in range(n):\n    \n    x = int(input())\n\n    if x > 0:\n        a[x-1].append(i)\n\n    else:\n        roots.append(i)\n\n\nprint(max([findDepth(a, i) for i in roots]))\n    \n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nvector<int> adj[100005];\nbool visited[100005];\nint level[100005];\nvoid dfs(int src) {\n  visited[src] = true;\n  for (auto dest : adj[src]) {\n    if (!visited[dest]) {\n      level[dest] = level[src] + 1;\n      dfs(dest);\n    }\n  }\n}\nint main() {\n  int n;\n  cin >> n;\n  for (int i = 1; i <= n; i++) {\n    int v;\n    cin >> v;\n    if (v == -1) v = 0;\n    adj[i].push_back(v);\n    adj[v].push_back(i);\n  }\n  dfs(0);\n  int ans = 0;\n  for (int i = 1; i <= n + 1; i++) ans = max(ans, level[i]);\n  cout << ans << endl;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "/*package whatever //do not write package name here */\n\nimport java.util.*;\n\npublic class GFG {\n\tpublic static void main (String[] args) {\n\t\tScanner sc=new Scanner(System.in);\n\t\tint n=sc.nextInt();\n\t\tint a[]=new int[2001];\n\t\tint i,c=0,res=-1;\n\t\tfor(i=0;i<n;i++)\n\t\t{\n\t\t    int n1=sc.nextInt();\n\t\t    a[i+1]=n1;\n\t\t}\n\t\tfor(i=0;i<n;i++)\n\t\t{\n\t\t    int current=i+1;\n\t\t    while(current!=-1)\n\t\t    {\n\t\t        current=a[current];\n\t\t        c+=1;\n\t\t    }\n\t\t    res=Math.max(res,c);\n\t\t    c=0;\n\t\t}\n\t\tSystem.out.println(res);\n\t}\n}"
+  }
+]

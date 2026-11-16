@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "s = input()\na = []\nfor i in range(10):\n    a.append(input())\n\np = 0\nwhile(p < 80):\n    for i in range(10):\n        if a[i] == s[p:p+10]:\n            print(i, end='')\n            p += 10\n            break\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nsigned main() {\n  ios::sync_with_stdio(0);\n  string seq;\n  cin >> seq;\n  vector<string> f(10);\n  for (int i = 0; i < 10; ++i) {\n    cin >> f[i];\n  }\n  for (int i = 0; i + 8 <= 80; i += 10) {\n    for (int j = 0; j < 10; ++j) {\n      if (f[j] == seq.substr(i, 10)) {\n        cout << j;\n      }\n    }\n  }\n  cout << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\n\npublic class Restoringpassword {\n\n\t/**\n\t * @param args\n\t */\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t\tScanner input = new Scanner(System.in);\n\t\tString z = input.next();\n\t\tString[] s = new String[10];\n\t\tString p = \"\";\n\t\tfor(int i=0; i<10;i++)s[i] = input.next();\n\t\tint j=0;\n\t\twhile(j+10<=80){\n\t\tfor(int i=0; i<10;i++){\n\t\t\tif(z.substring(j,j+10).equals(s[i]))p+=Integer.toString(i);\n\t\t}\n\t\tj+=10;\n\t}\n\t\tSystem.out.println(p);\n\t}\n\t\n\n}\n"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "for i in range(int(input())):\n    k=int(input())\n    a=list(map(int,input().split()))\n    a.sort()\n    c,d=0,0\n    i=1\n    e=0\n    for j in range(len(a)):\n        if(a[j]%2==0):\n            c+=1\n        else:\n            d+=1\n    if(c%2==0 and d%2==0):\n        print(\"YES\")\n    else:\n        c,d=0,0\n        while(i<len(a)):\n            if(a[i]-a[i-1]==1):\n                a.pop(i)\n                a.pop(i-1)\n                e+=2\n                break\n            i+=1\n        for i in range(len(a)):\n            if(a[i]%2==0):\n                c+=1\n            else:\n                d+=1\n        if(c%2==0 and d%2==0 and e+len(a)==k):\n            print(\"YES\")\n        else:\n            print(\"NO\")\n        \n    \n            \n            "
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int t;\n  cin >> t;\n  while (t--) {\n    int n;\n    cin >> n;\n    vector<int> arr(n);\n    int even = 0, odd = 0;\n    for (int i = 0; i < n; i++) {\n      cin >> arr[i];\n      if (arr[i] % 2 == 0) {\n        even++;\n      } else {\n        odd++;\n      }\n    }\n    if (even % 2 == 0 && odd % 2 == 0) {\n      cout << \"YES\" << endl;\n    } else {\n      sort(arr.begin(), arr.end());\n      for (int i = 0; i < n - 1;) {\n        if (abs(arr[i] - arr[i + 1]) == 1) {\n          even--;\n          odd--;\n          i += 2;\n          if (even % 2 == 0 && odd % 2 == 0) {\n            break;\n          }\n        } else {\n          i++;\n        }\n      }\n      if (even % 2 == 0) {\n        even = 0;\n      }\n      if (odd % 2 == 0) {\n        odd = 0;\n      }\n      if (even != 0 || odd != 0) {\n        cout << \"NO\" << endl;\n      } else {\n        cout << \"YES\" << endl;\n      }\n    }\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\npublic class A644 {\n\n\tpublic static void main(String[] args) {\n\t\tScanner s=new  Scanner(System.in);\n\t\tint t =s.nextInt();\n\t\twhile(t-->0) {\n\t\t\tint n=s.nextInt();\n\t\t\tint a[]=new int[n];\n\t\t\tfor (int i=0;i<n;i++) {\n\t\t\t\ta[i]=s.nextInt();\n\t\t\t}\n\t\t\tArrays.sort(a);\n\t\t\tint o=0,e=0;\n\t\t\tfor(int i=0;i<n;i++) {\n\t\t\t\tif(a[i]%2==0)e++;\n\t\t\t\telse o++;\n\t\t\t}\n\t\t\tif(o%2==0 && e%2==0) {\n\t\t\t\tSystem.out.println(\"YES\");\n\t\t\t}else {\n\t\t\t\tboolean f=false;\n\t\t\t\tfor(int i=n-1;i>0;i--) {\n\t\t\t\t\tif(a[i]-a[i-1]==1) {\n\t\t\t\t\t\tf=true;\n\t\t\t\t\t\tbreak;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\tif(f) {\n\t\t\t\tSystem.out.println(\"YES\");\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\tSystem.out.println(\"NO\");\n\t\t\t\t}\n\t\t\t }\n\t\t}\n\t}\n\n}\n"
+  }
+]

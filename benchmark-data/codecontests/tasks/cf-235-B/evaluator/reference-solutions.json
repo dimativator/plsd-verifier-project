@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,a,b=int(input()),0,0\nfor i in map(float,input().split()):a,b=a+i*(1+b*2),i*(b+1)\nprint(a)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\ndouble p[100010];\nint main(void) {\n  int N;\n  cin >> N;\n  for (int i = 0; i < N; ++i) {\n    cin >> p[i];\n  }\n  double x = 0.0, ans = 0.0;\n  for (int i = 0; i < N; ++i) {\n    x = x * p[i] + p[i];\n    ans += 2.0 * x;\n    ans -= p[i];\n  }\n  printf(\"%.9f\", ans);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\n\npublic class B {\n\tpublic static void main(String[] args) throws IOException {\n\t\tBufferedReader rd = new BufferedReader(new InputStreamReader(System.in));\n\t\tPrintWriter pw = new PrintWriter(System.out);\n\t\tn = Integer.parseInt(rd.readLine());\n\t\tp = new double[n];\n\t\tStringTokenizer st = new StringTokenizer(rd.readLine());\n\t\tfor(int i=0; i<n; i++) p[i] = Double.parseDouble(st.nextToken());\n\t\tdouble[] f = new double[n];\n\t\tf[n-1] = p[n-1];\n\t\tfor(int i=n-2; i>=0; i--) f[i] = p[i]*(1+f[i+1]);\n\t\tdouble ans = 0;\n\t\tfor(int i=0; i<n; i++) ans += 2*f[i]-p[i];\n\t\tpw.println(ans);\n\t\tpw.flush();\n\t}\n\t\n\tstatic int n;\n\t\n\tstatic double[] p;\n\t\n}\n"
+  }
+]

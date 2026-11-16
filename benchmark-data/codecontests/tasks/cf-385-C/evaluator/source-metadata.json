@@ -1,0 +1,40 @@
+{
+  "name": "385_C. Bear and Prime Numbers",
+  "description": "Recently, the bear started studying data structures and faced the following problem.\n\nYou are given a sequence of integers x1, x2, ..., xn of length n and m queries, each of them is characterized by two integers li, ri. Let's introduce f(p) to represent the number of such indexes k, that xk is divisible by p. The answer to the query li, ri is the sum: <image>, where S(li, ri) is a set of prime numbers from segment [li, ri] (both borders are included in the segment).\n\nHelp the bear cope with the problem.\n\nInput\n\nThe first line contains integer n (1 ≤ n ≤ 106). The second line contains n integers x1, x2, ..., xn (2 ≤ xi ≤ 107). The numbers are not necessarily distinct.\n\nThe third line contains integer m (1 ≤ m ≤ 50000). Each of the following m lines contains a pair of space-separated integers, li and ri (2 ≤ li ≤ ri ≤ 2·109) — the numbers that characterize the current query.\n\nOutput\n\nPrint m integers — the answers to the queries on the order the queries appear in the input.\n\nExamples\n\nInput\n\n6\n5 5 7 10 14 15\n3\n2 11\n3 12\n4 4\n\n\nOutput\n\n9\n7\n0\n\n\nInput\n\n7\n2 3 5 7 11 4 8\n2\n8 10\n2 123\n\n\nOutput\n\n0\n7\n\nNote\n\nConsider the first sample. Overall, the first sample has 3 queries.\n\n  1. The first query l = 2, r = 11 comes. You need to count f(2) + f(3) + f(5) + f(7) + f(11) = 2 + 1 + 4 + 2 + 0 = 9. \n  2. The second query comes l = 3, r = 12. You need to count f(3) + f(5) + f(7) + f(11) = 1 + 4 + 2 + 0 = 7. \n  3. The third query comes l = 4, r = 4. As this interval has no prime numbers, then the sum equals 0. ",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 1700,
+  "cf_contest_id": 385,
+  "cf_index": "C",
+  "cf_tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "dp",
+    "implementation",
+    "math",
+    "number theory"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 512000000,
+  "source_file": "data/train-00005-of-00039-b7580d2d846c2136.parquet",
+  "source_row": 0,
+  "task_id": "codecontests/cf-385-C",
+  "rating_band": "1600-1999",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/385/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

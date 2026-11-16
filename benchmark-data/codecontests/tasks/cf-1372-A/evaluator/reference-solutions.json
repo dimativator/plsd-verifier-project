@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "t=int(input())\nfor i in range(0,t):\n\tn=int(input())\n\tL=[1]*n\n\tprint(*L)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(NULL);\n  cout.tie(NULL);\n  long long t;\n  cin >> t;\n  while (t--) {\n    long long n;\n    cin >> n;\n    for (int i = 0; i < n; i++) cout << 1 << \" \";\n    cout << \"\\n\";\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\nimport static java.lang.Math.log;\npublic class T4 \n{\n\tpublic static void main(String[] args) \n\t{\n\t\tScanner S1 = new Scanner(System.in);\n\t\tint T=0,Num1=0;\n\t\tT=S1.nextInt();\n\t\twhile(T>0)\n\t\t{\n\t\t\tNum1=S1.nextInt();\n\t\t\tfor(int i=0;i<Num1;i++)\n\t\t\t{\n\t\t\t\tSystem.out.print(1+\" \");\n\t\t\t}\n\t\t\tSystem.out.println(\"\");\n\t\t\tT--;\n\t\t}\n\t}\n}"
+  }
+]

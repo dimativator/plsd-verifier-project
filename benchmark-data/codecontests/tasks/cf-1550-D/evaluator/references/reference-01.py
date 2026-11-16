@@ -1,0 +1,35 @@
+import sys
+input = sys.stdin.readline
+
+mod = 10 ** 9 + 7
+for t in range(int(input())):
+    n, l, r = map(int, input().split())
+    F = [0] * (n + 1)
+    F[0] = 1
+    for i in range(1, n + 1):
+        F[i] = i * F[i - 1] % mod
+    iF = [0] * (n + 1)
+    iF[-1] = pow(F[-1], mod - 2, mod)
+    for i in range(n - 1, -1, -1):
+        iF[i] = (i + 1) * iF[i + 1] % mod
+
+    def comb(n, m):
+        if m < 0 or m > n: return 0
+        return F[n] * iF[m] * iF[n - m] % mod
+
+    a, b = l - 1, r - n
+    c = min(-a, b)
+    ans = comb(n, n // 2) * (1 + n % 2) * c
+
+    d = c + 1
+    while True:
+        x = min(n, n - (l - 1 + d))
+        y = min(n, r - d)
+        if x < n // 2 or y < n // 2: break
+        ans += comb(x + y - n, n // 2 - (n - y))
+        if n % 2:
+            # ans += comb(x + y - n, n // 2 - (n - x))
+            ans += comb(x + y - n, (n + 1) // 2 - (n - y))
+        ans %= mod
+        d += 1
+    print(ans)

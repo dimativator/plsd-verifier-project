@@ -1,0 +1,36 @@
+{
+  "id": "cf-1249-C2",
+  "dataset": "deepmind/code_contests",
+  "source_id": "codecontests/cf-1249-C2",
+  "url": "https://codeforces.com/problemset/problem/1249/C2",
+  "source_split": "train",
+  "submission_format": "program",
+  "target_language": "Kotlin",
+  "difficulty": 1500,
+  "rating_band": "1200-1599",
+  "tags": [
+    "binary search",
+    "greedy",
+    "math",
+    "meet-in-the-middle"
+  ],
+  "public_test_count": 1,
+  "private_test_count": 3,
+  "generated_test_count": 100,
+  "held_out_public_input_overlap": 0,
+  "repeated_inputs_with_different_expected_outputs": 0,
+  "source_time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "source_memory_limit_bytes": 256000000,
+  "behavioral_validation": "not_run",
+  "kotlin_reference": "not_translated",
+  "verifier_validation": "not_run",
+  "output_checker": "requires_review",
+  "task_dir": "tasks/cf-1249-C2",
+  "public_dir": "tasks/cf-1249-C2/public",
+  "evaluator_dir": "tasks/cf-1249-C2/evaluator",
+  "metadata_file": "tasks/cf-1249-C2/task.json",
+  "evaluation_file": "tasks/cf-1249-C2/evaluation.json"
+}

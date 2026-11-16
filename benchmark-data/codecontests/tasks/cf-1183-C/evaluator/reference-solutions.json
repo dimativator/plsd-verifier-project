@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\nfor i in range(0,n):\n    p=input().rstrip().split(' ')\n    k=int(p[0])\n    K=k;\n    n=int(p[1])\n    CC=n;\n    a=int(p[2])\n    b=int(p[3])\n    T=min(a,b);\n    if (k%T==0):\n        H=(k//T)-1;\n    else:\n        H=(k//T)\n    if n>H:\n        print(-1)\n    else:\n        if k%a==0:\n            A=(k//a)-1;\n        else:\n            A=(k//a)\n        B=k-(A*a)\n        k=B;\n        n=n-A;\n        if n<=0:\n            if A>=CC:\n                print(CC)\n            else:\n                print(A)\n        else:\n            G=(b*n);\n            if k>G:\n                if A>=CC:\n                    print(CC)\n                else:\n                    print(A)\n            else:\n                V=-99999;\n                GG=1;\n                MM=G-k;\n                LL=a-b;\n                XX=(MM//LL)+1;\n                A=A-XX;\n                if A>=CC:\n                    print(CC)\n                else:\n                    print(A)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long int n, m, i, j, k, x, y, t;\n  long long int a, b;\n  cin >> t;\n  while (t--) {\n    cin >> k >> n >> a >> b;\n    k -= n * a;\n    if (k > 0) {\n      cout << n << endl;\n      continue;\n    }\n    k = -k;\n    k++;\n    x = a - b;\n    m = (k + x - 1) / x;\n    if (m > n) {\n      cout << -1 << endl;\n    } else {\n      cout << n - m << endl;\n    }\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class Main {\n\tpublic static void main(String[] args) {\n\t\tScanner sc = new Scanner(System.in);\n\t\tint T = sc.nextInt();\n\t\tHashSet<String> hs = new HashSet<>();\n\t\tfor(int test_case = 1; test_case <= T; test_case++)\n\t\t{\n\t\t\tlong K = sc.nextLong();\n\t\t\tlong N = sc.nextLong();\n\t\t\tlong a = sc.nextLong();\n\t\t\tlong b = sc.nextLong();\n\t\t\t\n\t\t\tlong res = -1;\n\t\t\tlong l = 0, h = 2 * N, mid;\n\t\t\twhile(l <= h)\n\t\t\t{\n\t\t\t\tmid = (l + h) / 2;\n\t\t\t\tif(mid > N) \n\t\t\t\t{\n\t\t\t\t\th = mid - 1;\n\t\t\t\t\tcontinue;\n\t\t\t\t}\n\t\t\t\tlong num = a * mid;\n\t\t\t\t\n\t\t\t\tif(K - num > b * (N - mid))\n\t\t\t\t{\n\t\t\t\t\tres = mid;\n\t\t\t\t\tl = mid + 1;\n\t\t\t\t}\n\t\t\t\telse h = mid - 1;\n\t\t\t}\n\t\t\tSystem.out.println(res);\n\t\t}\n\t}\n}"
+  }
+]

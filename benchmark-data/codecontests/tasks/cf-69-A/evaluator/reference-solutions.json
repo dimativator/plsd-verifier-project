@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "sum1,sum2,sum3 = 0,0,0\nn = int(input())\nwhile n:\n    n-=1\n    l = list(map(int, input().split()))\n    sum1 += l[0]\n    sum2 += l[1]\n    sum3 += l[2]\nif sum1==0 and sum2 ==0 and sum3 ==0:\n    print(\"YES\")\nelse:\n    print(\"NO\")"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint main() {\n  int n, x, y, z;\n  scanf(\"%d\", &n);\n  int arr[1][3];\n  arr[0][0] = arr[0][1] = arr[0][2] = 0;\n  for (int i = 0; i < n; i++) {\n    scanf(\"%d %d %d\", &x, &y, &z);\n    arr[0][0] += x;\n    arr[0][1] += y;\n    arr[0][2] += z;\n  }\n  if (arr[0][0] == 0 && arr[0][1] == 0 && arr[0][2] == 0)\n    printf(\"YES\");\n  else\n    printf(\"NO\");\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\npublic class Young_Physicist {\n    private static final Scanner SCANNER = new Scanner(System.in);\n\n    public static void main(String[] args) {\n        int round=0,sum_x=0,sum_y=0,sum_z=0;\n        int []number=new int[300];\n        round=SCANNER.nextInt();\n        for(int i=0;i<round*3;++i){\n            number[i]=SCANNER.nextInt();\n        }\n        for(int i=0;i<round*3;i=i+3){\n            sum_x+=number[i];\n            sum_y+=number[i+1];\n            sum_z+=number[i+2];\n        }\n        if(sum_x==0&&sum_y==0&&sum_y==0){\n            System.out.println(\"YES\");\n        }\n        else{\n            System.out.println(\"NO\");\n        }\n    }\n}\n"
+  }
+]

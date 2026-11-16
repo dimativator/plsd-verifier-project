@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-050",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/50",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 104,
+  "public_test_count": 1,
+  "unexposed_test_count": 103,
+  "source_review_note": "104 supplied cases cover modest sums and no overflow. They cannot justify narrowing the original Int domain.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-050",
+  "public_dir": "tasks/humaneval-050/public",
+  "evaluator_dir": "tasks/humaneval-050/evaluator",
+  "metadata_file": "tasks/humaneval-050/task.json",
+  "evaluation_harness": "tasks/humaneval-050/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-050/evaluation.json"
+}

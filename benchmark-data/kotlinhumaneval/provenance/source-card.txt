@@ -1,0 +1,156 @@
+---
+license: apache-2.0
+dataset_info:
+  features:
+  - name: task_id
+    dtype: string
+  - name: prompt
+    dtype: string
+  - name: entry_point
+    dtype: string
+  - name: test
+    dtype: string
+  - name: description
+    dtype: string
+  - name: language
+    dtype: string
+  - name: canonical_solution
+    sequence: string
+  splits:
+  - name: train
+    num_bytes: 505355
+    num_examples: 161
+  download_size: 174830
+  dataset_size: 505355
+configs:
+- config_name: default
+  data_files:
+  - split: train
+    path: data/train-*
+---
+
+# Benchmark summary
+
+We introduce HumanEval for Kotlin, created from scratch by human experts.
+Solutions and tests for all 161 HumanEval tasks are written by an expert olympiad programmer with 6 years of experience in Kotlin, and independently checked by a programmer with 4 years of experience in Kotlin. 
+The tests we implement are equivalent to the original HumanEval tests for Python.
+
+# How to use 
+
+The benchmark is prepared in a format suitable for MXEval and can be easily integrated into the MXEval pipeline.
+
+When testing models on this benchmark, during the code generation step we use early stopping on the `}\n}` sequence to expedite the process. We also perform some code post-processing before evaluation — specifically, we remove all comments and signatures.
+
+The code for running an example model on the benchmark using the early stopping and post-processing is available below.
+
+```python
+import json
+import re
+
+from datasets import load_dataset
+import jsonlines
+import torch
+from transformers import (
+    AutoTokenizer,
+    AutoModelForCausalLM,
+    StoppingCriteria,
+    StoppingCriteriaList,
+)
+from tqdm import tqdm 
+from mxeval.evaluation import evaluate_functional_correctness
+
+
+class StoppingCriteriaSub(StoppingCriteria):
+    def __init__(self, stops, tokenizer):
+        (StoppingCriteria.__init__(self),)
+        self.stops = rf"{stops}"
+        self.tokenizer = tokenizer
+
+    def __call__(
+        self, input_ids: torch.LongTensor, scores: torch.FloatTensor, **kwargs
+    ) -> bool:
+        last_three_tokens = [int(x) for x in input_ids.data[0][-3:]]
+        decoded_last_three_tokens = self.tokenizer.decode(last_three_tokens)
+
+        return bool(re.search(self.stops, decoded_last_three_tokens))
+
+
+def generate(problem):
+    criterion = StoppingCriteriaSub(stops="\n}\n", tokenizer=tokenizer)
+    stopping_criteria = StoppingCriteriaList([criterion])
+    
+    problem = tokenizer.encode(problem, return_tensors="pt").to('cuda')
+    sample = model.generate(
+        problem,
+        max_new_tokens=256,
+        min_new_tokens=128,
+        pad_token_id=tokenizer.eos_token_id,
+        do_sample=False,
+        num_beams=1,
+        stopping_criteria=stopping_criteria,
+    )
+    
+    answer = tokenizer.decode(sample[0], skip_special_tokens=True)
+    return answer
+
+
+def clean_asnwer(code):
+    # Clean comments
+    code_without_line_comments = re.sub(r"//.*", "", code)
+    code_without_all_comments = re.sub(
+        r"/\*.*?\*/", "", code_without_line_comments, flags=re.DOTALL
+    )
+    #Clean signatures
+    lines = code.split("\n")
+    for i, line in enumerate(lines):
+        if line.startswith("fun "):
+            return "\n".join(lines[i + 1:])
+            
+    return code
+
+
+model_name = "JetBrains/CodeLlama-7B-Kexer"
+dataset = load_dataset("jetbrains/Kotlin_HumanEval")['train']
+problem_dict = {problem['task_id']: problem for problem in dataset}
+
+model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16).to('cuda')
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+output = []
+for key in tqdm(list(problem_dict.keys()), leave=False):
+    problem = problem_dict[key]["prompt"]
+    answer = generate(problem)
+    answer = clean_asnwer(answer)
+    output.append({"task_id": key, "completion": answer, "language": "kotlin"})
+
+output_file = f"answers"
+with jsonlines.open(output_file, mode="w") as writer:
+    for line in output:
+        writer.write(line)
+
+evaluate_functional_correctness(
+    sample_file=output_file,
+    k=[1],
+    n_workers=16,
+    timeout=15,
+    problem_file=problem_dict,
+)
+
+with open(output_file + '_results.jsonl') as fp:
+    total = 0
+    correct = 0
+    for line in fp:
+        sample_res = json.loads(line)
+        print(sample_res)
+        total += 1
+        correct += sample_res['passed']
+
+print(f'Pass rate: {correct/total}')
+
+```
+
+
+# Results
+
+We evaluated multiple coding models using this benchmark, and the results are presented in the figure below:
+![results](https://huggingface.co/datasets/JetBrains/Kotlin_HumanEval/resolve/main/model_scores.png)

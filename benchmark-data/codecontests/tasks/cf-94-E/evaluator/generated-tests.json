@@ -1,0 +1,12 @@
+{
+  "input": [
+    "001\n",
+    "011\n",
+    "010\n"
+  ],
+  "output": [
+    "0\n",
+    "2\nlea ebx, [eax + 2*eax]\nlea ecx, [ebx + 8*eax]\n",
+    "2\nlea ebx, [2*eax]\nlea ecx, [ebx + 8*eax]\n"
+  ]
+}

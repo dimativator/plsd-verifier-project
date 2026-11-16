@@ -1,0 +1,10 @@
+{
+  "input": [
+    "5\nAAABACADBABBBCBDCACBCCCDDDBDCDD\n",
+    "5\nABCCAD\n"
+  ],
+  "output": [
+    "4\n",
+    "5\n"
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a, b = 0, 0\nn = int(input())\nfor i in range(n):\n    x, y = input().split()\n    if y == 'soft':\n        a += 1\n    else:\n        b += 1\n\nfor i in range(1, 1000):\n    n = i*i\n    y = n // 2\n    x = n - y\n    if (a <= x and b <= y) or (a <= y and b <= x):\n        print(i)\n        break"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint n, t, ans = 1;\nstd::string s;\nint main() {\n  std::cin >> n;\n  for (int i = 1; i <= n; i++) std::cin >> s >> s, t += s == \"soft\";\n  for (; (ans * ans + 1) / 2 < std::max(t, n - t) || ans * ans < n; ans++)\n    ;\n  std::cout << ans;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class cfCheeseboard {\n\n    static int f1(int n){\n        if(n==1){\n            return 1;\n        }\n        int x= (n%2==0) ? (n-1) : n;\n        return f1(n-1)+x;\n    }\n\n\n\n\n    public static void main(String[] args) {\n        Scanner sc= new Scanner(System.in);\n        int n = sc.nextInt();\n        int b=0,w=0;\n        for(int i=0;i<n;i++){\n            String s=sc.next();\n            String im=sc.next();\n            if(im.charAt(0)=='s'){\n                w++;\n            }\n            if(im.charAt(0)=='h'){\n                b++;\n            }\n\n        }\n        int c= Math.max(w,b);\n        int arr[]=new int[100];\n        for(int i=1;i<n+1;i++) {\n            int xx=f1(i);\n\n            if(c<=xx){\n                if(w==b &&( n%2==1 || n==2)){\n                    System.out.println(i+1);\n                    break;\n                }\n            System.out.println(i);\n            break;\n        }}\n    }\n}\n"
+  }
+]

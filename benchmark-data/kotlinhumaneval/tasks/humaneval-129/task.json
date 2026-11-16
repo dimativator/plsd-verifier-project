@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-129",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/129",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 14,
+  "public_test_count": 1,
+  "unexposed_test_count": 13,
+  "source_review_note": "Canonical depth logic returns false for ][[]], although indices 1..4 form the requested nested subsequence. Tests miss this leading-close case.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-129",
+  "public_dir": "tasks/humaneval-129/public",
+  "evaluator_dir": "tasks/humaneval-129/evaluator",
+  "metadata_file": "tasks/humaneval-129/task.json",
+  "evaluation_harness": "tasks/humaneval-129/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-129/evaluation.json"
+}

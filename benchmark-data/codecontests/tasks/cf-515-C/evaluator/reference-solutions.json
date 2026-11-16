@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "#in the name of god\n#Mr_Rubik\n#CodeForces,Problemset\nsepData=[[],[],[2],[3],[2,2,3],[5],[5,3],[7],[7,2,2,2],[7,2,3,3]]\ndigit=input()\nnumber=input()\nans=[]\nfor i in number:\n    if i!='1' and i!='\\r':\n        for j in sepData[int(i)]:\n            ans.append(j)\nans.sort(reverse=True)\nfor i in ans:\n    print(i,end=\"\")"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  long long int a;\n  cin >> n;\n  cin >> a;\n  std::vector<int> v;\n  while (a > 0) {\n    int x = a % 10;\n    a = a / 10;\n    if (x == 1 || x == 0) {\n      continue;\n    } else if (x == 2 || x == 3 || x == 5 || x == 7) {\n      v.push_back(x);\n    } else if (x == 4) {\n      v.push_back(2);\n      v.push_back(2);\n      v.push_back(3);\n    } else if (x == 6) {\n      v.push_back(3);\n      v.push_back(5);\n    } else if (x == 8) {\n      v.push_back(2);\n      v.push_back(2);\n      v.push_back(2);\n      v.push_back(7);\n    } else {\n      v.push_back(3);\n      v.push_back(3);\n      v.push_back(2);\n      v.push_back(7);\n    }\n  }\n  sort(v.begin(), v.end());\n  for (int j = (int)v.size() - 1; j >= 0; j--) {\n    cout << v[j];\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.HashMap;\nimport java.util.Scanner;\n\npublic final class DrazilAndFactorial {\n    public static void main(String[] args) {\n        Scanner sc=new Scanner(System.in);\n        HashMap<Integer, ArrayList<Integer>> map=new HashMap<>();\n        ArrayList<Integer> list=new ArrayList<>();\n        list.add(3);\n        list.add(2);\n        list.add(2);\n        map.put(4,list);\n        ArrayList<Integer> list1=new ArrayList<>();\n        list1.add(3);\n        list1.add(5);\n        map.put(6,list1);\n        ArrayList<Integer> list2=new ArrayList<>();\n        list2.add(2);\n        list2.add(2);\n        list2.add(2);\n        list2.add(7);\n        map.put(8,list2);\n        ArrayList<Integer> list3=new ArrayList<>();\n        list3.add(2);\n        list3.add(3);\n        list3.add(3);\n        list3.add(7);\n        map.put(9,list3);\n\n        int n=sc.nextInt();\n        String s=sc.next();\n        ArrayList<Integer> ans=new ArrayList<>();\n        for(int i=0;i<n;i++){\n            int ind=s.charAt(i)-48;\n            if(ind>1){\n                if(!map.containsKey(ind)){\n                    ans.add(ind);\n                }else{\n                    ans.addAll(map.get(ind));\n                }\n            }\n        }\n        Collections.sort(ans,Collections.reverseOrder());\n        for(int ele:ans)\n            System.out.print(ele);\n        System.out.println();\n\n    }\n}\n"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-095",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/95",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 4,
+  "public_test_count": 1,
+  "unexposed_test_count": 3,
+  "source_review_note": "Includes empty and all-even-index vowel cases. No non-ASCII semantics are needed for the explicitly named five vowels.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-095",
+  "public_dir": "tasks/humaneval-095/public",
+  "evaluator_dir": "tasks/humaneval-095/evaluator",
+  "metadata_file": "tasks/humaneval-095/task.json",
+  "evaluation_harness": "tasks/humaneval-095/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-095/evaluation.json"
+}

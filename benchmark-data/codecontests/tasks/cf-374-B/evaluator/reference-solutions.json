@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "s=input()\nans=0\n\ni=1\npast=int(s[0])\nc=1\nans=1\nwhile(i<len(s)):\n    if(int(s[i])+past==9):\n        c+=1\n        past=int(s[i])\n    else:\n        if(c%2==1 and c!=1):\n            ans*=(c//2+1)\n        c=1\n        past=int(s[i])\n    i+=1\nif(c!=1 and c%2==1):\n    ans*=(c//2+1)\n\n    \nprint(ans)\n        \n    \n    \n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\ntemplate <typename t>\nt getnum() {\n  t res = 0;\n  char c;\n  int sign = 1;\n  while ((c = getchar()) == ' ' || c == '\\n') {\n    c = getchar();\n    if (c == ' ' || c == '\\n')\n      continue;\n    else\n      break;\n  }\n  if (c == '+') {\n  } else if (c == '-')\n    sign = -1;\n  else\n    res = c - '0';\n  while (1) {\n    c = getchar();\n    if (c >= '0' && c <= '9')\n      res = res * 10 + c - '0';\n    else\n      break;\n  }\n  return res * sign;\n}\ninline void getstr(string &str) {\n  bool now = true;\n  while (now) {\n    char k = getchar();\n    switch (k) {\n      case '\\n':\n      case '\\t':\n      case '\\v':\n      case '\\0':\n      case ' ':\n      case EOF:\n        now = false;\n        break;\n      default:\n        str.push_back(k);\n        break;\n    }\n  }\n}\nint main() {\n  char k, bef = '0';\n  long long right = -1, streak = 0, ans = 1, now = 0;\n  while ((k = getchar()) != EOF && k != '\\n') {\n    if (bef + k - '0' - '0' == 9) {\n      streak++;\n      right = now;\n    } else {\n      if (streak) {\n        streak = (streak % 2 ? 1 : streak / 2 + 1);\n        ans *= streak;\n      }\n      streak = 0;\n    }\n    now++;\n    bef = k;\n  }\n  if (streak) {\n    streak = (streak % 2 ? 1 : streak / 2 + 1);\n    ans *= streak;\n  }\n  cout << ans;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Main2 {\n\tpublic static void main(String args[]){\n\t\tScanner sc = new Scanner(System.in);\n\t\tString s = sc.nextLine();\n\t\tlong counter = 1;\n\t\tint count = 1;\n\t\tint sum = Character.digit(s.charAt(0), 10);\n\t\tfor(int i = 1 ; i < s.length() ; i++){\n\t\t\tsum += Character.digit(s.charAt(i), 10);\n\t\t\tif(sum == 9){\n\t\t\t\tcount++;\n\t\t\t}else{\n\t\t\t\tif(count % 2  == 1){\n\t\t\t\t\tcounter *= (count+1)/2;\n\t\t\t\t}\n\t\t\t\tcount = 1;\n\t\t\t}\n\t\t\tsum = Character.digit(s.charAt(i), 10);\n\t\t}\n\t\tif(count % 2  == 1){\n\t\t\tcounter *= (count+1)/2;\n\t\t}\n\t\tSystem.out.println(counter);\n\t}\n}"
+  }
+]

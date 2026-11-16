@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import re\n\nn = int(input())\n\nfor i in range(n):\n    s = input()\n\n    rainbow = re.search(r\"\\Amiao\\.\", s)\n    freda = re.search(r\"lala\\.\\Z\", s)\n\n    if rainbow and not freda:\n        print(\"Rainbow's\")\n    elif freda and not rainbow:\n        print(\"Freda's\")\n    else:\n        print(\"OMG>.< I don't know!\")\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  char input[111];\n  cin.getline(input, 111);\n  if (strlen(input) == 2)\n    n = 10;\n  else\n    n = input[0] - '0';\n  for (int j = 1; j <= n; j++) {\n    cin.getline(input, 111);\n    bool f = false, r = false;\n    if (strlen(input) <= 5) {\n      if (strcmp(input, \"miao.\") == 0)\n        r = true;\n      else if (strcmp(input, \"lala.\") == 0)\n        f = true;\n    } else {\n      char tmp[6];\n      for (int i = 0; i < 5; i++) {\n        tmp[i] = input[i];\n      }\n      tmp[5] = '\\0';\n      if (strcmp(tmp, \"miao.\") == 0) {\n        r = true;\n      }\n      int k = strlen(input) - 1;\n      for (int i = 0; i < 5; i++) {\n        tmp[4 - i] = input[k - i];\n      }\n      tmp[5] = '\\0';\n      if (strcmp(tmp, \"lala.\") == 0) {\n        f = true;\n      }\n    }\n    if (f && !r)\n      cout << \"Freda's\" << endl;\n    else if (r && !f)\n      cout << \"Rainbow's\" << endl;\n    else\n      cout << \"OMG>.< I don't know!\" << endl;\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.io.*;\npublic class Main {\n\tpublic static void main(String[] args) throws IOException{\nBufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));\nint m = Integer.parseInt(buffer.readLine());\nString[]line = new String[m];\nfor(int i=0;i<m;i++)\nline[i] = buffer.readLine();\nword(m,line);\n}\n\tpublic static void word(int m,String[]line){\n\t\tString miao=\"miao.\";\n\t\tString lola=\"lala.\";\n\t\tfor(int i=0;i<m;i++){\n\t\t\tif(line[i].length()<5){\n\t\t\t\tSystem.out.println(\"OMG>.< I don't know!\");}\n\t\t\telse{String first = line[i].substring(0,5);\n\t\t\tString last = line[i].substring(line[i].length()-5,line[i].length());\n\t\t\tif(lola.compareTo(last)==miao.compareTo(first))\n\t\t\t\tSystem.out.println(\"OMG>.< I don't know!\");\n\t\t\telse if(miao.compareTo(first)==0)\n\t\t\t\tSystem.out.println(\"Rainbow's\");\n\t\t\telse if(lola.compareTo(last)==0)\n\t\t\t\tSystem.out.println(\"Freda's\");\n\t\t\telse\n\t\t\t\tSystem.out.println(\"OMG>.< I don't know!\");\n\t\t}}\n\t}\n}"
+  }
+]

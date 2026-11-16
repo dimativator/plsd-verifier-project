@@ -1,0 +1,12 @@
+{
+  "input": [
+    "3\nqwerty\nqwerty\nqwerty\n",
+    "5\na\naba\nabacaba\nba\naba\n",
+    "5\na\nabacaba\nba\naba\nabab\n"
+  ],
+  "output": [
+    "YES\nqwerty\nqwerty\nqwerty\n",
+    "YES\na\nba\naba\naba\nabacaba\n",
+    "NO\n"
+  ]
+}

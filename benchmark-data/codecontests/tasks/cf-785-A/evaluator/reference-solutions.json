@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a = int(input())\nsum = 0\nfor i in range(1,a+1):\n    b = input()\n    if b == 'Tetrahedron':\n        sum += 4\n    elif b == 'Cube':\n        sum += 6\n    elif b == 'Octahedron':\n        sum += 8\n    elif b == 'Dodecahedron':\n        sum += 12\n    else:\n        sum += 20\nprint(sum)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint main() {\n  int n, i, sum = 0;\n  char item[15];\n  scanf(\"%d\", &n);\n  while (n) {\n    scanf(\"%s\", item);\n    switch (item[0]) {\n      case 'T':\n        sum += 4;\n        break;\n      case 'C':\n        sum += 6;\n        break;\n      case 'O':\n        sum += 8;\n        break;\n      case 'D':\n        sum += 12;\n        break;\n      case 'I':\n        sum += 20;\n        break;\n    }\n    n--;\n  }\n  printf(\"%d\", sum);\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.File;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.math.*;\nimport java.util.*;\n\npublic class t1{\n\tpublic static void main(String[] args) {\n\t\tScanner scan=new Scanner(System.in);\n\t\tint n=scan.nextInt();\n\t\tString[] ary=new String[n];\n\t\tscan.nextLine();\n\t\tfor(int i=0;i<n;i++){\n\t\t\tary[i]=scan.nextLine();\n\t\t\t\n\t\t}\n\t\tint sum=0;\n\t\tfor(int i=0;i<n;i++){\n\t\t\tswitch(ary[i]){\n\t\t\t\tcase \"Tetrahedron\":\n\t\t\t\t\tsum=sum+4;\n\t\t\t\t\tbreak;\n\t\t\t\tcase \"Cube\":\n\t\t\t\t\tsum=sum+6;\n\t\t\t\t\tbreak;\t\n\t\t\t\tcase \"Octahedron\":\n\t\t\t\t\tsum=sum+8;\n\t\t\t\t\tbreak;\t\n\t\t\t\tcase \"Dodecahedron\":\n\t\t\t\t\tsum=sum+12;\n\t\t\t\t\tbreak;\t\n\t\t\t\tcase \"Icosahedron\":\n\t\t\t\t\tsum=sum+20;\n\t\t\t\t\tbreak;\n\t\t\t\tdefault:\n\t\t\t\t\tsum=sum;\t\t\t\t\t\n\t\t\t}\t\n\t\t}\n\t\t\n\t\tSystem.out.println(sum);\n\t\t\n\t}\n\t\n\t\n\n}\n\t\n\n\n"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,v=[int(x) for x in input().split()]\nif n<=v+1:\n    print(n-1)\nelse:\n    print(v+(n-v-1)*(n-v-2)//2+(n-v-1)*2)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint ans(vector<vector<int> > &dp, int n, int v, int limit, int x) {\n  if (dp[n][v] != x) {\n    return dp[n][v];\n  }\n  if (n == 1) {\n    return dp[n][v] = v;\n  }\n  int min_1 = INT_MAX;\n  if (v + 1 <= limit) {\n    min_1 = min(min_1, 0 + ans(dp, n - 1, v + 1, limit, x));\n  }\n  for (int i = v; i >= 0; i--) {\n    min_1 = min(min_1, n * (v - i + 1) + ans(dp, n - 1, i, limit, x));\n  }\n  return dp[n][v] = min_1;\n}\nint main() {\n  int n, v;\n  cin >> n >> v;\n  vector<vector<int> > dp(n + 1, vector<int>(v + 1, (n * v)));\n  int min_1 = INT_MAX;\n  for (int i = 0; i < v; i++) {\n    min_1 = min(min_1, ans(dp, n, i, v, (n * v)));\n  }\n  cout << min_1 << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Main4 {\n\t\n\tpublic static void main(String args[]){\n\t\t\n\t\tScanner sc = new Scanner(System.in);\n\t\tint n = sc.nextInt();\n\t\tint total = sc.nextInt();\n\t\tint cnt = Math.min(n-1, total);\n\t\tint fuel = Math.min(n-1, total) - 1;\n\t\t//System.out.println(\"g \" + cnt + \"  \" + fuel);\n\t\tfor(int i=2;i<n;i++){\n\t\t\tif(n-i > fuel){\n\t\t\t\tcnt += Math.min(n-i-fuel, total-fuel)*i;\n\t\t\t\tfuel += Math.min(n-i-fuel, total-fuel);\n\t\t\t\t\n\t\t\t\t//System.out.println(\"g \" + cnt + \"  \" + fuel + \"  \" + Math.min(n-i-fuel, total-fuel));\n\t\t\t}\n\t\t\tfuel--;\n\t\t}\n\t\tSystem.out.println(cnt);\n\t\t\n\t}\n}\n"
+  }
+]

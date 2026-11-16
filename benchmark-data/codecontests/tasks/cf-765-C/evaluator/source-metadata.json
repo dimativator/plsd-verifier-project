@@ -1,0 +1,34 @@
+{
+  "name": "765_C. Table Tennis Game 2",
+  "description": "Misha and Vanya have played several table tennis sets. Each set consists of several serves, each serve is won by one of the players, he receives one point and the loser receives nothing. Once one of the players scores exactly k points, the score is reset and a new set begins.\n\nAcross all the sets Misha scored a points in total, and Vanya scored b points. Given this information, determine the maximum number of sets they could have played, or that the situation is impossible.\n\nNote that the game consisted of several complete sets.\n\nInput\n\nThe first line contains three space-separated integers k, a and b (1 ≤ k ≤ 109, 0 ≤ a, b ≤ 109, a + b > 0).\n\nOutput\n\nIf the situation is impossible, print a single number -1. Otherwise, print the maximum possible number of sets.\n\nExamples\n\nInput\n\n11 11 5\n\n\nOutput\n\n1\n\n\nInput\n\n11 2 3\n\n\nOutput\n\n-1\n\nNote\n\nNote that the rules of the game in this problem differ from the real table tennis game, for example, the rule of \"balance\" (the winning player has to be at least two points ahead to win a set) has no power within the present problem.",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 1200,
+  "cf_contest_id": 765,
+  "cf_index": "C",
+  "cf_tags": [
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 512000000,
+  "source_file": "data/train-00004-of-00039-cefe355b4667b27e.parquet",
+  "source_row": 46,
+  "task_id": "codecontests/cf-765-C",
+  "rating_band": "1200-1599",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/765/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

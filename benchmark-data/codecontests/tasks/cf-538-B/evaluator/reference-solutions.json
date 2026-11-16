@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import math\na = input()\nd = int(max(a))\nprint(d)\ndec = math.ceil(math.log10(int(a)))\nc = [0]*d\nif int(a) != 10**dec:\n    for i in a:\n        for j in range(int(i)):\n            c[j] = c[j]+10**(dec-1)\n        dec = dec - 1\nd=''\nfor i in c:\n    d += str(i)+' '\nif int(a) == 10**dec:\n    print(a)\nelse:\n    print(d.strip())"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int maxN = 100 * 1000 + 100;\nint a, b, c, t[maxN];\nstring s;\nint main() {\n  cin >> s;\n  for (int i = 0; i < s.size(); i++) t[i] = s[i] - '0';\n  for (int i = 0; i < s.size(); i++) a = max(a, (s[i] - '0'));\n  cout << a << endl;\n  for (int i = 0; i < s.size(); i++)\n    while (t[i] > 0) {\n      b = 0;\n      for (int j = 0; j < s.size(); j++) {\n        if (t[j] > 0)\n          b = (b * 10) + 1;\n        else\n          b = (b * 10) + 0;\n        t[j]--;\n      }\n      cout << b << \" \";\n    }\n  cout << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class GFG {\n\tpublic static void main (String[] args) {\n\t\tScanner sc=new Scanner(System.in);\n\t\tint n=sc.nextInt();\n\t\tArrayList<Integer> arr=new ArrayList<Integer>();\n\t    while (n>0)\n\t    {\n\t        int n1=n,a=0,b=1;\n\t        while(n1>0)\n\t        {\n\t            if(n1%10!=0)a+=b;\n\t            b*=10;n1/=10;\n\t        }\n\t        n-=a;arr.add(a);\n\t    }\n\t    System.out.println(arr.size());\n\t    Collections.sort(arr);\n\t    for(int i:arr)\n\t    System.out.print(i+\" \");\n\t}\n}"
+  }
+]

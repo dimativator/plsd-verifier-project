@@ -1,0 +1,10 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "x=int(input())\ny=x-2\nif y%2==0 and y!=0:\n    print(\"YES\")\nelse :\n    print(\"NO\")"
+  },
+  {
+    "language": "PYTHON",
+    "code": "__author__ = 'kavin'\na = int(input())\nif a > 2 and a%2==0:\n    print \"YES\"\nelse:\n    print \"NO\"\n"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\na = list(map(int,input().split()))\nm = int(input())\nb = list(map(int,input().split()))\ncount = []\nfor i in range(n):\n    for j in range(m):\n        if((b[j]/a[i])==int(b[j]/a[i])):\n            count.append(int(b[j]/a[i]))\no = max(count)\nprint(count.count(o))\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, m, i, j, max, count = 0, flag = 0;\n  cin >> n;\n  int a[n];\n  for (i = 0; i < n; i++) {\n    cin >> a[i];\n  }\n  cin >> m;\n  int b[m];\n  for (j = 0; j < m; j++) {\n    cin >> b[j];\n    for (i = 0; i < n; i++) {\n      if (b[j] % a[i] == 0) {\n        if (flag == 0) {\n          max = b[j] / a[i];\n          count++;\n          flag = 1;\n        } else if (b[j] / a[i] == max) {\n          count++;\n        } else if (b[j] / a[i] > max) {\n          max = b[j] / a[i];\n          count = 1;\n        }\n      }\n    }\n  }\n  cout << count;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\n\npublic class C_132A {\n\tpublic static void main(String[] args) {\n\t\tScanner sc = new Scanner(System.in);\n\t\tint n = sc.nextInt();\n\t\tint a[] = new int [n];\n\t\tfor (int i = 0; i < a.length; i++) {\n\t\t\ta[i] = sc.nextInt();\n\t\t}\n\t\tint m = sc.nextInt();\n\t\tint b[] = new int [m];\n\t\tfor (int i = 0; i < b.length; i++) {\n\t\t\tb[i] = sc.nextInt();\n\t\t}\n\t\tint max = -1;\n\t\tfor (int i = 0; i < b.length; i++) {\n\t\t\tfor (int j = 0; j < a.length; j++) {\n\t\t\t\tif(b[i] % a[j] == 0) max = Math.max(max, b[i]/a[j]);\n\t\t\t}\n\t\t}\n\t\tint ans = 0;\n\t\tfor (int i = 0; i < b.length; i++) {\n\t\t\tfor (int j = 0; j < a.length; j++) {\n\t\t\t\tif((double) b[i] / a[j] ==  max)  ans++;\n\t\t\t}\n\t\t}\n\t\tSystem.out.println(ans);\n\t}\n}\n"
+  }
+]

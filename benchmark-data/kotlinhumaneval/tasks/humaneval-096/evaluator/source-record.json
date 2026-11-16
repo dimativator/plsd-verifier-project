@@ -1,0 +1,23 @@
+{
+  "task_id": "HumanEval_kotlin/96",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Create a function that takes a value (string) representing a number\n * and returns the closest integer to it. If the number is equidistant\n * from two integers, round it away from zero.\n\n * Examples\n * >>> closest_integer(\"10\")\n * 10\n * >>> closest_integer(\"15.3\")\n * 15\n\n * Note:\n * Rounding away from zero means that if the given number is equidistant\n * from two integers, the one you should return is the one that is the\n * farthest from zero. For example closest_integer(\"14.5\") should\n * return 15 and closest_integer(\"-14.5\") should return -15.\n *\n */\nfun closestInteger(value: String): Int {\n",
+  "entry_point": "closestInteger",
+  "test": "fun main() {\n    var arg00: String = \"10\"\n    var x0: Int = closestInteger(arg00)\n    var v0: Int = 10\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: String = \"14.5\"\n    var x1: Int = closestInteger(arg10)\n    var v1: Int = 15\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: String = \"-15.5\"\n    var x2: Int = closestInteger(arg20)\n    var v2: Int = -16\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30: String = \"15.3\"\n    var x3: Int = closestInteger(arg30)\n    var v3: Int = 15\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40: String = \"0\"\n    var x4: Int = closestInteger(arg40)\n    var v4: Int = 0\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Create a function that takes a value (string) representing a number\n * and returns the closest integer to it. If the number is equidistant\n * from two integers, round it away from zero.\n\n * Examples\n * >>> closest_integer(\"10\")\n * 10\n * >>> closest_integer(\"15.3\")\n * 15\n\n * Note:\n * Rounding away from zero means that if the given number is equidistant\n * from two integers, the one you should return is the one that is the\n * farthest from zero. For example closest_integer(\"14.5\") should\n * return 15 and closest_integer(\"-14.5\") should return -15.\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun closestInteger(value: String): Int {",
+    "    val number = value.toDouble()",
+    "    val fractionalPart = number % 1.0",
+    "    val isHalf = fractionalPart == 0.5 || fractionalPart == -0.5",
+    "",
+    "    return if (isHalf) {",
+    "        if (number > 0) Math.ceil(number).toInt() else Math.floor(number).toInt()",
+    "    } else {",
+    "        Math.round(number).toInt()",
+    "    }",
+    "}",
+    "",
+    ""
+  ]
+}

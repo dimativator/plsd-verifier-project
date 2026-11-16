@@ -1,0 +1,35 @@
+{
+  "name": "1335_D. Anti-Sudoku",
+  "description": "You are given a correct solution of the sudoku puzzle. If you don't know what is the sudoku, you can read about it [here](http://tiny.cc/636xmz).\n\nThe picture showing the correct sudoku solution:\n\n<image>\n\nBlocks are bordered with bold black color.\n\nYour task is to change at most 9 elements of this field (i.e. choose some 1 ≤ i, j ≤ 9 and change the number at the position (i, j) to any other number in range [1; 9]) to make it anti-sudoku. The anti-sudoku is the 9 × 9 field, in which:\n\n  * Any number in this field is in range [1; 9]; \n  * each row contains at least two equal elements; \n  * each column contains at least two equal elements; \n  * each 3 × 3 block (you can read what is the block in the link above) contains at least two equal elements. \n\n\n\nIt is guaranteed that the answer exists.\n\nYou have to answer t independent test cases.\n\nInput\n\nThe first line of the input contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.\n\nEach test case consists of 9 lines, each line consists of 9 characters from 1 to 9 without any whitespaces — the correct solution of the sudoku puzzle.\n\nOutput\n\nFor each test case, print the answer — the initial field with at most 9 changed elements so that the obtained field is anti-sudoku. If there are several solutions, you can print any. It is guaranteed that the answer exists.\n\nExample\n\nInput\n\n\n1\n154873296\n386592714\n729641835\n863725149\n975314628\n412968357\n631457982\n598236471\n247189563\n\n\nOutput\n\n\n154873396\n336592714\n729645835\n863725145\n979314628\n412958357\n631457992\n998236471\n247789563",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 1300,
+  "cf_contest_id": 1335,
+  "cf_index": "D",
+  "cf_tags": [
+    "constructive algorithms",
+    "implementation"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00007-of-00039-05785de21e8b8429.parquet",
+  "source_row": 337,
+  "task_id": "codecontests/cf-1335-D",
+  "rating_band": "1200-1599",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/1335/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

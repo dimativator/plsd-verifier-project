@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from collections import Counter,defaultdict,deque\nimport heapq as hq\nfrom itertools import count, islice\n\n#alph = 'abcdefghijklmnopqrstuvwxyz'\n#from math import factorial as fact\nimport math\nimport sys\ninput=sys.stdin.readline\n#print=sys.stdout.write\n#tt = int(input())\n#total=0\n#n = int(input())\n#n,m,k = [int(x) for x in input().split()]\n#n = int(input())\n#l,r = [int(x) for x in input().split()]\nv1,v2 = [int(x) for x in input().split()]\nt,d = [int(x) for x in input().split()]\nf = [v1]\nb = [v2]\nfor i in range(t-1):\n    f.append(f[-1]+d)\n    b.append(b[-1]+d)\nb.reverse()\nans = 0\nfor i in range(t):\n    ans+=min(b[i],f[i])\nprint(ans)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst double EPS = 1e-7;\nconst int MOD = (int)1e9 + 7;\nconst int MAXN = (int)1e5 + 10;\nint main() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  int v1, v2, t, d, ans = 0;\n  cin >> v1 >> v2 >> t >> d;\n  ans = v1 + v2;\n  for (int i = 2; i < t; ++i) {\n    if (v2 < v1) swap(v1, v2);\n    v1 += d;\n    ans += v1;\n  }\n  cout << ans << '\\n';\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.awt.*;\nimport java.io.*;\nimport java.util.*;\n\npublic class Main {\n    public static void main(String args[]) throws IOException {\n        Scanner sc=new Scanner(System.in);\n        int v1=sc.nextInt(),v2=sc.nextInt(),t=sc.nextInt(),d=sc.nextInt(),sum=0;\n        for (int i=0;i<t;i++)sum+=Math.min(v1+d*i,v2+(t-1-i)*d);\n        System.out.println(sum);\n    }\n}"
+  }
+]

@@ -1,0 +1,646 @@
+[
+  {
+    "id": "humaneval-000",
+    "note": "Description says closer than threshold but canonical uses <=; tests do not establish equality-boundary convention."
+  },
+  {
+    "id": "humaneval-001",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-002",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-003",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-004",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-005",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-006",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-007",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-008",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-009",
+    "note": "Canonical starts rolling maximum at 0. Example [-5] should return [-5] by statement but returns [0]. Tests contain no negative-only prefix."
+  },
+  {
+    "id": "humaneval-010",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-011",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-012",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-013",
+    "note": "Tests only positive integers. Canonical gcd can be negative for negative arguments, while usual gcd is nonnegative."
+  },
+  {
+    "id": "humaneval-014",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-015",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-016",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-017",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-018",
+    "note": "No empty substring case is tested. Canonical tests starts only in input.indices, so empty substring returns input.length rather than length+1."
+  },
+  {
+    "id": "humaneval-019",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-020",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-021",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-022",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-023",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-024",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-025",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-026",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-027",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-028",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-029",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-030",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-031",
+    "note": "Canonical returns true for 0 and negative values. Tests only cover positive inputs. i*i may overflow near Int.MAX_VALUE."
+  },
+  {
+    "id": "humaneval-032",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-033",
+    "note": "Only one provided test case. Add empty, repeated, negative, already sorted and reverse-sorted cases independently."
+  },
+  {
+    "id": "humaneval-034",
+    "note": "No empty-list behavior specified or tested. Freeze nonempty input convention explicitly before constructing preconditions."
+  },
+  {
+    "id": "humaneval-035",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-036",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-037",
+    "note": "Tests include n=10, result 433494437. Larger representable-domain policy is absent."
+  },
+  {
+    "id": "humaneval-038",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-039",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-040",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-041",
+    "note": "Tests omit two zero occurrences and Int.MIN_VALUE. Negating Int.MIN_VALUE wraps in Kotlin and changes set-based reasoning."
+  },
+  {
+    "id": "humaneval-042",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-043",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-044",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-045",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-046",
+    "note": "Tests use simple ASCII strings only. Kotlin/JVM reversed correspondence for surrogate pairs needs checking before choosing a Char-indexed palindrome property."
+  },
+  {
+    "id": "humaneval-047",
+    "note": "Tests do not settle p=1, n=0 convention. Canonical returns 1 for n=0 rather than 1%p."
+  },
+  {
+    "id": "humaneval-048",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-049",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-050",
+    "note": "104 supplied cases cover modest sums and no overflow. They cannot justify narrowing the original Int domain."
+  },
+  {
+    "id": "humaneval-051",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-052",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-053",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-054",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-055",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-056",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-057",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-058",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-059",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-060",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-061",
+    "note": "No empty-string test, and canonical last() throws on empty input."
+  },
+  {
+    "id": "humaneval-062",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-063",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-064",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-065",
+    "note": "Prompt gives length>=1 but also explicitly describes empty input and includes an empty test. Preserve the tested empty behavior."
+  },
+  {
+    "id": "humaneval-066",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-067",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-068",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-069",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-070",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-071",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-072",
+    "note": "Stated a<100 conflicts with test inputs 125,105,126,729,891,1001. Do not make the inconsistent bound an unquestioned contract."
+  },
+  {
+    "id": "humaneval-073",
+    "note": "Positive x and base are not explicit in prompt. For x=4,n=-2 canonical false conflicts with integral-power interpretation. Zero and exponent conventions need resolution."
+  },
+  {
+    "id": "humaneval-074",
+    "note": "Tests include negative cube -1 and zero, but not Int.MIN_VALUE or overflow boundaries."
+  },
+  {
+    "id": "humaneval-075",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-076",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-077",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-078",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-079",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-080",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-081",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-082",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-083",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-084",
+    "note": "Statement orders columns descending within each row. Canonical forEachIndexed builds them ascending. Tests never contain two matches in one row."
+  },
+  {
+    "id": "humaneval-085",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-086",
+    "note": "Examples/tests are lowercase English. Prompt does not explicitly restrict all input characters to this alphabet."
+  },
+  {
+    "id": "humaneval-087",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-088",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-089",
+    "note": "Tests include Double values only to reject non-Int types. They do not require floating arithmetic in target code. Pair sums still need arithmetic policy."
+  },
+  {
+    "id": "humaneval-090",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-091",
+    "note": "Canonical helper labels 0/negative values prime. Tests include 0 but also larger actual primes, hiding it. No-prime input behavior is undefined."
+  },
+  {
+    "id": "humaneval-092",
+    "note": "Uppercase branch checks dict.values instead of dict.keys. Existing uppercase-key test happens to have uppercase-compatible values, masking the defect."
+  },
+  {
+    "id": "humaneval-093",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-094",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-095",
+    "note": "Includes empty and all-even-index vowel cases. No non-ASCII semantics are needed for the explicitly named five vowels."
+  },
+  {
+    "id": "humaneval-096",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-097",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-098",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-099",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-100",
+    "note": "Prompt requests nearest rounding, while canonical truncates positive average. Tests also expect truncation for half cases, e.g. n=560,m=851 gives binary 705."
+  },
+  {
+    "id": "humaneval-101",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-102",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-103",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-104",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-105",
+    "note": "Tests include negative signed-first-digit sums but omit Int.MIN_VALUE, where Math.abs returns negative."
+  },
+  {
+    "id": "humaneval-106",
+    "note": "Distinct values are an explicit input guarantee. Empty list is explicitly allowed and tested."
+  },
+  {
+    "id": "humaneval-107",
+    "note": "Test lengths are small. Combined count overflow is not covered and separate list ownership must not silently exclude aliased inputs."
+  },
+  {
+    "id": "humaneval-108",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-109",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-110",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-111",
+    "note": "One provided case has magnitude 9999999999999999. Preserve List<Long> and Long output, never convert this task to IntArray/Int."
+  },
+  {
+    "id": "humaneval-112",
+    "note": "Explicit dimensions <=100 and capacity 1..10 make result <=10000. Owning outer List does not prove ownership of rows."
+  },
+  {
+    "id": "humaneval-113",
+    "note": "Prompt says nonnegative but includes a negative example and negative test case. Negative binary string one-count convention must be retained or resolved."
+  },
+  {
+    "id": "humaneval-114",
+    "note": "Empty input with n=4 is tested but n=0 is not. Canonical split/filter may retain empty tokens for n=0, contradicting empty-output statement."
+  },
+  {
+    "id": "humaneval-115",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-116",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-117",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-118",
+    "note": "Canonical i%2==1 misses negative odd elements because Kotlin remainder is negative. Tests contain only nonnegative values."
+  },
+  {
+    "id": "humaneval-119",
+    "note": "Canonical it<100 accepts -1000, although at-most-two-digit magnitude excludes it. Tests use -2/-3 but no large negative value."
+  },
+  {
+    "id": "humaneval-120",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-121",
+    "note": "Task explicitly permits February 29 without leap-year reasoning. Do not import real calendar semantics into its contract."
+  },
+  {
+    "id": "humaneval-122",
+    "note": "Canonical detects only literal space before applying whitespace regex, so tabs-only strings do not take the whitespace branch. Tests omit tabs/newlines."
+  },
+  {
+    "id": "humaneval-123",
+    "note": "Duplicate values are allowed twice. Reject a third occurrence. Do not use a strictly-increasing/no-duplicates specification."
+  },
+  {
+    "id": "humaneval-124",
+    "note": "Intersection length is endpoint difference, not the count of integer points. Tests distinguish those meanings."
+  },
+  {
+    "id": "humaneval-125",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-126",
+    "note": "Last grid test [[1,3],[3,2]] violates the promised unique 1..N*N values. An unchecked uniqueness precondition would invalidate that original test."
+  },
+  {
+    "id": "humaneval-127",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-128",
+    "note": "Positive Int has at most nine freely variable decimal digits when leading digit is odd, so odd-digit product <=9^9. Overflow is not the blocker here."
+  },
+  {
+    "id": "humaneval-129",
+    "note": "Canonical depth logic returns false for ][[]], although indices 1..4 form the requested nested subsequence. Tests miss this leading-close case."
+  },
+  {
+    "id": "humaneval-130",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-131",
+    "note": "Statement defines words by spaces, but canonical permits any nonalphabetic preceding character. Tests omit punctuation-before-final-letter distinction."
+  },
+  {
+    "id": "humaneval-132",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-133",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-134",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-135",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-136",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-137",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-138",
+    "note": "Initial letter rule is Latin and digit rule explicitly 0..9, whereas canonical isLetter/isDigit are Unicode-aware. Tests only exercise ASCII names."
+  },
+  {
+    "id": "humaneval-139",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-140",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-141",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-142",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-143",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-144",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-145",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-146",
+    "note": "Claim that all words have same length is contradicted by examples and tests. Do not constrain proofs to equal lengths."
+  },
+  {
+    "id": "humaneval-147",
+    "note": "Canonical primality helper returns true for 0/negative n. Tests cover n>=1 only."
+  },
+  {
+    "id": "humaneval-148",
+    "note": "Floating tests only exercise type rejection. A safe is Int branch avoids floating arithmetic; integer square/sum overflow still needs resolution."
+  },
+  {
+    "id": "humaneval-149",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-150",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-151",
+    "note": "No empty-b test. Canonical returns false because there are no rotations, unlike common empty-substring conventions."
+  },
+  {
+    "id": "humaneval-152",
+    "note": "Zero is tested and must count as one even digit. Negative sign is not a digit."
+  },
+  {
+    "id": "humaneval-153",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-154",
+    "note": "Tests contain positive small sides only. Canonical can accept degenerate/nonpositive sides and squares overflow on large Ints."
+  },
+  {
+    "id": "humaneval-155",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-156",
+    "note": "All three original bounds are 0..1000, so the total is <=2000 and subtraction is safe. Multi-element listOf is the remaining canonical API issue."
+  },
+  {
+    "id": "humaneval-157",
+    "note": "Only three tests cover exponentiation/multiplication/addition and positive floor division. Zero divisors, negative intermediates and associativity are not adequately specified."
+  },
+  {
+    "id": "humaneval-158",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-159",
+    "note": "Only the provided finite examples are covered. They do not establish domain-wide correctness, absence of overflow, or verifier compatibility."
+  },
+  {
+    "id": "humaneval-160",
+    "note": "Inputs explicitly positive. Zero is not a candidate digit within any valid positive interval, even though canonical range begins at 0."
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-089",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/89",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 10,
+  "public_test_count": 1,
+  "unexposed_test_count": 9,
+  "source_review_note": "Tests include Double values only to reject non-Int types. They do not require floating arithmetic in target code. Pair sums still need arithmetic policy.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-089",
+  "public_dir": "tasks/humaneval-089/public",
+  "evaluator_dir": "tasks/humaneval-089/evaluator",
+  "metadata_file": "tasks/humaneval-089/task.json",
+  "evaluation_harness": "tasks/humaneval-089/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-089/evaluation.json"
+}

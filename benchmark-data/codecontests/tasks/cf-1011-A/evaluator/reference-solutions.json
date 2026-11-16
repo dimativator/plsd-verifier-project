@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,k = list(map(int,input().split()))\n\ndata = sorted(list(input()))\n\ndata = list(map(lambda x:ord(x)-ord('a')+1,data))\n\nresult = 0\nused = 0\nidx =0\nprev = -2\n\n\n# print(data)\n\nfor d in data:\n    if d > prev+1:\n        result+= d\n        prev = d\n        used += 1\n\n\n    if used == k:\n        break\n\nif used < k:\n    print(-1)\nelse:\n    print(result)\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  std::ios::sync_with_stdio(false);\n  cin.tie(NULL);\n  cout.tie(NULL);\n  int n, k;\n  cin >> n >> k;\n  string s;\n  cin >> s;\n  sort(s.begin(), s.end());\n  string ans;\n  ans += s[0];\n  k--;\n  for (int i = 1; i < s.length() && k > 0; i++) {\n    if (k > 0 && s[i] - ans[ans.length() - 1] > 1) {\n      ans += s[i];\n      k--;\n    }\n  }\n  if (k == 0) {\n    int count = 0;\n    for (int i = 0; i < ans.length(); i++) {\n      count += ans[i] - 96;\n    }\n    cout << count << '\\n';\n  } else\n    cout << \"-1\\n\";\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\npublic class A\n{\n\tpublic static void main (String[] args) \n\t{\n\t\tScanner s=new Scanner(System.in);\n\t\tint N=s.nextInt();\n\t\tint K=s.nextInt();\n\t\ts.nextLine();\n\t\tchar C1[]=s.nextLine().toCharArray();\n\t\t\n\t\tArrays.sort(C1);\n\t\tint L1=C1.length;\n\t\t\n\t\tString S=\"\"+C1[0];\n\t\tfor(int i=1;i<L1;i++)\n\t\t{\n\t\t    if(C1[i]!=C1[i-1])\n\t\t    S=S+C1[i];\n\t\t}\n\t\t\n\t//\tSystem.out.println(S);\n\t\t\n\t\tchar C2[]=S.toCharArray();\n\t\tint L2=C2.length;\n\t\t\n\t\tif(K>L2)\n\t\t{\n\t\t\tSystem.out.println(-1);\n\t\t}\n\t\telse\n\t\t{\n\t\tList<Integer> L=new ArrayList<Integer>();\n\t\t\n\t\tfor(int j=0;j<=L2-K;j++)\n\t\t{\n\t\tint a=C2[j]-'a'+1;\n\t\tint c=1,k=j;\n\t\t\n\t\tfor(int i=j;i<L2;i++)\n\t\t{\n\t\t   if(C2[i]-C2[k]>1)\n\t\t   {\n\t\t\t   k=i;\n\t\t       a+=C2[i]-'a'+1;\n\t\t       c++;\n\t\t   }\n\t\t   if(c==K)\n\t\t   {\n\t\t\t   L.add(a);\n\t\t\t   break;\n\t\t   }\n\t\t}\n\t\t}\n\t\t\n\t//\tSystem.out.println(L);\n\t\tif(L.size()!=0)\n\t\t{\n\t\t\tCollections.sort(L);\n\t\t\tSystem.out.println(L.get(0));\n\t\t}\n\t\telse\n\t\tSystem.out.println(-1);\n\t\t}\n\t\t\n\t}}"
+  }
+]

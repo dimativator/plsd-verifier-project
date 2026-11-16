@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "r = lambda: list(map(int, input().split()))[1:]\nn,c = map(int, input().split())\n\nd = []\nfor _ in range(n):\n    for i in r():\n        if i<c:\n            d.append(str(_+1))\n            break\nprint (len(d))\nprint (' '.join(d))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint main() {\n  int n, i, j, k, count = 0, v, l, h, a, f;\n  int b[100];\n  scanf(\"%d%d\", &n, &v);\n  for (i = 0; i < n; i++) {\n    scanf(\"%d\", &k);\n    f = 1;\n    for (j = 0; j < k; j++) {\n      scanf(\"%d\", &a);\n      if (a < v && f) {\n        b[count] = i + 1;\n        count++;\n        f = 0;\n      }\n    }\n  }\n  printf(\"%d\\n\", count);\n  for (i = 0; i < count; i++) printf(\"%d \", b[i]);\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.InputStream;\nimport java.io.OutputStream;\nimport java.io.InputStreamReader;\nimport java.io.PrintWriter;\nimport java.io.IOException;\nimport java.util.ArrayList;\nimport java.util.StringTokenizer;\nimport java.util.TreeSet;\n\npublic class A43 {\n    public static void main(String [] args) {\n        InputStream inputReader = System.in;\n        OutputStream outputReader = System.out;\n        InputReader in = new InputReader(inputReader);\n        PrintWriter out = new PrintWriter(outputReader);\n        Algorithm solver = new Algorithm();\n        solver.solve(in, out);\n        out.close();\n    }\n}\n\nclass Algorithm {\n    void solve(InputReader ir, PrintWriter pw) {\n        int n = ir.nextInt();\n        int v = ir.nextInt();\n        TreeSet<Integer> index = new TreeSet<>();\n        for (int i = 0; i < n; i++) {\n            int k = ir.nextInt();\n            for (int j = 0; j < k;j++) {\n                if (v > ir.nextInt()) index.add(i + 1);\n            }\n        }\n        pw.println(index.size());\n        for (Integer i : index) pw.print(i + \" \");\n    }\n}\n\nclass InputReader {\n    private BufferedReader reader;\n    private StringTokenizer tokenizer;\n\n    InputReader(InputStream stream) {\n        reader = new BufferedReader(new InputStreamReader(stream), 32768);\n        tokenizer = null;\n    }\n\n    private String next() {\n        while (tokenizer == null || !tokenizer.hasMoreTokens()) {\n            try {\n                tokenizer = new StringTokenizer(reader.readLine());\n            } catch (IOException e) {\n                throw new RuntimeException(e);\n            }\n        }\n        return tokenizer.nextToken();\n    }\n\n    int nextInt() {\n        return Integer.parseInt(next());\n    }\n\n}"
+  }
+]

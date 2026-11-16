@@ -1,0 +1,10 @@
+{
+  "input": [
+    "aaabaa\n",
+    "xaxxxxa\n"
+  ],
+  "output": [
+    "6\n",
+    "3\n"
+  ]
+}

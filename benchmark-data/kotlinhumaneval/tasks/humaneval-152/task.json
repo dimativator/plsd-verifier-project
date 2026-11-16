@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-152",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/152",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 8,
+  "public_test_count": 1,
+  "unexposed_test_count": 7,
+  "source_review_note": "Zero is tested and must count as one even digit. Negative sign is not a digit.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-152",
+  "public_dir": "tasks/humaneval-152/public",
+  "evaluator_dir": "tasks/humaneval-152/evaluator",
+  "metadata_file": "tasks/humaneval-152/task.json",
+  "evaluation_harness": "tasks/humaneval-152/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-152/evaluation.json"
+}

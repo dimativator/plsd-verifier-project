@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, m = [int(i) for i in input().split()]\nimg = [list(input()) for i in range(n)]\ncnt = 0\nfor i in range(n - 1):\n    for j in range(m - 1):\n        arr = [img[i][j], img[i + 1][j], img[i][j + 1], img[i + 1][j + 1]]\n        if 'f' in arr and 'a' in arr and 'c' in arr and 'e' in arr:\n            cnt += 1\nprint(cnt)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  string theWord = \"\";\n  int shiftRight = 0;\n  int shiftDown = 0;\n  int faces = 0;\n  int n;\n  int m;\n  cin >> n;\n  cin >> m;\n  char arr[n][m];\n  char letter;\n  for (int i = 0; i < n; i++) {\n    for (int j = 0; j < m; j++) {\n      cin >> letter;\n      arr[i][j] = letter;\n    }\n  }\n  for (int y = 0; y < n - 1; y++) {\n    for (int x = 0; x < m - 1; x++) {\n      for (int i = shiftDown; i < shiftDown + 2; i++) {\n        for (int j = shiftRight; j < shiftRight + 2; j++) {\n          theWord += arr[i][j];\n        }\n      }\n      if (theWord.find('f') != string::npos &&\n          theWord.find('a') != string::npos &&\n          theWord.find('c') != string::npos &&\n          theWord.find('e') != string::npos) {\n        faces++;\n      }\n      theWord.clear();\n      shiftRight++;\n    }\n    shiftRight = 0;\n    shiftDown++;\n  }\n  cout << faces << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\n/**\n * Created by jouke on 8/23/15.\n */\npublic class CF_549A {\n\n  public static void main(String[] args) {\n    try (Scanner s = new Scanner(System.in)) {\n      int h = s.nextInt();\n      int w = s.nextInt();\n\n      byte[][] picture = new byte[h][w];\n\n      for (int i = 0; i < h; i++) {\n        String line = s.next();\n        for (int j = 0; j < w; j++) {\n          switch(line.charAt(j)) {\n            case 'f':\n              picture[i][j] = 1;\n              break;\n            case 'a':\n              picture[i][j] = 2;\n              break;\n            case 'c':\n              picture[i][j] = 4;\n              break;\n            case 'e':\n              picture[i][j] = 8;\n              break;\n          }\n        }\n      }\n\n      int faceCount = 0;\n\n      for (int i = 0; i < h - 1; i++) {\n        for (int j = 0; j < w - 1; j++) {\n          if ((picture[i][j] | picture[i+1][j] | picture[i][j+1] | picture[i+1][j+1]) == 15) {\n            faceCount++;\n          }\n        }\n      }\n\n      System.out.println(faceCount);\n    }\n  }\n}\n"
+  }
+]

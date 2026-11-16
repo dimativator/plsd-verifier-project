@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import sys\n\nI = lambda: int(input())\nreadline = lambda: sys.stdin.readline().strip('\\n')\nRM = readmap  = lambda x=int: map(x,readline().split(' '))\n\n#1332 630 div2\nfor _ in range(I()):\n    a,b,c,d,x,y,x1,y1,x2,y2 = *RM(),*RM()\n    flag1 = x2-x >= b-a and x-x1 >= a-b and y2-y >= d-c and y-y1 >= c-d\n    flag2 = ((b==0 and a==0) or x2-x1>0) and ((c==0 and d==0) or y2-y1>0)\n    print([\"NO\",\"YES\"][flag1 and flag2])\n\n\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nvoid solve() {\n  long long a, b, c, d;\n  cin >> a >> b >> c >> d;\n  long long x, y, x1, y1, x2, y2;\n  cin >> x >> y >> x1 >> y1 >> x2 >> y2;\n  bool flag = true;\n  long long lefte = a - b;\n  if (x - lefte < x1 or x - lefte > x2) flag = false;\n  if (x2 - x1 == 0 and (a != 0 or b != 0)) flag = false;\n  long long downe = c - d;\n  if (y - downe < y1 or y - downe > y2) flag = false;\n  if (y2 - y1 == 0 and (c != 0 or d != 0)) flag = false;\n  if (flag)\n    cout << \"Yes\\n\";\n  else\n    cout << \"No\\n\";\n}\nint32_t main() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  long long tc;\n  cin >> tc;\n  while (tc--) solve();\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.InputStreamReader;\nimport java.util.Scanner;\n\npublic class Solution {\n\tpublic static void main (String[] args) {\n\t\tScanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));\n\t\tint t = in.nextInt();\n\t\tfor (int i = 0; i < t; i++) {\n\t\t\tint a = in.nextInt();\n\t\t\tint b = in.nextInt();\n\t\t\tint c = in.nextInt();\n\t\t\tint d = in.nextInt();\n\t\t\tint x = in.nextInt();\n\t\t\tint y = in.nextInt();\n\t\t\tint x1 = in.nextInt();\n\t\t\tint y1 = in.nextInt();\n\t\t\tint x2 = in.nextInt();\n\t\t\tint y2 = in.nextInt();\n\t\t\tboolean bool = true;\n\t\t\tint hor = b - a;\n\t\t\tif (hor == 0) {\n\t\t\t\tif (a != 0 && x1 == x && x2 == x) bool = false;\n\t\t\t} else {\n\t\t\t\thor += x;\n\t\t\t\tif (hor < x1 || hor > x2) bool = false;\n\t\t\t}\n\t\t\tint ver = d - c;\n\t\t\tif (bool && ver == 0) {\n\t\t\t\tif (c != 0 && y1 == y && y2 == y) bool = false;\n\t\t\t} else {\n\t\t\t\tver += y;\n\t\t\t\tif (ver < y1 || ver > y2) bool = false;\n\t\t\t}\n\t\t\tSystem.out.println(bool ? \"YES\" : \"NO\");\n\t\t}\n\t\tin.close();\n\t}\n}\n"
+  }
+]

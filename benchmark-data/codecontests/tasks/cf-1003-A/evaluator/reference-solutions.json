@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nmn = list(map(int, input().split()))\nk = 1\nfor i in range(1, 101):\n    s = mn.count(i)\n    if s > k:\n        k = s\nprint(k)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int x, input, past = 0, max = 0;\n  vector<int> arr, arr2;\n  cin >> x;\n  while (x--) {\n    cin >> input;\n    arr.push_back(input);\n    if (find(arr2.begin(), arr2.end(), input) == arr2.end())\n      arr2.push_back(input);\n  }\n  for (int i = 0; i < arr2.size(); i++) {\n    past = count(arr.begin(), arr.end(), arr2[i]);\n    if (past > max) max = past;\n  }\n  cout << max;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.Scanner;\n\npublic class PolycarpsPockets {\n\tpublic static void main(String[] args) {\n\t\tint[] arr= new int[101];\n\t\tScanner sc = new Scanner(System.in);\n\t\tint n = sc.nextInt();\n\t\tint x,mx=0;\n\t\tfor(int i=0;i<n;i++) {\n\t\t\tx = sc.nextInt();\n\t\t\tarr[x]++;\n\t\t\tmx = Math.max(mx, arr[x]);\n\t\t}\n\t\tSystem.out.println(mx);\n\t}\n}\n"
+  }
+]

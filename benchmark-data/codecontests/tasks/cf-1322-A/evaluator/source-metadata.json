@@ -1,0 +1,34 @@
+{
+  "name": "1322_A. Unusual Competitions",
+  "description": "A bracketed sequence is called correct (regular) if by inserting \"+\" and \"1\" you can get a well-formed mathematical expression from it. For example, sequences \"(())()\", \"()\" and \"(()(()))\" are correct, while \")(\", \"(()\" and \"(()))(\" are not.\n\nThe teacher gave Dmitry's class a very strange task — she asked every student to come up with a sequence of arbitrary length, consisting only of opening and closing brackets. After that all the students took turns naming the sequences they had invented. When Dima's turn came, he suddenly realized that all his classmates got the correct bracketed sequence, and whether he got the correct bracketed sequence, he did not know.\n\nDima suspects now that he simply missed the word \"correct\" in the task statement, so now he wants to save the situation by modifying his sequence slightly. More precisely, he can the arbitrary number of times (possibly zero) perform the reorder operation.\n\nThe reorder operation consists of choosing an arbitrary consecutive subsegment (substring) of the sequence and then reordering all the characters in it in an arbitrary way. Such operation takes l nanoseconds, where l is the length of the subsegment being reordered. It's easy to see that reorder operation doesn't change the number of opening and closing brackets. For example for \"))((\" he can choose the substring \")(\" and do reorder \")()(\" (this operation will take 2 nanoseconds).\n\nSince Dima will soon have to answer, he wants to make his sequence correct as fast as possible. Help him to do this, or determine that it's impossible.\n\nInput\n\nThe first line contains a single integer n (1 ≤ n ≤ 10^6) — the length of Dima's sequence.\n\nThe second line contains string of length n, consisting of characters \"(\" and \")\" only.\n\nOutput\n\nPrint a single integer — the minimum number of nanoseconds to make the sequence correct or \"-1\" if it is impossible to do so.\n\nExamples\n\nInput\n\n\n8\n))((())(\n\n\nOutput\n\n\n6\n\n\nInput\n\n\n3\n(()\n\n\nOutput\n\n\n-1\n\nNote\n\nIn the first example we can firstly reorder the segment from first to the fourth character, replacing it with \"()()\", the whole sequence will be \"()()())(\". And then reorder the segment from the seventh to eighth character, replacing it with \"()\". In the end the sequence will be \"()()()()\", while the total time spent is 4 + 2 = 6 nanoseconds.",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 1300,
+  "cf_contest_id": 1322,
+  "cf_index": "A",
+  "cf_tags": [
+    "greedy"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 512000000,
+  "source_file": "data/train-00014-of-00039-dc3ebb07a3cba8e4.parquet",
+  "source_row": 233,
+  "task_id": "codecontests/cf-1322-A",
+  "rating_band": "1200-1599",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/1322/A",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

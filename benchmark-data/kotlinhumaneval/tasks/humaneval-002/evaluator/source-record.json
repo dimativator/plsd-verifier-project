@@ -1,0 +1,15 @@
+{
+  "task_id": "HumanEval_kotlin/2",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Given a positive floating point number, it can be decomposed into\n * an integer part (largest integer smaller than the given number) and decimals\n * (leftover part always smaller than 1).\n\n * Return the decimal part of the number.\n * >>> truncate_number(3.5)\n * 0.5\n *\n */\nfun truncateNumber(number: Double): Double {\n",
+  "entry_point": "truncateNumber",
+  "test": "fun main() {\n    var arg00: Double = 3.5\n    var x0: Double = truncateNumber(arg00)\n    var v0: Double = 0.5\n    if (Math.abs(x0 - v0) > 1e-9) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: Double = 1.33\n    var x1: Double = truncateNumber(arg10)\n    var v1: Double = 0.33\n    if (Math.abs(x1 - v1) > 1e-9) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: Double = 123.456\n    var x2: Double = truncateNumber(arg20)\n    var v2: Double = 0.456\n    if (Math.abs(x2 - v2) > 1e-9) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n}\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Given a positive floating point number, it can be decomposed into\n * an integer part (largest integer smaller than the given number) and decimals\n * (leftover part always smaller than 1).\n\n * Return the decimal part of the number.\n * >>> truncate_number(3.5)\n * 0.5\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun truncateNumber(number: Double): Double {",
+    "    return number - Math.floor(number)",
+    "}",
+    "",
+    ""
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "input": [
+    "2\nRuruRu fedya\n1\nruruRU fedor\n",
+    "3\nAbRb r Zz\n4\nxR abRb\naA xr\nzz Z\nxr y\n"
+  ],
+  "output": [
+    "1 10\n",
+    "2 6\n"
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "seed": 20261114,
+  "task_count": 40,
+  "conditions": [
+    "baseline",
+    "verifier"
+  ],
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "medium",
+  "repetitions": 1,
+  "selection": {
+    "kotlinhumaneval": "First 20 tasks sorted by SHA256('20261114:' + task_id)",
+    "codecontests": "Four tasks per rating band, reviewed for a unique output before any agent runs. Candidate order came from the same seeded hash. Explicit IDs are frozen here."
+  },
+  "checker_review": "Selected contest output requirements are integer scalars/vectors, a unique lexicographic permutation, a specified IPv6 expansion, or YES/NO. cf-1197-B explicitly permits any letter case. Other tokens are case-sensitive.",
+  "hidden_suites": {
+    "kotlinhumaneval": [
+      "HiddenTests.kt"
+    ],
+    "codecontests": [
+      "private-tests.json"
+    ]
+  },
+  "generated_tests": "Excluded from this plumbing pilot before agent runs because generated input-domain validity has not been reviewed. Source data remains unchanged.",
+  "runtime_limits": {
+    "test_timeout_seconds": 10,
+    "jvm_max_heap": "1g"
+  },
+  "agent_limits": {
+    "steps": 0,
+    "cost": 0,
+    "wall_time_seconds": 0,
+    "meaning": "No imposed agent budget for this plumbing pilot"
+  },
+  "primary_outcome": "All final hidden tests pass",
+  "tasks": [
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-034",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-038",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-091",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-110",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-047",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-114",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-028",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-066",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-025",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-017",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-122",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-026",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-146",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-121",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-101",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-108",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-068",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-143",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-016",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "kotlinhumaneval",
+      "id": "humaneval-131",
+      "rating_band": null,
+      "checker": "kotlin_harness"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1197-B",
+      "rating_band": "800-1199",
+      "checker": "casefold_tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-894-A",
+      "rating_band": "800-1199",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-339-B",
+      "rating_band": "800-1199",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-765-B",
+      "rating_band": "800-1199",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-962-A",
+      "rating_band": "1200-1599",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-250-B",
+      "rating_band": "1200-1599",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1256-B",
+      "rating_band": "1200-1599",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-934-A",
+      "rating_band": "1200-1599",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1042-D",
+      "rating_band": "1600-1999",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-55-B",
+      "rating_band": "1600-1999",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1025-C",
+      "rating_band": "1600-1999",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-199-C",
+      "rating_band": "1600-1999",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1336-C",
+      "rating_band": "2000-2399",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-451-E",
+      "rating_band": "2000-2399",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1380-E",
+      "rating_band": "2000-2399",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1223-D",
+      "rating_band": "2000-2399",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-724-F",
+      "rating_band": "2400+",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-449-E",
+      "rating_band": "2400+",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1109-E",
+      "rating_band": "2400+",
+      "checker": "tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1473-E",
+      "rating_band": "2400+",
+      "checker": "tokens"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "991_C. Candies",
+  "description": "After passing a test, Vasya got himself a box of n candies. He decided to eat an equal amount of candies each morning until there are no more candies. However, Petya also noticed the box and decided to get some candies for himself.\n\nThis means the process of eating candies is the following: in the beginning Vasya chooses a single integer k, same for all days. After that, in the morning he eats k candies from the box (if there are less than k candies in the box, he eats them all), then in the evening Petya eats 10\\% of the candies remaining in the box. If there are still candies left in the box, the process repeats — next day Vasya eats k candies again, and Petya — 10\\% of the candies left in a box, and so on.\n\nIf the amount of candies in the box is not divisible by 10, Petya rounds the amount he takes from the box down. For example, if there were 97 candies in the box, Petya would eat only 9 of them. In particular, if there are less than 10 candies in a box, Petya won't eat any at all.\n\nYour task is to find out the minimal amount of k that can be chosen by Vasya so that he would eat at least half of the n candies he initially got. Note that the number k must be integer.\n\nInput\n\nThe first line contains a single integer n (1 ≤ n ≤ 10^{18}) — the initial amount of candies in the box.\n\nOutput\n\nOutput a single integer — the minimal amount of k that would allow Vasya to eat at least half of candies he got.\n\nExample\n\nInput\n\n68\n\n\nOutput\n\n3\n\nNote\n\nIn the sample, the amount of candies, with k=3, would change in the following way (Vasya eats first):\n\n68 → 65 → 59 → 56 → 51 → 48 → 44 → 41 \\\\\\ → 37 → 34 → 31 → 28 → 26 → 23 → 21 → 18 → 17 → 14 \\\\\\ → 13 → 10 → 9 → 6 → 6 → 3 → 3 → 0.\n\nIn total, Vasya would eat 39 candies, while Petya — 29.",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 1500,
+  "cf_contest_id": 991,
+  "cf_index": "C",
+  "cf_tags": [
+    "binary search",
+    "implementation"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00014-of-00039-dc3ebb07a3cba8e4.parquet",
+  "source_row": 175,
+  "task_id": "codecontests/cf-991-C",
+  "rating_band": "1200-1599",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/991/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

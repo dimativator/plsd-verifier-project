@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import sys\n\nn,m=map(int,input().split())\nA=list(map(int,input().split()))\n\nif sum(A)<m:\n    print(-1)\n    sys.exit()\n\nA.sort(reverse=True)\n\nMIN=1\nMAX=n\n\nwhile MIN!=MAX:\n    d=(MIN+MAX)//2\n\n\n    ANS=0\n    j=0\n    count=0\n    for a in A:\n        if a<=j:\n            continue\n        \n        ANS+=(a-j)\n        count+=1\n\n        if count==d:\n            j+=1\n            count=0\n\n    #print(d,ANS)\n\n    if ANS>=m:\n        MAX=d\n    else:\n        MIN=d+1\nprint(MIN)\n            \n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int N = 2e5 + 9;\nlong long n, m;\nlong long a[N];\nbool cmp(int a, int b) { return a > b; }\nbool check(int x) {\n  long long ans = 0, ct = 0;\n  for (int i = 1; i <= n; i++) {\n    if (a[i] >= ct) ans += ((long long)a[i] - ct);\n    if (i % x == 0) ct++;\n  }\n  if (ans >= m) return true;\n  return false;\n}\nint main() {\n  while (~scanf(\"%d\", &n)) {\n    scanf(\"%d\", &m);\n    long long sum = 0;\n    for (int i = 1; i <= n; i++) {\n      scanf(\"%d\", &a[i]);\n      sum += a[i];\n    }\n    if (sum < m) {\n      puts(\"-1\");\n      continue;\n    }\n    sort(a + 1, a + n + 1, cmp);\n    int l = 1, r = n;\n    while (l < r) {\n      int mid = (l + r) >> 1;\n      if (check(mid))\n        r = mid;\n      else\n        l = mid + 1;\n    }\n    printf(\"%d\\n\", l);\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class coffeeeeeeyoy {\n\tstatic Long[] a;\n\tstatic int n;\n\tstatic long k;\n\tpublic static void main(String[] args) {\n\t\tScanner scan=new Scanner(System.in);\n\t\tn=scan.nextInt();\n\t\tk=scan.nextInt();\n\t\ta=new Long[n];\n\t\tlong sum=0L;\n\t\tfor(int i=0;i<n;i++) {\n\t\t\ta[i]=scan.nextLong();\n\t\t\tsum+=a[i];\n\t\t}\n\t\tArrays.sort(a);//jesus christ im dumb\n\t\tif(k>sum) {\n\t\t\tSystem.out.println(-1);\n\t\t\treturn;\n\t\t}\n\t\tlong lo=1, hi=n;\n\t\twhile(hi>=lo) {\n\t\t\tlong mid=(hi+lo)/2;\n\t\t\tif(go(mid)) hi=mid-1;\n\t\t\telse lo=mid+1;\n\t\t}\n\t\tSystem.out.println(lo);\n\t}\n\tpublic static boolean go(long mid) {\n//\t\tSystem.out.println(\"TESTING \"+mid);\n\t\tlong res=0L;\n\t\tint ct=n-1;\n\t\tcoffee:for(long loss=0;;loss++) {\n\t\t\tfor(long i=0;i<mid;i++) {\n\t\t\t\tres+=Math.max(a[ct]-loss,0);\n//\t\t\t\tSystem.out.println(a[ct]+\" \"+loss+\" \"+res);\n\t\t\t\tif(--ct<0) break coffee;\n\t\t\t}\n\t\t}\n\t\treturn res>=k;\n\t}\n}"
+  }
+]

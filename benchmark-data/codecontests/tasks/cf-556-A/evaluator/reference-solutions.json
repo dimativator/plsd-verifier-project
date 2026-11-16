@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\ns = input()\nx = s.count('0')\ny = s.count('1')\nprint(abs(x-y))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nchar c;\nint sz, a0, a1;\nint main() {\n  cin >> sz;\n  for (int i = 0; i < sz; i++) {\n    cin >> c;\n    if (c == '0')\n      a0++;\n    else\n      a1++;\n  }\n  cout << max(a1, a0) - min(a1, a0);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.math.BigInteger;\nimport java.util.*;\n\nimport static java.lang.Math.abs;\nimport static java.lang.Math.exp;\nimport static java.lang.Math.floor;\n\npublic class Main {\n    static Scanner scanner = new Scanner(System.in);\n    static long  sum[]=new long[100000];\n\n    public static void main(String[] args) {\n        int n = scanner.nextInt(),o1=0,o0=0;\n        scanner.nextLine();\n        String temp=scanner.nextLine();\n        for (int i=0;i<n;i++){\n            if (temp.charAt(i)=='0'){\n                o0++;\n            }else {\n                o1++;\n            }\n        }\n        System.out.println(Math.abs(o0-o1));\n    }\n\n}"
+  }
+]

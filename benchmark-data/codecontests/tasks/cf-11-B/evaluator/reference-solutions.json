@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from math import sqrt\nx = abs(int(input()))\nn = int((sqrt(1 + 8 * x) - 1) / 2)\nk = (n * (n + 1)) // 2\nif k == x: print(n)\nelse:\n    n += 1\n    k += n\n    if (k - x) % 2: \n        n += 1\n        k += n\n        print(n + (k - x) % 2)\n    else: print(n)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint main() {\n  int x, i, sum = 0;\n  scanf(\"%d\", &x);\n  if (x < 0) x = -x;\n  for (i = 0; sum < x || sum % 2 != x % 2; sum += ++i)\n    ;\n  printf(\"%d\", i);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\nimport java.lang.Math;\n\npublic class main{\n    public static void main(String []args){\n        Scanner s = new Scanner(System.in);\n        int n = s.nextInt();\n        n = Math.abs(n);\n\n        int step=0,sum=0;\n\n        while(sum<n || ((sum-n)%2==1)){\n            step++;\n            sum+=step;\n        }\n        if(n==0){\n            System.out.println('0');\n        }else System.out.println(step);\n    }\n}\n   "
+  }
+]

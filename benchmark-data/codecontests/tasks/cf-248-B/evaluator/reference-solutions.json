@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nif n < 3:\n    print(-1)\nelse:\n    t = 10**(n-1)\n    print(t+210-t%210)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int N = 100005;\nvector<int> vmod, ans;\nint main() {\n  int i, j, k, l;\n  vmod.push_back(0);\n  vmod.push_back(0);\n  vmod.push_back(0);\n  vmod.push_back(100);\n  i = 4;\n  while (i < N) {\n    vmod.push_back((vmod[i - 1] * 10) % 210);\n    i++;\n  }\n  int n, x;\n  cin >> n;\n  if (!vmod[n])\n    cout << -1 << endl;\n  else {\n    ans.push_back(1);\n    for (i = 1; i < n; i++) ans.push_back(0);\n    x = 210 - vmod[i];\n    j = n - 1;\n    while (x) {\n      ans[j] = ans[j] + x % 10;\n      x = x / 10;\n      j--;\n    }\n    for (j = 0; j < ans.size(); j++) cout << ans[j];\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "/*\nPROG: chillywilly\nLANG: JAVA\n\ncodeforces\n*/\n\nimport java.io.*;\nimport java.util.*;\nimport static java.lang.Math.max;\nimport static java.lang.Math.min;\n\npublic class chillywilly{\n\n\tpublic static void main(String[] args){\n\t\tScanner in = new Scanner(System.in);\n\t\tint size = in.nextInt();\n\n\t\tdouble num = -1;\n\t\t\n\t\tlong dig = size-1;\n\t\tint mod = 1000%210;\n\t\tif(size > 3){\n\t\t\tSystem.out.print(1);\n\t\t\twhile(dig-- > 3){\n\t\t\t\tmod *= 10;\n\t\t\t\tmod %= 210;\n\t\t\t\tSystem.out.print(0);\n\t\t\t}\n\t\t\tint remaining = 210 - mod;\n\t\t\tif(remaining < 100 || remaining <10) System.out.print(0);\n\t\t\tSystem.out.print(remaining);\n\t\t}\n\t\telse if(size == 3) System.out.print(210);\n\t\telse System.out.print(-1);\n\t}\n\n}"
+  }
+]

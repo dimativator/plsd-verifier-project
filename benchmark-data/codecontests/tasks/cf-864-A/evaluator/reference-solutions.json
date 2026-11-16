@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "#python3\n#utf-8\nfrom collections import Counter\n\ncards_nr = int(input())\nnumber_counter = Counter()\n\nfor _ in range(cards_nr):\n    curr_number = int(input())\n    number_counter[curr_number] += 1\n\nif len(number_counter) != 2:\n    print('NO')\nelse:\n    num1, num2 = list(number_counter)\n    if number_counter[num1] != number_counter[num2]:\n        print('NO')\n    else:\n        print('YES')\n        print(num1, num2)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint num[105];\nint main() {\n  int n;\n  cin >> n;\n  set<int> s;\n  while (n--) {\n    int a;\n    cin >> a;\n    s.insert(a);\n    num[a]++;\n  }\n  if (s.size() == 2 && num[*s.begin()] == num[*s.rbegin()]) {\n    cout << \"YES\\n\";\n    cout << *s.begin() << \" \" << *s.rbegin() << endl;\n  } else {\n    cout << \"NO\\n\";\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "/**\n * Created by vinayr on 10/7/17.\n */\nimport java.util.*;\npublic class Code846A {\n    public  static  void main(String [] args){\n        int n=0;\n        Scanner sc = new Scanner(System.in);\n        n=sc.nextInt();\n        Map<Integer,Integer> mp = new HashMap<>();\n        Set<Integer>st = new HashSet<>();\n        for(int i=0;i<n;i++){\n            int val=0;\n            val=sc.nextInt();\n            mp.put(val,mp.getOrDefault(val,0)+1);\n            st.add(val);\n        }\n        if(st.size() != 2)\n        {\n            System.out.println(\"NO\");\n        }\n        else{\n            List<Integer>lst = new ArrayList<>();\n            for(Integer i : st){\n                lst.add(i);\n            }\n            int cnt1=mp.get(lst.get(0));\n            int cnt2=mp.get(lst.get(1));\n            if(cnt1==cnt2){\n                System.out.println(\"YES\");\n                System.out.println(lst.get(0)+\" \"+lst.get(1));\n            }\n            else{\n                System.out.println(\"NO\");\n            }\n        }\n    }\n}\n"
+  }
+]

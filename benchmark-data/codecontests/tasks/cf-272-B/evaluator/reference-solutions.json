@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "def f(x):\n\treturn str(bin(x)).count('1')\nn = int(input())\na = list(map(int, input().split()))\nans = [f(x) for x in a]\ns = set(ans)\ncounts = {x:ans.count(x) for x in s}\nans = 0\nfor i in counts:\n\tans += (counts[i]*(counts[i]-1))//2\nprint(ans)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nvector<int> f(100001);\nint comp(int i) {\n  int b = 0, d = 0;\n  while (i > 0) {\n    if (i & 1 == 1) b++;\n    i = i >> 1;\n  }\n  return b;\n}\nint main() {\n  int m, i, n;\n  int h[65];\n  long long j, s;\n  for (i = 0; i < 65; i += 2) {\n    h[i] = 0;\n    h[i + 1] = 0;\n  }\n  cin >> n;\n  for (i = 0; i < n; i++) {\n    cin >> f[i];\n  }\n  for (i = 0; i < n; i++) {\n    h[comp(f[i])]++;\n  }\n  s = 0;\n  for (i = 0; i < 65; i++) {\n    j = h[i];\n    j = j * (j - 1);\n    j = j / 2;\n    s += j;\n  }\n  cout << s;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.math.BigInteger;\nimport java.util.*;\npublic class Sequence {\n\n\t\n\tpublic static void main(String[] args) throws NumberFormatException, IOException {\n\t\tint[] dp = new int[100];\n\t\tBufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n\t\tint n = Integer.parseInt(br.readLine());\n\t\tStringTokenizer st = new StringTokenizer(br.readLine());\n\t\tint cur, cnt;\n\t\tfor(int i = 0; i < n; i++) {\n\t\t\tcnt = 0;\n\t\t\tcur = Integer.parseInt(st.nextToken());\n\t\t\twhile(cur != 0) {\n\t\t\t\twhile( cur % 2 == 0 ) cur /= 2;\n\t\t\t\tcur--;\n\t\t\t\tcnt++;\n\t\t\t}\n\t\t\tdp[cnt]++;\n\t\t}\n\t\tBigInteger ans = new BigInteger(\"0\");\n\t\tfor(int i = 0; i < 100; i++) {\n\t\t\tif(dp[i] == 0) continue;\n\t\t\tBigInteger aux = new BigInteger(dp[i]+\"\");\n\t\t\tans = ans.add(aux.multiply(aux.subtract(BigInteger.ONE)).divide(BigInteger.ONE.add(BigInteger.ONE)));\n\t\t}\n\t\tSystem.out.println(ans);\n\t\t\n\t}\n\t\n\t\n}\n"
+  }
+]

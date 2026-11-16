@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "'''\n\n                            Online Python Compiler.\n                Code, Compile, Run and Debug python program online.\nWrite your code in this editor and press \"Run\" button to execute it.\n\n'''\ndef main():\n    n = input()\n    s = input()\n    for i in range(len(s)-1):\n        if s[i]>s[i+1]:\n            print('YES')\n            print(i+1, i+2)\n            return\n    print('NO')\n    \nmain()"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint n, m, a, b, c, d;\nstruct node {\n  int a, b;\n};\nbool cmp(node x, node y) {\n  if (x.a == y.a) return x.b > y.b;\n  return x.a > y.a;\n}\nstring s;\nint num[30];\nchar cr, cr1;\nint check(char cc) {\n  for (int i = cc - 'a' + 1; i < 26; ++i) {\n    if (num[i]) return num[i];\n  }\n  return 0;\n}\nint main() {\n  cin >> n;\n  getchar();\n  while ((cr = getchar()) && cr != '\\n') {\n    m++;\n    if (!num[cr - 'a']) {\n      num[cr - 'a'] = m;\n    }\n    if (check(cr)) {\n      cout << \"YES\" << endl;\n      cout << check(cr) << \" \" << m << endl;\n      return 0;\n    }\n  }\n  cout << \"NO\" << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.OutputStream;\nimport java.io.IOException;\nimport java.io.InputStream;\nimport java.io.PrintWriter;\nimport java.util.Scanner;\n\n/**\n * Built using CHelper plug-in\n * Actual solution is at the top\n *\n * @author alecs6k\n */\npublic class Main {\n    public static void main(String[] args) {\n        InputStream inputStream = System.in;\n        OutputStream outputStream = System.out;\n        Scanner in = new Scanner(inputStream);\n        PrintWriter out = new PrintWriter(outputStream);\n        codeforces1 solver = new codeforces1();\n        solver.solve(1, in, out);\n        out.close();\n    }\n\n    static class codeforces1 {\n        public void solve(int testNumber, Scanner leer, PrintWriter out) {\n            int n = leer.nextInt();\n            String cad = leer.next();\n            int p1 = 0, p2 = 0;\n            boolean t = false;\n            for (int i = 0; i < n - 1; i++) {\n                char a = cad.charAt(i);\n                char b = cad.charAt(i + 1);\n                if (b < a) {\n                    p1 = i;\n                    p2 = i + 1;\n                    t = true;\n                    //out.println(a+\" \"+b);\n                    break;\n                }\n            }\n            p1++;\n            p2++;\n            if (t) {\n                out.println(\"YES\");\n                out.println(p1 + \" \" + p2);\n            } else {\n                out.println(\"NO\");\n            }\n        }\n\n    }\n}\n\n"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "input": [
+    "2\n1\n1 1\n1\n1 1\n"
+  ],
+  "output": [
+    "YES\nRU\nYES\nRU\n"
+  ]
+}

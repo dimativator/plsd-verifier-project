@@ -1,0 +1,12 @@
+/**
+ * You are an expert Kotlin programmer, and here is your task.
+ * Concatenate list of strings into a single string
+ * >>> concatenate([])
+ * ''
+ * >>> concatenate(['a', 'b', 'c'])
+ * 'abc'
+ *
+ */
+fun concatenate(strings: List<String>): String {
+    TODO("Implement the function")
+}

@@ -1,0 +1,12 @@
+{
+  "input": [
+    "2 4 10 3\nab\nba\n",
+    "1 1 1 1\nyoushouldnot\nthoushaltnot\n",
+    "1 10 20 30\na\nza\n"
+  ],
+  "output": [
+    "3\n",
+    "5\n",
+    "1\n"
+  ]
+}

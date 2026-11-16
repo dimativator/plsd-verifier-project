@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nsegments = []\nminl = 10**9\nmaxr = 1\n\nfor i in range(n):\n    a, b = map(int, input().split())\n    segments.append((a, b))\n    if a<minl:\n        minl = a\n    if b>maxr:\n        maxr = b\n        \nif (minl, maxr) in segments:\n    print(segments.index((minl, maxr))+1)\nelse:\n    print(-1)\n    \n    \n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint n, l[100005], r[100005];\nint main() {\n  scanf(\"%d\", &n);\n  int x = 1 << 30, y = -1 << 30;\n  for (int i = 0; i < n; i++) {\n    scanf(\"%d %d\", &l[i], &r[i]);\n    x = min(x, l[i]);\n    y = max(y, r[i]);\n  }\n  int ind = -1;\n  for (int i = 0; i < n; i++) {\n    if (l[i] <= x && y <= r[i]) ind = i + 1;\n  }\n  printf(\"%d\\n\", ind);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.*;\n\npublic class cf242b {\n\n    public static void main(String[] args) {\n        \n        Scanner in = new Scanner(System.in);\n        \n        int n = in.nextInt();\n        \n        pair[] a = new pair[n];\n        \n        int max = Integer.MIN_VALUE;\n        int min = Integer.MAX_VALUE;\n        \n        for (int i = 0; i < n; i++) {\n            \n            int x = in.nextInt();\n            int y = in.nextInt();\n            \n            a[i] = new pair(x, y);\n            \n            max = Math.max(y, max);\n            min = Math.min(x, min);\n            \n        }\n        \n        int i = 1;\n        \n        for (pair object : a) {\n            \n            if (object.x == min && object.y == max) {\n                System.out.println(i);\n                return;\n            }\n            i++;\n            \n        }\n        System.out.println(-1);\n        \n    }\n    \n    static class pair {\n        int x; \n        int y;\n\n        public pair(int x, int y) {\n            this.x = x;\n            this.y = y;\n        }\n        \n    }\n\n}\n"
+  }
+]

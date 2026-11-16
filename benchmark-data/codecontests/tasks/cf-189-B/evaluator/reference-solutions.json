@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "w,h=map(int,input().split())\nans=0\nfor i in range(2,w+1,2):\n    for j in range(2,h+1,2):\n        ans+=(w+1-i)*(h+1-j)\nprint(ans)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nvoid FastInputOutput() {\n  ios_base ::sync_with_stdio(0);\n  cin.tie(0);\n  cout.tie(0);\n}\ninline int D() {\n  int t;\n  scanf(\"%d\", &t);\n  return t;\n}\ninline long long LLD() {\n  long long t;\n  scanf(\"%lld\", &t);\n  return t;\n}\nlong long power(long long x, long long p, long long m) {\n  long long res = 1;\n  while (p) {\n    if (p & 1) res = (res * x) % m;\n    x = (x * x) % m;\n    p >>= 1;\n  }\n  return res;\n}\nlong double ModLog(long double base, long double x) {\n  return (logl(x) / logl(base));\n}\nconst int N = 2e6 + 5, MX = 1e9;\nint mod(int a, int m) { return (((a % m) + m) % m); }\nint main() {\n  int n = D(), m = D();\n  long long sum = 0;\n  for (long long i = 1; i <= n / 2; ++i)\n    for (long long j = 1; j <= m / 2; ++j)\n      sum += (n - i * 2 + 1) * (m - j * 2 + 1);\n  printf(\"%lld\", sum);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\npublic class Rnd189B {\n    BufferedReader br;\n    PrintWriter out;\n    StringTokenizer st;\n    boolean eof;\n    void solve() throws IOException {\n        int w = nextInt();\n        int h = nextInt();\n        long res = 0;\n        for(int i = 1; i < h; i++)\n            for(int j = 1; j < w; j++) {\n                int y = Math.min(h - i, i);\n                int x = Math.min(w - j, j);\n                res = res + x * y;\n            }\n        out.print(res);\n    }\n    public Rnd189B() throws IOException {\n        br = new BufferedReader(new InputStreamReader(System.in));\n        out = new PrintWriter(System.out);\n        solve();\n        out.close();\n    }\n    public static void main(String[] args) throws IOException {\n        new Rnd189B();\n    }\n    public String nextToken() {\n        while (st == null || !st.hasMoreTokens()) {\n            try {\n                st = new StringTokenizer(br.readLine());\n            } catch (Exception e) {\n                eof = true;\n                return null;\n            }\n        }\n        return st.nextToken();\n    }\n    public String nextString() {\n        try {\n            return br.readLine();\n        } catch (IOException e) {\n            eof = true;\n            return null;\n        }\n    }\n    public int nextInt() throws IOException {\n        return Integer.parseInt(nextToken());\n    }\n    public long nextLong() throws IOException {\n        return Long.parseLong(nextToken());\n    }\n    public double nextDouble() throws IOException {\n        return Double.parseDouble(nextToken());\n    }\n}"
+  }
+]

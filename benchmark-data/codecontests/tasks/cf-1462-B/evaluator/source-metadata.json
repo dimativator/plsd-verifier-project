@@ -1,0 +1,36 @@
+{
+  "name": "1462_B. Last Year's Substring",
+  "description": "Polycarp has a string s[1 ... n] of length n consisting of decimal digits. Polycarp performs the following operation with the string s no more than once (i.e. he can perform operation 0 or 1 time): \n\n  * Polycarp selects two numbers i and j (1 ≤ i ≤ j ≤ n) and removes characters from the s string at the positions i, i+1, i+2, …, j (i.e. removes substring s[i ... j]). More formally, Polycarp turns the string s into the string s_1 s_2 … s_{i-1} s_{j+1} s_{j+2} … s_{n}. \n\n\n\nFor example, the string s = \"20192020\" Polycarp can turn into strings: \n\n  * \"2020\" (in this case (i, j)=(3, 6) or (i, j)=(1, 4)); \n  * \"2019220\" (in this case (i, j)=(6, 6)); \n  * \"020\" (in this case (i, j)=(1, 5)); \n  * other operations are also possible, only a few of them are listed above. \n\n\n\nPolycarp likes the string \"2020\" very much, so he is wondering if it is possible to turn the string s into a string \"2020\" in no more than one operation? Note that you can perform zero operations.\n\nInput\n\nThe first line contains a positive integer t (1 ≤ t ≤ 1000 ) — number of test cases in the test. Then t test cases follow.\n\nThe first line of each test case contains an integer n (4 ≤ n ≤ 200) — length of the string s. The next line contains a string s of length n consisting of decimal digits. It is allowed that the string s starts with digit 0.\n\nOutput\n\nFor each test case, output on a separate line: \n\n  * \"YES\" if Polycarp can turn the string s into a string \"2020\" in no more than one operation (i.e. he can perform 0 or 1 operation); \n  * \"NO\" otherwise. \n\n\n\nYou may print every letter of \"YES\" and \"NO\" in any case you want (so, for example, the strings yEs, yes, Yes and YES will all be recognized as positive answer).\n\nExample\n\nInput\n\n\n6\n8\n20192020\n8\n22019020\n4\n2020\n5\n20002\n6\n729040\n6\n200200\n\n\nOutput\n\n\nYES\nYES\nYES\nNO\nNO\nNO\n\nNote\n\nIn the first test case, Polycarp could choose i=3 and j=6.\n\nIn the second test case, Polycarp could choose i=2 and j=5.\n\nIn the third test case, Polycarp did not perform any operations with the string.",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 800,
+  "cf_contest_id": 1462,
+  "cf_index": "B",
+  "cf_tags": [
+    "dp",
+    "implementation",
+    "strings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00015-of-00039-19ccd7331d695677.parquet",
+  "source_row": 210,
+  "task_id": "codecontests/cf-1462-B",
+  "rating_band": "800-1199",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/1462/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "s = input()\nk = []\nfor i in range(len(s)):\n    for j in range(i+1,len(s)+2):\n        x = s[i:j]\n        for t in range(i+1,len(s)):\n            if x == s[t:t+j-i]:\n                k += [j-i]\nprint(max(k) if k != [] else 0)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint dp[105][105];\nint main() {\n  memset(dp, 0, sizeof dp);\n  int n;\n  string a;\n  int ans = 0;\n  cin >> a;\n  n = a.size();\n  for (int i = n - 1; i >= 0; i--)\n    for (int j = n - 1; j >= 0; j--)\n      if (a[i] == a[j]) dp[i][j] = dp[i + 1][j + 1] + 1;\n  for (int i = 0; i < n; i++)\n    for (int j = i + 1; j < n; j++) ans = max(ans, dp[i][j]);\n  cout << ans << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\n\npublic class GiveString23A {\n    public static void main(String[] args)\n    {\n        Scanner in = new Scanner(System.in);\n        String stroke = in.next();\n        char[] s = new char [stroke.length()];\n        for (int i=0;i<stroke.length();i++)\n            s[i]=stroke.charAt(i);\n        int dlina = 0;\n        for (int i=0;i<s.length-1;i++)\n            for (int j=i+1;j<s.length;j++)\n                for (int k=0;k<(s.length-j);k++)\n                    if (s[i]==s[j])\n                    {\n                        int ik=i+k;\n                        int jk = j+k;\n                        if (s[ik]==s[jk])\n                        {\n                            if (dlina<k+1)\n                                dlina=k+1;      \n                        }\n                        else \n                        break;\n                    }       \n        System.out.println(dlina);\n    }\n}\n"
+  }
+]

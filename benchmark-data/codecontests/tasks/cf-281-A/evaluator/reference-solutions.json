@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=list(input())\nprint(n[0].upper()+str(''.join(n[1:])))\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  string s;\n  int i, n, k = 0;\n  cin >> s;\n  for (i = 0; i < s.length(); i++)\n    if (s[0] == tolower(s[0]))\n      s[0] = toupper(s[0]);\n    else if (s[0] == tolower(s[0]))\n      s[0] = tolower(s[0]);\n  cout << s[0];\n  for (i = 1; i < s.length(); i++) cout << s[i];\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "/*\n * Copyright (c) 2020. All rights Reserved By Krishnakanth Yachareni\n */\n\nimport java.io.BufferedReader;\nimport java.io.BufferedWriter;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.io.OutputStreamWriter;\n\npublic class WordCapitalization {\n    public static void main(String[] args) throws IOException {\n        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));\n        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));\n        String word = reader.readLine().trim();\n        if (word.charAt(0) >= 97) {\n            writer.write(String.valueOf((char) (word.charAt(0) - 32)));\n            writer.write(word.substring(1, word.length()));\n        } else {\n            writer.write(word);\n        }\n        writer.flush();\n    }\n}\n"
+  }
+]

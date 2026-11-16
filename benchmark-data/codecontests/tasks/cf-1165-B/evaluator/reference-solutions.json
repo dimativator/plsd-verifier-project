@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a = int(input())\nb = [int(x) for x in input().split()]\nb.sort()\ns = 1\nq = 0\nfor i in b:\n  if i >= s:\n    s += 1\n    q += 1\nprint(q)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst long long prime = 1e9 + 7;\nconst long long maxN = 2e5 + 5;\nconst long double pi = 3.1415926536;\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(NULL);\n  long long n, a[maxN], ans = 0, mn = 1;\n  cin >> n;\n  for (long long i = (long long)(1); i <= (long long)(n); i++) {\n    cin >> a[i];\n  }\n  sort(a + 1, a + n + 1);\n  for (long long i = (long long)(1); i <= (long long)(n); i++) {\n    if (mn <= a[i]) {\n      mn++;\n      ans++;\n    }\n  }\n  cout << ans;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\n\n\npublic class asitis\n{\n\n\t\n\t\n\n\tstatic OutputStream outputStream = System.out;\n\tstatic PrintWriter out = new PrintWriter(outputStream);\n\n\n\n\n\t\n\tpublic static void main(String[] args)throws IOException{\n\t\t\n\t\t\t\n\t\t\tBufferedReader br=new BufferedReader(new InputStreamReader(System.in));\n\n\t\t\tint n=Integer.parseInt(br.readLine());\n\n\t\t\tString[] s=br.readLine().split(\" \");\n\n\t\t\tPriorityQueue<Integer> pq= new PriorityQueue<Integer>();\n\n\t\t\tfor(int i=0;i<n;i++) pq.add(Integer.parseInt(s[i]));\n\n\t\t\tlong check=1;\n\n\t\t\tint days=0;\n\n\t\t\twhile(pq.size()>0)\n\t\t\t{\n\t\t\t\twhile(pq.size()>0 && pq.peek()<check)\n\t\t\t\t\tpq.poll();\n\n\t\t\t\tif(pq.size()>0)\n\t\t\t\t{\n\t\t\t\t\tdays++;\n\t\t\t\t\tpq.poll();\n\t\t\t\t}\n\t\t\t\tcheck++;\n\t\t\t}\n\t\t\t\n\t\t\tout.println(days);\n\t\t\t\n\t\t\t\n\t\t\tout.close();\n\n\t}\n}"
+  }
+]

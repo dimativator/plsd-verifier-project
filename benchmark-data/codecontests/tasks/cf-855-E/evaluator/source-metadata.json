@@ -1,0 +1,35 @@
+{
+  "name": "855_E. Salazar Slytherin's Locket",
+  "description": "Harry came to know from Dumbledore that Salazar Slytherin's locket is a horcrux. This locket was present earlier at 12 Grimmauld Place, the home of Sirius Black's mother. It was stolen from there and is now present in the Ministry of Magic in the office of Dolorous Umbridge, Harry's former Defense Against the Dark Arts teacher. \n\nHarry, Ron and Hermione are infiltrating the Ministry. Upon reaching Umbridge's office, they observed a code lock with a puzzle asking them to calculate count of magic numbers between two integers l and r (both inclusive). \n\nHarry remembered from his detention time with Umbridge that she defined a magic number as a number which when converted to a given base b, all the digits from 0 to b - 1 appear even number of times in its representation without any leading zeros.\n\nYou have to answer q queries to unlock the office. Each query has three integers bi, li and ri, the base and the range for which you have to find the count of magic numbers.\n\nInput\n\nFirst line of input contains q (1 ≤ q ≤ 105) — number of queries.\n\nEach of the next q lines contain three space separated integers bi, li, ri (2 ≤ bi ≤ 10, 1 ≤ li ≤ ri ≤ 1018).\n\nOutput\n\nYou have to output q lines, each containing a single integer, the answer to the corresponding query.\n\nExamples\n\nInput\n\n2\n2 4 9\n3 1 10\n\n\nOutput\n\n1\n2\n\n\nInput\n\n2\n2 1 100\n5 1 100\n\n\nOutput\n\n21\n4\n\nNote\n\nIn sample test case 1, for first query, when we convert numbers 4 to 9 into base 2, we get: \n\n  * 4 = 1002, \n  * 5 = 1012, \n  * 6 = 1102, \n  * 7 = 1112, \n  * 8 = 10002, \n  * 9 = 10012. \n\n\n\nOut of these, only base 2 representation of 9 has even number of 1 and 0. Thus, the answer is 1.",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2200,
+  "cf_contest_id": 855,
+  "cf_index": "E",
+  "cf_tags": [
+    "bitmasks",
+    "dp"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00003-of-00039-e3822fccad6e083a.parquet",
+  "source_row": 78,
+  "task_id": "codecontests/cf-855-E",
+  "rating_band": "2000-2399",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/855/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

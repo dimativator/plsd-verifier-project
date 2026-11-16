@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "\"\"\"\n    author - Sayan Bose\n    Brooklyn 99 is love!\n\"\"\"\n\ny, k, n = map(int, input().split())\nif n-y == 0:\n\tprint(-1)\nelse:\n\ty1 = y\n\tres = []\n\tf, f1 = 0, 0\n\twhile y <= n:\n\t\tif not y%k:\n\t\t\tf = 1\n\t\t\tif y-y1:\n\t\t\t\tf1 = 1\n\t\t\t\tprint(y-y1, end = ' ')\n\t\tif not f:\n\t\t\ttemp = y//k + 1\n\t\t\ty = k * temp\n\t\telse:\n\t\t\ty += k\n\tif not f1:\n\t\tprint(-1)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint gcd(int a, int b) {\n  while (a != b) {\n    if (a > b)\n      a = a - b;\n    else\n      b = b - a;\n  }\n  return a;\n}\nint main() {\n  int y, k, n;\n  cin >> y >> k >> n;\n  int f = 0;\n  int d = y / k;\n  int e = n / k;\n  for (int i = d + 1; i <= e; i++) {\n    cout << k * i - y << \" \";\n    f = 1;\n  }\n  if (f == 0) cout << -1 << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "//  20/8/20  12:14 PM  Aug  2020\nimport java.util.*;\npublic class _239A {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        long y=sc.nextLong();\n        long k=sc.nextLong();\n        long n=sc.nextLong();\n        StringBuilder st= new StringBuilder();\n        long i=k-y%k;\n        while(i+y<=n){\n                st.append(i).append(\" \");\n                i += k;\n        }\n        System.out.println(st.length()==0?\"-1\":st);\n    }\n}"
+  }
+]

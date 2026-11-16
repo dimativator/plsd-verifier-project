@@ -1,0 +1,37 @@
+{
+  "name": "918_D. MADMAX",
+  "description": "As we all know, Max is the best video game player among her friends. Her friends were so jealous of hers, that they created an actual game just to prove that she's not the best at games. The game is played on a directed acyclic graph (a DAG) with n vertices and m edges. There's a character written on each edge, a lowercase English letter.\n\n<image>\n\nMax and Lucas are playing the game. Max goes first, then Lucas, then Max again and so on. Each player has a marble, initially located at some vertex. Each player in his/her turn should move his/her marble along some edge (a player can move the marble from vertex v to vertex u if there's an outgoing edge from v to u). If the player moves his/her marble from vertex v to vertex u, the \"character\" of that round is the character written on the edge from v to u. There's one additional rule; the ASCII code of character of round i should be greater than or equal to the ASCII code of character of round i - 1 (for i > 1). The rounds are numbered for both players together, i. e. Max goes in odd numbers, Lucas goes in even numbers. The player that can't make a move loses the game. The marbles may be at the same vertex at the same time.\n\nSince the game could take a while and Lucas and Max have to focus on finding Dart, they don't have time to play. So they asked you, if they both play optimally, who wins the game?\n\nYou have to determine the winner of the game for all initial positions of the marbles.\n\nInput\n\nThe first line of input contains two integers n and m (2 ≤ n ≤ 100, <image>).\n\nThe next m lines contain the edges. Each line contains two integers v, u and a lowercase English letter c, meaning there's an edge from v to u written c on it (1 ≤ v, u ≤ n, v ≠ u). There's at most one edge between any pair of vertices. It is guaranteed that the graph is acyclic.\n\nOutput\n\nPrint n lines, a string of length n in each one. The j-th character in i-th line should be 'A' if Max will win the game in case her marble is initially at vertex i and Lucas's marble is initially at vertex j, and 'B' otherwise.\n\nExamples\n\nInput\n\n4 4\n1 2 b\n1 3 a\n2 4 c\n3 4 b\n\n\nOutput\n\nBAAA\nABAA\nBBBA\nBBBB\n\n\nInput\n\n5 8\n5 3 h\n1 2 c\n3 1 c\n3 2 r\n5 1 r\n4 3 z\n5 4 r\n5 2 h\n\n\nOutput\n\nBABBB\nBBBBB\nAABBB\nAAABA\nAAAAB\n\nNote\n\nHere's the graph in the first sample test case:\n\n<image>\n\nHere's the graph in the second sample test case:\n\n<image>",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 1700,
+  "cf_contest_id": 918,
+  "cf_index": "D",
+  "cf_tags": [
+    "dfs and similar",
+    "dp",
+    "games",
+    "graphs"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00017-of-00039-ae5533a2f822e6ef.parquet",
+  "source_row": 291,
+  "task_id": "codecontests/cf-918-D",
+  "rating_band": "1600-1999",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/918/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

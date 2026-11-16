@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\narr1=[int(c) for c in input().split()]\narr2=[int(c) for c in input().split()]\n\ndic1={}\ndic2={}\n\nfor i in range(n):\n    dic1[arr1[i]] = i\n    dic2[arr2[i]] = i\n\nlshift=[0 for i in range(n)]\nrshift=[0 for i in range(n)]\n\nlcount={}\nrcount={}\n\nfor i in range(n):\n    dig=arr1[i]\n    ind=dic2[dig]\n    if ind <= i :\n        lsh=(i-ind)\n    else:\n        lsh=i+(n-ind)\n    \n    if ind >= i :\n        rsh=(ind-i)\n    else:\n        rsh=ind +n-i\n\n    lshift[i] = lsh\n    rshift[i] = rsh\n    \n\nfor i in range(n):\n    lcount[lshift[i]] = lcount.get(lshift[i],0) + 1\n    rcount[rshift[i]] = rcount.get(rshift[i],0) + 1\n\nans=1\n\nfor i in lcount.keys():\n    ans=max(ans,lcount[i])\nfor i in rcount.keys():\n    ans=max(ans,rcount[i])\n\nprint(ans)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nlong long fastpow(long long a, long long b,\n                  long long m = (long long)(1e9 + 7)) {\n  long long res = 1;\n  a %= m;\n  while (b > 0) {\n    if (b & 1) res = (res * a) % m;\n    a = (a * a) % m;\n    b >>= 1;\n  }\n  return res;\n}\nint32_t main() {\n  ios_base ::sync_with_stdio(false);\n  cin.tie(nullptr);\n  cout.tie(nullptr);\n  ;\n  long long n, x;\n  cin >> n;\n  vector<long long> freq(n + 5);\n  vector<long long> counts(n + 5);\n  for (long long i = 0; i < n; i++) {\n    cin >> x;\n    freq[x] = i;\n  }\n  for (long long i = 0; i < n; i++) {\n    cin >> x;\n    if (freq[x] < i) {\n      counts[freq[x] + n - i]++;\n    } else {\n      counts[freq[x] - i]++;\n    }\n  }\n  cout << *max_element(counts.begin(), counts.end()) << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\n\npublic class a{\n\n  public static void main(String [] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    int [] a=new int[n+1];\n    int [] b=new int[n];\n    Arrays.fill(a,0);\n    for(int i=0;i<n;i++)a[sc.nextInt()]=i;\n    for(int i=0;i<n;i++)b[i]=sc.nextInt();\n\n    Map<Integer,Integer> map=new HashMap<>();\n    for(int i=0;i<n;i++){\n      int e=b[i];\n\n      int d=i;\n      int u=a[e];\n\n      int leftMove=0;\n      if(d<u){\n        leftMove=d+(n-(u));\n      }\n      else{\n        leftMove=d-u;\n      }\n      \n      if(map.containsKey(leftMove)){\n        map.put(leftMove,map.get(leftMove)+1);\n      }\n      else{\n        map.put(leftMove,1);\n      }\n      \n    }\n    int max=0;\n\n    for(Map.Entry<Integer,Integer> entry : map.entrySet()){\n      max=Math.max(entry.getValue(),max);\n    }\n\n    System.out.println(max);\n\n\n  }\n}\n"
+  }
+]

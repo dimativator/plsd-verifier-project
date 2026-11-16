@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "t = int(input())\nfor _ in range(t):\n  n = int(input())\n  a = list(int(x) for x in input().split())\n  start = 0\n  end = n-1\n  while end>0 and a[end]<=a[end-1]:\n    end-=1\n  start=end\n  while start>0 and a[start]>=a[start-1]:\n    start-=1\n  print(start)\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int T;\n  cin >> T;\n  for (int t = 0; t < T; t++) {\n    int n;\n    cin >> n;\n    int a[(n)];\n    for (int i = 0; i < n; i++) cin >> a[i];\n    int lo = 0, mid, hi = n - 1, i, j, ans, k;\n    while (lo != hi) {\n      mid = lo + (hi - lo) / 2;\n      i = mid;\n      j = n - 1;\n      ans = 1;\n      while (i < j) {\n        k = min(a[i], a[j]);\n        if (a[(i + 1)] < k || a[j - 1] < k) {\n          ans = 0;\n          break;\n        } else {\n          if (a[i] == k)\n            i++;\n          else\n            j--;\n        }\n      }\n      if (ans == 0)\n        lo = mid + 1;\n      else\n        hi = mid;\n    }\n    cout << hi << endl;\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.ArrayList;\nimport java.util.Scanner;\n\npublic class MakeItGood {\n\n    static boolean cal(int[] a, int i) {\n        int j = a.length - 1;\n        ArrayList<Integer> ar = new ArrayList<Integer>();\n        while (i < j) {\n            if (a[i] < a[j]) {\n                ar.add(a[i]);\n                ++i;\n            } else {\n                ar.add(a[j]);\n                --j;\n            }\n        }\n        for (int k = 0; k < ar.size() - 1; k++) {\n            if (ar.get(k) > ar.get(k + 1)) {\n                return false;\n            }\n        }\n        return true;\n    }\n\n    public static void main(String args[]) {\n        Scanner scan = new Scanner(System.in);\n        int t = scan.nextInt();\n        while (t-- > 0) {\n            int n = scan.nextInt();\n            int[] a = new int[n + 1];\n            for (int i = 1; i <= n; i++) {\n                a[i] = scan.nextInt();\n            }\n            int l = 1;\n            int r = n;\n            int res = 0;\n            while (l <= r && l >= 1 && r <= n) {\n                int md = (l + r) / 2;\n\n                boolean p = cal(a, md);\n                if (p) {\n                    res = md;\n                    r = md - 1;\n                } else {\n                    l = md + 1;\n                }\n            }\n            System.out.println(res - 1);\n        }\n    }\n\n}\n"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "input": [
+    "abcdefa\nddcb\n"
+  ],
+  "output": [
+    "2 3 3 3 "
+  ]
+}

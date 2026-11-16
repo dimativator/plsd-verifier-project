@@ -1,0 +1,36 @@
+{
+  "name": "724_F. Uniformly Branched Trees",
+  "description": "A tree is a connected graph without cycles.\n\nTwo trees, consisting of n vertices each, are called isomorphic if there exists a permutation p: {1, ..., n} → {1, ..., n} such that the edge (u, v) is present in the first tree if and only if the edge (pu, pv) is present in the second tree.\n\nVertex of the tree is called internal if its degree is greater than or equal to two.\n\nCount the number of different non-isomorphic trees, consisting of n vertices, such that the degree of each internal vertex is exactly d. Print the answer over the given prime modulo mod.\n\nInput\n\nThe single line of the input contains three integers n, d and mod (1 ≤ n ≤ 1000, 2 ≤ d ≤ 10, 108 ≤ mod ≤ 109) — the number of vertices in the tree, the degree of internal vertices and the prime modulo.\n\nOutput\n\nPrint the number of trees over the modulo mod.\n\nExamples\n\nInput\n\n5 2 433416647\n\n\nOutput\n\n1\n\n\nInput\n\n10 3 409693891\n\n\nOutput\n\n2\n\n\nInput\n\n65 4 177545087\n\n\nOutput\n\n910726",
+  "source": 2,
+  "difficulty": 12,
+  "cf_rating": 2700,
+  "cf_contest_id": 724,
+  "cf_index": "F",
+  "cf_tags": [
+    "combinatorics",
+    "dp",
+    "trees"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00001-of-00039-e092fe56fda18715.parquet",
+  "source_row": 25,
+  "task_id": "codecontests/cf-724-F",
+  "rating_band": "2400+",
+  "source_difficulty": "F",
+  "url": "https://codeforces.com/problemset/problem/724/F",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

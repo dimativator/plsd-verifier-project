@@ -1,0 +1,12 @@
+{
+  "input": [
+    "akm\nua\n",
+    "a\nu\n",
+    "abc\nukm\n"
+  ],
+  "output": [
+    "No\n",
+    "YES\n",
+    "YES\n"
+  ]
+}

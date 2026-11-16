@@ -1,0 +1,36 @@
+{
+  "name": "212_D. Cutting a Fence",
+  "description": "Vasya the carpenter has an estate that is separated from the wood by a fence. The fence consists of n planks put in a line. The fence is not closed in a circle. The planks are numbered from left to right from 1 to n, the i-th plank is of height ai. All planks have the same width, the lower edge of each plank is located at the ground level.\n\nRecently a local newspaper \"Malevich and Life\" wrote that the most fashionable way to decorate a fence in the summer is to draw a fuchsia-colored rectangle on it, the lower side of the rectangle must be located at the lower edge of the fence.\n\nVasya is delighted with this idea! He immediately bought some fuchsia-colored paint and began to decide what kind of the rectangle he should paint. Vasya is sure that the rectangle should cover k consecutive planks. In other words, he will paint planks number x, x + 1, ..., x + k - 1 for some x (1 ≤ x ≤ n - k + 1). He wants to paint the rectangle of maximal area, so the rectangle height equals min ai for x ≤ i ≤ x + k - 1, x is the number of the first colored plank.\n\nVasya has already made up his mind that the rectangle width can be equal to one of numbers of the sequence k1, k2, ..., km. For each ki he wants to know the expected height of the painted rectangle, provided that he selects x for such fence uniformly among all n - ki + 1 possible values. Help him to find the expected heights.\n\nInput\n\nThe first line contains a single integer n (1 ≤ n ≤ 106) — the number of planks in the fence. The second line contains a sequence of integers a1, a2, ..., an (1 ≤ ai ≤ 109) where ai is the height of the i-th plank of the fence.\n\nThe third line contains an integer m (1 ≤ m ≤ 106) and the next line contains m space-separated integers k1, k2, ..., km (1 ≤ ki ≤ n) where ki is the width of the desired fuchsia-colored rectangle in planks.\n\nOutput\n\nPrint m whitespace-separated real numbers, the i-th number equals the expected value of the rectangle height, if its width in planks equals ki. The value will be considered correct if its absolute or relative error doesn't exceed 10 - 9.\n\nExamples\n\nInput\n\n3\n3 2 1\n3\n1 2 3\n\n\nOutput\n\n2.000000000000000\n1.500000000000000\n1.000000000000000\n\n\nInput\n\n2\n1 1\n3\n1 2 1\n\n\nOutput\n\n1.000000000000000\n1.000000000000000\n1.000000000000000\n\nNote\n\nLet's consider the first sample test. \n\n  * There are three possible positions of the fence for k1 = 1. For the first position (x = 1) the height is 3, for the second one (x = 2) the height is 2, for the third one (x = 3) the height is 1. As the fence position is chosen uniformly, the expected height of the fence equals <image>; \n  * There are two possible positions of the fence for k2 = 2. For the first position (x = 1) the height is 2, for the second one (x = 2) the height is 1. The expected height of the fence equals <image>; \n  * There is the only possible position of the fence for k3 = 3. The expected height of the fence equals 1. ",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 2500,
+  "cf_contest_id": 212,
+  "cf_index": "D",
+  "cf_tags": [
+    "binary search",
+    "data structures",
+    "dsu"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 5,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00014-of-00039-dc3ebb07a3cba8e4.parquet",
+  "source_row": 142,
+  "task_id": "codecontests/cf-212-D",
+  "rating_band": "2400+",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/212/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

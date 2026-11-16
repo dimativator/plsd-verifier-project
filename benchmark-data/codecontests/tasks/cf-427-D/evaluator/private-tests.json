@@ -1,0 +1,34 @@
+{
+  "input": [
+    "liwmenutffnwuirwwhtnwnwstfqaazeitflhkmiapki\ncoofzsvkkryyfjdaaeesxootepbpamobqvhmfzz\n",
+    "q\nw\n",
+    "abcdabce\nababcabcdabcde\n",
+    "aaaaaaaaaaaaaaaaaaaaaaa\nbbbbbbbbbaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbb\n",
+    "vhlicbofsbbgxihvclgquwtjyickoietaxqxthegtcvtdbohfnhppnjtienuyolnkjzuwsmnmmwuossbzobupgzv\ndxhrzanbfxvmwprnjkpphlmiqaaqvyhdvwyundrctctsrrpufwrcusjdsktrhjkqjlvoorkdmaeczjetfwkwdut\n",
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\na\n",
+    "alkdjflkjilkjdkjgnlkenlkngn\nalkndnlgkneinlnlkaknlkng\n",
+    "aaaab\nbaaaa\n",
+    "aaaaaa\naaaaaa\n",
+    "x\nx\n",
+    "a\naa\n",
+    "youcandoitmancomonyoucanit\nicantdoitiknowbuticandit\n",
+    "caabbabba\nabbac\n",
+    "faxtnvltgmzojnoihtvvkcqjbj\nmopphttedjlpjgzepinclzpjwkfaemificrbotxcqucgrydzdckpudwkaxezpjvvvsvlsdrivpnqtfhxjafquwpfucwvsxieepwe\n"
+  ],
+  "output": [
+    "1",
+    "-1",
+    "1",
+    "-1",
+    "2",
+    "-1",
+    "1",
+    "1",
+    "6",
+    "1",
+    "-1",
+    "2",
+    "1",
+    "1"
+  ]
+}

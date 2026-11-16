@@ -1,0 +1,10 @@
+/**
+ * You are an expert Kotlin programmer, and here is your task.
+ * Return list of all prefixes from shortest to longest of the input string
+ * >>> all_prefixes('abc')
+ * ['a', 'ab', 'abc']
+ *
+ */
+fun allPrefixes(string: String): List<Any> {
+    TODO("Implement the function")
+}

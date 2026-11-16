@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from math import ceil\n\nn=int(input())\nreports = list(map(int,input().split()))\nk=0\ncount=0\nlst=[]\nfor i in reports:\n    count += 1\n    if i<0:\n        if k+1 > 2:\n            lst.append(count-1)\n            count=1\n            k=1\n        else:\n            k+=1\nlst.append(count)\nprint(len(lst))\nfor i in lst:\n    print(i,end=' ')\n\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst long long int N = 2e5 + 5, MOD = 1000000007;\nint n, a[111], c, c1;\nvector<int> ans;\nint main() {\n  scanf(\"%d\", &n);\n  for (int i = 0; i < n; ++i) scanf(\"%d\", a + i);\n  for (int i = 0; i < n; ++i) {\n    c1++;\n    if (a[i] < 0) c++;\n    if (c == 3) {\n      ans.push_back(c1 - 1);\n      c = 0;\n      c1 = 0;\n      i--;\n    }\n    if (i == n - 1) ans.push_back(c1);\n  }\n  printf(\"%d\\n\", ans.size());\n  for (int i = 0; i < ans.size(); ++i) printf(\"%d \", ans[i]);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\n\npublic class minFolder\n{\n\tpublic static void main(String[] args) throws IOException\n\t{\n\t\tPrintWriter writer = new PrintWriter(new OutputStreamWriter(System.out));\n\t\tBufferedReader reader = new BufferedReader(new InputStreamReader(System.in));\n\n\t\tint n = Integer.parseInt(reader.readLine().trim());\n\n\t\tint cnt = 0, res = 0;\n\t\tArrayList<Integer> folder = new ArrayList<Integer>();\n\n\t\tStringTokenizer st = new StringTokenizer(reader.readLine());\n\n\t\tfor(int i = 0; i < n; i++)\n\t\t{\n\t\t\tres++;\n\t\t\tint num = Integer.parseInt(st.nextToken());\n\n\t\t\tif(num < 0)\n\t\t\t\tcnt++;\n\n\t\t\tif(cnt == 3)\n\t\t\t{\n\t\t\t\tfolder.add(res-1);\n\t\t\t\tres = cnt = 1;\n\t\t\t}\n\t\t}\n\t\tif(res != 0)\n\t\t\tfolder.add(res);\n\n\t\twriter.println(folder.size() == 0 ? 1 : folder.size());\n\n\t\tfor(int i = 0; i < folder.size(); i++)\n\t\t\twriter.print(folder.get(i) + (i != folder.size()-1 ? \" \": \"\\n\"));\n\n\t\twriter.flush();\n\t\twriter.close();\n\n\t}\n}\n"
+  }
+]

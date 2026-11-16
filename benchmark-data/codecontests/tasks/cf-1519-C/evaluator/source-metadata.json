@@ -1,0 +1,38 @@
+{
+  "name": "1519_C. Berland Regional",
+  "description": "Polycarp is an organizer of a Berland ICPC regional event. There are n universities in Berland numbered from 1 to n. Polycarp knows all competitive programmers in the region. There are n students: the i-th student is enrolled at a university u_i and has a programming skill s_i.\n\nPolycarp has to decide on the rules now. In particular, the number of members in the team.\n\nPolycarp knows that if he chooses the size of the team to be some integer k, each university will send their k strongest (with the highest programming skill s) students in the first team, the next k strongest students in the second team and so on. If there are fewer than k students left, then the team can't be formed. Note that there might be universities that send zero teams.\n\nThe strength of the region is the total skill of the members of all present teams. If there are no teams present, then the strength is 0.\n\nHelp Polycarp to find the strength of the region for each choice of k from 1 to n.\n\nInput\n\nThe first line contains a single integer t (1 ≤ t ≤ 1000) — the number of testcases.\n\nThe first line of each testcase contains a single integer n (1 ≤ n ≤ 2 ⋅ 10^5) — the number of universities and the number of students.\n\nThe second line of each testcase contains n integers u_1, u_2, ..., u_n (1 ≤ u_i ≤ n) — the university the i-th student is enrolled at.\n\nThe third line of each testcase contains n integers s_1, s_2, ..., s_n (1 ≤ s_i ≤ 10^9) — the programming skill of the i-th student.\n\nThe sum of n over all testcases doesn't exceed 2 ⋅ 10^5.\n\nOutput\n\nFor each testcase print n integers: the strength of the region — the total skill of the members of the present teams — for each choice of team size k.\n\nExample\n\nInput\n\n\n4\n7\n1 2 1 2 1 2 1\n6 8 3 1 5 1 5\n10\n1 1 1 2 2 2 2 3 3 3\n3435 3014 2241 2233 2893 2102 2286 2175 1961 2567\n6\n3 3 3 3 3 3\n5 9 6 7 9 7\n1\n1\n3083\n\n\nOutput\n\n\n29 28 26 19 0 0 0 \n24907 20705 22805 9514 0 0 0 0 0 0 \n43 43 43 32 38 43 \n3083 \n\nNote\n\nIn the first testcase the teams from each university for each k are: \n\n  * k=1: \n    * university 1: [6], [5], [5], [3]; \n    * university 2: [8], [1], [1]; \n  * k=2: \n    * university 1: [6, 5], [5, 3]; \n    * university 2: [8, 1]; \n  * k=3: \n    * university 1: [6, 5, 5]; \n    * university 2: [8, 1, 1]; \n  * k=4: \n    * university 1: [6, 5, 5, 3]; ",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 1400,
+  "cf_contest_id": 1519,
+  "cf_index": "C",
+  "cf_tags": [
+    "brute force",
+    "data structures",
+    "greedy",
+    "number theory",
+    "sortings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00005-of-00039-b7580d2d846c2136.parquet",
+  "source_row": 301,
+  "task_id": "codecontests/cf-1519-C",
+  "rating_band": "1200-1599",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/1519/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

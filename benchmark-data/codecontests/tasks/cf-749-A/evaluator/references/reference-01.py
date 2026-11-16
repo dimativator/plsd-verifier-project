@@ -1,0 +1,12 @@
+n=int(input())
+c=0
+if(n%2==1):
+    n-=3
+    l=[2]*(n//2)
+    l.append(3)
+    print(len(l))
+    print(*l)
+else:
+    l=[2]*(n//2)
+    print(len(l))
+    print(*l)

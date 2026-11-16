@@ -1,0 +1,35 @@
+{
+  "name": "747_B. Mammoth's Genome Decoding",
+  "description": "The process of mammoth's genome decoding in Berland comes to its end!\n\nOne of the few remaining tasks is to restore unrecognized nucleotides in a found chain s. Each nucleotide is coded with a capital letter of English alphabet: 'A', 'C', 'G' or 'T'. Unrecognized nucleotides are coded by a question mark '?'. Thus, s is a string consisting of letters 'A', 'C', 'G', 'T' and characters '?'.\n\nIt is known that the number of nucleotides of each of the four types in the decoded genome of mammoth in Berland should be equal.\n\nYour task is to decode the genome and replace each unrecognized nucleotide with one of the four types so that the number of nucleotides of each of the four types becomes equal.\n\nInput\n\nThe first line contains the integer n (4 ≤ n ≤ 255) — the length of the genome.\n\nThe second line contains the string s of length n — the coded genome. It consists of characters 'A', 'C', 'G', 'T' and '?'.\n\nOutput\n\nIf it is possible to decode the genome, print it. If there are multiple answer, print any of them. If it is not possible, print three equals signs in a row: \"===\" (without quotes).\n\nExamples\n\nInput\n\n8\nAG?C??CT\n\n\nOutput\n\nAGACGTCT\n\n\nInput\n\n4\nAGCT\n\n\nOutput\n\nAGCT\n\n\nInput\n\n6\n????G?\n\n\nOutput\n\n===\n\n\nInput\n\n4\nAA??\n\n\nOutput\n\n===\n\nNote\n\nIn the first example you can replace the first question mark with the letter 'A', the second question mark with the letter 'G', the third question mark with the letter 'T', then each nucleotide in the genome would be presented twice.\n\nIn the second example the genome is already decoded correctly and each nucleotide is exactly once in it.\n\nIn the third and the fourth examples it is impossible to decode the genom. ",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 900,
+  "cf_contest_id": 747,
+  "cf_index": "B",
+  "cf_tags": [
+    "implementation",
+    "strings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00012-of-00039-da9476a39a1bdbb7.parquet",
+  "source_row": 329,
+  "task_id": "codecontests/cf-747-B",
+  "rating_band": "800-1199",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/747/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

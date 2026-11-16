@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a, b = map(int, input().split(' '))\n\nprint((6*a-1)*b)\n\nfor i in range(a):\n\n    print((6*i+1)*b, (6*i+2)*b, (6*i+3)*b, (6*i+5)*b)\n\n\n\n\n\n# Made By Mostafa_Khaled"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint a[4] = {1, 2, 3, 5};\nint main(void) {\n  int n, k;\n  scanf(\"%d%d\", &n, &k);\n  printf(\"%d\\n\", (5 + 6 * (n - 1)) * k);\n  for (int i = 0; i < n; i++) {\n    printf(\"%d %d %d %d\\n\", (a[0] + 6 * i) * k, (a[1] + 6 * i) * k,\n           (a[2] + 6 * i) * k, (a[3] + 6 * i) * k);\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\npublic class CF_476D {\n    public static void main(String[] args) throws IOException {\n        new CF_476D().solve();\n    }\n    \n    \n    void solve() throws IOException{\n        \n        InputStream in = System.in;\n        PrintStream out = System.out;\n        \n//        in = new FileInputStream(\"in.txt\");\n//        out = new PrintStream(\"out.txt\");\n        \n        Scanner sc=new Scanner(in);\n        int n=sc.nextInt(), k=sc.nextInt();\n        \n        int max=0;\n        StringBuilder ans=new StringBuilder();\n        for (int i=0;i<n;i++){\n            ans.append(k*(6*i+1)+\" \"+k*(6*i+2)+\" \"+k*(6*i+3)+\" \"+k*(6*i+5)+\"\\n\");\n            max=k*(6*i+5);\n        }\n        out.println(max);\n        out.println(ans.toString());\n            \n        \n    }\n}\n\n\n"
+  }
+]

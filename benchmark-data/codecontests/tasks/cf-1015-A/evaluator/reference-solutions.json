@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, m = [int(x) for x in input().split()]\ns = set(range(1, m+1))\n\nfor _ in range(n):\n    a, b = [int(x) for x in input().split()]\n    s -= set(range(a, b+1))\n\nprint(len(s))\nprint(*s)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint N[105] = {0};\nint main() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  cout.tie(0);\n  int n, m;\n  vector<int> vec;\n  cin >> n >> m;\n  while (n--) {\n    int le, ri;\n    cin >> le >> ri;\n    for (int i = le; i <= ri; i++) {\n      N[i]++;\n    }\n  }\n  for (int i = 1; i <= m; i++) {\n    if (N[i] == 0) {\n      vec.push_back(i);\n    }\n  }\n  cout << vec.size() << '\\n';\n  for (int i = 0; i < vec.size(); i++) {\n    cout << vec.at(i);\n    if (i < vec.size() - 1)\n      cout << \" \";\n    else\n      cout << '\\n';\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\n\nimport java.util.Scanner;\nimport java.util.TreeSet;\n\npublic class ProblemA {\n\n\tpublic static void main(String[] args) {\n\t\tScanner sc = new Scanner(System.in);\n\t\tint n = sc.nextInt();\n\t\tint m = sc.nextInt();\n\t\tTreeSet<Integer> set = new TreeSet<>();\n\t\tfor(int i = 1; i <= m; i++) {\n\t\t\tset.add(i);\n\t\t}\n\t\t\n\t\tfor(int i = 0; i < n; i++) {\n\t\t\tint l = sc.nextInt();\n\t\t\tint r = sc.nextInt();\n\t\t\tfor(int j = l; j <= r; j++) {\n\t\t\t\tif(set.contains(j)) set.remove(j);\n\t\t\t}\n\t\t}\n\t\t\n\t\tSystem.out.println(set.size());\n\t\tfor(int x: set) {\n\t\t\tSystem.out.print(x + \" \");\n\t\t}\n\n\t}\n\n}\n"
+  }
+]

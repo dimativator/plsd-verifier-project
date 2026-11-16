@@ -1,0 +1,8 @@
+{
+  "input": [
+    "4\n7 8\nAAPAAAAA\nPPPPAAAA\nPPPPAAAA\nAPAAPPPP\nAPAPPAPP\nAAAAPPAP\nAAAAPPAA\n6 5\nAAAAA\nAAAAA\nAAPAA\nAAPAP\nAAAPP\nAAAPP\n4 4\nPPPP\nPPPP\nPPPP\nPPPP\n3 4\nPPPP\nPAAP\nPPPP\n"
+  ],
+  "output": [
+    "2\n1\nMORTAL\n4\n"
+  ]
+}

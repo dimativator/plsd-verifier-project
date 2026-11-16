@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-124",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/124",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 8,
+  "public_test_count": 1,
+  "unexposed_test_count": 7,
+  "source_review_note": "Intersection length is endpoint difference, not the count of integer points. Tests distinguish those meanings.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-124",
+  "public_dir": "tasks/humaneval-124/public",
+  "evaluator_dir": "tasks/humaneval-124/evaluator",
+  "metadata_file": "tasks/humaneval-124/task.json",
+  "evaluation_harness": "tasks/humaneval-124/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-124/evaluation.json"
+}

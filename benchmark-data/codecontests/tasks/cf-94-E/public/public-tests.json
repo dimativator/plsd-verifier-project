@@ -1,0 +1,12 @@
+{
+  "input": [
+    "2\n",
+    "41\n",
+    "4\n"
+  ],
+  "output": [
+    "1\nlea ebx, [2*eax]\n",
+    "2\nlea ebx, [eax + 4*eax]\nlea ecx, [eax + 8*ebx]\n",
+    "1\nlea ebx, [4*eax]\n"
+  ]
+}

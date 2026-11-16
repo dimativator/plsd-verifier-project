@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nprint(n // 2 + n % 2)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long int n;\n  cin >> n;\n  cout << (n + 1) / 2 << \"\\n\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\n\npublic class CollectiveMindsets {\n\tpublic static void main(String args[])\n\t{\n\t\tScanner sc = new Scanner(System.in);\n\t\tint n = sc.nextInt();\n\t\tSystem.out.println((n+1)/2);\n\t}\n}"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-031",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/31",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 13,
+  "public_test_count": 1,
+  "unexposed_test_count": 12,
+  "source_review_note": "Canonical returns true for 0 and negative values. Tests only cover positive inputs. i*i may overflow near Int.MAX_VALUE.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-031",
+  "public_dir": "tasks/humaneval-031/public",
+  "evaluator_dir": "tasks/humaneval-031/evaluator",
+  "metadata_file": "tasks/humaneval-031/task.json",
+  "evaluation_harness": "tasks/humaneval-031/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-031/evaluation.json"
+}

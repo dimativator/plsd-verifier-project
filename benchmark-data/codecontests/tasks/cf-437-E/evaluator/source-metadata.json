@@ -1,0 +1,35 @@
+{
+  "name": "437_E. The Child and Polygon",
+  "description": "This time our child has a simple polygon. He has to find the number of ways to split the polygon into non-degenerate triangles, each way must satisfy the following requirements:\n\n  * each vertex of each triangle is one of the polygon vertex; \n  * each side of the polygon must be the side of exactly one triangle; \n  * the area of intersection of every two triangles equals to zero, and the sum of all areas of triangles equals to the area of the polygon; \n  * each triangle must be completely inside the polygon; \n  * each side of each triangle must contain exactly two vertices of the polygon. \n\n\n\nThe picture below depicts an example of a correct splitting.\n\n<image>\n\nPlease, help the child. Calculate the described number of ways modulo 1000000007 (109 + 7) for him.\n\nInput\n\nThe first line contains one integer n (3 ≤ n ≤ 200) — the number of vertices of the polygon. Then follow n lines, each line containing two integers. The i-th line contains xi, yi (|xi|, |yi| ≤ 107) — the i-th vertex of the polygon in clockwise or counterclockwise order.\n\nIt's guaranteed that the polygon is simple.\n\nOutput\n\nOutput the number of ways modulo 1000000007 (109 + 7).\n\nExamples\n\nInput\n\n4\n0 0\n0 1\n1 1\n1 0\n\n\nOutput\n\n2\n\n\nInput\n\n4\n0 0\n1 0\n0 1\n-1 0\n\n\nOutput\n\n1\n\n\nInput\n\n5\n0 0\n1 0\n1 1\n0 1\n-2 -1\n\n\nOutput\n\n3\n\nNote\n\nIn the first sample, there are two possible splittings:\n\n<image>\n\nIn the second sample, there are only one possible splitting:\n\n<image>",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2500,
+  "cf_contest_id": 437,
+  "cf_index": "E",
+  "cf_tags": [
+    "dp",
+    "geometry"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00004-of-00039-cefe355b4667b27e.parquet",
+  "source_row": 32,
+  "task_id": "codecontests/cf-437-E",
+  "rating_band": "2400+",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/437/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

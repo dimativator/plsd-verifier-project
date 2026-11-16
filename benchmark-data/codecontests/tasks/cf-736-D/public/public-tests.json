@@ -1,0 +1,12 @@
+{
+  "input": [
+    "2 3\n1 1\n1 2\n2 2\n",
+    "3 7\n3 3\n3 1\n1 3\n1 1\n2 2\n1 2\n2 1\n",
+    "3 3\n1 1\n2 2\n3 3\n"
+  ],
+  "output": [
+    "NO\nYES\nNO\n",
+    "YES\nNO\nNO\nNO\nYES\nNO\nNO\n",
+    "NO\nNO\nNO\n"
+  ]
+}

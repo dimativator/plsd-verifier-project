@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "try:\n    t = int(input())\n    s = input()\n    _ = 1\n    i = 0\n    l = []\n    while((i)<=(len(s)-1)):\n        #print(i)\n        l.append(s[i])\n        _+=1\n        i = i+_\n    s = \"\".join(l)  \n    print(s)\nexcept:\n    pass\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\ntemplate <typename T>\ninline T gcd(T a, T b) {\n  return b ? gcd(b, a % b) : a;\n}\nint n;\nstring s;\nvoid basic() {\n  cin >> n >> s;\n  int i = 0, k = 1;\n  while (i != n) {\n    cout << s[i];\n    i += k;\n    k++;\n  }\n}\nint main() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  cout.tie(0);\n  basic();\n  getchar();\n  getchar();\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class JavaApplication29 {\n\n   \n    public static void main(String[] args){\n        Scanner input=new Scanner(System.in);\n        int count=0,n;\n        n=input.nextInt();\n        String x;\n        x=input.next();\n        \n        \n        if(n==x.length() ){\n        for(int i=0;i<x.length();i=i+count){\n            count++;\n            System.out.print(x.charAt(i));\n            \n        }\n        }\n    }\n    \n}"
+  }
+]

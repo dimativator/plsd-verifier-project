@@ -1,0 +1,38 @@
+{
+  "name": "963_B. Destruction of a Tree",
+  "description": "You are given a tree (a graph with n vertices and n - 1 edges in which it's possible to reach any vertex from any other vertex using only its edges).\n\nA vertex can be destroyed if this vertex has even degree. If you destroy a vertex, all edges connected to it are also deleted.\n\nDestroy all vertices in the given tree or determine that it is impossible.\n\nInput\n\nThe first line contains integer n (1 ≤ n ≤ 2·105) — number of vertices in a tree.\n\nThe second line contains n integers p1, p2, ..., pn (0 ≤ pi ≤ n). If pi ≠ 0 there is an edge between vertices i and pi. It is guaranteed that the given graph is a tree.\n\nOutput\n\nIf it's possible to destroy all vertices, print \"YES\" (without quotes), otherwise print \"NO\" (without quotes).\n\nIf it's possible to destroy all vertices, in the next n lines print the indices of the vertices in order you destroy them. If there are multiple correct answers, print any.\n\nExamples\n\nInput\n\n5\n0 1 2 1 2\n\n\nOutput\n\nYES\n1\n2\n3\n5\n4\n\n\nInput\n\n4\n0 1 2 3\n\n\nOutput\n\nNO\n\nNote\n\nIn the first example at first you have to remove the vertex with index 1 (after that, the edges (1, 2) and (1, 4) are removed), then the vertex with index 2 (and edges (2, 3) and (2, 5) are removed). After that there are no edges in the tree, so you can remove remaining vertices in any order.\n\n<image>",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 2000,
+  "cf_contest_id": 963,
+  "cf_index": "B",
+  "cf_tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "dp",
+    "greedy",
+    "trees"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00000-of-00039-e991a271dbfa9925.parquet",
+  "source_row": 65,
+  "task_id": "codecontests/cf-963-B",
+  "rating_band": "2000-2399",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/963/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

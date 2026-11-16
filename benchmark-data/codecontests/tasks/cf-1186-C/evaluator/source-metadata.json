@@ -1,0 +1,35 @@
+{
+  "name": "1186_C. Vus the Cossack and Strings",
+  "description": "Vus the Cossack has two binary strings, that is, strings that consist only of \"0\" and \"1\". We call these strings a and b. It is known that |b| ≤ |a|, that is, the length of b is at most the length of a.\n\nThe Cossack considers every substring of length |b| in string a. Let's call this substring c. He matches the corresponding characters in b and c, after which he counts the number of positions where the two strings are different. We call this function f(b, c).\n\nFor example, let b = 00110, and c = 11000. In these strings, the first, second, third and fourth positions are different.\n\nVus the Cossack counts the number of such substrings c such that f(b, c) is even.\n\nFor example, let a = 01100010 and b = 00110. a has four substrings of the length |b|: 01100, 11000, 10001, 00010. \n\n  * f(00110, 01100) = 2;\n  * f(00110, 11000) = 4;\n  * f(00110, 10001) = 4;\n  * f(00110, 00010) = 1.\n\n\n\nSince in three substrings, f(b, c) is even, the answer is 3.\n\nVus can not find the answer for big strings. That is why he is asking you to help him.\n\nInput\n\nThe first line contains a binary string a (1 ≤ |a| ≤ 10^6) — the first string.\n\nThe second line contains a binary string b (1 ≤ |b| ≤ |a|) — the second string.\n\nOutput\n\nPrint one number — the answer.\n\nExamples\n\nInput\n\n\n01100010\n00110\n\n\nOutput\n\n\n3\n\n\nInput\n\n\n1010111110\n0110\n\n\nOutput\n\n\n4\n\nNote\n\nThe first example is explained in the legend.\n\nIn the second example, there are five substrings that satisfy us: 1010, 0101, 1111, 1111.",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 1800,
+  "cf_contest_id": 1186,
+  "cf_index": "C",
+  "cf_tags": [
+    "implementation",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00019-of-00039-d688fad5ee604390.parquet",
+  "source_row": 286,
+  "task_id": "codecontests/cf-1186-C",
+  "rating_band": "1600-1999",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/1186/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from math import pi\nd,h,v,e=map(int,input().split())\nv=v/(pi*((d/2)**2))\nd=h/(v-e)\nif v-e>0 and d<=10000:\n    print('YES')\n    print(d)\nelse:\n    print('NO')"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(NULL);\n  double d, h, v, e;\n  cin >> d >> h >> v >> e;\n  double ans = (3.14159265358979323846 * pow(d, 2) * h) /\n               (4 * v - 3.14159265358979323846 * pow(d, 2) * e);\n  if (ans < 0)\n    cout << \"NO\\n\";\n  else {\n    cout << \"YES\\n\";\n    cout << setprecision(10) << ans << \"\\n\";\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\nimport java.text.*;\nimport java.math.*;\nimport java.util.regex.*;\n\npublic class Solution {\n\n\tpublic static void main(String[] args) {\n\t\tScanner sc = new Scanner(System.in);\n\t\tint d = sc.nextInt();\n\t\tint h = sc.nextInt();\n\t\tint v = sc.nextInt();\n\t\tint e = sc.nextInt();\n\t\tdouble res = 4 * v - e * Math.PI * d * d;\n\t\tif (res < 0) {\n\t\t\tSystem.out.println(\"NO\");\n\t\t} else {\n\t\t\tSystem.out.println(\"YES\");\n\t\t\tSystem.out.println(Math.PI * d * d * h / res);\n\t\t}\n\t}\n\n}\n"
+  }
+]

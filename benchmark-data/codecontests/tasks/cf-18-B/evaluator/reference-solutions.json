@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "class Platforms:\n    @classmethod\n    def read_input(cls):\n        nums = list(map(int, input('').split()))\n        return nums[0], nums[1], nums[2], nums[3]\n\n    @classmethod\n    def run(cls):\n        n, d, m, l = cls.read_input()\n        end_plat = (n - 1) * m + l\n        for cur_jump in range(d, (m + 1) * d, d):\n            if (cur_jump % m) > l or cur_jump > end_plat:\n                print(cur_jump)\n                return\n        print(end_plat - (end_plat % d) + d)\n\nif __name__ == \"__main__\":\n    Platforms.run()\n\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long n, d, m, l, X = 0, cur = 0;\n  cin >> n >> d >> m >> l;\n  bool f = false;\n  for (int i = 1; i <= n;) {\n    cur = ((X + l) / d) * d;\n    cur += d;\n    while (cur > X + l && i <= n) X = (i - 1) * m, i++;\n    if (cur < X) {\n      f = true;\n      break;\n    }\n  }\n  if (f)\n    cout << cur;\n  else {\n    X = (n - 1) * m;\n    cur = ((X + l) / d) * d;\n    cur += d;\n    cout << cur;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Platforms18B {\n    public static void main(String[] args) {\n        long n,d,m,l;\n\n        Scanner scanner = new Scanner(System.in);\n        n = scanner.nextLong();\n        d = scanner.nextLong();\n        m = scanner.nextLong();\n        l = scanner.nextLong();\n        if (m-l == 1) {\n            long x = (n*m -1)/d;\n            System.out.println(d*(x+1));\n        } else {\n            System.out.println(findFallDown(n,d,m,l));\n        }\n    }\n\n    static long findFallDown(long n, long d, long m, long l) {\n        long k = 1;\n        long nextMove = d;\n        while (k <= n) {\n            long left = (k-1) * m;\n            if (nextMove < left) {\n                return nextMove;\n            }\n            long right = left + l;\n            while (nextMove >= left && nextMove <= right) {\n                nextMove += d;\n            }\n            k++;\n        }\n        return nextMove;\n    }\n}\n"
+  }
+]

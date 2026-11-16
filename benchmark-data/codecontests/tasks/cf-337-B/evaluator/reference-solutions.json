@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import sys\nfrom fractions import gcd\nmy_file = sys.stdin\n#my_file = open(\"input.txt\", \"r\")\nline = [int(i) for i in my_file.readline().split()]\na, b, c, d = line[0], line[1], line[2], line[3]\nif a/b < c/d:\n    N = (b*c) - (a*d)\n    D = b*c\nelse:\n    N = (a*d)-(b*c)\n    D = a*d\n\ndec = gcd(N,D)\n\nprint(N//dec, end=\"/\")\nprint(D//dec)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\n#pragma comment(linker, \"/STACK:102400000\")\nint a, b, c, d;\nint gcd(int x, int y) {\n  if (!y) return x;\n  return gcd(y, x % y);\n}\nint main() {\n  cin >> a >> b >> c >> d;\n  int d1 = gcd(a, b), d2 = gcd(c, d);\n  a /= d1, b /= d1;\n  c /= d2;\n  d /= d2;\n  int d3 = b * d / gcd(b, d);\n  if ((a * d3 / b) >= (c * d3 / d)) {\n    int aa = a * d3 / b - c * d3 / d, bb = a * d3 / b, dd = gcd(aa, bb);\n    cout << aa / dd << \"/\" << bb / dd << endl;\n    return 0;\n  }\n  int d4 = a * c / gcd(a, c);\n  if ((b * d4 / a) > (d * d4 / c)) {\n    int aa = b * d4 / a - d * d4 / c, bb = b * d4 / a, dd = gcd(aa, bb);\n    cout << aa / dd << \"/\" << bb / dd << endl;\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\n\npublic class CF337B {\n\tstatic int gcd(int a, int b) {\n\t\treturn b == 0 ? a : gcd(b, a % b);\n\t}\n\tpublic static void main(String[] args) throws IOException {\n\t\tBufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n\t\tStringTokenizer st = new StringTokenizer(br.readLine());\n\t\tint a = Integer.parseInt(st.nextToken());\n\t\tint b = Integer.parseInt(st.nextToken());\n\t\tint c = Integer.parseInt(st.nextToken());\n\t\tint d = Integer.parseInt(st.nextToken());\n\t\tint p, q;\n\t\tif (a * d >= b * c) {\n\t\t\tp = a * d - b * c;\n\t\t\tq = a * d;\n\t\t} else {\n\t\t\tp = b * c - a * d;\n\t\t\tq = b * c;\n\t\t}\n\t\tint g = gcd(p, q);\n\t\tp /= g;\n\t\tq /= g;\n\t\tSystem.out.println(p + \"/\" + q);\n\t}\n}\n"
+  }
+]

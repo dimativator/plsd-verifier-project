@@ -1,0 +1,36 @@
+{
+  "name": "765_B. Code obfuscation",
+  "description": "Kostya likes Codeforces contests very much. However, he is very disappointed that his solutions are frequently hacked. That's why he decided to obfuscate (intentionally make less readable) his code before upcoming contest.\n\nTo obfuscate the code, Kostya first looks at the first variable name used in his program and replaces all its occurrences with a single symbol a, then he looks at the second variable name that has not been replaced yet, and replaces all its occurrences with b, and so on. Kostya is well-mannered, so he doesn't use any one-letter names before obfuscation. Moreover, there are at most 26 unique identifiers in his programs.\n\nYou are given a list of identifiers of some program with removed spaces and line breaks. Check if this program can be a result of Kostya's obfuscation.\n\nInput\n\nIn the only line of input there is a string S of lowercase English letters (1 ≤ |S| ≤ 500) — the identifiers of a program with removed whitespace characters.\n\nOutput\n\nIf this program can be a result of Kostya's obfuscation, print \"YES\" (without quotes), otherwise print \"NO\".\n\nExamples\n\nInput\n\nabacaba\n\n\nOutput\n\nYES\n\n\nInput\n\njinotega\n\n\nOutput\n\nNO\n\nNote\n\nIn the first sample case, one possible list of identifiers would be \"number string number character number string number\". Here how Kostya would obfuscate the program:\n\n  * replace all occurences of number with a, the result would be \"a string a character a string a\",\n  * replace all occurences of string with b, the result would be \"a b a character a b a\",\n  * replace all occurences of character with c, the result would be \"a b a c a b a\",\n  * all identifiers have been replaced, thus the obfuscation is finished.",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 1100,
+  "cf_contest_id": 765,
+  "cf_index": "B",
+  "cf_tags": [
+    "greedy",
+    "implementation",
+    "strings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 512000000,
+  "source_file": "data/train-00010-of-00039-6de28ba20654f69b.parquet",
+  "source_row": 284,
+  "task_id": "codecontests/cf-765-B",
+  "rating_band": "800-1199",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/765/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

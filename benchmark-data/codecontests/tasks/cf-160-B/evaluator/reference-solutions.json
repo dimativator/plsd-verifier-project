@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "number_of_testcases = 1 #int(input())\n \nfor _ in range(number_of_testcases):\n    number_of_digits = int(input())\n    ticket_number = input()\n    ticket_number = list(ticket_number)\n    first_half = ticket_number[:number_of_digits]\n    second_half = ticket_number[number_of_digits:]\n    #print(first_half)\n    first_half.sort()\n    second_half.sort()\n    flag = 1\n    if first_half[0] > second_half[0]:\n        for i in range(number_of_digits):\n            if first_half[i] <= second_half[i]:\n                flag = 0\n                #print(\"NO\")\n               \n                \n    else:\n        for i in range(number_of_digits):\n            if first_half[i] >= second_half[i]:\n                flag = 0\n                #print(\"NO\")\n               \n                \n    if flag==1:\n        print(\"YES\")\n        \n    else:\n        print(\"NO\")\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, i, j, flag = 1, figure;\n  char c1[101], c2[101], k, c[201];\n  scanf(\"%d\", &n);\n  scanf(\"%s\", c);\n  for (i = 0; i < n; i++) {\n    c1[i] = c[i];\n    c2[i] = c[i + n];\n  }\n  for (i = 0; i < n - 1; i++)\n    for (j = i + 1; j < n; j++)\n      if (c1[i] > c1[j]) {\n        k = c1[i];\n        c1[i] = c1[j];\n        c1[j] = k;\n      }\n  for (i = 0; i < n - 1; i++)\n    for (j = i + 1; j < n; j++)\n      if (c2[i] > c2[j]) {\n        k = c2[i];\n        c2[i] = c2[j];\n        c2[j] = k;\n      }\n  if (c1[0] < c2[0]) figure = 0;\n  if (c1[0] > c2[0]) figure = 1;\n  if (c1[0] == c2[0]) {\n    printf(\"NO\\n\");\n    figure = 2;\n    flag = 0;\n  }\n  for (i = 1; i < n; i++) {\n    if (figure == 1 && c1[i] <= c2[i]) {\n      printf(\"NO\\n\");\n      flag = 0;\n      break;\n    }\n    if (figure == 0 && c1[i] >= c2[i]) {\n      printf(\"NO\\n\");\n      flag = 0;\n      break;\n    }\n  }\n  if (flag) printf(\"YES\\n\");\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\n\npublic class HelloWorld{\n\n     public static void main(String []args){\n  \n       Scanner sc = new Scanner (System.in);\n       int n = sc.nextInt();\n       int []A = new int[n];\n       int []B= new int[n];\n       String s = sc.next();\n       \n       for(int i = 0; i < n; i++){\n           A[i] = s.charAt(i)-'0';\n       }\n       int k = 0;\n       for(int i = n; i < n*2; i++){\n           B[k] = s.charAt(i)-'0';\n           k++;\n       }\n       \n       Arrays.sort(A);Arrays.sort(B);\n       int count = 0;\n       int count1 = 0;\n       \n       for(int i = 0; i < n; i++){\n           if(A[i] > B[i])count++;\n           if(B[i] > A[i])count1++;\n           }\n      \n        if(count == n || count1 == n){\n            System.out.println(\"YES\");\n        }else{\n            System.out.println(\"NO\");\n        }\n     }\n}"
+  }
+]

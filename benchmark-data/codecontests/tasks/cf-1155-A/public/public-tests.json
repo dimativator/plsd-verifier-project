@@ -1,0 +1,10 @@
+{
+  "input": [
+    "7\nabacaba\n",
+    "6\naabcfg\n"
+  ],
+  "output": [
+    "YES\n2 3\n",
+    "NO\n"
+  ]
+}

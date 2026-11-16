@@ -1,0 +1,6 @@
+[
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint lenA, lenB;\nint A[1000004];\nint B[1000004];\nint idxB[1000004];\nint main() {\n  scanf(\"%d %d\", &lenA, &lenB);\n  for (int i = 0, _n = (lenA); i < _n; ++i) scanf(\"%d\", A + i);\n  memset(idxB, -1, sizeof(idxB));\n  for (int j = 0, _n = (lenB); j < _n; ++j) {\n    scanf(\"%d\", B + j);\n    idxB[B[j]] = j;\n  }\n  int idxV = 0;\n  vector<long long> V;\n  long long offset = 0;\n  int res = 0;\n  for (int k = 0, _n = (lenA * 2); k < _n; ++k) {\n    long long p = idxB[A[k % lenA]];\n    if (p < 0) {\n      V.clear();\n      idxV = 0;\n      continue;\n    }\n    p += offset;\n    if (!V.empty() && V.back() >= p) {\n      p += lenB;\n      offset += lenB;\n    }\n    V.push_back(p);\n    idxV = (lower_bound(V.begin() + idxV, V.end(), p - lenB + 1) - V.begin());\n    int len = int((V).size()) - idxV;\n    res = max(res, len);\n  }\n  printf(\"%d\\n\", res);\n  return 0;\n}\n"
+  }
+]

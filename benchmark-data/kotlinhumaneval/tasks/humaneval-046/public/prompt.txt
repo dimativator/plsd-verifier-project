@@ -1,0 +1,14 @@
+/**
+ * You are an expert Kotlin programmer, and here is your task.
+ * * Checks if given string is a palindrome
+ * >>> is_palindrome('')
+ * True
+ * >>> is_palindrome('aba')
+ * True
+ * >>> is_palindrome('aaaaa')
+ * True
+ * >>> is_palindrome('zbcd')
+ * False
+ *
+ */
+fun isPalindrome(text: String): Boolean {

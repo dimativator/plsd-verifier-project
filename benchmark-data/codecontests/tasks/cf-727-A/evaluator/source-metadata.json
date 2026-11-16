@@ -1,0 +1,36 @@
+{
+  "name": "727_A. Transformation: from A to B",
+  "description": "Vasily has a number a, which he wants to turn into a number b. For this purpose, he can do two types of operations:\n\n  * multiply the current number by 2 (that is, replace the number x by 2·x); \n  * append the digit 1 to the right of current number (that is, replace the number x by 10·x + 1). \n\n\n\nYou need to help Vasily to transform the number a into the number b using only the operations described above, or find that it is impossible.\n\nNote that in this task you are not required to minimize the number of operations. It suffices to find any way to transform a into b.\n\nInput\n\nThe first line contains two positive integers a and b (1 ≤ a < b ≤ 109) — the number which Vasily has and the number he wants to have.\n\nOutput\n\nIf there is no way to get b from a, print \"NO\" (without quotes).\n\nOtherwise print three lines. On the first line print \"YES\" (without quotes). The second line should contain single integer k — the length of the transformation sequence. On the third line print the sequence of transformations x1, x2, ..., xk, where:\n\n  * x1 should be equal to a, \n  * xk should be equal to b, \n  * xi should be obtained from xi - 1 using any of two described operations (1 < i ≤ k). \n\n\n\nIf there are multiple answers, print any of them.\n\nExamples\n\nInput\n\n2 162\n\n\nOutput\n\nYES\n5\n2 4 8 81 162 \n\n\nInput\n\n4 42\n\n\nOutput\n\nNO\n\n\nInput\n\n100 40021\n\n\nOutput\n\nYES\n5\n100 200 2001 4002 40021 ",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 1000,
+  "cf_contest_id": 727,
+  "cf_index": "A",
+  "cf_tags": [
+    "brute force",
+    "dfs and similar",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00006-of-00039-65184bb9f7d61fde.parquet",
+  "source_row": 297,
+  "task_id": "codecontests/cf-727-A",
+  "rating_band": "800-1199",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/727/A",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "input": [
+    "1\ndaaaaaaaa\nbbbbbbbbb\n",
+    "1\na\nabcd\n",
+    "2\nabacaba\nzyxaabcaabkjh\nonetwothree\nthreetwoone\n"
+  ],
+  "output": [
+    "NO\n",
+    "YES\n",
+    "YES\nYES\n"
+  ]
+}

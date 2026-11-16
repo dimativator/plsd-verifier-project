@@ -1,0 +1,36 @@
+{
+  "name": "195_A. Let's Watch Football",
+  "description": "Valeric and Valerko missed the last Euro football game, so they decided to watch the game's key moments on the Net. They want to start watching as soon as possible but the connection speed is too low. If they turn on the video right now, it will \"hang up\" as the size of data to watch per second will be more than the size of downloaded data per second.\n\nThe guys want to watch the whole video without any pauses, so they have to wait some integer number of seconds for a part of the video to download. After this number of seconds passes, they can start watching. Waiting for the whole video to download isn't necessary as the video can download after the guys started to watch.\n\nLet's suppose that video's length is c seconds and Valeric and Valerko wait t seconds before the watching. Then for any moment of time t0, t ≤ t0 ≤ c + t, the following condition must fulfill: the size of data received in t0 seconds is not less than the size of data needed to watch t0 - t seconds of the video.\n\nOf course, the guys want to wait as little as possible, so your task is to find the minimum integer number of seconds to wait before turning the video on. The guys must watch the video without pauses.\n\nInput\n\nThe first line contains three space-separated integers a, b and c (1 ≤ a, b, c ≤ 1000, a > b). The first number (a) denotes the size of data needed to watch one second of the video. The second number (b) denotes the size of data Valeric and Valerko can download from the Net per second. The third number (c) denotes the video's length in seconds.\n\nOutput\n\nPrint a single number — the minimum integer number of seconds that Valeric and Valerko must wait to watch football without pauses.\n\nExamples\n\nInput\n\n4 1 1\n\n\nOutput\n\n3\n\n\nInput\n\n10 3 2\n\n\nOutput\n\n5\n\n\nInput\n\n13 12 1\n\n\nOutput\n\n1\n\nNote\n\nIn the first sample video's length is 1 second and it is necessary 4 units of data for watching 1 second of video, so guys should download 4 · 1 = 4 units of data to watch the whole video. The most optimal way is to wait 3 seconds till 3 units of data will be downloaded and then start watching. While guys will be watching video 1 second, one unit of data will be downloaded and Valerik and Valerko will have 4 units of data by the end of watching. Also every moment till the end of video guys will have more data then necessary for watching.\n\nIn the second sample guys need 2 · 10 = 20 units of data, so they have to wait 5 seconds and after that they will have 20 units before the second second ends. However, if guys wait 4 seconds, they will be able to watch first second of video without pauses, but they will download 18 units of data by the end of second second and it is less then necessary.",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 1000,
+  "cf_contest_id": 195,
+  "cf_index": "A",
+  "cf_tags": [
+    "binary search",
+    "brute force",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00000-of-00039-e991a271dbfa9925.parquet",
+  "source_row": 136,
+  "task_id": "codecontests/cf-195-A",
+  "rating_band": "800-1199",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/195/A",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

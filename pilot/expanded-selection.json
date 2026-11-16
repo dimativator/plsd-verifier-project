@@ -1,0 +1,1052 @@
+{
+  "seed": 20261114,
+  "task_count": 100,
+  "conditions": [
+    "baseline",
+    "verifier"
+  ],
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "medium",
+  "repetitions": 1,
+  "selection": "20 per rating band. Candidate order SHA256(20261114-expanded:task_id). Exclude all prior run selections, absent private tests, conflicting expected outputs, image placeholders, and outputs needing semantic or floating checkers. Output requirements manually reviewed. Take first 20 reference-passing reviewed candidates per band before agent outcomes.",
+  "checker_review": "Stored per task. Exact case-sensitive whitespace-token checker.",
+  "hidden_suites": {
+    "kotlinhumaneval": [
+      "HiddenTests.kt"
+    ],
+    "codecontests": [
+      "private-tests.json"
+    ]
+  },
+  "generated_tests": "Excluded from this plumbing pilot before agent runs because generated input-domain validity has not been reviewed. Source data remains unchanged.",
+  "runtime_limits": {
+    "test_timeout_seconds": 10,
+    "jvm_max_heap": "1g"
+  },
+  "agent_limits": {
+    "steps": 0,
+    "cost": 0,
+    "wall_time_seconds": 0,
+    "meaning": "No imposed agent budget for this plumbing pilot"
+  },
+  "primary_outcome": "All final hidden tests pass",
+  "tasks": [
+    {
+      "dataset": "codecontests",
+      "id": "cf-381-A",
+      "rating_band": "800-1199",
+      "difficulty": 800,
+      "checker": "tokens",
+      "output_requirement": "On a single line, print two integers. The first number is the number of Sereja's points at the end of the game, the second number is the number of Dima's points at the end of the game.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-195-A",
+      "rating_band": "800-1199",
+      "difficulty": 1000,
+      "checker": "tokens",
+      "output_requirement": "Print a single number — the minimum integer number of seconds that Valeric and Valerko must wait to watch football without pauses.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-11-A",
+      "rating_band": "800-1199",
+      "difficulty": 900,
+      "checker": "tokens",
+      "output_requirement": "Output the minimal number of moves needed to make the sequence increasing.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-282-A",
+      "rating_band": "800-1199",
+      "difficulty": 800,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer — the final value of x.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-427-B",
+      "rating_band": "800-1199",
+      "difficulty": 1100,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer — the number of ways you can choose the c prisoners.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1512-A",
+      "rating_band": "800-1199",
+      "difficulty": 800,
+      "checker": "tokens",
+      "output_requirement": "For each test case, output a single integer — the index of the element that is not equal to others.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1303-A",
+      "rating_band": "800-1199",
+      "difficulty": 800,
+      "checker": "tokens",
+      "output_requirement": "Print t integers, where the i-th integer is the answer to the i-th testcase (the minimum number of 0's that you have to erase from s).",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1426-A",
+      "rating_band": "800-1199",
+      "difficulty": 800,
+      "checker": "tokens",
+      "output_requirement": "For each test case, print the answer: the number of floor on which Petya lives.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-463-B",
+      "rating_band": "800-1199",
+      "difficulty": 1100,
+      "checker": "tokens",
+      "output_requirement": "Print a single number representing the minimum number of dollars paid by Caisa.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-864-B",
+      "rating_band": "800-1199",
+      "difficulty": 1000,
+      "checker": "tokens",
+      "output_requirement": "Print maximum number of elements in pretty set of positions for string s.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-268-A",
+      "rating_band": "800-1199",
+      "difficulty": 800,
+      "checker": "tokens",
+      "output_requirement": "In a single line print the number of games where the host team is going to play in the guest uniform.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1165-B",
+      "rating_band": "800-1199",
+      "difficulty": 1000,
+      "checker": "tokens",
+      "output_requirement": "Print one integer — the maximum number of days Polycarp can train if he chooses the contests optimally.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-672-B",
+      "rating_band": "800-1199",
+      "difficulty": 1000,
+      "checker": "tokens",
+      "output_requirement": "If it's impossible to change the string s such that all its substring are distinct print -1. Otherwise print the minimum required number of changes.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-621-A",
+      "rating_band": "800-1199",
+      "difficulty": 900,
+      "checker": "tokens",
+      "output_requirement": "Print the maximum possible even sum that can be obtained if we use some of the given integers.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-793-A",
+      "rating_band": "800-1199",
+      "difficulty": 900,
+      "checker": "tokens",
+      "output_requirement": "Print the only line containing the minimum number of seconds needed for prices to become equal, of «-1» if it is impossible.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1225-B1",
+      "rating_band": "800-1199",
+      "difficulty": 1000,
+      "checker": "tokens",
+      "output_requirement": "Print t integers — the answers to the test cases in the input in the order they follow. The answer to a test case is the minimum number of TV shows for which you need to purchase a subscription so that you can watch episodes of the purchased TV shows on BerTV for d consecutive days. Please note that it is permissible that you will be able to watch more than d days in a row.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-670-A",
+      "rating_band": "800-1199",
+      "difficulty": 900,
+      "checker": "tokens",
+      "output_requirement": "Print two integers — the minimum possible and the maximum possible number of days off per year on Mars.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-961-A",
+      "rating_band": "800-1199",
+      "difficulty": 900,
+      "checker": "tokens",
+      "output_requirement": "Print one integer — the amount of points you will receive.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-476-A",
+      "rating_band": "800-1199",
+      "difficulty": 1000,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer — the minimal number of moves being a multiple of m. If there is no way he can climb satisfying condition print  - 1 instead.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1293-A",
+      "rating_band": "800-1199",
+      "difficulty": 1100,
+      "checker": "tokens",
+      "output_requirement": "For each test case print a single integer — the minimum number of staircases required for ConneR to walk from the floor s to a floor with an open restaurant.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1130-B",
+      "rating_band": "1200-1599",
+      "difficulty": 1200,
+      "checker": "tokens",
+      "output_requirement": "Print one number — the minimum distance that the guys have to walk in total to buy both cakes. Guys can be near same house at the same time. They begin near the first (leftmost) house. Each of the guys should buy n tiers in ascending order of their sizes.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1213-D1",
+      "rating_band": "1200-1599",
+      "difficulty": 1500,
+      "checker": "tokens",
+      "output_requirement": "Print one integer — the minimum possible number of operations required to obtain at least k equal numbers in the array.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-740-A",
+      "rating_band": "1200-1599",
+      "difficulty": 1300,
+      "checker": "tokens",
+      "output_requirement": "Print the minimum amount of rubles she should pay to buy such number of copybooks k that n + k is divisible by 4.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1065-B",
+      "rating_band": "1200-1599",
+      "difficulty": 1300,
+      "checker": "tokens",
+      "output_requirement": "In the only line print two numbers min and max — the minimum and maximum number of isolated vertices, respectively.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-289-D",
+      "rating_band": "1200-1599",
+      "difficulty": 1500,
+      "checker": "tokens",
+      "output_requirement": "In a single line print a single integer — the answer to the problem modulo 1000000007 (109 + 7).",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-443-B",
+      "rating_band": "1200-1599",
+      "difficulty": 1500,
+      "checker": "tokens",
+      "output_requirement": "Print a single number — the maximum length of the tandem repeat that could have occurred in the new string.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-614-A",
+      "rating_band": "1200-1599",
+      "difficulty": 1500,
+      "checker": "tokens",
+      "output_requirement": "Print all powers of number k, that lie within range from l to r in the increasing order. If there are no such numbers, print \"-1\" (without the quotes).",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1102-C",
+      "rating_band": "1200-1599",
+      "difficulty": 1200,
+      "checker": "tokens",
+      "output_requirement": "Print one integer — the number of doors with durability equal to 0 at the end of the game, if you and Slavik both play optimally.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-387-B",
+      "rating_band": "1200-1599",
+      "difficulty": 1200,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer — the answer to the problem.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-203-B",
+      "rating_band": "1200-1599",
+      "difficulty": 1300,
+      "checker": "tokens",
+      "output_requirement": "On a single line print the answer to the problem — the minimum number of the move after which the piece of paper has a black square with side 3. If no such move exists, print -1.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1147-A",
+      "rating_band": "1200-1599",
+      "difficulty": 1500,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer, the number of scenarios that let Alice answer \"NO\" to all of Bob's questions.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-546-B",
+      "rating_band": "1200-1599",
+      "difficulty": 1200,
+      "checker": "tokens",
+      "output_requirement": "Output single integer — minimum amount of coins the colonel has to pay.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1365-C",
+      "rating_band": "1200-1599",
+      "difficulty": 1400,
+      "checker": "tokens",
+      "output_requirement": "Print the maximum number of matching pairs of elements after performing the above operations some (possibly zero) times.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1005-D",
+      "rating_band": "1200-1599",
+      "difficulty": 1500,
+      "checker": "tokens",
+      "output_requirement": "Print the maximum number of numbers divisible by 3 that Polycarp can get by making vertical cuts in the given number s.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-265-D",
+      "rating_band": "1200-1599",
+      "difficulty": 1500,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer — the length of the longest good sequence.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-520-B",
+      "rating_band": "1200-1599",
+      "difficulty": 1400,
+      "checker": "tokens",
+      "output_requirement": "Print a single number — the minimum number of times one needs to push the button required to get the number m out of number n.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-931-B",
+      "rating_band": "1200-1599",
+      "difficulty": 1200,
+      "checker": "tokens",
+      "output_requirement": "In the only line print \"Final!\" (without quotes), if teams a and b can meet in the Final.\n\nOtherwise, print a single integer — the number of the round in which teams a and b can meet. The round are enumerated from 1.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1284-B",
+      "rating_band": "1200-1599",
+      "difficulty": 1400,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer, the number of pairs of sequences whose concatenation has an ascent.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1140-B",
+      "rating_band": "1200-1599",
+      "difficulty": 1200,
+      "checker": "tokens",
+      "output_requirement": "For each test case print one line.\n\nFor i-th test case print the minimum number of characters to be deleted from string s so that it becomes good.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1408-B",
+      "rating_band": "1200-1599",
+      "difficulty": 1400,
+      "checker": "tokens",
+      "output_requirement": "For each test case print a single integer: the minimum possible value of m. If there is no such m, print -1.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1208-D",
+      "rating_band": "1600-1999",
+      "difficulty": 1900,
+      "checker": "tokens",
+      "output_requirement": "Print n integers p_{1}, p_{2}, …, p_{n} — the elements of the restored permutation. We can show that the answer is always unique.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-992-B",
+      "rating_band": "1600-1999",
+      "difficulty": 1600,
+      "checker": "tokens",
+      "output_requirement": "In the only line print the only integer — the answer for the problem.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1283-E",
+      "rating_band": "1600-1999",
+      "difficulty": 1800,
+      "checker": "tokens",
+      "output_requirement": "Print two integers — the minimum and the maximum possible number of occupied houses after all moves are performed.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-675-D",
+      "rating_band": "1600-1999",
+      "difficulty": 1800,
+      "checker": "tokens",
+      "output_requirement": "Output n - 1 integers. For all i > 1 print the value written in the node that is the parent of the node with value a_i in it.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1029-C",
+      "rating_band": "1600-1999",
+      "difficulty": 1600,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer — the maximal possible length of the intersection of (n - 1) remaining segments after you remove exactly one segment from the sequence.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1395-C",
+      "rating_band": "1600-1999",
+      "difficulty": 1600,
+      "checker": "tokens",
+      "output_requirement": "Print one integer: the minimum possible c_1 | c_2 | … | c_n.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-962-D",
+      "rating_band": "1600-1999",
+      "difficulty": 1600,
+      "checker": "tokens",
+      "output_requirement": "In the first line print an integer k — the number of elements in the array after all the performed operations. In the second line print k integers — the elements of the array after all the performed operations.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1389-B",
+      "rating_band": "1600-1999",
+      "difficulty": 1600,
+      "checker": "tokens",
+      "output_requirement": "Print t integers — for each testcase output the maximum score you can achieve if you make exactly k moves in total, no more than z of them are to the left and there are no two or more moves to the left in a row.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-58-C",
+      "rating_band": "1600-1999",
+      "difficulty": 1800,
+      "checker": "tokens",
+      "output_requirement": "Print a single number which is the minimal number of trees whose heights will have to be changed for the sequence to become beautiful.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1141-E",
+      "rating_band": "1600-1999",
+      "difficulty": 1700,
+      "checker": "tokens",
+      "output_requirement": "Print -1 if the superhero can't kill the monster and the battle will last infinitely. Otherwise, print the positive integer k such that k is the first minute after which the monster is dead.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-557-C",
+      "rating_band": "1600-1999",
+      "difficulty": 1900,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer — the minimum number of energy units that Arthur needs to spend in order to make the table stable.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-734-C",
+      "rating_band": "1600-1999",
+      "difficulty": 1600,
+      "checker": "tokens",
+      "output_requirement": "Print one integer — the minimum time one has to spent in order to prepare n potions.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-70-B",
+      "rating_band": "1600-1999",
+      "difficulty": 1600,
+      "checker": "tokens",
+      "output_requirement": "On the first and only line print the number of text messages Fangy will need. If it is impossible to split the text, print \"Impossible\" without the quotes.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-567-D",
+      "rating_band": "1600-1999",
+      "difficulty": 1700,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer — the number of such Bob's first move, after which you can be sure that Alice lied. Bob's moves are numbered from 1 to m in the order the were made. If the sought move doesn't exist, then print \"-1\".",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-847-H",
+      "rating_band": "1600-1999",
+      "difficulty": 1600,
+      "checker": "tokens",
+      "output_requirement": "Print the minimum number of additional requests from Polycarp that would make the load strictly increasing in the beginning and then strictly decreasing afterwards.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-687-C",
+      "rating_band": "1600-1999",
+      "difficulty": 1900,
+      "checker": "tokens",
+      "output_requirement": "First line of the output must contain a single integer q— the number of suitable values x. Then print q integers in ascending order — the values that Arya can make for some subset of coins of Pari that pays for the chocolate.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-518-C",
+      "rating_band": "1600-1999",
+      "difficulty": 1600,
+      "checker": "tokens",
+      "output_requirement": "Print a single number — the number of gestures that Anya needs to make to launch all the applications in the desired order.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-448-C",
+      "rating_band": "1600-1999",
+      "difficulty": 1900,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer — the minimum number of strokes needed to paint the whole fence.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-934-C",
+      "rating_band": "1600-1999",
+      "difficulty": 1800,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer, which means the maximum possible length of the longest non-decreasing subsequence of the new sequence.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-607-A",
+      "rating_band": "1600-1999",
+      "difficulty": 1600,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer — the minimum number of beacons that could be destroyed if exactly one beacon is added.",
+      "checker_review": "Unique numeric optimum; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-165-D",
+      "rating_band": "2000-2399",
+      "difficulty": 2100,
+      "checker": "tokens",
+      "output_requirement": "For each request to \"find the distance between vertices a and b\" print the result. If there is no path going only along the black edges between vertices a and b, then print \"-1\" (without the quotes). Print the results in the order of receiving the requests, separate the numbers with spaces or line breaks.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1184-A2",
+      "rating_band": "2000-2399",
+      "difficulty": 2100,
+      "checker": "tokens",
+      "output_requirement": "Output a single integer: the number of suitable values of k.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-302-D",
+      "rating_band": "2000-2399",
+      "difficulty": 2100,
+      "checker": "tokens",
+      "output_requirement": "In a single line print an integer — the answer to the problem.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-231-E",
+      "rating_band": "2000-2399",
+      "difficulty": 2100,
+      "checker": "tokens",
+      "output_requirement": "Print k lines: in the i-th line print a single integer — the number of distinct simple ways, starting at xi and ending at yi, modulo 1000000007 (109 + 7).",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-842-C",
+      "rating_band": "2000-2399",
+      "difficulty": 2000,
+      "checker": "tokens",
+      "output_requirement": "Output n numbers separated by spaces, where i-th number equals to maximum possible beauty of vertex i.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-114-D",
+      "rating_band": "2000-2399",
+      "difficulty": 2000,
+      "checker": "tokens",
+      "output_requirement": "Output the only number — the amount of different substrings of t that start with sbegin and end with send.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-980-E",
+      "rating_band": "2000-2399",
+      "difficulty": 2200,
+      "checker": "tokens",
+      "output_requirement": "Print k space-separated integers: the numbers of the districts of which the contestants should be removed, in increasing order of district number.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-441-D",
+      "rating_band": "2000-2399",
+      "difficulty": 2100,
+      "checker": "tokens",
+      "output_requirement": "In the first line, print integer k — the minimum number of swaps.\n\nIn the second line, print 2k integers x1, x2, ..., x2k — the description of the swap sequence. The printed numbers show that you need to consecutively make swaps (x1, x2), (x3, x4), ..., (x2k - 1, x2k). \n\nIf there are multiple sequence swaps of the minimum length, print the lexicographically minimum one.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-993-E",
+      "rating_band": "2000-2399",
+      "difficulty": 2300,
+      "checker": "tokens",
+      "output_requirement": "Print n+1 integers, where the i-th number is the answer for Nikita's question for k=i-1.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-383-D",
+      "rating_band": "2000-2399",
+      "difficulty": 2300,
+      "checker": "tokens",
+      "output_requirement": "Output a single integer, the number of ways Iahub can take a photo, modulo 1000000007 (109 + 7).",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1120-C",
+      "rating_band": "2000-2399",
+      "difficulty": 2100,
+      "checker": "tokens",
+      "output_requirement": "Output a single integer — the smallest possible number of coins you need to spend to compress s.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-590-D",
+      "rating_band": "2000-2399",
+      "difficulty": 2300,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer — the minimum possible total loquacity of the top-secret troop.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1057-C",
+      "rating_band": "2000-2399",
+      "difficulty": 2000,
+      "checker": "tokens",
+      "output_requirement": "Print minimal number of seconds to eat at least k candies. If solution doesn't exist, print \"-1\".",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1203-F2",
+      "rating_band": "2000-2399",
+      "difficulty": 2300,
+      "checker": "tokens",
+      "output_requirement": "Print one integer — the size of the maximum possible subset (possibly, empty) of projects Polycarp can choose.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-68-C",
+      "rating_band": "2000-2399",
+      "difficulty": 2200,
+      "checker": "tokens",
+      "output_requirement": "Output in the first line two space-separated numbers: the minimum possible amount of fuel that can flow into the synchrophasotron, and the maximum possible sum that needs to be paid in order for that amount of fuel to reach synchrophasotron. If there is no amount of fuel that can reach synchrophasotron, output \"-1 -1\".\n\nThe amount of fuel which will flow into synchrophasotron is not neccessary positive. It could be equal to zero if the minimum constraint of every pipe is equal to zero.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1207-F",
+      "rating_band": "2000-2399",
+      "difficulty": 2100,
+      "checker": "tokens",
+      "output_requirement": "For each query of type 2 print one integer — the answer to it.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1231-E",
+      "rating_band": "2000-2399",
+      "difficulty": 2200,
+      "checker": "tokens",
+      "output_requirement": "For every test print minimum possible number of moves, which are needed to transform s into t, or -1, if it is impossible to do.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-387-D",
+      "rating_band": "2000-2399",
+      "difficulty": 2200,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer — the answer to George's question.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1487-E",
+      "rating_band": "2000-2399",
+      "difficulty": 2000,
+      "checker": "tokens",
+      "output_requirement": "If it's impossible to choose a first course, a second course, a drink, and a dessert so that they go well with each other, print -1. Otherwise, print one integer — the minimum total cost of the dinner.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-888-G",
+      "rating_band": "2000-2399",
+      "difficulty": 2300,
+      "checker": "tokens",
+      "output_requirement": "Print one number — the weight of the minimum spanning tree in the graph.",
+      "checker_review": "Unique numeric optimum; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1053-D",
+      "rating_band": "2400+",
+      "difficulty": 2900,
+      "checker": "tokens",
+      "output_requirement": "Print one integer — the maximum number of different tuples modulo 10^9 + 7.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-652-F",
+      "rating_band": "2400+",
+      "difficulty": 2800,
+      "checker": "tokens",
+      "output_requirement": "Print n integers xj — the position of the j-th ant after t units of time. The ants are numbered from 1 to n in order of their appearing in input.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-576-D",
+      "rating_band": "2400+",
+      "difficulty": 2700,
+      "checker": "tokens",
+      "output_requirement": "Print \"Impossible\" (without the quotes), if it is impossible to get from city 1 to city n using the airways.\n\nBut if there is at least one way, print a single integer — the minimum number of flights you need to make to get to the destination point.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1438-E",
+      "rating_band": "2400+",
+      "difficulty": 2500,
+      "checker": "tokens",
+      "output_requirement": "Output a single integer — the number of good subarrays.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-879-E",
+      "rating_band": "2400+",
+      "difficulty": 2700,
+      "checker": "tokens",
+      "output_requirement": "For each of the n tournaments output the number of contenders who can win.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1425-I",
+      "rating_band": "2400+",
+      "difficulty": 2800,
+      "checker": "tokens",
+      "output_requirement": "Output Q lines, line i gives the sum of distances from the harvested bushes to X_i, and the number of harvested bushes.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-283-D",
+      "rating_band": "2400+",
+      "difficulty": 2400,
+      "checker": "tokens",
+      "output_requirement": "A single integer, the minimum number of ai that must be changed to make the sequence cool.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1119-H",
+      "rating_band": "2400+",
+      "difficulty": 3200,
+      "checker": "tokens",
+      "output_requirement": "Print a single line containing 2^{k} integers. The i-th of them should be the number of ways to choose exactly one integer from each array so that their XOR is equal to t = i-1 modulo 998244353.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1495-E",
+      "rating_band": "2400+",
+      "difficulty": 3200,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer \\left( ∏_{i=1}^{n} ((ans_i ⊕ i^2)+1)\\right) mod 10^9+7, where ⊕ denotes the [bitwise XOR operation](https://en.wikipedia.org/wiki/Bitwise_operation#XOR).",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1326-F2",
+      "rating_band": "2400+",
+      "difficulty": 3200,
+      "checker": "tokens",
+      "output_requirement": "Print 2^{n-1} space-separated integers. For each 0 ≤ x < 2^{n-1}:\n\n  * Let's consider a string s of length n-1, such that s_i = ⌊ \\frac{x}{2^{i-1}} ⌋ mod 2 for all 1 ≤ i ≤ n - 1. \n  * The (x+1)-th number should be equal to the required answer for s.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-838-C",
+      "rating_band": "2400+",
+      "difficulty": 2800,
+      "checker": "tokens",
+      "output_requirement": "Print a single integer, the number of winning words for Alice, modulo p.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1423-L",
+      "rating_band": "2400+",
+      "difficulty": 2600,
+      "checker": "tokens",
+      "output_requirement": "Print D lines, one for each day. In the i^{th} line, print the minimum number of switches that need to be flipped on day i, or -1 if it's impossible to turn all the lights off.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1384-E",
+      "rating_band": "2400+",
+      "difficulty": 3100,
+      "checker": "tokens",
+      "output_requirement": "For each test case:\n\nPrint on a single line the smallest number of moves she has to do to make strings equal to each other (A = B) or -1 if there is no way to make them equal.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-725-G",
+      "rating_band": "2400+",
+      "difficulty": 3300,
+      "checker": "tokens",
+      "output_requirement": "Print m integers — the i-th of them is the moment of time when the answer for the i-th message will be received by the initiator.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-55-D",
+      "rating_band": "2400+",
+      "difficulty": 2500,
+      "checker": "tokens",
+      "output_requirement": "Output should contain t numbers — answers to the queries, one number per line — quantities of beautiful numbers in given intervals (from li to ri, inclusively).",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1468-B",
+      "rating_band": "2400+",
+      "difficulty": 2900,
+      "checker": "tokens",
+      "output_requirement": "Print m integers: for each consumer demand, print the unattractiveness of the bakery.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1132-G",
+      "rating_band": "2400+",
+      "difficulty": 2400,
+      "checker": "tokens",
+      "output_requirement": "Print n - k + 1 integers — the maximum lengths of greedy subsequences of each subsegment having length k. The first number should correspond to subsegment a[1..k], the second — to subsegment a[2..k + 1], and so on.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1442-C",
+      "rating_band": "2400+",
+      "difficulty": 2400,
+      "checker": "tokens",
+      "output_requirement": "Print one integer: the minimum required time modulo 998 244 353.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1038-F",
+      "rating_band": "2400+",
+      "difficulty": 2900,
+      "checker": "tokens",
+      "output_requirement": "Print the only integer — the number of distinct cyclical binary strings t, which contain s as a substring.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    },
+    {
+      "dataset": "codecontests",
+      "id": "cf-1197-F",
+      "rating_band": "2400+",
+      "difficulty": 2700,
+      "checker": "tokens",
+      "output_requirement": "Print one integer: the number of good colorings, taken modulo 998244353.",
+      "checker_review": "Unique required scalar/vector/string or explicitly fixed optimal output; whitespace tokens"
+    }
+  ],
+  "purpose": "Expanded comparison with frozen optional-verifier guidance. One independent attempt per condition and task.",
+  "screening_exclusions": [
+    {
+      "id": "cf-491-A",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-686-B",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-1436-B",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-322-A",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-4-A",
+      "reason": "Source reference sanity check failed",
+      "stage": "reference_setup"
+    },
+    {
+      "id": "cf-1165-C",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-1266-C",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-489-C",
+      "reason": "Source reference sanity check failed",
+      "stage": "reference_tests"
+    },
+    {
+      "id": "cf-681-C",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-1316-C",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-146-D",
+      "reason": "Source reference sanity check failed",
+      "stage": "reference_tests"
+    },
+    {
+      "id": "cf-12-E",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-323-B",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-762-C",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-1345-E",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-1205-F",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-91-E",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-521-E",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-1491-G",
+      "reason": "Output allows multiple solutions; requires a semantic checker"
+    },
+    {
+      "id": "cf-121-E",
+      "reason": "Source reference sanity check failed",
+      "stage": "reference_tests"
+    },
+    {
+      "id": "cf-1036-F",
+      "reason": "Source reference sanity check failed",
+      "stage": "reference_tests"
+    },
+    {
+      "id": "cf-171-G",
+      "reason": "Missing or underspecified problem body; unused reserve candidate"
+    },
+    {
+      "id": "cf-409-C",
+      "reason": "Missing or underspecified problem body; unused reserve candidate"
+    },
+    {
+      "id": "cf-670-D2",
+      "reason": "Depends on previous problem statement; missing magic-powder semantics"
+    },
+    {
+      "id": "cf-690-A2",
+      "reason": "Essential rules depend on previous subtask"
+    },
+    {
+      "id": "cf-913-C",
+      "reason": "Corrupted exponent in defining bottle-volume formula"
+    }
+  ],
+  "criteria": {
+    "primary": "Fraction passing all original private tests, paired across conditions.",
+    "secondary": "Actual verifier execution, diagnostics, and subsequent revisions. Command mentions alone are not execution.",
+    "interpretation": "Report all tasks and rating bands. No task removal or replacement based on agent outcomes."
+  }
+}

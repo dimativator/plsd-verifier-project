@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\na = list(map(int,input().split()))\nif n % 2 == 0 or a[0] % 2 == 0 or a[-1] % 2 == 0:\n    print(\"NO\")\nelse:\n    print(\"YES\")"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  cin >> n;\n  int arr[n];\n  for (int i = 0; i < n; i++) {\n    cin >> arr[i];\n    if (arr[0] % 2 == 0) {\n      cout << \"No\\n\";\n      return 0;\n    }\n  }\n  if (n % 2 != 0 && arr[0] % 2 != 0 && arr[n - 1] % 2 != 0)\n    cout << \"YES\\n\";\n  else\n    cout << \"NO\\n\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class Substr {\n    public static void main(String[] args){\n        Scanner sc=new Scanner(System.in);\n        int n=sc.nextInt();\n        int x=sc.nextInt();\n        if(n%2==0 || x%2==0)\n            System.out.println(\"No\");\n        else{\n            for(int i=1;i<n;i++)\n                x=sc.nextInt();\n            if(x%2==0)\n                System.out.println(\"No\");\n            else\n                System.out.println(\"Yes\");\n                \n        }\n    }\n}"
+  }
+]

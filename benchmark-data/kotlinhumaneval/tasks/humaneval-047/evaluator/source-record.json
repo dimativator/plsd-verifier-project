@@ -1,0 +1,19 @@
+{
+  "task_id": "HumanEval_kotlin/47",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Return 2^n modulo p (be aware of numerics).\n * >>> modp(3, 5)\n * 3\n * >>> modp(1101, 101)\n * 2\n * >>> modp(0, 101)\n * 1\n * >>> modp(3, 11)\n * 8\n * >>> modp(100, 101)\n * 1\n *\n */\nfun modp(n: Int, p: Int): Int {\n",
+  "entry_point": "modp",
+  "test": "fun main() {\n    var arg00: Int = 3\n    var arg01: Int = 5\n    var x0: Int = modp(arg00, arg01)\n    var v0: Int = 3\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: Int = 1101\n    var arg11: Int = 101\n    var x1: Int = modp(arg10, arg11)\n    var v1: Int = 2\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: Int = 0\n    var arg21: Int = 101\n    var x2: Int = modp(arg20, arg21)\n    var v2: Int = 1\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30: Int = 3\n    var arg31: Int = 11\n    var x3: Int = modp(arg30, arg31)\n    var v3: Int = 8\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40: Int = 100\n    var arg41: Int = 101\n    var x4: Int = modp(arg40, arg41)\n    var v4: Int = 1\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50: Int = 30\n    var arg51: Int = 5\n    var x5: Int = modp(arg50, arg51)\n    var v5: Int = 4\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n    var arg60: Int = 31\n    var arg61: Int = 5\n    var x6: Int = modp(arg60, arg61)\n    var v6: Int = 3\n    if (x6 != v6) {\n        throw Exception(\"Exception -- test case 6 did not pass. x6 = \" + x6)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Return 2^n modulo p (be aware of numerics).\n * >>> modp(3, 5)\n * 3\n * >>> modp(1101, 101)\n * 2\n * >>> modp(0, 101)\n * 1\n * >>> modp(3, 11)\n * 8\n * >>> modp(100, 101)\n * 1\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun modp(n: Int, p: Int): Int {",
+    "    var answer = 1",
+    "    repeat(n) {",
+    "        answer = (answer * 2) % p",
+    "    }",
+    "    return answer",
+    "}",
+    "",
+    ""
+  ]
+}

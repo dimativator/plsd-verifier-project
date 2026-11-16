@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a, b = map(int, input().split())\n\nif a == b:\n  print ('infinity')\nelif b > a:\n  print (0)\nelse:\n  a -= b\n  i = 1\n  cont = 0\n\n  while (i*i) <= a:\n    if (a % i) == 0:\n      if i > b:\n        cont += 1\n      if (a/i) > b and (i*i) != a:\n        cont += 1\n    i += 1\n  print (cont)\n\t \t \t \t\t\t \t       \t\t\t\t \t\t   \t\t"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int inf = 1e9;\nconst int MOD = 1e9 + 7;\nconst int N = 100100;\nint a, b;\nint main() {\n  cin >> a >> b;\n  if (a == b) {\n    cout << \"infinity\";\n    return 0;\n  }\n  if (a < b) {\n    cout << 0;\n    return 0;\n  }\n  int x = a - b;\n  int k = 0;\n  for (int i = 1; i * i <= x; i++)\n    if (x % i == 0) {\n      if (a % i == b) k++;\n      if (i != x / i && a % (x / i) == b) k++;\n    }\n  cout << k;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "/* package whatever; // don't place package name! */\n\nimport java.util.*;\nimport java.lang.*;\nimport java.io.*;\n\n/* Name of the class has to be \"Main\" only if the class is public. */\npublic class Ideone\n{\n    public static void main (String[] args) throws java.lang.Exception\n    {\n        Scanner sc = new Scanner(System.in);\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        int counter = 0;\n        if(a==b){\n            System.out.println(\"infinity\");\n        }\n        else{\n            for(int x = 1;x*x<=(a-b);x++){\n                if((a-b)%x==0){\n                    if(x*x==(a-b)){\n                        if(x>b){\n                        counter++;\n                        }\n                    }\n                    else{\n                        if(x>b){\n                            counter++;\n                        }\n                        if((a-b)/x>b){\n                            counter++;\n                        }\n                    }\n                }\n            }\n            System.out.println(counter);\n        }\n        \n    }\n}"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nfi = list(map(int, input().split()))\nfi2 = list(range(n))\ni = 0\nwhile i < n:\n  fi2[fi[i] - 1] = i\n  i += 1\npos = fi2[0]\ni = 1\nd = 0\nwhile i < n:\n  d += abs(fi2[i] - pos)\n  pos = fi2[i]\n  i += 1\nprint(d)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nstruct debugger {\n  template <typename T>\n  debugger& operator,(const T& v) {\n    cerr << v << \" \";\n    return *this;\n  }\n} dbg;\nclass c {\n public:\n  int val, pos;\n  c(int v, int p) : val(v), pos(p) {}\n  c() {}\n};\nint main() {\n  int n;\n  cin >> n;\n  vector<c> nums(n);\n  for (int i = 0; i < n; i++) {\n    int f;\n    cin >> f;\n    c num(f, i);\n    nums[i] = num;\n  }\n  sort(nums.begin(), nums.end(), [](c a, c b) { return a.val < b.val; });\n  long long ans = 0;\n  for (int i = 1; i < nums.size(); i++) {\n    ans += abs(nums[i].pos - nums[i - 1].pos);\n  }\n  cout << ans << endl;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "//package SecondSemester;\n\n\nimport java.lang.*;\nimport java.util.*;\nimport java.lang.Math;\n\npublic class HDD {\n\tpublic HDD(){\n\n\t}\n\n\tpublic void run(){\n\t\tScanner scan = new Scanner(System.in);\n\t\tint n = scan.nextInt();\n\t\tint[] nums = new int[n];\n\t\tint[] real = new int[n];\n\t\tfor(int i = 0; i < n; i++){\n\t\t\tnums[i] = scan.nextInt();\n\t\t}\n\t\tint j = 0;\n\t\tfor(int num: nums){\n\t\t\treal[num-1] = j;\n\t\t\tj++;\n\t\t}\n\t\tlong total = 0;\n\t\tfor(int i = 0; i < real.length-1; i++){\n\t\t\ttotal += Math.abs((real[i]- real[i+1]));\n\t\t}\n\t\tSystem.out.println(total);\n\t\t\n\t}\n\n\tpublic static void main(String[] args){\n\t\tHDD hdd = new HDD();\n\t\thdd.run();\n\t}\n}"
+  }
+]

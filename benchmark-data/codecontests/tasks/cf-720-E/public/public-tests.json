@@ -1,0 +1,8 @@
+{
+  "input": [
+    "3\n2\n42\nabcdefghij\njihgfedcba\n2\n42\naaaaaaaaaa\naaaaaaaaaa\n1\n2\nabcdabcdff\n"
+  ],
+  "output": [
+    "0\n58\n2\n"
+  ]
+}

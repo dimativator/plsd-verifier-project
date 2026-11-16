@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\ndata = input().split()\nmax = 0\nfor i in range(n):\n    back = max\n    if max<int(data[i]):\n        max=int(data[i])\n    if i==0 and data[i]!=\"0\":\n        print(1)\n        exit()\n    elif int(data[i])>back+1:\n        print(i+1)\n        exit()\nif int(data[i])<=back+1:\n    print(-1)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\ntemplate <typename Arg1>\nvoid __f(const char* name, Arg1&& arg1) {\n  cerr << name << \" : \" << arg1 << std::endl;\n}\ntemplate <typename Arg1, typename... Args>\nvoid __f(const char* names, Arg1&& arg1, Args&&... args) {\n  const char* comma = strchr(names + 1, ',');\n  cerr.write(names, comma - names) << \" : \" << arg1 << \" | \";\n  __f(comma + 1, args...);\n}\nlong long int XpowerY(long long int x, long long int y, long long int m) {\n  long long int ans = 1;\n  x = x % m;\n  while (y > 0) {\n    if (y % 2 == 1) ans = (ans * x) % m;\n    x = ((x % m) * (x % m)) % m;\n    y = y >> 1;\n  }\n  return ans % m;\n}\nset<int> st;\n;\nint main() {\n  int n;\n  cin >> n;\n  for (int i = 1; i <= n; i++) {\n    int x;\n    cin >> x;\n    if (i == 1) {\n      if (x != 0) {\n        cout << 1 << endl;\n        return 0;\n      } else\n        st.insert(0);\n      continue;\n    }\n    if ((st.size() == x and *st.rbegin() == x - 1) || st.find(x) != st.end()) {\n      st.insert(x);\n      continue;\n    }\n    cout << i << endl;\n    return 0;\n  }\n  cout << -1 << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.math.*;\nimport java.text.*;\nimport java.util.*;\nimport java.util.regex.*;\n\npublic class Solution {\n    public static int serch(int[] a,int n){\n        int k = 0;\n        for(int i=0;i<n;i++){\n            if(a[i]>k) return i+1;\n            if(a[i]==k) k++;\n        }\n        return -1;\n    }\n    public static void main(String[] args) throws IOException {\n        \n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int[] a = new int[n+1];\n        for(int i=0;i<n;i++) a[i] = sc.nextInt();\n        int k  = serch(a,n);\n        System.out.println(k);\n    }\n}\n\n\n\n\n\n\n\n\n\n\n"
+  }
+]

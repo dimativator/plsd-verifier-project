@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\n\nfor _ in range(n):\n  a = input()\n  print(a)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  ios::sync_with_stdio(0);\n  cin.tie(0);\n  cout.tie(0);\n  long long int t;\n  cin >> t;\n  while (t--) {\n    long long int n;\n    cin >> n;\n    cout << n << endl;\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\n\npublic class Z_A {\n\tpublic static void main(String[] args) {\n\t\tScanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));\n\t\tint t=in.nextInt();\n\t\tfor(int a=0;a<t;a++) {\n\t\t\tint n=in.nextInt();\n\t\t\tSystem.out.println(n);\n\t\t}\n\t}\n}\n"
+  }
+]

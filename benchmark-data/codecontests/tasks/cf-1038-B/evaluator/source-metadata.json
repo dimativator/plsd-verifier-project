@@ -1,0 +1,35 @@
+{
+  "name": "1038_B. Non-Coprime Partition",
+  "description": "Find out if it is possible to partition the first n positive integers into two non-empty disjoint sets S_1 and S_2 such that:\n\ngcd(sum(S_1), sum(S_2)) > 1 \n\nHere sum(S) denotes the sum of all elements present in set S and gcd means the[greatest common divisor](https://en.wikipedia.org/wiki/Greatest_common_divisor).\n\nEvery integer number from 1 to n should be present in exactly one of S_1 or S_2.\n\nInput\n\nThe only line of the input contains a single integer n (1 ≤ n ≤ 45 000)\n\nOutput\n\nIf such partition doesn't exist, print \"No\" (quotes for clarity).\n\nOtherwise, print \"Yes\" (quotes for clarity), followed by two lines, describing S_1 and S_2 respectively.\n\nEach set description starts with the set size, followed by the elements of the set in any order. Each set must be non-empty.\n\nIf there are multiple possible partitions — print any of them.\n\nExamples\n\nInput\n\n1\n\n\nOutput\n\nNo\n\nInput\n\n3\n\n\nOutput\n\nYes\n1 2\n2 1 3 \n\nNote\n\nIn the first example, there is no way to partition a single number into two non-empty sets, hence the answer is \"No\".\n\nIn the second example, the sums of the sets are 2 and 4 respectively. The gcd(2, 4) = 2 > 1, hence that is one of the possible answers.",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 1100,
+  "cf_contest_id": 1038,
+  "cf_index": "B",
+  "cf_tags": [
+    "constructive algorithms",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00014-of-00039-dc3ebb07a3cba8e4.parquet",
+  "source_row": 116,
+  "task_id": "codecontests/cf-1038-B",
+  "rating_band": "800-1199",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/1038/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

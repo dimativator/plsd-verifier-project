@@ -1,0 +1,35 @@
+{
+  "name": "334_E. Lucky Tickets",
+  "description": "Gerald has a friend, Pollard. Pollard is interested in lucky tickets (ticket is a sequence of digits). At first he thought that a ticket is lucky if between some its digits we can add arithmetic signs and brackets so that the result obtained by the arithmetic expression was number 100. But he quickly analyzed all such tickets and moved on to a more general question. Now he explores k-lucky tickets.\n\nPollard sais that a ticket is k-lucky if we can add arithmetic operation signs between its digits to the left or right of them (i.e., \"+\", \"-\", \" × \") and brackets so as to obtain the correct arithmetic expression whose value would equal k. For example, ticket \"224201016\" is 1000-lucky as ( - 2 - (2 + 4)) × (2 + 0) + 1016 = 1000.\n\nPollard was so carried away by the lucky tickets that he signed up for a seminar on lucky tickets and, as far as Gerald knows, Pollard will attend it daily at 7 pm in some famous institute and will commute to it in the same tram for m days. In this tram tickets have eight digits. And Gerald wants to make a surprise for Pollard: each day Pollard will receive a tram k-lucky ticket. The conductor has already agreed to give Pollard certain tickets during all these m days and he only wants Gerald to tell him what kind of tickets to give out. In this regard, help Gerald pick exactly m distinct k-lucky tickets.\n\nInput\n\nThe single line contains two integers k and m (0 ≤ k ≤ 104, 1 ≤ m ≤ 3·105).\n\nOutput\n\nPrint m lines. Each line must contain exactly 8 digits — the k-winning ticket. The tickets may begin with 0, all tickets must be distinct. If there are more than m distinct k-lucky tickets, print any m of them. It is guaranteed that at least m distinct k-lucky tickets exist. The tickets can be printed in any order.\n\nExamples\n\nInput\n\n0 3\n\n\nOutput\n\n00000000\n00000001\n00000002\n\n\nInput\n\n7 4\n\n\nOutput\n\n00000007\n00000016\n00000017\n00000018",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2700,
+  "cf_contest_id": 334,
+  "cf_index": "E",
+  "cf_tags": [
+    "brute force",
+    "constructive algorithms"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 6,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00003-of-00039-e3822fccad6e083a.parquet",
+  "source_row": 160,
+  "task_id": "codecontests/cf-334-E",
+  "rating_band": "2400+",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/334/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

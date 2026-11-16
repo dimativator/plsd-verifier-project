@@ -1,0 +1,36 @@
+{
+  "name": "406_B. Toy Sum",
+  "description": "Little Chris is very keen on his toy blocks. His teacher, however, wants Chris to solve more problems, so he decided to play a trick on Chris.\n\nThere are exactly s blocks in Chris's set, each block has a unique number from 1 to s. Chris's teacher picks a subset of blocks X and keeps it to himself. He will give them back only if Chris can pick such a non-empty subset Y from the remaining blocks, that the equality holds: \n\n<image> \"Are you kidding me?\", asks Chris.\n\nFor example, consider a case where s = 8 and Chris's teacher took the blocks with numbers 1, 4 and 5. One way for Chris to choose a set is to pick the blocks with numbers 3 and 6, see figure. Then the required sums would be equal: (1 - 1) + (4 - 1) + (5 - 1) = (8 - 3) + (8 - 6) = 7.\n\n<image>\n\nHowever, now Chris has exactly s = 106 blocks. Given the set X of blocks his teacher chooses, help Chris to find the required set Y!\n\nInput\n\nThe first line of input contains a single integer n (1 ≤ n ≤ 5·105), the number of blocks in the set X. The next line contains n distinct space-separated integers x1, x2, ..., xn (1 ≤ xi ≤ 106), the numbers of the blocks in X.\n\nNote: since the size of the input and output could be very large, don't use slow output techniques in your language. For example, do not use input and output streams (cin, cout) in C++.\n\nOutput\n\nIn the first line of output print a single integer m (1 ≤ m ≤ 106 - n), the number of blocks in the set Y. In the next line output m distinct space-separated integers y1, y2, ..., ym (1 ≤ yi ≤ 106), such that the required equality holds. The sets X and Y should not intersect, i.e. xi ≠ yj for all i, j (1 ≤ i ≤ n; 1 ≤ j ≤ m). It is guaranteed that at least one solution always exists. If there are multiple solutions, output any of them.\n\nExamples\n\nInput\n\n3\n1 4 5\n\n\nOutput\n\n2\n999993 1000000\n\nInput\n\n1\n1\n\n\nOutput\n\n1\n1000000 ",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 1700,
+  "cf_contest_id": 406,
+  "cf_index": "B",
+  "cf_tags": [
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00005-of-00039-b7580d2d846c2136.parquet",
+  "source_row": 1,
+  "task_id": "codecontests/cf-406-B",
+  "rating_band": "1600-1999",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/406/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

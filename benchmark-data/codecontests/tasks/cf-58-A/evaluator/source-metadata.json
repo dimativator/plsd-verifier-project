@@ -1,0 +1,35 @@
+{
+  "name": "58_A. Chat room",
+  "description": "Vasya has recently learned to type and log on to the Internet. He immediately entered a chat room and decided to say hello to everybody. Vasya typed the word s. It is considered that Vasya managed to say hello if several letters can be deleted from the typed word so that it resulted in the word \"hello\". For example, if Vasya types the word \"ahhellllloou\", it will be considered that he said hello, and if he types \"hlelo\", it will be considered that Vasya got misunderstood and he didn't manage to say hello. Determine whether Vasya managed to say hello by the given word s.\n\nInput\n\nThe first and only line contains the word s, which Vasya typed. This word consisits of small Latin letters, its length is no less that 1 and no more than 100 letters.\n\nOutput\n\nIf Vasya managed to say hello, print \"YES\", otherwise print \"NO\".\n\nExamples\n\nInput\n\nahhellllloou\n\n\nOutput\n\nYES\n\n\nInput\n\nhlelo\n\n\nOutput\n\nNO",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 1000,
+  "cf_contest_id": 58,
+  "cf_index": "A",
+  "cf_tags": [
+    "greedy",
+    "strings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00013-of-00039-30b8c3829ee3b962.parquet",
+  "source_row": 188,
+  "task_id": "codecontests/cf-58-A",
+  "rating_band": "800-1199",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/58/A",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "input": [
+    "3 6\nadd 11 467\nadd 9 879\ndecay\nadd 15 551\nadd 14 473\nadd 14 104\n",
+    "7 10\ndecay\nadd 10 9923\ndecay\nadd 21 2047\ndecay\nadd 4 8696\ndecay\ndecay\nadd 204 4988\nadd 230 1977\n",
+    "3 6\ndecay\ndecay\nadd 6 872\ndecay\nadd 13 813\nadd 8 531\n",
+    "9 6\nadd 593 652\ndecay\ndecay\ndecay\ndecay\ndecay\n",
+    "3 6\nadd 2 101\nadd 6 830\nadd 11 899\nadd 2 421\ndecay\ndecay\n",
+    "7 50\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\nadd 121 5677\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\nadd 102 1582\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\nadd 187 7032\nadd 194 6485\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\nadd 202 6898\ndecay\ndecay\ndecay\ndecay\ndecay\ndecay\n"
+  ],
+  "output": [
+    "1112.50000\n",
+    "0.00000\n9923.00000\n11842.06250\n16190.06250\n16190.06250\n",
+    "0.00000\n0.00000\n872.00000\n",
+    "652.00000\n652.00000\n652.00000\n652.00000\n652.00000\n",
+    "1290.50000\n1290.50000\n",
+    "0.00000\n0.00000\n0.00000\n0.00000\n0.00000\n0.00000\n0.00000\n5677.00000\n5677.00000\n5677.00000\n5677.00000\n5677.00000\n5677.00000\n5677.00000\n5677.00000\n5677.00000\n5677.00000\n6468.00000\n6468.00000\n6468.00000\n6468.00000\n6468.00000\n6468.00000\n6468.00000\n6468.00000\n6468.00000\n6468.00000\n6468.00000\n6468.00000\n6468.00000\n6468.00000\n6468.00000\n10776.12500\n10776.12500\n10776.12500\n10776.12500\n10776.12500\n10776.12500\n10776.12500\n16902.37500\n16902.37500\n16902.37500\n16902.37500\n16902.37500\n16902.37500\n"
+  ]
+}

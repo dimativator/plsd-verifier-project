@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "x = int(input())\n\nfeelings = ''\nfor _ in range(x):\n\tif _ == x - 1:\n\t\tif _ % 2 != 0:\n\t\t\tfeelings = feelings + 'I love it '\n\t\telse:\n\t\t\tfeelings = feelings + 'I hate it '\n\telse:\n\t\tif _ % 2 != 0:\n\t\t\tfeelings = feelings + 'I love that '\n\t\telse:\n\t\t\tfeelings = feelings + 'I hate that '\t\nprint(feelings)\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  cin >> n;\n  string s_begin = \"I hate \", s_end = \"it\";\n  string y = \"that I hate \", x = \"that I love \";\n  cout << s_begin;\n  for (int i = 2; i <= n; i++) {\n    if (i % 2 == 0)\n      cout << x;\n    else\n      cout << y;\n  }\n  cout << s_end << endl;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\npublic class Hulk2{\n\tpublic static void main(String[]args){\n\t\tScanner apple = new Scanner(System.in);\n\t\tint n = apple.nextInt();\n\t\tint i;\n\t\t   for (i = 0; i < n; i++) {\n            if (i % 2 == 0) {\n                System.out.printf(\"I hate \");\n            }\n            else {\n                System.out.printf(\"I love \");\n            }\n            if (i < n - 1) {\n                System.out.printf(\"that \");\n            }\n        }\n        System.out.printf(\"it\");\n}\n}"
+  }
+]

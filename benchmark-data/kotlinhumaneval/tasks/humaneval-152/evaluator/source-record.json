@@ -1,0 +1,17 @@
+{
+  "task_id": "HumanEval_kotlin/152",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Given an integer. return a tuple that has the number of even and odd digits respectively.\n\n *  Example:\n *     even_odd_count(-12) ==> (1, 1)\n *     even_odd_count(123) ==> (1, 2)\n *\n */\nfun evenOddCount(num : Int) : List<Int> {\n",
+  "entry_point": "evenOddCount",
+  "test": "fun main() {\n    var arg00 : Int = 7\n    var x0 : List<Int> = evenOddCount(arg00);\n    var v0 : List<Int> = mutableListOf(0, 1);\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10 : Int = -78\n    var x1 : List<Int> = evenOddCount(arg10);\n    var v1 : List<Int> = mutableListOf(1, 1);\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20 : Int = 3452\n    var x2 : List<Int> = evenOddCount(arg20);\n    var v2 : List<Int> = mutableListOf(2, 2);\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30 : Int = 346211\n    var x3 : List<Int> = evenOddCount(arg30);\n    var v3 : List<Int> = mutableListOf(3, 3);\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40 : Int = -345821\n    var x4 : List<Int> = evenOddCount(arg40);\n    var v4 : List<Int> = mutableListOf(3, 3);\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50 : Int = -2\n    var x5 : List<Int> = evenOddCount(arg50);\n    var v5 : List<Int> = mutableListOf(1, 0);\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n    var arg60 : Int = -45347\n    var x6 : List<Int> = evenOddCount(arg60);\n    var v6 : List<Int> = mutableListOf(2, 3);\n    if (x6 != v6) {\n        throw Exception(\"Exception -- test case 6 did not pass. x6 = \" + x6)\n    }\n\n    var arg70 : Int = 0\n    var x7 : List<Int> = evenOddCount(arg70);\n    var v7 : List<Int> = mutableListOf(1, 0);\n    if (x7 != v7) {\n        throw Exception(\"Exception -- test case 7 did not pass. x7 = \" + x7)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Given an integer. return a tuple that has the number of even and odd digits respectively.\n\n *  Example:\n *     even_odd_count(-12) ==> (1, 1)\n *     even_odd_count(123) ==> (1, 2)\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun evenOddCount(num : Int) : List<Int> {",
+    "    val digits = num.toString().filter { it.isDigit() }",
+    "    val evenCount = digits.count { (it - '0') % 2 == 0 }",
+    "\treturn listOf(evenCount, digits.length - evenCount)",
+    "}",
+    "",
+    ""
+  ]
+}

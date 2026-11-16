@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "def func(n):\n    x = input()\n    ans = 0\n    l_counter = x.count('L')\n    r_counter = x.count('R')\n    y = 0 - l_counter\n    z = 0 + r_counter\n    for i in range(y,z+1):\n        ans += 1\n    print(ans)\nn = int(input())\nfunc(n)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int N = 1e6 + 10;\nconst int inf = 0x3f3f3f3f;\nconst int inf2 = 1e18 + 10;\nconst int mod = 1000000007;\nint main() {\n  int n;\n  char str[100100];\n  scanf(\"%d\", &n);\n  scanf(\"%*s\", str);\n  printf(\"%d\\n\", n + 1);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class Main{\n    public static void main(String[] args)\n    {\n        Scanner sc=new Scanner(System.in);\n        String n=sc.nextLine();\n        String s=sc.nextLine();\n        \n        System.out.println(s.length()+1);\n    }\n}"
+  }
+]

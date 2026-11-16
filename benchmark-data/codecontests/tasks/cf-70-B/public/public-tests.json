@@ -1,0 +1,12 @@
+{
+  "input": [
+    "25\nHello. I am a little walrus.\n",
+    "2\nHow are you?\n",
+    "19\nHello! Do you like fish? Why?\n"
+  ],
+  "output": [
+    "2\n",
+    "Impossible\n",
+    "3\n"
+  ]
+}

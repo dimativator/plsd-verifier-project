@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,k = map(int,input().split())\ns = list(map(int,input().split()))\np = list(map(int,input().split()))\nr = {}\nr2 = []\nfor i in range(n):\n    if s[i] in r:\n        if r[s[i]]>p[i]:\n            r2.append(p[i])\n        else:\n            r2.append(r[s[i]])\n            r[s[i]] = p[i]\n    else:\n        r[s[i]] = p[i]\nr1 = k-len(r)\n#print(r,r2)\nprint(sum(sorted(r2)[:r1]))\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst long long MOD = 1e9 + 7;\nint main() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(NULL);\n  cout.tie(NULL);\n  long long n, k, ans = 0, i;\n  cin >> n >> k;\n  vector<int> a(n), b(n), d(k + 1), e;\n  vector<pair<int, int>> c(n);\n  for (auto &it : a) cin >> it;\n  ;\n  for (auto &it : b) cin >> it;\n  ;\n  for (i = 0; i < n; ++i) {\n    c[i] = {b[i], a[i]};\n  }\n  sort(c.begin(), c.end());\n  reverse(c.begin(), c.end());\n  for (i = 0; i < n; ++i) {\n    if (d[c[i].second]) {\n      e.push_back(c[i].first);\n    } else {\n      --k;\n      d[c[i].second] = 1;\n    }\n  }\n  sort(e.begin(), e.end());\n  for (i = 0; i < k; ++i) {\n    ans += e[i] * 1ll;\n  }\n  cout << ans;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.HashSet;\nimport java.util.Scanner;\n\npublic class Main{\n\n\tpublic static void main(String[] args) {\n\t\tScanner sc = new Scanner(System.in);\n\t\tint n = sc.nextInt();\n\t\tint k = sc.nextInt();\n\t\tint[] a = new int[n];\n\t\tint[] b = new int[n];\n\t\tfor(int i =0 ;i<n;i++)\n\t\t{\n\t\t\ta[i] = sc.nextInt();\n\t\t}\n\t\tfor(int i = 0;i<n;i++)\n\t\t{\n\t\t\tb[i] = sc.nextInt();\n\t\t}\n\t\tArrayList<Idler> list = new ArrayList<Idler>();\n\t\tfor(int i =0;i<n;i++)\n\t\t{\n\t\t\tIdler obj = new Idler();\n\t\t\tobj.setA(a[i]);\n\t\t\tobj.setT(b[i]);\n\t\t\tlist.add(obj);\n\t\t}\n\t\tCollections.sort(list);\n\t\tHashSet<Integer> set = new HashSet<Integer>();\n\t\tArrayList<Integer> lis = new ArrayList<Integer>();\n\t\tint count = 0;\n\t\tfor (Idler idler : list) {\n\t\t\tif(set.contains(idler.getA()))\n\t\t\t{\n\t\t\t\tlis.add(idler.getT());\n\t\t\t}\n\t\t\telse{\n\t\t\t\tset.add(idler.getA());\n\t\t\t\tcount++;\n\t\t\t}\n\t\t}\n\t\tCollections.sort(lis);\n\t\tint[] c = new int[lis.size()];\n\t\tint f = 0;\n\t\tfor (Integer integer : lis) {\n\t\t\tc[f] = integer;\n\t\t\tf++;\n\t\t}\n\t\tlong s = 0;\n\t\tfor(int i = 0;i<k-count;i++)\n\t\t{\n\t\t\ts+=c[i];\n\t\t}\n\t\tSystem.out.println(s);\n\t\tsc.close();\n\t}\n\n}\nclass Idler implements Comparable<Idler>{\n\tprivate int a;\n\tprivate int t;\n\tpublic int getA() {\n\t\treturn a;\n\t}\n\tpublic void setA(int a) {\n\t\tthis.a = a;\n\t}\n\tpublic int getT() {\n\t\treturn t;\n\t}\n\tpublic void setT(int t) {\n\t\tthis.t = t;\n\t}\n\tpublic int compareTo(Idler o) {\n\t\treturn o.t-this.t;\n\t}\n\t\n}\n"
+  }
+]

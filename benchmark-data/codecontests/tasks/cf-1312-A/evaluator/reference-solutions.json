@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "for i in range(int(input())):\n    a,b=input().split()\n    if int(b)<=2:\n        print(\"NO\")\n    elif int(a)%int(b)==0:\n        print(\"YES\")\n    else:\n        print(\"NO\")"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int t;\n  scanf(\"%d\", &t);\n  while (t--) {\n    int m, n;\n    scanf(\"%d %d\", &m, &n);\n    if (m % n == 0)\n      printf(\"YES\\n\");\n    else\n      printf(\"NO\\n\");\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\npublic class TwoRegular{\n    public static  void main(String args[]){\n        int t;\n        Scanner sc = new Scanner(System.in);\n        t = sc.nextInt();\n        for(int i = 0;i < t;i++){\n            int m,n;\n            n = sc.nextInt();\n            m = sc.nextInt();\n            if(n >= 3 && m >= 3 && n % m == 0){\n                System.out.println(\"YES\");\n            }else{\n                System.out.println(\"NO\");\n            }\n        }\n    }\n}"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "input": [
+    "eternalalexandersookeustzeouuanisafqaqautomaton\nnoiol\n",
+    "acacdddadaddcbbbbdacb\nbabbbcadddacacdaddbdc\n",
+    "yz\nzy\n",
+    "tqlrrtidhfpgevosrsya\nysrsvgphitrrqtldfeoa\n",
+    "babbaaababbbbabbaaaababbbaabababbaabbaababbaaabaabbabaabbaababababbaabaaabaaaaababbaabaaaaabaabbabaaababbbb\nbbaabbbbabbbbaaaaaababbbabaaabbbbabababbbaabbbbbabaababbaabaaabaabbababababaaaaabaabbabaaabaaaaaaaaaaaaabbb\n",
+    "dadebcabefcbaffce\ncffbfcaddebabecae\n",
+    "ebkkiajfffiiifcgheijbcdafkcdckgdakhicebfgkeiffjbkdbgjeb\nebffigfbciadcdfdbiehgciiifakbekijfffjcakckgkhekejbkdgjb\n",
+    "baabbaaaaa\nababa\n",
+    "cbaabccadacadbaacbadddcdabcacdbbabccbbcbbcbbaadcabadcbdcadddccbbbbdacdbcbaddacaadbcddadbabbdbbacabdd\ncccdacdabbacbbcacdca\n",
+    "d\nd\n",
+    "f\np\n"
+  ],
+  "output": [
+    "1920",
+    "64",
+    "2",
+    "2",
+    "284471294",
+    "2",
+    "12",
+    "120",
+    "773806867",
+    "2",
+    "0"
+  ]
+}

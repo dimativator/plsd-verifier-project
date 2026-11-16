@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import sys,math\nfrom collections import deque\n#input = sys.stdin.buffer.readline\n\n\ndef solve():\t\n\treturn;\n\n\n# for _ in range(int(input())):\n# \tsolve()\n\n\nn = int(input())\nh = input()\n\ncnt=0\nfor i in range(n):\n\ts = input()\n\tif h==s[:3] or h==s[-3:]:\n\t\tcnt+=1\n\nif cnt%2==0:\n\tprint(\"home\")\nelse:\n\tprint(\"contest\")\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nstring pat;\nint n;\nint bal;\nint main() {\n  cin >> n;\n  cin >> pat;\n  for (int i = 0; i < n; i++) {\n    string s;\n    cin >> s;\n    if (s[0] == pat[0] && s[1] == pat[1] && s[2] == pat[2]) bal++;\n    if (s[5] == pat[0] && s[6] == pat[1] && s[7] == pat[2]) bal--;\n  }\n  if (bal)\n    cout << \"contest\\n\";\n  else\n    cout << \"home\\n\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.IOException;\nimport java.io.BufferedReader;\nimport java.io.InputStreamReader;\npublic class submission{\n\tpublic static void main(String[] args) throws IOException\n\t{\n\t\tBufferedReader input=new BufferedReader(new InputStreamReader(System.in));\n\t\tint num=Integer.parseInt(input.readLine());\n\t\tString home=input.readLine();\n\t\tString[][] string=new String[num][2];\n\t\tfor(int i=0;i<num;++i)\n\t\t{\n\t\t\tString tmp=input.readLine();\n\t\t\tstring[i][0]=tmp.substring(0,3);\n\t\t\tstring[i][1]=tmp.substring(5);\n\t\t}\n\t\tint flag=1;\n\t\tfor(int i=0;i<num;++i)\n\t\t{\n\t\t\tflag=1;\n\t\t\tfor(int j=0;j<num;++j)\n\t\t\t{\n\n\t\t\t\tif(string[j][0].equals(string[i][1])==true && string[j][1].equals(string[i][0])==true)\n\t\t\t\t{\n\t\t\t\t\tstring[j][0]=\"*\";\n\t\t\t\t\tstring[j][1]=\"*\";\n\t\t\t\t\tstring[i][0]=\"*\";\n\t\t\t\t\tstring[i][1]=\"*\";\n\t\t\t\t\tflag=0;\n\t\t\t\t\tbreak;\n\t\t\t\t}\n\t\t\t}\n\t\t\tif(flag==1)\n\t\t\t{\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t\tif(flag==1)\n\t\t{\n\t\t\tSystem.out.println(\"contest\");\n\t\t}\n\t\telse\n\t\t{\n\t\t\tSystem.out.println(\"home\");\n\t\t}\n\t}\n}"
+  }
+]

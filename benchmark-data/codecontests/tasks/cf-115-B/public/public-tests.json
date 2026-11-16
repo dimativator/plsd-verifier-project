@@ -1,0 +1,12 @@
+{
+  "input": [
+    "4 5\nGWGGW\nGGWGG\nGWGGG\nWGGGG\n",
+    "3 3\nGWW\nWWW\nWWG\n",
+    "1 1\nG\n"
+  ],
+  "output": [
+    "11\n",
+    "7\n",
+    "0\n"
+  ]
+}

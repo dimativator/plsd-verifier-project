@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "def main():\n    n = int(input())\n    a = list(map(int, input().split()))\n    max_element = max(a) + 1\n    #print(max_element)\n    diff_freq = [0 for i in range(max_element)]\n    for i in range(n):\n        for j in range(i):\n            diff_freq[abs(a[i] - a[j])] += 1\n\n    largest = [0 for i in range(max_element)]\n    for i in range(max_element - 2, 0, -1):\n        largest[i] = largest[i + 1] + diff_freq[i + 1]\n\n    good_ones = 0\n\n    #print('diff_freq', diff_freq)\n    #print('largest', largest)\n\n    for i in range(max_element):\n        for j in range(max_element):\n            if i + j < max_element:\n                good_ones += diff_freq[i] * diff_freq[j] * largest[i + j]\n\n    #print(good_ones)\n    ans = good_ones / (((n*(n - 1)) / 2) ** 3)\n    print(ans)\nmain()"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nlong long t[2222];\nlong long p1[5555];\nlong long p2[20000];\nint main() {\n  long long n;\n  cin >> n;\n  for (long long i = 0; i < n; ++i) {\n    cin >> t[i];\n  }\n  sort(t, t + n);\n  for (long long i = 0; i < n; ++i) {\n    for (long long j = i + 1; j < n; ++j) {\n      p1[t[j] - t[i]]++;\n    }\n  }\n  for (long long i = 0; i < 5555; ++i) {\n    for (long long j = 0; j < 5555; ++j) {\n      p2[i + j] += p1[i] * p1[j];\n    }\n  }\n  long double ans = 0;\n  long double q = 0;\n  for (int i = 1; i < 5555; ++i) {\n    q += p2[i - 1];\n    ans += p1[i] * q;\n  }\n  ans /= (long double)n * (n - 1) * n * (n - 1) * n * (n - 1) / 8;\n  cout << fixed << setprecision(15) << ans << '\\n';\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class JerrysProtest\n{\n\tpublic static void main(String[] args)\n\t{\n\t\tScanner in = new Scanner(System.in);\n\t\t\n\t\tint n = in.nextInt();\n\t\t\n\t\tint[] array = new int[n];\n\t\tfor(int x = 0; x < n; x++)\n\t\t{\n\t\t\tarray[x] = in.nextInt();\n\t\t}\n\t\t\n\t\tArrays.sort(array);\n\t\t\n\t\tlong[] freq = new long[5000];\n\t\tfor(int y = 0; y < array.length; y++)\n\t\t{\n\t\t\tfor(int z = y + 1; z < array.length; z++)\n\t\t\t{\n\t\t\t\tfreq[array[z] - array[y]]++;\n\t\t\t}\n\t\t}\n\t\t\n\t\tlong[] sum = new long[freq.length + 1];\n\t\tfor(int a = freq.length - 1; a >= 0; a--)\n\t\t{\n\t\t\tsum[a] = sum[a + 1] + freq[a];\n\t\t}\n\t\t\n\t\tlong count = 0;\n\t\tfor(int a = 0; a < freq.length; a++)\n\t\t{\n\t\t\tfor(int b = 0; b < freq.length; b++)\n\t\t\t{\n\t\t\t\tif(a + b < 5000)\n\t\t\t\t{\n\t\t\t\t\tcount += freq[a] * freq[b] * sum[a + b + 1];\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t\n\t\tlong total = (n * (n - 1)) / 2;\n\t\ttotal = total * total * total;\n\t\t\n\t\tSystem.out.println((double)count / total);\n\t}\n}\n"
+  }
+]

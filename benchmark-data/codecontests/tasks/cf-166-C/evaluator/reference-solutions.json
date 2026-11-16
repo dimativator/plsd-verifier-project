@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, x = map(int, input().split())\na = list(map(int, input().split()))\nret = 0\nif x not in a:\n    a.append(x)\n    ret += 1\na.sort()\nwhile a[(len(a) + 1) // 2 - 1] != x:\n    a.append(x)\n    a.sort()\n    ret += 1\nprint(ret)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint arr[100005];\nint main() {\n  int n, x, ans = 0, t;\n  cin >> n >> x;\n  for (int i = 0; i < n; i++) cin >> arr[i];\n  sort(arr, arr + n);\n  t = n;\n  while (arr[(t - 1) / 2] != x) {\n    arr[t++] = x;\n    sort(arr, arr + t);\n    ans++;\n  }\n  cout << ans << \"\\n\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\nimport java.util.Arrays;\n\npublic class Main3{\n   public static void main(String[] Args){\n      \n\t   Scanner sc = new Scanner(System.in);\n\t   \n\t   int n = sc.nextInt();\n\t   int median = sc.nextInt();\n  \n       int[] a = new int[n + 1];\n       for (int i = 0; i < n; i++) {\n            a[i] = sc.nextInt();\n       }\n       a[n] = Integer.MAX_VALUE;\n       Arrays.sort(a);\n\t\n       int pos = 0, count = 0, cur_median = ((n + 1) / 2 - 1);\n       //1. Find the position of the median in the array\n       for (int i = 0; i < n; i++) {\n    \t   if (a[i] < median && a[i + 1] > median) {\n\t\t        count++;\n\t\t        n++;\n\t\t        pos = i + 1;\n\t\t   }\n    \t   else {\n               if (a[i] == median) {\n                   pos = i;\n                   if (i >= cur_median) {\n                       break;\n                   }\n               }\n           }\n\t\t}\n       //edge case to add to the beggining\n\t\tif (pos == 0 && a[0] != median) {\n\t\t    n++;\n\t\t    count++;\n\t\t}\n\t    // Figure out how many more we need to add to the set\n\t\twhile (pos != (cur_median = ((n + 1) / 2 - 1))){\n\t\t    if (pos < cur_median) {\n\t\t        pos++;\n\t\t    }\n\t\t    count++;\n\t\t    n++;\n\t\t}\n\t\tSystem.out.println(count);\n               // :(\n   }\n \n}"
+  }
+]

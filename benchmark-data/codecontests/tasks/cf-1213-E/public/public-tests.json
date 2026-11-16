@@ -1,0 +1,12 @@
+{
+  "input": [
+    "3\naa\nbc\n",
+    "1\ncb\nac\n",
+    "2\nab\nbc\n"
+  ],
+  "output": [
+    "YES\nacbacbacb",
+    "YES\nabc",
+    "YES\nacbacb"
+  ]
+}

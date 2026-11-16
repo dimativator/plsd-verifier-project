@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-047",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/47",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 7,
+  "public_test_count": 1,
+  "unexposed_test_count": 6,
+  "source_review_note": "Tests do not settle p=1, n=0 convention. Canonical returns 1 for n=0 rather than 1%p.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-047",
+  "public_dir": "tasks/humaneval-047/public",
+  "evaluator_dir": "tasks/humaneval-047/evaluator",
+  "metadata_file": "tasks/humaneval-047/task.json",
+  "evaluation_harness": "tasks/humaneval-047/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-047/evaluation.json"
+}

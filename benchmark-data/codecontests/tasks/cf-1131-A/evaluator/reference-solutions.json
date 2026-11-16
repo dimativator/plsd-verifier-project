@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "w1, h1, w2, h2 = map(int, input().split())\n\nif w2 > w1:\n    res = w1 + 1 +  h1 + h2 + 1 + w2  + 1 + h2 + (w1 - w2) + h1 + 1\nelse:\n    res = (w1 + h1 + h2) * 2 + 4\n\nprint(res)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long w1, h1, w2, h2;\n  cin >> w1 >> h1 >> w2 >> h2;\n  cout << 2 * (w1 + h1 + h2) + 4 << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.util.StringTokenizer;\n\npublic class A_541 {\n\n\tpublic static void main(String[] args) {\n\t\tFastReader scan = new FastReader();\n\t\tlong a = scan.nextLong(), b = scan.nextLong(), c = scan.nextLong(), d = scan.nextLong();\n\t\tlong res = 0;\n\t\tres += a + 2;\n\t\tres += b * 2L;\n\t\tres += (a+2) - (c);\n\t\tres += (d-1) * 2L;\n\t\tres += c+2;\n\t\tSystem.out.println(res);\n\t\t\n\t}\n\tstatic class FastReader \n    { \n        BufferedReader br; \n        StringTokenizer st; \n  \n        public FastReader() \n        { \n            br = new BufferedReader(new\n                     InputStreamReader(System.in)); \n        } \n  \n        String next() \n        { \n            while (st == null || !st.hasMoreElements()) \n            { \n                try\n                { \n                    st = new StringTokenizer(br.readLine()); \n                } \n                catch (IOException  e) \n                { \n                    e.printStackTrace(); \n                } \n            } \n            return st.nextToken(); \n        } \n  \n        int nextInt() \n        { \n            return Integer.parseInt(next()); \n        } \n  \n        long nextLong() \n        { \n            return Long.parseLong(next()); \n        } \n  \n        double nextDouble() \n        { \n            return Double.parseDouble(next()); \n        } \n  \n        String nextLine() \n        { \n            String str = \"\"; \n            try\n            { \n                str = br.readLine(); \n            } \n            catch (IOException e) \n            { \n                e.printStackTrace(); \n            } \n            return str; \n        } \n    }\n\n}\n"
+  }
+]

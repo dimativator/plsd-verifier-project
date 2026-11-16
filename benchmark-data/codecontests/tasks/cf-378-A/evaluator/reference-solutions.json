@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import math\nn1,n2  = map(int ,input().split())\na,b,d = 0,0,0\nfor i in range(1,7):\n\td1 = abs(i-n1)\n\td2 = abs(i-n2)\n\tif d1<d2:\n\t\ta+=1\n\telif d1>d2:\n\t\tb+=1\n\telse:\n\t\td+=1\nprint(a,d,b)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main(void) {\n  int a, b, c = 0, d = 0, e = 0;\n  cin >> a >> b;\n  for (int x = 1; x <= 6; x++) {\n    if (abs(a - x) > abs(b - x)) c++;\n    if (abs(a - x) < abs(b - x)) e++;\n    if (abs(a - x) == abs(b - x)) d++;\n  }\n  cout << e << \" \" << d << \" \" << c;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Main {\n\tpublic static void main(String args[]) {\n\t\tScanner in = new Scanner(System.in);\n\t\tint a=in.nextInt();\n\t\tint b=in.nextInt();\n\t\tint winA=0,winB=0,draw=0;\n\t\t\n\t\tif(a==b){\n\t\t\t\tdraw=6;\n\t\t\t\twinA=0;\n\t\t\t\twinB=0;\n\t\t}\n\t\t\n\t\tif(a>b){\n\t\t\tif((a+b)%2==1){\n\t\t\t  \n\t\t\t  draw=0;\n\t\t\t}\n\t\t\telse{\n\t\t\t\t\n\t\t\t\tdraw=1;\n\t\t\t}\n\t\t\twinA=(6-(a+b)/2);\n\t\t\twinB=6-winA-draw;\n\t\t}\n\t\tif(a<b){\n\t\t   if((a+b)%2==1){\n\t\t\twinA=((a+b)/2-1+1);\n\t\t\tdraw=0;\n\t\t   }\n\t\t   else{\n\t\t\t   winA=(a+b)/2-1;\n\t\t\t   draw=1;\n\t\t   }\n\t\t\twinB=6-winA-draw;\n\t\t}\n\t\tSystem.out.println(winA+\" \"+draw+\" \"+winB);\n\t}\n}\n"
+  }
+]

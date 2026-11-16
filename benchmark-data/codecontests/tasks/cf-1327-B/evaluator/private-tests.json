@@ -1,0 +1,8 @@
+{
+  "input": [
+    "19\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n1\n0\n"
+  ],
+  "output": [
+    "IMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\nIMPROVE\n1 1\n"
+  ]
+}

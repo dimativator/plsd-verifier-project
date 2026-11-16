@@ -1,0 +1,17 @@
+{
+  "task_id": "HumanEval_kotlin/101",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Given a list of positive integers x. return a sorted list of all\n * elements that hasn't any even digit.\n\n * Note: Returned list should be sorted in increasing order.\n *\n * For example:\n * >>> unique_digits([15, 33, 1422, 1])\n * [1, 15, 33]\n * >>> unique_digits([152, 323, 1422, 10])\n * []\n *\n */\nfun uniqueDigits(x: List<Int>): List<Int> {\n",
+  "entry_point": "uniqueDigits",
+  "test": "fun main() {\n    var arg00: List<Int> = mutableListOf(15, 33, 1422, 1)\n    var x0: List<Int> = uniqueDigits(arg00);\n    var v0: List<Int> = mutableListOf(1, 15, 33);\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: List<Int> = mutableListOf(152, 323, 1422, 10)\n    var x1: List<Int> = uniqueDigits(arg10);\n    var v1: List<Int> = mutableListOf();\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: List<Int> = mutableListOf(12345, 2033, 111, 151)\n    var x2: List<Int> = uniqueDigits(arg20);\n    var v2: List<Int> = mutableListOf(111, 151);\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30: List<Int> = mutableListOf(135, 103, 31)\n    var x3: List<Int> = uniqueDigits(arg30);\n    var v3: List<Int> = mutableListOf(31, 135);\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Given a list of positive integers x. return a sorted list of all\n * elements that hasn't any even digit.\n\n * Note: Returned list should be sorted in increasing order.\n *\n * For example:\n * >>> unique_digits([15, 33, 1422, 1])\n * [1, 15, 33]\n * >>> unique_digits([152, 323, 1422, 10])\n * []\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun uniqueDigits(x: List<Int>): List<Int> {",
+    "    return x.filter { num ->",
+    "        num.toString().all { it.digitToInt() % 2 != 0 }",
+    "    }.sorted()",
+    "}",
+    "",
+    ""
+  ]
+}

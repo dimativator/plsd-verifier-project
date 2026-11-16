@@ -1,0 +1,36 @@
+{
+  "name": "888_G. Xor-MST",
+  "description": "You are given a complete undirected graph with n vertices. A number ai is assigned to each vertex, and the weight of an edge between vertices i and j is equal to ai xor aj.\n\nCalculate the weight of the minimum spanning tree in this graph.\n\nInput\n\nThe first line contains n (1 ≤ n ≤ 200000) — the number of vertices in the graph.\n\nThe second line contains n integers a1, a2, ..., an (0 ≤ ai < 230) — the numbers assigned to the vertices.\n\nOutput\n\nPrint one number — the weight of the minimum spanning tree in the graph.\n\nExamples\n\nInput\n\n5\n1 2 3 4 5\n\n\nOutput\n\n8\n\n\nInput\n\n4\n1 2 3 4\n\n\nOutput\n\n8",
+  "source": 2,
+  "difficulty": 13,
+  "cf_rating": 2300,
+  "cf_contest_id": 888,
+  "cf_index": "G",
+  "cf_tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "data structures"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00008-of-00039-7246e6b7423b404f.parquet",
+  "source_row": 245,
+  "task_id": "codecontests/cf-888-G",
+  "rating_band": "2000-2399",
+  "source_difficulty": "G",
+  "url": "https://codeforces.com/problemset/problem/888/G",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

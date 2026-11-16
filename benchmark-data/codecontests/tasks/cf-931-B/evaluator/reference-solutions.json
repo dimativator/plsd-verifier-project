@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,a,b=map(int,input().split())\na,b,r=a-1,b-1,0\nwhile a!=b:\n a//=2\n b//=2\n r+=1\nprint(r if 2**r<n else 'Final!')"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint main() {\n  int n, o = 0, x, y, v, cnt = 0, f = 0, a, p = 2;\n  scanf(\"%d%d%d\", &n, &x, &y);\n  while (p <= n) {\n    p = p * 2;\n    f++;\n  }\n  if (y > x) {\n    a = x;\n    x = y;\n    y = a;\n  }\n  while (1) {\n    v = (n + o) / 2;\n    if ((x > v && y <= v)) {\n      break;\n    }\n    if (x <= v) {\n      n = v;\n    } else if (y > v) {\n      o = v;\n    }\n    cnt++;\n  }\n  if (cnt == 0) {\n    printf(\"Final!\");\n  } else {\n    printf(\"%d\", f - cnt);\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\nimport java.math.*;\npublic class codeforces\n{\n    public static void main(String args[])throws IOException\n    {\n        Scanner sc=new Scanner(System.in);\n        int n=sc.nextInt();\n        int a=sc.nextInt();\n        int b=sc.nextInt();\n        ArrayList<Integer> hs=new ArrayList<Integer>();\n        for(int i =1;i<=n;i++)\n        hs.add(i);\n        int round=0;\n        while(true)\n        {\n            round++;\n            ArrayList<Integer> hs1=new ArrayList<Integer>();\n            Iterator iterator = hs.iterator(); \n            while (iterator.hasNext())\n            {\n                int a1=(Integer)iterator.next();\n                int b1=(Integer)iterator.next();\n                if((a1==a&&b1==b)||(a1==b&&b1==a))\n                {\n                    if((int)Math.pow(2,round)==n)\n                    {\n                        System.out.println(\"Final!\");\n                    }\n                    else\n                    System.out.println(round);\n                    System.exit(0);\n                }\n                if(a1==a||a1==b)\n                hs1.add(a1);\n                else if(b1==a||b1==b)\n                hs1.add(b1);\n                else\n                hs1.add(a1);\n            }\n            hs=hs1;\n        }\n    }\n}"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "input": [
+    "3 1\nW??\n",
+    "3 2\nL??\n",
+    "20 5\n?LLLLLWWWWW?????????\n"
+  ],
+  "output": [
+    "NO\n",
+    "LDL\n",
+    "WLLLLLWWWWWWWWDDDDDW"
+  ]
+}

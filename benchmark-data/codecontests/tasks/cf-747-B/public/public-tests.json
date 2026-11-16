@@ -1,0 +1,14 @@
+{
+  "input": [
+    "4\nAA??\n",
+    "4\nAGCT\n",
+    "8\nAG?C??CT\n",
+    "6\n????G?\n"
+  ],
+  "output": [
+    "===\n",
+    "AGCT\n",
+    "AGACGTCT",
+    "===\n"
+  ]
+}

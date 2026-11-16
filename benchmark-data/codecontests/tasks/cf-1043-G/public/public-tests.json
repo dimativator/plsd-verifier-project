@@ -1,0 +1,8 @@
+{
+  "input": [
+    "9\nabcabcdce\n7\n1 6\n4 7\n5 9\n6 9\n1 9\n3 6\n4 4\n"
+  ],
+  "output": [
+    "1\n-1\n4\n3\n2\n2\n-1\n"
+  ]
+}

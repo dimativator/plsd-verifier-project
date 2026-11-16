@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\ni = 0\ns = ''.join(['W' if (i + j) % 2 == 0 else 'B' for i in range(n) for j in range(n)])\n\n\n\nwhile(i<n*n):\n    print(s[i:i+n])\n    i+=n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  cin >> n;\n  for (int i = 1; i <= n; i++) {\n    for (int j = 1; j <= n; j++) {\n      if (i % 2 == 1) {\n        if (j % 2 == 1) {\n          cout << \"W\";\n        } else {\n          cout << \"B\";\n        }\n      } else {\n        if (j % 2 == 1) {\n          cout << \"B\";\n        } else {\n          cout << \"W\";\n        }\n      }\n    }\n    cout << endl;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\n\npublic class Knights {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            if (i % 2 == 0) {\n                for (int j = 0; j < n; j++) {\n                    if (j % 2 == 0) {\n                        System.out.print(\"W\");\n                    } else {\n                        System.out.print(\"B\");\n                    }\n                }\n            } else {\n                for (int j = 0; j < n; j++) {\n                    if (j % 2 == 0) {\n                        System.out.print(\"B\");\n                    } else {\n                        System.out.print(\"W\");\n                    }\n                }\n            }\n            System.out.println(\"\");\n        }\n    }\n}"
+  }
+]

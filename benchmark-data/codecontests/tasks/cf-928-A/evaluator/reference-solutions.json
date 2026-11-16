@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "def f(s):\n    return s.lower().replace('1', 'l').replace('0', 'o').replace('i', 'l')\n\ns = f(input())\nn = int(input())\n\nl = {f(input()) for _ in range(n)}\n\nprint('No' if s in l else 'Yes')\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nstring get_changed(const string& s1) {\n  string s = s1;\n  for (int j = 0; j < s.length(); ++j) {\n    if (s[j] <= 'Z' && s[j] >= 'A') {\n      s[j] += 32;\n    }\n    if (s[j] == '0') {\n      s[j] = 'o';\n    }\n    if (s[j] == '1' || s[j] == 'i') {\n      s[j] = 'l';\n    }\n  }\n  return s;\n}\nint main() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  cout.tie(0);\n  string s1;\n  cin >> s1;\n  int n;\n  cin >> n;\n  set<string> checker;\n  for (int i = 0; i < n; ++i) {\n    string s;\n    cin >> s;\n    s = get_changed(s);\n    checker.insert(s);\n  }\n  s1 = get_changed(s1);\n  if (checker.find(s1) != checker.end()) {\n    cout << \"No\";\n    return 0;\n  }\n  cout << \"Yes\";\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class Solution{\n\tpublic static void main(String[] args){\n\t\tScanner scan = new Scanner(System.in);\n\t\tString ans = \"No\";\n\t\tint equal = 0;\n\t\tString login = scan.nextLine().toLowerCase().trim();\n\t\tint num = scan.nextInt();\n\t\tscan.nextLine();\n\t\tfor(int i = 0; i <  num; i++){\n\t\t\tString curr = scan.nextLine().toLowerCase().trim();\n\t\t\tboolean diff = false;\n\t\t\tif(login.length() == curr.length()){\n\t\t\t\tfor (int j = 0; j < curr.length(); j++){\n\t\t\t\t\tif (curr.charAt(j) != login.charAt(j)){\n\t\t\t\t\t\tif (curr.charAt(j) != '0' && curr.charAt(j) != 'o' && curr.charAt(j) != '1' && curr.charAt(j) != 'i' && curr.charAt(j) != 'l'){\n\t\t\t\t\t\t\tdiff = true;\n\t\t\t\t\t\t}else if ((curr.charAt(j) == '0' || curr.charAt(j) == 'o') && (login.charAt(j) != '0' && login.charAt(j) != 'o')){\n\t\t\t\t\t\t\tdiff = true;\n\t\t\t\t\t\t}else if ((curr.charAt(j) == '1' || curr.charAt(j) == 'i' || curr.charAt(j) == 'l') && (login.charAt(j) != 'i' && login.charAt(j) != '1' && login.charAt(j) != 'l')){\n\t\t\t\t\t\t\tdiff = true;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}else{\n\t\t\t\tdiff = true;\n\t\t\t}\n\t\t\tif (diff){\n\t\t\t\tequal ++;\n\t\t\t}\n\t\t}\n\t\tif (equal == num){\n\t\t\tSystem.out.println(\"Yes\");\n\t\t}else{\n\t\t\tSystem.out.println(\"No\");\n\t\t}\n\t}\n}"
+  }
+]

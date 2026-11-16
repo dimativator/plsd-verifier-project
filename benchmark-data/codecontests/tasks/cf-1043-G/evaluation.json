@@ -1,0 +1,26 @@
+{
+  "kind": "stdin_stdout",
+  "submission_file": "Main.kt",
+  "visible_tests": "public/public-tests.json",
+  "held_out_tests": [
+    "evaluator/private-tests.json",
+    "evaluator/generated-tests.json"
+  ],
+  "test_format": "Parallel input and output arrays. Run a fresh process for each input.",
+  "output_checker": {
+    "status": "requires_review",
+    "implementation": null,
+    "note": "Expected outputs are supplied. Official per-problem checkers are not included in the source payload. Do not assume exact or token equality is valid for every problem."
+  },
+  "source_time_limit": {
+    "seconds": 7,
+    "nanos": 0
+  },
+  "source_memory_limit_bytes": 512000000,
+  "reference_index": "evaluator/references/index.json",
+  "kotlin_reference": "not_translated",
+  "reference_execution": "not_run",
+  "runtime_limits": null,
+  "runtime_status": "not_configured",
+  "verifier_success_required": false
+}

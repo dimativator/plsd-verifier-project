@@ -1,0 +1,9 @@
+{
+  "id": "humaneval-141",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "entry_point": "simplify",
+  "solution_file": "Solution.kt",
+  "visible_tests": "PublicTests.kt",
+  "visible_examples": "prompt.txt"
+}

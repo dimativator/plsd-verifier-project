@@ -1,0 +1,10 @@
+{
+  "input": [
+    "4\nsword weapon 10 2 3 2\npagstarmor armor 0 15 3 1\niceorb orb 3 2 13 2\nlongbow weapon 9 1 2 1\n6\nmike gladiator 5 longbow\nbobby sentry 6 pagstarmor\npetr gladiator 7 iceorb\nteddy physician 6 sword\nblackjack sentry 8 sword\njoe physician 6 iceorb\n",
+    "4\nsword weapon 10 2 3 2\npagstarmor armor 0 15 3 1\niceorb orb 3 2 13 2\nlongbow weapon 9 1 2 1\n5\nmike gladiator 5 longbow\nbobby sentry 6 pagstarmor\npetr gladiator 7 iceorb\nteddy physician 6 sword\nblackjack sentry 8 sword\n"
+  ],
+  "output": [
+    "longbow 1 mike\npagstarmor 1 bobby\niceorb 2 petr joe\n",
+    "sword 2 petr mike \npagstarmor 1 blackjack \niceorb 2 teddy bobby \n"
+  ]
+}

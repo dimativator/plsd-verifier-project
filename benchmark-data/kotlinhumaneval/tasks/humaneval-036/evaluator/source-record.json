@@ -1,0 +1,21 @@
+{
+  "task_id": "HumanEval_kotlin/36",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * This function takes a list l and returns a list l' such that\n * l' is identical to l in the odd indicies, while its values at the even indicies are equal\n * to the values of the even indicies of l, but sorted.\n * >>> sort_even([1, 2, 3])\n * [1, 2, 3]\n * >>> sort_even([5, 6, 3, 4])\n * [3, 6, 5, 4]\n *\n */\nfun sortEven(l: List<Int>): List<Int> {\n",
+  "entry_point": "sortEven",
+  "test": "fun main() {\n    var arg00: List<Int> = mutableListOf(1, 2, 3)\n    var x0: List<Int> = sortEven(arg00)\n    var v0: List<Int> = mutableListOf(1, 2, 3)\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: List<Int> = mutableListOf(5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10)\n    var x1: List<Int> = sortEven(arg10)\n    var v1: List<Int> = mutableListOf(-10, 3, -5, 2, -3, 3, 5, 0, 9, 1, 123)\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: List<Int> = mutableListOf(5, 8, -12, 4, 23, 2, 3, 11, 12, -10)\n    var x2: List<Int> = sortEven(arg20)\n    var v2: List<Int> = mutableListOf(-12, 8, 3, 4, 5, 2, 12, 11, 23, -10)\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * This function takes a list l and returns a list l' such that\n * l' is identical to l in the odd indicies, while its values at the even indicies are equal\n * to the values of the even indicies of l, but sorted.\n * >>> sort_even([1, 2, 3])\n * [1, 2, 3]\n * >>> sort_even([5, 6, 3, 4])\n * [3, 6, 5, 4]\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun sortEven(l: List<Int>): List<Int> {",
+    "    val sortedEvens = l.withIndex()",
+    "        .filter { (index, _) -> (index % 2) == 0 }",
+    "        .map { it.value }",
+    "        .sorted()",
+    "    return l.mapIndexed { index, value ->",
+    "        if (index % 2 == 0) sortedEvens[index / 2] else value",
+    "    }",
+    "}",
+    "",
+    ""
+  ]
+}

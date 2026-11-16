@@ -1,0 +1,119 @@
+BENCHMARK DATA
+
+This directory contains all 161 Kotlin HumanEval tasks and the selected 1,500
+CodeContests tasks from Codeforces. Copy this whole directory to another machine
+to use the data. No downloads, source caches, absolute paths, or Python packages
+are needed to read it. The included helper uses Python 3.10+ and its standard library.
+
+Layout
+
+  manifest.json                     Counts, source hashes, experiment conditions
+  checksums.json                    SHA-256 of every distributed file
+  kotlinhumaneval/
+    manifest.json                   Dataset summary
+    tasks.jsonl                     One metadata record per task
+    groups/all.json                 Ordered list of all 161 IDs
+    provenance/                     Source revision, attribution, source card
+    quality-notes.json              Existing source-review caveats
+    tasks/humaneval-000/
+      task.json                     Full task metadata
+      evaluation.json               Test files and evaluation contract
+      public/                       Prompt, Solution.kt, visible test when available
+      evaluator/                    HiddenTests.kt, OriginalTests.kt, Reference.kt,
+                                    original source record
+  codecontests/
+    manifest.json
+    tasks.jsonl
+    groups/all.json                 Ordered list of all 1,500 IDs
+    groups/800-1199.json             300 IDs
+    groups/1200-1599.json            300 IDs
+    groups/1600-1999.json            300 IDs
+    groups/2000-2399.json            300 IDs
+    groups/2400+.json                300 IDs
+    provenance/                     Pinned source, selection seed, exclusions
+    quality-notes.json              Conflicting expected-output flags
+    tasks/cf-272-A/
+      task.json                     Rating, tags, source URL, source limits
+      evaluation.json               Test files and checker status
+      public/                       Prompt, Main.kt, public-tests.json, task.json
+      evaluator/                    private-tests.json, generated-tests.json,
+                                    reference-solutions.json, source-metadata.json,
+                                    references/ with source files and a language index
+  tools/benchmark_data.py            List, inspect, check integrity, prepare workspace
+
+All paths in a dataset's tasks.jsonl are relative to that dataset directory.
+Paths in evaluation.json are relative to its task directory. References in
+evaluator/references/index.json are relative to evaluator/.
+
+Examples, from this directory
+
+  python3 tools/benchmark_data.py validate
+  python3 tools/benchmark_data.py list kotlinhumaneval
+  python3 tools/benchmark_data.py list codecontests --band 1600-1999
+  python3 tools/benchmark_data.py show codecontests cf-272-A
+  python3 tools/benchmark_data.py prepare kotlinhumaneval humaneval-000 /tmp/he-000
+  python3 tools/benchmark_data.py prepare codecontests cf-272-A /tmp/cf-272-A
+
+prepare copies only public files to a new workspace. Give the agent access only
+to that workspace. The bundle, metadata indexes, references, and evaluator files
+must stay outside its accessible filesystem. This helper copies files but does
+not implement a runtime sandbox.
+
+Using the tests
+
+HumanEval submissions implement Solution.kt. PublicTests.kt is the first source
+case when the source has at least two. HiddenTests.kt contains the remaining
+unexposed cases and is the final evaluation harness. Task humaneval-033 has only
+one source case, so its only test stays hidden. Across the dataset there are 160
+public cases and 1,066 hidden cases. OriginalTests.kt preserves the full original
+suite, including the public case. Reference.kt preserves the upstream Kotlin
+reference, with no corrections to its behavior.
+
+With Kotlin/JVM and a JDK configured, a HumanEval harness can be run with:
+
+  kotlinc Solution.kt PublicTests.kt -include-runtime -d public-tests.jar
+  java -jar public-tests.jar
+
+For final evaluation, a trusted evaluator compiles the submitted Solution.kt
+with evaluator/HiddenTests.kt instead. Run under fixed time and memory limits.
+Normal exit means all harness assertions passed. Keep jars and hidden diagnostics
+outside the agent workspace. Do not compile both test harnesses together.
+
+CodeContests submissions implement Main.kt as a stdin/stdout program. Each tests
+JSON has parallel arrays named input and output. Pair elements by array index.
+Compile the submission once and run a fresh process for each input. Public tests
+are available during solving. Both private and generated tests are evaluator-only.
+Counts: 2,190 public, 25,500 private, 75,423 generated tests. Source references
+are in their original languages, with up to three per problem. They have not been
+translated to Kotlin. Kotlin references are unnecessary for evaluating a Kotlin
+submission against input/output tests.
+
+The primary outcome is whether the final submission passes the hidden tests.
+Both agent conditions receive the compiler and public tests. One also receives
+Jormungandr. Agents choose how to use their tools. Verification success is not
+required for a successful submission. The agent runner is outside this data bundle.
+
+Readiness
+
+The files are packaged and checked for source preservation and structural integrity.
+Behavioral validation has not been run. No compiler, JVM, verifier, or agent runtime
+is distributed here, and Kotlin/JVM limits have not been fixed.
+
+CodeContests source payloads do not include official per-problem output checkers.
+Some tasks allow multiple correct answers or require numeric tolerances. All 1,500
+evaluation descriptors therefore retain output_checker.status = requires_review.
+Twelve tasks have repeated inputs with different expected outputs and are flagged
+in quality-notes.json. Absence of that flag does not establish that token comparison
+is sufficient. Choose and validate each task's checker before using final scores.
+
+Generated tests are retained exactly as sourced. Some generated inputs may violate
+the statement's constraints. Review their validity before freezing the evaluation
+suite. HumanEval source caveats are also retained. No task has been removed because
+of verifier results, and no source reference has been required to verify.
+
+Reproduction
+
+The repository's datasets/build_benchmark_data.py exports this directory from the
+existing source task pool. It refuses to overwrite an existing directory. Use
+--output with a new destination to rebuild for comparison. Download and selection
+scripts and large source caches remain in the repository's datasets/ directory.

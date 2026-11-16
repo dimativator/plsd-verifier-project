@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "for _ in range(int(input())):\n    x=input()[::-1]\n    y=input()[::-1]\n    posy=y.index('1')\n    posx=x.index('1',posy)\n    print(posx-posy)        \n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint prime(long long int n) {\n  for (long long int i = 2; i < n; i++) {\n    if (n % i == 0) {\n      return 0;\n    }\n  }\n  return 1;\n}\nint sgn(long long int n) {\n  if (n > 0) {\n    return 1;\n  } else {\n    return -1;\n  }\n}\nlong long int max_digit(long long int n) {\n  long long int lar = 0;\n  while (n) {\n    long long int r = n % 10;\n    lar = max(r, lar);\n    n = n / 10;\n  }\n  return lar;\n}\nlong long int min_digit(long long int n) {\n  long long int lar = 9;\n  while (n) {\n    long long int r = n % 10;\n    lar = min(r, lar);\n    n = n / 10;\n  }\n  return lar;\n}\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(NULL);\n  long long int t;\n  cin >> t;\n  while (t--) {\n    string a, b;\n    cin >> a >> b;\n    long long int x = 0, y = 0;\n    for (long long int i = b.size() - 1; i >= 0; i--) {\n      if (b[i] == '1') {\n        y = b.size() - 1 - i;\n        break;\n      }\n    }\n    long long int flag = 0;\n    for (long long int i = a.size() - 1; i >= 0; i--) {\n      if (a[i] == '1') {\n        x = a.size() - 1 - i;\n        if (x >= y) {\n          cout << x - y << endl;\n          flag = 1;\n          break;\n        }\n      }\n    }\n    if (flag == 0) {\n      cout << 0 << endl;\n    }\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "// practice with rainboy\nimport java.io.*;\nimport java.util.*;\n\npublic class CF1202A extends PrintWriter {\n\tCF1202A() { super(System.out); }\n\tScanner sc = new Scanner(System.in);\n\tpublic static void main(String[] $) {\n\t\tCF1202A o = new CF1202A(); o.main(); o.flush();\n\t}\n\n\tvoid reverse(byte[] aa, int n) {\n\t\tfor (int i = 0, j = n - 1; i < j; i++, j--) {\n\t\t\tbyte tmp = aa[i]; aa[i] = aa[j]; aa[j] = tmp;\n\t\t}\n\t}\n\tvoid main() {\n\t\tint t = sc.nextInt();\n\t\twhile (t-- > 0) {\n\t\t\tbyte[] aa = sc.next().getBytes();\n\t\t\tbyte[] bb = sc.next().getBytes();\n\t\t\tint n = aa.length;\n\t\t\tint m = bb.length;\n\t\t\treverse(aa, n);\n\t\t\treverse(bb, m);\n\t\t\tint j = 0;\n\t\t\twhile (bb[j] == '0')\n\t\t\t\tj++;\n\t\t\tint i = j;\n\t\t\twhile (aa[i] == '0')\n\t\t\t\ti++;\n\t\t\tprintln(i - j);\n\t\t}\n\t}\n}\n"
+  }
+]

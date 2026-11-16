@@ -1,0 +1,19 @@
+{
+  "task_id": "HumanEval_kotlin/103",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Implement the function f that takes n as a parameter,\n * and ret  urns a list of size n, such that the value of the element at index i is the factorial of i if i is even\n * or the sum of numbers from 1 to i otherwise.\n * i starts from 1.\n * the factorial of i is the multiplication of the numbers from 1 to i (1 * 2 * ... * i).\n * Example:\n * f(5) == [1, 2, 6, 24, 15]\n *\n */\nfun f(n : Int) : List<Int> {\n",
+  "entry_point": "f",
+  "test": "fun main() {\n    var arg00 : Int = 5\n    var x0 : List<Int> = f(arg00);\n    var v0 : List<Int> = mutableListOf(1, 2, 6, 24, 15);\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10 : Int = 7\n    var x1 : List<Int> = f(arg10);\n    var v1 : List<Int> = mutableListOf(1, 2, 6, 24, 15, 720, 28);\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20 : Int = 1\n    var x2 : List<Int> = f(arg20);\n    var v2 : List<Int> = mutableListOf(1);\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30 : Int = 3\n    var x3 : List<Int> = f(arg30);\n    var v3 : List<Int> = mutableListOf(1, 2, 6);\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Implement the function f that takes n as a parameter,\n * and ret  urns a list of size n, such that the value of the element at index i is the factorial of i if i is even\n * or the sum of numbers from 1 to i otherwise.\n * i starts from 1.\n * the factorial of i is the multiplication of the numbers from 1 to i (1 * 2 * ... * i).\n * Example:\n * f(5) == [1, 2, 6, 24, 15]\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun f(n : Int) : List<Int> {",
+    "    fun factorial(num: Int): Int = if (num == 0) 1 else num * factorial(num - 1)",
+    "    fun sumToNum(num: Int): Int = (1..num).sum()",
+    "    return (1..n).map { i ->",
+    "        if (i % 2 == 0) factorial(i) else sumToNum(i)",
+    "    }",
+    "}",
+    "",
+    ""
+  ]
+}

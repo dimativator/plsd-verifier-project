@@ -1,0 +1,12 @@
+{
+  "input": [
+    "3 5\nababa\nab\na\n",
+    "2 4\nab\ncd\n",
+    "5 100\na\naa\naaa\naaaa\naaaaa\n"
+  ],
+  "output": [
+    "\n11\n",
+    "\n4\n",
+    "\n142528942\n"
+  ]
+}

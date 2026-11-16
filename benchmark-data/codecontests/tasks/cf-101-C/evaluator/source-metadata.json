@@ -1,0 +1,35 @@
+{
+  "name": "101_C. Vectors",
+  "description": "At a geometry lesson Gerald was given a task: to get vector B out of vector A. Besides, the teacher permitted him to perform the following operations with vector А:\n\n  * Turn the vector by 90 degrees clockwise.\n  * Add to the vector a certain vector C.\n\n\n\nOperations could be performed in any order any number of times.\n\nCan Gerald cope with the task?\n\nInput\n\nThe first line contains integers x1 и y1 — the coordinates of the vector A ( - 108 ≤ x1, y1 ≤ 108). The second and the third line contain in the similar manner vectors B and C (their coordinates are integers; their absolute value does not exceed 108).\n\nOutput\n\nPrint \"YES\" (without the quotes) if it is possible to get vector B using the given operations. Otherwise print \"NO\" (without the quotes).\n\nExamples\n\nInput\n\n0 0\n1 1\n0 1\n\n\nOutput\n\nYES\n\n\nInput\n\n0 0\n1 1\n1 1\n\n\nOutput\n\nYES\n\n\nInput\n\n0 0\n1 1\n2 2\n\n\nOutput\n\nNO",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 2000,
+  "cf_contest_id": 101,
+  "cf_index": "C",
+  "cf_tags": [
+    "implementation",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00000-of-00039-e991a271dbfa9925.parquet",
+  "source_row": 110,
+  "task_id": "codecontests/cf-101-C",
+  "rating_band": "2000-2399",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/101/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

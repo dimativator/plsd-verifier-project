@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "x,y=map(int,input().split())\n\nw = abs(x)+abs(y)\n\nif x<0:\n\tif y<0:\n\t\tprint(-w,0,0,-w)\n\telse:\n\t\tprint(-w,0,0,w)\nelse:\n\tif y<0:\n\t\tprint(0,-w,w,0)\n\telse:\n\t\tprint(0,w,w,0)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int x, y, x1, x2, y1, y2;\n  scanf(\"%d %d\", &x, &y);\n  if (x > 0 && y > 0) {\n    x1 = 0;\n    x2 = x + y;\n    y2 = 0;\n    y1 = x + y;\n  } else if (x < 0 && y > 0) {\n    x = -1 * x;\n    x1 = -1 * (x + y);\n    y1 = 0;\n    x2 = 0;\n    y2 = x + y;\n  } else if (x < 0 && y < 0) {\n    x = -1 * x;\n    y = -1 * y;\n    x1 = -1 * (x + y);\n    x2 = 0;\n    y1 = 0;\n    y2 = -1 * (x + y);\n  } else {\n    y = y * -1;\n    x1 = 0;\n    x2 = x + y;\n    y1 = -1 * (x + y);\n    y2 = 0;\n  }\n  printf(\"%d %d %d %d\\n\", x1, y1, x2, y2);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import\tjava.util.*;\npublic\tclass\tMain{\n\tpublic\tstatic\tvoid\tmain(String[]args){\n\t\tScanner\tcin=new\tScanner(System.in);\n\t\tint\tx=cin.nextInt(),y=cin.nextInt(),s=Math.abs(x)+Math.abs(y);\n\t\tif(0>x){\n\t\t\tSystem.out.print(-s+\" 0 0 \");\n\t\t\tif(0>y)\tSystem.out.print(-s);\n\t\t\telse\tSystem.out.print(s);\n\t\t}else{\n\t\t\tSystem.out.print(\"0 \");\n\t\t\tif(0>y)\tSystem.out.print(-s);\n\t\t\telse\tSystem.out.print(s);\n\t\t\tSystem.out.print(\" \"+s+\" 0\");\n\t\t}\n\t}\n}\n"
+  }
+]

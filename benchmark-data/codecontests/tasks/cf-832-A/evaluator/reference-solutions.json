@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,k=map(int,input().split())\nif (n//k)%2!=0:\n\tprint('YES')\nelse:\n\tprint('NO')"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long int n, m;\n  cin >> n >> m;\n  long long int rem = n / m;\n  if (rem % 2 == 0) {\n    cout << \"NO\";\n  } else {\n    cout << \"YES\";\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class R425P1 {\n\tpublic static void main(String[] args) {\n\t\tScanner scan = new Scanner(System.in);\n\t\tlong n = scan.nextLong(), k = scan.nextLong();\n\t\tif((n/k)%2==0) System.out.println(\"NO\");\n\t\telse System.out.println(\"YES\");\n\t}\n}"
+  }
+]

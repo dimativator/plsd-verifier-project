@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "for q in range(int(input())):\n    n, m, a, b = map(int, input().split())\n    if n*a != m*b:\n        print('NO')\n        continue\n    print('YES')\n    t = '1'*a+'0'*(m-a)\n    for i in range(n):\n        print(t)\n        t = t[m-a:]+t[:m-a]"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint32_t main() {\n  long long t;\n  cin >> t;\n  while (t--) {\n    long long n, m, a, b;\n    cin >> n >> m >> a >> b;\n    if ((n * a) != (m * b))\n      cout << \"NO\" << endl;\n    else {\n      cout << \"YES\" << endl;\n      long long A[n][m];\n      memset(A, 0, sizeof(A));\n      long long x = 0;\n      for (long long i = 0; i < n; i++) {\n        long long c = a;\n        while (c--) {\n          A[i][x] = 1;\n          x++;\n          x = x % m;\n        }\n      }\n      for (long long i = 0; i < n; i++) {\n        for (long long j = 0; j < m; j++) cout << A[i][j];\n        cout << endl;\n      }\n    }\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.io.PrintWriter;\nimport java.util.StringTokenizer;\n\npublic class Solution{\n\n\tpublic static void main(String[] args) throws Exception{\n\n\t\tFastScanner fs = new FastScanner();\n\t\tint t = fs.nextInt();\n\t\t\n\t\tPrintWriter out = new PrintWriter(System.out);\n\n\t\twhile(t-->0){\n\t\t\t\n\t\t\tint n = fs.nextInt(), m = fs.nextInt(), a = fs.nextInt(), b = fs.nextInt();\n\t\t\t\n\t\t\tif(n*a != m*b) {\n\t\t\t\tout.println(\"No\");\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\t\n//\t\t\tint shift = 0;\n//\t\t\tfor(shift=1;shift<m;shift++) {\n//\t\t\t\tif((shift*n)%m==0)\n//\t\t\t\t\tbreak;\n//\t\t\t}\n\t\t\t\n\t\t\tint[][] res = new int[n][m];\n\t\t\t\n\t\t\tfor(int i=0,dx=0;i<n;i++,dx+=a) {\n\t\t\t\tfor(int j = 0;j<a;j++)\n\t\t\t\t\tres[i][(j+dx)%m] = 1;\n\t\t\t}\n\t\t\t\n\t\t\tout.println(\"Yes\");\n\t\t\t\n\t\t\tfor(int i = 0;i<n;i++) {\n\t\t\t\tfor(int j=0;j<m;j++) {\n\t\t\t\t\tout.print(res[i][j]);\n\t\t\t\t}\n\t\t\t\tout.println(\"\");\n\t\t\t}\n\t\t\t\n\t\t}\n\t\tout.close();\n\t\t\n\t}\n\n\n\n\t\n\n\n\tstatic class FastScanner{\n\t\tBufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n\t\tStringTokenizer st = new StringTokenizer(\"\");\n\n\t\tpublic String next(){\n\t\t\twhile(!st.hasMoreElements()){\n\t\t\t\ttry{\n\t\t\t\t\tst = new StringTokenizer(br.readLine());\n\t\t\t\t} catch(IOException e){\n\t\t\t\t\te.printStackTrace();\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn st.nextToken();\n\t\t}\n\n\t\tpublic int nextInt(){\n\t\t\treturn Integer.parseInt(next());\n\t\t}\n\n\t\tpublic int[] readArray(int n){\n\t\t\tint[] a = new int[n];\n\t\t\tfor(int i=0;i<n;i++)\n\t\t\t\ta[i] = nextInt();\n\t\t\treturn a;\n\t\t}\n\t}\n\n}"
+  }
+]

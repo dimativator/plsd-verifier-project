@@ -1,0 +1,12 @@
+{
+  "input": [
+    "monday\ntuesday\n",
+    "saturday\ntuesday\n",
+    "sunday\nsunday\n"
+  ],
+  "output": [
+    "NO\n",
+    "YES\n",
+    "YES\n"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "input": [
+    "aaabbbb\n2\n",
+    "aaba\n2\n",
+    "abracadabra\n10\n"
+  ],
+  "output": [
+    "6\n",
+    "6\n",
+    "20\n"
+  ]
+}

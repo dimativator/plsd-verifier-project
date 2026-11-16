@@ -1,0 +1,31 @@
+{
+  "task_id": "HumanEval_kotlin/78",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * It is the last week of the semester, and the teacher has to give the grades\n * to students. The teacher has been making her own algorithm for grading.\n * The only problem is, she has lost the code she used for grading.\n * She has given you a list of GPAs for some students, and you have to write\n * a function that can output a list of letter grades using the following table:\n *          GPA       |    Letter grade\n *           4.0                A+\n *         > 3.7                A\n *         > 3.3                A-\n *         > 3.0                B+\n *         > 2.7                B\n *         > 2.3                B-\n *         > 2.0                C+\n *         > 1.7                C\n *         > 1.3                C-\n *         > 1.0                D+\n *         > 0.7                D\n *         > 0.0                D-\n *           0.0                E\n *\n\n * Example:\n * grade_equation([4.0, 3, 1.7, 2, 3.5]) ==> ['A+', 'B', 'C-', 'C', 'A-']\n *\n */\nfun numericalLetterGrade(grades: List<Double>): List<String> {\n",
+  "entry_point": "numericalLetterGrade",
+  "test": "fun main() {\n    var arg00: List<Double> = mutableListOf(4.0, 3.0, 1.7, 2.0, 3.5)\n    var x0: List<String> = numericalLetterGrade(arg00)\n    var v0: List<String> = mutableListOf(\"A+\", \"B\", \"C-\", \"C\", \"A-\")\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: List<Double> = mutableListOf(1.2)\n    var x1: List<String> = numericalLetterGrade(arg10)\n    var v1: List<String> = mutableListOf(\"D+\")\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: List<Double> = mutableListOf(0.5)\n    var x2: List<String> = numericalLetterGrade(arg20)\n    var v2: List<String> = mutableListOf(\"D-\")\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30: List<Double> = mutableListOf(0.0)\n    var x3: List<String> = numericalLetterGrade(arg30)\n    var v3: List<String> = mutableListOf(\"E\")\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40: List<Double> = mutableListOf(1.0, 0.3, 1.5, 2.8, 3.3)\n    var x4: List<String> = numericalLetterGrade(arg40)\n    var v4: List<String> = mutableListOf(\"D\", \"D-\", \"C-\", \"B\", \"B+\")\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50: List<Double> = mutableListOf(0.0, 0.7)\n    var x5: List<String> = numericalLetterGrade(arg50)\n    var v5: List<String> = mutableListOf(\"E\", \"D-\")\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * It is the last week of the semester, and the teacher has to give the grades\n * to students. The teacher has been making her own algorithm for grading.\n * The only problem is, she has lost the code she used for grading.\n * She has given you a list of GPAs for some students, and you have to write\n * a function that can output a list of letter grades using the following table:\n *          GPA       |    Letter grade\n *           4.0                A+\n *         > 3.7                A\n *         > 3.3                A-\n *         > 3.0                B+\n *         > 2.7                B\n *         > 2.3                B-\n *         > 2.0                C+\n *         > 1.7                C\n *         > 1.3                C-\n *         > 1.0                D+\n *         > 0.7                D\n *         > 0.0                D-\n *           0.0                E\n *\n\n * Example:\n * grade_equation([4.0, 3, 1.7, 2, 3.5]) ==> ['A+', 'B', 'C-', 'C', 'A-']\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun numericalLetterGrade(grades: List<Double>): List<String> {",
+    "    return grades.map { gpa ->",
+    "        when {",
+    "            gpa >= 4.0 -> \"A+\"",
+    "            gpa > 3.7 -> \"A\"",
+    "            gpa > 3.3 -> \"A-\"",
+    "            gpa > 3.0 -> \"B+\"",
+    "            gpa > 2.7 -> \"B\"",
+    "            gpa > 2.3 -> \"B-\"",
+    "            gpa > 2.0 -> \"C+\"",
+    "            gpa > 1.7 -> \"C\"",
+    "            gpa > 1.3 -> \"C-\"",
+    "            gpa > 1.0 -> \"D+\"",
+    "            gpa > 0.7 -> \"D\"",
+    "            gpa > 0.0 -> \"D-\"",
+    "            else -> \"E\"",
+    "        }",
+    "    }",
+    "}",
+    "",
+    ""
+  ]
+}

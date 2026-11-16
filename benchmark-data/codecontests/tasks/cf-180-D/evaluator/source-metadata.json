@@ -1,0 +1,35 @@
+{
+  "name": "180_D. Name",
+  "description": "Everything got unclear to us in a far away constellation Tau Ceti. Specifically, the Taucetians choose names to their children in a very peculiar manner.\n\nTwo young parents abac and bbad think what name to give to their first-born child. They decided that the name will be the permutation of letters of string s. To keep up with the neighbours, they decided to call the baby so that the name was lexicographically strictly larger than the neighbour's son's name t.\n\nOn the other hand, they suspect that a name tax will be introduced shortly. According to it, the Taucetians with lexicographically larger names will pay larger taxes. That's the reason abac and bbad want to call the newborn so that the name was lexicographically strictly larger than name t and lexicographically minimum at that.\n\nThe lexicographical order of strings is the order we are all used to, the \"dictionary\" order. Such comparison is used in all modern programming languages to compare strings. Formally, a string p of length n is lexicographically less than string q of length m, if one of the two statements is correct:\n\n  * n < m, and p is the beginning (prefix) of string q (for example, \"aba\" is less than string \"abaa\"), \n  * p1 = q1, p2 = q2, ..., pk - 1 = qk - 1, pk < qk for some k (1 ≤ k ≤ min(n, m)), here characters in strings are numbered starting from 1. \n\n\n\nWrite a program that, given string s and the heighbours' child's name t determines the string that is the result of permutation of letters in s. The string should be lexicographically strictly more than t and also, lexicographically minimum.\n\nInput\n\nThe first line contains a non-empty string s (1 ≤ |s| ≤ 5000), where |s| is its length. The second line contains a non-empty string t (1 ≤ |t| ≤ 5000), where |t| is its length. Both strings consist of lowercase Latin letters.\n\nOutput\n\nPrint the sought name or -1 if it doesn't exist.\n\nExamples\n\nInput\n\naad\naac\n\n\nOutput\n\naad\n\n\nInput\n\nabad\nbob\n\n\nOutput\n\ndaab\n\n\nInput\n\nabc\ndefg\n\n\nOutput\n\n-1\n\n\nInput\n\nczaaab\nabcdef\n\n\nOutput\n\nabczaa\n\nNote\n\nIn the first sample the given string s is the sought one, consequently, we do not need to change the letter order there.",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 1900,
+  "cf_contest_id": 180,
+  "cf_index": "D",
+  "cf_tags": [
+    "greedy",
+    "strings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00001-of-00039-e092fe56fda18715.parquet",
+  "source_row": 2,
+  "task_id": "codecontests/cf-180-D",
+  "rating_band": "1600-1999",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/180/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

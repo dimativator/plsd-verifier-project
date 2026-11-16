@@ -1,0 +1,36 @@
+{
+  "id": "cf-1260-D",
+  "dataset": "deepmind/code_contests",
+  "source_id": "codecontests/cf-1260-D",
+  "url": "https://codeforces.com/problemset/problem/1260/D",
+  "source_split": "train",
+  "submission_format": "program",
+  "target_language": "Kotlin",
+  "difficulty": 1900,
+  "rating_band": "1600-1999",
+  "tags": [
+    "binary search",
+    "dp",
+    "greedy",
+    "sortings"
+  ],
+  "public_test_count": 1,
+  "private_test_count": 6,
+  "generated_test_count": 67,
+  "held_out_public_input_overlap": 0,
+  "repeated_inputs_with_different_expected_outputs": 0,
+  "source_time_limit": {
+    "seconds": 3,
+    "nanos": 0
+  },
+  "source_memory_limit_bytes": 256000000,
+  "behavioral_validation": "not_run",
+  "kotlin_reference": "not_translated",
+  "verifier_validation": "not_run",
+  "output_checker": "requires_review",
+  "task_dir": "tasks/cf-1260-D",
+  "public_dir": "tasks/cf-1260-D/public",
+  "evaluator_dir": "tasks/cf-1260-D/evaluator",
+  "metadata_file": "tasks/cf-1260-D/task.json",
+  "evaluation_file": "tasks/cf-1260-D/evaluation.json"
+}

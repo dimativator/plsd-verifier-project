@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, m = map(int, input().split())\na = list(map(int, input().split()))\nb = list(map(int, input().split()))\ncnt = 0\nj = 0\nfor i in range(n):\n    while j < m:\n        if a[i] <= b[j]:\n            cnt += 1\n            j += 1\n            break\n        else:\n            j += 1\nprint(n - cnt)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint a[10004], b[10004];\nint main() {\n  int n, m, d = 0;\n  cin >> n >> m;\n  for (int i = 0; i < n; i++) cin >> a[i];\n  for (int i = 0; i < m; i++) cin >> b[i];\n  for (int i = 0, j = 0; i < n && j < m; j++)\n    if (b[j] >= a[i]) {\n      i++;\n      d = i;\n    }\n  cout << n - d;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\n\nimport java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.io.PrintWriter;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.PriorityQueue;\nimport java.util.StringTokenizer;\n\n\n@SuppressWarnings(\"unused\")\npublic class A {\n\tpublic  static  FastScannerA scan = new FastScannerA();\n\tpublic static PrintWriter out = new PrintWriter(System.out);\n\tstatic void sort(int[] a) {\n\t\tArrayList<Integer> l=new ArrayList<>();\n\t\tfor (int i:a) l.add(i);\n\t\tCollections.sort(l);\n\t\tfor (int i=0; i<a.length; i++) a[i]=l.get(i);\n\t}\n\tpublic static void solve () {\n\t\tint n=scan.nextInt();\n\t\tint m=scan.nextInt();\n\t\t PriorityQueue<Integer> first = new PriorityQueue<Integer>(), second = new PriorityQueue<Integer>();\n\t\tfor(int i=0;i<n;i++) {\n\t\t\tfirst.add(scan.nextInt());\n\t\t}\n\t\tfor(int i=0;i<m;i++) {\n\t\t\tsecond.add(scan.nextInt());\n\t\t}\n\t\t\n\t\twhile(!first.isEmpty() && !second.isEmpty()) {\n\t\t\tint a=first.peek(),b=second.poll();\n\t\t\tif(b>=a) first.poll();\n\t\t}\n\t\t//System.out.println(first);\n\t\tSystem.out.println(first.size());\n\t}\n\tpublic static void main(String[] args) {\n\t\t\n\t\tsolve();\n\t\tout.close();\n\t}\n\n}\nclass FastScannerA {\n\tBufferedReader br= new BufferedReader(new InputStreamReader(System.in));\n\tStringTokenizer st= new StringTokenizer(\"\");\n\tString next() {\n\t\twhile (!st.hasMoreTokens())\n\t\t\ttry {\n\t\t\t\tst=new StringTokenizer(br.readLine());\n\t\t\t} catch (IOException e) {\n\t\t\t\te.printStackTrace();\n\t\t\t}\n\t\treturn st.nextToken();\n\t}\n\tint nextInt() {\n\t\treturn Integer.parseInt(next());\n\t}\n\tint[] readArray(int n) {\n\t\tint[] a=new int[n];\n\t\tfor (int i=0; i<n; i++) a[i]=nextInt();\n\t\treturn a;\n\t}\n\tlong nextLong() {\n\t\treturn Long.parseLong(next());\n\t}\n\tvoid sort(long[] a) {\n\t\tArrayList<Long> l=new ArrayList<>();\n\t\tfor (long i:a) l.add(i);\n\t\tCollections.sort(l);\n\t\tfor (int i=0; i<a.length; i++) a[i]=l.get(i);\n\t}\n\t\n\n\t\n}\n\n\n"
+  }
+]

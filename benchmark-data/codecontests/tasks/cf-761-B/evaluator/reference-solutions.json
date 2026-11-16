@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,l = map(int,input().split())\n\nkefa = list(map(int,input().split()))\n\nsasha = list(map(int,input().split()))\n\ndiff1 = [kefa[i+1] - kefa[i] if i != n - 1 else l - kefa[-1] + kefa[0]  for i in range(n) ]\n\ndiff2 = [sasha[i+1] - sasha[i] if i != n - 1 else l - sasha[-1] + sasha[0]  for i in range(n) ]\n\n\n\ndef rotation(pos):\n  for i in range(n):\n    if diff2[(i+pos)%n] != diff1[i]:\n      return False\n  return True\n  \nfor i in range(n):\n  if(rotation(i)):\n    print(\"YES\")\n    exit()\n\nprint(\"NO\")\n  \n    "
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint a[100];\nint b[100];\nint main() {\n  int n, L;\n  cin >> n >> L;\n  for (int i = 0; i < n; i++) {\n    cin >> a[i];\n  }\n  for (int i = 0; i < n; i++) {\n    cin >> b[i];\n  }\n  vector<int> p, q;\n  for (int i = 1; i < n; i++) {\n    p.push_back(a[i] - a[i - 1]);\n    q.push_back(b[i] - b[i - 1]);\n  }\n  p.push_back(L - a[n - 1] + a[0]);\n  q.push_back(L - b[n - 1] + b[0]);\n  for (int i = 0; i < n; i++) {\n    vector<int> dum;\n    for (int j = 0; j < n; j++) {\n      dum.push_back(q[(j + i) % n]);\n    }\n    if (dum == p) {\n      cout << \"YES\" << endl;\n      exit(0);\n    }\n  }\n  cout << \"NO\" << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\npublic class block\n{\n    public static void main(String args[])\n    {\n        Scanner in =new Scanner(System.in);\n       // System.out.println(\"Enter\");\n        int n=in.nextInt();\n        int l=in.nextInt();\n        int k[]=new int[n];\n        int s[]=new int[n];\n        int i,j;\n        k[0]=in.nextInt();\n        int a=k[0],b,sum=0;\n        for(i=1;i<n;i++)\n       {\n         b=in.nextInt();\n         k[i]=b-a;\n         a=b;\n         sum=sum+k[i];\n       }\n        k[0]=l-sum;\n        s[0]=in.nextInt();\n        a=s[0];sum=0;\n        for(i=1;i<n;i++)\n       {\n         b=in.nextInt();\n         s[i]=b-a;\n         a=b;\n         sum=sum+s[i];\n       }\n        s[0]=l-sum;\n        int x=0,g=0;\n        for(i=0;i<n;i++)\n        {\n          for(j=0;j<n;j++)\n          {\n            if(s[i]==k[j])\n            {\n                \n             a=i;\n             b=j;\n             l=0;\n             while(s[a]==k[b])\n             {\n              a++;\n              b++;\n              l++;\n              \n              if(a==n)\n              a=0;\n              if(b==n)\n              b=0;\n              if(l==n)\n              break;\n             }\n             if(l==n)\n             {g=1;break;}\n            }\n          }\n          if(g==1)break;\n        }\n        \n        if(g==1)\n        System.out.println(\"YES\");\n        else\n        System.out.println(\"NO\");\n    }\n}"
+  }
+]

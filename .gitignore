@@ -1,0 +1,82 @@
+# Local credentials and personal configuration
+.env
+.env.*
+!.env.example
+!.env.template
+.codex/
+.claude/
+.mcp.json
+.auth/
+auth.json
+credentials.json
+credentials.*.json
+secrets.json
+secrets.*.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python environments, caches, and build output
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Local logs and runtime databases
+*.log
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.pid
+*.tmp
+
+# Downloaded data and generated benchmark bundles (rebuild with datasets/ scripts)
+/benchmark-data/
+/datasets/**/*.json
+/datasets/**/*.jsonl
+/datasets/**/*.parquet
+/datasets/codecontests/range-cache/
+/datasets/codecontests/shard-index/
+/datasets/codecontests/shard-rejections/
+/datasets/codecontests/task-cache/
+/datasets/codecontests/expansions/
+/datasets/kotlin-task-pool/public/
+/datasets/kotlin-task-pool/evaluator/
+
+# Installed toolchains and private Codex runtime; retain setup code and lockfiles
+/pilot/.runtime/
+/pilot/toolchain/
+/pilot/protocol-schema/
+/python_pilot/envs/
+/python_pilot/toolchains/
+
+# Experiment outputs and preflight workspaces; retain selection manifests
+/runs/
+/pilot/preflight/
+/pilot/*-preflight/
+/python_pilot/smoke/
+/python_pilot/*-preflight.json
+
+# Local editor and OS files
+.idea/
+.vscode/
+.DS_Store
+.AppleDouble/
+._*
+*~
+*.swp
+*.swo

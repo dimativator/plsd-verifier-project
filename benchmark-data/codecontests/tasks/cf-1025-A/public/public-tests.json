@@ -1,0 +1,12 @@
+{
+  "input": [
+    "6\naabddc\n",
+    "3\nabc\n",
+    "3\njjj\n"
+  ],
+  "output": [
+    "Yes\n",
+    "No\n",
+    "Yes\n"
+  ]
+}

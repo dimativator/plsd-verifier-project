@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "t = int(input())\ntests = []\nfor i in range(t):\n    length = int(input())\n    tests.append(input())\n    \ndef solve(s):\n    streak1 = 0\n    streak2 = 0\n    for i in range(len(s)):\n        if s[i] == \"<\":\n            streak1 +=1\n        else:\n            break\n    for i in range(len(s)):\n        if s[-i-1] == \">\":\n            streak2 +=1\n        else:\n            break\n    return min(streak1, streak2)\n\nres = list(map(lambda x: str(solve(x)), tests))\nprint(\"\\n\".join(res))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nvoid pikachu() {}\nshort t, n;\nchar a[111];\nint main() {\n  pikachu();\n  scanf(\"%hd\", &t);\n  short u, v;\n  while (t--) {\n    scanf(\"%hd\", &n);\n    scanf(\"%s\", a + 1);\n    u = 0;\n    v = n + 1;\n    for (short i = 1; i <= n; ++i) {\n      if (a[i] == '<')\n        u = i;\n      else\n        v = min(v, i);\n    }\n    printf(\"%hd\\n\", min(v - 1, n - u));\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class good_string {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub                                                                                                                                \n\n\t\tScanner s = new Scanner(System.in);\n\t\tint t=s.nextInt();\n\t\tfor(int j=0;j<t;j++)\n\t\t{\n\t\t\tint n=s.nextInt();\n\t\tString str = s.next();\n\t\tint c1=-1;\n\t\tint c2=-1;\n\t\tfor(int k=0;k<str.length();k++)\n\t\t{\n\t\t\tif(str.charAt(k)=='<')\n\t\t\t\tc1=k;\n\t\t}\n\t\tfor(int k=0;k<str.length();k++)\n\t\t{\n\t\t\tif(str.charAt(k)=='>')\n\t\t\t{\n\t\t\t\tc2=k;\n               break;\n           }\n\t\t}\n\t\t\n\t\tint k1 = str.length()-c1;\n\t\tint k2 = c2+1;\n\t\t\n\t\t\n\t\tif(c1==-1)\n\t\t\tSystem.out.println(k2-1);\n\t\telse if(c2==-1)\n\t\t\tSystem.out.println(k1-1);\n\t\telse\n\t\t\tSystem.out.println(Integer.min(k1, k2)-1);\n\t\t}}}"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import sys\ninput = sys.stdin.readline\nn=int(input())\ngraph=[[] for _ in range(n)]\nfor j in range(n-1):\n    x,y=map(int,input().split())\n    x-=1\n    y-=1\n    graph[x].append(y)\n    graph[y].append(x)\n\ncolor=[-1]*n\ntem=[0]\nvisit=[0]*n\ncolor[0]=0\n\nwhile(tem!=[]):\n    x=tem.pop()\n    for i in graph[x]:\n        if(color[i]==-1):\n            visit[i]=1\n            color[i]=1-color[x]\n            tem.append(i)\nk=color.count(1)  \n\nprint(min(k,n-k)-1)           \n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int MAXN = 2e5 + 5;\nint n;\nint cnt[2];\nvector<int> Adj[MAXN];\nvoid DFS(int node, int p, int c) {\n  cnt[c]++;\n  for (auto x : Adj[node]) {\n    if (x == p) {\n      continue;\n    }\n    DFS(x, node, 1 - c);\n  }\n}\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(0);\n  cout.tie(0);\n  cin >> n;\n  for (int i = 1; i < n; i++) {\n    int u, v;\n    cin >> u >> v;\n    Adj[u].push_back(v);\n    Adj[v].push_back(u);\n  }\n  DFS(1, -1, 0);\n  cout << min(cnt[0], cnt[1]) - 1;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "//created by Whiplash99\nimport java.io.*;\nimport java.util.*;\npublic class G\n{\n    private static int white=0,black=0;\n    private static ArrayList<Integer> edge[];\n    private static void DFS(int u, int p, int prev)\n    {\n        if(prev==0) black++;\n        else white++;\n        for(int v:edge[u])\n        {\n            if(v==p) continue;\n            DFS(v,u,prev^1);\n        }\n    }\n    public static void main(String[] args) throws IOException\n    {\n        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));\n\n        int i,N;\n\n        N=Integer.parseInt(br.readLine().trim());\n        edge=new ArrayList[N];\n        for(i=0;i<N;i++) edge[i]=new ArrayList<>();\n\n        for(i=0;i<N-1;i++)\n        {\n            String s[]=br.readLine().trim().split(\" \");\n            int u=Integer.parseInt(s[0])-1;\n            int v=Integer.parseInt(s[1])-1;\n\n            edge[u].add(v);\n            edge[v].add(u);\n        }\n        \n        DFS(0,0,1);\n        System.out.println(Math.min(white,black)-1);\n    }\n}"
+  }
+]

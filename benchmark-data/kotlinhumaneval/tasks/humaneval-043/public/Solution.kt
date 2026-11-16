@@ -1,0 +1,10 @@
+/**
+ * You are an expert Kotlin programmer, and here is your task.
+ * Given length of a side and high return area for a triangle.
+ * >>> triangle_area(5, 3)
+ * 7.5
+ *
+ */
+fun triangleArea(a: Int, h: Int): Double {
+    TODO("Implement the function")
+}

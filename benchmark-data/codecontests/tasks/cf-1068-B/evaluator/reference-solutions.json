@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "b=int(input())\n\nout=[1]\n\nn=b\ni=0\nwhile n%2==0:\n    i=i+1\n    out.append(2**i)\n    n=int(n/2)\n\nout1=[]\nfor i in range (1,int(n**0.5)+1,2):\n    if n%i==0:\n        out1.append(i)\n        out1.append(int(n/i))\n\nout2=set()\nfor i in out:\n    for j in out1:\n        out2.add(i*j)\n\n#print (out2)\nprint (len(out2))\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long b;\n  cin >> b;\n  int ans = 0;\n  for (int i = 1; i <= sqrt(b); i++)\n    if (b % i == 0) ++ans;\n  ans *= 2;\n  long long t = sqrt(b);\n  if (t * t == b) --ans;\n  cout << ans;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\n/**\n * Contest: Codeforces Round #518\n *\n * @author Arturs Licis\n */\npublic class ProblemB {\n\tpublic static long gcd(long a, long b) {\n\t\tif (b == 0) return a;\n\t\treturn gcd(b, a % b);\n\t}\n\n\tpublic static long lcm(long a, long b) {\n\t\treturn a * (b / gcd(a, b));\n\t}\n\n\tpublic static void main(String[] args) {\n\t\tScanner sc = new Scanner(System.in);\n\t\tlong b = sc.nextLong();\n\n\t\t// long b = 13003;\n\t\tint cnt = 0;\n\t\tfor (long i = 1; i <= Math.sqrt(b); i++) {\n\t\t\tif (b % i == 0) {\n\t\t\t\tcnt++;\n\t\t\t\tif (b / i != i) cnt++;\n\t\t\t}\n\t\t}\n\n\n\t\tSystem.out.println(cnt);\n\t}\n}"
+  }
+]

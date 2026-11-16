@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import math\n\nh, l = input().split()\nh = int(h)\nl = int(l)\na = float((pow(l,2)-pow(h,2))/(2*h))\nprint(a)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(NULL);\n  cout.tie(NULL);\n  long double h, l;\n  cin >> h >> l;\n  cout.precision(7);\n  cout << fixed;\n  cout << (l * l - h * h) / (2 * h);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.BufferedWriter;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.io.OutputStreamWriter;\nimport java.io.PrintWriter;\n\npublic class WaterLily {\n\tpublic static void main(String[] args) throws NumberFormatException, IOException {\n\t\tBufferedReader reader = new BufferedReader(new InputStreamReader(System.in), 32768);\n\t\tPrintWriter writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));\n\t\tString[] temp = reader.readLine().split(\" \");\n\t\tint h = Integer.parseInt(temp[0]);\n\t\tint l = Integer.parseInt(temp[1]);\n\t\tdouble depth = (l * 1l * l - h * 1l * h) / 2.0 / h;\n\t\twriter.println(String.format(\"%.15f\", depth));\n\t\treader.close();\n\t\twriter.close();\n\t}\n}\n"
+  }
+]

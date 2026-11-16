@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,p,m=map(int,input().split())\nflag,t_neg,t_in,d,tot=0,0,0,1,0\n\nfor i in range (n):\n    ini_d=d\n    if flag==1:\n        tot+=(t-p)\n        if tot<0:\n            t_neg+=1\n    d,t=map(int,input().split())\n    if flag==0:\n        t_neg=(d-ini_d)\n        tot=t_neg*-p\n        flag=1\n    else:\n        tot+=(((d-1)-ini_d)*-p)\n        if tot<0:\n            if tot<=(((d-1)-ini_d)*-p):\n                t_neg+=(d-1)-ini_d\n            else:\n                x=int(-tot%p)\n                y=int(-tot/p)\n                if x!=0:\n                    t_neg+=(y+1)\n                else:\n                    t_neg+=y\n\n\n\nini_d=d\ntot+=(t-p)\nif tot<0:\n    t_neg+=1\ntot+=(((m)-ini_d)*-p)\nif tot<0:\n    if tot<=(((m)-ini_d)*-p):\n        t_neg+=(m)-ini_d\n    else:\n        x=int(-tot%p)\n        y=int(-tot/p)\n        if x!=0:\n            t_neg+=(y+1)\n        else:\n            t_neg+=y\n\n                    \nprint (t_neg) \n    \n    "
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  long long p, m;\n  scanf(\"%d%lld%lld\", &n, &p, &m);\n  long long curd = 1;\n  long long curb = 0;\n  long long sum = 0;\n  for (int i = 0; i < n; ++i) {\n    long long d, v;\n    scanf(\"%lld%lld\", &d, &v);\n    long long tpos = 0;\n    if (curb > 0) tpos = curb / p;\n    if (curd + tpos < d) {\n      sum += d - curd - tpos;\n    }\n    curb = curb - (d - curd) * p + v;\n    curd = d;\n  }\n  long long tpos = 0;\n  if (curb > 0) tpos = curb / p;\n  if (curd + tpos <= m) {\n    sum += m + 1 - curd - tpos;\n  }\n  printf(\"%lld\\n\", sum);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\n\npublic class program {\n    public static void main (String[] args) throws IOException {\n        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));\n        StringTokenizer stk = new StringTokenizer(in.readLine());\n        long n = Long.parseLong(stk.nextToken());\n        long p = Long.parseLong(stk.nextToken());\n        long m = Long.parseLong(stk.nextToken());\n        long d, t, ans = 0, pst = 1, blc = 0, dn;\n        for (long i = 1; i <= n; i++) {\n            stk = new StringTokenizer(in.readLine());\n            d = Long.parseLong(stk.nextToken());\n            t = Long.parseLong(stk.nextToken());\n            if (blc >= 0) dn = blc / p;\n            else dn = 0;\n            if (pst + dn < d) ans += d - (pst + dn);\n            blc -= p * (d - pst);\n            blc += t;\n            pst = d;\n        }\n        if (blc >= 0) dn = blc / p;\n        else dn = 0;\n        if (pst + dn <= m) ans += m - (pst + dn) + 1;\n        System.out.println(ans);\n    }\n}\n"
+  }
+]

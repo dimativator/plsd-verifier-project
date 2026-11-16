@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "def nr():return int(input())\ndef nrs():return [int(i) for i in input().split()]\ndef f(n,t,s):\n\td=[0]*n\n\tfor i in range(1,n):\n\t\tfor j in range(i-1,-1,-1):\n\t\t\tif t[i]==t[j]:continue\n\t\t\tsc=abs(s[i]-s[j])\n\t\t\td[i],d[j]=max(d[i],d[j]+sc),max(d[j],d[i]+sc)\n\treturn max(d)\nfor _ in range(nr()):\n\tn=nr()\n\tt=nrs()\n\ts=nrs()\n\tprint(f(n,t,s))\n"
+  },
+  {
+    "language": "CPP",
+    "code": "\n#include <stdio.h>\n#include <map>\n#include <vector>\n\nint absi(int i) {\n\tif (i > 0) return i;\n\telse return -i;\n}\n\nint main()\n{\n\tint T;\n\tscanf(\"%d\", &T);\n\n\twhile (T--) {\n\t\tint n;\n\t\tlong long ans = 0;\n\t\tscanf(\"%d\", &n);\n\t\tstd::vector<int> tag(n + 1);\n\t\tstd::vector<int> s(n + 1);\n\t\tstd::vector<long long> d(n + 1, 0);\n\t\tfor (int i = 1; i <= n; i++) scanf(\"%d\", &tag[i]);\n\t\tfor (int i = 1; i <= n; i++) scanf(\"%d\", &s[i]);\n\n\t\tfor (int t = 2; t <= n; t++) {\n\t\t\tfor (int i = t - 1; i >= 1; i--) {\n\t\t\t\tif (tag[t] != tag[i]) {\n\t\t\t\t\tlong long di = d[i];\n\t\t\t\t\tlong long dt = d[t];\n\t\t\t\t\tlong long ss = absi(s[i] - s[t]);\n\t\t\t\t\td[t] = std::max(di + ss, dt);\n\t\t\t\t\td[i] = std::max(dt + ss, di);\n\n\t\t\t\t\tans = std::max(ans, d[i]);\n\t\t\t\t\tans = std::max(ans, d[t]);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\tprintf(\"%lld\\n\", ans);\n\t}\n\n\treturn 0;\n}"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\n\npublic class CF1497D extends PrintWriter {\n\tCF1497D() { super(System.out); }\n\tScanner sc = new Scanner(System.in);\n\tpublic static void main(String[] $) {\n\t\tCF1497D o = new CF1497D(); o.main(); o.flush();\n\t}\n\n\tvoid main() {\n\t\tint t = sc.nextInt();\n\t\twhile (t-- > 0) {\n\t\t\tint n = sc.nextInt();\n\t\t\tint[] aa = new int[n];\n\t\t\tfor (int i = 0; i < n; i++)\n\t\t\t\taa[i] = sc.nextInt();\n\t\t\tint[] ss = new int[n];\n\t\t\tfor (int i = 0; i < n; i++)\n\t\t\t\tss[i] = sc.nextInt();\n\t\t\tlong[] dp = new long[n];\n\t\t\tfor (int j = 0; j < n; j++)\n\t\t\t\tfor (int i = j - 1; i >= 0; i--)\n\t\t\t\t\tif (aa[i] != aa[j]) {\n\t\t\t\t\t\tint s = Math.abs(ss[i] - ss[j]);\n\t\t\t\t\t\tlong x = dp[i], y = dp[j];\n\t\t\t\t\t\tdp[j] = Math.max(dp[j], x + s);\n\t\t\t\t\t\tdp[i] = Math.max(dp[i], y + s);\n\t\t\t\t\t}\n\t\t\tlong ans = 0;\n\t\t\tfor (int i = 0; i < n; i++)\n\t\t\t\tans = Math.max(ans, dp[i]);\n\t\t\tprintln(ans);\n\t\t}\n\t}\n}\n"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "name": "362_E. Petya and Pipes",
+  "description": "A little boy Petya dreams of growing up and becoming the Head Berland Plumber. He is thinking of the problems he will have to solve in the future. Unfortunately, Petya is too inexperienced, so you are about to solve one of such problems for Petya, the one he's the most interested in.\n\nThe Berland capital has n water tanks numbered from 1 to n. These tanks are connected by unidirectional pipes in some manner. Any pair of water tanks is connected by at most one pipe in each direction. Each pipe has a strictly positive integer width. Width determines the number of liters of water per a unit of time this pipe can transport. The water goes to the city from the main water tank (its number is 1). The water must go through some pipe path and get to the sewer tank with cleaning system (its number is n). \n\nPetya wants to increase the width of some subset of pipes by at most k units in total so that the width of each pipe remains integer. Help him determine the maximum amount of water that can be transmitted per a unit of time from the main tank to the sewer tank after such operation is completed.\n\nInput\n\nThe first line contains two space-separated integers n and k (2 ≤ n ≤ 50, 0 ≤ k ≤ 1000). Then follow n lines, each line contains n integers separated by single spaces. The i + 1-th row and j-th column contain number cij — the width of the pipe that goes from tank i to tank j (0 ≤ cij ≤ 106, cii = 0). If cij = 0, then there is no pipe from tank i to tank j.\n\nOutput\n\nPrint a single integer — the maximum amount of water that can be transmitted from the main tank to the sewer tank per a unit of time.\n\nExamples\n\nInput\n\n5 7\n0 1 0 2 0\n0 0 4 10 0\n0 0 0 0 5\n0 0 0 0 10\n0 0 0 0 0\n\n\nOutput\n\n10\n\n\nInput\n\n5 10\n0 1 0 0 0\n0 0 2 0 0\n0 0 0 3 0\n0 0 0 0 4\n100 0 0 0 0\n\n\nOutput\n\n5\n\nNote\n\nIn the first test Petya can increase width of the pipe that goes from the 1st to the 2nd water tank by 7 units.\n\nIn the second test Petya can increase width of the pipe that goes from the 1st to the 2nd water tank by 4 units, from the 2nd to the 3rd water tank by 3 units, from the 3rd to the 4th water tank by 2 units and from the 4th to 5th water tank by 1 unit.",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2300,
+  "cf_contest_id": 362,
+  "cf_index": "E",
+  "cf_tags": [
+    "flows",
+    "graphs",
+    "shortest paths"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00014-of-00039-dc3ebb07a3cba8e4.parquet",
+  "source_row": 252,
+  "task_id": "codecontests/cf-362-E",
+  "rating_band": "2000-2399",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/362/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

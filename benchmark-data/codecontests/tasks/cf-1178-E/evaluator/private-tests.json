@@ -1,0 +1,42 @@
+{
+  "input": [
+    "bcacabcbabacacbcbcbcbabacbcacacbcacababc\n",
+    "abababacacacbcbcbc\n",
+    "babababcbcbacacac\n",
+    "acab\n",
+    "abacbc\n",
+    "acbcbabacacbcbab\n",
+    "bacbac\n",
+    "abababcbacacacbcbc\n",
+    "bcb\n",
+    "ababacacacbc\n",
+    "cbcacbcacacabcbcbaba\n",
+    "ab\n",
+    "abab\n",
+    "abacabcb\n",
+    "abababcbcbc\n",
+    "acacacababababcbcb\n",
+    "cbabacacacbabacababcabcbabacababcbcabacacacbababcbcacacbcbabcbcbabacacacabacbcbacacbcabacbcabcbabcbabababcaca\n",
+    "ababcbcacbcac\n"
+  ],
+  "output": [
+    "baacabacacbcbbcbbcbcacabacaab",
+    "bbbaaabbb\n",
+    "aaabcbcbaaa",
+    "aa\n",
+    "bab",
+    "abbaabba\n",
+    "aca",
+    "bbacacacabb",
+    "b\n",
+    "baacaab",
+    "baccccccab\n",
+    "a",
+    "aa\n",
+    "bcacb",
+    "bbabb\n",
+    "ccaaaaacc\n",
+    "cabaaacbabcababcbcaacbabccaaaccbabbccaccbbabccaaaccbabcaacbcbabacbabcaaabac",
+    "ababcbaba"
+  ]
+}

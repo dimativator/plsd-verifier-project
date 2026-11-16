@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "pointer = 0 \nlst = [0, 0]\nn, m = list(map(int, input().split()))\nfor i in range(n):\n    a, b = list(map(int, input().split()))\n    if (pointer == 0):\n        lst[0], lst[1] = a, b\n    pointer+=1\n    if ((m*lst[0])/lst[1]) > ((m*a)/b):\n        lst[0], lst[1] = a, b\nprint((m*lst[0])/lst[1])"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  double n, m;\n  cin >> n >> m;\n  double ans = 1e18;\n  for (int i = 0; i < n; i++) {\n    double a, b;\n    cin >> a >> b;\n    ans = min(ans, a / b * m);\n  }\n  printf(\"%.6lf\\n\", ans);\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\n\nimport java.util.Collections;\nimport java.util.Scanner;\n\npublic class Super {\n\n\tpublic static void main(String[] args) \n\t{\n\t\tScanner jk = new Scanner(System.in);\n\t\tint n = jk.nextInt();\n\t\tLong m = jk.nextLong();\n\t\tDouble[] ins = new Double[n];\n\t\tfor (int i=0; i<n; i++)\n\t\t{\n\t\t\tDouble a = jk.nextDouble();\n\t\t\tDouble b = jk.nextDouble();\n\t\t\tins[i] = (a/b)*m;\n\t\t}\n\t\tDouble ans = ins[0];\n\t\tfor (Double i:ins)\n\t\t{\n\t\t\tif (ans>i)\n\t\t\t{\n\t\t\t\tans = i;\n\t\t\t}\n\t\t}\n\t\tSystem.out.println(ans);\n\n\t}\n\n}\n"
+  }
+]

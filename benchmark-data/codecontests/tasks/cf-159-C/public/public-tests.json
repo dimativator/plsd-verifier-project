@@ -1,0 +1,10 @@
+{
+  "input": [
+    "2\nbac\n3\n2 a\n1 b\n2 c\n",
+    "1\nabacaba\n4\n1 a\n1 a\n1 c\n2 b\n"
+  ],
+  "output": [
+    "acb\n",
+    "baa\n"
+  ]
+}

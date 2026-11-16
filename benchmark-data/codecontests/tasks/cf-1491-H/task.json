@@ -1,0 +1,34 @@
+{
+  "id": "cf-1491-H",
+  "dataset": "deepmind/code_contests",
+  "source_id": "codecontests/cf-1491-H",
+  "url": "https://codeforces.com/problemset/problem/1491/H",
+  "source_split": "train",
+  "submission_format": "program",
+  "target_language": "Kotlin",
+  "difficulty": 3400,
+  "rating_band": "2400+",
+  "tags": [
+    "data structures",
+    "trees"
+  ],
+  "public_test_count": 1,
+  "private_test_count": 3,
+  "generated_test_count": 200,
+  "held_out_public_input_overlap": 0,
+  "repeated_inputs_with_different_expected_outputs": 0,
+  "source_time_limit": {
+    "seconds": 1,
+    "nanos": 500000000
+  },
+  "source_memory_limit_bytes": 256000000,
+  "behavioral_validation": "not_run",
+  "kotlin_reference": "not_translated",
+  "verifier_validation": "not_run",
+  "output_checker": "requires_review",
+  "task_dir": "tasks/cf-1491-H",
+  "public_dir": "tasks/cf-1491-H/public",
+  "evaluator_dir": "tasks/cf-1491-H/evaluator",
+  "metadata_file": "tasks/cf-1491-H/task.json",
+  "evaluation_file": "tasks/cf-1491-H/evaluation.json"
+}

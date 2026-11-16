@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,c = map(int,input().split())\np=input().split()\nt=input().split()\nsl=0\nsr=0\nti=0\nfor i in range(n):\n    ti+=int(t[i])\n    if int(p[i])-c*ti>=0:\n        sl+=int(p[i])-c*ti\nti=0\nfor i in range(n):\n    ti+=int(t[n-i-1])\n    if int(p[n-i-1])-c*ti>=0:\n        sr+=int(p[n-i-1])-c*ti\nif sl == sr:\n    print('Tie')\nelif sl>sr:\n    print('Limak')\nelse:\n    print('Radewoosh')\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  ios::sync_with_stdio(false);\n  cin.tie(NULL);\n  int n, c;\n  cin >> n >> c;\n  int p[n], t[n], a[n], b[n];\n  for (int i = 0; i < n; i++) cin >> p[i];\n  for (int i = 0; i < n; i++) cin >> t[i];\n  a[0] = t[0];\n  for (int i = 1; i < n; i++) a[i] = t[i] + a[i - 1];\n  a[0] = max(0, p[0] - (c * a[0]));\n  for (int i = 1; i < n; i++) a[i] = max(0, p[i] - (c * a[i]));\n  b[n - 1] = t[n - 1];\n  for (int i = n - 2; i >= 0; i--) b[i] = t[i] + b[i + 1];\n  b[n - 1] = max(0, p[n - 1] - (c * b[n - 1]));\n  for (int i = n - 2; i >= 0; i--) b[i] = max(0, p[i] - (c * b[i]));\n  int l = 0, r = 0;\n  for (int i = 0; i < n; i++) {\n    l += a[i];\n    r += b[i];\n  }\n  if (l == r) cout << \"Tie\";\n  if (l > r) cout << \"Limak\";\n  if (l < r) cout << \"Radewoosh\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.Scanner;\n\n/*\n * To change this license header, choose License Headers in Project Properties.\n * To change this template file, choose Tools | Templates\n * and open the template in the editor.\n */\n/**\n *\n * @author root\n */\npublic class A {\n\n    public static void main(String args[]) {\n        Scanner in = new Scanner(System.in);\n        int n = in.nextInt();\n        int c = in.nextInt();\n        int p[] = new int[n];\n        int t[] = new int[n];\n        for (int i = 0; i < n; i++) {\n            p[i] = in.nextInt();\n        }\n        for (int i = 0; i < n; i++) {\n            t[i] = in.nextInt();\n        }\n\n        long l = 0;\n        long time = 0;\n        for (int i = 0; i < n; i++) {\n            time += t[i];\n            long points = p[i] - time * c;\n            l += (points>0)?points:0;\n        }\n\n        long r = 0;\n        time = 0;\n        for (int i = n - 1; i >= 0; i--) {\n            time += t[i];\n            long points = p[i] - time * c;\n            r += (points>0)?points:0;\n        }\n//        System.out.println(l+\" \"+r);    \n                \n        if(r<l){\n            System.out.println(\"Limak\");\n        } else if(l<r){\n            System.out.println(\"Radewoosh\");\n        } else {\n            System.out.println(\"Tie\");\n        }\n    }\n}\n"
+  }
+]

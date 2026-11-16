@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "ranges, maps, strs = range, map, str\n\nfout = \"\"\ncount = 0\n\nn, k, q = maps(int, input().split())\nrangeArr = []\n\nfor i in ranges(200002):\n\trangeArr.append(0)\n\nfor recipe in ranges(n):\n\tleft, right = maps(int, input().split())\n\n\trangeArr[left] += 1\n\trangeArr[right + 1] -= 1\n\nfor recipe in ranges(1, len(rangeArr)):\n\trangeArr[recipe] += rangeArr[recipe - 1]\n\n\tif rangeArr[recipe - 1] < k:\n\t\trangeArr[recipe - 1] = 0\n\telse:\n\t\trangeArr[recipe - 1] = 1\n\nfor i in ranges(1, len(rangeArr)):\n    rangeArr[i] += rangeArr[i - 1]\n\nfor question in ranges(q):\n\tleft, right = maps(int, input().split())\n\n\tfout += strs(rangeArr[right] - rangeArr[left - 1]) + \"\\n\"\n\nprint(fout)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint ep[200005];\nint dp[200005];\nint main() {\n  int n, k, m;\n  scanf(\"%d%d%d\", &n, &k, &m);\n  while (n--) {\n    int a, b;\n    scanf(\"%d%d\", &a, &b);\n    ep[a]++;\n    ep[b + 1]--;\n  }\n  for (int i = 1; i <= 200002; ++i) {\n    ep[i] += ep[i - 1];\n    if (ep[i] >= k) dp[i]++;\n    dp[i] += dp[i - 1];\n  }\n  while (m--) {\n    int a, b;\n    scanf(\"%d%d\", &a, &b);\n    printf(\"%d\\n\", dp[b] - dp[a - 1]);\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\nimport java.math.*;\n\npublic class Main {\n\n    static Scanner input = new Scanner(System.in);\n\n    public static void main(String[] args) {\n        int n = input.nextInt();\n        int k = input.nextInt();\n        int q = input.nextInt();\n        int[] deriv = new int[200002];\n        int[] integBinSum = new int[200002];\n        for (int i = 1; i <= n; i++) {\n            deriv[input.nextInt()]++;\n            deriv[input.nextInt() + 1]--;\n        }\n        int integ = 0;\n        for (int i = 1; i <= 200000; i++) {\n            integ += deriv[i];\n            integBinSum[i] = integBinSum[i - 1] + (integ >= k ? 1 : 0);\n        }\n        for (int i = 0; i < q; i++) {\n            int first = integBinSum[input.nextInt() - 1], last = integBinSum[input.nextInt()];\n            System.out.println(last - first);\n        }\n    }\n}"
+  }
+]

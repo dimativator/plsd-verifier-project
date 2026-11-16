@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "Str=input()\nss=[int(s) for s in Str.split() if s.isdigit()]\np=ss[0]\nn=ss[1]\nll=[]\nfor i in range(n):\n    x=int(input())\n    r=x%p\n    if r not in ll:\n        ll.append(r)\n    else:\n        print(i+1)\n        break\nelse:\n    print(-1)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  vector<char> t(300, 0);\n  int p, n;\n  cin >> p >> n;\n  int col = -1;\n  for (int i = 0; i < n; ++i) {\n    int z;\n    cin >> z;\n    z %= p;\n    if (t[z] && col == -1) {\n      col = i + 1;\n    }\n    t[z] = 1;\n  }\n  cout << col;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Arrays;\nimport java.util.Scanner;\n\n/**\n *\n * @author ganeshpachpind\n */\npublic class CodeForce447A {\n    public static void main(String args[])\n    {\n        CodeForce447A process=new CodeForce447A();\n        process.doProcess();\n    }\n    void doProcess()\n    {\n        Scanner sc=new Scanner(System.in);\n        int p=sc.nextInt();\n        int n=sc.nextInt();\n        int a[]=new int[p];\n        Arrays.fill(a,-1);\n        System.out.println(check(p, a, sc,n));\n\n    }\n    int check(int p,int a[],Scanner sc,int n)\n    {\n        for(int i=0;i<n;i++)\n        {\n            int mod=(sc.nextInt())%p;\n            if(a[mod]==-1)\n            {\n                a[mod]=mod;\n            }\n            else\n            {                \n                return i+1;                \n            }            \n        }\n        return -1;\n    }\n    \n}\n"
+  }
+]

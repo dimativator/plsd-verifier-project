@@ -1,0 +1,10 @@
+n=int(input())
+l=list(map(int,input().split()))
+s=sum(l)/2
+#print(s)
+i=0;
+curr=0
+while(curr<s):
+    curr+=l[i]
+    i+=1
+print(i)

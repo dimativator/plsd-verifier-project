@@ -1,0 +1,38 @@
+{
+  "name": "431_D. Random Task",
+  "description": "One day, after a difficult lecture a diligent student Sasha saw a graffitied desk in the classroom. She came closer and read: \"Find such positive integer n, that among numbers n + 1, n + 2, ..., 2·n there are exactly m numbers which binary representation contains exactly k digits one\".\n\nThe girl got interested in the task and she asked you to help her solve it. Sasha knows that you are afraid of large numbers, so she guaranteed that there is an answer that doesn't exceed 1018.\n\nInput\n\nThe first line contains two space-separated integers, m and k (0 ≤ m ≤ 1018; 1 ≤ k ≤ 64).\n\nOutput\n\nPrint the required number n (1 ≤ n ≤ 1018). If there are multiple answers, print any of them.\n\nExamples\n\nInput\n\n1 1\n\n\nOutput\n\n1\n\n\nInput\n\n3 2\n\n\nOutput\n\n5",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 2100,
+  "cf_contest_id": 431,
+  "cf_index": "D",
+  "cf_tags": [
+    "binary search",
+    "bitmasks",
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00011-of-00039-5de236be5188959d.parquet",
+  "source_row": 32,
+  "task_id": "codecontests/cf-431-D",
+  "rating_band": "2000-2399",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/431/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

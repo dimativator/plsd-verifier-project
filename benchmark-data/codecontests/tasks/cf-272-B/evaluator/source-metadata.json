@@ -1,0 +1,35 @@
+{
+  "name": "272_B. Dima and Sequence",
+  "description": "Dima got into number sequences. Now he's got sequence a1, a2, ..., an, consisting of n positive integers. Also, Dima has got a function f(x), which can be defined with the following recurrence:\n\n  * f(0) = 0; \n  * f(2·x) = f(x); \n  * f(2·x + 1) = f(x) + 1. \n\n\n\nDima wonders, how many pairs of indexes (i, j) (1 ≤ i < j ≤ n) are there, such that f(ai) = f(aj). Help him, count the number of such pairs. \n\nInput\n\nThe first line contains integer n (1 ≤ n ≤ 105). The second line contains n positive integers a1, a2, ..., an (1 ≤ ai ≤ 109).\n\nThe numbers in the lines are separated by single spaces.\n\nOutput\n\nIn a single line print the answer to the problem.\n\nPlease, don't use the %lld specifier to read or write 64-bit integers in C++. It is preferred to use the cin, cout streams or the %I64d specifier.\n\nExamples\n\nInput\n\n3\n1 2 4\n\n\nOutput\n\n3\n\n\nInput\n\n3\n5 3 1\n\n\nOutput\n\n1\n\nNote\n\nIn the first sample any pair (i, j) will do, so the answer is 3.\n\nIn the second sample only pair (1, 2) will do.",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 1400,
+  "cf_contest_id": 272,
+  "cf_index": "B",
+  "cf_tags": [
+    "implementation",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00001-of-00039-e092fe56fda18715.parquet",
+  "source_row": 110,
+  "task_id": "codecontests/cf-272-B",
+  "rating_band": "1200-1599",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/272/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

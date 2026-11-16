@@ -1,0 +1,35 @@
+{
+  "name": "476_A. Dreamoon and Stairs",
+  "description": "Dreamoon wants to climb up a stair of n steps. He can climb 1 or 2 steps at each move. Dreamoon wants the number of moves to be a multiple of an integer m. \n\nWhat is the minimal number of moves making him climb to the top of the stairs that satisfies his condition?\n\nInput\n\nThe single line contains two space separated integers n, m (0 < n ≤ 10000, 1 < m ≤ 10).\n\nOutput\n\nPrint a single integer — the minimal number of moves being a multiple of m. If there is no way he can climb satisfying condition print  - 1 instead.\n\nExamples\n\nInput\n\n10 2\n\n\nOutput\n\n6\n\n\nInput\n\n3 5\n\n\nOutput\n\n-1\n\nNote\n\nFor the first sample, Dreamoon could climb in 6 moves with following sequence of steps: {2, 2, 2, 2, 1, 1}.\n\nFor the second sample, there are only three valid sequence of steps {2, 1}, {1, 2}, {1, 1, 1} with 2, 2, and 3 steps respectively. All these numbers are not multiples of 5.",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 1000,
+  "cf_contest_id": 476,
+  "cf_index": "A",
+  "cf_tags": [
+    "implementation",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00006-of-00039-65184bb9f7d61fde.parquet",
+  "source_row": 182,
+  "task_id": "codecontests/cf-476-A",
+  "rating_band": "800-1199",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/476/A",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

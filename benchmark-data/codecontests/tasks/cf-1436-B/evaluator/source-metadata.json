@@ -1,0 +1,35 @@
+{
+  "name": "1436_B. Prime Square",
+  "description": "Sasha likes investigating different math objects, for example, magic squares. But Sasha understands that magic squares have already been studied by hundreds of people, so he sees no sense of studying them further. Instead, he invented his own type of square — a prime square. \n\nA square of size n × n is called prime if the following three conditions are held simultaneously: \n\n  * all numbers on the square are non-negative integers not exceeding 10^5; \n  * there are no prime numbers in the square; \n  * sums of integers in each row and each column are prime numbers. \n\n\n\nSasha has an integer n. He asks you to find any prime square of size n × n. Sasha is absolutely sure such squares exist, so just help him!\n\nInput\n\nThe first line contains a single integer t (1 ≤ t ≤ 10) — the number of test cases.\n\nEach of the next t lines contains a single integer n (2 ≤ n ≤ 100) — the required size of a square.\n\nOutput\n\nFor each test case print n lines, each containing n integers — the prime square you built. If there are multiple answers, print any.\n\nExample\n\nInput\n\n\n2\n4\n2\n\n\nOutput\n\n\n4 6 8 1\n4 9 9 9\n4 10 10 65\n1 4 4 4\n1 1\n1 1",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 900,
+  "cf_contest_id": 1436,
+  "cf_index": "B",
+  "cf_tags": [
+    "constructive algorithms",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 500000000
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00008-of-00039-7246e6b7423b404f.parquet",
+  "source_row": 209,
+  "task_id": "codecontests/cf-1436-B",
+  "rating_band": "800-1199",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/1436/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

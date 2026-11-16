@@ -1,0 +1,20 @@
+{
+  "task_id": "HumanEval_kotlin/104",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Given a positive integer n, return a tuple that has the number of even and odd\n * integer palindromes that fall within the range(1, n), inclusive.\n\n * Example 1:\n\n *     Input: 3\n *     Output: (1, 2)\n *     Explanation:\n *     Integer palindrome are 1, 2, 3. one of them is even, and two of them are odd.\n\n * Example 2:\n\n *     Input: 12\n *     Output: (4, 6)\n *     Explanation:\n *     Integer palindrome are 1, 2, 3, 4, 5, 6, 7, 8, 9, 11. four of them are even, and 6 of them are odd.\n\n * Note:\n *     1. 1 <= n <= 10^3\n *     2. returned tuple has the number of even and odd integer palindromes respectively.\n *\n */\nfun evenOddPalindrome(n : Int) : List<Int> {\n",
+  "entry_point": "evenOddPalindrome",
+  "test": "fun main() {\n    var arg00 : Int = 123\n    var x0 : List<Int> = evenOddPalindrome(arg00);\n    var v0 : List<Int> = mutableListOf(8, 13);\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10 : Int = 12\n    var x1 : List<Int> = evenOddPalindrome(arg10);\n    var v1 : List<Int> = mutableListOf(4, 6);\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20 : Int = 3\n    var x2 : List<Int> = evenOddPalindrome(arg20);\n    var v2 : List<Int> = mutableListOf(1, 2);\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30 : Int = 63\n    var x3 : List<Int> = evenOddPalindrome(arg30);\n    var v3 : List<Int> = mutableListOf(6, 8);\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40 : Int = 25\n    var x4 : List<Int> = evenOddPalindrome(arg40);\n    var v4 : List<Int> = mutableListOf(5, 6);\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50 : Int = 19\n    var x5 : List<Int> = evenOddPalindrome(arg50);\n    var v5 : List<Int> = mutableListOf(4, 6);\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n    var arg60 : Int = 9\n    var x6 : List<Int> = evenOddPalindrome(arg60);\n    var v6 : List<Int> = mutableListOf(4, 5);\n    if (x6 != v6) {\n        throw Exception(\"Exception -- test case 6 did not pass. x6 = \" + x6)\n    }\n\n    var arg70 : Int = 1\n    var x7 : List<Int> = evenOddPalindrome(arg70);\n    var v7 : List<Int> = mutableListOf(0, 1);\n    if (x7 != v7) {\n        throw Exception(\"Exception -- test case 7 did not pass. x7 = \" + x7)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * Given a positive integer n, return a tuple that has the number of even and odd\n * integer palindromes that fall within the range(1, n), inclusive.\n\n * Example 1:\n\n *     Input: 3\n *     Output: (1, 2)\n *     Explanation:\n *     Integer palindrome are 1, 2, 3. one of them is even, and two of them are odd.\n\n * Example 2:\n\n *     Input: 12\n *     Output: (4, 6)\n *     Explanation:\n *     Integer palindrome are 1, 2, 3, 4, 5, 6, 7, 8, 9, 11. four of them are even, and 6 of them are odd.\n\n * Note:\n *     1. 1 <= n <= 10^3\n *     2. returned tuple has the number of even and odd integer palindromes respectively.\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun evenOddPalindrome(n : Int) : List<Int> {",
+    "    fun checkPalindrome(num: Int): Boolean {",
+    "        return num.toString() == num.toString().reversed()",
+    "    }",
+    "\tval countEven = (1..n).count { it % 2 == 0 && checkPalindrome(it) }",
+    "    val countOdd = (1..n).count { it % 2 == 1 && checkPalindrome(it) }",
+    "    return listOf(countEven, countOdd)",
+    "}",
+    "",
+    ""
+  ]
+}

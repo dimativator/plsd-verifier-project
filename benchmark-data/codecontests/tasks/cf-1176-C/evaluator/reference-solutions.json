@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "_=int(input())\na=list(map(int,input().split()))\nb=[4,8,15,16,23,42]\nc=[0]*6\n\nfor i in range(len(a)):\n    x = b.index(a[i])\n    if x == 0:\n        c[0] +=1\n    elif c[x-1]!=0:\n        c[x-1]-=1\n        c[x]+=1\n    \nprint(len(a)-6*c[5])"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int maxn = 1e6 + 7;\nconst int mod = 1e9 + 7;\nint n, m, a[maxn], b[maxn];\nset<int> q[107];\nint main() {\n  scanf(\"%d\", &n);\n  int x;\n  a[1] = 4;\n  a[2] = 8;\n  a[3] = 15;\n  a[4] = 16;\n  a[5] = 23;\n  a[6] = 42;\n  for (int i = 1; i <= n; i++) {\n    scanf(\"%d\", &x);\n    q[x].insert(i);\n  }\n  int sum = 0;\n  while (1) {\n    int st = 0;\n    int i;\n    for (i = 1; i <= 6; i++) {\n      if (q[a[i]].empty()) break;\n      auto next = q[a[i]].lower_bound(st);\n      if (next == q[a[i]].end()) break;\n      st = *next;\n      q[a[i]].erase(st);\n    }\n    if (i == 7)\n      sum += 6;\n    else\n      break;\n  }\n  cout << n - sum << endl;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\npublic class Main{\n    public static void main(String[] args) {\n      int n=0;\n      Scanner s = new Scanner(System.in);\n      n=s.nextInt();\n      int A[]= new int[n];\n      long count4=0;\n      long count8=0;\n      long count15=0;\n      long count16=0;long count23=0;long count42=0;\n      int flag=0;\n      int count=0;\n      for(int i=0;i<n;i++){\n        A[i]=s.nextInt();\n        if(A[i]==4){\n          count4++;\n          continue;\n        }\n        if(A[i]==8){\n          if(count4-count8>0){\n            count8++;\n            continue;\n          }\n          else{\n            count++;\n          }\n        }\n        if(A[i]==15){\n          if(count8-count15>0){\n            count15++;\n            continue;\n          }\n          else{\n            count++;\n          }   \n        }\n        if(A[i]==16){\n        if(count15-count16>0){\n            count16++;\n            continue;\n          }\n          else{\n            count++;\n          }\n        }\n        if(A[i]==23){\n        if(count16-count23>0){\n            count23++;\n            continue;\n          }\n          else{\n            count++;\n          }\n        }\n        if(A[i]==42){\n        if(count23-count42>0){\n            count8--;count4--;count15--;count16--;count23--;\n            continue;\n          }\n          else{\n            count++;\n          }\n        }\n      }\n      System.out.println((count4+count8+count15+count16+count23+count42+count));\n            \n}\n}\n\n"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\n\nphone = []\n\nfor i in range(n):\n    s = input().strip()\n    phone.append(s)\n\nc = 0\nk = 0\nflag = True\nwhile True:\n    for p in phone:\n        if p[k] != phone[0][k]:\n            flag = False\n            break\n    k += 1\n\n    if flag:\n        c += 1\n    else:\n        print(c)\n        break\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  cin >> n;\n  string s[n + 10000];\n  vector<int> v;\n  for (int i = 0; i < n; ++i) cin >> s[i];\n  for (int i = 0; i < s[0].size(); ++i) {\n    int j = 0;\n    int ans = 1;\n    while (j <= n - 1) {\n      if (s[j][i] == s[j + 1][i]) ++ans;\n      ++j;\n    }\n    if (ans == n) v.push_back(i);\n  }\n  int c = 0;\n  int mx = -1;\n  if (v.size()) ++c;\n  for (int i = 1; i < v.size(); ++i) {\n    if (v[i] - v[i - 1] == 1)\n      ++c;\n    else {\n      mx = max(mx, c);\n      c = 1;\n    }\n  }\n  if (mx == 1) mx = 0;\n  if (mx == -1) mx = v.size();\n  cout << mx;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import  java.util.*;\npublic class my {\n\n\t/**\n\t * @param args\n\t */\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\t\tScanner in=new Scanner(System.in);\n\t\tint n=in.nextInt();\n\t\tString f[]=new String[n];\n\t\tfor (int i = 0; i < f.length; i++) {\n\t\t\tf[i]=in.next();\n\t\t}\n\t\tint a=0;\n\t\tboolean b=true;\n\t\tfor (int i = 0; i < f[0].length(); i++){\n\t\tfor (int j = 0; j < f.length; j++) \n\t\t\t\n\t\t\tif(f[j].charAt(i)!=f[0].charAt(i)) b=false;\n\t\t    if(b)a++;\n\t\t\n\t\t}\n\t\tSystem.out.print(a);\n\t}\n\n}\n"
+  }
+]

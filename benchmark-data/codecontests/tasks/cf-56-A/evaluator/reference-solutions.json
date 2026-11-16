@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a=['ABSINTH','BEER','BRANDY','CHAMPAGNE', 'GIN', 'RUM', 'SAKE', 'TEQUILA', 'VODKA', 'WHISKEY', 'WINE']\nl=0\nfor i in range(int(input())):\n    x=input()\n    try:\n        if(int(x)<18):\n            l+=1\n    except:\n        if(x in a):\n            l+=1\nprint(l)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint32_t main() {\n  int t;\n  cin >> t;\n  set<string> st;\n  st.insert(\"ABSINTH\");\n  st.insert(\"BEER\");\n  st.insert(\"BRANDY\");\n  st.insert(\"CHAMPAGNE\");\n  st.insert(\"GIN\");\n  st.insert(\"RUM\");\n  st.insert(\"SAKE\");\n  st.insert(\"TEQUILA\");\n  st.insert(\"VODKA\");\n  st.insert(\"WHISKEY\");\n  st.insert(\"WINE\");\n  string a;\n  int n, count = 0;\n  while (t--) {\n    cin >> a;\n    if (a[0] >= '0' && a[0] <= '9') {\n      n = stoi(a);\n      if (n <= 17) count++;\n    } else {\n      if (st.find(a) != st.end()) {\n        count++;\n      }\n    }\n  }\n  cout << count << \"\\n\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "var n=Number(readline());\nvar res=0;\nvar c=[\"ABSINTH\", \"BEER\", \"BRANDY\", \"CHAMPAGNE\", \"GIN\", \"RUM\", 'SAKE', \n'TEQUILA', 'VODKA', 'WHISKEY', \"WINE\"];\nfor (var i=0; i<n; i++) {\n    var x=readline();\n    if (c.includes(x)) {\n        res+=1;\n    }\n    else if (/^\\d+$/.test(x)&&Number(x)<18) {\n        res+=1;\n    }\n}\nprint(res);"
+  }
+]

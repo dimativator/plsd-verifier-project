@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "c = int(input())\na = list(map(int, input().split()))\nres = 0\nb = []\nfor i in range(len(a)):\n    b.append(False)\nfor i in range(len(a)):\n    k = len(a) - i - 1   \n    m = 0\n    while b[k] == False:\n        b[k] = True\n        k = a[k] - 1\n        m = 1\n        if (k == -1):\n            break  \n    if m == 1:\n        res = res + 1\nprint(res)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, ans = 1;\n  cin >> n;\n  map<int, int> m;\n  m.insert(pair<int, int>(0, 0));\n  for (int i = 1; i <= n; i++) {\n    int temp;\n    cin >> temp;\n    if (m.find(temp) != m.end()) {\n      m.erase(m.find(temp));\n    } else {\n      ans++;\n    }\n    m.insert(pair<int, int>(i, 0));\n  }\n  cout << ans;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\nimport java.util.HashMap;\n\npublic class Solution {\n\tpublic static void main(String[] args){\n\t\tScanner in = new Scanner(System.in);\n\n\t\tHashMap<Integer, Integer> hm = new HashMap<>();\n\t\tint count = 0;\n\t\thm.put(0, count++);\n\n\t\tint n = in.nextInt();\n\t\tint time = 1;\n\t\twhile (n-- > 0){\n\t\t\tint t = in.nextInt();\n\t\t\tif (hm.get(t) != null) {\n\t\t\t\thm.put(time, hm.get(t));\n\t\t\t\thm.remove(t);\n\t\t\t}\n\t\t\telse hm.put(time, count++);\n\n\t\t\t++time;\n\t\t}\n\t\tSystem.out.println(count);\n\t}\n}\n"
+  }
+]

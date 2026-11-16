@@ -1,0 +1,12 @@
+{
+  "input": [
+    "200 13\nqownuutwuwqnrxxtnlvnqtroztwpnvunynwrzzpsotnrqwxqstxnnzosszovtznquvxwvunpvxqzvyrwxwpxvxnnzzuzarepcqxzrseqqorwpuntzvwqnwuvvuygnpgrrznvootrtcvtxnoowywptwzvwrqwpxusuxqznvoqpnxsrquuzorkxvuwvpxyntrqywqvotuf\na b c d e f g h i j k l m\n",
+    "200 13\nuzqrruuwunntqnotxvtyzoqooznonqyvrpnzppvtowswpyvutsyynrrsozsswrnnzsxwrqrwuqwswxnxyxwqqsssoqvoortnxvtswtuxywnrnzutstvnqyutptxxtrzvxuwxstqqqvztqtnzrynwzuvosonnvquvpxunwpstpxvuqropxynytvvsxxsvuzvsusysrxpx\na b c d e f g h i j k l m\n",
+    "200 13\nvgfjhgkgwkftaeqejmbgildembgxdbskxfndwmcckjfkbeekxkgakmcjhclqsecpnkaigcxxhfghgegfadjktckftdhtifriemfifakygoesjfginnddjjklwiwlbjsgftwhtjdxmcadpvhaeddxwnmguwhetwbmffbmvdvuhecgjckddrbikgwkrfwfhdhqolidgkfm\na b c d e f g h i j k l m\n"
+  ],
+  "output": [
+    "10\n",
+    "0\n",
+    "578\n"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "revision": "6c72744cdf05ba9eebbfb7b449d80354e530445c",
+  "split": "train",
+  "upstream": "https://huggingface.co/datasets/JetBrains/Kotlin_HumanEval/tree/6c72744cdf05ba9eebbfb7b449d80354e530445c",
+  "parquet_url": "https://huggingface.co/datasets/JetBrains/Kotlin_HumanEval/resolve/6c72744cdf05ba9eebbfb7b449d80354e530445c/data/train-00000-of-00001.parquet",
+  "license": "apache-2.0",
+  "license_source": "Pinned source-card.txt frontmatter",
+  "retrieval_date": "23-10-2026",
+  "rows": 161,
+  "id_range": "HumanEval_kotlin/0 through HumanEval_kotlin/160. IDs 161..163 from original Python HumanEval are not present upstream.",
+  "extraction": "pyarrow.parquet.read_table(...).to_pylist() using already cached pyarrow with /opt/homebrew/bin/python3.13. No dependency installation.",
+  "parquet_viewer_consistency": "All 161 extracted records exactly matched the two retrieved datasets-server viewer pages. Reviewed tasks are sourced from pinned parquet, not the mutable viewer.",
+  "hash_format": "SHA-256 bytes for files. Per-task record digest uses UTF-8 JSON, sorted keys, compact separators, ensure_ascii=False.",
+  "files": {
+    "train.parquet": {
+      "sha256": "54c2765720acf0887c603f1eb1c08382cb7eba0c39a7a37be8e3b982aaddbc7b",
+      "bytes": 174830
+    },
+    "tasks.json": {
+      "sha256": "6fc78be5c88ad2e2d1d24a3ca3958d03b96d9c4d0eba7c5d6f4841aded5cbcd1",
+      "bytes": 557542
+    },
+    "source-card.txt": {
+      "sha256": "9296fce58cc8c726b36e735d5e0934658b48f1e7cf18b4501ced7709a904912c",
+      "bytes": 4592
+    },
+    "hub-metadata.json": {
+      "sha256": "8882084e716ef9c0a808d6e10ddb238c1d4c91e4c9c7acd29e73902c4827e3d2",
+      "bytes": 2497
+    },
+    "viewer-rows-0.json": {
+      "sha256": "3f1ac19bf5bc24d8cc84186bbcbc03f92564f80ca1f0af044372bbf1ace7ed8d",
+      "bytes": 364687
+    },
+    "viewer-rows-100.json": {
+      "sha256": "996c39a37cbbb579e7c14a3e8c8f2633bb490bc49d597148a04ecc8b85eb2cc2",
+      "bytes": 219943
+    }
+  }
+}

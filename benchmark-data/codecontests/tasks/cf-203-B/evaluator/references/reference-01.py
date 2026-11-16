@@ -1,0 +1,21 @@
+import math
+from sys import stdin
+from math import ceil
+import sys
+
+if __name__ == '__main__':
+    numbers = list(map(int, input().split()))
+    n = numbers[0]
+    m = numbers[1]
+    moves = [[0] * (n + 4) for _ in range(n + 4)]
+    for i in range(m):
+        listOfMoves = list(map(int, input().split()))
+        x = listOfMoves[0]
+        y = listOfMoves[1]
+        for a in range(x, x + 3):
+            for b in range(y, y + 3):
+                moves[a][b] = moves[a][b] + 1
+                if moves[a][b] == 9:
+                    print(i + 1)
+                    quit()
+    print(-1)

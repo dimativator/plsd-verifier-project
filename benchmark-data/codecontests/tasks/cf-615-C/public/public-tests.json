@@ -1,0 +1,12 @@
+{
+  "input": [
+    "ami\nno\n",
+    "abc\ncbaabc\n",
+    "aaabrytaaa\nayrat\n"
+  ],
+  "output": [
+    "-1\n",
+    "2\n3 1\n1 3\n",
+    "3\n1 1\n6 5\n8 7\n"
+  ]
+}

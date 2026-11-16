@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "# QAQ\ndef crying(s):\n    ans = 0\n    for i in range(len(s)):\n        if (s[i] != \"Q\"):\n            continue\n        for j in range(i + 1, len(s)):\n            if s[j] != 'A':\n                continue\n            for k in range(j + 1, len(s)):\n                if s[k] == 'Q':\n                    ans += 1\n                            \n\n    return ans\n\n\n\n\ns = input()\nprint(crying(s))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int r = 0;\n  string s;\n  cin >> s;\n  for (int i = 0; i < s.length(); i++) {\n    if (s[i] == 'Q') {\n      for (int j = i + 1; j < s.length(); j++) {\n        if (s[j] == 'A') {\n          for (int k = j + 1; k < s.length(); k++)\n            if (s[k] == 'Q') r++;\n        }\n      }\n    }\n  }\n  cout << r;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Temp1\n{\n\tpublic static void main(String[] args) \n\t{\t\t\n\t\tScanner obj = new Scanner(System.in);\n\t\tString s = obj.nextLine();\n\t\tint n = s.length();\n\t\t\n\t\tboolean visited[] = new boolean[n];\t\t\n\t\tint counter = 0;\n\t\t\n\t\tfor(int i=0 ; i<n-2 ; i++)\n\t\t{\n\t\t\tif(s.charAt(i) == 'Q')\n\t\t\t{\n\t\t\t\tfor(int j = i+1 ; j<n ; j++)\n\t\t\t\t{\n\t\t\t\t\tif(s.charAt(j) == 'A')\n\t\t\t\t\t{\n\t\t\t\t\t\tfor(int k=j+1 ; k<n ; k++)\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tif(s.charAt(k)=='Q')\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tcounter++;\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t\n\t\tSystem.out.println(counter);\n\t}\n}"
+  }
+]

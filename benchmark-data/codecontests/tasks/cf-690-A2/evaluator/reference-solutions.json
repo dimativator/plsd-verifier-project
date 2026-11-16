@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nif n & 1:\n    print(n//2)\nelse:\n    k = 1\n    while k <= n:\n        k *= 2\n    print((n - k//2)//2)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long a;\n  long long dva = 2;\n  cin >> a;\n  if (a % 2 == 1)\n    cout << (a - 1) / 2;\n  else {\n    while (dva * 2 <= a) {\n      dva *= 2;\n    }\n    cout << (a - dva) / 2;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "/*Author LAVLESH*/\nimport java.util.*;\nimport java.io.*;\nimport java.math.BigInteger;\npublic class solution{\n\tstatic BufferedReader br=new BufferedReader(new InputStreamReader(System.in));\n\tstatic StringTokenizer st=new StringTokenizer(\"\");\n    \n\t\n\n\tstatic public String next() {\n\t        while (st == null || !st.hasMoreTokens()) {\n\t            try {\n\t                st = new StringTokenizer(br.readLine());\n\t            } catch (IOException e) {\n\t                throw new RuntimeException(e);\n\t            }\n\t        }\n\t        return st.nextToken();\n\t    }\n\t\n\t\n\tpublic static void main(String[]args)throws IOException{\n\t\tPrintWriter op =new PrintWriter(System.out,true);\n\t\tint x=2;\n\t\tint n=Integer.parseInt(next());\n\t\tif((n&(n-1))==0)op.println(0);\n\t\telse if(n%2==1)op.print(n/2);\n\t\telse{\n\t\t\twhile(x<n)x*=2;\n\t\tx/=2;\n\t\top.print((n-x)/2);\n\t\t}\n\t\t\n\t\t op.close();\n  }\n}\n "
+  }
+]

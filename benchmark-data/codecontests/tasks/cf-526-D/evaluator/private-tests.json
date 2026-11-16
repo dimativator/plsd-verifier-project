@@ -1,0 +1,28 @@
+{
+  "input": [
+    "1 2\na\n",
+    "1 42\na\n",
+    "2 2\nab\n",
+    "5 4\naaaaa\n",
+    "5 5\naaaaa\n",
+    "321 2\nabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaaba\n",
+    "153 2\nabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaabaaa\n",
+    "2 3\nab\n",
+    "5 6\naaaaa\n",
+    "2 1\nab\n",
+    "1 1\na\n"
+  ],
+  "output": [
+    "0",
+    "0",
+    "00",
+    "00011",
+    "00001",
+    "000001111001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+    "000000011111000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+    "00",
+    "00000",
+    "11",
+    "1"
+  ]
+}

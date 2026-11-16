@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "def fastio():\n\timport sys\n\tfrom io import StringIO \n\tfrom atexit import register\n\tglobal input\n\tsys.stdin = StringIO(sys.stdin.read())\n\tinput = lambda : sys.stdin.readline().rstrip('\\r\\n')\n\tsys.stdout = StringIO()\n\tregister(lambda : sys.__stdout__.write(sys.stdout.getvalue()))\nfastio()\n\nMOD = 10**9 + 7\nI = lambda:list(map(int,input().split()))\n\nn, k = I()\nc = [chr(i + 97) for i in range(k)]\nif n < k or (k == 1 and n > 1):\n\tprint(-1)\n\texit()\nif n == 1:\n\tprint(c[0])\n\texit()\nm = n - k + 2\nans = 'ab'*(m//2) + 'a'*(m%2)\nprint(ans + ''.join(c[2:]))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\n#pragma comment(linker, \"/STACK:96777216\")\nusing namespace std;\nconst double NOT_FOUND = -1000000000;\nconst double EPS = 0.00000001;\nconst double PI = acos(-1.0);\nstruct point {\n  double x, y;\n};\npoint make_point(double a, double b) {\n  point c;\n  c.x = a;\n  c.y = b;\n  return c;\n}\nstruct line {\n  double A, B, C;\n};\nline make_line(double a, double b, double c) {\n  line p;\n  p.A = a;\n  p.B = b;\n  p.C = c;\n  return p;\n}\nstruct circle {\n  double R;\n  point center;\n  vector<double> intersects;\n};\ncircle make_circle(point c, double r) {\n  circle C;\n  C.R = r;\n  C.center = c;\n  return C;\n}\nint main() {\n  int N, K;\n  cin >> N >> K;\n  if (K > N) {\n    cout << -1;\n    return 0;\n  }\n  if (K == 1 && N > 1) {\n    cout << -1;\n    return 0;\n  }\n  if (K == N) {\n    char p = 'a';\n    for (int i = 0; i < N; i++) {\n      cout << p;\n      p++;\n    }\n    return 0;\n  }\n  string S;\n  for (char c = 'a' + K - 1; c > 'b'; c--) {\n    S += c;\n    N--;\n  }\n  if (N % 2) {\n    S += \"a\";\n    N--;\n  }\n  for (int i = 0; i < N; i += 2) S += \"ba\";\n  for (int i = (int)S.length() - 1; i >= 0; i--) cout << S[i];\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.*;\nimport java.io.*;\nimport static java.util.Arrays.*;\nimport static java.util.Collections.*;\nimport static java.lang.Math.*;\n\npublic class C {\n\n    int INF = 1 << 28;\n    //long INF = 1L << 62;\n    double EPS = 1e-10;\n\n    void run() {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt(), k = sc.nextInt();\n        if( n < k || (k == 1 && n > 1) ) {\n            System.out.println(-1);\n            return;\n        }\n        if( n == 1 && k == 1) {\n            System.out.println(\"a\");\n            return;\n        }\n        StringBuilder sb = new StringBuilder();\n        for(int i=0;i<n-k+2;i++) {\n            sb.append((i%2==0? 'a': 'b'));\n        }\n        for(int i=0;i<k-2;i++) sb.append((char)(i+'c'));\n        System.out.println(sb.toString());\n    }\n\n    void debug(Object... os) {\n        System.err.println(Arrays.deepToString(os));\n    }\n\n    public static void main(String[] args) {\n        new C().run();\n    }\n}\n\n\n"
+  }
+]

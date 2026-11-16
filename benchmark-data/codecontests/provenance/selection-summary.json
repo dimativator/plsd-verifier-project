@@ -1,0 +1,20 @@
+{
+  "dataset": "deepmind/code_contests",
+  "revision": "802411c3010cb00d1b05bad57ca77365a3c699d6",
+  "upstream_rows": 13328,
+  "eligibility_exclusions": {
+    "not_codeforces": 5509,
+    "no_reference_solution": 194,
+    "interactive": 132,
+    "missing_or_out_of_range_rating": 89,
+    "duplicate_identity_or_description": 1006,
+    "file_io": 22
+  },
+  "eligible_band_counts": {
+    "2400+": 1652,
+    "2000-2399": 1135,
+    "800-1199": 1123,
+    "1600-1999": 1301,
+    "1200-1599": 1165
+  }
+}

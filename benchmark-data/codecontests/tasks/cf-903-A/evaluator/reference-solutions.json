@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "t = int(input())\nfor i in range(0,t):\n    flag = 0\n    x = int(input())\n    b = 0 \n    temp = x\n    while temp >= 0 :\n        if(temp%3 == 0):\n            flag = 1\n            break\n        b = b+1\n        temp = x-7*b\n         \n    if flag == 1 :\n        print(\"YES\")\n    else:\n        print(\"NO\")\n       "
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nvoid aps554(long long int n = 10) {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  cout.tie(0);\n  cout << setprecision(n) << fixed;\n}\nlong long int M = 1e9 + 7;\nlong long int M1 = 998244353;\nint32_t main() {\n  aps554();\n  map<long long int, long long int> haaas;\n  for (long long int i = 0; i < 35; i++) {\n    for (long long int j = 0; j < 16; j++) {\n      haaas[i * 3 + j * 7]++;\n    }\n  }\n  long long int t;\n  cin >> t;\n  while (t--) {\n    long long int n;\n    cin >> n;\n    if (haaas[n])\n      cout << \"YES\\n\";\n    else\n      cout << \"NO\\n\";\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.ArrayList;\nimport java.util.Scanner;\n\npublic class Main {\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int test  = sc.nextInt();\n        int[] arr = new int[test];\n        for (int i = 0; i < arr.length; i++) {\n            arr[i] = sc.nextInt();\n        }\n        for (int i = 0; i < arr.length; i++){\n            System.out.println(student(arr[i]));\n        }\n\n    }\n\n   \n    static String student(int n){\n        int b = n/7;\n        int a = 0;\n        while(a*3 + b*7 != n){\n            if(b < 0) return\"NO\";\n            if(a*3 + b*7 > n) b--;\n            else a++;\n        }\n        return (\"YES\");\n\n    }\n}\n"
+  }
+]

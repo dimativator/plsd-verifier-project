@@ -1,0 +1,10 @@
+{
+  "input": [
+    "2\naba\nabac\n",
+    "3\nartem\nnik\nmax\n"
+  ],
+  "output": [
+    "Second\n29 35\n",
+    "First\n2403 1882\n"
+  ]
+}

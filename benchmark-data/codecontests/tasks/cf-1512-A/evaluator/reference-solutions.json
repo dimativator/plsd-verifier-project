@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "t=int(input())\nfor i in range(t):\n\tn=int(input())\n\tarr=[int(x) for x in input().split()]\n\tmy_list=[]\n\tmy_list1=[]\n\tfor j in range(len(arr)):\n\t\tc_count=arr.count(arr[j])\n\t\tmy_list.append(arr[j])\n\t\tmy_list1.append(c_count)\n\tmid= min(my_list1)\n\treq=(my_list1.index(mid))\n\treq1=my_list[req]\n\tfor k in range(len(arr)):\n\t\tif arr[k]==req1:\n\t\t\tprint(k+1)\n\t\t\tbreak"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\n\nusing namespace std;\n\nint\tsolve(void) {\n\tint n; cin >> n;\n\tint arr[n];\n\n\tfor (int i = 0; i < n; i++)\n\t\tcin >> arr[i];\n\tif (arr[0] == arr[1] && arr[0] != arr[2])\n\t\treturn (3);\n\tif (arr[0] == arr[2] && arr[0] != arr[1])\n\t\treturn (2);\n\tif (arr[1] == arr[2] && arr[0] != arr[1])\n\t\treturn (1);\n\tfor (int i = 3; i < n; i++)\n\t\tif (arr[i] != arr[i - 1])\n\t\t\treturn (i += 1);\n\treturn (0);\n}\n\nint\tmain() {\n\tios::sync_with_stdio(0);\n\tcin.tie(0);\n#ifdef _DEBUG\n\tfreopen(\"input.txt\", \"r\", stdin);\n\tfreopen(\"output.txt\", \"w\", stdout);\n#endif\n\n\tint t;\n\n\tcin >> t;\n\tfor (int i = 1; i <= t; i++)\n\t\tcout << solve() << endl;\n\treturn (0);\n}"
+  },
+  {
+    "language": "JAVA",
+    "code": "\n\n\nimport java.io.BufferedInputStream;\nimport java.util.Scanner;\n\npublic class main {\n    public static void main(String[] args) {\n        Scanner input = new Scanner(new BufferedInputStream(System.in));\n        int t = input.nextInt();\n        int[] result = new int[t];\n        int p = 0;\n        for (int i = 0; i < t; i++) {\n            int n = input.nextInt();\n            int[] temp = new int[n];\n            for (int j = 0; j < n; j++) {\n                temp[j] = input.nextInt();\n            }\n            int count = 0;\n            for (int j = 1; j < n; j++) {\n                if (temp[0] == temp[j]){\n                    count++;\n                }\n            }\n            if (count>0){\n                for (int j = 1; j < n; j++) {\n                    if ((float)(temp[0]+temp[j])/2!=(float)temp[0]){\n                        result[p++] = j;\n                    }\n                }\n            }else {\n                result[p++] = 0;\n            }\n        }\n        for (int i = 0; i < p; i++) {\n            System.out.print(result[i]+1);\n            if (i<p-1){\n                System.out.println();\n            }\n        }\n\n    }\n}\n\n\n  \t\t \t \t \t\t\t \t  \t\t\t\t\t\t\t\t"
+  }
+]

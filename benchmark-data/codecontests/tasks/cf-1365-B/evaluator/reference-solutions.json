@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "for _ in range(int(input())):\n    n=int(input())\n    a=list(map(int,input().split()))\n    b=list(map(int,input().split()))\n\n    if(sum(b)==0 or sum(b)==n):\n        b = sorted(a)\n        print('Yes' if a==b else 'No')\n    else:\n        print('Yes')\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\ntemplate <typename T>\nvoid out(T x) {\n  cout << x << endl;\n  exit(0);\n}\nconst int maxn = 1e6 + 11;\nstring solve() {\n  int n;\n  cin >> n;\n  vector<pair<int, int>> v(n);\n  vector<int> cnt = {0, 0};\n  vector<int> checksorted(n);\n  for (int i = 0; i < n; i++) {\n    cin >> v[i].first;\n    checksorted[i] = v[i].first;\n  }\n  for (int i = 0; i < n; i++) {\n    cin >> v[i].second;\n    cnt[v[i].second]++;\n  }\n  sort(checksorted.begin(), checksorted.end());\n  bool sorted = true;\n  for (int i = 0; i < n; i++) {\n    if (checksorted[i] != v[i].first) {\n      sorted = false;\n      break;\n    }\n  }\n  if (sorted) return \"Yes\";\n  if (cnt[0] == 0) return \"No\";\n  if (cnt[1] == 0) return \"No\";\n  return \"Yes\";\n}\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(0);\n  cout.tie(0);\n  int T;\n  cin >> T;\n  while (T--) {\n    cout << solve() << \"\\n\";\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class Solution\n{\n    public static void main(String args[])\n    {\n        Scanner s= new Scanner(System.in);\n        int t=s.nextInt();\n        int q=1;\n        while(q<=t)\n        {\n            int n=s.nextInt();\n            int[] a=new int[n];\n            int[] b=new int[n];\n            int prev=-1;\n            int sorted=1;\n            for(int i=0;i<n;i++)\n            {\n                a[i]=s.nextInt();\n                if(a[i]<prev)\n                    sorted=0;\n                prev=a[i];\n            }\n            prev=s.nextInt();\n            b[0]=prev;\n            int flag=1;\n            for(int i=1;i<n;i++)\n            {\n                b[i]=s.nextInt();\n                if(b[i]!=prev)\n                    flag=0;\n            }\n\n            if(sorted==1)\n                System.out.println(\"Yes\");\n            else if(flag==0)\n                System.out.println(\"Yes\");\n            else\n                System.out.println(\"No\");\n\n            q++;\n        }\n    }\n } "
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, ans, a = int(input()), 0, [0] * 10\nfor i in range(1, n + 1):\n    ans -= int(n/i)\n    a[i % 9] += 1\nfor i in range(9):\n    for j in range(9):\n        ans += a[i] * a[j] * a[(i * j) % 9]\nprint(ans)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nlong long int cant[9];\nint main() {\n  int n;\n  cin >> n;\n  for (int r = 0; r < (int)(9); r++) cant[r] = n / 9;\n  for (int r = (int)(((n / 9) * 9) + 1); r < ((int)n + 1); r++) cant[r % 9]++;\n  long long int res = 0;\n  for (int i = 0; i < (int)(9); i++)\n    for (int j = 0; j < (int)(9); j++) {\n      int k = (i * j) % 9;\n      res += cant[i] * cant[j] * cant[k];\n    }\n  for (int i = (int)(1); i < ((int)n + 1); i++) {\n    int j = n / i;\n    res -= j;\n  }\n  cout << res << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.Scanner;\n\npublic class DigitalRoot {\n\t\n\tpublic static void main(String[] args) {\n\t\tScanner in = new Scanner(System.in);\n\t\tint n = in.nextInt();\n\t\tint digits[] = new int[9];\n\t\tlong result = 0;\n\t\tfor (int i = 1; i <= n; i++) {\n\t\t\tdigits[i%9]++;\n\t\t\tresult -= (n/i);\n\t\t}\n\t\tfor (int i = 0; i < 9; i++) {\n\t\t\tfor (int j = 0; j < 9; j++) {\n\t\t\t\tresult += 1L*digits[i]*digits[j]*digits[(i*j)%9];\n\t\t\t}\n\t\t}\n\t\tSystem.out.println(result);\n\t}\n\n}\n"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nline = list(map(int,input().split()))\nfor i in range(n-1):\n    for j in range(i+1,n):\n        if line[i] + line[j] in line:\n            print(line.index(line[i] + line[j])+1, i+1, j+1)\n            exit(0)\nprint('-1')"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  cin >> n;\n  int a[n];\n  for (int x = 0; x < n; x++) {\n    cin >> a[x];\n  }\n  for (int i = 0; i < n; ++i) {\n    for (int j = 0; j < n; ++j) {\n      for (int k = 0; k < n; ++k) {\n        if (a[i] == a[j] + a[k] && (i != j && j != k && i != k)) {\n          cout << i + 1 << \" \" << j + 1 << \" \" << k + 1 << endl;\n          return 0;\n        }\n      }\n    }\n  }\n  cout << \"-1\" << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "//package round_31;\n\nimport java.util.Scanner;\n\npublic class A {\n\tpublic static void main(String[] args) {\n\t\tScanner sc = new Scanner(System.in);\n\t\tint n = sc.nextInt();\n\t\tint []a = new int[n+1];\n\t\tfor (int i = 1; i <= n; i++) {\n\t\t\ta[i] = sc.nextInt();\n\t\t}\n\t\tfor (int i = 1; i <=n; i++) {\n\t\t\tfor (int j = 1; j <= n; j++) {\n\t\t\t\tfor (int j2 = 1; j2 <= n; j2++) {\n\t\t\t\t\tif(j!=j2 && i!=j && i!=j2 &&  a[i]==a[j]+a[j2]){\n\t\t\t\t\t\tSystem.out.println(i+\" \"+j+\" \"+j2);\n\t\t\t\t\t\tsc.close();\n\t\t\t\t\t\treturn;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tSystem.out.println(\"-1\");\n\t\tsc.close();\n\t}\n}\n//class Pair{\n//\tint value;\n//\tint index;\n//\tPair(int value, int index){\n//\t\tthis.value = value;\n//\t\tthis.index = index;\n//\t}\n//}\n"
+  }
+]

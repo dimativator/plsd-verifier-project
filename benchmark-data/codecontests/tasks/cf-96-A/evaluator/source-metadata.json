@@ -1,0 +1,35 @@
+{
+  "name": "96_A. Football",
+  "description": "Petya loves football very much. One day, as he was watching a football match, he was writing the players' current positions on a piece of paper. To simplify the situation he depicted it as a string consisting of zeroes and ones. A zero corresponds to players of one team; a one corresponds to players of another team. If there are at least 7 players of some team standing one after another, then the situation is considered dangerous. For example, the situation 00100110111111101 is dangerous and 11110111011101 is not. You are given the current situation. Determine whether it is dangerous or not.\n\nInput\n\nThe first input line contains a non-empty string consisting of characters \"0\" and \"1\", which represents players. The length of the string does not exceed 100 characters. There's at least one player from each team present on the field.\n\nOutput\n\nPrint \"YES\" if the situation is dangerous. Otherwise, print \"NO\".\n\nExamples\n\nInput\n\n001001\n\n\nOutput\n\nNO\n\n\nInput\n\n1000000001\n\n\nOutput\n\nYES",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 900,
+  "cf_contest_id": 96,
+  "cf_index": "A",
+  "cf_tags": [
+    "implementation",
+    "strings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00017-of-00039-ae5533a2f822e6ef.parquet",
+  "source_row": 293,
+  "task_id": "codecontests/cf-96-A",
+  "rating_band": "800-1199",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/96/A",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

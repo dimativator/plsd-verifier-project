@@ -1,0 +1,27 @@
+{
+  "task_id": "HumanEval_kotlin/155",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Write a function that accepts a list of strings.\n * The list contains different words. Return the word with maximum number\n * of unique characters. If multiple strings have maximum number of unique\n * characters, return the one which comes first in lexicographical order.\n\n * find_max([\"name\", \"of\", \"string\"]) == \"string\"\n * find_max([\"name\", \"enam\", \"game\"]) == \"enam\"\n * find_max([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"aaaaaaa\"\n *\n */\nfun findMax(words : List<String>) : String {\n",
+  "entry_point": "findMax",
+  "test": "fun main() {\n    var arg00 : List<String> = mutableListOf(\"name\", \"of\", \"string\")\n    var x0 : String = findMax(arg00);\n    var v0 : String = \"string\";\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10 : List<String> = mutableListOf(\"name\", \"enam\", \"game\")\n    var x1 : String = findMax(arg10);\n    var v1 : String = \"enam\";\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20 : List<String> = mutableListOf(\"aaaaaaa\", \"bb\", \"cc\")\n    var x2 : String = findMax(arg20);\n    var v2 : String = \"aaaaaaa\";\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30 : List<String> = mutableListOf(\"abc\", \"cba\")\n    var x3 : String = findMax(arg30);\n    var v3 : String = \"abc\";\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40 : List<String> = mutableListOf(\"play\", \"this\", \"game\", \"of\", \"footbott\")\n    var x4 : String = findMax(arg40);\n    var v4 : String = \"footbott\";\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50 : List<String> = mutableListOf(\"we\", \"are\", \"gonna\", \"rock\")\n    var x5 : String = findMax(arg50);\n    var v5 : String = \"gonna\";\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n    var arg60 : List<String> = mutableListOf(\"we\", \"are\", \"a\", \"mad\", \"nation\")\n    var x6 : String = findMax(arg60);\n    var v6 : String = \"nation\";\n    if (x6 != v6) {\n        throw Exception(\"Exception -- test case 6 did not pass. x6 = \" + x6)\n    }\n\n    var arg70 : List<String> = mutableListOf(\"this\", \"is\", \"a\", \"prrk\")\n    var x7 : String = findMax(arg70);\n    var v7 : String = \"this\";\n    if (x7 != v7) {\n        throw Exception(\"Exception -- test case 7 did not pass. x7 = \" + x7)\n    }\n\n    var arg80 : List<String> = mutableListOf(\"b\")\n    var x8 : String = findMax(arg80);\n    var v8 : String = \"b\";\n    if (x8 != v8) {\n        throw Exception(\"Exception -- test case 8 did not pass. x8 = \" + x8)\n    }\n\n    var arg90 : List<String> = mutableListOf(\"play\", \"play\", \"play\")\n    var x9 : String = findMax(arg90);\n    var v9 : String = \"play\";\n    if (x9 != v9) {\n        throw Exception(\"Exception -- test case 9 did not pass. x9 = \" + x9)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * Write a function that accepts a list of strings.\n * The list contains different words. Return the word with maximum number\n * of unique characters. If multiple strings have maximum number of unique\n * characters, return the one which comes first in lexicographical order.\n\n * find_max([\"name\", \"of\", \"string\"]) == \"string\"\n * find_max([\"name\", \"enam\", \"game\"]) == \"enam\"\n * find_max([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"aaaaaaa\"\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun findMax(words : List<String>) : String {",
+    "    var maxUniqueCharsWord = \"\"",
+    "    var maxUniqueCharsCount = 0",
+    "",
+    "    for (word in words) {",
+    "        val uniqueCharsCount = word.toSet().size",
+    "        if (uniqueCharsCount > maxUniqueCharsCount ||",
+    "            (uniqueCharsCount == maxUniqueCharsCount && word < maxUniqueCharsWord)) {",
+    "            maxUniqueCharsCount = uniqueCharsCount",
+    "            maxUniqueCharsWord = word",
+    "        }",
+    "    }",
+    "",
+    "    return maxUniqueCharsWord",
+    "}",
+    "",
+    ""
+  ]
+}

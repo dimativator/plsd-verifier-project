@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "b =[1,1,2,7,4]\na =list(map(int,input().split()))\nans = 100\nfor i in range(5):\n    ans = min(a[i]//b[i],ans)\nprint(ans)\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nchar a[100], b[100];\nint main() {\n  int a[10];\n  int b[10];\n  a[0] = 1;\n  a[1] = 1;\n  a[2] = 2;\n  a[3] = 7;\n  a[4] = 4;\n  int x;\n  int cnt = 100000000;\n  for (int i = 0; i < 5; i++) {\n    scanf(\"%d\", &x);\n    cnt = min(cnt, x / a[i]);\n  }\n  cout << cnt << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.IOException;\nimport java.util.Scanner;\n\nimport static java.lang.Math.min;\n\npublic class Main {\n    static Scanner in = new Scanner(System.in);\n    \n    public static void main(String[] args) throws IOException {\n        int a = nextInt();\n        int b = nextInt();\n        int c = nextInt();\n        int d = nextInt();\n        int e = nextInt();\n        System.out.println(min(a, min(b, min(c / 2, min(d / 7, e / 4)))));\n    }\n    \n    static int nextInt() throws IOException {\n        return in.nextInt();\n    }\n}\n"
+  }
+]

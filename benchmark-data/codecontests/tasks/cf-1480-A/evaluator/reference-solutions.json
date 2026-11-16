@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "T = int(input())\n\nfor t in range (T):\n    s = input()\n    res = \"\"\n    \n    for i in range (len(s)):\n        if (i%2 == 0):\n            if (s[i] == 'a'):\n                res += \"b\"\n            else:\n                res += \"a\"\n        else:\n            if (s[i] == 'z'):\n                res += \"y\"\n            else:\n                res += \"z\"\n                \n    print(res)\n            "
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\ntypedef long double ld;\ntypedef long long ll;\nconst ll inf=1e9+7;\n\n\nsigned  main() {\n\n     ios_base::sync_with_stdio(false);\n     cin.tie(NULL);\n     cout.tie(NULL);\n     \n     ll t;\n     cin>>t;\n     while(t--)\n     {\n      string s;\n      cin>>s;\n\n      bool a=true;\n      for(ll i=0;i<s.length();i++)\n      {\n        if(a)\n        {\n          if(s[i]!='a')\n          {\n            s[i]='a';\n          }\n          else\n          {\n            s[i]='b';\n          }\n          a=false;\n        }\n        else\n        {\n          if(s[i]!='z')\n          {\n            s[i]='z';\n\n          }\n          else\n          {\n            s[i]='y';\n          }\n          a=true;\n        }\n        \n\n      }\n      cout<<s<<\"\\n\";   \n     }\n\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Welcomejava { \n      \n    public static void main(String[] args) {\n        // TODO code application \n        Scanner input = new Scanner(System.in);\n        int t ;\n        t = input.nextInt();\n        while (t-->0) {\n            String s ;\n            s = input.next();\n            char[] arr = new char[s.length()];\n            for (int i = 0; i < s.length() ; i++) {\n                arr[i] = s.charAt(i);\n            }\n            boolean flage = false;\n            for (int i = 0; i < arr.length; i++) {\n                \n                if (flage == false)\n                {\n                 if (arr[i] == 'a')\n                 {\n                  arr[i] = 'b';\n                  flage = true;\n                 }\n                 else\n                 {\n                  arr[i] = 'a';\n                  flage = true;\n                 }\n                }\n                else\n                {\n                if (arr[i] == 'z')\n                {\n                arr[i] = 'y';\n                flage = false;\n                }\n                else\n                {\n                 arr[i] = 'z';\n                 flage = false;\n                }\n                 \n                }\n            }\n         for(char c : arr)\n         {\n             System.out.print(c);\n         }\n            System.out.println(\"\");\n        }\n    }\n}\n\n"
+  }
+]

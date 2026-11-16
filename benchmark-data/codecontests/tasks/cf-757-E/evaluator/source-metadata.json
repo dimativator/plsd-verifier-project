@@ -1,0 +1,37 @@
+{
+  "name": "757_E. Bash Plays with Functions",
+  "description": "Bash got tired on his journey to become the greatest Pokemon master. So he decides to take a break and play with functions.\n\nBash defines a function f0(n), which denotes the number of ways of factoring n into two factors p and q such that gcd(p, q) = 1. In other words, f0(n) is the number of ordered pairs of positive integers (p, q) such that p·q = n and gcd(p, q) = 1.\n\nBut Bash felt that it was too easy to calculate this function. So he defined a series of functions, where fr + 1 is defined as:\n\n<image>\n\nWhere (u, v) is any ordered pair of positive integers, they need not to be co-prime.\n\nNow Bash wants to know the value of fr(n) for different r and n. Since the value could be huge, he would like to know the value modulo 109 + 7. Help him!\n\nInput\n\nThe first line contains an integer q (1 ≤ q ≤ 106) — the number of values Bash wants to know.\n\nEach of the next q lines contain two integers r and n (0 ≤ r ≤ 106, 1 ≤ n ≤ 106), which denote Bash wants to know the value fr(n).\n\nOutput\n\nPrint q integers. For each pair of r and n given, print fr(n) modulo 109 + 7 on a separate line.\n\nExample\n\nInput\n\n5\n0 30\n1 25\n3 65\n2 5\n4 48\n\n\nOutput\n\n8\n5\n25\n4\n630",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2500,
+  "cf_contest_id": 757,
+  "cf_index": "E",
+  "cf_tags": [
+    "brute force",
+    "combinatorics",
+    "dp",
+    "number theory"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 3,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00010-of-00039-6de28ba20654f69b.parquet",
+  "source_row": 75,
+  "task_id": "codecontests/cf-757-E",
+  "rating_band": "2400+",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/757/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

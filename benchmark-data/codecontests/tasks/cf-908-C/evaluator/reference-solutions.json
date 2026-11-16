@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, r = map(int, input().split())\na = input().split()\nans = []\nfor i in range(n):\n    res = r\n    for j in range(i):\n        if (abs(int(a[j]) - int(a[i])) <= 2 * r):\n            res = max(res, ans[j] + (4 * r * r - abs(int(a[j]) - int(a[i])) ** 2) ** 0.5)\n    ans.append(res)\nfor i in range(n):\n    print(ans[i], end = ' ')"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint n, r, x[1005];\ndouble ans[1005];\nint main() {\n  cin >> n >> r;\n  for (int i = 1; i <= n; i++) cin >> x[i];\n  for (int i = 1; i <= n; i++) {\n    ans[i] = r;\n    for (int j = 1; j < i; j++) {\n      if (abs(x[i] - x[j]) > 2 * r) continue;\n      ans[i] = max(ans[i], ans[j] + sqrt(4.0 * r * r - 1.0 * abs(x[i] - x[j]) *\n                                                           abs(x[i] - x[j])));\n    }\n  }\n  for (int i = 1; i <= n; i++)\n    cout << fixed << setprecision(9) << ans[i] << ' ';\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\n\npublic class CodeForce{\n   \n\tpublic static void main(String[] args) throws IOException {\n           \n\t    BufferedReader br=new BufferedReader(new InputStreamReader(System.in));\n            \n                String[] str=br.readLine().split(\" \");\n               int n=Integer.parseInt(str[0]);\n               double r=Double.parseDouble(str[1]);\n               String[] s=br.readLine().split(\" \");\n               double[] arr=new double[n];\n               for(int i=0;i<n;i++){\n                   arr[i]=Double.parseDouble(s[i]);\n               }\n               double[][] c=new double[n][2];\n               c[0][0]=arr[0];\n               c[0][1]=r;\n               int t=1;\n               int flag=0;\n               double max=Double.MIN_VALUE;\n               for(int i=1;i<n;i++){\n                   for(int j=i-1;j>=0;j--){\n                       if(Math.abs(arr[i]-c[j][0])<=2*r){\n                           //System.out.println(arr[i]+\" \"+i);\n                           c[i][0]=arr[i];\n                           c[i][1]=Math.sqrt((2*2*r*r)-((arr[i]-c[j][0])*(arr[i]-c[j][0])))+c[j][1];\n                           flag=1;\n                           max=Math.max(max,c[i][1]);\n                       }\n                   }\n                   if(flag==0){\n                       c[i][0]=arr[i];\n                       //System.out.println(r);\n                       c[i][1]=r;\n                   }\n                   else{\n                       c[i][1]=max;\n                   }\n                   max=Double.MIN_VALUE;\n                   flag=0;\n               }\n               \n               for(int i=0;i<n;i++){\n                   System.out.print(c[i][1]+\" \");\n               }\n            \n        }\n            }"
+  }
+]

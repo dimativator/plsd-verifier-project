@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "I = input\nfor _ in range(int(I())):\n       n = int(I())+1\n       s = 0\n       for i in range(1,n//2):\n              s += 8*i*i\n       print(s)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int t;\n  cin >> t;\n  while (t--) {\n    int n;\n    cin >> n;\n    long long sum = 0;\n    int j = (n - 1) / 2;\n    for (int i = 0; i < j; i++) {\n      sum += pow(i + 1, 2) * 8;\n    }\n    cout << sum << \"\\n\";\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.InputStreamReader;\nimport java.util.*;\n\npublic class C {\n\n    public static void main(String[] args) {\n\n        Scanner I = new Scanner(new BufferedReader(new InputStreamReader(System.in)));\n\n        int t = I.nextInt();\n        while (t > 0) {\n            t--;\n            int n = I.nextInt();\n            long sum = solve(n);\n            System.out.println(sum);\n\n        }\n\n        //System.out.println(solve(5));\n\n    }\n\n    private static long solve(int n) {\n        long sum = 0, d = 1;\n        int i = n / 2 + 1, H = 3;\n        for (; i <n; i++) {\n            long x = 0;\n            if (i > 1) {\n                x = H * 2 + (H - 2) * 2;\n                sum += (x * d);\n                d++;\n                H += 2;\n            }\n\n        }\n        return sum;\n    }\n\n    private static void error(String msg) {\n\n        throw new RuntimeException(msg);\n    }\n}\n"
+  }
+]

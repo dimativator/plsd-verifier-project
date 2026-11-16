@@ -1,0 +1,34 @@
+{
+  "name": "958_C2. Encryption (medium)",
+  "description": "Heidi has now broken the first level of encryption of the Death Star plans, and is staring at the screen presenting her with the description of the next code she has to enter. It looks surprisingly similar to the first one – seems like the Empire engineers were quite lazy...\n\nHeidi is once again given a sequence A, but now she is also given two integers k and p. She needs to find out what the encryption key S is.\n\nLet X be a sequence of integers, and p a positive integer. We define the score of X to be the sum of the elements of X modulo p.\n\nHeidi is given a sequence A that consists of N integers, and also given integers k and p. Her goal is to split A into k part such that: \n\n  * Each part contains at least 1 element of A, and each part consists of contiguous elements of A. \n  * No two parts overlap. \n  * The total sum S of the scores of those parts is maximized. \n\n\n\nOutput the sum S – the encryption code.\n\nInput\n\nThe first line of the input contains three space-separated integer N, k and p (k ≤ N ≤ 20 000, 2 ≤ k ≤ 50, 2 ≤ p ≤ 100) – the number of elements in A, the number of parts A should be split into, and the modulo for computing scores, respectively.\n\nThe second line contains N space-separated integers that are the elements of A. Each integer is from the interval [1, 1 000 000].\n\nOutput\n\nOutput the number S as described in the problem statement.\n\nExamples\n\nInput\n\n4 3 10\n3 4 7 2\n\n\nOutput\n\n16\n\n\nInput\n\n10 5 12\n16 3 24 13 9 8 7 5 12 12\n\n\nOutput\n\n37\n\nNote\n\nIn the first example, if the input sequence is split as (3, 4), (7), (2), the total score would be <image>. It is easy to see that this score is maximum.\n\nIn the second example, one possible way to obtain score 37 is to make the following split: (16, 3, 24), (13, 9), (8), (7), (5, 12, 12).",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 2000,
+  "cf_contest_id": 958,
+  "cf_index": "C2",
+  "cf_tags": [
+    "dp"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 3,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 512000000,
+  "source_file": "data/train-00007-of-00039-05785de21e8b8429.parquet",
+  "source_row": 69,
+  "task_id": "codecontests/cf-958-C2",
+  "rating_band": "2000-2399",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/958/C2",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

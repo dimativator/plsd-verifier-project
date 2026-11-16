@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "cycles = int(input())\n\ndef find_v(x, places):\n    places = set(places)\n    v = 0\n    i = 1\n    while True:\n        if i in places:\n            v = i\n        elif x > 0:\n            v = i\n            x -= 1\n        else:\n            break\n        i += 1\n    return v\n\n\n\nresults = []\n\nfor cycle in range(cycles):\n    n, x = map(int, input().split())\n    places = map(int, input().split())\n    results.append(find_v(x, places))\n\nfor r in results:\n    print(r)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int t;\n  cin >> t;\n  while (t--) {\n    vector<int> numeros(210, 0);\n    int n, x;\n    cin >> n >> x;\n    while (n--) {\n      int aux;\n      cin >> aux;\n      numeros[aux] = 1;\n    }\n    for (int i = 1; i <= x + 1; i++) {\n      if (numeros[i]) x++;\n    }\n    cout << x << '\\n';\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\nimport java.lang.*;\n\npublic class cfrcs {\n\n\tstatic int gcd(int a, int b) {\n\t\tif (b == 0)\n\t\t\treturn a;\n\t\treturn gcd(b, a % b);\n\t}\n\n\tpublic static void main(String[] args) throws IOException {\n\t\tBufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n\t\tint t=Integer.parseInt(br.readLine());\n\t\twhile(t-->0) {\n\t\t\tString s[]=br.readLine().split(\" \");\n\t\t\tint n=Integer.parseInt(s[0]);\n\t\t\tint x=Integer.parseInt(s[1]);\n\t\t\tString ss[]=br.readLine().split(\" \");\n\t\t\tint arr[]=new int[n];\n\t\t\tfor(int i=0;i<n;i++) {\n\t\t\t\tarr[i]=Integer.parseInt(ss[i]);\n\t\t\t}\n\t\t\t\n\t\t\tArrays.sort(arr);\n\t\t\tint v=0;\n\t\t\tint a=arr[0]-1;\n\t\t\tv=Math.min(x,a);\n\t\t\tx=x-v;\n\t\t\tif(v+1==arr[0])v=v+1;\n\t\tint f=0;\n\t\t\tfor(int i=1;i<n;i++) {\n\t\t\t\tif(arr[i-1]==arr[i])continue;\n\t\t\t\tint d=arr[i]-arr[i-1]-1;\n\t\t\t v=v+Math.min(d, x);\n\t\t\t x=x-d;\n\t\t\t if(v+1==arr[i])v=v+1;\n\t\t\t else {\n\t\t\t\t f=1;\n\t\t\t\t break;\n\t\t\t }\n\t\t\t\t\n\t\t\t}\n\t\t\tif(f==0) {\n\t\t\t\tv=v+x;\n\t\t\t}\n\t\t\tSystem.out.println(v);\n\t\t\t\n\t\t}\n\t\t\n}\n}"
+  }
+]

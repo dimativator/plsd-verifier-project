@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\nif(n%10==0):\n    print(n)\nelif(n%10>5):\n    print(n+(10-(n%10)))\nelse:\n    print(n-(n%10))\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int N = 100010, INF = 0x3f3f3f3f;\nint e[N], ne[N], w[N], idx;\nint h[N];\nint a[N], b[N];\nint p[N];\nint find(int x) {\n  if (p[x] == x)\n    return x;\n  else\n    return p[x] = find(p[x]);\n}\nvoid merge(int a, int b) {\n  int t1 = find(a);\n  int t2 = find(b);\n  if (t1 != t2) p[t1] = t2;\n}\nusing namespace std;\nvoid add(int a, int b, int c) {\n  e[idx] = b, w[idx] = c, ne[idx] = h[a], h[a] = idx++;\n}\nint gcd(int a, int b) { return b > 0 ? gcd(b, a % b) : a; }\nbool cmp(int a, int b) { return a > b; }\ninline int read() {\n  int date = 0, w = 1;\n  char c = 0;\n  while (c < '0' || c > '9') {\n    if (c == '-') w = -1;\n    c = getchar();\n  }\n  while (c >= '0' && c <= '9') {\n    date = date * 10 + c - '0';\n    c = getchar();\n  }\n  return date * w;\n}\nbool check(int x) {\n  if (x % 10 == 0) return true;\n  return false;\n}\nint main() {\n  int n;\n  cin >> n;\n  int k = n % 10;\n  if (k <= 5)\n    printf(\"%d\\n\", n - k);\n  else\n    printf(\"%d\\n\", n + 10 - k);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\nimport java.util.regex.*;\nimport java.math.BigInteger;\n\npublic class Codeforces{\n\t\n\tstatic class MyScanner{\n\t\tBufferedReader br;\n\t\tStringTokenizer st;\n\t\t\n\t\tMyScanner(FileReader fileReader){\n\t\t\tbr = new BufferedReader(fileReader);\n\t\t}\n\t\t\n\t\tMyScanner(){\n\t\t\tbr = new BufferedReader(new InputStreamReader(System.in));\n\t\t}\n\t\t\n\t\tString nn(){\n\t\t\twhile(st == null || !st.hasMoreElements()){\n\t\t\t\ttry{\n\t\t\t\t\tst = new StringTokenizer(br.readLine());\n\t\t\t\t}catch(IOException e){\n\t\t\t\t\te.printStackTrace();\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn st.nextToken();\n\t\t}\n\t\t\n\t\tint ni(){\n\t\t\treturn Integer.parseInt(nn());\n\t\t}\n\t\t\n\t\tlong nl(){\n\t\t\treturn Long.parseLong(nn());\n\t\t}\n\t\t\n\t\tdouble nd(){\n\t\t\treturn Double.parseDouble(nn());\n\t\t}\n\t}\n\t\n\tprivate static PrintWriter out;\n\t\n\tprivate static int convertStringToInt(String s){\n\t\treturn Integer.parseInt(s);\n\t}\n\t\n\tpublic static void main(String[] args) throws FileNotFoundException{\n\t\t\n\t\t\n\t\t// Input from file\n\t\t// File inputFile = new File(\"input.txt\");\n\t\t// File outputFile = new File(\"output.txt\");\n\t\t// FileReader fileReader = new FileReader(inputFile);\n\t\t// Here it ends\n\t\t\t\n\t\tMyScanner sc = new MyScanner();\n\t\t\n\t\tout = new PrintWriter(new BufferedOutputStream(System.out)); // Output to console\n\t\t// out = new PrintWriter(new PrintStream(outputFile)); // Output to file\n\t\t\n\t\tout.println(Math.round(sc.nd() / 10) * 10);\n\t\t\n\t\tout.close();\n\t}\n}"
+  }
+]

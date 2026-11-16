@@ -1,0 +1,38 @@
+{
+  "name": "1194_E. Count The Rectangles",
+  "description": "There are n segments drawn on a plane; the i-th segment connects two points (x_{i, 1}, y_{i, 1}) and (x_{i, 2}, y_{i, 2}). Each segment is non-degenerate, and is either horizontal or vertical — formally, for every i ∈ [1, n] either x_{i, 1} = x_{i, 2} or y_{i, 1} = y_{i, 2} (but only one of these conditions holds). Only segments of different types may intersect: no pair of horizontal segments shares any common points, and no pair of vertical segments shares any common points.\n\nWe say that four segments having indices h_1, h_2, v_1 and v_2 such that h_1 < h_2 and v_1 < v_2 form a rectangle if the following conditions hold:\n\n  * segments h_1 and h_2 are horizontal; \n  * segments v_1 and v_2 are vertical; \n  * segment h_1 intersects with segment v_1; \n  * segment h_2 intersects with segment v_1; \n  * segment h_1 intersects with segment v_2; \n  * segment h_2 intersects with segment v_2. \n\n\n\nPlease calculate the number of ways to choose four segments so they form a rectangle. Note that the conditions h_1 < h_2 and v_1 < v_2 should hold.\n\nInput\n\nThe first line contains one integer n (1 ≤ n ≤ 5000) — the number of segments.\n\nThen n lines follow. The i-th line contains four integers x_{i, 1}, y_{i, 1}, x_{i, 2} and y_{i, 2} denoting the endpoints of the i-th segment. All coordinates of the endpoints are in the range [-5000, 5000].\n\nIt is guaranteed that each segment is non-degenerate and is either horizontal or vertical. Furthermore, if two segments share a common point, one of these segments is horizontal, and another one is vertical.\n\nOutput\n\nPrint one integer — the number of ways to choose four segments so they form a rectangle.\n\nExamples\n\nInput\n\n\n7\n-1 4 -1 -2\n6 -1 -2 -1\n-2 3 6 3\n2 -2 2 4\n4 -1 4 3\n5 3 5 1\n5 2 1 2\n\n\nOutput\n\n\n7\n\n\nInput\n\n\n5\n1 5 1 0\n0 1 5 1\n5 4 0 4\n4 2 4 0\n4 3 4 5\n\n\nOutput\n\n\n0\n\nNote\n\nThe following pictures represent sample cases:\n\n<image> <image>",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2200,
+  "cf_contest_id": 1194,
+  "cf_index": "E",
+  "cf_tags": [
+    "bitmasks",
+    "brute force",
+    "data structures",
+    "geometry",
+    "sortings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00011-of-00039-5de236be5188959d.parquet",
+  "source_row": 4,
+  "task_id": "codecontests/cf-1194-E",
+  "rating_band": "2000-2399",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/1194/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

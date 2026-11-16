@@ -1,0 +1,14 @@
+{
+  "input": [
+    "6 1\n010101\n",
+    "4 1\n0011\n",
+    "4 2\n0101\n",
+    "6 5\n010101\n"
+  ],
+  "output": [
+    "once again\n",
+    "once again\n",
+    "quailty\n",
+    "tokitsukaze\n"
+  ]
+}

@@ -1,0 +1,1 @@
+A,B,C,D=map(int,(input()+' '+input()).split());k=max(map(abs,[A+B+C+D,A+B-C-D,A-B+C-D,A-B-C+D]))+1e-9;print(abs(A*D-B*C)/k)

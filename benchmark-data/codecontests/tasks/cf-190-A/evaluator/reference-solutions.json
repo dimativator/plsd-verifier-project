@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "class CodeforcesTask190ASolution:\n    def __init__(self):\n        self.result = ''\n        self.passengers = []\n\n    def read_input(self):\n        self.passengers = [int(x) for x in input().split(\" \")]\n\n    def process_task(self):\n        if self.passengers[0]:\n            if self.passengers[0] >= self.passengers[1]:\n                min_fares = self.passengers[0]\n            else:\n                min_fares = self.passengers[1]\n            if self.passengers[1]:\n                max_fares = self.passengers[0] + self.passengers[1] - 1\n            else:\n                max_fares = self.passengers[0]\n            self.result = \"{0} {1}\".format(min_fares, max_fares)\n        else:\n            if self.passengers[1]:\n                self.result = \"Impossible\"\n            else:\n                self.result = \"0 0\"\n\n    def get_result(self):\n        return self.result\n\n\nif __name__ == \"__main__\":\n    Solution = CodeforcesTask190ASolution()\n    Solution.read_input()\n    Solution.process_task()\n    print(Solution.get_result())\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, m;\n  cin >> n >> m;\n  if (n == 0 && m != 0) {\n    cout << \"Impossible\";\n    return 0;\n  }\n  cout << n + max(m - n, 0) << ' ' << n + m - (m == 0 ? 0 : 1);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.Scanner;\n\npublic class A {\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n        int n = in.nextInt();\n        int m = in.nextInt();\n        if (n == 0 && m != 0)\n            System.out.println(\"Impossible\");\n        else {\n            int min = n + Math.max(0, m - n);\n            int max = n + Math.max(0, m - 1);\n            System.out.println(min + \" \" + max);\n        }\n    }\n}\n"
+  }
+]

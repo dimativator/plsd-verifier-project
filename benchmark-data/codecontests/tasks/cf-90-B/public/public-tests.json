@@ -1,0 +1,10 @@
+{
+  "input": [
+    "3 3\ncba\nbcd\ncbc\n",
+    "5 5\nfcofd\nooedo\nafaoa\nrdcdf\neofsf\n"
+  ],
+  "output": [
+    "abcd\n",
+    "codeforces\n"
+  ]
+}

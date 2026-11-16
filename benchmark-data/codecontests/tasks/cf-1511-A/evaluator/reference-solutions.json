@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "t = int(input())\nfor _ in range(t):\n    n = int(input())\n    ans = 0\n    a = [int(i) for i in input().split()]\n    for i in a:\n        if i == 1 or i == 3:\n            ans += 1        \n    print(ans)"
+  },
+  {
+    "language": "CPP",
+    "code": "\t#include<bits/stdc++.h>\n\tusing namespace std;\n\ttypedef long long ll;\n\t#define watch(x) cout << (#x) << \" = \" << x << endl\n\t#define all(s) s.begin(),s.end()\n\t#define allr(s) s.rbegin(), s.rend()\n\t#define sz(s) (int)(s.size())\n\t#define endl '\\n'\n\n\t#define Hashim ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);\n\n\n\n\tint main() {\n\t\tHashim;\n\t\tll t;\n\t\tcin >> t;\n\t\twhile (t--)\n\t\t{\n\t\t\tll n;\n\t\t\tcin >> n;\n\t\t\tvector<int>v(n);\n\n\t\t\tll cnt = 0;\n\t\t\tfor (int i = 0; i < n; i++)\n\t\t\t{\n\t\t\t\tcin >> v[i];\n\n\t\t\t\tif (v[i] == 1 || v[i] == 3)\n\t\t\t\t\tcnt++;\n\n\t\t\t}\n\t\t\tcout << cnt << endl;\n\n\n\t\t}\n\n\n\t\n\t\treturn 0;\n\n\t}\n\n\t"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Main {\n\n\tpublic static void main(String[] args) {\n\t\tScanner scanner = new Scanner(System.in);\n\t\tint N = scanner.nextInt();\n\t\tfor (int i = 0; i < N; i++) {\n\t\t\tint n = scanner.nextInt();\n\t\t\tint sum = 0;\n\t\t\tfor(int j = 0; j < n;j++) {\n\t\t\t\tint c = scanner.nextInt();\n\t\t\t\tif(c == 1) {\n\t\t\t\t\tsum++;\n\t\t\t\t}else if(c == 3) {\n\t\t\t\t\tsum++;\n\t\t\t\t}\n\t\t\t}\n\t\t\tSystem.out.println(sum);\n\t\t}\n\t\tscanner.close();\n\t}\n}\n\t \t   \t   \t \t   \t\t  \t \t \t\t \t \t"
+  }
+]

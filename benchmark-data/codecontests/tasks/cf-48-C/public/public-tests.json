@@ -1,0 +1,10 @@
+{
+  "input": [
+    "3\n1 2 4\n",
+    "2\n1 2\n"
+  ],
+  "output": [
+    "unique\n5\n",
+    "not unique\n"
+  ]
+}

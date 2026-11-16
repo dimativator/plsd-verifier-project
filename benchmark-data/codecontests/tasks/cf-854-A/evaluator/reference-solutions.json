@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import math\nn=int(input())\nd=n//2\nc=n-d\nwhile math.gcd(c,d)!=1:\n    c+=1\n    d-=1\nprint(d,c)\n        "
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint n;\nint pie(int x, int y) {\n  while (x != y) {\n    if (x > y) {\n      x = x - y;\n    }\n    if (x < y) {\n      y = y - x;\n    }\n  }\n  if (x == 1) {\n    return 1;\n  } else {\n    return 0;\n  }\n}\nint main() {\n  cin >> n;\n  for (int i = n / 2; i >= 1; --i) {\n    if (pie(i, n - i) == 1) {\n      cout << i << \" \" << n - i;\n      return 0;\n    }\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Fraction{\n    \npublic static int gcd(int a, int b) {\n  return b == 0 ? a : gcd(b, a % b);\n}\n\npublic static void main(String[] args) {\n  Scanner kbd = new Scanner(System.in);\n  int n = kbd.nextInt();\n\n  double max = 0.0;\n  int numerator = 1;\n\n  for (int i = 1; i <= n / 2; ++i)\n  {\n\tint a = i;\n\tint b = n - i;\n\n\tif (gcd(a, b) == 1)\n\t{\n\t  if (a > b * max)\n\t  {\n\t\tmax = a / b;\n\t\tnumerator = i;\n\t  }\n\t}\n  }\n\n  System.out.print(numerator);\n  System.out.print(\" \");\n  System.out.print(n - numerator);\n  System.out.print(\"\\n\");\n }\n}"
+  }
+]

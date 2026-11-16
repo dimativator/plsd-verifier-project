@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "k1, k2, k3 = map(int, input().split())\nans = 'NO'\nif [k1, k2, k3].count(2) >= 2:\n    ans = 'YES'\nif 1 in [k1, k2, k3]:\n    ans = 'YES'\nif [k1, k2, k3].count(3) >= 3:\n    ans = 'YES'\nif 2 in [k1, k2, k3] and [k1, k2, k3].count(4) == 2:\n    ans = 'YES'\nprint(ans)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  ios::sync_with_stdio(0);\n  cin.tie(NULL);\n  long long int a[4];\n  a[3] = 1000000000;\n  cin >> a[0] >> a[1] >> a[2];\n  sort(a, a + 3);\n  if (a[0] == 1) {\n    cout << \"YES\";\n    return 0;\n  }\n  if (a[0] == 2 && a[1] == 2) {\n    cout << \"YES\";\n    return 0;\n  }\n  if (a[0] == 2 && a[1] == 4 && a[2] == 4) {\n    cout << \"YES\";\n    return 0;\n  };\n  if (a[0] == 3 && a[1] == 3 && a[2] == 3) {\n    cout << \"YES\";\n    return 0;\n  };\n  cout << \"NO\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Arrays;\nimport java.util.Scanner;\n\npublic class P911C\n{\n\tpublic static void main(String[] args)\n\t{\n\t\tScanner scan = new Scanner(System.in);\n\t\tint[] arr = {scan.nextInt(), scan.nextInt(), scan.nextInt()};\n\t\tArrays.sort(arr);\n\t\tif (arr[0] == 1)\n\t\t\tSystem.out.println(\"YES\");\n\t\telse if (arr[0] == 2)\n\t\t{\n\t\t\tif (arr[1] == 2 || arr[1] == 4 && arr[2] == 4)\n\t\t\t\tSystem.out.println(\"YES\");\n\t\t\telse\n\t\t\t\tSystem.out.println(\"NO\");\n\t\t}\n\t\telse if (arr[0] == 3)\n\t\t{\n\t\t\tif (arr[1] == 3 && arr[2] == 3)\n\t\t\t\tSystem.out.println(\"YES\");\n\t\t\telse\n\t\t\t\tSystem.out.println(\"NO\");\n\t\t}\n\t\telse\n\t\t\tSystem.out.println(\"NO\");\n\t}\n}\n"
+  }
+]

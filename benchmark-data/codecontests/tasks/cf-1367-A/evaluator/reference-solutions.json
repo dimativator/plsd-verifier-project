@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "t=int(input())\nfor i in range (t):\n   a=input()\n   print(a[0::2]+a[-1])\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int t, i;\n  std::cin;\n  cin >> t;\n  while (t--) {\n    string a;\n    cin >> a;\n    if (a.length() == 2) {\n      cout << a << endl;\n      continue;\n    }\n    string b = \"\";\n    b += a[0];\n    b += a[1];\n    for (i = 3; i < a.size(); i += 2) {\n      b = b + a[i];\n    }\n    cout << b << endl;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class Solution{\n\tpublic static void main(String[] args) {\n\t\tScanner\tsc = new Scanner(System.in);\n\t\tint t = sc.nextInt();\n\t\twhile(t-->0){\n\t\t\tString b = sc.next();\n\t\t\tString s = \"\";\n\t\t\tint n = b.length();\n\t\t\ts = s + b.charAt(0);\n\t\t\tfor(int i=1;i<n-1;i+=2)\n\t\t\t\ts = s + b.charAt(i);\n\t\t\ts = s + b.charAt(n-1);\n\t\t\tSystem.out.println(s);\n\t\t}\n\t}\n}"
+  }
+]

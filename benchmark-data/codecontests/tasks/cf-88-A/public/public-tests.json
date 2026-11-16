@@ -1,0 +1,12 @@
+{
+  "input": [
+    "A B H\n",
+    "C E G\n",
+    "C# B F\n"
+  ],
+  "output": [
+    "strange\n",
+    "major\n",
+    "minor\n"
+  ]
+}

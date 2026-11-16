@@ -1,0 +1,8 @@
+{
+  "input": [
+    "12\naaaaaaaaa\nbbbbbbbbb\nccccccccc\nddddddddd\neeeeeeeee\nfffffffff\nggggggggg\nhhhhhhhhh\niiiiiiiii\njjjjjjjjj\nxxxxxxxxx\nzzzzzzzzz\n"
+  ],
+  "output": [
+    "999993007\n"
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\nar=list(map(int,input().split()))\nm=max(ar)\nind=-1\nfor i in range(n):\n    if(ar[i]==m):\n        ind=i\nans=\"YES\"\na1=[]\na2=[]\nfor i in range(ind):\n    a1.append(ar[i])\n    a2.append(ar[i])\na2.sort()\n\nfor i in range(ind):\n    if(a1[i]!=a2[i]):\n        ans=\"NO\"\n\na3=[]\na4=[]\nfor i in range(ind+1,n):\n    a3.append(ar[i])\n    a4.append(ar[i])\n\na4.sort(reverse=True)\nfor i in range(len(a3)):\n    if(a3[i]!=a4[i]):\n        ans=\"NO\"\n\nprint(ans)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main(void) {\n  int t, i, j, k, n;\n  scanf(\"%d\", &n);\n  int a[n], ac[n], m = 0;\n  for (i = 0; i < n; i++) {\n    scanf(\"%d\", &a[i]);\n    ac[i] = a[i];\n  }\n  for (i = 1; i < n; i++) {\n    if (a[i] > a[m]) m = i;\n  }\n  sort(ac, ac + m + 1);\n  sort(ac + m + 1, ac + n, greater<int>());\n  for (i = 0; i < n; i++) {\n    if (a[i] != ac[i]) break;\n  }\n  if (i == n)\n    printf(\"YES\\n\");\n  else\n    printf(\"NO\\n\");\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class Result {\n\n    private static final Scanner scanner = new Scanner(System.in);\n\n    public static void main(String[] args){\n        int n = scanner.nextInt();\n        int[] a = new int[n];\n        int i;\n        for (i=0;i<n;i++)\n            a[i] = scanner.nextInt();\n        int max = n,index=0,posCount=0,negCount=0;\n        for (i=0;i<n;i++)\n            if (a[i]==max){\n                index = i;\n                break;\n            }\n\n        if (index<n-1)\n            posCount=1;\n        if (index>0)\n            negCount=1;\n\n        for(i=1;i<=n-1;i++){\n            if (a[index+posCount]==max-i) {\n                if (index + posCount + 1 < n)\n                    posCount++;\n            }\n            else if (a[index-negCount]==max-i) {\n                if (index - negCount - 1 >= 0)\n                    negCount++;\n            }\n            else {\n                break;\n            }\n        }\n        scanner.close();\n        if (i==n)\n            System.out.println(\"YES\");\n        else\n            System.out.println(\"NO\");\n    }\n}\n"
+  }
+]

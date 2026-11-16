@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "s = input()\n\nstack = []\nres = 0\nfor c in s:\n    if c in '(<[{':\n        stack.append(c)\n    else:\n        if not stack:\n            print('Impossible')\n            break\n        last = stack.pop()\n        if last + c not in ('[]', '()', '<>', '{}'):\n            res += 1\nelse:\n    if stack:\n        print('Impossible')\n    else:\n        print(res)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nchar ch[1000000 + 10];\nstack<int> s;\nint main() {\n  int i;\n  while (~scanf(\"%s\", ch)) {\n    int l = strlen(ch);\n    int flag = 1;\n    int ans = 0;\n    while (!s.empty()) s.pop();\n    for (i = 0; i < l; i++) {\n      if (ch[i] == '[' || ch[i] == '<' || ch[i] == '(' || ch[i] == '{')\n        s.push(ch[i]);\n      if (s.empty()) {\n        flag = 0;\n        break;\n      }\n      if (ch[i] == ']') {\n        if (s.top() != '[') ans++;\n        s.pop();\n      } else if (ch[i] == '}') {\n        if (s.top() != '{') ans++;\n        s.pop();\n      } else if (ch[i] == '>') {\n        if (s.top() != '<') ans++;\n        s.pop();\n      } else if (ch[i] == ')') {\n        if (s.top() != '(') ans++;\n        s.pop();\n      }\n    }\n    if (!s.empty() || !flag)\n      printf(\"Impossible\\n\");\n    else\n      printf(\"%d\\n\", ans);\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class C {\n  public static void main(String[] args) {\n    Scanner scanner = new Scanner(System.in);\n    String s = scanner.next();\n    int res = 0;\n    Deque<Character> st = new ArrayDeque<>();\n    for (int i = 0; i < s.length(); i++) {\n      char chr = s.charAt(i);\n      if (chr == '<' || chr == '[' || chr == '{' || chr == '(') {\n        st.push(chr);\n      } else {\n        if (st.size() == 0) {\n          System.out.println(\"Impossible\");\n          return;\n        }\n        char schr = st.pop();\n        if (!((schr == '<' && chr == '>') || (schr == '[' && chr == ']') || (schr == '{' && chr == '}') || (schr == '(' && chr == ')'))) {\n          res++;\n        }\n      }\n    }\n    if (st.size() != 0) {\n      System.out.println(\"Impossible\");\n    } else {\n      System.out.println(res);\n    }\n  }\n}"
+  }
+]

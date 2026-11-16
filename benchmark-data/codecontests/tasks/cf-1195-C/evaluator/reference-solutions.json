@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\na=[int(x) for x in input().split()]\nb=[int(x) for x in input().split()]\ndp=[[-1,-1] for i in range(n-1)]\ndp.append([a[n-1],b[n-1]])\ndp.append([0,0])\nfor i in range(n-1):\n    dp[n-2-i][0]=a[n-2-i]+max(dp[n-1-i][1],dp[n-i][1])\n    dp[n-2-i][1]=b[n-2-i]+max(dp[n-1-i][0],dp[n-i][0])\nprint(max(dp[0][0],dp[0][1]))\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint const maxn = int(1e5 + 5);\nint n;\nlong long dp[3][maxn], a[maxn], b[maxn];\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(0);\n  cin >> n;\n  for (int i = 1; i <= n; i++) {\n    cin >> a[i];\n  }\n  for (int i = 1; i <= n; i++) {\n    cin >> b[i];\n  }\n  dp[1][1] = a[1];\n  dp[2][1] = b[1];\n  for (int i = 2; i <= n; i++) {\n    dp[1][i] = max(dp[2][i - 1] + a[i], dp[1][i - 1]);\n    dp[2][i] = max(dp[1][i - 1] + b[i], dp[2][i - 1]);\n  }\n  cout << max(dp[1][n], dp[2][n]);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.StringTokenizer;\n\npublic class Round574BasketballExercise_1195C {\n    static PrintWriter pr = new PrintWriter(System.out);\n    public static class InputReader {\n        private BufferedReader reader;\n        private StringTokenizer tokenizer;\n\n        public InputReader(InputStream stream) {\n            reader = new BufferedReader(new InputStreamReader(stream), 32768);\n            tokenizer = null;\n        }\n\n        public String next() {\n            while (tokenizer == null || !tokenizer.hasMoreTokens()) {\n                try {\n                    tokenizer = new StringTokenizer(reader.readLine());\n                } catch (IOException e) {\n                    throw new RuntimeException(e);\n                }\n            }\n            return tokenizer.nextToken();\n        }\n\n        public int nextInt() {\n            return Integer.parseInt(next());\n        }\n\n        public long nextLong() {\n            return Long.parseLong(next());\n        }\n    }\n    public static void main(String[] args) {\n\n        InputReader in = new InputReader(System.in);\n        int n = in.nextInt();\n        long[] a = new long[n];\n        long[] b = new long[n];\n        for (int i = 0; i < n; i++) {\n            a[i] = in.nextLong();\n        }\n\n        for (int i = 0; i < n; i++) {\n            b[i] = in.nextLong();\n        }\n\n        pr.print(sol(a,b,n));\n        pr.flush();\n    }\n\n    public static long sol(long[] a, long[] b, int n){\n\n        long[][] dp = new long[2][n];\n        dp[0][0] = a[0];\n        dp[1][0] = b[0];\n\n\n        for (int i = 1; i < n; i++) {\n            dp[0][i] = Math.max(dp[1][i-1] + a[i], dp[0][i-1]);\n            dp[1][i] = Math.max(dp[0][i-1] + b[i], dp[1][i-1]);\n        }\n\n        return Math.max(dp[0][n-1],dp[1][n-1]);\n\n    }\n\n}\n"
+  }
+]

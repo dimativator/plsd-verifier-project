@@ -1,0 +1,12 @@
+{
+  "input": [
+    "ee\n",
+    "revive\n",
+    "kitayuta\n"
+  ],
+  "output": [
+    "eee",
+    "reviver\n",
+    "NA\n"
+  ]
+}

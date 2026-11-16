@@ -1,0 +1,12 @@
+{
+  "input": [
+    "MIKE:MAX.,ARTEM:MIKE..,DMITRY:DMITRY.,DMITRY...\n",
+    "A:C:C:C:C.....\n",
+    "A:A..\n"
+  ],
+  "output": [
+    "3\n",
+    "6\n",
+    "1\n"
+  ]
+}

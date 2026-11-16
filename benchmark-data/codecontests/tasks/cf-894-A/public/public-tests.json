@@ -1,0 +1,10 @@
+{
+  "input": [
+    "QAQAQYSYIOIWIN\n",
+    "QAQQQZZYNOIWIN\n"
+  ],
+  "output": [
+    "4\n",
+    "3\n"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "input": [
+    "2\nea\n",
+    "14\naacbbbbbcdefgh\n",
+    "66\nbbbbbaabbaaaabbbbbbbbbbbaaaaaabbaaaabbbbbaabbbbbbbbbbaaaaaaaaabbba\n",
+    "8\nhgadbecf\n",
+    "59\needecdbacbcdhhaggefgfbcagcbbafggdhcdbfhcgbehhhcfcffcacfchgh\n",
+    "16\naabbccddeeffgghh\n",
+    "10\nffffffffff\n",
+    "7\naaaaaaa\n",
+    "8\nabcdefgh\n",
+    "98\nbaaabbaaababbbbaababbabaaabababbaaaabbaabaabababaaabaabbabbaabbabbaabaaaabbbaaabbbaababbaabbbbbaba\n",
+    "95\ncfaafabfcfcccebdbfcdefdfedbaccdfbebedbdccffbccceebbcefcdebeedcfbfbceabdffaebeccfbfdceacecbefebb\n",
+    "32\naabbccddeeffgghhhhggffeeddccbbaa\n",
+    "15\nefddbbggghaaccc\n",
+    "2\ncc\n",
+    "61\nfaaabceffdbbfcdbdecfefbfbbcbbedcdccabcebcefccefcbfdffbdffabaf\n",
+    "8\nabaaacac\n",
+    "9\ncdaccaadc\n"
+  ],
+  "output": [
+    "1 1\n",
+    "8 1\n",
+    "3 375\n",
+    "7 1\n",
+    "4 60\n",
+    "15 1\n",
+    "1 45\n",
+    "1 21\n",
+    "7 1\n",
+    "3 63\n",
+    "4 19\n",
+    "15 4\n",
+    "12 2\n",
+    "1 1\n",
+    "4 36\n",
+    "3 2\n",
+    "3 1\n"
+  ]
+}

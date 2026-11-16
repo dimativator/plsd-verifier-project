@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\nlist1=[*map(int,input().split())]\nlist2=[]\nif n%2==0:\n    for element in list1:\n        if element>=0:\n            print(-element-1)\n        else:\n            print(element)\nelse:\n    for element in list1:\n        if element>=0:\n            list2.append(-element-1)\n        else:\n            list2.append(element)\n    index1=list2.index(min(list2))\n    for i in range(n):\n        if i!=index1:\n            print(list2[i],end=\" \")\n        else :\n            print((-list2[i]-1),end=\" \")\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long n;\n  cin >> n;\n  long long arr[n];\n  long long cntp = 0, cntz = 0;\n  for (long long i = 0; i < n; i++) {\n    cin >> arr[i];\n  }\n  for (long long i = 0; i < n; i++) {\n    if (arr[i] >= 0) {\n      arr[i] = -1 * arr[i] - 1;\n    }\n  }\n  long long max = -1, index;\n  if (n % 2 != 0) {\n    for (long long i = 0; i < n; i++) {\n      if (abs(arr[i]) > max) {\n        max = abs(arr[i]);\n        index = i;\n      }\n    }\n    arr[index] = -1 * arr[index] - 1;\n  }\n  for (long long i = 0; i < n; i++) {\n    cout << arr[i] << \" \";\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n=sc.nextInt();\n\t\tint[] arr=new int[n+1];\n\t\tint maxneg=0;\n\t\tint maxnegpos=-1;\n\t\tfor(int i=0;i<n;++i)\n\t\t{   arr[i]=sc.nextInt();\n\t\t    if(arr[i]>=0)\n\t\t    {   arr[i]=-arr[i]-1;   \n\t\t    }\n\t\t    if(arr[i]<maxneg)\n\t\t    {\n\t\t        maxneg=arr[i];\n\t\t        maxnegpos=i;\n\t\t    }\n\t\t}\n\t\tif(n%2==1)\n\t\t{\n\t\t  arr[maxnegpos]=-arr[maxnegpos]-1;\n\t\t}\n\t\tfor(int i=0;i<n;++i)\n    \t\tSystem.out.print(arr[i]+\" \");\n        \n    }\n}"
+  }
+]

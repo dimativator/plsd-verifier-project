@@ -1,0 +1,14 @@
+def c(a, b):
+	a = a.replace('6', '9')
+	a = a.replace('2', '5')
+	b = b.replace('6', '9')
+	b = b.replace('2', '5')
+	n = 10000
+	for i in '01345789':
+		t = a.count(i)
+		if t != 0:
+			n = min(n, b.count(i)//t)
+	return n
+a = input()
+b = input()
+print(c(a, b))

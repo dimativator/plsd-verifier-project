@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\narr = list(map(int, input().split()))\nfor i in range(n-1, 0, -1):\n    for j in range(i-1, -1, -1):\n        arr[j] -= arr[i]*(i-j+1)\ns = \"a\"\ndef rev(c):\n    if c == \"a\":\n        return \"b\"\n    else:\n        return \"a\"\nfor i in range(n):\n    for j in range(arr[i]):\n        s += rev(s[-1])*(i+1)\nprint(s[1:])\n\n \t\t\t\t      \t\t\t \t   \t\t\t \t  \t\t\t\t"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint sayi_s;\nvector<int> sayilar;\nint string_s;\nint toplam;\nint a_mi_b_mi;\nint main() {\n  scanf(\"%d\", &sayi_s);\n  for (int i = 0; i < sayi_s; i++) {\n    sayilar.push_back(0);\n    scanf(\" %d\", &sayilar[i]);\n  }\n  for (int i = sayi_s - 1; i >= 0; i--) {\n    toplam += string_s;\n    sayilar[i] -= toplam;\n    string_s += sayilar[i];\n    toplam += sayilar[i];\n    while (sayilar[i]) {\n      for (int j = 0; j <= i; j++) {\n        if (a_mi_b_mi) {\n          printf(\"a\");\n        } else {\n          printf(\"b\");\n        }\n      }\n      sayilar[i]--;\n      a_mi_b_mi = (a_mi_b_mi + 1) % 2;\n    }\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        int n;\n        Scanner sc = new Scanner(System.in);\n        n = sc.nextInt();\n        int[] ar = new int[n];\n        int[] cnt = new int[n];\n        for (int i = 0; i < n; i++) {\n            ar[i] = sc.nextInt();\n            cnt[i] = 0;\n        }\n        for (int i = n - 1; i >= 0; i--) {\n            int ans_cnt;\n            ans_cnt = 0;\n            for (int j = i + 1; j < n; j++) {\n                ans_cnt += cnt[j] * (j - i + 1);\n            }\n            cnt[i] = ar[i] - ans_cnt;\n        }\n        \n        StringBuilder ans = new StringBuilder();\n        String a, b;\n        a = \"a\";\n        b = \"b\";\n        \n        boolean is_a = true;\n        for (int i = 0; i < n; i++) {\n            for (int j = 0; j < cnt[i]; j++) {\n                for (int x = 0; x < i + 1; x++) {\n                    if (is_a) ans.append(a);\n                    else ans.append(b);\n                }\n                is_a = !is_a;\n            }\n        }\n        System.out.println(ans);\n    }\n}"
+  }
+]

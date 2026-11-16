@@ -1,0 +1,12 @@
+{
+  "input": [
+    "@aa@a\n",
+    "a@aa@a\n",
+    "a@a@a\n"
+  ],
+  "output": [
+    "No solution\n",
+    "a@a,a@a\n",
+    "No solution\n"
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from math import log\nfrom math import floor\nt = int(input())\n\nfor i in range(t):\n    n = int(input())\n    #print(n)\n    k = 2**(floor(log(n,2)))-1\n    print(k)\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include<bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n    long long int x,p,t;\n    cin >> t;\n    while(t--)\n    {\n        cin >> x ;\n        int p=1;\n        while(x >= p) \n        {\n            p *= 2;\n        }\n        p = p/2;\n        cout << p - 1 << endl;\n    }\n    return 0;\n}"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\n\npublic class AndThenThereWereK {\n\n\n\tpublic static void main(String[] args)throws IOException {\n\n\t\tInputReader in = new InputReader();\n\t\tPrintWriter pw = new PrintWriter(System.out);\n\t\tint t = in.nextInt();\n\t\twhile (t-- > 0) {\n\t\t\tint n = in.nextInt();\n\t\t\tint power = (int)Math.floor(Math.log(n) / Math.log(2));\n\t\t\tint ans = (int)Math.pow(2, power);\n\t\t\tpw.println(ans - 1);\n\t\t}\n\n\t\tpw.close();\n\t}\n\n\tstatic final Random random = new Random();\n\n\tstatic void ruffleSort(int[] a) {\n\t\tint n = a.length;\n\t\tfor (int i = 0; i < n; i++) {\n\t\t\tint oi = random.nextInt(n), temp = a[oi];\n\t\t\ta[oi] = a[i];\n\t\t\ta[i] = temp;\n\t\t}\n\t\tArrayList<Integer> lst = new ArrayList<>();\n\t\tfor (int i : a)\n\t\t\tlst.add(i);\n\t\tCollections.sort(lst);\n\t\tfor (int i = 0; i < n; i++)\n\t\t\ta[i] = lst.get(i);\n\t}\n\n\tstatic class InputReader {\n\t\tBufferedReader br;\n\t\tStringTokenizer st;\n\n\t\tpublic InputReader() {\n\t\t\tbr = new BufferedReader(new InputStreamReader(System.in));\n\t\t}\n\t\tString next() {\n\t\t\twhile (st == null || !st.hasMoreElements()) {\n\t\t\t\ttry {\n\t\t\t\t\tst = new StringTokenizer(br.readLine());\n\t\t\t\t} catch (IOException e) {\n\t\t\t\t\te.printStackTrace();\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn st.nextToken();\n\t\t}\n\t\tint nextInt() {\n\t\t\treturn Integer.parseInt(next());\n\t\t}\n\t\tlong nextLong() {\n\t\t\treturn Long.parseLong(next());\n\t\t}\n\t\tdouble nextDouble() {\n\t\t\treturn Double.parseDouble(next());\n\t\t}\n\t\tint[] readArray(int n) {\n\t\t\tint []a = new int[n];\n\t\t\tfor (int i = 0; i < n; i++)\n\t\t\t\ta[i] = nextInt();\n\t\t\treturn a;\n\t\t}\n\t\tlong[] readLongArray(int n) {\n\t\t\tlong []a = new long[n];\n\t\t\tfor (int i = 0; i < n; i++)\n\t\t\t\ta[i] = nextLong();\n\t\t\treturn a;\n\t\t}\n\t\tint [][] read2dArray(int n, int m) {\n\t\t\tint [][]a = new int[n][m];\n\t\t\tfor (int i = 0; i < n; i++)\n\t\t\t\tfor (int j = 0; j < m; j++)\n\t\t\t\t\ta[i][j] = nextInt();\n\t\t\treturn a;\n\t\t}\n\t\tString nextLine() {\n\t\t\tString str = \"\";\n\t\t\ttry {\n\t\t\t\tstr = br.readLine();\n\t\t\t} catch (IOException e) {\n\t\t\t\te.printStackTrace();\n\t\t\t}\n\t\t\treturn str;\n\t\t}\n\t}\n}"
+  }
+]

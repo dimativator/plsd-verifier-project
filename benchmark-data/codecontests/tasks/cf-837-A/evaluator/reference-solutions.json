@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\ntext = input()\nll = list(text.split())\nnum = []\nfor i in range(len(ll)):\n    num.append(sum(1 for c in ll[i] if c.isupper()))\nprint(max(num))\n\n\n \t \t\t  \t  \t \t \t\t \t\t\t  \t\t\t \t \t\t\t"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nchar zifu[20000], c;\nint fangxiang[4][2] = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};\nint fangxiang2[4][2] = {{1, -1}, {1, 1}, {-1, 1}, {-1, -1}};\nint main() {\n  int n;\n  char a[300];\n  cin >> n;\n  c = getchar();\n  gets(a);\n  int zuida = 0;\n  for (int i = 0; i < n; i++) {\n    int temp = 0;\n    while (a[i] != ' ' && i < n) {\n      if (a[i] >= 'A' && a[i] <= 'Z') {\n        temp++;\n      }\n      i++;\n    }\n    zuida = max(zuida, temp);\n  }\n  cout << zuida << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "//package codeforces;\n\nimport java.util.Scanner;\n\n/**\n * Created by nitin.s on 03/08/17.\n */\npublic class TextVolume {\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n        int n = in.nextInt();\n        in.nextLine();\n        String s = in.nextLine();\n        String[] split = s.split(\" \");\n        int answer = 0;\n        for(String str: split) {\n            int local = 0;\n            for(int i = 0; i < str.length(); ++i) {\n                if(str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') ++local;\n            }\n            answer = Math.max(answer, local);\n        }\n        System.out.println(answer);\n    }\n}\n"
+  }
+]

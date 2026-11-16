@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, l = int(input()), list(map(int, input().split()))\nprint(2 * max(l) - sum(l) + 1)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint q[100000];\nint main() {\n  int n, x;\n  cin >> n;\n  for (int i = 0; i < n; i++) {\n    cin >> x;\n    q[i] = x;\n  }\n  sort(q, q + n);\n  int max = q[n - 1];\n  for (int i = 0; i < n - 1; i++) {\n    max -= q[i];\n  }\n  cout << max + 1;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\npublic class main {\n    public static void main(String args[]) throws Exception {\n        Scanner in = new Scanner(System.in);\n        int x = in.nextInt();\n        int i=0;\n        int sum=0;\n        int max=0;\n        for (i=0;i<x;i++){\n            int g = in.nextInt();\n             sum=sum+g;\n            max = Math.max(g,max);\n\n\n        }\n        System.out.println(2*max-sum+1);\n\n    }\n}"
+  }
+]

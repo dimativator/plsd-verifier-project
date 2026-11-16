@@ -1,0 +1,14 @@
+{
+  "input": [
+    "4 2\nxx\ncf\nae\nxx\n",
+    "4 4\nxxxx\nxfax\nxcex\nxxxx\n",
+    "1 4\nface\n",
+    "2 3\nfac\ncef\n"
+  ],
+  "output": [
+    "1\n",
+    "1\n",
+    "0\n",
+    "2\n"
+  ]
+}

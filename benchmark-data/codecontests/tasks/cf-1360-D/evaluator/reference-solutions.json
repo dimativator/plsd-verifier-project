@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from sys import stdin\ninput=lambda : stdin.readline().strip()\nfrom math import ceil,sqrt,factorial,gcd\nfor _ in range(int(input())):\n\tn,k=map(int,input().split())\n\tif k>=n:\n\t\tprint(1)\n\telse:\n\t\tl=[]\n\t\ts=int(sqrt(n))\n\t\tfor i in range(2,s+2):\n\t\t\tif n%i==0 and i<=k:\n\t\t\t\tl.append(n//i)\n\t\t\t\tt=n//i\n\t\t\t\tif t<=k:\n\t\t\t\t\tl.append(n//t)\n\t\tif len(l)==0:\n\t\t\tprint(n)\n\t\telse:\n\t\t\tprint(min(l))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  ios::sync_with_stdio(false);\n  cin.tie(0);\n  cout.tie(0);\n  ;\n  int t;\n  cin >> t;\n  while (t--) {\n    int n, k;\n    cin >> n >> k;\n    int ans = n;\n    for (int i = 1; i * i <= n; i++) {\n      if (i <= k && n % i == 0) {\n        ans = min(ans, n / i);\n        if (n / i <= k) ans = min(ans, i);\n      }\n    }\n    cout << ans << endl;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "        import java.util.*;\n        import java.io.*;\n        import java.lang.*;\n        import java.math.*;\n        \n         \n         \n        public class test2{\n          public static void main (String [] args) throws IOException\n          {\n           \n        \t  \n        \t  try {\n        \t\t  Scanner sc=new Scanner(System.in);\n        \t\t  int t=sc.nextInt();\n        \t\t  \n        \t\t  for(int i=0;i<t;i++)\n        \t\t  {\n        \t\t   \n        \t\t     int n=sc.nextInt();\n        \t\t     int k=sc.nextInt();\n        \t\t     int ans=n;\n        \t\t     \n        \t\t     if(k>=n)\n        \t\t     ans=1;\n        \t\t     else\n        \t\t     {\n        \t\t        int po=(int)Math.pow(n,0.5);\n        \t\t        //po=po+3;\n        \t\t        // System.out.println(po);\n        \t\t        int temp=Math.min(po,k);\n        \t\t        for(int j=2;j<=temp;j++)\n        \t\t        {\n        \t\t           if(n%j==0)\n        \t\t           {\n        \t\t              ans=Math.min(ans,n/j);\n        \t\t              if(n/j<=k)\n        \t\t              ans=Math.min(ans,j);\n        \t\t           }\n        \t\t        }\n        \t\t     }\n        \t\t     \n        \t\t     \n        \t\t     System.out.println(ans);\n        \t\t     \n        \t\t  }\n                  \n        \t  }\t \n        \t  \n        \t  catch (Exception e) {\n        \t\treturn;\n        \t}\n         \n        }\n         \n        }  "
+  }
+]

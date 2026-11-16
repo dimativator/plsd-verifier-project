@@ -1,0 +1,35 @@
+{
+  "name": "879_E. Tournament",
+  "description": "Recently a tournament in k kinds of sports has begun in Berland. Vasya wants to make money on the bets.\n\nThe scheme of the tournament is very mysterious and not fully disclosed. Competitions are held back to back, each of them involves two sportsmen who have not left the tournament yet. Each match can be held in any of the k kinds of sport. Loser leaves the tournament. The last remaining sportsman becomes the winner. Apart of this, the scheme can be arbitrary, it is not disclosed in advance.\n\nVasya knows powers of sportsmen in each kind of sport. He believes that the sportsmen with higher power always wins.\n\nThe tournament is held every year, and each year one new participant joins it. In the first tournament, only one sportsman has participated, in the second there were two sportsmen, and so on. Vasya has been watching the tournament for the last n years. Help him to find the number of possible winners for each of the n tournaments.\n\nInput\n\nThe first line contains two integers n and k (1 ≤ n ≤ 5·104, 1 ≤ k ≤ 10) — the number of tournaments and the number of kinds of sport, respectively.\n\nEach of the next n lines contains k integers si1, si2, ..., sik (1 ≤ sij ≤ 109), where sij is the power of the i-th sportsman in the j-th kind of sport. The sportsman with higher powers always wins. It's guaranteed that for any kind of sport all of these powers are distinct.\n\nOutput\n\nFor each of the n tournaments output the number of contenders who can win.\n\nExamples\n\nInput\n\n3 2\n1 5\n5 1\n10 10\n\n\nOutput\n\n1\n2\n1\n\n\nInput\n\n3 2\n2 2\n3 3\n1 10\n\n\nOutput\n\n1\n1\n3\n\n\nInput\n\n3 2\n2 3\n1 1\n3 2\n\n\nOutput\n\n1\n1\n2\n\nNote\n\nIn the first sample:\n\nIn the first tournament there is only one sportsman, and he is the winner.\n\nIn the second tournament, there are two sportsmen, and everyone can defeat another, depending on kind of sports.\n\nIn the third tournament, the third sportsman in the strongest in both kinds of sports, so he is the winner regardless of the scheme.",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2700,
+  "cf_contest_id": 879,
+  "cf_index": "E",
+  "cf_tags": [
+    "data structures",
+    "graphs"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00010-of-00039-6de28ba20654f69b.parquet",
+  "source_row": 289,
+  "task_id": "codecontests/cf-879-E",
+  "rating_band": "2400+",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/879/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

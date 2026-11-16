@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=input()\nc=0\nres=''\nfor i in range(len(n)):\n    if(n[i]=='0' and c==0):\n        c+=1\n    elif(n[i]=='0' and c>0):\n        res+=\"0\"\n    elif(n[i]=='1'):\n        res+=\"1\"\n    else:\n        pass\nl=len(res)\nif c==0:\n    res=res[:l-1]\nprint(res)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  string s;\n  cin >> s;\n  int i = 0;\n  for (i = 0; i < s.length(); i++) {\n    if (s[i] == '0') break;\n  }\n  if (i < s.length() - 1)\n    s = s.substr(0, i) + s.substr(i + 1);\n  else\n    s = s.substr(0, s.length() - 1);\n  cout << s << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\n\npublic class LittelEltBits {\n\n    /**\n     * @param args\n     */\n    public static void main(String[] args) {\n        // TODO Auto-generated method stub\n        \n        Scanner s = new Scanner(System.in);\n        String a = s.next();\n        int index = a.indexOf('0');\n        //System.out.println(index);\n        if(index==-1) System.out.println(a.substring(1));\n        else\n        {\n            System.out.print(a.substring(0,index));\n            System.out.println( a.substring(index+1));\n        }\n\n    }\n\n}\n"
+  }
+]

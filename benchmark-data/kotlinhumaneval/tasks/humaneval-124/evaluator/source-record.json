@@ -1,0 +1,33 @@
+{
+  "task_id": "HumanEval_kotlin/124",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * You are given two intervals,\n * where each interval is a pair of integers. For example, interval = (start, end) = (1, 2).\n * The given intervals are closed which means that the interval (start, end)\n * includes both start and end.\n * For each given interval, it is assumed that its start is less or equal its end.\n * Your task is to determine whether the length of intersection of these two \n * intervals is a prime number.\n * Example, the intersection of the intervals (1, 3), (2, 4) is (2, 3)\n * which its length is 1, which not a prime number.\n * If the length of the intersection is a prime number, return \"YES\",\n * otherwise, return \"NO\".\n * If the two intervals don't intersect, return \"NO\".\n\n\n * [input/output] samples:\n * intersection((1, 2), (2, 3)) ==> \"NO\"\n * intersection((-1, 1), (0, 4)) ==> \"NO\"\n * intersection((-3, -1), (-5, 5)) ==> \"YES\"\n *\n */\nfun intersection(interval1 : List<Int>, interval2 : List<Int>) : String {\n",
+  "entry_point": "intersection",
+  "test": "fun main() {\n    var arg00 : List<Int> = mutableListOf(1, 2)\n    var arg01 : List<Int> = mutableListOf(2, 3)\n    var x0 : String = intersection(arg00, arg01);\n    var v0 : String = \"NO\";\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10 : List<Int> = mutableListOf(-1, 1)\n    var arg11 : List<Int> = mutableListOf(0, 4)\n    var x1 : String = intersection(arg10, arg11);\n    var v1 : String = \"NO\";\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20 : List<Int> = mutableListOf(-3, -1)\n    var arg21 : List<Int> = mutableListOf(-5, 5)\n    var x2 : String = intersection(arg20, arg21);\n    var v2 : String = \"YES\";\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30 : List<Int> = mutableListOf(-2, 2)\n    var arg31 : List<Int> = mutableListOf(-4, 0)\n    var x3 : String = intersection(arg30, arg31);\n    var v3 : String = \"YES\";\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40 : List<Int> = mutableListOf(-11, 2)\n    var arg41 : List<Int> = mutableListOf(-1, -1)\n    var x4 : String = intersection(arg40, arg41);\n    var v4 : String = \"NO\";\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50 : List<Int> = mutableListOf(1, 2)\n    var arg51 : List<Int> = mutableListOf(3, 5)\n    var x5 : String = intersection(arg50, arg51);\n    var v5 : String = \"NO\";\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n    var arg60 : List<Int> = mutableListOf(1, 2)\n    var arg61 : List<Int> = mutableListOf(1, 2)\n    var x6 : String = intersection(arg60, arg61);\n    var v6 : String = \"NO\";\n    if (x6 != v6) {\n        throw Exception(\"Exception -- test case 6 did not pass. x6 = \" + x6)\n    }\n\n    var arg70 : List<Int> = mutableListOf(-2, -2)\n    var arg71 : List<Int> = mutableListOf(-3, -2)\n    var x7 : String = intersection(arg70, arg71);\n    var v7 : String = \"NO\";\n    if (x7 != v7) {\n        throw Exception(\"Exception -- test case 7 did not pass. x7 = \" + x7)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * You are given two intervals,\n * where each interval is a pair of integers. For example, interval = (start, end) = (1, 2).\n * The given intervals are closed which means that the interval (start, end)\n * includes both start and end.\n * For each given interval, it is assumed that its start is less or equal its end.\n * Your task is to determine whether the length of intersection of these two \n * intervals is a prime number.\n * Example, the intersection of the intervals (1, 3), (2, 4) is (2, 3)\n * which its length is 1, which not a prime number.\n * If the length of the intersection is a prime number, return \"YES\",\n * otherwise, return \"NO\".\n * If the two intervals don't intersect, return \"NO\".\n\n\n * [input/output] samples:\n * intersection((1, 2), (2, 3)) ==> \"NO\"\n * intersection((-1, 1), (0, 4)) ==> \"NO\"\n * intersection((-3, -1), (-5, 5)) ==> \"YES\"\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun intersection(interval1 : List<Int>, interval2 : List<Int>) : String {",
+    "    fun isPrime(num: Int): Boolean {",
+    "        if (num <= 1) {",
+    "            return false",
+    "        }",
+    "        for (i in 2..num) {",
+    "            if (i * i > num) {",
+    "                break",
+    "            }",
+    "            if (num % i == 0) {",
+    "                return false",
+    "            }",
+    "        }",
+    "        return true",
+    "    }",
+    "\treturn if (isPrime(Math.min(interval1[1], interval2[1]) - Math.max(interval1[0], interval2[0]))) {",
+    "        \"YES\"",
+    "    } else {",
+    "        \"NO\"",
+    "    }",
+    "}",
+    "",
+    ""
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "input": [
+    "2\n",
+    "1\n",
+    "3\n"
+  ],
+  "output": [
+    "I hate that I love it\n",
+    "I hate it\n",
+    "I hate that I love that I hate it\n"
+  ]
+}

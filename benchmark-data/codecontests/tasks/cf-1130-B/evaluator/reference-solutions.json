@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "l2=[]\nn=int(input())\nl=list(map(int,input().split()))\nfor i in range(2*n):\n    l2.append([l[i],i])\nl2.sort()\nsd,dd=l2[0][1],l2[1][1]\nfor i in range(2,2*n):\n    if i%2:\n        dd+=abs(l2[i][1]-l2[i-2][1])\n    else:\n        sd+=abs(l2[i][1]-l2[i-2][1])\nprint(sd+dd)\n    "
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long n;\n  cin >> n;\n  vector<long long> v(n * 2 + 1), kal1((n * 2)), kal2(n * 2 + 1);\n  for (long long i = 1; i <= n * 2; i++) {\n    cin >> v[i];\n    if (kal1[v[i]] == 0) {\n      kal1[v[i]] = i;\n    } else {\n      kal2[v[i]] = i;\n    }\n  }\n  long long x = 1, needx = 1, y = 1, needy = 1, s = 0;\n  while (needx != n + 1) {\n    s += abs(kal1[needx] - x);\n    x = kal1[needx];\n    needx++;\n  }\n  while (needy != n + 1) {\n    s += abs(kal2[needy] - y);\n    y = kal2[needy];\n    needy++;\n  }\n  cout << s;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.lang.*;\nimport java.io.*;\n\npublic class Code\n{\n\tpublic static void main (String[] args) throws java.lang.Exception\n\t{\n\t\tScanner s = new Scanner(System.in);\n\t\tint n= s.nextInt();\n\t\tint[][] a = new int[2*n+1][2];\n\t    for(int i=0;i<2*n;i++){\n\t        int temp = s.nextInt();\n\t        if(a[temp][0]==0)\n\t        a[temp][0]=i+1;\n\t        else\n\t        a[temp][1]=i+1;\n\t    }\n\t    long ans=0;\n\t    int tempposs=1;\n\t    int tempposd=1;\n\t    for(int j=1;j<=n;j++){\n\t        int temp1=Math.max(a[j][0]-tempposs,tempposs-a[j][0]);\n\t        int temp2=Math.max(a[j][1]-tempposs,tempposs-a[j][1]);\n\t        int temp3=Math.max(a[j][0]-tempposd,tempposd-a[j][0]);\n\t        int temp4=Math.max(a[j][1]-tempposd,tempposd-a[j][1]);\n\t        if(temp1+temp4<=temp2+temp3){\n\t            tempposs=a[j][0];\n\t            tempposd=a[j][1];\n\t            ans=ans+temp1+temp4;\n\t        }\n\t        else{\n\t            tempposs=a[j][1];\n\t            tempposd=a[j][0];\n\t            ans=ans+temp2+temp3;\n\t        }\n\t    }\n\t    System.out.println(ans);\n\t}\n}\n"
+  }
+]

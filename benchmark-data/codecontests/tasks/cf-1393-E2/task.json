@@ -1,0 +1,38 @@
+{
+  "id": "cf-1393-E2",
+  "dataset": "deepmind/code_contests",
+  "source_id": "codecontests/cf-1393-E2",
+  "url": "https://codeforces.com/problemset/problem/1393/E2",
+  "source_split": "train",
+  "submission_format": "program",
+  "target_language": "Kotlin",
+  "difficulty": 3200,
+  "rating_band": "2400+",
+  "tags": [
+    "dp",
+    "hashing",
+    "implementation",
+    "string suffix structures",
+    "strings",
+    "two pointers"
+  ],
+  "public_test_count": 4,
+  "private_test_count": 1,
+  "generated_test_count": 61,
+  "held_out_public_input_overlap": 0,
+  "repeated_inputs_with_different_expected_outputs": 0,
+  "source_time_limit": {
+    "seconds": 1,
+    "nanos": 500000000
+  },
+  "source_memory_limit_bytes": 256000000,
+  "behavioral_validation": "not_run",
+  "kotlin_reference": "not_translated",
+  "verifier_validation": "not_run",
+  "output_checker": "requires_review",
+  "task_dir": "tasks/cf-1393-E2",
+  "public_dir": "tasks/cf-1393-E2/public",
+  "evaluator_dir": "tasks/cf-1393-E2/evaluator",
+  "metadata_file": "tasks/cf-1393-E2/task.json",
+  "evaluation_file": "tasks/cf-1393-E2/evaluation.json"
+}

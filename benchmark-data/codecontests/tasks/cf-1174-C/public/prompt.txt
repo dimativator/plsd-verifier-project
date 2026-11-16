@@ -1,0 +1,48 @@
+Write a Kotlin program that solves the problem below. Read from standard input and write to standard output. Submit your solution in Main.kt.
+
+You're given an integer n. For every integer i from 2 to n, assign a positive integer a_i such that the following conditions hold:
+
+  * For any pair of integers (i,j), if i and j are coprime, a_i ≠ a_j. 
+  * The maximal value of all a_i should be minimized (that is, as small as possible). 
+
+
+
+A pair of integers is called [coprime](https://en.wikipedia.org/wiki/Coprime_integers) if their [greatest common divisor](https://en.wikipedia.org/wiki/Greatest_common_divisor) is 1.
+
+Input
+
+The only line contains the integer n (2 ≤ n ≤ 10^5).
+
+Output
+
+Print n-1 integers, a_2, a_3, …, a_n (1 ≤ a_i ≤ n). 
+
+If there are multiple solutions, print any of them.
+
+Examples
+
+Input
+
+
+4
+
+
+Output
+
+
+1 2 1 
+
+Input
+
+
+3
+
+
+Output
+
+
+2 1
+
+Note
+
+In the first example, notice that 3 and 4 are coprime, so a_3 ≠ a_4. Also, notice that a=[1,2,3] satisfies the first condition, but it's not a correct answer because its maximal value is 3.

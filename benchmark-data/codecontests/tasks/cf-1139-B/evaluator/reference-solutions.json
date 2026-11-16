@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\na = list(map(int,input().split()))\nmax = a[len(a)-1]\nsum = max\nfor i in range(len(a)-2,-1,-1):\n    # print(max)\n    if (max<=0):\n        break\n    if (a[i]>=max):\n        # print(a[i])\n        max = max-1\n        sum += max\n    else:\n        # print(a[i])\n        max = a[i]\n        sum += max\nprint(sum)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long int n, i, j, sum = 0;\n  scanf(\"%lld\", &n);\n  long long int arr[n];\n  for (i = 0; i < n; i++) scanf(\"%lld\", &arr[i]);\n  sum += arr[n - 1];\n  for (i = n - 2; i >= 0; i--) {\n    if (arr[i] >= arr[i + 1]) arr[i] = arr[i + 1] - 1;\n    sum += arr[i];\n    if (arr[i] <= 1) break;\n  }\n  cout << sum;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.InputStreamReader;\nimport java.util.StringTokenizer;\n\npublic class Solution {\n\n\tpublic static void main(String[] args) throws Exception {\n\n\t\tBufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n\t\tStringTokenizer st = new StringTokenizer(br.readLine());\n\t\tint n = Integer.parseInt(st.nextToken());\n\t\tst = new StringTokenizer(br.readLine());\n\n\t\tint[] a = new int[n];\n\t\tfor (int i = 0; i < a.length; i++) {\n\t\t\ta[i] = Integer.parseInt(st.nextToken());\n\t\t}\n\t\tlong count = a[n - 1];\n\t\tint prev = a[n - 1];\n\t\tfor (int i = n - 2; i >= 0; i--) {\n\t\t\tif (a[i] < prev) {\n\t\t\t\tcount += a[i];\n\t\t\t\tprev = a[i];\n\t\t\t} else {\n\t\t\t\tprev = Math.max(0, prev - 1);\n\t\t\t\tcount += prev;\n\t\t\t}\n\t\t}\n\n\t\tSystem.out.println(count);\n\n\t}\n}\n"
+  }
+]

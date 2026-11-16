@@ -1,0 +1,10 @@
+{
+  "input": [
+    "ab\n",
+    "aba\n"
+  ],
+  "output": [
+    "abba\n",
+    "abaaba\n"
+  ]
+}

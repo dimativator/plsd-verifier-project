@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "test=int(input())\nfor testcase in range(test):\n    n=int(input())\n    if(n<=45):\n        if(n<10):\n            print(n)\n        else:\n            i=9\n            s=0\n            ans=0\n            while(i>0):\n                #print(i)\n                if(s+i<=n):\n                    s+=i\n                    ans=(ans*10)+i\n                    \n                if(s>=n):\n                    break\n                i-=1\n                \n            if(n==s):\n                ans=str(ans)\n                print(ans[::-1])\n            else:\n                print(-1)\n    else:\n        print(-1)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\ntypedef long long ll;\nconst int mod =  1000000007;\n\nint t, n;\nstring s;\nint ans[20];\n\nint main () \n{\n    cin >> t;\n    while (t--) {\n        cin >> n;\n        if (n > 45) {\n            puts(\"-1\");\n        } else {\n            int pos = 0;\n            for (int i = 9; i >= 1; --i) {\n                if (n > i) {\n                    ans[pos++] = i;\n                    n -= i;\n                } else if (n == i) {\n                    ans[pos++] = i;\n                    break;\n                }\n            }\n            for (int i = pos - 1; i >= 0; --i) {\n                cout << ans[i];\n            }\n            cout << endl;    \n        }\n        \n    }\n    \n    return 0;\n}"
+  },
+  {
+    "language": "JAVA",
+    "code": "\n\nimport java.util.*;\nimport java.lang.*;\nimport java.io.*;\n\n\npublic class Solution\n{\n\tpublic static void main (String[] args) throws java.lang.Exception\n\t{\n\t\t\n\t\tBufferedReader br1=new BufferedReader(new InputStreamReader(System.in));\n\t\tBufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out));\n\t\tint t=Integer.parseInt(br1.readLine());\n\t\tint l=0;\n\t\twhile(t>l)\n\t\t{\n\t\t    l=l+1;\n\t\t    //int n=Integer.parseInt(br1.readLine());\n\t\t    int num=Integer.parseInt(br1.readLine());\n\t\t    if(num<=9)\n\t\t    {\n\t\t        System.out.println(num);\n\t\t    }\n\t\t    else if(num>45)\n\t\t    {\n\t\t        System.out.println(\"-1\");\n\t\t    }\n\t\t    else\n\t\t    {\n\t\t        String s=new String(\"\");\n\t\t        int num1=9;\n\t\t        while((num>0)&&(num1>0))\n\t\t        {\n\t\t            s=s+num1;\n\t\t            num=num-num1;\n\t\t            if((num<9)&&(num<num1))\n\t\t            {\n\t\t                s=s+num;\n\t\t                break;\n\t\t            }\n\t\t            num1=num1-1;\n\t\t        }\n\t\t        String ans=new String(\"\");\n\t\t        for(int i=s.length()-1;i>=0;i--)\n\t\t        {\n\t\t            ans=ans+s.charAt(i);\n\t\t        }\n\t\t        System.out.println(ans);\n\t\t    }\n\t\t    \n\t\t}\n\t}\n}\n"
+  }
+]

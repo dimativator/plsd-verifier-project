@@ -1,0 +1,36 @@
+{
+  "name": "720_D. Slalom",
+  "description": "Little girl Masha likes winter sports, today she's planning to take part in slalom skiing.\n\nThe track is represented as a grid composed of n × m squares. There are rectangular obstacles at the track, composed of grid squares. Masha must get from the square (1, 1) to the square (n, m). She can move from a square to adjacent square: either to the right, or upwards. If the square is occupied by an obstacle, it is not allowed to move to that square.\n\nOne can see that each obstacle can actually be passed in two ways: either it is to the right of Masha's path, or to the left. Masha likes to try all ways to do things, so she would like to know how many ways are there to pass the track. Two ways are considered different if there is an obstacle such that it is to the right of the path in one way, and to the left of the path in the other way.\n\nHelp Masha to find the number of ways to pass the track. The number of ways can be quite big, so Masha would like to know it modulo 109 + 7.\n\nThe pictures below show different ways to pass the track in sample tests. <image> <image> <image>\n\nInput\n\nThe first line of input data contains three positive integers: n, m and k (3 ≤ n, m ≤ 106, 0 ≤ k ≤ 105) — the size of the track and the number of obstacles.\n\nThe following k lines contain four positive integers each: x1, y1, x2, y2 (1 ≤ x1 ≤ x2 ≤ n, 1 ≤ y1 ≤ y2 ≤ m) — coordinates of bottom left, and top right squares of the obstacle. \n\nIt is guaranteed that there are no obstacles at squares (1, 1) and (n, m), and no obstacles overlap (but some of them may touch).\n\nOutput\n\nOutput one integer — the number of ways to pass the track modulo 109 + 7.\n\nExamples\n\nInput\n\n3 3 0\n\n\nOutput\n\n1\n\n\nInput\n\n4 5 1\n2 2 3 4\n\n\nOutput\n\n2\n\n\nInput\n\n5 5 3\n2 2 2 3\n4 2 5 2\n4 4 4 4\n\n\nOutput\n\n3",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 3100,
+  "cf_contest_id": 720,
+  "cf_index": "D",
+  "cf_tags": [
+    "data structures",
+    "dp",
+    "sortings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00003-of-00039-e3822fccad6e083a.parquet",
+  "source_row": 72,
+  "task_id": "codecontests/cf-720-D",
+  "rating_band": "2400+",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/720/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

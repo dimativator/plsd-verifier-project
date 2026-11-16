@@ -1,0 +1,10 @@
+{
+  "input": [
+    "8\n",
+    "15\n"
+  ],
+  "output": [
+    "OOOoOooO\n",
+    "OOOoOooOooooOoo\n"
+  ]
+}

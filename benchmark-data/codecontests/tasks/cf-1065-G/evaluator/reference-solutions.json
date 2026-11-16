@@ -1,0 +1,6 @@
+[
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst long long inf = 0x3f3f3f3f3f3f3f3f;\nconst int mxn = 201, w = 3;\nlong long n, m, k;\nlong long a[mxn][mxn], first[mxn][mxn], tr[mxn][w];\nint main() {\n  ios::sync_with_stdio(0);\n  cin.tie(0);\n  cin >> n >> k >> m;\n  string second;\n  for (int i = 1; i <= m; i++)\n    for (int c = 0; c < w; c++) {\n      int x = tr[i - 1][c];\n      tr[i - 1][c] = i;\n      memcpy(tr[i], tr[x], sizeof(tr[i]));\n      for (int j = 0; j <= n; j++)\n        for (int l = 0; l <= i; l++) {\n          if (!j) {\n            a[j][l] = tr[l][1];\n            first[j][l] = a[j][l] == i;\n          } else if (!~-j) {\n            a[j][l] = tr[l][2];\n            first[j][l] = a[j][l] == i;\n          } else {\n            a[j][l] = a[j - 1][a[j - 2][l]];\n            first[j][l] = min(inf, first[j - 1][a[j - 2][l]] + first[j - 2][l]);\n          }\n        }\n      long long y = first[n][0] + (tr[a[n][0]][0] == i);\n      if (y > k) {\n        if (!c) goto hell;\n        second += char('0' + c - 1);\n        break;\n      }\n      tr[i - 1][c] = x, k -= y;\n    }\nhell:\n  cout << second << '\\n';\n  return 0;\n}\n"
+  }
+]

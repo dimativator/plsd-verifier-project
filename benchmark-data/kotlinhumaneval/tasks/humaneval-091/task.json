@@ -1,0 +1,20 @@
+{
+  "id": "humaneval-091",
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "source_id": "HumanEval_kotlin/91",
+  "submission_format": "function",
+  "target_language": "Kotlin",
+  "difficulty": null,
+  "original_test_count": 9,
+  "public_test_count": 1,
+  "unexposed_test_count": 8,
+  "source_review_note": "Canonical helper labels 0/negative values prime. Tests include 0 but also larger actual primes, hiding it. No-prime input behavior is undefined.",
+  "behavioral_validation": "not_run",
+  "verifier_validation": "not_run",
+  "task_dir": "tasks/humaneval-091",
+  "public_dir": "tasks/humaneval-091/public",
+  "evaluator_dir": "tasks/humaneval-091/evaluator",
+  "metadata_file": "tasks/humaneval-091/task.json",
+  "evaluation_harness": "tasks/humaneval-091/evaluator/HiddenTests.kt",
+  "evaluation_file": "tasks/humaneval-091/evaluation.json"
+}

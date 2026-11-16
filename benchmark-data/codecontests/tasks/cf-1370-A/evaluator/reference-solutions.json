@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\nfor i in range(n):\n    print(int(input())//2)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nbool check(long long n, long long pos) { return n & (1LL << pos); }\nlong long Set(long long n, long long pos) { return n = n | (1LL << pos); }\nint main() {\n  long long i, j, k, l, m, n, o, r, q;\n  long long testcase;\n  long long input, flag, tag, ans;\n  scanf(\"%lld\", &testcase);\n  for (long long cs = 1; cs <= testcase; cs++) {\n    scanf(\"%lld\", &n);\n    cout << n / 2 << '\\n';\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.InputStreamReader;\n\n\npublic class A1370 {\n    public static void main(String[] args) {\n        try{\n            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n            int t = Integer.parseInt(br.readLine());\n            while(t--!=0){\n                int n = Integer.parseInt(br.readLine());\n                System.out.println(n/2);\n            }\n        }catch (Exception e){\n\n        }\n    }\n    public static int gcd(int a, int b){\n        if(a==0)return b;\n        return gcd(b%a,a);\n    }\n}\n"
+  }
+]

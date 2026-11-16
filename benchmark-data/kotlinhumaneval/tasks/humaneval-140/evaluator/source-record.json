@@ -1,0 +1,31 @@
+{
+  "task_id": "HumanEval_kotlin/140",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * You are given a string representing a sentence,\n * the sentence contains some words separated by a space,\n * and you have to return a string that contains the words from the original sentence,\n * whose lengths are prime numbers,\n * the order of the words in the new string should be the same as the original one.\n\n * Example 1:\n *     Input: sentence = \"This is a test\"\n *     Output: \"is\"\n\n * Example 2:\n *     Input: sentence = \"lets go for swimming\"\n *     Output: \"go for\"\n\n * Constraints:\n *     * 1 <= len(sentence) <= 100\n *     * sentence contains only letters\n *\n */\nfun wordsInSentence(sentence : String) : String {\n",
+  "entry_point": "wordsInSentence",
+  "test": "fun main() {\n    var arg00 : String = \"This is a test\"\n    var x0 : String = wordsInSentence(arg00);\n    var v0 : String = \"is\";\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10 : String = \"lets go for swimming\"\n    var x1 : String = wordsInSentence(arg10);\n    var v1 : String = \"go for\";\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20 : String = \"there is no place available here\"\n    var x2 : String = wordsInSentence(arg20);\n    var v2 : String = \"there is no place\";\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30 : String = \"Hi I am Hussein\"\n    var x3 : String = wordsInSentence(arg30);\n    var v3 : String = \"Hi am Hussein\";\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40 : String = \"go for it\"\n    var x4 : String = wordsInSentence(arg40);\n    var v4 : String = \"go for it\";\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50 : String = \"here\"\n    var x5 : String = wordsInSentence(arg50);\n    var v5 : String = \"\";\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n    var arg60 : String = \"here is\"\n    var x6 : String = wordsInSentence(arg60);\n    var v6 : String = \"is\";\n    if (x6 != v6) {\n        throw Exception(\"Exception -- test case 6 did not pass. x6 = \" + x6)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * You are given a string representing a sentence,\n * the sentence contains some words separated by a space,\n * and you have to return a string that contains the words from the original sentence,\n * whose lengths are prime numbers,\n * the order of the words in the new string should be the same as the original one.\n\n * Example 1:\n *     Input: sentence = \"This is a test\"\n *     Output: \"is\"\n\n * Example 2:\n *     Input: sentence = \"lets go for swimming\"\n *     Output: \"go for\"\n\n * Constraints:\n *     * 1 <= len(sentence) <= 100\n *     * sentence contains only letters\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun wordsInSentence(sentence : String) : String {",
+    "    fun isPrime(num: Int): Boolean {",
+    "        if (num <= 1) {",
+    "            return false",
+    "        }",
+    "        for (i in 2..num) {",
+    "            if (i * i > num) {",
+    "                break",
+    "            }",
+    "            if (num % i == 0) {",
+    "                return false",
+    "            }",
+    "        }",
+    "        return true",
+    "    }",
+    "    val words = sentence.split(\" \")",
+    "    val primeLengthWords = words.filter { isPrime(it.length) }",
+    "    return primeLengthWords.joinToString(\" \")",
+    "}",
+    "",
+    ""
+  ]
+}

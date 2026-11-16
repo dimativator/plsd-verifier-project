@@ -1,0 +1,35 @@
+{
+  "name": "621_E. Wet Shark and Blocks",
+  "description": "There are b blocks of digits. Each one consisting of the same n digits, which are given to you in the input. Wet Shark must choose exactly one digit from each block and concatenate all of those digits together to form one large integer. For example, if he chooses digit 1 from the first block and digit 2 from the second block, he gets the integer 12. \n\nWet Shark then takes this number modulo x. Please, tell him how many ways he can choose one digit from each block so that he gets exactly k as the final result. As this number may be too large, print it modulo 109 + 7.\n\nNote, that the number of ways to choose some digit in the block is equal to the number of it's occurrences. For example, there are 3 ways to choose digit 5 from block 3 5 6 7 8 9 5 1 1 1 1 5.\n\nInput\n\nThe first line of the input contains four space-separated integers, n, b, k and x (2 ≤ n ≤ 50 000, 1 ≤ b ≤ 109, 0 ≤ k < x ≤ 100, x ≥ 2) — the number of digits in one block, the number of blocks, interesting remainder modulo x and modulo x itself.\n\nThe next line contains n space separated integers ai (1 ≤ ai ≤ 9), that give the digits contained in each block.\n\nOutput\n\nPrint the number of ways to pick exactly one digit from each blocks, such that the resulting integer equals k modulo x.\n\nExamples\n\nInput\n\n12 1 5 10\n3 5 6 7 8 9 5 1 1 1 1 5\n\n\nOutput\n\n3\n\n\nInput\n\n3 2 1 2\n6 2 2\n\n\nOutput\n\n0\n\n\nInput\n\n3 2 1 2\n3 1 2\n\n\nOutput\n\n6\n\nNote\n\nIn the second sample possible integers are 22, 26, 62 and 66. None of them gives the remainder 1 modulo 2.\n\nIn the third sample integers 11, 13, 21, 23, 31 and 33 have remainder 1 modulo 2. There is exactly one way to obtain each of these integers, so the total answer is 6.",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2000,
+  "cf_contest_id": 621,
+  "cf_index": "E",
+  "cf_tags": [
+    "dp",
+    "matrices"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00019-of-00039-d688fad5ee604390.parquet",
+  "source_row": 10,
+  "task_id": "codecontests/cf-621-E",
+  "rating_band": "2000-2399",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/621/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

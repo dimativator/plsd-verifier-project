@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from sys import *\n\nk=int(input())\ns=input()\nee=set()\nfor i in s:\n    ee.add(i)\nif k>len(ee):\n    print(\"NO\")\n    exit(0)\nprint(\"YES\")\ni=1\ncur=s[0]\nnum=k-1\nee.discard(s[0])\nwhile i<len(s):\n    if s[i] in ee and num:\n        print(cur)\n        ee.discard(s[i])\n        num-=1\n        cur=s[i]\n    else:\n        cur+=s[i]\n    i+=1\nprint(cur)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\ninline bool cmp(const pair<int, int> &a, const pair<int, int> &b) {\n  if (a.first != b.first) return a.first > b.first;\n  return a.second < b.second;\n}\nint a[200005], b[200005];\nchar s[200005], r[200005];\nint test;\nint main() {\n  int t, n, m, k, l, x, y, z, flag, count, d, mx, mn;\n  long long int sum, prod;\n  scanf(\"%d%s\", &k, s);\n  n = strlen(s);\n  for (int i = 0; i < n; i++) {\n    a[s[i] - 'a']++;\n  }\n  count = 0;\n  for (int i = 0; i < 26; i++) {\n    if (a[i]) count++;\n  }\n  if (count >= k) {\n    printf(\"YES\\n\");\n    int i = 0;\n    while (k > 1) {\n      if (!b[s[i] - 'a']) {\n        b[s[i] - 'a'] = 1;\n        while (b[s[i] - 'a']) {\n          printf(\"%c\", s[i]);\n          i++;\n        }\n      }\n      printf(\"\\n\");\n      k--;\n    }\n    for (int j = i; j < n; j++) printf(\"%c\", s[j]);\n  } else\n    printf(\"NO\\n\");\n  for (int i = 0; i < 26; i++) a[i] = b[i] = 0;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.InputStreamReader;\nimport java.util.*;\n\n/**\n * Created by Nika on 4/30/2015.\n */\npublic class Main {\n    private static Scanner sc = new Scanner(new InputStreamReader(System.in));\n    public static void main(String[] args) {\n        Set<Character> set = new HashSet<>();\n        int n = sc.nextInt();\n        String q = sc.next();\n        List<String> result = new ArrayList<>();\n        for (int i=0; i<q.length(); i++) {\n            Character c = new Character(q.charAt(i));\n            if (!set.contains(c)) {\n                if (result.size() == (n-1)){\n                    result.add(q.substring(i));\n                    set.add(c);\n                    break;\n                }\n\n                int index = i+1;\n                if (index>=q.length()) break;\n                Character c1 = q.charAt(index);\n                set.add(c);\n                while (index+1<q.length() && set.contains(c1)) {\n                    index++;\n                    c1 = q.charAt(index);\n                }\n                result.add(q.substring(i, index));\n                i = index-1;\n            }\n        }\n\n        if (set.size() >= n) {\n            System.out.println(\"YES\");\n            result.forEach(System.out::println);\n        } else {\n            System.out.println(\"NO\");\n        }\n    }\n}\n"
+  }
+]

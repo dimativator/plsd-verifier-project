@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from collections import Counter\ns = input()\ncounter = Counter()\nfor i in range(len(s)):\n    counter[s[i:len(s)] + s[0:i]] = 1\nprint(sum(counter.values()))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  string s;\n  cin >> s;\n  set<string> str;\n  str.insert(s);\n  int n = s.size();\n  while (n--) {\n    s.insert(s.begin(), s[s.size() - 1]);\n    s.erase(s.end() - 1);\n    str.insert(s);\n  }\n  cout << str.size();\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.util.HashMap;\nimport java.util.Scanner;\n\npublic class Stone {\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        sc.close();\n        int l = s.length();\n        HashMap<String, Boolean> hm = new HashMap<String, Boolean>();\n        int count = 1;\n        hm.put(s, true);\n        for(int i = 1; i<l; i++)\n        {\n        \ts = s.charAt(l-1) + s.substring(0, l-1);\n        \tif(!hm.containsKey(s))\n        \t{\n        \t\thm.put(s, true);\n        \t\tcount++;\n        \t}\n        }\n        System.out.println(count);\n        \n    }\n    \n    \n}\n\n    \n    \n    \n\n"
+  }
+]

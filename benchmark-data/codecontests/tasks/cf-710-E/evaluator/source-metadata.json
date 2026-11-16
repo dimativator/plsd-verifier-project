@@ -1,0 +1,35 @@
+{
+  "name": "710_E. Generate a String",
+  "description": "zscoder wants to generate an input file for some programming competition problem.\n\nHis input is a string consisting of n letters 'a'. He is too lazy to write a generator so he will manually generate the input in a text editor.\n\nInitially, the text editor is empty. It takes him x seconds to insert or delete a letter 'a' from the text file and y seconds to copy the contents of the entire text file, and duplicate it.\n\nzscoder wants to find the minimum amount of time needed for him to create the input file of exactly n letters 'a'. Help him to determine the amount of time needed to generate the input.\n\nInput\n\nThe only line contains three integers n, x and y (1 ≤ n ≤ 107, 1 ≤ x, y ≤ 109) — the number of letters 'a' in the input file and the parameters from the problem statement.\n\nOutput\n\nPrint the only integer t — the minimum amount of time needed to generate the input file.\n\nExamples\n\nInput\n\n8 1 1\n\n\nOutput\n\n4\n\n\nInput\n\n8 1 10\n\n\nOutput\n\n8",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2000,
+  "cf_contest_id": 710,
+  "cf_index": "E",
+  "cf_tags": [
+    "dfs and similar",
+    "dp"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 512000000,
+  "source_file": "data/train-00008-of-00039-7246e6b7423b404f.parquet",
+  "source_row": 28,
+  "task_id": "codecontests/cf-710-E",
+  "rating_band": "2000-2399",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/710/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

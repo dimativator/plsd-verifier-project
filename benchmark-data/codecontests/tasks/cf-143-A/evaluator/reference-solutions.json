@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "inn = list(map(int, input().split(\" \")))\nr1 = inn[0]\nr2 = inn[1]\ninn = list(map(int, input().split(\" \")))\nc1 = inn[0]\nc2 = inn[1]\ninn = list(map(int, input().split(\" \")))\nd1 = inn[0]\nd2 = inn[1]\n\nx = int((d1+c1-r2)/2)\ny = int(((2*r1)-d1-c1+r2)/2)\na = int(((2*c1)-d1-c1+r2)/2)\nb = int((r2-(2*c1)+d1+c1)/2)\nif x == y or x == a or x == b or y == a or y == b or a == b or x < 1 or x > 9 or y < 1 or y > 9 or a < 1 or a > 9 or b < 1 or b > 9:\n    print(-1)\nelse:\n    print(x, y)\n    print(a, b)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  short l = 0;\n  bool b = 0;\n  vector<vector<short>> v(3);\n  for (int i = 0; i < 3; i++)\n    for (int j = 0; j < 2; j++) {\n      cin >> l;\n      v[i].push_back(l);\n    }\n  short x = (v[2][1] - v[0][1] + v[1][1]) / 2;\n  short a[4];\n  a[0] = v[0][0] - x;\n  a[1] = x;\n  a[2] = v[0][1] - v[1][1] + x;\n  a[3] = v[1][1] - x;\n  for (int i = 0; i < 4; i++)\n    for (int j = i + 1; j < 4; j++) {\n      if (a[i] == a[j]) {\n        b = 1;\n        j = 4;\n        i = 4;\n      }\n    }\n  for (int i = 0; i < 4; i++) {\n    if (a[i] < 1 || a[i] > 9) {\n      b = 1;\n      i = 4;\n    }\n  }\n  if (a[2] + a[0] != v[1][0]) b = 1;\n  if (b)\n    cout << -1 << endl;\n  else {\n    cout << a[0] << \" \" << a[1] << endl;\n    cout << a[2] << \" \" << a[3] << endl;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\npublic class HelpVasilisaTheWise {\n    public static void main (String [] args) {\n        Scanner in = new Scanner(System.in);\n        int r1 = in.nextInt();\n        int r2 = in.nextInt();\n        int c1 = in.nextInt();\n        int c2 = in.nextInt();\n        int d1 = in.nextInt();\n        int d2 = in.nextInt();\n        \n        int a1=0, a2=0, a3=0, a4=0;\n        boolean sw = true;\n        for (int i=1; i<=9; i++) {\n            a1 = i;\n            a2 = r1 - a1;\n            a3 = c1 - a1;\n            a4 = d1 - a1;\n            \n            if( r2 == a3 + a4 && c2 == a2 + a4 && d2 == a3 + a2 ) {\n                if( !(a2 < 1 || a3 < 1 || a4 < 1 || a2 > 9 || a3 > 9 || a4 > 9 || a1 == a2 || a1 == a3 || a1 == a4 || a2 == a3 || a2 == a4 || a3 == a4) ) {\n                    System.out.println(a1 + \" \" + a2);\n                    System.out.println(a3 + \" \" + a4);\n                    sw = false;\n                    break;\n                }\n            }\n            \n        }\n        if (sw) {\n            System.out.println(\"-1\");\n        }\n    }\n}"
+  }
+]

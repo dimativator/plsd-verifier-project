@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "party = list(map(int, input().split()))\nfriends, bottles, ml, limes, lime_slices, salt, friend_ml, friend_salt = party\n\n\ntotal_gas = bottles * ml\ntotal_limes = limes * lime_slices\n\nrotation_ml = friend_ml * friends\n\n\nq_tosts = -1\nwhile all(x >= 0 for x in (salt, total_gas, total_limes)):\n    total_gas -= rotation_ml \n    total_limes -= friends\n    salt -= friend_salt * friends\n    q_tosts += 1\nprint(q_tosts)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, k, l, c, d, p, nl, np;\n  cin >> n >> k >> l >> c >> d >> p >> nl >> np;\n  cout << ((((k * l / nl) < (c * d) ? (k * l / nl) : (c * d))) < (p / np)\n               ? (((k * l / nl) < (c * d) ? (k * l / nl) : (c * d)))\n               : (p / np)) /\n              n;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\n\nimport java.util.Arrays;\nimport java.util.Scanner;\n\npublic class WaterMelon {\n    static Scanner sc = new Scanner(System.in);\n    static int[] mem;\n    \n    public static void main(String[] args) {\n        String[] line = sc.nextLine().split(\" \");\n        int n = Integer.parseInt(line[0]);\n        int k = Integer.parseInt(line[1]);\n        int l = Integer.parseInt(line[2]);\n        int c = Integer.parseInt(line[3]);\n        int d = Integer.parseInt(line[4]);\n        int p = Integer.parseInt(line[5]);\n        int nl = Integer.parseInt(line[6]);\n        int np = Integer.parseInt(line[7]);\n        \n        int slicesT = c*d;\n        int milliT = k*l;\n        int count = 0;\n        while (slicesT >= n && milliT >= n*nl && p >= n*np) {\n            slicesT -= n;\n            milliT -= n*nl;\n            p -= n*np;\n            count++;\n        }\n        \n        System.out.println(count);\n    }\n    \n\n}\n"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "entrada = input()\nvez = -1\ntotal = 0\nperigo = False\nfor i in range(len(entrada)):\n    aux = int(entrada[i])\n    if(vez == aux):\n        total += 1\n        if(total == 7):\n            perigo = True\n    else:\n        total = 1\n        vez = aux\nif(perigo):\n    print(\"YES\")\nelse:\n    print(\"NO\")\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  string a;\n  int c = 0, b = 0;\n  cin >> a;\n  for (int i = 0; i < a.length(); i++) {\n    if (a[i] == '1') {\n      c = 0;\n      b++;\n      if (b >= 7 || c >= 7) {\n        cout << \"YES\";\n        break;\n      }\n    } else {\n      b = 0;\n      c++;\n      if (b >= 7 || c >= 7) {\n        cout << \"YES\";\n        break;\n      }\n    }\n  }\n  if (b >= 7 || c >= 7) {\n  } else {\n    cout << \"NO\";\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\npublic class Main\n{\n  public static void main(String[]args)\n  {\n    Scanner rbt=new Scanner(System.in);\n    String x=rbt.next();\n    int o=0, z=0, f=0;\n    for(int i=0; i<x.length(); i++)\n    {\n      if(x.charAt(i)=='0')\n      {\n        z++;\n        o=0;\n      }\n      else if(x.charAt(i)=='1')\n      {\n        o++;\n        z=0;\n      }\n      if(o>=7 || z>=7)\n      {\n        f++;\n        break;\n      }\n    }\n    System.out.println((f>0)? \"YES\":\"NO\");\n  }\n}"
+  }
+]

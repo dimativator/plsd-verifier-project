@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from heapq import *\nf = lambda: map(int, input().split())\nn, c = f()\na = list(f()) + [0] * c\nb = [0] * (n + c)\ns = 0\nh = [(0, -1)]\nfor i in range(n):\n    s += a[i] - a[i - c]\n    heappush(h, (a[i], i))\n    while h[0][1] <= i - c: heappop(h)\n    b[i] = min(b[i - 1] + a[i], b[i - c] + s - h[0][0])\nprint(b[n - 1])"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(NULL);\n  cout.tie(NULL);\n  long long n, c;\n  cin >> n >> c;\n  long long arr[n];\n  for (long long i = 0; i < n; i++) cin >> arr[i];\n  if (c == 1) {\n    cout << 0;\n    return 0;\n  }\n  long long dp[n];\n  for (long long i = 0; i < n; i++) dp[i] = 10000000000000000;\n  dp[0] = arr[0];\n  map<long long, long long> ma;\n  ma[arr[0]] = 1;\n  long long sum = arr[0];\n  for (long long i = 1; i < n; i++) {\n    sum += arr[i];\n    ma[arr[i]]++;\n    if (i == c - 1) {\n      dp[i] = min(dp[i], sum - (ma.begin())->first);\n    }\n    if (i >= c) {\n      sum -= arr[i - c];\n      ma[arr[i - c]]--;\n      if (ma[arr[i - c]] == 0) ma.erase(arr[i - c]);\n      long long temp = sum - (ma.begin())->first;\n      dp[i] = min(dp[i], dp[i - c] + temp);\n    }\n    dp[i] = min(dp[i - 1] + arr[i], dp[i]);\n  }\n  cout << dp[n - 1];\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\n//package codeTrainingLeetcode;\n\nimport java.util.Comparator;\nimport java.util.PriorityQueue;\nimport java.util.Scanner;\n\npublic class C466D2E {\n\tpublic static void main(String[] args) {\n\t\tScanner scanner = new Scanner(System.in);\n\t\tint n = scanner.nextInt();\n\t\tint c = scanner.nextInt();\n\t\tint[] a = new int[n];\n\t\tlong[] dp = new long[n + 1];\n\t\tPriorityQueue<int[]> pQueue = new PriorityQueue<>(new Comparator<int[]>() {\n\t\t\t@Override\n\t\t\tpublic int compare(int[] a1, int[] a2) {\n\t\t\t\treturn a1[0] - a2[0];\n\t\t\t}\n\t\t});\n\t\tfor (int i = 0; i < n; i++)\n\t\t\ta[i] = scanner.nextInt();\n\t\tlong cRangeSum = 0;\n\t\tfor (int i = 0; i < n; i++) {\n\t\t\tif (i - c >= 0) {\n\t\t\t\tcRangeSum += (long) a[i] - a[i - c];\n\t\t\t} else {\n\t\t\t\tcRangeSum += (long) a[i];\n\t\t\t}\n\t\t\tpQueue.add(new int[] { a[i], i });\n\t\t\twhile (pQueue.peek()[1] <= i - c)\n\t\t\t\tpQueue.poll();\n\t\t\tif (i == c - 1) {\n\t\t\t\tdp[i] = cRangeSum - (long) pQueue.peek()[0];\n\t\t\t} else if (i > c - 1) {\n\t\t\t\tdp[i] = Math.min(dp[i - 1] + (long) a[i], dp[i - c] + (long) cRangeSum - (long) pQueue.peek()[0]);\n\t\t\t} else {\n\t\t\t\tdp[i] = cRangeSum;\n\t\t\t}\n\t\t}\n\t\t// System.out.println(Arrays.toString(dp));\n\t\tSystem.out.println(dp[n - 1]);\n\t}\n}\n"
+  }
+]

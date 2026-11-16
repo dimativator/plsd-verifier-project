@@ -1,0 +1,35 @@
+{
+  "name": "760_B. Frodo and pillows",
+  "description": "n hobbits are planning to spend the night at Frodo's house. Frodo has n beds standing in a row and m pillows (n ≤ m). Each hobbit needs a bed and at least one pillow to sleep, however, everyone wants as many pillows as possible. Of course, it's not always possible to share pillows equally, but any hobbit gets hurt if he has at least two pillows less than some of his neighbors have. \n\nFrodo will sleep on the k-th bed in the row. What is the maximum number of pillows he can have so that every hobbit has at least one pillow, every pillow is given to some hobbit and no one is hurt?\n\nInput\n\nThe only line contain three integers n, m and k (1 ≤ n ≤ m ≤ 109, 1 ≤ k ≤ n) — the number of hobbits, the number of pillows and the number of Frodo's bed.\n\nOutput\n\nPrint single integer — the maximum number of pillows Frodo can have so that no one is hurt.\n\nExamples\n\nInput\n\n4 6 2\n\n\nOutput\n\n2\n\n\nInput\n\n3 10 3\n\n\nOutput\n\n4\n\n\nInput\n\n3 6 1\n\n\nOutput\n\n3\n\nNote\n\nIn the first example Frodo can have at most two pillows. In this case, he can give two pillows to the hobbit on the first bed, and one pillow to each of the hobbits on the third and the fourth beds.\n\nIn the second example Frodo can take at most four pillows, giving three pillows to each of the others.\n\nIn the third example Frodo can take three pillows, giving two pillows to the hobbit in the middle and one pillow to the hobbit on the third bed.",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 1500,
+  "cf_contest_id": 760,
+  "cf_index": "B",
+  "cf_tags": [
+    "binary search",
+    "greedy"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00009-of-00039-b8c920f6629b57b2.parquet",
+  "source_row": 209,
+  "task_id": "codecontests/cf-760-B",
+  "rating_band": "1200-1599",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/760/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

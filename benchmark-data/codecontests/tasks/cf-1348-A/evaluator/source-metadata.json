@@ -1,0 +1,35 @@
+{
+  "name": "1348_A. Phoenix and Balance",
+  "description": "Phoenix has n coins with weights 2^1, 2^2, ..., 2^n. He knows that n is even.\n\nHe wants to split the coins into two piles such that each pile has exactly n/2 coins and the difference of weights between the two piles is minimized. Formally, let a denote the sum of weights in the first pile, and b denote the sum of weights in the second pile. Help Phoenix minimize |a-b|, the absolute value of a-b.\n\nInput\n\nThe input consists of multiple test cases. The first line contains an integer t (1 ≤ t ≤ 100) — the number of test cases.\n\nThe first line of each test case contains an integer n (2 ≤ n ≤ 30; n is even) — the number of coins that Phoenix has. \n\nOutput\n\nFor each test case, output one integer — the minimum possible difference of weights between the two piles.\n\nExample\n\nInput\n\n\n2\n2\n4\n\n\nOutput\n\n\n2\n6\n\nNote\n\nIn the first test case, Phoenix has two coins with weights 2 and 4. No matter how he divides the coins, the difference will be 4-2=2.\n\nIn the second test case, Phoenix has four coins of weight 2, 4, 8, and 16. It is optimal for Phoenix to place coins with weights 2 and 16 in one pile, and coins with weights 4 and 8 in another pile. The difference is (2+16)-(4+8)=6.",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 800,
+  "cf_contest_id": 1348,
+  "cf_index": "A",
+  "cf_tags": [
+    "greedy",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00007-of-00039-05785de21e8b8429.parquet",
+  "source_row": 26,
+  "task_id": "codecontests/cf-1348-A",
+  "rating_band": "800-1199",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/1348/A",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

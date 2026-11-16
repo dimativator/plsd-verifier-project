@@ -1,0 +1,32 @@
+{
+  "task_id": "HumanEval_kotlin/38",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * triples_sum_to_zero takes a list of integers as an input.\n * it returns True if there are three distinct elements in the list that\n * sum to zero, and False otherwise.\n\n * >>> triples_sum_to_zero([1, 3, 5, 0])\n * False\n * >>> triples_sum_to_zero([1, 3, -2, 1])\n * True\n * >>> triples_sum_to_zero([1, 2, 3, 7])\n * False\n * >>> triples_sum_to_zero([2, 4, -5, 3, 9, 7])\n * True\n * >>> triples_sum_to_zero([1])\n * False\n *\n */\nfun triplesSumToZero(l: List<Int>): Boolean {\n",
+  "entry_point": "triplesSumToZero",
+  "test": "fun main() {\n    var arg00: List<Int> = mutableListOf(1, 3, 5, 0)\n    var x0: Boolean = triplesSumToZero(arg00)\n    var v0: Boolean = false\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10: List<Int> = mutableListOf(1, 3, 5, -1)\n    var x1: Boolean = triplesSumToZero(arg10)\n    var v1: Boolean = false\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20: List<Int> = mutableListOf(1, 3, -2, 1)\n    var x2: Boolean = triplesSumToZero(arg20)\n    var v2: Boolean = true\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30: List<Int> = mutableListOf(1, 2, 3, 7)\n    var x3: Boolean = triplesSumToZero(arg30)\n    var v3: Boolean = false\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n    var arg40: List<Int> = mutableListOf(1, 2, 5, 7)\n    var x4: Boolean = triplesSumToZero(arg40)\n    var v4: Boolean = false\n    if (x4 != v4) {\n        throw Exception(\"Exception -- test case 4 did not pass. x4 = \" + x4)\n    }\n\n    var arg50: List<Int> = mutableListOf(2, 4, -5, 3, 9, 7)\n    var x5: Boolean = triplesSumToZero(arg50)\n    var v5: Boolean = true\n    if (x5 != v5) {\n        throw Exception(\"Exception -- test case 5 did not pass. x5 = \" + x5)\n    }\n\n    var arg60: List<Int> = mutableListOf(1)\n    var x6: Boolean = triplesSumToZero(arg60)\n    var v6: Boolean = false\n    if (x6 != v6) {\n        throw Exception(\"Exception -- test case 6 did not pass. x6 = \" + x6)\n    }\n\n    var arg70: List<Int> = mutableListOf(1, 3, 5, -100)\n    var x7: Boolean = triplesSumToZero(arg70)\n    var v7: Boolean = false\n    if (x7 != v7) {\n        throw Exception(\"Exception -- test case 7 did not pass. x7 = \" + x7)\n    }\n\n    var arg80: List<Int> = mutableListOf(100, 3, 5, -100)\n    var x8: Boolean = triplesSumToZero(arg80)\n    var v8: Boolean = false\n    if (x8 != v8) {\n        throw Exception(\"Exception -- test case 8 did not pass. x8 = \" + x8)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * triples_sum_to_zero takes a list of integers as an input.\n * it returns True if there are three distinct elements in the list that\n * sum to zero, and False otherwise.\n\n * >>> triples_sum_to_zero([1, 3, 5, 0])\n * False\n * >>> triples_sum_to_zero([1, 3, -2, 1])\n * True\n * >>> triples_sum_to_zero([1, 2, 3, 7])\n * False\n * >>> triples_sum_to_zero([2, 4, -5, 3, 9, 7])\n * True\n * >>> triples_sum_to_zero([1])\n * False\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun triplesSumToZero(l: List<Int>): Boolean {",
+    "    val sortedList = l.sorted()",
+    "    for (i in 0 until sortedList.size - 2) {",
+    "        // Avoid duplicate elements",
+    "        if (i > 0 && sortedList[i] == sortedList[i - 1]) continue",
+    "",
+    "        var left = i + 1",
+    "        var right = sortedList.size - 1",
+    "        while (left < right) {",
+    "            val sum = sortedList[i] + sortedList[left] + sortedList[right]",
+    "            if (sum == 0) {",
+    "                return true",
+    "            } else if (sum < 0) {",
+    "                left++",
+    "            } else {",
+    "                right--",
+    "            }",
+    "        }",
+    "    }",
+    "    return false",
+    "}",
+    ""
+  ]
+}

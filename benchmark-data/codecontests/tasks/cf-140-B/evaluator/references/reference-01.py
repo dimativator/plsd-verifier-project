@@ -1,0 +1,15 @@
+n = int(input())
+arr = [list(map(int, input().split())) for _ in range(n+1)]
+res = [0] * n
+for i in range(n):
+    p = [0] * (n+1)
+    for j in range(n): 
+        p[arr[i][j]] = j
+    u, t, b = 0, int(1e5), int(1e5)
+    for x in arr[n]:
+        if x != i+1 and x < b:
+            if p[x] < t: 
+                u, t = x, p[x]
+            b = x
+    res[i] = u
+print(*res)

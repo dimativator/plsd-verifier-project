@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "mat = []\n\nfor x in range(0, 5):\n    a = list(map(int, input().split()))\n    mat.append(a)\n    for i in a:\n        if i == 1:\n            row = a.index(1)\n            col = mat.index(a)\n\nprint(abs(row - 2) + abs(col - 2))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint main() {\n  int i, j, l, m;\n  int arr[5][5];\n  for (int i = 0; i < 5; i++) {\n    for (int j = 0; j < 5; j++) {\n      scanf(\"%d\", &arr[i][j]);\n      if (arr[i][j] == 1) {\n        l = i;\n        m = j;\n      }\n    }\n    printf(\"\\n\");\n  }\n  printf(\"%d\", abs(l - 2) + abs(m - 2));\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\npublic final class Main{\n    public static void main(String args[]) throws Exception{\n        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));\n        int a[][]=new int[5][5];\n        int g=0,h=0;\n        for(int i=0;i<5;i++){\n            String str=br.readLine();\n            String s[]=str.split(\" \");\n            for(int j=0;j<5;j++){\n                int x=Integer.parseInt(s[j]);\n                a[i][j]=x;\n                if(x==1){\n                    g=i+1;\n                    h=j+1;\n                }\n            }\n        }\n        int l=Math.abs(g-3);\n        l+=Math.abs(h-3);\n        System.out.println(l);\n    }\n}"
+  }
+]

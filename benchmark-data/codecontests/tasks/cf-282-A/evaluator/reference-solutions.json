@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\ncounter= 0\nfor i in range(n):\n\tif input().find('+') > -1:\n\t\tcounter = counter + 1\n\telse:\n\t\tcounter = counter - 1\nprint(counter)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint n, a;\nchar s[3];\nint main() {\n  scanf(\"%d\", &n);\n  for (int i = 0; i < n; i++) {\n    scanf(\"%s\", s);\n    for (int j = 0; j < 3; j++) {\n      if (s[j] == '+') {\n        a++;\n        break;\n      } else if (s[j] == '-') {\n        a--;\n        break;\n      }\n    }\n  }\n  printf(\"%d\", a);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\npublic class Main {\npublic static void main(String[] args) throws Exception\n{\n    input.init(System.in);\n    PrintWriter out = new PrintWriter(System.out);\n    int x  =0;\n    for(int i = 0, n = input.nextInt(); i<n; i++) x += input.next().indexOf('+') >= 0 ? 1 : -1;\n    out.println(x);\n    \n    out.close();\n}\npublic static class input {\n  static BufferedReader reader;\n  static StringTokenizer tokenizer;\n  static void init(InputStream input) {\n      reader = new BufferedReader(\n                   new InputStreamReader(input) );\n      tokenizer = new StringTokenizer(\"\");\n  }\n\n  static String next() throws IOException {\n      while ( ! tokenizer.hasMoreTokens() ) {\n          tokenizer = new StringTokenizer(\n                 reader.readLine() );\n      }\n      return tokenizer.nextToken();\n  }\n\n  static int nextInt() throws IOException {\n      return Integer.parseInt( next() );\n  }\n    \n  static double nextDouble() throws IOException {\n      return Double.parseDouble( next() );\n  }\n  static long nextLong() throws IOException {\n      return Long.parseLong( next() );\n  }\n}\n}"
+  }
+]

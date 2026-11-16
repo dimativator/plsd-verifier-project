@@ -1,0 +1,35 @@
+{
+  "name": "568_C. New Language",
+  "description": "Living in Byteland was good enough to begin with, but the good king decided to please his subjects and to introduce a national language. He gathered the best of wise men, and sent an expedition to faraway countries, so that they would find out all about how a language should be designed.\n\nAfter some time, the wise men returned from the trip even wiser. They locked up for six months in the dining room, after which they said to the king: \"there are a lot of different languages, but almost all of them have letters that are divided into vowels and consonants; in a word, vowels and consonants must be combined correctly.\"\n\nThere are very many rules, all of them have exceptions, but our language will be deprived of such defects! We propose to introduce a set of formal rules of combining vowels and consonants, and include in the language all the words that satisfy them.\n\nThe rules of composing words are:\n\n  * The letters are divided into vowels and consonants in some certain way;\n  * All words have a length of exactly n;\n  * There are m rules of the form (pos1, t1, pos2, t2). Each rule is: if the position pos1 has a letter of type t1, then the position pos2 has a letter of type t2.\n\n\n\nYou are given some string s of length n, it is not necessarily a correct word of the new language. Among all the words of the language that lexicographically not smaller than the string s, find the minimal one in lexicographic order.\n\nInput\n\nThe first line contains a single line consisting of letters 'V' (Vowel) and 'C' (Consonant), determining which letters are vowels and which letters are consonants. The length of this string l is the size of the alphabet of the new language (1 ≤ l ≤ 26). The first l letters of the English alphabet are used as the letters of the alphabet of the new language. If the i-th character of the string equals to 'V', then the corresponding letter is a vowel, otherwise it is a consonant.\n\nThe second line contains two integers n, m (1 ≤ n ≤ 200, 0 ≤ m ≤ 4n(n - 1)) — the number of letters in a single word and the number of rules, correspondingly.\n\nNext m lines describe m rules of the language in the following format: pos1, t1, pos2, t2 (1 ≤ pos1, pos2 ≤ n, pos1 ≠ pos2, <image> 'V', 'C' }).\n\nThe last line contains string s of length n, consisting of the first l small letters of the English alphabet.\n\nIt is guaranteed that no two rules are the same.\n\nOutput\n\nPrint a smallest word of a language that is lexicographically not smaller than s. If such words does not exist (for example, if the language has no words at all), print \"-1\" (without the quotes).\n\nExamples\n\nInput\n\nVC\n2 1\n1 V 2 C\naa\n\n\nOutput\n\nab\n\n\nInput\n\nVC\n2 1\n1 C 2 V\nbb\n\n\nOutput\n\n-1\n\n\nInput\n\nVCC\n4 3\n1 C 2 V\n2 C 3 V\n3 V 4 V\nabac\n\n\nOutput\n\nacaa\n\nNote\n\nIn the first test word \"aa\" is not a word of the language, but word \"ab\" is.\n\nIn the second test out of all four possibilities only word \"bb\" is not a word of a language, but all other words are lexicographically less, so there is no answer.\n\nIn the third test, due to the last rule, \"abac\" doesn't belong to the language (\"a\" is a vowel, \"c\" is a consonant). The only word with prefix \"ab\" that meets the given rules is \"abaa\". But it is less than \"abac\", so the answer will be \"acaa\"",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 2600,
+  "cf_contest_id": 568,
+  "cf_index": "C",
+  "cf_tags": [
+    "2-sat",
+    "greedy"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00013-of-00039-30b8c3829ee3b962.parquet",
+  "source_row": 187,
+  "task_id": "codecontests/cf-568-C",
+  "rating_band": "2400+",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/568/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

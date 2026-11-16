@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from collections import *\n\n\ndef add(n):\n    for i in range(len(n) - 1, -1, -1):\n        if n[i] == '1':\n            n[i] = '0'\n        else:\n            n[i] = '1'\n            return n\n    n.appendleft('1')\n    return n\n\n\ndef main():\n    n, ans = deque(input()), 0\n\n    while (len(n) != 1):\n        if n[-1] == '1':\n            n = add(n)\n        else:\n            n.pop()\n        ans += 1\n\n    print(ans)\n\n\nif __name__ == '__main__':\n    main()\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  string str;\n  cin >> str;\n  int z = 0, on = 0, fl = 0;\n  for (int i = str.size() - 1; i >= 0; i--) {\n    if (str[i] == '0' && fl == 1) {\n      z++;\n    } else if (str[i] == '1') {\n      on++;\n      fl = 1;\n    }\n  }\n  if (on > 1) {\n    cout << str.size() + 1 + z << endl;\n  } else if (on == 1) {\n    cout << str.size() - 1 << endl;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\npublic class BinaryNumber {\n\tpublic static void main(String[] args) {\n\t\tScanner scan = new Scanner(System.in);\n\t\tString binary = scan.next();\n\t\t// Even\n\t\tint count = 0;\n\t\tint carry = 0;\n\t\tfor(int i = binary.length() - 1; i >= 0; i--) {\n\t\t\tint current = Character.getNumericValue(binary.charAt(i));\n\t\t\tif (i != 0) {\n\t\t\t\tif (current == 0 && carry == 0) {\n\t\t\t\t\tcount += 1;\n//\t\t\t\t\tSystem.out.println(current + \" first\");\n\t\t\t\t} else if (current == 1 && carry == 0) {\n\t\t\t\t\tcount += 2;\n\t\t\t\t\tcarry = 1;\n//\t\t\t\t\tSystem.out.println(current + \" second\");\n\t\t\t\t} else if (current == 0 && carry == 1) {\n\t\t\t\t\tcount += 2;\n//\t\t\t\t\tSystem.out.println(current + \" third\");\n\t\t\t\t} else {\n\t\t\t\t\tcount += 1;\n//\t\t\t\t\tSystem.out.println(current + \" fourth\");\n\t\t\t\t}\n\t\t\t\t\n\t\t\t} else {\n\t\t\t\tif (current == 0 && carry == 0) {\n\t\t\t\t} else if (current == 1 && carry == 0) {\n\t\t\t\t} else if (current == 0 && carry == 1) {\n\t\t\t\t} else {\n\t\t\t\t\tcount += 1;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tSystem.out.println(count);\n\t}\n}"
+  }
+]

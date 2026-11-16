@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, n1, n2 = [int(x) for x in input().split()]\nd = [int(x) for x in input().split()]\nd.sort(reverse=True)\ns1 = 0\ns2 = 0\nn1, n2 = min(n1, n2), max(n1, n2)\nfor i in range(n1):\n    s1 += d[i]\nfor i in range(n1, n1 + n2):\n    s2 += d[i]\nans = s1 / n1 + s2 / n2\nprint(ans)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst long long mod = 1e9 + 7;\nconst double PI = acos(-1);\nconst double EPS = 1e-6;\nconst int INF = 0x3f3f3f3f;\ninline int readint() {\n  int sum = 0;\n  char c = getchar();\n  bool f = 0;\n  while (c < '0' || c > '9') {\n    if (c == '-') f = 1;\n    c = getchar();\n  }\n  while (c >= '0' && c <= '9') {\n    sum = sum * 10 + c - '0';\n    c = getchar();\n  }\n  if (f) return -sum;\n  return sum;\n}\ninline long long readLL() {\n  long long sum = 0;\n  char c = getchar();\n  bool f = 0;\n  while (c < '0' || c > '9') {\n    if (c == '-') f = 1;\n    c = getchar();\n  }\n  while (c >= '0' && c <= '9') {\n    sum = sum * 10 + c - '0';\n    c = getchar();\n  }\n  if (f) return -sum;\n  return sum;\n}\nlong long a[100005];\nint main() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  int n, n1, n2;\n  cin >> n >> n1 >> n2;\n  for (int i = 1; i <= n; i++) cin >> a[i];\n  sort(a + 1, a + n + 1);\n  for (int i = 1; i <= n; i++) {\n    a[i] += a[i - 1];\n  }\n  cout << setprecision(20)\n       << (a[n] - a[n - min(n1, n2)]) * 1.0 / min(n1, n2) +\n              (a[n - min(n1, n2)] - a[n - n1 - n2]) * 1.0 / max(n1, n2)\n       << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Collections;\nimport java.util.ArrayList;\nimport java.lang.Math;\nimport java.util.Scanner;\n\npublic class CF735B{\n\tpublic static double getAnswer(int n, int n1, int n2, ArrayList<Integer> a){\n\t\tCollections.sort(a, Collections.reverseOrder());\n\t\t\n\t\tDouble total1 = 0.0;\n\t\tDouble total2 = 0.0;\n\t\tint index = 0;\n\n\t\tint min = Math.min(n1,n2);\n\t\tint max = Math.max(n1,n2);\n\n\t\tfor(int i = 0; i < min; ++i){\n\t\t\t// total1 *= i;\n\t\t\ttotal1 += a.get(index);\n\t\t\t// total1 /= i+1;\n\t\t\t++index;\n\t\t}\n\n\t\tfor(int j = 0; j < max; ++j){\n\t\t\ttotal2 += a.get(index);\n\t\t\t++index;\n\t\t}\n\n\t\treturn total1/min + total2/max;\n\t}\n\n\tpublic static void main(String[] args){\n\t\tScanner in = new Scanner(System.in);\n\n\t\t// getting inputs\n\t\tint n = in.nextInt();\n\t\tint n1 = in.nextInt();\n\t\tint n2 = in.nextInt();\n\t\tArrayList<Integer> a = new ArrayList<Integer>();\n\t\tfor(int i = 0; i < n; ++i){\n\t\t\ta.add(in.nextInt());\n\t\t}\n\n\t\t// call solution and print the answer\n\t\tSystem.out.println(getAnswer(n, n1, n2, a));\n\t}\n}"
+  }
+]

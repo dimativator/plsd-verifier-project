@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "def tmins():\n  sh, sm = map(int, input().split(':'))\n  return 60 * sh + sm\n\nt = tmins() - tmins()\nif t < 0:\n  t += 60*24\n\nprint('%02d:%02d' % (t//60, t%60))\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  char c;\n  unsigned int t11, t12;\n  unsigned int t21, t22;\n  cin >> c;\n  t11 = (c - 48) * 10;\n  cin >> c;\n  t11 += c - 48;\n  cin >> c >> c;\n  t12 = (c - 48) * 10;\n  cin >> c;\n  t12 += c - 48;\n  cin >> c;\n  t21 = (c - 48) * 10;\n  cin >> c;\n  t21 += c - 48;\n  cin >> c >> c;\n  t22 = (c - 48) * 10;\n  cin >> c;\n  t22 += c - 48;\n  int t31, t32;\n  t31 = t11 - t21;\n  t32 = t12 - t22;\n  if (t32 < 0) {\n    t32 = 60 + t32;\n    t31--;\n  }\n  if (t31 < 0) t31 = 24 + t31;\n  if (t31 < 10) cout << \"0\";\n  cout << t31 << \":\";\n  if (t32 < 10) cout << \"0\";\n  cout << t32;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\n\npublic class Main {\n\n    public static String Sleep(int hh, int mm, int hh2, int mm2) {\n        int hhr, mmr = 0;\n\n        if (hh == 0)\n            hh = 24;\n\n        mmr = mm - mm2;\n\n        hhr = hh - hh2;\n\n        if (mmr < 0) {\n            mmr = 60 + mmr;\n            hhr--;\n        }\n\n        if (hhr < 0)\n            hhr = 24 + hhr;\n\n        if (hhr == 24)\n            hhr = 0;\n\n        String res = (hhr == 24) ? \"00:\" : (hhr <= 9) ? \"0\" + hhr + \":\" : hhr\n                + \":\";\n\n        res += (mmr == 0) ? \"00\" : (mmr <= 9) ? \"0\" + mmr : mmr;\n\n        return res;\n\n    }\n\n    public static void main(String[] args) throws IOException {\n        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));\n        String[] test = bf.readLine().split(\":\");\n\n        int hh = Integer.parseInt(test[0]);\n        int mm = Integer.parseInt(test[1]);\n\n        String[] test2 = bf.readLine().split(\":\");\n\n        int hh2 = Integer.parseInt(test2[0]);\n        int mm2 = Integer.parseInt(test2[1]);\n\n        System.out.println(Sleep(hh, mm, hh2, mm2));\n\n    }\n}"
+  }
+]

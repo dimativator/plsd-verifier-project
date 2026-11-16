@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import math,itertools,fractions,heapq,collections,bisect,sys,queue,copy\n\nsys.setrecursionlimit(10**7)\ninf=10**20\nmod=10**9+7\ndd=[(-1,0),(0,1),(1,0),(0,-1)]\nddn=[(-1,0),(-1,1),(0,1),(1,1),(1,0),(1,-1),(0,-1),(-1,-1)]\n\ndef LI(): return [int(x) for x in sys.stdin.readline().split()]\n# def LF(): return [float(x) for x in sys.stdin.readline().split()]\ndef I(): return int(sys.stdin.readline())\ndef F(): return float(sys.stdin.readline())\ndef LS(): return sys.stdin.readline().split()\ndef S(): return input()\n\ndef main():\n  n,k,t=LI()\n  if t<=k:\n    return t\n\n  if n<t:\n    if n+k<t:\n      return 0\n    else:\n      return n+k-t\n\n  return k\n\n# main()\nprint(main())\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long int n, k, t;\n  cin >> n >> k >> t;\n  if (t <= k) {\n    cout << t;\n  } else {\n    if (t <= n) {\n      cout << k;\n    } else if (t > n && t <= n + k) {\n      cout << k - (t % n);\n    } else {\n      cout << \"0\";\n    }\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\nimport java.math.*;\npublic final class Solution \n{\n    public static void main(String[] args)\n    {\n    \t Reader input = new Reader();\n         PrintWriter out = new PrintWriter(new BufferedOutputStream(System.out));\n         int n = input.nextInt(), k = input.nextInt(), t = input.nextInt();\n         if(t <= k)\n        \t out.println(t);\n         else if(t <= n)\n        \t out.println(k);\n         else\n        \t out.println(k - (t-n));\n\t\t out.close();\t\t \n    }  \n    public static class Reader\n    {\n    \tBufferedReader br;\n    \tStringTokenizer st;\n    \tpublic Reader()\n    \t{\n    \t\tbr = new BufferedReader(new InputStreamReader(System.in));    \t\t\n    \t}\n    \tpublic String next()\n    \t{\n    \t\ttry\n    \t\t{\n        \t\tif(st == null || !st.hasMoreTokens())\n        \t\t\tst = new StringTokenizer(br.readLine());\n    \t\t}\n    \t\tcatch(IOException ex)\n    \t\t{\n    \t\t\tex.printStackTrace();\n    \t\t\tSystem.exit(1);\n    \t\t}    \t\t\n    \t\treturn st.nextToken();\n    \t}\n    \tpublic int nextInt()\n    \t{\n    \t\treturn Integer.parseInt(next());\n    \t}\n    \tpublic double nextDouble()\n    \t{\n    \t\treturn Double.parseDouble(next());\n    \t}\n    \tpublic long nextLong()\n    \t{\n    \t\treturn Long.parseLong(next());\n    \t}\n    \tpublic String nextLine()\n    \t{\n    \t\ttry\n    \t\t{\n    \t\t\treturn br.readLine();\n    \t\t}\n    \t\tcatch(IOException ex)\n    \t\t{\n    \t\t\tex.printStackTrace();\n    \t\t\tSystem.exit(1);\n    \t\t}\n    \t\treturn \"\";\n    \t}\n    }\n}"
+  }
+]

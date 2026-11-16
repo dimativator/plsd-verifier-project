@@ -1,0 +1,25 @@
+{
+  "task_id": "HumanEval_kotlin/144",
+  "prompt": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * You are given a positive integer n. You have to create an integer array a of length n.\n *     For each i (1 ≤ i ≤ n), the value of a[i] = i * i - i + 1.\n *     Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, \n * and a[i] + a[j] + a[k] is a multiple of 3.\n\n * Example :\n *     Input: n = 5\n *     Output: 1\n *     Explanation: \n *     a = [1, 3, 7, 13, 21]\n *     The only valid triple is (1, 7, 13).\n *\n */\nfun getMaxTriples(n : Int) : Int {\n",
+  "entry_point": "getMaxTriples",
+  "test": "fun main() {\n    var arg00 : Int = 5\n    var x0 : Int = getMaxTriples(arg00);\n    var v0 : Int = 1;\n    if (x0 != v0) {\n        throw Exception(\"Exception -- test case 0 did not pass. x0 = \" + x0)\n    }\n\n    var arg10 : Int = 6\n    var x1 : Int = getMaxTriples(arg10);\n    var v1 : Int = 4;\n    if (x1 != v1) {\n        throw Exception(\"Exception -- test case 1 did not pass. x1 = \" + x1)\n    }\n\n    var arg20 : Int = 10\n    var x2 : Int = getMaxTriples(arg20);\n    var v2 : Int = 36;\n    if (x2 != v2) {\n        throw Exception(\"Exception -- test case 2 did not pass. x2 = \" + x2)\n    }\n\n    var arg30 : Int = 100\n    var x3 : Int = getMaxTriples(arg30);\n    var v3 : Int = 53361;\n    if (x3 != v3) {\n        throw Exception(\"Exception -- test case 3 did not pass. x3 = \" + x3)\n    }\n\n\n}\n\n",
+  "description": "/**\n * You are an expert Kotlin programmer, and here is your task.\n * * You are given a positive integer n. You have to create an integer array a of length n.\n *     For each i (1 ≤ i ≤ n), the value of a[i] = i * i - i + 1.\n *     Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, \n * and a[i] + a[j] + a[k] is a multiple of 3.\n\n * Example :\n *     Input: n = 5\n *     Output: 1\n *     Explanation: \n *     a = [1, 3, 7, 13, 21]\n *     The only valid triple is (1, 7, 13).\n *\n */\n",
+  "language": "kotlin",
+  "canonical_solution": [
+    "fun getMaxTriples(n : Int) : Int {",
+    "    val counts = IntArray(3) { 0 }",
+    "    for (i in 1..n) {",
+    "        val value = (i * i - i + 1) % 3",
+    "        counts[value]++",
+    "    }",
+    "    val triples = (counts[0] * (counts[0] - 1) * (counts[0] - 2)) / 6 +",
+    "            (counts[1] * (counts[1] - 1) * (counts[1] - 2)) / 6 +",
+    "            (counts[2] * (counts[2] - 1) * (counts[2] - 2)) / 6 +",
+    "            counts[0] * counts[1] * counts[2]",
+    "",
+    "    return triples",
+    "}",
+    "",
+    ""
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import itertools as it\n\nn = int(input())\nres = None\n\nfor i in range(4):\n    a = list(map(int, input().split()))\n    for v in list(it.product(a[:2], a[2:])):\n        if sum(v) <= n:\n            res = [i + 1, v[0], n - v[0]]\n            break\n    if res is not None:\n        break\n\nprint(-1 if res is None else ' '.join(map(str, res)))\n\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nint main() {\n  int map[5][5], sum[5][5], flag = 0, mini;\n  int i, j, n;\n  scanf(\"%d\", &n);\n  for (i = 1; i <= 4; i++)\n    for (j = 1; j <= 4; j++) scanf(\"%d\", &map[i][j]);\n  for (i = 1; i <= 4; i++) {\n    sum[i][1] = map[i][1] + map[i][3];\n    sum[i][2] = map[i][1] + map[i][4];\n    sum[i][3] = map[i][2] + map[i][3];\n    sum[i][4] = map[i][2] + map[i][4];\n  }\n  for (i = 1; i <= 4; i++) {\n    for (j = 1; j <= 4; j++)\n      if (sum[i][j] <= n) {\n        flag = 1;\n        break;\n      }\n    if (flag) break;\n  }\n  if (flag == 0) {\n    printf(\"-1\\n\");\n    return 0;\n  }\n  if (map[i][1] >= map[i][2])\n    mini = map[i][2];\n  else\n    mini = map[i][1];\n  printf(\"%d %d %d\\n\", i, mini, n - mini);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Main {\n  public static void main(String[] args) {\n    Scanner s = new Scanner(System.in);\n    int n = s.nextInt();\n    boolean found = false;\n    for (int j = 1; j < 5; ++j) {\n      int a = s.nextInt();\n      int b = s.nextInt();\n      int c = s.nextInt();\n      int d = s.nextInt();\n      for (int g1 = Math.min(a, b); g1 <= n; g1++) {\n        int g2 = n - g1;\n        if (g2 >= Math.min(c, d)) { System.out.println(j + \" \" + g1 + \" \" + g2); found = true; break; }\n      }\n      if (found) break;\n    }\n    if (!found) System.out.println(-1);\n  }\n}\n"
+  }
+]

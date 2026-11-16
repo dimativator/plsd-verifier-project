@@ -1,0 +1,10 @@
+{
+  "input": [
+    "3\nSVO\nSVO-&gt;HKT\nHKT-&gt;SVO\nSVO-&gt;RAP\n",
+    "4\nSVO\nSVO-&gt;CDG\nLHR-&gt;SVO\nSVO-&gt;LHR\nCDG-&gt;SVO\n"
+  ],
+  "output": [
+    "contest\n",
+    "home\n"
+  ]
+}

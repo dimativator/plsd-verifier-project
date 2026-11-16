@@ -1,0 +1,36 @@
+{
+  "name": "47_E. Cannon",
+  "description": "Bertown is under siege! The attackers have blocked all the ways out and their cannon is bombarding the city. Fortunately, Berland intelligence managed to intercept the enemies' shooting plan. Let's introduce the Cartesian system of coordinates, the origin of which coincides with the cannon's position, the Ox axis is directed rightwards in the city's direction, the Oy axis is directed upwards (to the sky). The cannon will make n more shots. The cannon balls' initial speeds are the same in all the shots and are equal to V, so that every shot is characterized by only one number alphai which represents the angle at which the cannon fires. Due to the cannon's technical peculiarities this angle does not exceed 45 angles (π / 4). We disregard the cannon sizes and consider the firing made from the point (0, 0).\n\nThe balls fly according to the known physical laws of a body thrown towards the horizon at an angle: \n\nvx(t) = V·cos(alpha) vy(t) = V·sin(alpha) – g·t x(t) = V·cos(alpha)·t y(t) = V·sin(alpha)·t – g·t2 / 2\n\nThink of the acceleration of gravity g as equal to 9.8.\n\nBertown defends m walls. The i-th wall is represented as a vertical segment (xi, 0) - (xi, yi). When a ball hits a wall, it gets stuck in it and doesn't fly on. If a ball doesn't hit any wall it falls on the ground (y = 0) and stops. If the ball exactly hits the point (xi, yi), it is considered stuck. \n\nYour task is to find for each ball the coordinates of the point where it will be located in the end.\n\nInput\n\nThe first line contains integers n and V (1 ≤ n ≤ 104, 1 ≤ V ≤ 1000) which represent the number of shots and the initial speed of every ball. The second line contains n space-separated real numbers alphai (0 < alphai < π / 4) which represent the angles in radians at which the cannon will fire. The third line contains integer m (1 ≤ m ≤ 105) which represents the number of walls. Then follow m lines, each containing two real numbers xi and yi (1 ≤ xi ≤ 1000, 0 ≤ yi ≤ 1000) which represent the wall’s coordinates. All the real numbers have no more than 4 decimal digits. The walls may partially overlap or even coincide.\n\nOutput\n\nPrint n lines containing two real numbers each — calculate for every ball the coordinates of its landing point. Your answer should have the relative or absolute error less than 10 - 4.\n\nExamples\n\nInput\n\n2 10\n0.7853\n0.3\n3\n5.0 5.0\n4.0 2.4\n6.0 1.9\n\n\nOutput\n\n5.000000000 2.549499369\n4.000000000 0.378324889\n\n\nInput\n\n2 10\n0.7853\n0.3\n2\n4.0 2.4\n6.0 1.9\n\n\nOutput\n\n10.204081436 0.000000000\n4.000000000 0.378324889",
+  "source": 2,
+  "difficulty": 11,
+  "cf_rating": 2200,
+  "cf_contest_id": 47,
+  "cf_index": "E",
+  "cf_tags": [
+    "data structures",
+    "geometry",
+    "sortings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 3,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00007-of-00039-05785de21e8b8429.parquet",
+  "source_row": 152,
+  "task_id": "codecontests/cf-47-E",
+  "rating_band": "2000-2399",
+  "source_difficulty": "E",
+  "url": "https://codeforces.com/problemset/problem/47/E",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "input": [
+    "123342\n3324212\n",
+    "cbaaaa\naaaabc\n",
+    "Die Polizei untersucht eine Straftat im IT-Bereich.\nuntersucht eine Straftat.hciereB-TI mi  ieziloP eiD\n"
+  ],
+  "output": [
+    "-1 -1\n",
+    "4 5\n",
+    "11 36\n"
+  ]
+}

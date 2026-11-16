@@ -1,0 +1,35 @@
+{
+  "name": "909_B. Segments",
+  "description": "You are given an integer N. Consider all possible segments on the coordinate axis with endpoints at integer points with coordinates between 0 and N, inclusive; there will be <image> of them.\n\nYou want to draw these segments in several layers so that in each layer the segments don't overlap (they might touch at the endpoints though). You can not move the segments to a different location on the coordinate axis. \n\nFind the minimal number of layers you have to use for the given N.\n\nInput\n\nThe only input line contains a single integer N (1 ≤ N ≤ 100).\n\nOutput\n\nOutput a single integer - the minimal number of layers required to draw the segments for the given N.\n\nExamples\n\nInput\n\n2\n\n\nOutput\n\n2\n\n\nInput\n\n3\n\n\nOutput\n\n4\n\n\nInput\n\n4\n\n\nOutput\n\n6\n\nNote\n\nAs an example, here are the segments and their optimal arrangement into layers for N = 4.\n\n<image>",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 1300,
+  "cf_contest_id": 909,
+  "cf_index": "B",
+  "cf_tags": [
+    "constructive algorithms",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00006-of-00039-65184bb9f7d61fde.parquet",
+  "source_row": 97,
+  "task_id": "codecontests/cf-909-B",
+  "rating_band": "1200-1599",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/909/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

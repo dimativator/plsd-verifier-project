@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a = int(input())\nb = int(input())\nc = int(input())\nd = int(input())\nif a == d:\n  if a > 0 or c == 0:\n    print(1)\n  else:\n    print(0)\nelse:\n  print(0)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nconst int MAX = (const int)(1e5 + 11);\nusing namespace std;\nstatic void solve(std::int32_t test) {\n  int c1, c2, c3, c4;\n  cin >> c1 >> c2 >> c3 >> c4;\n  if (c1 == 0 && c4 == 0) {\n    cout << (c3 == 0);\n  } else {\n    cout << (c1 == c4);\n  }\n}\nint main() {\n  ios_base::sync_with_stdio(false);\n  cout << setprecision(12) << fixed;\n  solve(0);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\npublic class Solution {\n\n\tpublic static void main(String[] sachin32) {\n\t\t\n\t\tScanner in = new Scanner(System.in);\n\t\t\n\t\tint a = in.nextInt();\n\t\tint b = in.nextInt();\n\t\tint c = in.nextInt();\n\t\tint d = in.nextInt();\n\t\t\n\t\t\n\t\tif(a!=d || (a==0&&c!=0)) System.out.println(0);\n\t\telse System.out.println(1);\n\t}\n\n}\n\n"
+  }
+]

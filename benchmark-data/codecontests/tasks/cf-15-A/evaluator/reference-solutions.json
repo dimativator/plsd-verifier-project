@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,t=list(map(int,input().split()))\namount=2\nhouses=[]\nfor i in range(n):\n    c,l=list(map(int,input().split()))\n    l=l/2\n    start,end=c-l,c+l\n    houses.append([start,end])\n\nhouses.sort(key=lambda x:x[0])\nprev_end=houses[0][0]\nfor start,end in houses:\n    gap=start-prev_end\n    if gap>t:\n        amount+=2\n    elif gap==t:\n        amount+=1\n    prev_end=end\n    \n    \nprint(amount)\n    \n    \n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, t;\n  cin >> n >> t;\n  map<double, int> m;\n  for (int i = 0; i < n; i++) {\n    double xi, ai;\n    cin >> xi >> ai;\n    m[xi - ai / 2.0]++;\n    m[xi + ai / 2.0]--;\n  }\n  vector<pair<double, int> > v;\n  int res = 2;\n  for (__typeof(m.begin()) it = m.begin(); it != m.end(); ++it) {\n    v.push_back(make_pair(it->first, it->second));\n  }\n  int ct = 0;\n  for (int i = 0; i < (int)v.size() - 1; i++) {\n    ct += v[i].second;\n    if (!ct) {\n      if (v[i + 1].first - v[i].first - 1e-10 > t)\n        res += 2;\n      else if (abs(v[i + 1].first - v[i].first - t) <= 1e-10)\n        res += 1;\n    }\n  }\n  cout << res << endl;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.Collections;\n\n\n\npublic class Solution {\n    public static void main(String[] args)  {\n       \tScanner scan = new Scanner(System.in);\n\t\tint n = scan.nextInt();\n\t\tint t = scan.nextInt();\n\t\tint ans = 0;\n\t\tArrayList<Integer> list = new ArrayList();\n\t\tfor (int i = 0; i < n; i++){\n\t\t\tint center = scan.nextInt()*2;\n\t\t\tint storona = scan.nextInt();\n\t\t\tlist.add(center-storona);\n\t\t\tlist.add(center+storona);\n\t\t}\n\t\tCollections.sort(list);\n\t\tfor (int i = 1; i < n*2 - 1 ; i+=2){\n\t\t\tif (list.get(i+1)-list.get(i)>t*2){\n\t\t\t\tans+=2;\n\t\t\t}\n\t\t\telse if (list.get(i+1)-list.get(i)==t*2){\n\t\t\t   ans+=1;\n\t\t\t}\n\t\t\t\n\t\t}\n\t\tSystem.out.println(ans+2);\n    }\n}"
+  }
+]

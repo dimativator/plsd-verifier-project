@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\na = list(map(int, input().split()))\n\nmaxLocate = a.index(n)\nminLocate = a.index(1)\n\ndistanceMax = len(a) - 1 - a.index(n)\ndistanceMin = len(a) - 1 - a.index(1)\n\nprint(max(maxLocate, minLocate, distanceMax, distanceMin))\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int arr[101], n, imin = 0, imax = 0;\n  cin >> n;\n  for (int i = 1; i <= n; i++) {\n    cin >> arr[i];\n    if (arr[i] == 1)\n      imin = i;\n    else if (arr[i] == n)\n      imax = i;\n  }\n  int a;\n  if (imax < imin) swap(imax, imin);\n  int rsp = abs(imin - imax) + max(n - imax, imin - 1);\n  cout << rsp;\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class Main{\n    public static void main(String args[]){\n        Scanner sc = new Scanner(System.in);\n        int n= sc.nextInt();\n        int[] arr = new int[n];\n        int max=0,min=0,start=0,end=0,temp=0,tmp=0;\n        \n        for(int i=0;i<n;i++){\n            arr[i]=sc.nextInt();\n            if(arr[i]==1){\n                min=i;\n            } else if(arr[i]==n){\n                max=i;\n            }\n        }\n        \n        \n        if(min>max){\n            start=min;\n            end=n-1-max;\n        } else {\n            start=max;\n            end=n-1-min;\n        }\n        \n        if(start>end){\n            temp=start;\n        } else{\n            temp=end;\n        }\n        System.out.print(temp);\n    }\n}"
+  }
+]

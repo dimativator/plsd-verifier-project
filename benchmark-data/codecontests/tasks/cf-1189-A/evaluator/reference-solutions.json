@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n = int(input())\ns = str(input())\nc = 0\nfor i in range(len(s)):\n    if s[i]=='0':\n        c+=1\n    else:\n        c-=1\n\nif c!=0:\n    print(\"1\"+ \"\\n\" + s)\nelse:\n    print(\"2\" + \"\\n\" + s[0:-1],s[-1])"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  string s;\n  int n;\n  cin >> n >> s;\n  int cnt0 = 0, cnt1 = 0;\n  for (int i = 0; i < n; i++) {\n    if (s[i] == '0') {\n      cnt0++;\n    } else\n      cnt1++;\n  }\n  if (cnt0 != cnt1) {\n    cout << \"1\" << endl;\n    cout << s << endl;\n  } else {\n    cout << \"2\" << endl;\n    cout << s[0] << \" \" << s.substr(1, n);\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "/*\n * To change this license header, choose License Headers in Project Properties.\n * To change this template file, choose Tools | Templates\n * and open the template in the editor.\n */\n/**\n *\n * @author BATCH1\n */\nimport java.util.*;\npublic class ques1 {\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int c= 0;\n        String s = sc.next();\n        for(int i =0;i<n;i++)\n            if(s.charAt(i)=='1')\n                c++;\n        if(c*2!=n){\n            System.out.println(1);\n            System.out.println(s);\n        }\n        else{\n            System.out.println(2);\n            System.out.println(s.substring(0,1) + \" \" + s.substring(1));\n        }\n    }\n}\n"
+  }
+]

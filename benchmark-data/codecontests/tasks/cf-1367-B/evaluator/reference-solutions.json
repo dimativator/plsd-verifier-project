@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "# -*- coding: utf-8 -*-\n\"\"\"\nCreated on Thu Jun 25 19:21:12 2020\n\n@author: user\n\"\"\"\ndef solve(n,l):\n    c1=0\n    c2=0\n    for i in range(n):\n        if(i%2==0 and l[i]%2!=0):\n            c1+=1\n        elif(i%2!=0 and l[i]%2==0):\n            c2+=1\n    if(c1==c2):\n        print(c1)\n    else:\n        print(-1)\n            \nt=int(input())\nfor i in range(t):\n    n=int(input())\n    l=list(map(int,input().split()))\n    solve(n,l)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nusing ill = long long;\nvoid solve() {\n  int tct;\n  cin >> tct;\n  for (int tcc = 1; tcc <= tct; ++tcc) {\n    int n;\n    cin >> n;\n    int cnt0 = 0, cntNM0 = 0;\n    vector<int> a(n, 0);\n    for (int i = 0; i <= n - 1; ++i) {\n      cin >> a[i];\n      a[i] %= 2;\n      if (a[i] == 0) {\n        ++cnt0;\n        if (i % 2 == 1) ++cntNM0;\n      }\n    }\n    if (cnt0 != n / 2 + n % 2) {\n      cout << \"-1\\n\";\n    } else {\n      cout << cntNM0 << '\\n';\n    }\n  }\n}\nint main() {\n  ios_base::sync_with_stdio(false);\n  std::cin.tie(NULL);\n  std::cout.tie(NULL);\n  solve();\n  cout.flush();\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class Problem {\n\tpublic static void main(String[] args) {\n\t\tScanner sc=new Scanner(System.in);\n        int t=sc.nextInt();\n        while(t-->0) {\n        \tint n=sc.nextInt();\n        \tint a[]=new int[n];\n        \tfor(int i=0;i<n;i++) {\n        \t\ta[i]=sc.nextInt();\n        \t}\n        \tint even=0,odd=0,index=0;\n        \tint wrongEvens=0;\n        \tfor(int i=0;i<n;i++) {\n        \t\tif(a[i]%2==0) {\n        \t\t\teven++;\n        \t\t}\n        \t\telse {\n        \t\t\todd++;\n        \t\t\tif(i%2==0) {\n        \t\t\t\twrongEvens++;\n        \t\t\t}\n        \t\t}\n        \t\tindex++;\n        \t}\n        \tint evenSpots=(n+1)/2,oddSpots=n/2;\n        \tif(evenSpots!=even||oddSpots!=odd) {\n        \t\tSystem.out.println(-1);\n        \t}\n        \telse {\n        \t\tSystem.out.println(wrongEvens);\n        \t}\n        }\n\t\t}\n\t}\n\n"
+  }
+]

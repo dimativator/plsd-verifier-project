@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import re\n\nI = input\n\ns, first, second = I(), I(), I()\n\nforward = re.fullmatch('\\w*' + first + '\\w*' + second + '\\w*', s)\nbackward = re.fullmatch('\\w*' + first + '\\w*' + second + '\\w*', s[::-1])\n\nif forward:\n    print('both' if backward else 'forward')\nelse:\n    print('backward' if backward else 'fantasy')"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nstring s, a, b;\nstring ans[2][2] = {{\"fantasy\", \"backward\"}, {\"forward\", \"both\"}};\nbool check() {\n  int pos = s.find(a);\n  if (pos == string::npos) return false;\n  pos = s.find(b, pos + a.length());\n  return pos != string::npos;\n}\nint main() {\n  ios::sync_with_stdio(false);\n  cin.tie(0);\n  cin >> s >> a >> b;\n  bool b1 = check();\n  s = string(s.rbegin(), s.rend());\n  bool b2 = check();\n  cout << ans[b1][b2] << endl;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class Problem8a{\n\t\n\tpublic static String reverse(String str){\n\t\tString output = \"\";\n\t\tfor(int i = str.length() -1; i >= 0; i--){\n\t\t\toutput += str.charAt(i);\n\t\t}\n\n\t\treturn output;\n\t}\n\n\tpublic static boolean check(String real, String first, String second){\n\t\tint seq1 = real.indexOf(first);\n\t\tif(seq1 == -1)\n\t\t\treturn false;\n\t\tString afterSleep = real.substring(seq1 + first.length(), real.length());\n\t\tif(afterSleep.contains(second)){\n\t\t\treturn true;\n\t\t}\n\t\telse\n\t\t\treturn false;\n\t}\n\n\tpublic static void main(String[] args) {\n\t\tScanner sc = new Scanner(System.in);\n\t\tString real = sc.nextLine();\n\t\tString first = sc.nextLine();\n\t\tString second = sc.nextLine();\n\t\tString output = \"\";\n\t\t\n\t\tboolean forward = check(real, first, second);\n\t\tboolean backward =check(real, reverse(second), reverse(first));\n\t\tif(forward && backward)\n\t\t\tSystem.out.println(\"both\");\n\t\telse if(forward)\n\t\t\tSystem.out.println(\"forward\");\n\t\telse if(backward)\n\t\t\tSystem.out.println(\"backward\");\n\t\telse\n\t\t\tSystem.out.println(\"fantasy\");\n\t}\n}\n"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "input": [
+    "6 4\nYJSNPI\n",
+    "15 10\nDZFDFZDFDDDDDDF\n"
+  ],
+  "output": [
+    "4\n",
+    "82\n"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "10_D. LCIS",
+  "description": "This problem differs from one which was on the online contest.\n\nThe sequence a1, a2, ..., an is called increasing, if ai < ai + 1 for i < n.\n\nThe sequence s1, s2, ..., sk is called the subsequence of the sequence a1, a2, ..., an, if there exist such a set of indexes 1 ≤ i1 < i2 < ... < ik ≤ n that aij = sj. In other words, the sequence s can be derived from the sequence a by crossing out some elements.\n\nYou are given two sequences of integer numbers. You are to find their longest common increasing subsequence, i.e. an increasing sequence of maximum length that is the subsequence of both sequences.\n\nInput\n\nThe first line contains an integer n (1 ≤ n ≤ 500) — the length of the first sequence. The second line contains n space-separated integers from the range [0, 109] — elements of the first sequence. The third line contains an integer m (1 ≤ m ≤ 500) — the length of the second sequence. The fourth line contains m space-separated integers from the range [0, 109] — elements of the second sequence.\n\nOutput\n\nIn the first line output k — the length of the longest common increasing subsequence. In the second line output the subsequence itself. Separate the elements with a space. If there are several solutions, output any.\n\nExamples\n\nInput\n\n7\n2 3 1 6 5 4 6\n4\n1 3 5 6\n\n\nOutput\n\n3\n3 5 6 \n\n\nInput\n\n5\n1 2 0 2 1\n3\n1 0 1\n\n\nOutput\n\n2\n0 1 ",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 2800,
+  "cf_contest_id": 10,
+  "cf_index": "D",
+  "cf_tags": [
+    "dp"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00010-of-00039-6de28ba20654f69b.parquet",
+  "source_row": 133,
+  "task_id": "codecontests/cf-10-D",
+  "rating_band": "2400+",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/10/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

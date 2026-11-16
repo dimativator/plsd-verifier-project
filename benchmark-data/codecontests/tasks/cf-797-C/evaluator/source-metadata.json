@@ -1,0 +1,36 @@
+{
+  "name": "797_C. Minimal string",
+  "description": "Petya recieved a gift of a string s with length up to 105 characters for his birthday. He took two more empty strings t and u and decided to play a game. This game has two possible moves:\n\n  * Extract the first character of s and append t with this character. \n  * Extract the last character of t and append u with this character. \n\n\n\nPetya wants to get strings s and t empty and string u lexicographically minimal.\n\nYou should write a program that will help Petya win the game.\n\nInput\n\nFirst line contains non-empty string s (1 ≤ |s| ≤ 105), consisting of lowercase English letters.\n\nOutput\n\nPrint resulting string u.\n\nExamples\n\nInput\n\ncab\n\n\nOutput\n\nabc\n\n\nInput\n\nacdb\n\n\nOutput\n\nabdc",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 1700,
+  "cf_contest_id": 797,
+  "cf_index": "C",
+  "cf_tags": [
+    "data structures",
+    "greedy",
+    "strings"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00013-of-00039-30b8c3829ee3b962.parquet",
+  "source_row": 197,
+  "task_id": "codecontests/cf-797-C",
+  "rating_band": "1600-1999",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/797/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

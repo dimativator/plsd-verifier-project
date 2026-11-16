@@ -1,0 +1,35 @@
+{
+  "name": "265_D. Good Sequences",
+  "description": "Squirrel Liss is interested in sequences. She also has preferences of integers. She thinks n integers a1, a2, ..., an are good.\n\nNow she is interested in good sequences. A sequence x1, x2, ..., xk is called good if it satisfies the following three conditions:\n\n  * The sequence is strictly increasing, i.e. xi < xi + 1 for each i (1 ≤ i ≤ k - 1). \n  * No two adjacent elements are coprime, i.e. gcd(xi, xi + 1) > 1 for each i (1 ≤ i ≤ k - 1) (where gcd(p, q) denotes the greatest common divisor of the integers p and q). \n  * All elements of the sequence are good integers. \n\n\n\nFind the length of the longest good sequence.\n\nInput\n\nThe input consists of two lines. The first line contains a single integer n (1 ≤ n ≤ 105) — the number of good integers. The second line contains a single-space separated list of good integers a1, a2, ..., an in strictly increasing order (1 ≤ ai ≤ 105; ai < ai + 1).\n\nOutput\n\nPrint a single integer — the length of the longest good sequence.\n\nExamples\n\nInput\n\n5\n2 3 4 6 9\n\n\nOutput\n\n4\n\n\nInput\n\n9\n1 2 3 5 6 7 8 9 10\n\n\nOutput\n\n4\n\nNote\n\nIn the first example, the following sequences are examples of good sequences: [2; 4; 6; 9], [2; 4; 6], [3; 9], [6]. The length of the longest good sequence is 4.",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 1500,
+  "cf_contest_id": 265,
+  "cf_index": "D",
+  "cf_tags": [
+    "dp",
+    "number theory"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00006-of-00039-65184bb9f7d61fde.parquet",
+  "source_row": 173,
+  "task_id": "codecontests/cf-265-D",
+  "rating_band": "1200-1599",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/265/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

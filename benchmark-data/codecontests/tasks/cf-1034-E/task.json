@@ -1,0 +1,35 @@
+{
+  "id": "cf-1034-E",
+  "dataset": "deepmind/code_contests",
+  "source_id": "codecontests/cf-1034-E",
+  "url": "https://codeforces.com/problemset/problem/1034/E",
+  "source_split": "train",
+  "submission_format": "program",
+  "target_language": "Kotlin",
+  "difficulty": 3200,
+  "rating_band": "2400+",
+  "tags": [
+    "bitmasks",
+    "dp",
+    "math"
+  ],
+  "public_test_count": 2,
+  "private_test_count": 4,
+  "generated_test_count": 20,
+  "held_out_public_input_overlap": 0,
+  "repeated_inputs_with_different_expected_outputs": 0,
+  "source_time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "source_memory_limit_bytes": 64000000,
+  "behavioral_validation": "not_run",
+  "kotlin_reference": "not_translated",
+  "verifier_validation": "not_run",
+  "output_checker": "requires_review",
+  "task_dir": "tasks/cf-1034-E",
+  "public_dir": "tasks/cf-1034-E/public",
+  "evaluator_dir": "tasks/cf-1034-E/evaluator",
+  "metadata_file": "tasks/cf-1034-E/task.json",
+  "evaluation_file": "tasks/cf-1034-E/evaluation.json"
+}

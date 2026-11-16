@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,k=map(int,input().split())\nl=list(map(int,input().split()))\nK=min(l)\nfor i in range(n):\n    if (l[i]-K)%k!=0:\n        print(-1)\n        exit()\nSum=sum(l)\nK=K*n\nSum=Sum-K\nprint(Sum//k)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long n, k;\n  cin >> n >> k;\n  long long arr[n];\n  long long mini = LONG_MAX;\n  int flag = 0;\n  for (int i = 0; i < n; i++) {\n    cin >> arr[i];\n  }\n  sort(arr, arr + n);\n  long long ans = 0;\n  for (int i = 1; i < n; i++) {\n    long long val = arr[i] - arr[0];\n    if (val % k != 0) {\n      cout << -1;\n      return 0;\n    }\n    ans += val / k;\n  }\n  cout << ans;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.PrintWriter;\n\nimport java.io.InputStreamReader;\n\nimport java.io.IOException;\n\nimport java.util.StringTokenizer;\n\npublic class Main {\n    \n    static Scanner in = new Scanner();\n    static PrintWriter out = new PrintWriter(System.out);\n    \n    public static void main(String[] args) throws IOException {\n        long t = 0, n = in.nextLong(), k = in.nextLong(), min = in.nextLong(), m = min % k;\n        for(int i = 1; i < n; i++) {\n            long a = in.nextLong();\n            if(a % k != m) {\n                out.print(-1);\n                out.close();\n                return;\n            }\n            if(a > min)\n                t += a - min;\n            else {\n                t += (min - a) * i;\n                min = a;\n            }\n        }\n        out.print(t / k);\n        out.close();\n    }\n    \n    static class Scanner {\n        BufferedReader br;\n        StringTokenizer st;\n        \n        public Scanner() {\n            br = new BufferedReader(new InputStreamReader(System.in));\n            st = new StringTokenizer(\"\");\n        }\n        \n        public String next() throws IOException {\n            if(!st.hasMoreTokens())\n                st = new StringTokenizer(br.readLine());\n            return st.nextToken();\n        }\n        \n        public String nextLine() throws IOException {\n            if(!st.hasMoreTokens())\n                st = new StringTokenizer(br.readLine());\n            String r = st.nextToken(\"\\n\");\n            st = new StringTokenizer(br.readLine(), \" \");\n            return r;\n        }\n        \n        public int nextInt() throws IOException {\n            return Integer.parseInt(next());\n        }\n        \n        public long nextLong() throws IOException {\n            return Long.parseLong(next());\n        }\n    }\n}"
+  }
+]

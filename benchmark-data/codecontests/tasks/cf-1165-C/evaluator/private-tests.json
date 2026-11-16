@@ -1,0 +1,28 @@
+{
+  "input": [
+    "4\nabbb\n",
+    "5\naaaad\n",
+    "5\nbdbbc\n",
+    "2\naa\n",
+    "7\nabccdda\n",
+    "1\na\n",
+    "3\naab\n",
+    "33\njffufkhhlvdkeagezgwsoikbyqxzqwkvc\n",
+    "100\nabbbbaabbbbababbbabababbbabaabaababaaababbbaaaabbabbbbbbbabbbbbbbbabbbaaababbaaabbabbaabaaabaaabbabb\n",
+    "3\nwqq\n",
+    "1\nf\n"
+  ],
+  "output": [
+    "2\nab\n",
+    "3\nad\n",
+    "1\nbdbc\n",
+    "2\n\n",
+    "1\nabcdda\n",
+    "1\n\n",
+    "1\nab\n",
+    "1\njffufkhlvdkeagezgwsoikbyqxzqwkvc\n",
+    "38\nabbaabbababababababaabababababbaabbabababaababbaabbabaabababba\n",
+    "1\nwq\n",
+    "1\n\n"
+  ]
+}

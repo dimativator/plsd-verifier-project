@@ -1,0 +1,36 @@
+{
+  "name": "653_G. Move by Prime",
+  "description": "Pussycat Sonya has an array consisting of n positive integers. There are 2n possible subsequences of the array. For each subsequence she counts the minimum number of operations to make all its elements equal. Each operation must be one of two:\n\n  * Choose some element of the subsequence and multiply it by some prime number. \n  * Choose some element of the subsequence and divide it by some prime number. The chosen element must be divisible by the chosen prime number. \n\n\n\nWhat is the sum of minimum number of operations for all 2n possible subsequences? Find and print this sum modulo 109 + 7.\n\nInput\n\nThe first line of the input contains a single integer n (1 ≤ n ≤ 300 000) — the size of the array.\n\nThe second line contains n integers t1, t2, ..., tn (1 ≤ ti ≤ 300 000) — elements of the array.\n\nOutput\n\nPrint the sum of minimum number of operation for all possible subsequences of the given array modulo 109 + 7.\n\nExamples\n\nInput\n\n3\n60 60 40\n\n\nOutput\n\n6\n\n\nInput\n\n4\n1 2 3 4\n\n\nOutput\n\n24\n\nNote\n\nIn the first sample, there are 8 possible subsequences: (60, 60, 40), (60, 60), (60, 40), (60, 40), (60), (60), (40) and () (empty subsequence).\n\nFor a subsequence (60, 60, 40) we can make all elements equal by two operations — divide 40 by 2 to get 20, and then multiply 20 by 3 to get 60. It's impossible to achieve the goal using less operations and thus we add 2 to the answer.\n\nThere are two subsequences equal to (60, 40) and for each of them the also need to make at least 2 operations.\n\nIn each of other subsequences all numbers are already equal, so we need 0 operations for each of them. The sum is equal to 2 + 2 + 2 = 6.",
+  "source": 2,
+  "difficulty": 13,
+  "cf_rating": 3100,
+  "cf_contest_id": 653,
+  "cf_index": "G",
+  "cf_tags": [
+    "combinatorics",
+    "math",
+    "number theory"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 5,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00007-of-00039-05785de21e8b8429.parquet",
+  "source_row": 56,
+  "task_id": "codecontests/cf-653-G",
+  "rating_band": "2400+",
+  "source_difficulty": "G",
+  "url": "https://codeforces.com/problemset/problem/653/G",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

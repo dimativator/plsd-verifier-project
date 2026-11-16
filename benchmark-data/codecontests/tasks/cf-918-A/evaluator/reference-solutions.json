@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\na,b,r=1,2,''\nfor i in range(1,n+1):\n  if i==a: r+='O';a,b=b,a+b\n  else: r+='o'\nprint(r)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\n#pragma GCC optimize(\"O3\")\nusing namespace std;\nint n;\nset<int> s;\ninline void init() {\n  int x = 1, y = 1;\n  s.insert(1);\n  for (int z = 2; z <= 1000; z = x + y) {\n    s.insert(z);\n    x = y, y = z;\n  }\n}\nint main() {\n  ios_base::sync_with_stdio(false);\n  init();\n  cin >> n;\n  for (int i = 1; i <= n; ++i)\n    if (s.find(i) != s.end())\n      cout << 'O';\n    else\n      cout << 'o';\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.OutputStream;\nimport java.io.IOException;\nimport java.io.InputStream;\nimport java.io.PrintWriter;\nimport java.util.HashSet;\nimport java.util.StringTokenizer;\nimport java.util.Set;\nimport java.io.IOException;\nimport java.io.BufferedReader;\nimport java.io.InputStreamReader;\nimport java.io.InputStream;\n\n/**\n * Built using CHelper plug-in\n * Actual solution is at the top\n */\npublic class Main {\n    public static void main(String[] args) {\n        InputStream inputStream = System.in;\n        OutputStream outputStream = System.out;\n        InputReader in = new InputReader(inputStream);\n        PrintWriter out = new PrintWriter(outputStream);\n        TaskA solver = new TaskA();\n        solver.solve(1, in, out);\n        out.close();\n    }\n\n    static class TaskA {\n        public void solve(int testNumber, InputReader in, PrintWriter out) {\n            Set<Integer> st = new HashSet<>();\n            st.add(1);\n            int[] ar = new int[50];\n            ar[0] = 1;\n            ar[1] = 1;\n            for (int i = 2; i < 50; i++) {\n                ar[i] = ar[i - 1] + ar[i - 2];\n                st.add(ar[i]);\n            }\n            int n = in.ni();\n            for (int i = 1; i <= n; ++i) {\n                if (st.contains(i)) out.print(\"O\");\n                else out.print(\"o\");\n            }\n        }\n\n    }\n\n    static class InputReader {\n        public BufferedReader reader;\n        public StringTokenizer tokenizer;\n\n        public InputReader(InputStream stream) {\n            reader = new BufferedReader(new InputStreamReader(stream), 32768);\n            tokenizer = null;\n        }\n\n        public String next() {\n            while (tokenizer == null || !tokenizer.hasMoreTokens()) {\n                try {\n                    tokenizer = new StringTokenizer(reader.readLine());\n                } catch (IOException e) {\n                    throw new RuntimeException(e);\n                }\n            }\n            return tokenizer.nextToken();\n        }\n\n        public int ni() {\n            return Integer.parseInt(next());\n        }\n\n    }\n}\n\n"
+  }
+]

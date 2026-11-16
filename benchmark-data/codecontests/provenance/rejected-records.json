@@ -1,0 +1,19 @@
+{
+  "codecontests/cf-178-E1": "no_public_tests",
+  "codecontests/cf-690-E1": "no_public_tests",
+  "codecontests/cf-802-E": "no_public_tests",
+  "codecontests/cf-1328-C": "no_held_out_tests",
+  "codecontests/cf-316-F3": "no_public_tests",
+  "codecontests/cf-987-E": "no_held_out_tests",
+  "codecontests/cf-802-F": "no_public_tests",
+  "codecontests/cf-690-E2": "no_public_tests",
+  "codecontests/cf-171-D": "no_public_tests",
+  "codecontests/cf-1184-C3": "no_public_tests",
+  "codecontests/cf-171-E": "no_public_tests",
+  "codecontests/cf-207-D9": "no_public_tests",
+  "codecontests/cf-409-B": "no_public_tests",
+  "codecontests/cf-952-D": "no_public_tests",
+  "codecontests/cf-241-G": "no_public_tests",
+  "codecontests/cf-958-A3": "no_public_tests",
+  "codecontests/cf-1060-H": "no_public_tests"
+}

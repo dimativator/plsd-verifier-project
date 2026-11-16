@@ -1,0 +1,17 @@
+{
+  "dataset": "JetBrains/Kotlin_HumanEval",
+  "task_count": 161,
+  "rating_bands": {},
+  "task_index": "tasks.jsonl",
+  "all_tasks": "groups/all.json",
+  "provenance": "provenance/source.json",
+  "state": "packaged_not_behaviorally_validated",
+  "paths_relative_to": "this dataset directory",
+  "held_out_policy": "Only public/ files may be copied into agent workspaces. All other files are evaluator-only.",
+  "test_counts": {
+    "public_test_count": 160,
+    "unexposed_test_count": 1066,
+    "private_test_count": 0,
+    "generated_test_count": 0
+  }
+}

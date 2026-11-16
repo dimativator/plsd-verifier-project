@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,m=map(int,input().split())\nl=[list(map(int,input().split())) for _ in range(n)]\nfor i in range(n):\n    if (i==0 or i==n-1) and sum(l[i]): print(2); break\n    elif l[i][0]==1 or l[i][-1]==1: print(2); break\nelse: print(4)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint solveA() {\n  int n, m;\n  cin >> n >> m;\n  vector<bool> mm(m);\n  vector<vector<bool> > tbl(n, mm);\n  for (int i = 0; i < n; i++) {\n    for (int j = 0; j < m; j++) {\n      int v;\n      cin >> v;\n      tbl[i][j] = v != 0;\n    }\n  }\n  bool corner = false;\n  if (tbl[0][0] || tbl[0][m - 1] || tbl[n - 1][0] || tbl[n - 1][m - 1])\n    corner = true;\n  if (corner) {\n    cout << 1 << endl;\n    return 0;\n  }\n  bool side = false;\n  for (int i = 0; i < m; i++) {\n    if (tbl[0][i] || tbl[n - 1][i]) side = true;\n  }\n  if (!side) {\n    for (int i = 0; i < n; i++) {\n      if (tbl[i][0] || tbl[i][m - 1]) side = true;\n    }\n  }\n  if (side) {\n    cout << 2 << endl;\n    return 0;\n  }\n  cout << 4 << endl;\n  return 0;\n}\nint main() { return solveA(); }\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\n\npublic class File {\n\tpublic static class FastScanner {\n\t\tBufferedReader br;\n\t\tStringTokenizer st;\n\t\t\n\t\tpublic FastScanner() {\n\t\t\tbr = new BufferedReader(new InputStreamReader(System.in));\n\t\t}\n\t\t\n\t\tString next() {\n\t\t\twhile (st == null || !st.hasMoreElements()) {\n\t\t\t\ttry {\n\t\t\t\t\tst = new StringTokenizer(br.readLine());\n\t\t\t\t}\n\t\t\t\tcatch (IOException e) {\n\t\t\t\t\te.printStackTrace();\n\t\t\t\t}\n\t\t\t}\n\t\t\t\n\t\t\treturn st.nextToken();\n\t\t}\n\t\t\n\t\tint nextInt() {\n\t\t\treturn Integer.parseInt(next());\n\t\t}\n\t\t\n\t\tlong nextLong() {\n\t\t\treturn Long.parseLong(next());\n\t\t}\n\t}\n\t\n\tpublic static void main(String[] args) {\n\t\tFastScanner sc = new FastScanner();\n\t\tPrintWriter out = new PrintWriter(new BufferedOutputStream(System.out));\n\t\t\n\t\t\n\t\t\n\t\tint m = sc.nextInt();\n\t\tint n = sc.nextInt();\n\t\t\n\t\tboolean onEdge = false;\n\t\t\n\t\tint[][] grid = new int[m][n];\n\t\tfor (int r = 0; r < m; r++) {\n\t\t\tfor (int c = 0; c < n; c++) {\n\t\t\t\tgrid[r][c] = sc.nextInt();\n\t\t\t\t\n\t\t\t\tif (grid[r][c] == 1) {\n\t\t\t\t\tif (r == 0 || r == m-1 || c == 0 || c == n-1) {\n\t\t\t\t\t\tonEdge = true;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t\n\t\tif (onEdge) {\n\t\t\tout.println(2);\n\t\t}\n\t\telse {\n\t\t\tout.println(4);\n\t\t}\n\t\t\n\t\tout.close();\n\t}\t\t\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+  }
+]

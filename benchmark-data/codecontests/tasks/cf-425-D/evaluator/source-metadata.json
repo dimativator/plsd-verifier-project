@@ -1,0 +1,36 @@
+{
+  "name": "425_D. Sereja and Squares",
+  "description": "Sereja has painted n distinct points on the plane. The coordinates of each point are integers. Now he is wondering: how many squares are there with sides parallel to the coordinate axes and with points painted in all its four vertexes? Help him, calculate this number.\n\nInput\n\nThe first line contains integer n (1 ≤ n ≤ 105). Each of the next n lines contains two integers xi, yi (0 ≤ xi, yi ≤ 105), the integers represent the coordinates of the i-th point. It is guaranteed that all the given points are distinct.\n\nOutput\n\nIn a single line print the required number of squares.\n\nExamples\n\nInput\n\n5\n0 0\n0 2\n2 0\n2 2\n1 1\n\n\nOutput\n\n1\n\n\nInput\n\n9\n0 0\n1 1\n2 2\n0 1\n1 0\n0 2\n2 0\n1 2\n2 1\n\n\nOutput\n\n5",
+  "source": 2,
+  "difficulty": 10,
+  "cf_rating": 2300,
+  "cf_contest_id": 425,
+  "cf_index": "D",
+  "cf_tags": [
+    "binary search",
+    "data structures",
+    "hashing"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 512000000,
+  "source_file": "data/train-00000-of-00039-e991a271dbfa9925.parquet",
+  "source_row": 42,
+  "task_id": "codecontests/cf-425-D",
+  "rating_band": "2000-2399",
+  "source_difficulty": "D",
+  "url": "https://codeforces.com/problemset/problem/425/D",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

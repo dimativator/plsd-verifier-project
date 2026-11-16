@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n, p = map(int, input().split())\n\nfor i in range(n):\n    arr = []\n    for j in range(n):\n        arr.append(\"0\")\n    arr[i] = str(p)\n    answer = \" \".join(arr)\n    print(answer)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, k, l;\n  cin >> n >> k;\n  for (int i = 0; i < n; i++) {\n    for (int j = 0; j < n; j++)\n      if (i == j)\n        cout << k << \" \";\n      else\n        cout << 0 << \" \";\n    cout << endl;\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.BufferedReader;\nimport java.io.OutputStream;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.io.PrintWriter;\nimport java.util.StringTokenizer;\nimport java.io.InputStream;\n\n/**\n * Built using CHelper plug-in\n * Actual solution is at the top\n */\npublic class Main {\n\tpublic static void main(String[] args) {\n\t\tInputStream inputStream = System.in;\n\t\tOutputStream outputStream = System.out;\n\t\tInputReader in = new InputReader(inputStream);\n\t\tPrintWriter out = new PrintWriter(outputStream);\n\t\tTaskA solver = new TaskA();\n\t\tsolver.solve(1, in, out);\n\t\tout.close();\n\t}\n}\n\nclass TaskA {\n    public void solve(int testNumber, InputReader in, PrintWriter out) {\n        int n=in.nextInt();\n        int k=in.nextInt();\n        for(int i=0;i<n;i++){\n            for(int j=0;j<n;j++){\n                String space=\" \";\n                if(j==n-1)space=\"\";\n                if(i==j){\n                    out.print(k+space);\n                }\n                else{\n                    out.print(\"0\"+space);\n                }\n            }\n            out.println();\n        }\n    }\n}\n\nclass InputReader {\n    private BufferedReader br;\n    private StringTokenizer st;\n    public InputReader(InputStream in) {\n        br=new BufferedReader(new InputStreamReader(in));\n        try {\n            st=new StringTokenizer(br.readLine());\n        } catch (IOException ignored) {\n\n        }\n    }\n\n    public int nextInt(){\n        return Integer.parseInt(st.nextToken());\n    }\n\n\n\n}\n"
+  }
+]

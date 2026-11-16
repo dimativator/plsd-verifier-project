@@ -1,0 +1,40 @@
+{
+  "input": [
+    "2\nir\n",
+    "60\nwwwwwxwwwwwwfhwwhwwwwwwawwwwwwwwwwwwwnwwwwwwwwwwwwwwwwwwwwww\n",
+    "90\nmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm\n",
+    "3\nilj\n",
+    "97\nqnqrmdhmbubaijtwsecbidqouhlecladwgwcuxbigckrfzasnbfbslukoayhcgquuacygakhxoubibxtqkpyyhzjipylujgrc\n",
+    "99\nqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq\n",
+    "100\noooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo\n",
+    "64\nhnlzzhrvqnldswxfsrowfhmyzbxtyoxhogudasgywxycyhzgiseerbislcncvnwy\n",
+    "60\nfnebsopcvmlaoecpzmakqigyuutueuozjxutlwwiochekmhjgwxsgfbcrpqj\n",
+    "6\nkrdych\n",
+    "97\nfwffffffffffffffffffffffffrffffffffffffffzfffffffffffffffftfcfffffffqffffffffffffffffffffffyfffff\n",
+    "100\nedykhvzcntljuuoqghptioetqnfllwekzohiuaxelgecabvsbibgqodqxvyfkbyjwtgbyhvssntinkwsinwsmalusiwnjmtcoovf\n",
+    "89\nwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww\n",
+    "90\ncccchccccccccccccccccccccccccccwcccccccccgcccccchccccccccccccccccccccccxccccccncccccccuccc\n",
+    "100\ndjjjjjjjjjjgjjjjjjjjjjjjjjsvjjjjjjjjjjmjjjjjjjjjjjjjajjjjjjajjjjjjrjjjjjjjjjjjjrjjtjjjjjjjjjjjjjojjj\n",
+    "96\nqtbcksuvxonzbkokhqlgkrvimzqmqnrvqlihrmksldyydacbtckfphenxszcnzhfjmpeykrvshgiboivkvabhrpphgavvprz\n",
+    "4\njfyy\n"
+  ],
+  "output": [
+    "ri\n",
+    "wwwwwwwwwwwwwwwwwwwwwwnwwwwwwwwwwhwwwxwwwwwwwwwfhwwwwawwwwww\n",
+    "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm\n",
+    "jli\n",
+    "crgjulypijzhyypkqtxbibuoxhkagycauuqgchyaokulsbfbnsazfrkcgibxucwgwdalcelhuoqdibceswtjiabubmhdmrqnq\n",
+    "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq\n",
+    "oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo\n",
+    "ywnvcnclsibreesigzhycyxwygsadugofxwsdlnqzlhnzhrvsrowfhmyzbxtyoxh\n",
+    "jqprcbfgsxwgjhmkehcoiwwltuxjzokamzpalobnfespcvmoecqigyuutueu\n",
+    "hcyrkd\n",
+    "fffffyffffffffffffffffffffffqfffffffcftffffffffffffffffzffffffffffffffrffffffffffffffffffffffffwf\n",
+    "fvooctmjnwisulamswniswknitnssvhybgtwjybkfyvxqdoqgbqteoitnczvkyedhljuuoqghptnfllwekzohiuaxelgecabvsbi\n",
+    "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww\n",
+    "cccucccccccnccccccxcccccccccccccccccccccchccccccccccccccccccccccchccccccccccwcccccccccgccc\n",
+    "jjjojjjjjjjjjjjjjtjjrjjjjjjjjjjjjrjjjjjjajjjjjjajjjjjjjjjjjjjjdjjjgjjjjjjjjjsvjjjjjjjjjjmjjjjjjjjjjj\n",
+    "zrpvvaghpprhbavkviobighsvrkyepmjfhznczsxnehpfkctvrnqmqzmkokbvuctqbksxonzhqlgkrviqlihrmksldyydacb\n",
+    "yyjf\n"
+  ]
+}

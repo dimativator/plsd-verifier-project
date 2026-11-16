@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n=int(input())\nd={}\nb=[]\ne=1\na=list(map(int,input().split()))\nfor i in range(n):\n\tif a[i] in d:\n\t\tb.append([e,i+1])\n\t\te=i+2\n\t\td.clear()\n\telse:\n\t\td[a[i]]=i+1\t \nif len(b)==0:\n\tprint(-1)\n\texit()\t\t\nprint(len(b))\nk=b[-1]\nb[-1]=[k[0],n]\nfor i in b:\n\tprint(*i)\t\t"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long int n, i;\n  scanf(\"%lld\", &n);\n  long long int arr[n];\n  for (long long int i = 0; i < n; i++) scanf(\"%lld\", &arr[i]);\n  long long int ans = 0;\n  map<long long int, long long int> mp;\n  long long int a = 1, b;\n  vector<long long int> vec;\n  for (long long int i = 0; i < n; i++) {\n    if (mp.find(arr[i]) != mp.end() && mp[arr[i]] == ans) {\n      ans++;\n      b = i + 1;\n      vec.push_back(a);\n      vec.push_back(b);\n      a = i + 2;\n    } else\n      mp[arr[i]] = ans;\n  }\n  if (ans == 0)\n    cout << \"-1\";\n  else {\n    vec[vec.size() - 1] = n;\n    cout << ans << \"\\n\";\n    for (i = 0; i < vec.size(); i = i + 2)\n      printf(\"%lld %lld\\n\", vec[i], vec[i + 1]);\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.io.*;\npublic class cf{\n    public static void main(String args[])throws Exception{\n     Scanner sc=new Scanner(new BufferedReader(new InputStreamReader(System.in)));\n\tint n=sc.nextInt();\n\tArrayList<String> ans=new ArrayList<>();\n\tHashMap<Long,Integer> indices=new HashMap<>();\n\tfor(int i=0;i<n;i++){\n\t    long x=sc.nextLong();\n\t    if(!indices.containsKey(x))\n\t\tindices.put(x,i+1);\n\t    else{\n\t\tans.add(\"\"+indices.get(x)+\" \"+(i+1));\n\t\tindices=new HashMap<>();\n\t    }\n\t}\n\tif(ans.size()==0)System.out.println(\"-1\");\n\telse{\n\t    int curr=1;\n\t    System.out.println(ans.size());\n\t    String y=ans.remove(ans.size()-1);\n\t    ans.add(y.substring(0,y.indexOf(' '))+\" \"+n);\n\t    for(String x:ans){\n\t\tSystem.out.println(\"\"+curr+x.substring(x.indexOf(' ')));\n\t\tcurr=Integer.parseInt(x.substring(x.indexOf(' ')+1))+1;\n\t    }\n\t}\n    }\n}\n"
+  }
+]

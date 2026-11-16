@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "n,k=map(int,input().split())\ns=input()\ndi=dict()\nfor i in s:di[i]=di.get(i,0)+1\nans=0\nse=list(set(s))\nse.sort(key=lambda x:di[x],reverse=1)\nfor i in se:\n    ans+=min(k,di[i])*min(di[i],k)\n    k-=min(di[i],k)\n    if not k:break\nprint(ans)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long n, k;\n  cin >> n >> k;\n  long long c[27] = {0};\n  string s;\n  cin >> s;\n  for (int i = 0; i < n; i++) {\n    c[s[i] - 'A'] += 1;\n  }\n  long long cc = 0L;\n  long long num = 0L;\n  while (true) {\n    long long maxi = 0L;\n    int idx = -1;\n    for (int i = 0; i < 26; i++) {\n      long long cache = maxi;\n      maxi = max(maxi, c[i]);\n      if (cache != maxi) idx = i;\n    }\n    c[idx] = 0;\n    cc += maxi;\n    if (cc >= k) {\n      cout << num + (maxi - (cc - k)) * (maxi - (cc - k));\n      return 0;\n    } else {\n      num += maxi * maxi;\n    }\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "\nimport java.io.BufferedWriter;\nimport java.io.IOException;\nimport java.io.OutputStreamWriter;\nimport java.util.Scanner;\n\n/*\n * To change this license header, choose License Headers in Project Properties.\n * To change this template file, choose Tools | Templates\n * and open the template in the editor.\n */\n/**\n *\n * @author Madi\n */\npublic class B462 {\n    public static void main(String[] args) throws IOException {\n        Scanner sc = new Scanner(System.in);\n        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));\n        \n        int n = sc.nextInt();\n        int k = sc.nextInt();\n\n        String s = sc.next();\n        int[] cnt = new int[26];\n        for (int i = 0; i < s.length(); i++) {\n            cnt[(int)s.charAt(i) - 65]++;\n        }\n        \n        for (int i = 0; i < 25; i++) {\n            for (int j = i + 1; j < 26; j++) {\n                if (cnt[i] < cnt[j]) {\n                    int t = cnt[i];\n                    cnt[i] = cnt[j];\n                    cnt[j] = t;\n                }\n            }\n        }\n        \n        int ind = 0;\n        long sum = 0;\n        while (ind < 26 && k > cnt[ind]) {\n            k -= cnt[ind];\n            sum += (long)cnt[ind] * (long)cnt[ind];\n            ind++;\n        }\n        \n        sum += (long)k * (long)k;\n        bw.write(sum + \"\\n\");\n        bw.flush();\n    }\n}\n"
+  }
+]

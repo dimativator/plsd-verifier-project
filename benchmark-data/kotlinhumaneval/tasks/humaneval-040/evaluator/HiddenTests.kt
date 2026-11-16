@@ -1,0 +1,18 @@
+fun main() {
+    var arg10: List<Int> = mutableListOf(3, 2, 1)
+    var x1: List<Int> = incrList(arg10)
+    var v1: List<Int> = mutableListOf(4, 3, 2)
+    if (x1 != v1) {
+        throw Exception("Exception -- test case 1 did not pass. x1 = " + x1)
+    }
+
+    var arg20: List<Int> = mutableListOf(5, 2, 5, 2, 3, 3, 9, 0, 123)
+    var x2: List<Int> = incrList(arg20)
+    var v2: List<Int> = mutableListOf(6, 3, 6, 3, 4, 4, 10, 1, 124)
+    if (x2 != v2) {
+        throw Exception("Exception -- test case 2 did not pass. x2 = " + x2)
+    }
+
+
+}
+

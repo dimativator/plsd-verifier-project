@@ -1,0 +1,35 @@
+{
+  "name": "894_C. Marco and GCD Sequence",
+  "description": "In a dream Marco met an elderly man with a pair of black glasses. The man told him the key to immortality and then disappeared with the wind of time.\n\nWhen he woke up, he only remembered that the key was a sequence of positive integers of some length n, but forgot the exact sequence. Let the elements of the sequence be a1, a2, ..., an. He remembered that he calculated gcd(ai, ai + 1, ..., aj) for every 1 ≤ i ≤ j ≤ n and put it into a set S. gcd here means the [greatest common divisor](https://en.wikipedia.org/wiki/Greatest_common_divisor).\n\nNote that even if a number is put into the set S twice or more, it only appears once in the set.\n\nNow Marco gives you the set S and asks you to help him figure out the initial sequence. If there are many solutions, print any of them. It is also possible that there are no sequences that produce the set S, in this case print -1.\n\nInput\n\nThe first line contains a single integer m (1 ≤ m ≤ 1000) — the size of the set S.\n\nThe second line contains m integers s1, s2, ..., sm (1 ≤ si ≤ 106) — the elements of the set S. It's guaranteed that the elements of the set are given in strictly increasing order, that means s1 < s2 < ... < sm.\n\nOutput\n\nIf there is no solution, print a single line containing -1.\n\nOtherwise, in the first line print a single integer n denoting the length of the sequence, n should not exceed 4000.\n\nIn the second line print n integers a1, a2, ..., an (1 ≤ ai ≤ 106) — the sequence.\n\nWe can show that if a solution exists, then there is a solution with n not exceeding 4000 and ai not exceeding 106.\n\nIf there are multiple solutions, print any of them.\n\nExamples\n\nInput\n\n4\n2 4 6 12\n\n\nOutput\n\n3\n4 6 12\n\nInput\n\n2\n2 3\n\n\nOutput\n\n-1\n\nNote\n\nIn the first example 2 = gcd(4, 6), the other elements from the set appear in the sequence, and we can show that there are no values different from 2, 4, 6 and 12 among gcd(ai, ai + 1, ..., aj) for every 1 ≤ i ≤ j ≤ n.",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 1900,
+  "cf_contest_id": 894,
+  "cf_index": "C",
+  "cf_tags": [
+    "constructive algorithms",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00014-of-00039-dc3ebb07a3cba8e4.parquet",
+  "source_row": 171,
+  "task_id": "codecontests/cf-894-C",
+  "rating_band": "1600-1999",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/894/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

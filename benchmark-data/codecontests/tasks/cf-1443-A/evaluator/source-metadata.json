@@ -1,0 +1,35 @@
+{
+  "name": "1443_A. Kids Seating",
+  "description": "Today the kindergarten has a new group of n kids who need to be seated at the dinner table. The chairs at the table are numbered from 1 to 4n. Two kids can't sit on the same chair. It is known that two kids who sit on chairs with numbers a and b (a ≠ b) will indulge if: \n\n  1. gcd(a, b) = 1 or, \n  2. a divides b or b divides a. \n\n\n\ngcd(a, b) — the maximum number x such that a is divisible by x and b is divisible by x.\n\nFor example, if n=3 and the kids sit on chairs with numbers 2, 3, 4, then they will indulge since 4 is divided by 2 and gcd(2, 3) = 1. If kids sit on chairs with numbers 4, 6, 10, then they will not indulge.\n\nThe teacher really doesn't want the mess at the table, so she wants to seat the kids so there are no 2 of the kid that can indulge. More formally, she wants no pair of chairs a and b that the kids occupy to fulfill the condition above.\n\nSince the teacher is very busy with the entertainment of the kids, she asked you to solve this problem.\n\nInput\n\nThe first line contains one integer t (1 ≤ t ≤ 100) — the number of test cases. Then t test cases follow.\n\nEach test case consists of one line containing an integer n (1 ≤ n ≤ 100) — the number of kids.\n\nOutput\n\nOutput t lines, which contain n distinct integers from 1 to 4n — the numbers of chairs that the kids should occupy in the corresponding test case. If there are multiple answers, print any of them. You can print n numbers in any order.\n\nExample\n\nInput\n\n\n3\n2\n3\n4\n\n\nOutput\n\n\n6 4\n4 6 10\n14 10 12 8",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 800,
+  "cf_contest_id": 1443,
+  "cf_index": "A",
+  "cf_tags": [
+    "constructive algorithms",
+    "math"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00001-of-00039-e092fe56fda18715.parquet",
+  "source_row": 309,
+  "task_id": "codecontests/cf-1443-A",
+  "rating_band": "800-1199",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/1443/A",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from sys import stdin\n\ndef count(N, l, r):\n    resultmin, resultmax = 0, 0\n    fmax, smax = 1, 1\n    for n in range(N):\n        if l:\n            resultmin += fmax\n            fmax *= 2\n            l -= 1\n        else:\n            resultmin += 1\n        if r:\n            resultmax += smax\n            smax *= 2\n            r -= 1\n        else:\n            resultmax += smax//2\n    return resultmin, resultmax\n\ndef main():\n    num = list(map(int, stdin.readline().split()))\n    result = count(num[0], num[1], num[2])\n    print(result[0], result[1])\n    return\n\nmain()\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nconst int inf = 1e9 + 10;\nconst int minf = -1e9;\nvoid solve() {\n  long long n, l, r;\n  cin >> n >> l >> r;\n  long long minSum = 0, maxSum = 0;\n  long long x = 1;\n  for (int i = 0; i < min(l, n); i++) {\n    minSum += x;\n    x *= 2;\n    ;\n  }\n  for (int i = min(l, n); i < n; i++) {\n    minSum++;\n  }\n  x = 1;\n  for (int i = 0; i < min(r, n); i++) {\n    maxSum += x;\n    x *= 2;\n    ;\n  }\n  x /= 2;\n  for (int i = min(r, n); i < n; i++) {\n    maxSum += x;\n  }\n  cout << minSum << \" \" << maxSum << \"\\n\";\n}\nvoid clear() {}\nint main() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  cout << fixed << setprecision(10);\n  int z = 1;\n  for (int i = 0; i < z; i++) {\n    solve();\n    clear();\n  }\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "// package com.company;\n import java.io.*;import java.util.*;\n public class Main{\n     public static void main(String[] args){\n         Scanner s=new Scanner(System.in);\n       int n=s.nextInt();long min,max;\n       int l=s.nextInt();int r=s.nextInt();\n       min=(long)Math.pow(2,l)-1;\n       min+=(n-l);\n       max=(long)Math.pow(2,r)-1;\n       max+=Math.pow(2,r-1)*(n-r);\n         System.out.println(min+\" \"+max);\n     }\n }"
+  }
+]

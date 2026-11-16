@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a, b, c, d = map(int, input().split(' '))\nx = a/b\ny = c/d\nprint(x / (1-(1-x) * (1-y)))\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\ndouble a, b, c, d;\ndouble ans = 0;\nint main() {\n  cin >> a >> b >> c >> d;\n  ans = (a / b) / (1 - (1 - a / b) * (1 - c / d));\n  printf(\"%.12lf\\n\", ans);\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class Archer {\n\n\tpublic static void main(String[] args) {\n\t\tScanner scan = new Scanner(System.in);\n\t\t//MAC 2312\n\t\tdouble a = scan.nextDouble();\n\t\tdouble b = scan.nextDouble();\n\t\tdouble c = scan.nextDouble();\n\t\tdouble d = scan.nextDouble();\n\t\tdouble ans = (a/b)/(1-((b-a)/b*(d-c)/d));\n\t\tSystem.out.println(ans);\n\t}\n}\n"
+  }
+]

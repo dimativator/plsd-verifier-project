@@ -1,0 +1,8 @@
+{
+  "input": [
+    "3\n \n5\nV??VK\n \n6\n??????\n \n4\n?VK?\n"
+  ],
+  "output": [
+    "0\n\n0\n\n0\n\n"
+  ]
+}

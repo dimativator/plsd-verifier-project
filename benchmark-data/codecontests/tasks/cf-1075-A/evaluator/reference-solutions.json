@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "a=int(input())\nn, m=map(int, input().split())\nmh=min(abs(1-n),abs(1-m))\nmb=min(abs(a-n),abs(a-m))\n\nif mh<=mb:\n    print(\"White\")\nelse:\n    print(\"Black\")"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  ios_base::sync_with_stdio(false);\n  cin.tie(NULL);\n  cout.tie(NULL);\n  ;\n  long long n, x, y;\n  cin >> n >> x >> y;\n  long long white = x + y - 2;\n  long long black = 2 * n - x - y;\n  if (white <= black)\n    cout << \"White\";\n  else\n    cout << \"Black\";\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "/**\n *   Author: Ridam Nagar\n *   Date: 04 February 2019\n *   Time: 12:59:59\n**/\n/* \npackage codechef; // don't place package name! */\n\nimport java.util.*;\nimport java.lang.*;\nimport java.io.*;\n\n/* Name of the class has to be \"Main\" only if the class is public. */\npublic class Codechef\n{\n\n      \n    public static void main (String[] args) throws java.lang.Exception\n    {\n       Scanner sc=new Scanner(System.in);\n       long n=sc.nextLong();\n       long a=sc.nextLong();\n       long b=sc.nextLong();\n       long x=Math.abs(a-1)+Math.abs(b-1);\n       long y=Math.abs(n-a)+Math.abs(n-b);\n       if(x<=y){\n        System.out.println(\"White\");\n       }else{\n        System.out.println(\"Black\");\n       }\n\n\n }\n}\n"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "m,n=map(int,input().split())\na=[]\nfor i in range(m):\n    p=[int(j) for j in input().split()]\n    a.append(p)\n  \nfor j in range(1,m):\n    a[j][0]+=a[j-1][0]\n\nfor i in range(1,n):\n    a[0][i]+=a[0][i-1]\n    #print(a)\n    for j in range(1,m):\n        a[j][i]+=max(a[j-1][i],a[j][i-1])\n        \n#print(a) \nfor i in range(m):\n    p=int(a[i][n-1])\n    print(p)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n, m, i, j;\n  scanf(\"%d%d\", &n, &m);\n  int a[n + 1][m + 1];\n  for (i = 0; i < n; i++)\n    for (j = 0; j < m; j++) scanf(\"%d\", &a[i][j]);\n  int f[n + 1][m + 1];\n  f[0][0] = a[0][0];\n  for (i = 1; i < n; i++) {\n    f[i][0] = f[i - 1][0] + a[i][0];\n  }\n  for (i = 1; i < m; i++) {\n    f[0][i] = f[0][i - 1] + a[0][i];\n    for (j = 1; j < n; j++) {\n      f[j][i] = max(f[j - 1][i], f[j][i - 1]) + a[j][i];\n    }\n  }\n  for (i = 0; i < n; i++) printf(\"%d \", f[i][m - 1]);\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\n\npublic class ArtUnion {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int m = sc.nextInt();\n        int n = sc.nextInt();\n        int p[][] = new int[m][n];\n        for (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++)\n                p[i][j] = sc.nextInt();\n        }\n        int tt[] = new int[m];\n        for (int i = 0; i < n; i++) {\n            int done = 0;\n            for (int j = 0; j < m; j++) {\n                int t = (int) (Math.max(done, tt[j]));\n                tt[j] = t + p[j][i];\n                done = tt[j];\n            }\n        }\n        for (int i = 0; i < m; i++)\n            System.out.print(tt[i] + \" \");\n    }\n}"
+  }
+]

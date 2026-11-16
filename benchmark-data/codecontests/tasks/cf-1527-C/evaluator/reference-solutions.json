@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "def cal(n,ind_list):\n    ind1_list = [ind+1 for ind in ind_list]\n    red_list =  [n-ind for ind in ind_list]\n\n    pre_sum = [0]\n    for ind1 in ind1_list:\n        pre_sum.append(pre_sum[-1]+ind1)\n\n    \n    res = 0\n    \n    for i in range(1,len(red_list)):\n        res += red_list[i]*pre_sum[i]\n    return res\n\ndef getResult(n,a_list):\n    v_dict = {}\n    for i in range(n):\n        v = a_list[i]\n        if v in v_dict:\n            v_dict[v].append(i)\n        else:\n            v_dict[v] = [i]\n    res= 0\n    for v in v_dict.keys():\n        if len(v_dict[v])>=2:\n            res += cal(n,v_dict[v])\n    return res\n\n\nt = int(input())\nfor _ in range(t):\n    n = int(input())\n    a_list = [int(k) for k in input().split()]\n    print(getResult(n,a_list))"
+  },
+  {
+    "language": "CPP",
+    "code": "#include<bits/stdc++.h>\nusing namespace std;\n#define int long long\nconst int maxn = 2e5 + 7;\nint a[maxn];\nsigned main () {\n\tint t;\n\tcin >> t;\n\twhile (t--) {\n\t\tint n;\n\t\tcin >> n;\n\t\tfor (int i = 1; i <= n; i++) cin >> a[i];\n\t\tmap<int,int>mp;\n\t\tmp.clear();\n\t\tint ans = 0;\n\t\tfor (int i = 1; i <= n; i++) {\n\t\t\tans += mp[a[i]] * (n-i+1);\n\t\t\tmp[a[i]] += i;\n\t\t}\n\t\tcout << ans << \"\\n\";\n\t}\n}"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.*;\nimport java.lang.*;\npublic class Codeforces {\n    static int t[][]=new int[5005][5005];\n    static Scanner sr=new Scanner(System.in);\n    static int gcd(int a, int b)\n    {\n        if (b == 0)\n            return a;\n        return gcd(b, a % b);\n    }\n    public static void main(String[] args) throws java.lang.Exception {\n        StringBuilder ans = new StringBuilder(\"\");\n        int T=sr.nextInt();\n        while(T-->0)\n        {\n            int n=sr.nextInt();\n            long a[]=new long[n];\n            for(int i=0;i<n;i++)\n                a[i]=sr.nextLong();\n            HashMap<Long,Long>h=new HashMap<>();\n            long A=0;\n            for(int i=0;i<n;i++)\n            {\n                if(h.containsKey(a[i]))\n                {\n                    A+=h.get(a[i])*(n-i);\n                    h.put(a[i],h.get(a[i])+i+1);\n                }\n                else\n                {\n                    h.put(a[i],(long)(i+1));\n                }\n            }\n            ans.append(A);\n            ans.append('\\n');\n        }\n        System.out.println(ans);\n    }\n}"
+  }
+]

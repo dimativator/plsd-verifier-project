@@ -1,0 +1,14 @@
+{
+  "input": [
+    "scissors\nrock\nrock\n",
+    "scissors\npaper\nrock\n",
+    "rock\nrock\nrock\n",
+    "paper\nrock\nrock\n"
+  ],
+  "output": [
+    "?\n",
+    "?\n",
+    "?\n",
+    "F\n"
+  ]
+}

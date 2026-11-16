@@ -1,0 +1,34 @@
+{
+  "name": "818_B. Permutation Game",
+  "description": "n children are standing in a circle and playing a game. Children's numbers in clockwise order form a permutation a1, a2, ..., an of length n. It is an integer sequence such that each integer from 1 to n appears exactly once in it.\n\nThe game consists of m steps. On each step the current leader with index i counts out ai people in clockwise order, starting from the next person. The last one to be pointed at by the leader becomes the new leader.\n\nYou are given numbers l1, l2, ..., lm — indices of leaders in the beginning of each step. Child with number l1 is the first leader in the game. \n\nWrite a program which will restore a possible permutation a1, a2, ..., an. If there are multiple solutions then print any of them. If there is no solution then print -1.\n\nInput\n\nThe first line contains two integer numbers n, m (1 ≤ n, m ≤ 100).\n\nThe second line contains m integer numbers l1, l2, ..., lm (1 ≤ li ≤ n) — indices of leaders in the beginning of each step.\n\nOutput\n\nPrint such permutation of n numbers a1, a2, ..., an that leaders in the game will be exactly l1, l2, ..., lm if all the rules are followed. If there are multiple solutions print any of them. \n\nIf there is no permutation which satisfies all described conditions print -1.\n\nExamples\n\nInput\n\n4 5\n2 3 1 4 4\n\n\nOutput\n\n3 1 2 4 \n\n\nInput\n\n3 3\n3 1 2\n\n\nOutput\n\n-1\n\nNote\n\nLet's follow leadership in the first example: \n\n  * Child 2 starts. \n  * Leadership goes from 2 to 2 + a2 = 3. \n  * Leadership goes from 3 to 3 + a3 = 5. As it's greater than 4, it's going in a circle to 1. \n  * Leadership goes from 1 to 1 + a1 = 4. \n  * Leadership goes from 4 to 4 + a4 = 8. Thus in circle it still remains at 4. ",
+  "source": 2,
+  "difficulty": 8,
+  "cf_rating": 1600,
+  "cf_contest_id": 818,
+  "cf_index": "B",
+  "cf_tags": [
+    "implementation"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00016-of-00039-bf38b0908b322307.parquet",
+  "source_row": 4,
+  "task_id": "codecontests/cf-818-B",
+  "rating_band": "1600-1999",
+  "source_difficulty": "B",
+  "url": "https://codeforces.com/problemset/problem/818/B",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

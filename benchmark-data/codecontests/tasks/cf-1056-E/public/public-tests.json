@@ -1,0 +1,10 @@
+{
+  "input": [
+    "001\nkokokokotlin\n",
+    "01\naaaaaa\n"
+  ],
+  "output": [
+    "2\n",
+    "4\n"
+  ]
+}

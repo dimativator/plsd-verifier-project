@@ -1,0 +1,10 @@
+{
+  "input": [
+    "3\nbcd\nab\ncdef\n",
+    "4\nx\ny\nz\nw\n"
+  ],
+  "output": [
+    "abcdef\n",
+    "wxyz\n"
+  ]
+}

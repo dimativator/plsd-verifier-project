@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "from sys import stdin\ninput=lambda : stdin.readline().strip()\nfrom math import ceil,sqrt,factorial,gcd\nfrom collections import deque\nn,m=map(int,input().split())\na=list(map(int,input().split()))\nb=list(map(int,input().split()))\nz=[]\nma=0\nfor i in a:\n\tx=float(\"infinity\")\n\tfor j in b:\n\t\tx=min(i&j,x)\n\tma=max(x,ma)\nfor i in a:\n\tt=float(\"infinity\")\n\tfor j in b:\n\t\tif t==float(\"infinity\") or ma|(i&j)<ma|t:\n\t\t\tt=i&j\n\tz.append(t)\nx=z[0]\nfor i in z:\n\tx=x|i\nprint(x)"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  long long int n, m;\n  cin >> n >> m;\n  long long int a[n], b[m];\n  vector<long long int> x[n];\n  for (long long int i = 0; i < n; i++) cin >> a[i];\n  for (long long int i = 0; i < m; i++) cin >> b[i];\n  for (long long int i = 0; i < n; i++) {\n    for (long long int j = 0; j < m; j++) x[i].push_back(a[i] & b[j]);\n  }\n  for (long long int k = 0; k < 512; k++) {\n    long long int oh = 0;\n    for (long long int i = 0; i < n; i++) {\n      long long int ok = 0;\n      for (long long int j = 0; j < m; j++) {\n        if ((k | x[i][j]) == k) {\n          ok = 1;\n          break;\n        }\n      }\n      if (ok == 0) {\n        oh = 1;\n        break;\n      }\n    }\n    if (oh == 0) {\n      cout << k << endl;\n      break;\n    }\n  }\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.util.Scanner;\n\npublic class C {\n\n    public static void main(String[] args) {\n        Scanner scan = new Scanner(System.in);\n\n        for (int i = 1; i > 0; i--) solve(scan);\n    }\n\n    protected static void solve(Scanner scan) {\n        int n = scan.nextInt();\n        int m = scan.nextInt();\n        int[] a = new int[n];\n        int[] b = new int[m];\n\n        for (int i = 0; i < n; i++) {\n            a[i] = scan.nextInt();\n        }\n\n        for (int i = 0; i < m; i++) {\n            b[i] = scan.nextInt();\n        }\n\n        int i = 0;\n\n        for (; i < 2 << 9; i++) {\n            boolean af = false;\n            for (int j : a) {\n                af = false;\n                for (int k : b) {\n                    if ((i | (j & k)) == i) {\n                        af = true;\n                        break;\n                    }\n                }\n                if (!af) {\n                    break;\n                }\n            }\n            if (af) break;\n        }\n\n\n        System.out.println(i);\n    }\n}"
+  }
+]

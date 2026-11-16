@@ -1,0 +1,42 @@
+NAGINI QUICKSTART
+
+Use `verify main.py` to verify statically typed Python functions with specifications.
+Consider bounds, arithmetic, and loop or data-structure invariants that public
+tests may not cover. Read the diagnostic before deciding whether to revise code,
+add a justified invariant, or use another available check.
+
+from nagini_contracts.contracts import *
+
+def increment(x: int) -> int:
+    Requires(x >= 0)
+    Ensures(Result() == x + 1)
+    return x + 1
+
+Replacing the return with x - 1 should fail the postcondition. This example's
+precondition is not appropriate for tasks that permit negative inputs.
+Nagini also supports Invariant(...) inside loops and Acc(...) permissions for
+mutable state, such as Acc(list_pred(xs)). A missing permission or invariant is
+not automatically evidence of a runtime defect. Do not add unjustified assumptions.
+
+For a program with I/O, you may use `verify main.py --select algorithm` to focus on
+an actual top-level algorithm function. Selected-function verification is partial
+coverage, not verification of the complete program. Keep the real algorithm in
+main.py; do not verify a different implementation in place of the submission.
+IMPORTANT: Nagini contract statements are verification syntax, not executable
+runtime checks. For example, Ensures(Result() == ...) may raise at runtime.
+The evaluator runs ordinary Python without erasing contracts. Remove proof-only
+statements before run_tests and submission, while retaining the exact algorithm
+body you checked. You can save the annotated version in a separate file for
+further verification, but do not replace the algorithm with a simpler stand-in.
+If the algorithm changes, earlier verification no longer applies. Contract
+imports are available in all conditions, but this does not make ghost expressions
+runtime-executable.
+Use a guarded main entry point for stdin/stdout. Full Python is not supported.
+
+Original diagnostics are preserved. A timeout or unsupported construct means no
+proof was established for that part. An unproved obligation may require a code
+fix or additional valid specifications. The wrapper uses Nagini's bundled Viper
+and configured Z3. Extra CLI arguments after the file are forwarded.
+
+Run a relevant verifier check, inspect its feedback, and address the result before submitting.
+Use public and focused custom tests alongside verification.

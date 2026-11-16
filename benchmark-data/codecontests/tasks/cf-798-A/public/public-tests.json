@@ -1,0 +1,12 @@
+{
+  "input": [
+    "abbcca\n",
+    "abcda\n",
+    "abccaa\n"
+  ],
+  "output": [
+    "NO\n",
+    "YES\n",
+    "YES\n"
+  ]
+}

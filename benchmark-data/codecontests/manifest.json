@@ -1,0 +1,23 @@
+{
+  "dataset": "deepmind/code_contests",
+  "task_count": 1500,
+  "rating_bands": {
+    "800-1199": 300,
+    "1200-1599": 300,
+    "1600-1999": 300,
+    "2000-2399": 300,
+    "2400+": 300
+  },
+  "task_index": "tasks.jsonl",
+  "all_tasks": "groups/all.json",
+  "provenance": "provenance/source.json",
+  "state": "packaged_not_behaviorally_validated",
+  "paths_relative_to": "this dataset directory",
+  "held_out_policy": "Only public/ files may be copied into agent workspaces. All other files are evaluator-only.",
+  "test_counts": {
+    "public_test_count": 3309,
+    "unexposed_test_count": 0,
+    "private_test_count": 37834,
+    "generated_test_count": 114127
+  }
+}

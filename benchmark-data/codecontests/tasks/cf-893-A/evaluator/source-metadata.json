@@ -1,0 +1,34 @@
+{
+  "name": "893_A. Chess For Three",
+  "description": "Alex, Bob and Carl will soon participate in a team chess tournament. Since they are all in the same team, they have decided to practise really hard before the tournament. But it's a bit difficult for them because chess is a game for two players, not three.\n\nSo they play with each other according to following rules:\n\n  * Alex and Bob play the first game, and Carl is spectating; \n  * When the game ends, the one who lost the game becomes the spectator in the next game, and the one who was spectating plays against the winner. \n\n\n\nAlex, Bob and Carl play in such a way that there are no draws.\n\nToday they have played n games, and for each of these games they remember who was the winner. They decided to make up a log of games describing who won each game. But now they doubt if the information in the log is correct, and they want to know if the situation described in the log they made up was possible (that is, no game is won by someone who is spectating if Alex, Bob and Carl play according to the rules). Help them to check it!\n\nInput\n\nThe first line contains one integer n (1 ≤ n ≤ 100) — the number of games Alex, Bob and Carl played.\n\nThen n lines follow, describing the game log. i-th line contains one integer ai (1 ≤ ai ≤ 3) which is equal to 1 if Alex won i-th game, to 2 if Bob won i-th game and 3 if Carl won i-th game.\n\nOutput\n\nPrint YES if the situation described in the log was possible. Otherwise print NO.\n\nExamples\n\nInput\n\n3\n1\n1\n2\n\n\nOutput\n\nYES\n\n\nInput\n\n2\n1\n2\n\n\nOutput\n\nNO\n\nNote\n\nIn the first example the possible situation is:\n\n  1. Alex wins, Carl starts playing instead of Bob; \n  2. Alex wins, Bob replaces Carl; \n  3. Bob wins. \n\n\n\nThe situation in the second example is impossible because Bob loses the first game, so he cannot win the second one.",
+  "source": 2,
+  "difficulty": 7,
+  "cf_rating": 900,
+  "cf_contest_id": 893,
+  "cf_index": "A",
+  "cf_tags": [
+    "implementation"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00000-of-00039-e991a271dbfa9925.parquet",
+  "source_row": 270,
+  "task_id": "codecontests/cf-893-A",
+  "rating_band": "800-1199",
+  "source_difficulty": "A",
+  "url": "https://codeforces.com/problemset/problem/893/A",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

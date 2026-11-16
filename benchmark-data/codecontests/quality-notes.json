@@ -1,0 +1,66 @@
+[
+  {
+    "id": "cf-1461-A",
+    "repeated_inputs_with_different_expected_outputs": 1
+  },
+  {
+    "id": "cf-1515-A",
+    "repeated_inputs_with_different_expected_outputs": 1
+  },
+  {
+    "id": "cf-1515-C",
+    "repeated_inputs_with_different_expected_outputs": 1
+  },
+  {
+    "id": "cf-1521-B",
+    "repeated_inputs_with_different_expected_outputs": 1
+  },
+  {
+    "id": "cf-1503-A",
+    "repeated_inputs_with_different_expected_outputs": 1
+  },
+  {
+    "id": "cf-1505-B",
+    "repeated_inputs_with_different_expected_outputs": 1
+  },
+  {
+    "id": "cf-1450-C1",
+    "repeated_inputs_with_different_expected_outputs": 1
+  },
+  {
+    "id": "cf-71-E",
+    "repeated_inputs_with_different_expected_outputs": 1
+  },
+  {
+    "id": "cf-277-B",
+    "repeated_inputs_with_different_expected_outputs": 1
+  },
+  {
+    "id": "cf-1218-G",
+    "repeated_inputs_with_different_expected_outputs": 1
+  },
+  {
+    "id": "cf-1505-G",
+    "repeated_inputs_with_different_expected_outputs": 1
+  },
+  {
+    "id": "cf-1044-E",
+    "repeated_inputs_with_different_expected_outputs": 1
+  },
+  {
+    "id": "cf-1477-D",
+    "repeated_inputs_with_different_expected_outputs": 1
+  },
+  {
+    "id": "cf-91-D",
+    "repeated_inputs_with_different_expected_outputs": 1
+  },
+  {
+    "id": "cf-46-G",
+    "repeated_inputs_with_different_expected_outputs": 54
+  },
+  {
+    "id": "cf-1479-C",
+    "repeated_inputs_with_different_expected_outputs": 2
+  }
+]

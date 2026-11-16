@@ -1,0 +1,8 @@
+{
+  "input": [
+    "3\naa\nabacaba\nxdd\n"
+  ],
+  "output": [
+    "-1\naaaabbc\nddx\n"
+  ]
+}

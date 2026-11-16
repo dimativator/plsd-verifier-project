@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import sys\n\n#sys.stdin = open('in', 'r')\n#sys.stdout = open('out', 'w')\n\ndef Out(x):\n    sys.stdout.write(str(x) + '\\n')\n\ndef In():\n    return sys.stdin.readline().strip()\n\ndef main():\n    s = str(input())\n    Map = {}\n    \n    for word in s:\n        if word not in Map:\n            Map[word] = 1\n        else:\n            Map[word] += 1\n    \n    odd = 0\n    for key, value in Map.items():\n        if value&1 == 1:\n            odd +=1\n    \n    if odd&1 or odd == 0:\n        print(\"First\")\n    else:\n        print(\"Second\")\n\n\nif __name__ == '__main__':\n    main()\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nchar s[1005];\nint zi[26] = {}, sum[2] = {};\nint main() {\n  scanf(\"%s\", s);\n  for (int i = 0; s[i]; ++i) zi[s[i] - 'a']++;\n  for (int i = 0; i < 26; ++i) sum[zi[i] % 2]++;\n  if (sum[1] <= 1)\n    printf(\"First\\n\");\n  else\n    printf(sum[1] % 2 ? \"First\\n\" : \"Second\\n\");\n  return 0;\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.OutputStream;\nimport java.io.IOException;\nimport java.io.InputStream;\nimport java.io.PrintWriter;\nimport java.util.Scanner;\n\n/**\n * Built using CHelper plug-in\n * Actual solution is at the top\n */\npublic class Main {\n    public static void main(String[] args) {\n        InputStream inputStream = System.in;\n        OutputStream outputStream = System.out;\n        Scanner in = new Scanner(inputStream);\n        PrintWriter out = new PrintWriter(outputStream);\n        TaskB solver = new TaskB();\n        solver.solve(1, in, out);\n        out.close();\n    }\n\n    static class TaskB {\n        public void solve(int testNumber, Scanner in, PrintWriter out) {\n            String s = in.next();\n            int n = s.length();\n            int count = 0;\n            int[] letters = new int[26];\n            for (int i = 0; i < n; ++i) {\n                letters[s.charAt(i) - 'a']++;\n            }\n            for (int i = 0; i < 26; ++i) {\n                if (letters[i] % 2 == 1) ++count;\n            }\n            if (count <= 1 || count % 2 != 0) out.print(\"First\");\n            else out.print(\"Second\");\n        }\n\n    }\n}\n\n"
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "name": "839_C. Journey",
+  "description": "There are n cities and n - 1 roads in the Seven Kingdoms, each road connects two cities and we can reach any city from any other by the roads.\n\nTheon and Yara Greyjoy are on a horse in the first city, they are starting traveling through the roads. But the weather is foggy, so they can’t see where the horse brings them. When the horse reaches a city (including the first one), it goes to one of the cities connected to the current city. But it is a strange horse, it only goes to cities in which they weren't before. In each such city, the horse goes with equal probabilities and it stops when there are no such cities. \n\nLet the length of each road be 1. The journey starts in the city 1. What is the expected length (expected value of length) of their journey? You can read about expected (average) value by the link <https://en.wikipedia.org/wiki/Expected_value>.\n\nInput\n\nThe first line contains a single integer n (1 ≤ n ≤ 100000) — number of cities.\n\nThen n - 1 lines follow. The i-th line of these lines contains two integers ui and vi (1 ≤ ui, vi ≤ n, ui ≠ vi) — the cities connected by the i-th road.\n\nIt is guaranteed that one can reach any city from any other by the roads.\n\nOutput\n\nPrint a number — the expected length of their journey. The journey starts in the city 1.\n\nYour answer will be considered correct if its absolute or relative error does not exceed 10 - 6.\n\nNamely: let's assume that your answer is a, and the answer of the jury is b. The checker program will consider your answer correct, if <image>.\n\nExamples\n\nInput\n\n4\n1 2\n1 3\n2 4\n\n\nOutput\n\n1.500000000000000\n\n\nInput\n\n5\n1 2\n1 3\n3 4\n2 5\n\n\nOutput\n\n2.000000000000000\n\nNote\n\nIn the first sample, their journey may end in cities 3 or 4 with equal probability. The distance to city 3 is 1 and to city 4 is 2, so the expected length is 1.5.\n\nIn the second sample, their journey may end in city 4 or 5. The distance to the both cities is 2, so the expected length is 2.",
+  "source": 2,
+  "difficulty": 9,
+  "cf_rating": 1500,
+  "cf_contest_id": 839,
+  "cf_index": "C",
+  "cf_tags": [
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "probabilities",
+    "trees"
+  ],
+  "input_file": "",
+  "output_file": "",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 256000000,
+  "source_file": "data/train-00007-of-00039-05785de21e8b8429.parquet",
+  "source_row": 64,
+  "task_id": "codecontests/cf-839-C",
+  "rating_band": "1200-1599",
+  "source_difficulty": "C",
+  "url": "https://codeforces.com/problemset/problem/839/C",
+  "target_language": "Kotlin",
+  "submission_format": "program",
+  "status": {
+    "source_integrity": "checked",
+    "behavioral_validation": "not_run",
+    "kotlin_reference": "not_translated",
+    "verifier": "not_run",
+    "output_checker": "requires_review"
+  }
+}

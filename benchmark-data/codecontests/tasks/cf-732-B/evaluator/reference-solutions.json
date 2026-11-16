@@ -1,0 +1,14 @@
+[
+  {
+    "language": "PYTHON3",
+    "code": "import math\nn,k=map(int,input().split())\nl2=[]\na=list(map(int,input().split()))\nfor i in a:\n    l2.append(i)\ni=1\nl=[a[0]]\nwhile i<=n-1:\n    if a[i]+a[i-1]<k:\n        a[i]=k-a[i-1]\n        l.append(k-a[i-1])\n    else:\n        l.append(a[i])\n    i=i+1\nprint(sum(l)-sum(l2))\nprint(*l)\n"
+  },
+  {
+    "language": "CPP",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\nlong long int ma = -1, mi = 1000000000000000;\ninline long long int gcd(long long int a, long long int b) {\n  return b ? gcd(b, a % b) : a;\n}\ninline long long int lcm(long long int a, long long int b, long long int MOD) {\n  return a / gcd(a, b) * b % MOD;\n}\nlong long int power(long long int x, unsigned int y) {\n  if (y == 0)\n    return 1;\n  else if (y % 2 == 0)\n    return power(x, y / 2) * power(x, y / 2);\n  else\n    return x * power(x, y / 2) * power(x, y / 2);\n}\nint main() {\n  ios_base::sync_with_stdio(0);\n  cin.tie(NULL);\n  cout.tie(NULL);\n  long long int i, j, k, a[100000] = {0}, n, m, b[100009] = {0}, c = 0, d = 0,\n                         e[30] = {0}, x = 0;\n  cin >> n >> m;\n  for (i = 0; i < n; i++) {\n    cin >> a[i];\n  }\n  for (i = 0; i < n - 1; i++) {\n    if (a[i] + a[i + 1] < m) {\n      d = m - a[i] - a[i + 1];\n      a[i + 1] += d;\n      c += d;\n    }\n  }\n  cout << c << endl;\n  for (i = 0; i < n; i++) cout << a[i] << \" \";\n}\n"
+  },
+  {
+    "language": "JAVA",
+    "code": "import java.io.*;\nimport java.util.*;\n\npublic class B {\n\tpublic static void main(String[]args) throws IOException {\n\t\tBufferedReader x = new BufferedReader(new InputStreamReader(System.in));\n\t\tStringTokenizer st = new StringTokenizer(x.readLine());\n\t\tint n = Integer.parseInt(st.nextToken());\n\t\tint k = Integer.parseInt(st.nextToken());\n\t\tint[]arr = new int[n];\n\t\tst = new StringTokenizer(x.readLine());\n\t\tfor (int i = 0; i < n; i++) {\n\t\t\tarr[i] = Integer.parseInt(st.nextToken());\n\t\t}\n\t\tint cur = 0;\n\t\tint ans = 0;\n\t\tfor (int i = 1; i < n; i++) {\n\t\t\tint temp = k - (arr[i] + arr[i-1]);\n\t\t\ttemp = Math.max(temp, 0);\n\t\t\tarr[i] += temp;\n\t\t\tans += temp;\n\t\t}\n\t\tSystem.out.println(ans);\n\t\tfor (int i = 0; i < n; i++) {\n\t\t\tSystem.out.print(arr[i]+\" \");\n\t\t}\n\t\tSystem.out.println();\n\t}\n}"
+  }
+]
