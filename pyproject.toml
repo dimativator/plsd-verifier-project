@@ -21,13 +21,12 @@ Repository = "https://github.com/dimativator/plsd-verifier-project"
 [project.scripts]
 plsd-analyze = "experiments.three_arm_analysis:main"
 plsd-plot = "experiments.report:main"
-plsd-export-study = "experiments.export_study:main"
 
 [tool.setuptools.packages.find]
 include = ["experiments*"]
 
 [tool.setuptools.package-data]
-experiments = ["CROSSHAIR_GUIDE.txt", "Dockerfile", "validation_reviews.json", ".dockerignore"]
+experiments = ["CROSSHAIR_GUIDE.txt", "Dockerfile", ".dockerignore"]
 
 [tool.ruff]
 target-version = "py312"

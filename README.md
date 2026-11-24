@@ -11,19 +11,18 @@ includes accuracy, variation between repetitions, costs and confidence intervals
 
 ## Quick start
 
-With Python 3.12 or newer, reproduce the saved analysis and figure:
+With Python 3.12 or newer, unpack the results and reproduce the analysis and figure:
 
 ```shell
 python -m pip install -e ".[report]"
-python -m experiments.three_arm_analysis --results studies/codeforces-20261124/combined-results.json --expected studies/codeforces-20261124/combined-expected.json --phase main --output reproduced-analysis.json
-python -m experiments.report --study studies/codeforces-20261124 --output reproduced-figures
+python -m zipfile -e studies/codeforces-20261124/data.zip runs/codeforces-study
+python -m experiments.three_arm_analysis --results runs/codeforces-study/combined-results.json --expected runs/codeforces-study/combined-expected.json --phase main --output runs/analysis.json
+python -m experiments.report --study runs/codeforces-study --output runs/figures
 ```
 
-This works locally from the exported results; it does not call a model.
-
-For new evaluations, follow the [execution guide](experiments/README.md).
-The [analysis guide](experiments/analysis_readme.md) explains the metrics, and
-[benchmark usage](benchmark-data/USAGE.txt) covers the source data and attribution.
+This works locally from saved results; it does not call a model. The
+[execution guide](experiments/README.md) covers new runs, validation and metrics.
+[Benchmark usage](benchmark-data/USAGE.txt) describes the source data.
 
 ## Development
 

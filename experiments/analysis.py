@@ -1,6 +1,6 @@
 """Summarize planned runs without treating repetitions as independent tasks.
 
-No third-party packages are required. See analysis_readme.md for the result
+No third-party packages are required. See README.md for the result
 contract, interpretation of the intervals, and command-line examples.
 """
 

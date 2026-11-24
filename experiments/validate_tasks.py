@@ -312,7 +312,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--project", type=Path, default=PROJECT)
     parser.add_argument(
-        "--reviews", type=Path, default=Path(__file__).with_name("validation_reviews.json")
+        "--reviews", type=Path, required=True
     )
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--seed", type=int, default=20261123)
