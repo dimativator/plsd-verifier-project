@@ -1,0 +1,259 @@
+CROSSHAIR: A PRACTICAL GUIDE FOR THIS CODING ENVIRONMENT
+
+Start here: a requested behavioral check must concern code that computes the
+submitted answer and a task-derived property that could reject a plausible wrong
+algorithm. Range/type/safety-only checks are partial checks. A newly extracted
+one-line built-in wrapper compared with the same expression is not an adequate
+behavioral check. Briefly explain the target, legal scope, independent property
+and plausible defect BEFORE the verify action. On the following turn, interpret
+the actual diagnostic BEFORE your next command. No bug or proof is required.
+
+Purpose and scope
+-----------------
+CrossHair executes Python functions with symbolic inputs and searches for ways
+to violate contracts or assertions. It can expose incorrect results, overlooked
+boundaries and runtime errors. It is not the contest judge and it does not know
+the problem statement. YOU select the relevant code, state a real property and
+interpret the returned evidence.
+
+The original task is unchanged: write the complete stdin/stdout program in
+main.py, starting from the supplied blank file. No solver interface or formal
+specification is supplied. Choose your own helpers, types, contracts and checks.
+Only main.py is submitted. Additional check files are local development tools.
+Follow the assigned workflow in your task prompt: access may be optional, or
+the workflow may ask for a relevant attempt. Neither requires successful proof.
+
+Quick workflow
+--------------
+1. Read the statement and implement a plausible complete solution. Run compile
+   and run_tests; their observations matter independently of verification.
+2. Identify an actual algorithm helper or component whose behavior matters.
+   Write down what legal inputs mean and what a wrong answer would violate.
+3. Give that helper type annotations and meaningful PEP316 contracts, or write
+   a typed check function in a sidecar that imports and calls the real helper.
+4. Run verify main.py or verify check_contract.py, then STOP that action and
+   read the actual tool output on the following turn.
+5. If nothing was checked, repair the check setup. For a counterexample, validate
+   its domain and replay it in ordinary Python. If inconclusive, investigate
+   the cause or select a smaller real component/property.
+6. Revise code or the check when the evidence warrants it. Re-run the relevant
+   check and public tests after a fix. Limit your claims to what was checked.
+
+Commands and files
+------------------
+Run from /work, for example:
+    verify main.py
+    verify check_contract.py
+The target must be an existing file under /work. Keep check files in /work.
+The wrapper runs CrossHair 0.0.113 with PEP316 and asserts enabled, reports all
+results, allows 10 seconds per condition and 5 seconds per path, and stops the
+whole verify call after 30 seconds. A timeout is a result to interpret; do not
+launch background verifier jobs. No package installation or network is needed.
+
+The tool imports your file. Protect stdin/stdout execution with:
+    if __name__ == '__main__':
+        main()
+Avoid reading stdin, printing answers or launching computation on import.
+Use the standard library in the submitted program. CrossHair itself is a
+development tool; main.py must run without importing CrossHair.
+
+Use the ordinary shell actions supplied by the agent. Write files with Python
+or a shell heredoc, invoke verify, wait for its real observation, then decide
+the next action. Do not invent a successful result or submit in the same action
+as a check whose output you have not yet seen.
+
+Making a function checkable
+--------------------------
+Type annotations describe symbolic arguments. They DO NOT by themselves create
+a useful checkable entrypoint. A PEP316 docstring in a typed module-level function
+is the simplest starting point:
+    pre: a condition on legal inputs
+    post: a condition on inputs and the returned value
+The special name _ denotes the return value. Write one expression after each
+pre: or post:. Separate lines express separate conditions. Use precise types,
+for example int, str, list[int] or tuple[int, int], rather than leaving the tool
+to guess arbitrary objects. Use normal Python expressions in the conditions.
+
+An ordinary stdin/stdout main() with no symbolic parameters or contracts may
+offer nothing useful to analyze. Adding types to main() does not make the tool
+understand the text input format. You may refactor your own implementation into
+helpers, keeping the required external interface exactly as the statement says.
+
+Preconditions must match legal inputs at the chosen function boundary. Include
+relevant ranges, alphabet, lengths, shape, ordering, distinctness or structural
+conditions when the statement/caller actually guarantees them. A helper may
+have a narrower domain than raw task input ONLY when the real caller establishes
+that invariant; check that connection yourself. A counterexample on an illegal
+input is feedback about the check's domain, not automatically a solver bug.
+
+Do not exclude a legal troublesome case, assume the desired answer, or impose
+arbitrary small bounds just to get confirmation. If you deliberately investigate
+a bounded slice, label it as such and retain the full task requirements. A
+bounded check can find a real bug; passing it cannot establish the unbounded
+claim. Ensure preconditions have real feasible inputs rather than silently
+making the checked set empty.
+
+Choosing a meaningful property
+-----------------------------
+Choose a property which could fail on a plausible incorrect implementation.
+General categories include a required boundary result, feasibility of a returned
+object, conservation/count relationships, a specified ordering or invariance,
+or agreement with an independently reasoned tiny-case calculation. YOU derive
+the actual property from THIS task. A safety property such as absence of an
+index error can be relevant, but it does not state the required answer. Say
+explicitly when a check covers only one component.
+
+A result-range assertion alone often permits many wrong answers. A postcondition
+of True can help search for exceptions but specifies no functional behavior.
+Repeating the exact implementation expression as the expected expression may
+merely repeat its bug. Prefer a logically justified description of the required
+behavior. Do not replace the implementation with a second algorithm and verify
+only that second algorithm. A sidecar must execute the code you will submit.
+
+Practical bounded behavioral checks
+----------------------------------
+When a full symbolic input domain is intractable, you may write your OWN sidecar
+that constructs tiny legal instances, calls the actual imported solver/component,
+and checks an independently reasoned definition, exhaustive tiny-case oracle,
+required boundary behavior or justified metamorphic relationship. Derive these
+from the statement yourself. We supply no task-specific oracle, generator,
+signature or contract. Concrete tests you already wrote can suggest properties.
+Choose a property which a plausible wrong algorithm would violate; explain why.
+
+A bounded legal slice is allowed for bug-finding. State its limits honestly;
+do not change the required full-domain solution, call the slice a full proof,
+or exclude inconvenient cases just to obtain confirmation. A component check
+must concern a real part of answer computation, rather than a trivial helper
+introduced solely because its implementation expression is easy to repeat.
+If symbolic checking remains unsupported, explain the attempted behavior and
+limitation after one reasonable fallback where feasible. Concrete independent
+tests remain valuable; do not relabel them as successful symbolic verification.
+
+Synthetic worked example: a clamp operation
+-----------------------------------------
+This invented teaching example is not a benchmark solution or a required task
+interface. Do not paste it into your solution. It demonstrates how to write a
+sidecar for an actual helper and distinguish a weak property from a stronger one.
+Toy requirement: for integers value, lower, upper with lower <= upper, return
+the nearest endpoint when outside the interval, otherwise return value.
+
+Example main.py (the real implementation being checked):
+
+    def clamp(value: int, lower: int, upper: int) -> int:
+        return max(lower, min(value, upper))
+
+Example check_contract.py (an agent-authored local check):
+
+    from main import clamp
+
+
+    def check_clamp(value: int, lower: int, upper: int) -> int:
+        """
+        pre: lower <= upper
+        post: lower <= _ <= upper
+        post: _ == (lower if value < lower else upper if value > upper else value)
+        """
+        return clamp(value, lower, upper)
+
+Run verify check_contract.py. This setup has been tested with the installed
+tool: both postconditions are reported as confirmed for the correct helper.
+The domain includes all legal integers; there is no arbitrary size cutoff.
+
+Now suppose the actual helper accidentally uses upper - 1:
+
+    def clamp(value: int, lower: int, upper: int) -> int:
+        return max(lower, min(value, upper - 1))
+
+With the same sidecar the installed verifier finds a diagnostic such as:
+    error: false when calling check_clamp(1, 0, 1) (which returns 0)
+The bounds-only property passes on this case: 0 is in [0, 1]. The behavior
+property fails: value 1 is already in the interval and must remain 1.
+
+Replay that exact case in ordinary Python against the actual helper:
+
+    python - <<'PY'
+    from main import clamp
+    value, lower, upper = 1, 0, 1
+    assert lower <= upper
+    actual = clamp(value, lower, upper)
+    expected = lower if value < lower else upper if value > upper else value
+    print({'actual': actual, 'expected': expected})
+    assert actual == expected
+    PY
+
+For the buggy helper this prints actual 0, expected 1 and fails the assertion.
+Fixing upper - 1 to upper, then repeating replay and verification, checks the
+repair. This demonstrates tool operation, not benchmark accuracy improvement.
+
+Contracts directly in a submitted helper are also supported. Use either that
+approach or an importing sidecar as appropriate. Do not keep a stale copied
+helper in a check file while editing a different implementation in main.py.
+
+Assertions: an assumption trap
+-----------------------------
+The wrapper also enables CrossHair's asserts mode. Leading assertions in a
+function are treated as INPUT ASSUMPTIONS. A functional assertion accidentally
+placed first may therefore be assumed rather than tested. Prefer explicit
+PEP316 pre/post conditions when starting out. If using assertions, the conceptual
+order is:
+    assert legal_domain(x)          # an assumption about the input
+    result = actual_function(x)     # run the actual implementation
+    assert desired_property(x, result)  # a checked assertion
+The names here are placeholders, not available tools or supplied functions.
+Normal Python assertions can still be useful for concrete tests; the distinction
+above concerns symbolic entrypoint analysis.
+
+Reading diagnostics and responding
+---------------------------------
+* "Targets found, but contain no checkable functions": no useful property was
+  analyzed. A zero exit status does not change this. Inspect whether your target
+  has an importable typed function with a recognized contract/assertion. Add a
+  relevant property, correct syntax/target/imports, and retry where feasible.
+  Function names starting with an underscore are supported by this installation;
+  renaming alone is not a reliable remedy for an empty check.
+* A false postcondition/assertion with "when calling ...": a candidate
+  counterexample. Read argument values and return/exception details. Check all
+  statement and helper-domain constraints, replay against the actual code in
+  ordinary Python, then decide whether code, property or precondition is wrong.
+  For a helper case, assess whether the real program can reach it. If feasible,
+  turn it into an end-to-end input as well. Preserve a legal failing case as a
+  regression check and re-run it after the repair.
+* An exception: distinguish an actual legal-input runtime defect from an import
+  side effect, unsupported symbolic operation, invalid input or broken harness.
+  Replay a concrete case where available; inspect the diagnostic location.
+* "Not confirmed", exhaustion, timeout or unsupported operations: inconclusive.
+  The tool may have explored too little. Try a simpler relevant property or a
+  smaller actual helper. Avoid repeatedly running an unchanged empty/unsupported
+  check or rewriting the task merely to make the verifier green. Concrete tests
+  remain useful when symbolic execution cannot handle a component.
+* "Confirmed over all paths": a positive report for that WRITTEN condition,
+  with its types, assumptions, symbolic model and selected function. It does
+  not validate a mistaken specification, unchecked parsing, the caller's domain
+  guarantees, time complexity or the whole contest program. Check that the
+  condition expresses something relevant and the domain is not vacuous.
+
+Contracts on called helpers may be used modularly as ASSUMPTIONS by the analyzer.
+For an importing sidecar, either leave the imported implementation without
+contracts so its body is explored, or ALSO run verify on the module containing
+those contracts and inspect their results. Do not copy the desired property into
+a helper docstring and verify only a wrapper that assumes it. A synthetic probe
+with this installed version confirmed that such a wrapper can report confirmation
+even when the contracted helper's body is buggy; checking the helper itself
+finds the counterexample. An assumed postcondition is not independent evidence.
+Complex graph structure, long loops, recursion, mutation and some library
+operations can impede exploration. Selecting a tractable actual component is
+reasonable; be explicit about the portion left unchecked.
+
+What counts as a meaningful interaction
+--------------------------------------
+An invocation alone is insufficient. Aim to connect the actual implementation,
+a relevant nonvacuous property, the legal domain, the returned diagnostic and a
+reasoned next action. That action can be a justified code repair, correction of
+a genuinely missing domain assumption, a better check after an empty attempt,
+or an explanation of an inconclusive/limited result followed by concrete tests.
+A meaningful interaction need not find a bug or obtain confirmation. An empty
+check, irrelevant toy check, unsupported "proof" claim or ignored counterexample
+does not become meaningful merely because verify was invoked.
+
+Before submitting, run compile and run_tests again after code changes. Submit
+the required complete main.py; keep development checks separate if desired.

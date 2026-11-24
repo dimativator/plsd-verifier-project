@@ -1,0 +1,1013 @@
+{
+  "schema_version": 1,
+  "review_method": "Explicit statement-output review by the assistant on 2026-11-23; deny by default for unreviewed output contracts, construction witnesses, numeric tolerances, missing images, or unresolved ambiguity. Input statement sections are retained in the manifest; exhaustive input-domain proof is not claimed. Source-private tests only. Full-statement ambiguity scan was also reviewed; cf-91-E rejected because a witness permission appears before its Output section.",
+  "calibration_ids": [
+    "cf-231-E",
+    "cf-1184-A2",
+    "cf-1120-C",
+    "cf-165-D",
+    "cf-1487-E",
+    "cf-838-C",
+    "cf-1384-E",
+    "cf-1119-H",
+    "cf-1495-E",
+    "cf-1197-F"
+  ],
+  "reviews": {
+    "cf-926-H": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the maximum possible total beauty of a bouquet of k roses that satisfies the constraints above. If it is not possible to make a single such bouquet, print -1.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "aca7cb1b2e5db938ad5f360129a4064976e8d3f85a3d1007119a44a70fefa34e",
+      "status": "accepted"
+    },
+    "cf-1397-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer, the minimum time to finish the game.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "600e30c720b10beff9af29a10ab88db8859f9068f9dd4635ed2535c4405bc7c5",
+      "status": "accepted"
+    },
+    "cf-855-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "You have to output q lines, each containing a single integer, the answer to the corresponding query.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "6ffed360f6afbe7d5a528abe8fd2f6d43502d8b641d31fae5deb6b59d59c7fa9",
+      "status": "accepted"
+    },
+    "cf-1353-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each test case, print the answer — the minimum number of operations you have to perform to obtain at least one suitable path from the cell (1, 1) to the cell (n, m). It is guaranteed that the answer exists.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "ad1a795888589c9c32063ca8514869e7eec29a3d5a34c6c100f1b519cd72129c",
+      "status": "accepted"
+    },
+    "cf-1500-B": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the single integer — the index of day when Vasya will become angry.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "607d0322d72bd192a70b7b525fb224853187462ce6d0affab799e49f334b10c3",
+      "status": "accepted"
+    },
+    "cf-208-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print m space-separated integers — the answers to Polycarpus' queries. Print the answers to the queries in the order, in which the queries occur in the input.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "ce2d8a45386c4122202432d5d0d2b05a5899d852fbaabbc4f864125b9ff0dcf9",
+      "status": "accepted"
+    },
+    "cf-575-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output should contain a single number which represents the best result (minimum cost) that could be obtained by playing this Bulbo game.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "813c54b7f16d1dfc468074a8dac66a894b3d3763cc341e38dbaf864da6c9a09c",
+      "status": "accepted"
+    },
+    "cf-1101-G": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the maximum number of segments the array can be divided into while following the given constraints. Print -1 if no suitable division exists.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "6f591cf93e9ad8500c81ee73af2ec671616770403f5fb93ed6b8f214a26be186",
+      "status": "accepted"
+    },
+    "cf-209-B": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single number — the minimum number of pixel fights before the country becomes peaceful and prosperous. If making the country peaceful and prosperous is impossible, print -1.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "19965c81d9d1f63d4595719ea815c56e6641ce77366158eb31aec9eaa8db5e24",
+      "status": "accepted"
+    },
+    "cf-1310-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output a single integer — total cost of the cheapest Masha's successful journey.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "ccec22eb161f7e9317e2a52b3e67a1a93346034478cab337a0ec764c7fa1056d",
+      "status": "accepted"
+    },
+    "cf-1399-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each test case, print the answer: the maximum possible size of the subset of the given set of segments such that each pair of segments in this subset either non-intersecting or one of them lies inside the other one.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "d4548a8a8e150bf8ef06c85be9c533ddfe9c1de9af1274e5f2ff64284001f347",
+      "status": "accepted"
+    },
+    "cf-1408-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer: the minimum number of moves you need to perform to reach a safe configuration.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "e526824fd38d5dad97525da647198240fef89ba8aaebb769ddea3ad973313165",
+      "status": "accepted"
+    },
+    "cf-374-D": {
+      "checker": "tokens",
+      "output_requirement": "In a single line print a sequence of numbers 0 and 1 — the elements of the sequence after all events happen. Print the elements of the sequence in the order from the beginning to the end of the sequence.\n\nIf after all events the sequence ends up empty, print \"Poor stack!\".",
+      "rationale": "The complete resulting bit sequence is deterministic; literal tokens preserve significant leading zeroes and the Poor stack! sentinel.",
+      "prompt_sha256_lf": "6b51731554952e2df70d8eb6f087bb2057b3555ddd4e722c80ade3ba6ea21735",
+      "status": "accepted"
+    },
+    "cf-621-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the number of ways to pick exactly one digit from each blocks, such that the resulting integer equals k modulo x.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "a0bb35224ba15654cc055d77f4a029dcaf46b60a990b29aaa645daaf553cfc04",
+      "status": "accepted"
+    },
+    "cf-343-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each type 3 operation print 1 on a separate line if the vertex is full, and 0 if the vertex is empty. Print the answers to queries in the order in which the queries are given in the input.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "923c5fffb9a248e08afa69ce67353d91a62a4f7f11340b0419b10a255d48a532",
+      "status": "accepted"
+    },
+    "cf-710-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the only integer t — the minimum amount of time needed to generate the input file.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "24a67c76c70c72161a6607001b342089da3a68b573bf2ed36f1c4d0c3dfc9166",
+      "status": "accepted"
+    },
+    "cf-1184-B2": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single integer, the minimum cost in terms of gold.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "7d619997ea032b0bffa4109be886ffcf2121e2176b3569e1e528fd00853c52ee",
+      "status": "accepted"
+    },
+    "cf-1281-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each test case, output a single line containing two space-separated integers G and B.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "1bf37251f9a2284c1c277a93bd3617abb9692b7b01f5801d76fca082550be5da",
+      "status": "accepted"
+    },
+    "cf-39-A": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output a single number — the maximal possible value of the expression.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "4aaff609c3ab5d1d398b2b22b9b123cb465fe3fa374e45d3b591035494979643",
+      "status": "accepted"
+    },
+    "cf-852-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output a single integer that represents the minimal time the teams can move for, such that they end up in at least K different cities or output -1 if there is no solution.\n\nIf the solution exists, result will be no greater than 1731311.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "424113e5b983b42bdd82fccba937210e84b318e9e963e1e57ee3b489e4063bc3",
+      "status": "accepted"
+    },
+    "cf-1176-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer — the maximum damage you may deal.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "1ffd16803b30f888adb016bb0e4704073635701f620c10be7239ef4dadbb55d9",
+      "status": "accepted"
+    },
+    "cf-883-C": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the minimum amount of money that Polycarp needs to pay to download B++ compiler no more than in T milliseconds. If there is no solution, print the only integer -1.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "d34747717e8fbf8f47cf07bb0b22214b18e199a16716f7bed307eec9019a1ec2",
+      "status": "accepted"
+    },
+    "cf-954-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the number of different paths from (2, 1) to (2, m), taken modulo 109 + 7. If it is impossible to get from (2, 1) to (2, m), then the number of paths is 0.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "aecd536608e9b3b4cf78d4ed60f345f393b6b233c4512827d07c6988f376ba1e",
+      "status": "accepted"
+    },
+    "cf-731-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer — the difference between the Petya's score and Gena's score at the end of the game if both players play optimally.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "161e050e27b55d441cc32e55683bf85581aa8b048f4db1a327a8817687c70d06",
+      "status": "accepted"
+    },
+    "cf-926-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the number of days from the 1-st to the m-th such that the account will have a negative amount on it after the daily payment.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "49882a43575ee5f0e4f823d6d8b3cb484c4e02787df72aa89c711111edb7f45c",
+      "status": "accepted"
+    },
+    "cf-128-D": {
+      "checker": "tokens",
+      "output_requirement": "Print the single line \"YES\" (without the quotes), if Anna could have completed the task correctly using all those numbers (using all of them is necessary). If Anna couldn't have fulfilled the task, no matter how hard she would try, print \"NO\" (without the quotes).",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "acccd989a6a29f3ffb31cb2b50fe1fa87d5a38a08e374224505c277a7c301f67",
+      "status": "accepted"
+    },
+    "cf-1271-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the only integer — the maximum value that is contained in at least k paths.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "273e2d590d8d87cbff61d92b997efac15e323421ccb567d0d769e4d686a68efe",
+      "status": "accepted"
+    },
+    "cf-73-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single number, the minimum number of additional roads.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "1400039793d61fe4da8b20cf8161e5fc0975a1e3ee49852b8eac87f783c4b223",
+      "status": "accepted"
+    },
+    "cf-522-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print m integers — the answers to each query. If there is no valid match for some query, please print -1 as an answer to this query.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "6506e4524fe3225a964158516213d23a923a5a90a4660313a6ced7c08648a5e4",
+      "status": "accepted"
+    },
+    "cf-985-E": {
+      "checker": "tokens",
+      "output_requirement": "Print \"YES\" if it's possible to distribute all the pencils into boxes and satisfy all the conditions. Otherwise print \"NO\".",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "8e727642d084e4b0f9bae3b5764f4a8e3a094dfd279e8a77f54e9cbdd4544ec7",
+      "status": "accepted"
+    },
+    "cf-1009-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one number — p ⋅ 2^{n - 1}, taken modulo 998244353.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "cef3925fb233d16afa20f73fc8d3dd4d16fa68000ed3afb2929ae27cce8a1273",
+      "status": "accepted"
+    },
+    "cf-774-J": {
+      "checker": "tokens",
+      "output_requirement": "If Stepan's dissatisfaction can be exactly equal to k, then print \"YES\" (without qoutes). Otherwise print \"NO\" (without qoutes).",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "d1ed967540696e117158d33122e1af9f5117141251ae69135a4f1ff58c0a8dd6",
+      "status": "accepted"
+    },
+    "cf-1493-C": {
+      "checker": "tokens",
+      "output_requirement": "For each test case output in a separate line lexicographically smallest beautiful string of length n, which is greater or equal to string s, or -1 if such a string does not exist.",
+      "rationale": "The statement explicitly requires the lexicographically smallest string, making the result unique; literal tokens preserve the string.",
+      "prompt_sha256_lf": "51141cfc9138d60e0e3d837201919fa275e98e8d0b58f3cfcc2fae6e88fdc065",
+      "status": "accepted"
+    },
+    "cf-1513-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output a single integer — the number of balanced permutations modulo 10^9+7.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "c3e267ead1e5b7eac93c45e7fd665c0ad11fc3de2f8c5da37deb0cce05528dc1",
+      "status": "accepted"
+    },
+    "cf-10-C": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output one number — the amount of required A, B and C from the range [1, N].",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "e69fa3170f6322ab19288fd2982aec53fd4e518245cbfd27ee05858331c4089c",
+      "status": "accepted"
+    },
+    "cf-884-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one number — the minimum possible penalty of the game.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "61dd1781068edc85fe6864c71bf83aca85d5bab7b54cc011aa037132059c554f",
+      "status": "accepted"
+    },
+    "cf-690-D3": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output the number of different walls, modulo 106 + 3, which are useless according to Heidi's criteria.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "cce3a5b898a32effc5c0ee89d8a5407da57832c368f25b4a0725d90185d2f327",
+      "status": "accepted"
+    },
+    "cf-1167-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the number of pairs 1 ≤ l ≤ r ≤ x such that f(l, r) is sorted in non-descending order.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "64611a8510d1ce8c810c39827fe0193e46283c0a708764c2e5967c57b9cd9d16",
+      "status": "accepted"
+    },
+    "cf-1184-C2": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer — the maximum number points that an L^1-ball with radius r can cover.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "cac33ed61f727afbdec249323e5acd086b37fb87f2bdc32c41834917e003a26c",
+      "status": "accepted"
+    },
+    "cf-799-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the minimum number of extensions needed to reach Arkady's goal. If it is not possible to place the rectangle on the field with all extensions, print -1. If the rectangle can be placed on the initial field, print 0.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "361bcab98b7fcf998c99deef429c6c30b94b17f7bd6d2b7d444071649ec1f75a",
+      "status": "accepted"
+    },
+    "cf-567-E": {
+      "checker": "tokens",
+      "output_requirement": "Print m lines. The i-th line should contain information about the i-th road (the roads are numbered in the order of appearance in the input).\n\nIf the president will definitely ride along it during his travels, the line must contain a single word \"YES\" (without the quotes).\n\nOtherwise, if the i-th road can be repaired so that the travel time on it remains positive and then president will definitely ride along it, print space-separated word \"CAN\" (without the quotes), and the minimum cost of repairing.\n\nIf we can't make the road be such that president will definitely ride along it, print \"NO\" (without the quotes).",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "31edc596f43ec07fc8099a87a14f55f9ec090331e735d2c271a343ac0e278076",
+      "status": "accepted"
+    },
+    "cf-895-C": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer — the number of different ways to choose some elements so that their product is a square of a certain integer modulo 109 + 7.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "d03dff61e3293d8d6dbdc4ef61368e97f91c08763a5247741c792d83da5a4cab",
+      "status": "accepted"
+    },
+    "cf-101-C": {
+      "checker": "tokens",
+      "output_requirement": "Print \"YES\" (without the quotes) if it is possible to get vector B using the given operations. Otherwise print \"NO\" (without the quotes).",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "77c6b411bfbf14ed086528753ca1af74c0e652fa86f5eec8a0cd18f541d6aa6c",
+      "status": "accepted"
+    },
+    "cf-313-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print n m-base digits. The resulting third number written in the m-based notation. Print the digits in the order from the most significant digits to the least significant ones.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "7ef2973e93b975636e43f5788e380b08cf339b89b5feabc7cfc80a562b4a5fd3",
+      "status": "accepted"
+    },
+    "cf-172-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print m lines, the j-th line should contain the number of elements of the document that correspond to the j-th BCSS-rule. If there are no such elements at all, print on the line 0.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "dc7a9974fd1f2054987b263b2e014dc5e3b26f538bfbd2ab67c62a4a9d255827",
+      "status": "accepted"
+    },
+    "cf-1056-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single integer — the number of pairs of strings r_0 and r_1 that transform s to t.\n\nIn case there are no such pairs, print 0.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "27a3b4ef6cdfeeab8219dfcfd57220d2dbc7f813849c3bc58847d32f4b115d97",
+      "status": "accepted"
+    },
+    "cf-362-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single integer — the maximum amount of water that can be transmitted from the main tank to the sewer tank per a unit of time.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "657ef408988178e13a2e2af0c96e7e03ba1de0c46d2281c488e8b72cb7a69b67",
+      "status": "accepted"
+    },
+    "cf-276-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each request to print the node value print an integer — the reply to the request.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "8cf281d81503227102f8f0e19103861aedff4a69eea5b4199e63f7b0c6f90f5a",
+      "status": "accepted"
+    },
+    "cf-256-C": {
+      "checker": "tokens",
+      "output_requirement": "If both players play optimally well and Furlo wins, print \"Furlo\", otherwise print \"Rublo\". Print the answers without the quotes.",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "36b0fdb9080154cfb288f12391fce6d8397108251bc5665366bff7c2a201fda7",
+      "status": "accepted"
+    },
+    "cf-766-D": {
+      "checker": "tokens",
+      "output_requirement": "First, print m lines, one per each relation. If some relation is wrong (makes two words opposite and have the same meaning at the same time) you should print \"NO\" (without quotes) and ignore it, otherwise print \"YES\" (without quotes).\n\nAfter that print q lines, one per each question. If the two words have the same meaning, output 1. If they are opposites, output 2. If there is no relation between them, output 3.\n\nSee the samples for better understanding.",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "808c886551324437d5592d287b92ac9faa4c8e78c98c17600e9ab7a952f883a6",
+      "status": "accepted"
+    },
+    "cf-1117-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer, the total number of configurations of the resulting set of gems, given that the total amount of space taken is N units. Print the answer modulo 1000000007 (10^9+7).",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "4361835f3532387558b5a334dee8129dffcdad3eb4a71528472192003aedad63",
+      "status": "accepted"
+    },
+    "cf-837-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print maximal roundness of product of the chosen subset of length k.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "e68697f345de43346c6818e910cac0bbdb611b93d9dcc7f8da0763899069f1b3",
+      "status": "accepted"
+    },
+    "cf-672-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single line containing the difference between richest and poorest peoples wealth.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "3ee8e9412adaf3421bcdcd259a16988b6f223d5bfc8dcf7e8d5c1fe3becd6aff",
+      "status": "accepted"
+    },
+    "cf-1265-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the answer modulo 998244353 in a single line.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "0fa7009b778482d97da3ff6891e9d8a60a550935966ed6cf8bb3f7b564141c15",
+      "status": "accepted"
+    },
+    "cf-1372-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output the maximum possible circular value after applying some sequence of operations to the given circle.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "9225b92943e1771102b83f71a141c0a73d16cd0509b71f2c40ec92244f3ee92b",
+      "status": "accepted"
+    },
+    "cf-425-B": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print -1, if it is impossible to meet the requirement. Otherwise, print the minimum number of cells which should be changed.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "ea54d4a3237982a6aaeeb47a9d483ae4ee7188f1afe54511a2bc7546e8e76eee",
+      "status": "accepted"
+    },
+    "cf-1525-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "It can be shown that the expected number of points Monocarp conquers at the end of the n-th turn can be represented as an irreducible fraction x/y. Print this fraction modulo 998 244 353, i. e. value x ⋅ y^{-1} mod 998244353 where y^{-1} is such number that y ⋅ y^{-1} mod 998244353 = 1.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "06b8c08ba6ad9fb6f6b2fe0853bfe658ade1e6950cf45ac00fbfacfd00aff532",
+      "status": "accepted"
+    },
+    "cf-762-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output the number of bad pairs of radio stations.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "827fd4a442fdaa26b29fff1da74ad2bccec18bf73052027dad2e866a011e3e9b",
+      "status": "accepted"
+    },
+    "cf-439-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each query, output a single integer in a line corresponding to the answer of each query.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "4598d4307261be3f1919f846587d6988793e8f19eb15357197e408f902706eca",
+      "status": "accepted"
+    },
+    "cf-65-D": {
+      "checker": "tokens",
+      "output_requirement": "Print all the possible houses where Hermione can be sent. The names of the houses should be printed in the alphabetical order, one per line.",
+      "rationale": "All possible house names are required in alphabetical order, fixing the output list.",
+      "prompt_sha256_lf": "e668cad6fec18adba055898b17267b030766d096845bc05bf1fe6b1da4dac27e",
+      "status": "accepted"
+    },
+    "cf-837-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print f(x, y).",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "7c0d133e20063eb47111eac86c0a920284b177ecb0aa297ff7d53ef923af3b5f",
+      "status": "accepted"
+    },
+    "cf-774-B": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the maximum possible total significance, which Stepan can get exposing cups on the shelf with width d, considering all the rules described in the statement.\n\nIf there is no way to expose cups on the shelf, then print 0.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "2d2b2f4cbe4c7a87b3fa334a46f2fd4442470f585ec4903dc89f4ab84199f5ad",
+      "status": "accepted"
+    },
+    "cf-1550-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each test case, print the number of excellent arrays modulo 10^9 + 7.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "bf997207b4abb077dc96126dc15a0b2a92514dd8e4c450583a188432a286d35e",
+      "status": "accepted"
+    },
+    "cf-39-E": {
+      "checker": "tokens",
+      "output_requirement": "Output \"Stas\" if Masha wins. Output \"Masha\" if Stas wins. In case of a draw, output \"Missing\".",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "7de241422eaba61b55c481f1297356fa5ea59b088fb0ce259760a077939c4db3",
+      "status": "accepted"
+    },
+    "cf-1516-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each query, print its answer on a new line.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "f2e4bf147f1291000cce9cb608e4ccec9a74720a9709d207c4f6ced699aedbd0",
+      "status": "accepted"
+    },
+    "cf-1536-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each test case, print one integer: the number of valid configurations modulo 10^9+7.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "21eea01b0c04f071fc7f362345d3e90043e098cd055bd162c2b34b292c392b80",
+      "status": "accepted"
+    },
+    "cf-467-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print two integers — the minimum number of letters «R» in an optimal essay and the minimum length of an optimal essay.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "10a08f0f733dad2696b06360fa47db93a100e5e2859ef3551e3f21a3cdf25128",
+      "status": "accepted"
+    },
+    "cf-1423-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print 1 if the game is a good game: There is a way to do the splitting so the game ends after finite number of iterations.\n\nPrint -1 if the game is a bad game: No matter how You do the splitting the game does not end in finite number of iterations.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "000f3a7e0ba666aa63c58bdd5e1068bc4c3817a557234a2542c2395a225626fd",
+      "status": "accepted"
+    },
+    "cf-425-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "In a single line, print the answer to the problem modulo 1000000007 (109 + 7).",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "3c069b7866045201e1e73cd62db77d30551a3c544caf705ed2fc2ca2c7ecbce4",
+      "status": "accepted"
+    },
+    "cf-1451-F": {
+      "checker": "tokens",
+      "output_requirement": "For each test case, if Ashish wins the game, print \"Ashish\", otherwise print \"Jeel\" (without the quotes).",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "ae9b467b55772cd9b48738453107d344830b4130fc5a1001f38d15a8694b09ce",
+      "status": "accepted"
+    },
+    "cf-1487-G": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer — the number of strings you can build, taken modulo 998244353.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "3af39d795751c7b9b857fccd3c6158a7e81f938b2d63c87a8017731743ef6f5d",
+      "status": "accepted"
+    },
+    "cf-5-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the required amount of pairs.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "c50ca84ac072951973746bc0156efecf15b1aa528a0da1f959e6572be79326c1",
+      "status": "accepted"
+    },
+    "cf-1323-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single integer — the largest profit of the show.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "a9437ca4e8c0bda9ab68131ce01b27ac69e81744497fb49c4c16446fd8ed2bde",
+      "status": "accepted"
+    },
+    "cf-1542-E1": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer, which is the answer modulo mod.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "dfe6102efb10f212b1461ad53d27489545090152d79c58d7dd09b6ebd81e519c",
+      "status": "accepted"
+    },
+    "cf-736-D": {
+      "checker": "tokens",
+      "output_requirement": "Print m lines, one line for each valid pair. The i-th line should contain \"YES\" if after Ostap removes the i-th pair (and only it) the remaining number of valid permutations is odd. Otherwise, print «NO».",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "684fb87e1eb6b505b705e108149ee4ee5b4145f781a92129f4fe38ee3ed7333f",
+      "status": "accepted"
+    },
+    "cf-959-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each query, output its answer modulo 109 + 7 in a newline.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "bed6644307130c5e779feb5275bf0ba5fc25f2e0fd62cb0b551f6772bf354f3f",
+      "status": "accepted"
+    },
+    "cf-295-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "In the single line print the remainder after dividing the answer to the problem by 1000000007 (109 + 7).",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "1dbd2bbf337f1e9298b584ca4eff25a3e27a9b10ba6a2f63283d39ba09756b62",
+      "status": "accepted"
+    },
+    "cf-60-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "The answer should contain a single number which is the total weights of the mushrooms modulo p in the end after x + y minutes.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "d35c6023f1000ec2aefed774d7b7715273cdf475d3048a7b2b66131afde3b145",
+      "status": "accepted"
+    },
+    "cf-1313-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single integer — the maximum number of children that Santa can make happy.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "0f583eeeb18de84a1c5196fce4eb290d62ff1adcc718db3c2a91ba67683e4ef2",
+      "status": "accepted"
+    },
+    "cf-91-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each journalists' query print the number of the walrus x that meets the criteria, given in the statement. Print one number per line.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "95d1085176d9eaa0fcd03ff4af647adaab1df819f57bee970c2113e8f0db093c",
+      "status": "rejected",
+      "exclusion_reason": "Full statement explicitly permits any maximizing walrus; exact token or integer comparison would reject valid tied answers."
+    },
+    "cf-1076-G": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each query of type 2 print 1 if the first player wins in the corresponding game, or 2 if the second player wins.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "0c01d938065bf20ead3bf74b801ef8351cc3e5733584f1a683b1474d5b537249",
+      "status": "accepted"
+    },
+    "cf-360-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "The single number — the size of the union of the sets.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "b95686aa43169e5e9a1410ec96d9795a382c5287aaaf1c20cf7c4189293357f2",
+      "status": "accepted"
+    },
+    "cf-319-E": {
+      "checker": "tokens",
+      "output_requirement": "For each query of the second type print \"YES\" or \"NO\" on a separate line depending on the answer.",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "69edf746e2d41f5137f367571643f4cf346bed23bd1c2dee1b317492a426ebcc",
+      "status": "accepted"
+    },
+    "cf-763-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print q lines. Line i should contain single integer — the answer in the i-th situation.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "773bd4b861204f5076cb2985e92e4c544635e6c5b4d42639dd34f1310ecb7daf",
+      "status": "accepted"
+    },
+    "cf-68-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "First line should contain minimum number of columns enough to land all spaceships.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "849083c8e368366b331610d2c1b7038ae283d20dfdf8d8515b64ea21c5374811",
+      "status": "accepted"
+    },
+    "cf-1184-B3": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single integer, the maximum total profit that can be achieved.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "ec959940a1609e115319af5a43bbae6ac80192ca23f19d5157b9188c624aa741",
+      "status": "accepted"
+    },
+    "cf-176-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each query of type \"?\" print the total length of used roads on a single line. You should print the answers to the queries in the order, in which they are given in the input.\n\nPlease do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use cin, cout streams or the %I64d specifier.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "30c1731f36e5e98235e93bbd4e5552a263f109b0ceeff0f9dc8bb6c1e82ab705",
+      "status": "accepted"
+    },
+    "cf-1209-G2": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print q+1 integers, the answer for the initial sequence and the answer after every update.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "82b0727057aaa67b6d557e1228bb343234f562f39890d101608108afbb944f82",
+      "status": "accepted"
+    },
+    "cf-1421-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the largest possible power he can achieve after n-1 operations.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "25f665de857c18b0639d6ecd365acfe93cc947db2e347a37b976eeb8145e64a9",
+      "status": "accepted"
+    },
+    "cf-1194-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer — the expected value of the number of crosswords Adilbek solves in T seconds, expressed in the form of P ⋅ Q^{-1} mod (10^9 + 7).",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "bc1edba85a135171b6dc1a37af96976fc3f52db97e4516f522d07ee1ec796ff2",
+      "status": "accepted"
+    },
+    "cf-868-E": {
+      "checker": "tokens",
+      "output_requirement": "If the policeman can't catch criminals, print single line \"Terrorists win\" (without quotes).\n\nOtherwise, print single integer — the time needed to catch all criminals.",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "746e8e97b08c7471a5c98075639685e8a3b56d21c5f4bf93d2d4d77d8a43a9e3",
+      "status": "accepted"
+    },
+    "cf-773-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each k from 1 to n, output a single integer equal to the maximum possible community rating of the blog post after users with indices from 1 to k, in some order, visit the blog post page, rate the blog post, and close the page.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "577b8340f927d31a623b6ecfd47967ff31d57ab23acc9675b0006b3e881707da",
+      "status": "accepted"
+    },
+    "cf-611-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one line with the answer.\n\nIf a cleaning robot will never stop, print \"-1\" (without the quotes). Otherwise, print the number of minutes it will take to clean a house modulo 109 + 7.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "75a799f82d02b8be63bb9950eaead6239d01fa9d19615ba4a00356d2dcff7aab",
+      "status": "accepted"
+    },
+    "cf-1517-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output the expected level modulo 998 244 353.\n\nFormally, let M = 998 244 353. It can be shown that the answer can be expressed as an irreducible fraction p/q, where p and q are integers and q not ≡ 0 \\pmod{M}. Output the integer equal to p ⋅ q^{-1} mod M. In other words, output such an integer x that 0 ≤ x < M and x ⋅ q ≡ p \\pmod{M}.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "e8a8cedd6ee447cd010725554883aa5a2a323d132d1e5e35a0d6a203e2672b28",
+      "status": "accepted"
+    },
+    "cf-83-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print on a single line the answer to the given problem.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "1085fb2e7dfbdd716093a1104078cdd413cccd927c093f9c032446208f10d20d",
+      "status": "accepted"
+    },
+    "cf-1401-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the answer for each Sum query.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "8c9ac7b8a0abbfd11f09886fb3c8e369e8dde920aef49f5cd7742fa3dac483b3",
+      "status": "accepted"
+    },
+    "cf-1458-E": {
+      "checker": "tokens",
+      "output_requirement": "For each initial position, on a separate line print \"WIN\" if the starting player is able to win from this position, and \"LOSE\" otherwise.",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "01e407b17b8c765cea3deae9217a7951eb99c853187e4a601d9486d02812430a",
+      "status": "accepted"
+    },
+    "cf-1091-H": {
+      "checker": "tokens",
+      "output_requirement": "Output two lines. \n\nThe first line should contain the name of the winner when Alice starts, and the second line should contain the name of the winner when Bob starts.",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "b55c7fcfe9f47adb2999da86dcd84fbad782a4918c830b3235239530293a64c3",
+      "status": "accepted"
+    },
+    "cf-685-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print n integers: the number of squares of size k × k containing exactly 1, 2, ..., n pieces of the ice.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "a7d658c51190e3477871a51d76f09669da4f6bb7e6465f31547bcc91f1f76d6d",
+      "status": "accepted"
+    },
+    "cf-1184-E3": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output m lines, each containing one integer: E_{max}(c_i) for the i-th Corridor c_i from the input.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "b976456a378f9547f9438b1f7b082dc0b121aca87fe763cfe049454c9fe2016b",
+      "status": "accepted"
+    },
+    "cf-1442-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer: the maximum possible sum of all elements in Vasya's pocket after k operations.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "e408a54a75d1885ae5559251df279077d7f0726f39d828c0e02db7e99704e5a3",
+      "status": "accepted"
+    },
+    "cf-1320-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print q lines. The i-th line should contain m_i integers — indices of virus species that cities u_1, …, u_{m_i} are infected with at the end of the i-th scenario.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "aad7e34e91638c38156a3b74f6e281d8daf1dc2a0159c3fdbf4e2f76e457c75d",
+      "status": "accepted"
+    },
+    "cf-718-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print two integers — the diameter of the graph and the number of pairs of positions with the distance equal to the diameter.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "d760ec758f88fd8992bf8b1591530665523fee1be5a9116e6c1f9b6cf014465d",
+      "status": "accepted"
+    },
+    "cf-698-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print n lines, the i-th of them should contain the first moment of time strictly greater than ti, when the task should be executed.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "2054d2ac8e9bc7e0b493593c476ce0a2cbaeff24724df95f9618570c68f808b6",
+      "status": "accepted"
+    },
+    "cf-67-C": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single integer representing minimum time to convert A into B.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "a9edcc758878cf46504fcdde193ea0a454b5eebca10153deda52f08ceee4da87",
+      "status": "accepted"
+    },
+    "cf-1393-E2": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer: the number of ways to get a version of the original from the scroll modulo 10^9+7.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "f8239e26b1b1ebf4f7e625cfd74b389e816864708babb2c3952c68caa71f1659",
+      "status": "accepted"
+    },
+    "cf-919-F": {
+      "checker": "tokens",
+      "output_requirement": "Output T lines. For each situation, determine who wins. Output \n\n  * \"Alice\" (without quotes) if Alice wins. \n  * \"Bob\" (without quotes) if Bob wins. \n  * \"Deal\" (without quotes) if it gets into a deal, i.e. no one wins.",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "eb9e7fbfc2eacf949c95fac8faf386ac134a5d782cddb0b08c9b7f10fa29310c",
+      "status": "accepted"
+    },
+    "cf-280-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each query to count the maximum sum of at most k non-intersecting subsegments print the reply — the maximum sum. Print the answers to the queries in the order, in which the queries follow in the input.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "b23f8797c47884fd98c77a02873aec5bfe1c2d6290c99edda2f60c9164ac6d74",
+      "status": "accepted"
+    },
+    "cf-713-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print t lines. The i-th of them should contain the maximum size of the square consisting of 1-s and lying fully inside the query rectangle.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "20ac96aa1b5e5375a02acf669b38468b6e76359a72ec4732d7996b5011a72552",
+      "status": "accepted"
+    },
+    "cf-722-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print m integers, the i-th of them should be equal to the length of the longest segment of the array with all its values equal to i during the first 10100 seconds.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "fe6a5730761c33902724d7e42e819034b70e0efcce40e3aa2c597625b227e207",
+      "status": "accepted"
+    },
+    "cf-121-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print on the single line the single number — the answer to the problem.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "56f4f9a57a814f89e22f523fb97e8eb119320957b2ad404f5f84a4d2c5373e67",
+      "status": "accepted"
+    },
+    "cf-845-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output the number of suitable plans modulo 109 + 7.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "a0d2e650f00d5b6b2f215f74768e8f15bc8700be1f3e7f5fc5983a291bea604f",
+      "status": "accepted"
+    },
+    "cf-256-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single integer — the answer to the problem modulo 777777777.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "984eb938ea21d443acf163547e8fcfef0a3b9f780e51a4bd133a6f5072fc50e2",
+      "status": "accepted"
+    },
+    "cf-261-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "In a single line print a single integer — the answer to the problem.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "609164b1c931bffa396f033fe3dd61264e208cf01d225705cf45f995c9902167",
+      "status": "accepted"
+    },
+    "cf-544-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single number — the answer to the problem.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "ee4e86d6ce45de5e40f0cb3372c586a583ed50b2790a8c662bae92b7f6a72978",
+      "status": "accepted"
+    },
+    "cf-1107-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer — the maximum price of the car.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "a97661a85398488b9177152f1f3996b54f42dc1339bbe687fa3eb5022b328f0b",
+      "status": "accepted"
+    },
+    "cf-1043-G": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output q lines, where the i-th of them should contain the result of the game on the segment [l_i, r_i].",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "9c7072307dc5644fbe0f301ae38d730dfe4a9c7750c88e9b94b36885aa733c77",
+      "status": "accepted"
+    },
+    "cf-827-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each test case print two lines. In the first line print the number of possible periods after we replace each unreadable letter with \"V\" or \"K\". In the next line print all these values in increasing order.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "005f3537efec5e77e3e988d53ade8b9b70b9645cf4202658527a219b97266632",
+      "status": "accepted"
+    },
+    "cf-878-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each option output Sasha's result modulo 109 + 7.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "64ea32fcf450076161cd2c01a130d20155e07989e9fe52b664e98fd17f6bc2f6",
+      "status": "accepted"
+    },
+    "cf-121-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each operation of the second type print the single number on the single line — the number of lucky numbers in the corresponding interval.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "ae78cb2f93f9d1203de818c4a1fa0f029cda2cef3cbbbe56ba3a40af907b32bb",
+      "status": "accepted"
+    },
+    "cf-1418-G": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer — the number of good subarrays of the array a.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "f5903d83a6232679304fce6fbf530023f2d1c4566ae6376422b133cb7e4f738d",
+      "status": "accepted"
+    },
+    "cf-1456-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output one integer — the minimal cost of an array satisfying all the restrictions.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "66bbdb5daf758b09aabeac6d5cc4595a13a2148e9fa38888b854144bc9e8fa58",
+      "status": "accepted"
+    },
+    "cf-1535-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer: ∑ _{i = 1}^{n} ∑_{j = i + 1}^{n} f(s_i, s_j).",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "4f111f93f99b3c9d45bed8a67d1b15291e1cd262bbd0f810b5bea271723dac79",
+      "status": "accepted"
+    },
+    "cf-70-D": {
+      "checker": "tokens",
+      "output_requirement": "For each query of the second type print one string containing \"YES\", if the point lies inside the convex hull or on its border. Otherwise, print \"NO\".",
+      "rationale": "A deterministic decision/winner or fixed classification per query is required; exact whitespace tokens preserve the specified labels and any associated unique numeric values.",
+      "prompt_sha256_lf": "71aaa6d52ce1e9b7be6e963a94b217ae3c646f1c89b185dbb57f5d328956369b",
+      "status": "accepted"
+    },
+    "cf-718-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer — the answer to the question.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "5e81c2d8b0aa7c92bf4349883867eb39f29f55418a9c86dd051a909b079874cf",
+      "status": "accepted"
+    },
+    "cf-1056-G": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output the only integer — the station where Arkady will exit the metro.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "75e7cad8138d3d28ca70687ce79bc08fa3080957dc34a3162905f2c25c269b54",
+      "status": "accepted"
+    },
+    "cf-995-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output a single integer: the number of ways to assign salaries modulo 10^9 + 7.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "51438b3ddf5e7f7b40485adbc3aaf55d0667d226480f852fa4df08b732e824a4",
+      "status": "accepted"
+    },
+    "cf-1528-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single integer — the answer to the problem modulo 998244353.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "d0942a77879075d02b6f0fd87b827b868fe71a71b0f2913d1ed49bc8921927ae",
+      "status": "accepted"
+    },
+    "cf-930-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print the only line — the number of ways to choose the side for each coin modulo 109 + 7 = 1000000007.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "f15db805beb95fa1b3f5e37f55101afc55fa9cddbf0149148e6a016ab8aea312",
+      "status": "accepted"
+    },
+    "cf-1149-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output a single line containing n integers. The p-th of them should denote the minimum possible time required to travel from 1 to p after the selected roads are abandoned. Note that for each p you can abandon a different set of roads.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "7a78dd0406d73957f454812602e957b905e5c4cb446dea691bdd0bbc966166b8",
+      "status": "accepted"
+    },
+    "cf-986-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print q numbers — the answers to the queries in the order they are given in the input. Print each answer modulo 10^9+7 = 1000000007. Print each number on a separate line.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "6334c144268db93d9c502a85ab25ef9357c7a9880eeeb4f9ac5a895a165b2b5a",
+      "status": "accepted"
+    },
+    "cf-1276-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single integer — the number of distinct strings of s, t_1, …, t_n.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "23f93ba221829d52ab333f94b19ac7274d26285ad913c0ad9afec0ccbc3a3109",
+      "status": "accepted"
+    },
+    "cf-231-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print k lines: in the i-th line print a single integer — the number of distinct simple ways, starting at xi and ending at yi, modulo 1000000007 (109 + 7).",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "488562cbb97f2949fc00396cff03033db5ea0689fecbcda7c806b1d50b521ce8",
+      "status": "accepted"
+    },
+    "cf-1184-A2": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output a single integer: the number of suitable values of k.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "695ce1ecef7a0ed69352cbdb731f7496440096935d4f73ef3a6d46ed23cfd169",
+      "status": "accepted"
+    },
+    "cf-1120-C": {
+      "checker": "integer_tokens",
+      "output_requirement": "Output a single integer — the smallest possible number of coins you need to spend to compress s.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "91132c9e61b13123a86b83bc99ccec3e9de6bb432dbd2291e3fea21e0435c9c7",
+      "status": "accepted"
+    },
+    "cf-165-D": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each request to \"find the distance between vertices a and b\" print the result. If there is no path going only along the black edges between vertices a and b, then print \"-1\" (without the quotes). Print the results in the order of receiving the requests, separate the numbers with spaces or line breaks.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "99f0a01ac0fd7d6f4bc6abc2236f88ea68ff7391e2c5597b4068c6d388197935",
+      "status": "accepted"
+    },
+    "cf-1487-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "If it's impossible to choose a first course, a second course, a drink, and a dessert so that they go well with each other, print -1. Otherwise, print one integer — the minimum total cost of the dinner.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "32685bf9baf569d96935a64811d3d892f0f5768f6316b39d3c052e07063c4318",
+      "status": "accepted"
+    },
+    "cf-838-C": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single integer, the number of winning words for Alice, modulo p.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "f5b672f2f44bd39543f9e4d423e000f64d4b51a3517c6455487041a6c334cf86",
+      "status": "accepted"
+    },
+    "cf-1384-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "For each test case:\n\nPrint on a single line the smallest number of moves she has to do to make strings equal to each other (A = B) or -1 if there is no way to make them equal.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "639e7f1d9e2530bb5e45c8927ce1a5b0af759532b8cc06f188aba2ee2b02fba7",
+      "status": "accepted"
+    },
+    "cf-1119-H": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single line containing 2^{k} integers. The i-th of them should be the number of ways to choose exactly one integer from each array so that their XOR is equal to t = i-1 modulo 998244353.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "0b867b351c6a6e9da2839114b5cf864c18b406e8164035e55649a0da060fd25b",
+      "status": "accepted"
+    },
+    "cf-1495-E": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print a single integer \\left( ∏_{i=1}^{n} ((ans_i ⊕ i^2)+1)\\right) mod 10^9+7, where ⊕ denotes the [bitwise XOR operation](https://en.wikipedia.org/wiki/Bitwise_operation#XOR).",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "201184e9bc6e8eb15113b072ddb7c2d9534df554cb90b7622855981b9628d349",
+      "status": "accepted"
+    },
+    "cf-1197-F": {
+      "checker": "integer_tokens",
+      "output_requirement": "Print one integer: the number of good colorings, taken modulo 998244353.",
+      "rationale": "The required output is a unique count, optimum value, deterministic scalar, or ordered per-query numeric vector; compare integer tokens rather than one arbitrary witness.",
+      "prompt_sha256_lf": "c88524ad0bf5847170f85da156b210a445778b3e819f3fc28ee086c8148069a1",
+      "status": "accepted"
+    }
+  }
+}

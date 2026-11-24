@@ -1,0 +1,86 @@
+{
+  "model": "gpt-5.6-luna",
+  "points": {
+    "baseline": {
+      "label": "Baseline",
+      "accuracy_percent": 82.5,
+      "accuracy_ci95_percent": [
+        76.75,
+        87.75
+      ],
+      "mean_all_attempt_cost_usd_per_task": 0.0194214220875,
+      "cost_ci95_usd_per_task": [
+        0.0166914453809375,
+        0.022366719200312496
+      ],
+      "evaluations": 800,
+      "independent_task_families": 100,
+      "repetitions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "verifier": {
+      "label": "Optional verifier",
+      "accuracy_percent": 81.375,
+      "accuracy_ci95_percent": [
+        75.75,
+        86.75
+      ],
+      "mean_all_attempt_cost_usd_per_task": 0.016179996375,
+      "cost_ci95_usd_per_task": [
+        0.013804955863437501,
+        0.01893832614
+      ],
+      "evaluations": 800,
+      "independent_task_families": 100,
+      "repetitions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "guided_verifier": {
+      "label": "Instructed verifier",
+      "accuracy_percent": 85.5,
+      "accuracy_ci95_percent": [
+        79.875,
+        90.625
+      ],
+      "mean_all_attempt_cost_usd_per_task": 0.019681414775,
+      "cost_ci95_usd_per_task": [
+        0.017163817592187502,
+        0.022610695685312498
+      ],
+      "evaluations": 800,
+      "independent_task_families": 100,
+      "repetitions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 20261123,
+  "method": "Rating-stratified family bootstrap; keep all repetitions and both metrics together.",
+  "intervals": "95% marginal percentile intervals on each axis, not a joint 95% region.",
+  "cost_definition": "All-attempt accounted API cost per planned evaluation, including infrastructure retries and conservative uncertain charges; preparation excluded.",
+  "inference_scope": "Comparable task families; excludes invoice uncertainty and separate fixed-benchmark Monte Carlo inference."
+}

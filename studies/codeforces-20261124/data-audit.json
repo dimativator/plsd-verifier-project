@@ -1,0 +1,46 @@
+{
+  "all_attempt_accounted_usd": "44.22626659",
+  "by_condition_accounted_usd": {
+    "baseline": "15.53713767",
+    "guided_verifier": "15.74513182",
+    "verifier": "12.94399710"
+  },
+  "complete": true,
+  "note": "All-attempt accounted costs include superseded attempts and conservative ambiguous-delivery charges; they are not exact provider invoices.",
+  "protocol_sha256": "9a9db8f71a1742895f6e3fa13123d050bd8e3da3f5aa363bb9c230b1bf92e8bc",
+  "retry_selected": 33,
+  "runs_per_arm": {
+    "baseline": 800,
+    "guided_verifier": 800,
+    "verifier": 800
+  },
+  "runs_per_repetition": {
+    "1": 300,
+    "2": 300,
+    "3": 300,
+    "4": 300,
+    "5": 300,
+    "6": 300,
+    "7": 300,
+    "8": 300
+  },
+  "schema_version": 1,
+  "selected_attempt_cost_usd": "42.58799724",
+  "selected_runs": 2400,
+  "source_archive_sha256": "3c90eda75fca75005a5e6b9725607a5a14ca25e1ed269d0e18b4293bd01b11d9",
+  "status_counts": {
+    "pending": 0,
+    "rejected": 0,
+    "settled": 20674,
+    "uncertain": 131,
+    "usage_upper_bound": 0
+  },
+  "status_usd": {
+    "pending": "0",
+    "rejected": "0",
+    "settled": "40.42749554",
+    "uncertain": "3.79877105",
+    "usage_upper_bound": "0"
+  },
+  "task_families": 100
+}
