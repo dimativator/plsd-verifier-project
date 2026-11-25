@@ -66,6 +66,7 @@ dist/
 
 # Experiment outputs and preflight workspaces; retain selection manifests
 /runs/
+/reports/
 /pilot/preflight/
 /pilot/*-preflight/
 /python_pilot/smoke/
